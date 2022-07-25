@@ -1,2 +1,2 @@
 # my notebook  
-note.hobbitqia.cc
+[note.hobbitqia.cc](http://note.hobbitqia.cc/)
