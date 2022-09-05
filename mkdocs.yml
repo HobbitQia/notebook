@@ -1,0 +1,128 @@
+site_name: HobbitQia的笔记本
+site_url: https://note.hobbitqia.cc/
+repo_name: HobbitQia/notebook  #存储库名称，一般自动设置
+repo_url: https://github.com/HobbitQia/notebook/  #存储库URL
+# edit_uri: tree/master/docs  #每个文档的顶部显示一个编辑按钮，""则隐藏
+site_description: HobbitQia的笔记本
+
+
+theme: 
+  name: material
+  language: zh
+  icon: 
+    logo: material/notebook-outline
+  custom_dir: overrides
+  features:
+    - content.code.annotate
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+  font:
+    text: LXGW WenKai Screen
+    code: JetBrains Mono
+  palette:     #切换昼夜模式的颜色，审美差就用默认，专业点就自定义
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default  #配色方案：浅色模式
+      primary: Brown  #原色，默认蓝，用于标题、侧边栏、文本链接和其他几个组件
+      accent: Brown  #强调色，默认蓝，可以交互的元素如悬停链接、按钮和滚动条
+      toggle:
+        icon: material/weather-sunny #图标，太阳
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"  
+      scheme: slate  #配色方案：深色模式
+      # primary: Brown  #原色，默认蓝，用于标题、侧边栏、文本链接和其他几个组件
+      toggle:
+        icon: material/weather-night  #图标，月亮
+        name: Switch to light mode
+
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - meta
+  - def_list
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.smartsymbols  #智能符号
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+
+
+extra_css:
+  - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
+  - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
+  - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+  - css/counter.css
+  # - css/latex.css
+  # - css/custom.css
+  # - css/card.css
+
+extra_javascript:
+  - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
+  - js/katex.js
+
+
+
+
+# plugins:
+#   - search
+#   - git-revision-date #每页底部显示文档最后更新日期，安装 pip install mkdocs-git-revision-date-plugin
+#   - git-revision-date-localized  #每个页面底部添加本地化更新和创建日期，安装pip install mkdocs-git-revision-date-localized-plugin
+#     type: datetime  #日期格式，有效值为date、datetime、iso_date、iso_datetimetimeago
+#       locale: zh
+#       fallback_to_build_date: true  #默认false，启用则回退到mkdocs build执行的时间
+#       enable_creation_date: true  #最后更新日期旁边显示与页面关联的文件的创建日期
+
+plugins:
+  - search
+  # - add-number:
+  #       strict_mode: False
+  #       order: 2
+        # increment_pages: True
+
+nav:
+  - Home:
+    - index.md
+  - Computer Science:
+    - 计算机系统概论: 
+      - ICS/index.md
+      - Introduction: ICS/ICS-1.md
+      - Bits, Data Types and Operations: ICS/ICS-2.md
+      - Digital Logic Structures: ICS/ICS-3.md
+      - The von Neumann Model: ICS/ICS-4.md
+      - LC-3: ICS/ICS-5.md
+      - Programming: ICS/ICS-6.md
+      - Assembly Language: ICS/ICS-7.md
+      - Data Structures: ICS/ICS-8.md
+      - I/0: ICS/ICS-9.md
+    - CSAPP:
+      - 优化程序性能: CSAPP/5.md
+      - 存储器层次结构: CSAPP/6.md
+      - 链接: CSAPP/7.md
+      - 异常控制流: CSAPP/8.md
+      - 虚拟内存: CSAPP/9.md
+  - Mathematics:
+    - 线性代数: 
+      - 线性代数Ⅱ(H): Mathematics/线性代数/线性代数Ⅱ(H).md
