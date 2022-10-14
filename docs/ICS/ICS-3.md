@@ -49,7 +49,7 @@ Gate 通 0V 的时候导线接通, 通 1.2V 时导线断开.
 
 <img src="https://s2.loli.net/2022/07/13/j71IwuRmBV45MPG.png" alt="image-20220712095105334" style="zoom:50%;" />  
 
-!!! Question 为什么不可以直接将 P-type 直接接地?
+!!! Question "为什么不可以直接将 P-type 直接接地?"
     这样 C 始终和地接触, 当 A, B 的值均为 0 时, 上方也会接通. 这样 C 会同时和高低电压接通. may burn the house!(by Patt)
 
 #### OR Gate

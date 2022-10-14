@@ -40,7 +40,7 @@ theme:
 markdown_extensions:
   - toc:
       permalink: true
-      toc_depth: 3
+      toc_depth: 4
   - meta
   - def_list
   - attr_list
@@ -76,8 +76,8 @@ extra_css:
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   - css/counter.css
   # - css/latex.css
-  # - css/custom.css
-  # - css/card.css
+  - css/custom.css
+  - css/card.css
 
 extra_javascript:
   - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
@@ -123,6 +123,13 @@ nav:
       - 链接: CSAPP/7.md
       - 异常控制流: CSAPP/8.md
       - 虚拟内存: CSAPP/9.md
+    - 数值分析:
+      - Mathematical Preliminaries: NA/NA01.md
+      - Solutions of Equations in One Variable: NA/NA02.md
+    - 计算机逻辑设计基础: 
+      - Logic/index.md
+      - 数字系统和信息: Logic/logic01.md
+      - 组合逻辑电路: Logic/logic02.md
   - Mathematics:
     - 线性代数: 
-      - 线性代数Ⅱ(H): Mathematics/线性代数/线性代数Ⅱ(H).md
+      - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
