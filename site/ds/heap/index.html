@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/ICS/ICS-7/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/ds/heap/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>Assembly Language - HobbitQia的笔记本</title>
+        <title>堆 - HobbitQia的笔记本</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-7-assembly-language" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Assembly Language
+              堆
             
           </span>
         </div>
@@ -238,7 +238,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../ICS/" class="md-tabs__link md-tabs__link--active">
         Computer Science
       </a>
     </li>
@@ -404,14 +404,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
       
       
@@ -443,7 +441,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">计算机系统概论</a>
+          <a href="../../ICS/">计算机系统概论</a>
           
             <label for="__nav_2_1">
               <span class="md-nav__icon md-icon"></span>
@@ -466,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-1/" class="md-nav__link">
+      <a href="../../ICS/ICS-1/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -480,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-2/" class="md-nav__link">
+      <a href="../../ICS/ICS-2/" class="md-nav__link">
         Bits, Data Types and Operations
       </a>
     </li>
@@ -494,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-3/" class="md-nav__link">
+      <a href="../../ICS/ICS-3/" class="md-nav__link">
         Digital Logic Structures
       </a>
     </li>
@@ -508,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-4/" class="md-nav__link">
+      <a href="../../ICS/ICS-4/" class="md-nav__link">
         The von Neumann Model
       </a>
     </li>
@@ -522,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-5/" class="md-nav__link">
+      <a href="../../ICS/ICS-5/" class="md-nav__link">
         LC-3
       </a>
     </li>
@@ -536,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-6/" class="md-nav__link">
+      <a href="../../ICS/ICS-6/" class="md-nav__link">
         Programming
       </a>
     </li>
@@ -548,201 +546,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Assembly Language
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-7/" class="md-nav__link">
         Assembly Language
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#assembly-language" class="md-nav__link">
-    Assembly Language
-  </a>
-  
-    <nav class="md-nav" aria-label="Assembly Language">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
-    Instructions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opcodes" class="md-nav__link">
-    Opcodes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#operands" class="md-nav__link">
-    Operands
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#labels" class="md-nav__link">
-    Labels
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comments" class="md-nav__link">
-    Comments
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pseudo-ops" class="md-nav__link">
-    Pseudo-Ops
-  </a>
-  
-    <nav class="md-nav" aria-label="Pseudo-Ops">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#orig" class="md-nav__link">
-    .ORIG
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fill" class="md-nav__link">
-    .FILL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blkw" class="md-nav__link">
-    .BLKW
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringz" class="md-nav__link">
-    .STRINGZ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#end" class="md-nav__link">
-    .END
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-assembly-process" class="md-nav__link">
-    The Assembly Process
-  </a>
-  
-    <nav class="md-nav" aria-label="The Assembly Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-two-pass-process" class="md-nav__link">
-    A Two-Pass Process
-  </a>
-  
-    <nav class="md-nav" aria-label="A Two-Pass Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-first-pass-creating-the-symbol-table" class="md-nav__link">
-    The First Pass: Creating the Symbol Table
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-second-pass-generating-the-machine-language-program" class="md-nav__link">
-    The Second Pass: Generating the Machine Language Program
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#beyond-the-assembly-of-a-single-assembly-language-program" class="md-nav__link">
-    Beyond the Assembly of a Single Assembly Language Program
-  </a>
-  
-    <nav class="md-nav" aria-label="Beyond the Assembly of a Single Assembly Language Program">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-executable-image" class="md-nav__link">
-    The Executable Image
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -754,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-8/" class="md-nav__link">
+      <a href="../../ICS/ICS-8/" class="md-nav__link">
         Data Structures
       </a>
     </li>
@@ -768,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-9/" class="md-nav__link">
+      <a href="../../ICS/ICS-9/" class="md-nav__link">
         I/0
       </a>
     </li>
@@ -1080,12 +888,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" checked>
       
       
       
@@ -1107,7 +917,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../ds/">数据结构与算法</a>
+          <a href="../">数据结构与算法</a>
           
             <label for="__nav_2_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1130,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/algorithm/" class="md-nav__link">
+      <a href="../algorithm/" class="md-nav__link">
         算法分析
       </a>
     </li>
@@ -1144,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/tree/" class="md-nav__link">
+      <a href="../tree/" class="md-nav__link">
         树
       </a>
     </li>
@@ -1156,11 +966,127 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ds/heap/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          堆
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         堆
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adt" class="md-nav__link">
+    ADT 模型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    简单的实现
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    二叉堆
+  </a>
+  
+    <nav class="md-nav" aria-label="二叉堆">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    结构性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    堆序性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    基本的堆操作
+  </a>
+  
+    <nav class="md-nav" aria-label="基本的堆操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    插入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    删除最小元
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    其他的堆操作
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-heaps" class="md-nav__link">
+    d-Heaps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1172,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/set/" class="md-nav__link">
+      <a href="../set/" class="md-nav__link">
         并查集
       </a>
     </li>
@@ -1309,93 +1235,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#assembly-language" class="md-nav__link">
-    Assembly Language
+  <a href="#adt" class="md-nav__link">
+    ADT 模型
   </a>
   
-    <nav class="md-nav" aria-label="Assembly Language">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    简单的实现
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    二叉堆
+  </a>
+  
+    <nav class="md-nav" aria-label="二叉堆">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
-    Instructions
+  <a href="#_4" class="md-nav__link">
+    结构性质
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#opcodes" class="md-nav__link">
-    Opcodes
+  <a href="#_5" class="md-nav__link">
+    堆序性质
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#operands" class="md-nav__link">
-    Operands
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#labels" class="md-nav__link">
-    Labels
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comments" class="md-nav__link">
-    Comments
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pseudo-ops" class="md-nav__link">
-    Pseudo-Ops
-  </a>
-  
-    <nav class="md-nav" aria-label="Pseudo-Ops">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#orig" class="md-nav__link">
-    .ORIG
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fill" class="md-nav__link">
-    .FILL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blkw" class="md-nav__link">
-    .BLKW
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringz" class="md-nav__link">
-    .STRINGZ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#end" class="md-nav__link">
-    .END
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1405,31 +1276,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-assembly-process" class="md-nav__link">
-    The Assembly Process
+  <a href="#_6" class="md-nav__link">
+    基本的堆操作
   </a>
   
-    <nav class="md-nav" aria-label="The Assembly Process">
+    <nav class="md-nav" aria-label="基本的堆操作">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#a-two-pass-process" class="md-nav__link">
-    A Two-Pass Process
-  </a>
-  
-    <nav class="md-nav" aria-label="A Two-Pass Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-first-pass-creating-the-symbol-table" class="md-nav__link">
-    The First Pass: Creating the Symbol Table
+  <a href="#_7" class="md-nav__link">
+    插入
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-second-pass-generating-the-machine-language-program" class="md-nav__link">
-    The Second Pass: Generating the Machine Language Program
+  <a href="#_8" class="md-nav__link">
+    删除最小元
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    其他的堆操作
   </a>
   
 </li>
@@ -1438,29 +1308,11 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#beyond-the-assembly-of-a-single-assembly-language-program" class="md-nav__link">
-    Beyond the Assembly of a Single Assembly Language Program
+      
+        <li class="md-nav__item">
+  <a href="#d-heaps" class="md-nav__link">
+    d-Heaps
   </a>
-  
-    <nav class="md-nav" aria-label="Beyond the Assembly of a Single Assembly Language Program">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-executable-image" class="md-nav__link">
-    The Executable Image
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1477,89 +1329,128 @@
               
 
                 
-  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/ICS/ICS-7.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/ds/heap.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="chapter-7-assembly-language">Chapter 7 Assembly Language<a class="headerlink" href="#chapter-7-assembly-language" title="Permanent link">&para;</a></h1>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p>Covered in Lecture 5, 2022.7.16
-Topics:<br />
-1. Assembler
-2. Assembly Language</p>
-</div>
-<h2 id="assembly-language">Assembly Language<a class="headerlink" href="#assembly-language" title="Permanent link">&para;</a></h2>
-<p>From ISA to language.<br />
-Assembly language is a low-level language.<br />
-High-level languages tend to be ISA independent.<br />
-Low-level languages are very much ISA dependent. In fact, it is usually the case that each ISA has
-only one assembly language.<br />
-The translation program is called an <em>assembler</em> and the translation process is called <em>assembly</em>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>汇编语言转为机器码的过程叫<strong>汇编</strong>, 而不是<strong>编译</strong>.<br />
-编译是对高级语言(如 C)而言.</p>
-</div>
-<h3 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h3>
-<p>An instrution in assembly language consists of 4 parts, and two of it(Label and Comment) are optional.<br />
-<code>Label Opcode Opearnds  ; Comment</code>  </p>
-<h3 id="opcodes">Opcodes<a class="headerlink" href="#opcodes" title="Permanent link">&para;</a></h3>
-<p>The Opcode is a symbolic name for the opcode of the correspounding LC-3 instruction so we can memorize the instruction easier. <strong><em>e.g.</em></strong> <code>ADD</code>, <code>AND</code>, or <code>LDR</code> rather than 0001, 0101 or 0110.</p>
-<h3 id="operands">Operands<a class="headerlink" href="#operands" title="Permanent link">&para;</a></h3>
+<h1 id="_1">优先队列（堆）<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="adt">ADT 模型<a class="headerlink" href="#adt" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The number of operands depends on the operation being performed. <strong><em>e.g.</em></strong> ADD requires 3 operands.  </li>
-<li>A literal value must contain a symbol identifying the representation base of the number. We use # for decimal, x for hexadecimal, and b for binary. (must)</li>
+<li>对象：一个有限的有序集</li>
+<li>操作：<ul>
+<li>初始化</li>
+<li>插入</li>
+<li>删除最小的元素</li>
+<li>寻找最小的元素</li>
 </ul>
-<h3 id="labels">Labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h3>
-<p>Labels are symbolic names used to identify memory locations that are referred explicitly in the program. In LC-3, a label consists of from 1 to 20 alphanumeric characters starting with a letter of the alphabet.(reserved words excluded)<br />
-There are 2 reasons for explicitly referring to a memory location.  </p>
+</li>
+</ul>
+<h2 id="_2">简单的实现<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The location is the target of a branch instruction.  </li>
-<li>The location contains a value that is loaded or stored.</li>
+<li>数组：<ul>
+<li>插入元素到末尾 <span class="arithmatex">\(\Theta(1)\)</span>  </li>
+<li>找到最大/最小元素 <span class="arithmatex">\(\Theta(n)\)</span>, 删除元素移动数组 <span class="arithmatex">\(O(n)\)</span></li>
 </ul>
-<h3 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">&para;</a></h3>
-<p>Comments are messages intened only for human consumption. They have <strong>no effect</strong> on the translation process and indeed are not acted on by the LC-3 assembler.<br />
-They are identified by semicolons. A semicolon signifies the rest of the line is a commment and is to be ignored by the assembler.  </p>
-<h3 id="pseudo-ops">Pseudo-Ops<a class="headerlink" href="#pseudo-ops" title="Permanent link">&para;</a></h3>
-<p>Pseudo-op is also called <em>assembler directive</em>, and it dose no t refer to an operation that will be performed by the program during execution.</p>
-<h4 id="orig">.ORIG<a class="headerlink" href="#orig" title="Permanent link">&para;</a></h4>
-<p><code>.OGIR</code> tells the assembler where in memory to place the LC-3 program.(to specify the start address)</p>
-<h4 id="fill">.FILL<a class="headerlink" href="#fill" title="Permanent link">&para;</a></h4>
-<p><code>.FILL</code> tells the assembler to set aside the next location in the program and initiallize it with the value of the operand. The value can be either a number or a label. <strong><em>e.g.</em></strong> x3006: <code>.FILL x0030</code> then x0030 will be stored in the location x3006.</p>
-<h4 id="blkw">.BLKW<a class="headerlink" href="#blkw" title="Permanent link">&para;</a></h4>
-<p><code>.BLKW</code> tells the assembler to set aside some number of sequential memory locations.(i.e. a <strong>BL</strong>oc<strong>K</strong> of <strong>W</strong>ords) <strong><em>e.g.</em></strong> x3007: <code>.BLKW 1</code> then the location x3007 will be set aside.</p>
-<h4 id="stringz">.STRINGZ<a class="headerlink" href="#stringz" title="Permanent link">&para;</a></h4>
-<p><code>.STRINGZ</code> tells the assembler to initiallize a sequence of n+1 memory locations. The argument is asquence of n characters inside double quotation marks. The first n words of memroy are initiallize with the zero-extended ASCII codes of the correspounding characters in the string. The final word is 0.(<code>\0</code>)</p>
-<h4 id="end">.END<a class="headerlink" href="#end" title="Permanent link">&para;</a></h4>
-<p><code>.END</code> tells the assembler it has reached the end of the program.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Note does not stop the program during execution. In fact, <code>.END</code> does not even <strong>exist</strong> at the time of execution.</p>
-</div>
-<h2 id="the-assembly-process">The Assembly Process<a class="headerlink" href="#the-assembly-process" title="Permanent link">&para;</a></h2>
-<p>It's the job of the LC-3 assembler to perform the translation from the LC-3 assembly language into a machine language program.<br />
-We use the command <code>assemble</code> and it requires the filename of your assembly language program as an argument, and it produces the file outfile, which is in the ISA of LC-3.<br />
-<code>assemble soutiona1.asm outfile</code></p>
-<h3 id="a-two-pass-process">A Two-Pass Process<a class="headerlink" href="#a-two-pass-process" title="Permanent link">&para;</a></h3>
-<h4 id="the-first-pass-creating-the-symbol-table">The First Pass: Creating the Symbol Table<a class="headerlink" href="#the-first-pass-creating-the-symbol-table" title="Permanent link">&para;</a></h4>
-<p>The symbol table is simply a correspoundence of symbolic names with their 16-bit memory addresses. In the first pass we identify each label with the memory address of its assigned entry.</p>
-<p><strong><em>e.g.</em></strong>
-<img src="https://s2.loli.net/2022/07/16/5WHXTzQSvClqGLp.png" style="zoom:50%;" />  </p>
-<h4 id="the-second-pass-generating-the-machine-language-program">The Second Pass: Generating the Machine Language Program<a class="headerlink" href="#the-second-pass-generating-the-machine-language-program" title="Permanent link">&para;</a></h4>
-<p>The second pass consists of going through the assembly language line by line, with the help of the symbol table. At each line, the assembly language instruction is translated into an LC-3 machine language instruction.</p>
-<div class="admonition example">
-<p class="admonition-title">LD</p>
-<p>The only part of the LD instruction left to do is the PCoffset. So it's necessary that the address of the source is no more than +256 or -255 memory locations from the LD instruction. Otherwise, assembly error.</p>
-</div>
-<h3 id="beyond-the-assembly-of-a-single-assembly-language-program">Beyond the Assembly of a Single Assembly Language Program<a class="headerlink" href="#beyond-the-assembly-of-a-single-assembly-language-program" title="Permanent link">&para;</a></h3>
-<h4 id="the-executable-image">The Executable Image<a class="headerlink" href="#the-executable-image" title="Permanent link">&para;</a></h4>
-<p>When a computer begins execution of a program, the entity being executed is called a <em>executable image</em>. The executable image is created from modules often created independently by several different programmers(also different object files).  </p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>we write <code>PTR .FILL STARTofFILE</code> in the program but there is no such a label in our program while the label is in another module by different programmer. We can use <code>.EXTERNAL STARTofFILE</code>, then at <em>link time</em> when all modules are combined, the linker will find the symbol table entry.</p>
+</li>
+<li>链表：<ul>
+<li>插入元素到链表开头 <span class="arithmatex">\(\Theta(1)\)</span></li>
+<li>找到最大/最小元素 <span class="arithmatex">\(\Theta(n)\)</span>, 删除元素 <span class="arithmatex">\(\Theta(1)\)</span> </li>
+</ul>
+</li>
+<li>有序数组：<ul>
+<li>插入 找到合适的位置 <span class="arithmatex">\(O(n)\)</span>, 移动数组并插入元素 <span class="arithmatex">\(O(n)\)</span></li>
+<li>删除开头/末尾元素 <span class="arithmatex">\(\Theta(1)\)</span></li>
+</ul>
+</li>
+<li>有序链表：<ul>
+<li>插入 找到合适的位置 <span class="arithmatex">\(O(n)\)</span>, 插入元素 <span class="arithmatex">\(\Theta(1)\)</span></li>
+<li>删除开头/末尾元素 <span class="arithmatex">\(\Theta(1)\)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="_3">二叉堆<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">结构性质<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>堆是一棵被完全填满的二叉树，有可能的例外是在底层：底层上的元素从左到右填入。这样的树称为<strong>完全二叉树</strong>。</p>
+<p>一棵高 h 的完全二叉树的节点个数介于 <span class="arithmatex">\(2^h\)</span> 到 <span class="arithmatex">\(2^{h+1}-1\)</span> 之间，即完全二叉树的高度是 <span class="arithmatex">\(\lfloor \log N\rfloor\)</span></p>
+<p>对于下标为 <span class="arithmatex">\(i\)</span> 的元素，其左儿子位于 <span class="arithmatex">\(2i\)</span> 上，右儿子位于 <span class="arithmatex">\(2i+1\)</span> 上，他的父亲位于 <span class="arithmatex">\(\lfloor i/2 \rfloor\)</span> 上。</p>
+<h3 id="_5">堆序性质<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>如果一棵树，每个节点的值都不大于其儿子节点的值，那么这是一棵<strong>小根树</strong>。<strong>小根堆</strong>就是满足小根树性质的完全二叉树。</p>
+<h2 id="_6">基本的堆操作<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="_7">插入<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>对于新的节点，唯一可以放的位置就是下一个空闲位置，否则堆将不再是完全树，但这样可能破坏堆的序，我们一般采用<strong>上浮</strong>的策略。</p>
+<details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/* H-&gt;Element[ 0 ] is a sentinel */</span><span class="w"> </span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">void</span><span class="w">  </span><span class="nf">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w">  </span><span class="n">X</span><span class="p">,</span><span class="w">  </span><span class="n">PriorityQueue</span><span class="w">  </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">     </span><span class="kt">int</span><span class="w">  </span><span class="n">i</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">IsFull</span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Priority queue is full&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="k">return</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">     </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">     </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="p">;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">];</span><span class="w"> </span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">     </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</details>
+<p>注意这里代码实现中，我们没有使用交换操作，因为交换操作的时间成本更高。</p>
+<h3 id="_8">删除最小元<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>我们一般采用<strong>下滤</strong>的策略。删除最小元后，在根节点产生一个空穴。同时堆少了一个元素，我们必须把堆最后一个元素 X 移动到堆的某个地方。从根节点的空穴开始我们将空穴的两个儿子中的较小者移入空穴，这样就把空穴往下推了一层。重复步骤直到 X 可以放入空穴。</p>
+<details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">ElementType</span><span class="w">  </span><span class="nf">DeleteMin</span><span class="p">(</span><span class="w"> </span><span class="n">PriorityQueue</span><span class="w">  </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">int</span><span class="w">  </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">Child</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">ElementType</span><span class="w">  </span><span class="n">MinElement</span><span class="p">,</span><span class="w"> </span><span class="n">LastElement</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">IsEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">         </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Priority queue is empty&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">         </span><span class="k">return</span><span class="w">  </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">];</span><span class="w">   </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">MinElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/* save the min element */</span><span class="w"></span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">LastElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="o">--</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/* take last and reset size */</span><span class="w"></span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Child</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/* Find smaller child */</span><span class="w"> </span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">         </span><span class="n">Child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Child</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">Child</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">Child</span><span class="p">])</span><span class="w"> </span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">           </span><span class="n">Child</span><span class="o">++</span><span class="p">;</span><span class="w">     </span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">LastElement</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">Child</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="cm">/* Percolate one level */</span><span class="w"> </span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">           </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">Child</span><span class="w"> </span><span class="p">];</span><span class="w"> </span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">         </span><span class="k">else</span><span class="w">     </span><span class="k">break</span><span class="p">;</span><span class="w">   </span><span class="cm">/* find the proper position */</span><span class="w"></span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LastElement</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="k">return</span><span class="w">  </span><span class="n">MinElement</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</details>
+
+<h3 id="_9">其他的堆操作<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>需要注意的是，对于小根堆，找除了最小元以外的元素都需要线性搜索整个堆。</p>
+<ul>
+<li><strong><code>DecreaseKey</code></strong><br />
+DecreaseKey(P,<span class="arithmatex">\(\Delta\)</span>,H) 操作降低在位置 P 处的关键字的值。我们需要上滤操作对堆进行调整。</li>
+<li><strong><code>IncreaseKey</code></strong><br />
+IncreaseKey(P,<span class="arithmatex">\(\Delta\)</span>,H) 操作增加在位置 P 处的关键字的值。我们需要下滤操作对堆进行调整。</li>
+<li><strong><code>Delete</code></strong><br />
+Delete(P,H) 操作删除堆中位置 P 上的节点。这个操作首先执行 DecreaseKey(P,<span class="arithmatex">\(\infty\)</span>,H) 再执行 DeleteMin 即可。</li>
+<li><strong><code>BuildHeap</code></strong><br />
+BuildHeap(H) 操作把 N 个关键字作为输出并把它们放在空队中，可以使用 N 个相继的 Insert 操作完成。<br />
+也可以将 N 个关键字以任意顺序放入树中构成一棵完全二叉树，从倒数第二层开始依次 percolate down. 可以证明这时只需要线性的时间复杂度就可以完成树的构建。</li>
+</ul>
+<p><strong>定理</strong>：包含 <span class="arithmatex">\(2^{h+1}-1\)</span> 个节点，高度为 <span class="arithmatex">\(h\)</span> 的理想二叉树，其节点的高度和为 <span class="arithmatex">\(2^{h+1}-1-(h+1)\)</span><br />
+证明：<span class="arithmatex">\(S=\sum\limits_{i=0}^h 2^i(h-i)\)</span><br />
+因此 BuildHeap 的操作是线性的</p>
+<h2 id="d-heaps">d-Heaps<a class="headerlink" href="#d-heaps" title="Permanent link">&para;</a></h2>
+<p>d-堆是二叉堆的推广，所有的节点都有 d 个儿子（因此二叉堆是 2-堆）
+d-堆比二叉堆浅，因此 Insert 操作改进为 <span class="arithmatex">\(O(\log_dN)\)</span> 但对于大的 d, DeleteMin 会花费更多时间，因为我们每层都要找出 d 个儿子中的最小者。这样操作的用时就是 <span class="arithmatex">\(O(d\log_dN)\)</span>。而且当 d 不是 2 的幂次时，找出儿子和父亲会花费更多的时间。</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Priority queue: 优先队列 <br />
+Binary heap: 二叉堆<br />
+堆序: heap order<br />
+上浮：percolate up<br />
+下滤：percolate down  </p>
 </div>
 
   <hr>
@@ -1567,11 +1458,11 @@ We use the command <code>assemble</code> and it requires the filename of your as
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年9月5日 23:38:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月14日 23:05:58</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年9月5日 23:38:05</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月14日 23:05:58</span>
       
     
   </small>
@@ -1646,7 +1537,7 @@ We use the command <code>assemble</code> and it requires the filename of your as
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../ICS-6/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Programming" rel="prev">
+        <a href="../tree/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 树" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1655,20 +1546,20 @@ We use the command <code>assemble</code> and it requires the filename of your as
               <span class="md-footer__direction">
                 上一页
               </span>
-              Programming
+              树
             </div>
           </div>
         </a>
       
       
         
-        <a href="../ICS-8/" class="md-footer__link md-footer__link--next" aria-label="下一页: Data Structures" rel="next">
+        <a href="../set/" class="md-footer__link md-footer__link--next" aria-label="下一页: 并查集" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              Data Structures
+              并查集
             </div>
           </div>
           <div class="md-footer__button md-icon">

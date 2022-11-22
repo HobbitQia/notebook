@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/ICS/ICS-7/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/Logic/logic04/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>Assembly Language - HobbitQia的笔记本</title>
+        <title>时序逻辑电路 - HobbitQia的笔记本</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-7-assembly-language" class="md-skip">
+        <a href="#sequential-circuits" class="md-skip">
           跳转至
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Assembly Language
+              时序逻辑电路
             
           </span>
         </div>
@@ -238,7 +238,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../ICS/" class="md-tabs__link md-tabs__link--active">
         Computer Science
       </a>
     </li>
@@ -404,14 +404,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
       
       
@@ -443,7 +441,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">计算机系统概论</a>
+          <a href="../../ICS/">计算机系统概论</a>
           
             <label for="__nav_2_1">
               <span class="md-nav__icon md-icon"></span>
@@ -466,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-1/" class="md-nav__link">
+      <a href="../../ICS/ICS-1/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -480,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-2/" class="md-nav__link">
+      <a href="../../ICS/ICS-2/" class="md-nav__link">
         Bits, Data Types and Operations
       </a>
     </li>
@@ -494,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-3/" class="md-nav__link">
+      <a href="../../ICS/ICS-3/" class="md-nav__link">
         Digital Logic Structures
       </a>
     </li>
@@ -508,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-4/" class="md-nav__link">
+      <a href="../../ICS/ICS-4/" class="md-nav__link">
         The von Neumann Model
       </a>
     </li>
@@ -522,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-5/" class="md-nav__link">
+      <a href="../../ICS/ICS-5/" class="md-nav__link">
         LC-3
       </a>
     </li>
@@ -536,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-6/" class="md-nav__link">
+      <a href="../../ICS/ICS-6/" class="md-nav__link">
         Programming
       </a>
     </li>
@@ -548,201 +546,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Assembly Language
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-7/" class="md-nav__link">
         Assembly Language
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#assembly-language" class="md-nav__link">
-    Assembly Language
-  </a>
-  
-    <nav class="md-nav" aria-label="Assembly Language">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
-    Instructions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opcodes" class="md-nav__link">
-    Opcodes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#operands" class="md-nav__link">
-    Operands
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#labels" class="md-nav__link">
-    Labels
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comments" class="md-nav__link">
-    Comments
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pseudo-ops" class="md-nav__link">
-    Pseudo-Ops
-  </a>
-  
-    <nav class="md-nav" aria-label="Pseudo-Ops">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#orig" class="md-nav__link">
-    .ORIG
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fill" class="md-nav__link">
-    .FILL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blkw" class="md-nav__link">
-    .BLKW
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringz" class="md-nav__link">
-    .STRINGZ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#end" class="md-nav__link">
-    .END
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-assembly-process" class="md-nav__link">
-    The Assembly Process
-  </a>
-  
-    <nav class="md-nav" aria-label="The Assembly Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-two-pass-process" class="md-nav__link">
-    A Two-Pass Process
-  </a>
-  
-    <nav class="md-nav" aria-label="A Two-Pass Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-first-pass-creating-the-symbol-table" class="md-nav__link">
-    The First Pass: Creating the Symbol Table
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-second-pass-generating-the-machine-language-program" class="md-nav__link">
-    The Second Pass: Generating the Machine Language Program
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#beyond-the-assembly-of-a-single-assembly-language-program" class="md-nav__link">
-    Beyond the Assembly of a Single Assembly Language Program
-  </a>
-  
-    <nav class="md-nav" aria-label="Beyond the Assembly of a Single Assembly Language Program">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-executable-image" class="md-nav__link">
-    The Executable Image
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -754,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-8/" class="md-nav__link">
+      <a href="../../ICS/ICS-8/" class="md-nav__link">
         Data Structures
       </a>
     </li>
@@ -768,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-9/" class="md-nav__link">
+      <a href="../../ICS/ICS-9/" class="md-nav__link">
         I/0
       </a>
     </li>
@@ -969,12 +777,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
       
       
       
@@ -996,7 +806,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Logic/">计算机逻辑设计基础</a>
+          <a href="../">计算机逻辑设计基础</a>
           
             <label for="__nav_2_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1019,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic01/" class="md-nav__link">
+      <a href="../logic01/" class="md-nav__link">
         数字系统和信息
       </a>
     </li>
@@ -1033,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic02/" class="md-nav__link">
+      <a href="../logic02/" class="md-nav__link">
         组合逻辑电路
       </a>
     </li>
@@ -1047,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic03/" class="md-nav__link">
+      <a href="../logic03/" class="md-nav__link">
         组合逻辑电路设计
       </a>
     </li>
@@ -1059,11 +869,85 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Logic/logic04/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          时序逻辑电路
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         时序逻辑电路
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#storage-elements-and-analysis" class="md-nav__link">
+    Storage Elements and Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage Elements and Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storing-state" class="md-nav__link">
+    Storing State
+  </a>
+  
+    <nav class="md-nav" aria-label="Storing State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#latch" class="md-nav__link">
+    Latch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flip-flop" class="md-nav__link">
+    Flip-flop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1309,147 +1193,31 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#assembly-language" class="md-nav__link">
-    Assembly Language
+  <a href="#storage-elements-and-analysis" class="md-nav__link">
+    Storage Elements and Analysis
   </a>
   
-    <nav class="md-nav" aria-label="Assembly Language">
+    <nav class="md-nav" aria-label="Storage Elements and Analysis">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
-    Instructions
+  <a href="#storing-state" class="md-nav__link">
+    Storing State
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opcodes" class="md-nav__link">
-    Opcodes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#operands" class="md-nav__link">
-    Operands
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#labels" class="md-nav__link">
-    Labels
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comments" class="md-nav__link">
-    Comments
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pseudo-ops" class="md-nav__link">
-    Pseudo-Ops
-  </a>
-  
-    <nav class="md-nav" aria-label="Pseudo-Ops">
+    <nav class="md-nav" aria-label="Storing State">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#orig" class="md-nav__link">
-    .ORIG
+  <a href="#latch" class="md-nav__link">
+    Latch
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#fill" class="md-nav__link">
-    .FILL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blkw" class="md-nav__link">
-    .BLKW
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringz" class="md-nav__link">
-    .STRINGZ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#end" class="md-nav__link">
-    .END
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-assembly-process" class="md-nav__link">
-    The Assembly Process
-  </a>
-  
-    <nav class="md-nav" aria-label="The Assembly Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-two-pass-process" class="md-nav__link">
-    A Two-Pass Process
-  </a>
-  
-    <nav class="md-nav" aria-label="A Two-Pass Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-first-pass-creating-the-symbol-table" class="md-nav__link">
-    The First Pass: Creating the Symbol Table
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-second-pass-generating-the-machine-language-program" class="md-nav__link">
-    The Second Pass: Generating the Machine Language Program
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#beyond-the-assembly-of-a-single-assembly-language-program" class="md-nav__link">
-    Beyond the Assembly of a Single Assembly Language Program
-  </a>
-  
-    <nav class="md-nav" aria-label="Beyond the Assembly of a Single Assembly Language Program">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-executable-image" class="md-nav__link">
-    The Executable Image
+  <a href="#flip-flop" class="md-nav__link">
+    Flip-flop
   </a>
   
 </li>
@@ -1477,101 +1245,268 @@
               
 
                 
-  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/ICS/ICS-7.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/Logic/logic04.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="chapter-7-assembly-language">Chapter 7 Assembly Language<a class="headerlink" href="#chapter-7-assembly-language" title="Permanent link">&para;</a></h1>
+<h1 id="sequential-circuits">Sequential Circuits<a class="headerlink" href="#sequential-circuits" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>Covered in Lecture 5, 2022.7.16
-Topics:<br />
-1. Assembler
-2. Assembly Language</p>
-</div>
-<h2 id="assembly-language">Assembly Language<a class="headerlink" href="#assembly-language" title="Permanent link">&para;</a></h2>
-<p>From ISA to language.<br />
-Assembly language is a low-level language.<br />
-High-level languages tend to be ISA independent.<br />
-Low-level languages are very much ISA dependent. In fact, it is usually the case that each ISA has
-only one assembly language.<br />
-The translation program is called an <em>assembler</em> and the translation process is called <em>assembly</em>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>汇编语言转为机器码的过程叫<strong>汇编</strong>, 而不是<strong>编译</strong>.<br />
-编译是对高级语言(如 C)而言.</p>
-</div>
-<h3 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h3>
-<p>An instrution in assembly language consists of 4 parts, and two of it(Label and Comment) are optional.<br />
-<code>Label Opcode Opearnds  ; Comment</code>  </p>
-<h3 id="opcodes">Opcodes<a class="headerlink" href="#opcodes" title="Permanent link">&para;</a></h3>
-<p>The Opcode is a symbolic name for the opcode of the correspounding LC-3 instruction so we can memorize the instruction easier. <strong><em>e.g.</em></strong> <code>ADD</code>, <code>AND</code>, or <code>LDR</code> rather than 0001, 0101 or 0110.</p>
-<h3 id="operands">Operands<a class="headerlink" href="#operands" title="Permanent link">&para;</a></h3>
 <ul>
-<li>The number of operands depends on the operation being performed. <strong><em>e.g.</em></strong> ADD requires 3 operands.  </li>
-<li>A literal value must contain a symbol identifying the representation base of the number. We use # for decimal, x for hexadecimal, and b for binary. (must)</li>
+<li>Part 1 - Storage Elements and Analysis  <ul>
+<li>Introduction to sequential circuits  </li>
+<li>Types of sequential circuits  </li>
+<li>Storage elements  </li>
+<li>Latches  </li>
+<li>Flip-flops  </li>
+<li>Sequential circuit analysis  </li>
+<li>State tables  </li>
+<li>State diagrams  </li>
+<li>Equivalent states  </li>
+<li>Moore and Mealy Models  </li>
 </ul>
-<h3 id="labels">Labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h3>
-<p>Labels are symbolic names used to identify memory locations that are referred explicitly in the program. In LC-3, a label consists of from 1 to 20 alphanumeric characters starting with a letter of the alphabet.(reserved words excluded)<br />
-There are 2 reasons for explicitly referring to a memory location.  </p>
-<ul>
-<li>The location is the target of a branch instruction.  </li>
-<li>The location contains a value that is loaded or stored.</li>
+</li>
+<li>Part 2 - Sequential Circuit Design  </li>
+<li>Part 3 – State Machine Design  </li>
 </ul>
-<h3 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">&para;</a></h3>
-<p>Comments are messages intened only for human consumption. They have <strong>no effect</strong> on the translation process and indeed are not acted on by the LC-3 assembler.<br />
-They are identified by semicolons. A semicolon signifies the rest of the line is a commment and is to be ignored by the assembler.  </p>
-<h3 id="pseudo-ops">Pseudo-Ops<a class="headerlink" href="#pseudo-ops" title="Permanent link">&para;</a></h3>
-<p>Pseudo-op is also called <em>assembler directive</em>, and it dose no t refer to an operation that will be performed by the program during execution.</p>
-<h4 id="orig">.ORIG<a class="headerlink" href="#orig" title="Permanent link">&para;</a></h4>
-<p><code>.OGIR</code> tells the assembler where in memory to place the LC-3 program.(to specify the start address)</p>
-<h4 id="fill">.FILL<a class="headerlink" href="#fill" title="Permanent link">&para;</a></h4>
-<p><code>.FILL</code> tells the assembler to set aside the next location in the program and initiallize it with the value of the operand. The value can be either a number or a label. <strong><em>e.g.</em></strong> x3006: <code>.FILL x0030</code> then x0030 will be stored in the location x3006.</p>
-<h4 id="blkw">.BLKW<a class="headerlink" href="#blkw" title="Permanent link">&para;</a></h4>
-<p><code>.BLKW</code> tells the assembler to set aside some number of sequential memory locations.(i.e. a <strong>BL</strong>oc<strong>K</strong> of <strong>W</strong>ords) <strong><em>e.g.</em></strong> x3007: <code>.BLKW 1</code> then the location x3007 will be set aside.</p>
-<h4 id="stringz">.STRINGZ<a class="headerlink" href="#stringz" title="Permanent link">&para;</a></h4>
-<p><code>.STRINGZ</code> tells the assembler to initiallize a sequence of n+1 memory locations. The argument is asquence of n characters inside double quotation marks. The first n words of memroy are initiallize with the zero-extended ASCII codes of the correspounding characters in the string. The final word is 0.(<code>\0</code>)</p>
-<h4 id="end">.END<a class="headerlink" href="#end" title="Permanent link">&para;</a></h4>
-<p><code>.END</code> tells the assembler it has reached the end of the program.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Note does not stop the program during execution. In fact, <code>.END</code> does not even <strong>exist</strong> at the time of execution.</p>
 </div>
-<h2 id="the-assembly-process">The Assembly Process<a class="headerlink" href="#the-assembly-process" title="Permanent link">&para;</a></h2>
-<p>It's the job of the LC-3 assembler to perform the translation from the LC-3 assembly language into a machine language program.<br />
-We use the command <code>assemble</code> and it requires the filename of your assembly language program as an argument, and it produces the file outfile, which is in the ISA of LC-3.<br />
-<code>assemble soutiona1.asm outfile</code></p>
-<h3 id="a-two-pass-process">A Two-Pass Process<a class="headerlink" href="#a-two-pass-process" title="Permanent link">&para;</a></h3>
-<h4 id="the-first-pass-creating-the-symbol-table">The First Pass: Creating the Symbol Table<a class="headerlink" href="#the-first-pass-creating-the-symbol-table" title="Permanent link">&para;</a></h4>
-<p>The symbol table is simply a correspoundence of symbolic names with their 16-bit memory addresses. In the first pass we identify each label with the memory address of its assigned entry.</p>
-<p><strong><em>e.g.</em></strong>
-<img src="https://s2.loli.net/2022/07/16/5WHXTzQSvClqGLp.png" style="zoom:50%;" />  </p>
-<h4 id="the-second-pass-generating-the-machine-language-program">The Second Pass: Generating the Machine Language Program<a class="headerlink" href="#the-second-pass-generating-the-machine-language-program" title="Permanent link">&para;</a></h4>
-<p>The second pass consists of going through the assembly language line by line, with the help of the symbol table. At each line, the assembly language instruction is translated into an LC-3 machine language instruction.</p>
-<div class="admonition example">
-<p class="admonition-title">LD</p>
-<p>The only part of the LD instruction left to do is the PCoffset. So it's necessary that the address of the source is no more than +256 or -255 memory locations from the LD instruction. Otherwise, assembly error.</p>
-</div>
-<h3 id="beyond-the-assembly-of-a-single-assembly-language-program">Beyond the Assembly of a Single Assembly Language Program<a class="headerlink" href="#beyond-the-assembly-of-a-single-assembly-language-program" title="Permanent link">&para;</a></h3>
-<h4 id="the-executable-image">The Executable Image<a class="headerlink" href="#the-executable-image" title="Permanent link">&para;</a></h4>
-<p>When a computer begins execution of a program, the entity being executed is called a <em>executable image</em>. The executable image is created from modules often created independently by several different programmers(also different object files).  </p>
+<h2 id="storage-elements-and-analysis">Storage Elements and Analysis<a class="headerlink" href="#storage-elements-and-analysis" title="Permanent link">&para;</a></h2>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091011289.png" width = 50%/> </div>
+
+<p>时序电路包括：组合逻辑电路+存储元件</p>
+<p>Combinatorial Logic<br />
+<em> Next state function Next State = f(Inputs, State)  次态方程<br />
+</em> Output function (Mealy) Outputs = g(Inputs, State)
+* Output function (Moore) Outputs = h(State) 输入不会直接改变输出，而是通过状态来间接改变输出  </p>
+<p><strong>Types of Sequential Circuits</strong>  <br />
+* Depends on the times at which:
+    * storage elements observe their inputs, and 
+    * storage elements change their state 
+* Synchronous<br />
+状态更新一定发生在时钟周期的整周期上
+* Asynchronous<br />
+状态更新可以在任意时间发生  <br />
+如果时钟也被看做一个输入，那么所有电路都是 Asynchronous      <br />
+Asynchronous 可以让我们在有需要的时候更新电路，降低电路的功耗   </p>
+<p>Discrete Event Simulation 离散事件仿真</p>
+<h3 id="storing-state">Storing State<a class="headerlink" href="#storing-state" title="Permanent link">&para;</a></h3>
+<h4 id="latch">Latch<a class="headerlink" href="#latch" title="Permanent link">&para;</a></h4>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>we write <code>PTR .FILL STARTofFILE</code> in the program but there is no such a label in our program while the label is in another module by different programmer. We can use <code>.EXTERNAL STARTofFILE</code>, then at <em>link time</em> when all modules are combined, the linker will find the symbol table entry.</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211091038178.png" width = 40%/> </div><br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091038137.png" width = 55%/> </div>   </p>
+<p>The simple combinational circuit has now become a sequential circuit because its output is a function of a time sequence of input signals!<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091039908.png" width = 60%/> </div>   </p>
 </div>
+<h5 id="basic-nand-overline-s-overline-r-latch">Basic (NAND)  <span class="arithmatex">\(\overline S\)</span> –  <span class="arithmatex">\(\overline R\)</span> Latch<a class="headerlink" href="#basic-nand-overline-s-overline-r-latch" title="Permanent link">&para;</a></h5>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091041175.png" width = 40%/> </div>
+
+<table>
+<thead>
+<tr>
+<th align="left"><span class="arithmatex">\(R\)</span></th>
+<th><span class="arithmatex">\(S\)</span></th>
+<th><span class="arithmatex">\(Q\)</span></th>
+<th><span class="arithmatex">\(\overline Q\)</span></th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>?</td>
+<td>?</td>
+<td>Stored state unknown</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td><em>Set</em> Q to 1</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>Now Q <em>remembers</em> 1</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td><em>Reset</em> Q to 0</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>Now Q <em>remembers</em> 0</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>Both go high</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>?</td>
+<td>?</td>
+<td>Unstable!</td>
+</tr>
+</tbody>
+</table>
+<p>最后一步，两个引脚同时从 0 -&gt; 1, 那么两个与非门的输出都期望变成 0, 但只要有一个门的输出变为 0 另一个门就被锁住变成 1, 因此两个门不可能同时变化。但我们无法确定是哪个门会变成 1.<br />
+<span class="arithmatex">\(S=0,R=0\)</span> is <u><strong>forbidden</strong></u> as input pattern.   </p>
+<h5 id="basic-nor-s-r-latch">Basic (NOR)  <span class="arithmatex">\(S\)</span> – <span class="arithmatex">\(R\)</span> Latch<a class="headerlink" href="#basic-nor-s-r-latch" title="Permanent link">&para;</a></h5>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091046159.png" width = 40%/> </div>
+
+<table>
+<thead>
+<tr>
+<th align="left"><span class="arithmatex">\(R\)</span></th>
+<th><span class="arithmatex">\(S\)</span></th>
+<th><span class="arithmatex">\(Q\)</span></th>
+<th><span class="arithmatex">\(\overline Q\)</span></th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td>0</td>
+<td>?</td>
+<td>?</td>
+<td>Stored state unknown</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td><em>Set</em> Q to 1</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>Now Q <em>remembers</em> 1</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td><em>Reset</em> Q to 0</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>Now Q <em>remembers</em> 0</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>Both go high</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>0</td>
+<td>?</td>
+<td>?</td>
+<td>Unstable!</td>
+</tr>
+</tbody>
+</table>
+<h5 id="clocked-s-r-latch">Clocked <span class="arithmatex">\(S\)</span> - <span class="arithmatex">\(R\)</span> Latch<a class="headerlink" href="#clocked-s-r-latch" title="Permanent link">&para;</a></h5>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091058462.png" width = 45%/> </div>
+
+<p><span class="arithmatex">\(C\)</span> 作为一个 ENABLE 的功能。当 <span class="arithmatex">\(C=0\)</span> 时，<span class="arithmatex">\(Q\)</span> 不会发生改变。当 <span class="arithmatex">\(C=1\)</span> 时，上面相当于 <span class="arithmatex">\(\overline S\)</span>, 下面相当于 <span class="arithmatex">\(\overline R\)</span>, 变成一个钟控的 SR 锁存器。<br />
+|<span class="arithmatex">\(C\)</span>|<span class="arithmatex">\(S\)</span>|<span class="arithmatex">\(R\)</span>|<span class="arithmatex">\(Q(t+1)\)</span>|
+|:-|-|-|-|
+|0|X|X|No change|
+|1|0|0|No change|
+|1|0|1|0: <em>Clear</em> Q|
+|1|1|0|1: <em>Set</em> Q|
+|1|1|1|Indeterminate|</p>
+<p><span class="arithmatex">\(Q(t+1)\)</span> based on current state <span class="arithmatex">\(Q(t)\)</span> and current inputs <span class="arithmatex">\((S,R,C)\)</span></p>
+<h5 id="d-latch"><span class="arithmatex">\(D\)</span> Latch<a class="headerlink" href="#d-latch" title="Permanent link">&para;</a></h5>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091105090.png" width = 45%/> </div>
+
+<p><span class="arithmatex">\(S\ R\)</span> 不会同时为 0.<br />
+|<span class="arithmatex">\(C\)</span>|<span class="arithmatex">\(D\)</span>|<span class="arithmatex">\(Q(t+1)\)</span>|
+|:-|-|-|
+|0|X|No change|
+|1|0|0: <em>Clear</em> Q|
+|0|1|1: <em>Set</em> Q|
+即当 <span class="arithmatex">\(C=1\)</span> 时 <span class="arithmatex">\(Q=D\)</span></p>
+<p>The graphic symbol for a <span class="arithmatex">\(D\)</span> latch:  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091106989.png" width = 30%/> </div>
+
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>在算门输入成本的时候，我们要分开算 G 和 GN. 因为锁存器同时为我们提供了 <span class="arithmatex">\(Q\)</span> 和 <span class="arithmatex">\(\overline Q\)</span>, 锁存器可以为后面的组合电路提供原变量和反变量。</p>
+</div>
+<h4 id="flip-flop">Flip-flop<a class="headerlink" href="#flip-flop" title="Permanent link">&para;</a></h4>
+<p>锁存器不适合使用在电路中：不能做到一个周期，状态只更新一次。具体原因见 <a href="http://note.hobbitqia.cc/ICS/ICS-3/#the-synchronous-finite-state-machine">ICS Notes</a>  </p>
+<h5 id="s-r-master-slave-flip-flop">S-R Master-Slave Flip-Flop<a class="headerlink" href="#s-r-master-slave-flip-flop" title="Permanent link">&para;</a></h5>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091128641.png" width = 50%/> </div>
+
+<p>前面称为 master(主锁存器), 后面称为 slave(从锁存器)  <br />
+当 <span class="arithmatex">\(C=0\)</span> 时，主锁存器不变。  <br />
+<span class="arithmatex">\(C\)</span> 从 0 变为 1 时，主锁存器被使能，Q 改变，但从锁存器不变。</p>
+<p>周期变长一倍
+问题：当 S R 均为 0 时如果有小扰动，无法复原<br />
+要求主从触发器避免 S R 的扰动</p>
+<h5 id="edge-triggered-d-flip-flop">Edge-Triggered D Flip-Flop<a class="headerlink" href="#edge-triggered-d-flip-flop" title="Permanent link">&para;</a></h5>
+<p>An <strong>edge-triggered flip-flop</strong> ignores the pulse while it is at a constant level and triggers only during a transition of the clock signal.<br />
+A <strong>master-slave D flip-flop</strong> which also exhibits <strong>edge-triggered</strong> behavior can be used.</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211111109804.png" width = 40%/> </div>
+
+<p>The delay of the S-R master-slave flip-flop can be avoided since the 1s-catching behavior is not present with D replacing S and R inputs. (D 锁存器不会出现 S R 同时为 0 的情况)</p>
+<p>Positive-Edge Triggered D Flip-Flop is Formed by adding inverter to clock input. (上升沿触发器)<br />
+Q changes to the value on D applied at the positive clock edge within timing constraints to be specified</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211111112460.png" width = 40%/> </div>
+
+<p><strong>Actual Circuit of Edge-Triggered D Flip-Flop:</strong>  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211111108389.png" width = 40%/> </div>
+
+<p><strong>Standard Symbols for Storage Elements:</strong>  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211111116243.png" width = 50%/> </div>
+
+<ul>
+<li><strong>Direct Inputs</strong>  <br />
+Direct <span class="arithmatex">\(R\)</span> and/or <span class="arithmatex">\(S\)</span> inputs that control the state of the latches within the flip-flops are used for this <em>initialization</em>. </li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211111118511.png" width = 20%/> </div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年9月5日 23:38:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月14日 23:05:57</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年9月5日 23:38:05</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月14日 23:05:57</span>
       
     
   </small>
@@ -1646,7 +1581,7 @@ We use the command <code>assemble</code> and it requires the filename of your as
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../ICS-6/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Programming" rel="prev">
+        <a href="../logic03/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 组合逻辑电路设计" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1655,20 +1590,20 @@ We use the command <code>assemble</code> and it requires the filename of your as
               <span class="md-footer__direction">
                 上一页
               </span>
-              Programming
+              组合逻辑电路设计
             </div>
           </div>
         </a>
       
       
         
-        <a href="../ICS-8/" class="md-footer__link md-footer__link--next" aria-label="下一页: Data Structures" rel="next">
+        <a href="../../ds/" class="md-footer__link md-footer__link--next" aria-label="下一页: 数据结构和算法" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              Data Structures
+              数据结构和算法
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/ICS/ICS-7/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/ds/set/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>Assembly Language - HobbitQia的笔记本</title>
+        <title>并查集 - HobbitQia的笔记本</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-7-assembly-language" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Assembly Language
+              并查集
             
           </span>
         </div>
@@ -238,7 +238,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../ICS/" class="md-tabs__link md-tabs__link--active">
         Computer Science
       </a>
     </li>
@@ -404,14 +404,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
       
       
@@ -443,7 +441,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">计算机系统概论</a>
+          <a href="../../ICS/">计算机系统概论</a>
           
             <label for="__nav_2_1">
               <span class="md-nav__icon md-icon"></span>
@@ -466,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-1/" class="md-nav__link">
+      <a href="../../ICS/ICS-1/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -480,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-2/" class="md-nav__link">
+      <a href="../../ICS/ICS-2/" class="md-nav__link">
         Bits, Data Types and Operations
       </a>
     </li>
@@ -494,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-3/" class="md-nav__link">
+      <a href="../../ICS/ICS-3/" class="md-nav__link">
         Digital Logic Structures
       </a>
     </li>
@@ -508,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-4/" class="md-nav__link">
+      <a href="../../ICS/ICS-4/" class="md-nav__link">
         The von Neumann Model
       </a>
     </li>
@@ -522,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-5/" class="md-nav__link">
+      <a href="../../ICS/ICS-5/" class="md-nav__link">
         LC-3
       </a>
     </li>
@@ -536,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-6/" class="md-nav__link">
+      <a href="../../ICS/ICS-6/" class="md-nav__link">
         Programming
       </a>
     </li>
@@ -548,201 +546,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Assembly Language
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-7/" class="md-nav__link">
         Assembly Language
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#assembly-language" class="md-nav__link">
-    Assembly Language
-  </a>
-  
-    <nav class="md-nav" aria-label="Assembly Language">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
-    Instructions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opcodes" class="md-nav__link">
-    Opcodes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#operands" class="md-nav__link">
-    Operands
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#labels" class="md-nav__link">
-    Labels
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comments" class="md-nav__link">
-    Comments
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pseudo-ops" class="md-nav__link">
-    Pseudo-Ops
-  </a>
-  
-    <nav class="md-nav" aria-label="Pseudo-Ops">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#orig" class="md-nav__link">
-    .ORIG
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fill" class="md-nav__link">
-    .FILL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blkw" class="md-nav__link">
-    .BLKW
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringz" class="md-nav__link">
-    .STRINGZ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#end" class="md-nav__link">
-    .END
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-assembly-process" class="md-nav__link">
-    The Assembly Process
-  </a>
-  
-    <nav class="md-nav" aria-label="The Assembly Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-two-pass-process" class="md-nav__link">
-    A Two-Pass Process
-  </a>
-  
-    <nav class="md-nav" aria-label="A Two-Pass Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-first-pass-creating-the-symbol-table" class="md-nav__link">
-    The First Pass: Creating the Symbol Table
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-second-pass-generating-the-machine-language-program" class="md-nav__link">
-    The Second Pass: Generating the Machine Language Program
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#beyond-the-assembly-of-a-single-assembly-language-program" class="md-nav__link">
-    Beyond the Assembly of a Single Assembly Language Program
-  </a>
-  
-    <nav class="md-nav" aria-label="Beyond the Assembly of a Single Assembly Language Program">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-executable-image" class="md-nav__link">
-    The Executable Image
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -754,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-8/" class="md-nav__link">
+      <a href="../../ICS/ICS-8/" class="md-nav__link">
         Data Structures
       </a>
     </li>
@@ -768,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-9/" class="md-nav__link">
+      <a href="../../ICS/ICS-9/" class="md-nav__link">
         I/0
       </a>
     </li>
@@ -1080,12 +888,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" checked>
       
       
       
@@ -1107,7 +917,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../ds/">数据结构与算法</a>
+          <a href="../">数据结构与算法</a>
           
             <label for="__nav_2_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1130,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/algorithm/" class="md-nav__link">
+      <a href="../algorithm/" class="md-nav__link">
         算法分析
       </a>
     </li>
@@ -1144,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/tree/" class="md-nav__link">
+      <a href="../tree/" class="md-nav__link">
         树
       </a>
     </li>
@@ -1158,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/heap/" class="md-nav__link">
+      <a href="../heap/" class="md-nav__link">
         堆
       </a>
     </li>
@@ -1170,11 +980,87 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ds/set/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          并查集
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         并查集
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    前置知识
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    动态等价性问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    基本数据结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    灵巧求并算法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    路径压缩
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    按秩求并和路径压缩的最坏情形
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1309,158 +1195,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#assembly-language" class="md-nav__link">
-    Assembly Language
+  <a href="#_2" class="md-nav__link">
+    前置知识
   </a>
-  
-    <nav class="md-nav" aria-label="Assembly Language">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#instructions" class="md-nav__link">
-    Instructions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opcodes" class="md-nav__link">
-    Opcodes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#operands" class="md-nav__link">
-    Operands
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#labels" class="md-nav__link">
-    Labels
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comments" class="md-nav__link">
-    Comments
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pseudo-ops" class="md-nav__link">
-    Pseudo-Ops
-  </a>
-  
-    <nav class="md-nav" aria-label="Pseudo-Ops">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#orig" class="md-nav__link">
-    .ORIG
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fill" class="md-nav__link">
-    .FILL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blkw" class="md-nav__link">
-    .BLKW
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stringz" class="md-nav__link">
-    .STRINGZ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#end" class="md-nav__link">
-    .END
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-assembly-process" class="md-nav__link">
-    The Assembly Process
-  </a>
-  
-    <nav class="md-nav" aria-label="The Assembly Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-two-pass-process" class="md-nav__link">
-    A Two-Pass Process
-  </a>
-  
-    <nav class="md-nav" aria-label="A Two-Pass Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-first-pass-creating-the-symbol-table" class="md-nav__link">
-    The First Pass: Creating the Symbol Table
+  <a href="#_3" class="md-nav__link">
+    动态等价性问题
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#the-second-pass-generating-the-machine-language-program" class="md-nav__link">
-    The Second Pass: Generating the Machine Language Program
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    基本数据结构
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#beyond-the-assembly-of-a-single-assembly-language-program" class="md-nav__link">
-    Beyond the Assembly of a Single Assembly Language Program
-  </a>
-  
-    <nav class="md-nav" aria-label="Beyond the Assembly of a Single Assembly Language Program">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-executable-image" class="md-nav__link">
-    The Executable Image
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    灵巧求并算法
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    路径压缩
+  </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    按秩求并和路径压缩的最坏情形
+  </a>
   
 </li>
       
@@ -1477,89 +1249,97 @@
               
 
                 
-  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/ICS/ICS-7.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/ds/set.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="chapter-7-assembly-language">Chapter 7 Assembly Language<a class="headerlink" href="#chapter-7-assembly-language" title="Permanent link">&para;</a></h1>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p>Covered in Lecture 5, 2022.7.16
-Topics:<br />
-1. Assembler
-2. Assembly Language</p>
-</div>
-<h2 id="assembly-language">Assembly Language<a class="headerlink" href="#assembly-language" title="Permanent link">&para;</a></h2>
-<p>From ISA to language.<br />
-Assembly language is a low-level language.<br />
-High-level languages tend to be ISA independent.<br />
-Low-level languages are very much ISA dependent. In fact, it is usually the case that each ISA has
-only one assembly language.<br />
-The translation program is called an <em>assembler</em> and the translation process is called <em>assembly</em>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>汇编语言转为机器码的过程叫<strong>汇编</strong>, 而不是<strong>编译</strong>.<br />
-编译是对高级语言(如 C)而言.</p>
-</div>
-<h3 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h3>
-<p>An instrution in assembly language consists of 4 parts, and two of it(Label and Comment) are optional.<br />
-<code>Label Opcode Opearnds  ; Comment</code>  </p>
-<h3 id="opcodes">Opcodes<a class="headerlink" href="#opcodes" title="Permanent link">&para;</a></h3>
-<p>The Opcode is a symbolic name for the opcode of the correspounding LC-3 instruction so we can memorize the instruction easier. <strong><em>e.g.</em></strong> <code>ADD</code>, <code>AND</code>, or <code>LDR</code> rather than 0001, 0101 or 0110.</p>
-<h3 id="operands">Operands<a class="headerlink" href="#operands" title="Permanent link">&para;</a></h3>
+<h1 id="_1">并查集<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">前置知识<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>一个<strong>关系</strong> R 定义在集合 S 上, 表示为对于每一对 <span class="arithmatex">\((a,b),a,b\in S\)</span>, <span class="arithmatex">\(aRb\)</span> 要么为真要么为假. 如果 <span class="arithmatex">\(aRb\)</span> 为真，那么我们称 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 有关系。</p>
+<p><strong>等价关系</strong>是满足自反性(<span class="arithmatex">\(\forall a\in S, aRa\)</span>)，对称性(<span class="arithmatex">\(aRb\Leftrightarrow bRa\)</span>)，传递性(<span class="arithmatex">\(aRb, bRc \Rightarrow aRc\)</span>)的关系，一般用 ~ 表示等价关系。</p>
+<p>S 中的两个元素 <span class="arithmatex">\(x\)</span> <span class="arithmatex">\(y\)</span> 在同一个等价类中当且仅当 <span class="arithmatex">\(a\)</span> ~ <span class="arithmatex">\(b\)</span></p>
+</blockquote>
+<h2 id="_3">动态等价性问题<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The number of operands depends on the operation being performed. <strong><em>e.g.</em></strong> ADD requires 3 operands.  </li>
-<li>A literal value must contain a symbol identifying the representation base of the number. We use # for decimal, x for hexadecimal, and b for binary. (must)</li>
+<li>集合的元素: <span class="arithmatex">\(1,2,3\ldots,N\)</span></li>
+<li>集合: <span class="arithmatex">\(S_1,S_2,\ldots\)</span> 且 <span class="arithmatex">\(S_i\cap S_j=\empty\)</span> (若 <span class="arithmatex">\(i\neq j\)</span>), 即集合之间不相交</li>
+<li>操作:<ul>
+<li><code>Find(i)</code> 返回给定元素的所在的集合（等价类）</li>
+<li><code>Union(i,j)</code> 求并运算，将含有 a 和 b 的两个等价类合并为一个等价类  </li>
 </ul>
-<h3 id="labels">Labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h3>
-<p>Labels are symbolic names used to identify memory locations that are referred explicitly in the program. In LC-3, a label consists of from 1 to 20 alphanumeric characters starting with a letter of the alphabet.(reserved words excluded)<br />
-There are 2 reasons for explicitly referring to a memory location.  </p>
+</li>
+</ul>
+<h2 id="_4">基本数据结构<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>我们用树来表示每一个集合，树的根命名这个集合（代表元），树的集合构成了一个森林。<br />
+初始时，每棵树都只有一个元素。当需要执行 <code>Union</code> 操作时，我们将一个节点的根指针指向另一棵树的根节点。当需要执行 <code>Find</code> 操作时，我们只需要从元素 X 一直向上直到根为止。</p>
+<details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">SetUnion</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Rt1</span><span class="p">,</span><span class="w"> </span><span class="n">SetType</span><span class="w"> </span><span class="n">Rt2</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span><span class="w">    </span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">S</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">Rt2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Rt1</span><span class="w"> </span><span class="p">;</span><span class="w">     </span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">SetType</span><span class="w"> </span><span class="nf">Find</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">DisjSet</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">{</span><span class="w">   </span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">X</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="n">X</span><span class="p">]</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="k">return</span><span class="w">  </span><span class="n">X</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</details>
+<p>实际运用中，<code>Union</code> 和 <code>Find</code> 操作通常成对出现:</p>
+<details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">/* Algorithm using union-find operations */</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span><span class="w">  </span><span class="n">Initialize</span><span class="w">  </span><span class="n">Si</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="k">for</span><span class="w">  </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">...,</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">   </span><span class="k">for</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="p">{</span><span class="w">  </span><span class="cm">/* for each pair  i  j */</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">Find</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">Find</span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">          </span><span class="n">SetUnion</span><span class="p">(</span><span class="w"> </span><span class="n">Find</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="n">Find</span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">   </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</details>
+
+<h2 id="_5">灵巧求并算法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The location is the target of a branch instruction.  </li>
-<li>The location contains a value that is loaded or stored.</li>
+<li>按大小求并<br />
+即每次合并时，我们改变较小的树
+设 <span class="arithmatex">\(T\)</span> 是按大小合并的 <span class="arithmatex">\(N\)</span> 个节点的树，那么 <span class="arithmatex">\(height(T)\leq\lfloor \log_2N\rfloor +1\)</span> (可用归纳法证明) <br />
+因此对于 <span class="arithmatex">\(N\)</span> 个 <code>Union</code> 操作 <span class="arithmatex">\(M\)</span> 个 <code>Find</code> 操作，所用时间为 <span class="arithmatex">\(O(N+M\log_2N)\)</span></li>
+<li>按高度求并<br />
+即每次合并时，我们改变较矮的树</li>
 </ul>
-<h3 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">&para;</a></h3>
-<p>Comments are messages intened only for human consumption. They have <strong>no effect</strong> on the translation process and indeed are not acted on by the LC-3 assembler.<br />
-They are identified by semicolons. A semicolon signifies the rest of the line is a commment and is to be ignored by the assembler.  </p>
-<h3 id="pseudo-ops">Pseudo-Ops<a class="headerlink" href="#pseudo-ops" title="Permanent link">&para;</a></h3>
-<p>Pseudo-op is also called <em>assembler directive</em>, and it dose no t refer to an operation that will be performed by the program during execution.</p>
-<h4 id="orig">.ORIG<a class="headerlink" href="#orig" title="Permanent link">&para;</a></h4>
-<p><code>.OGIR</code> tells the assembler where in memory to place the LC-3 program.(to specify the start address)</p>
-<h4 id="fill">.FILL<a class="headerlink" href="#fill" title="Permanent link">&para;</a></h4>
-<p><code>.FILL</code> tells the assembler to set aside the next location in the program and initiallize it with the value of the operand. The value can be either a number or a label. <strong><em>e.g.</em></strong> x3006: <code>.FILL x0030</code> then x0030 will be stored in the location x3006.</p>
-<h4 id="blkw">.BLKW<a class="headerlink" href="#blkw" title="Permanent link">&para;</a></h4>
-<p><code>.BLKW</code> tells the assembler to set aside some number of sequential memory locations.(i.e. a <strong>BL</strong>oc<strong>K</strong> of <strong>W</strong>ords) <strong><em>e.g.</em></strong> x3007: <code>.BLKW 1</code> then the location x3007 will be set aside.</p>
-<h4 id="stringz">.STRINGZ<a class="headerlink" href="#stringz" title="Permanent link">&para;</a></h4>
-<p><code>.STRINGZ</code> tells the assembler to initiallize a sequence of n+1 memory locations. The argument is asquence of n characters inside double quotation marks. The first n words of memroy are initiallize with the zero-extended ASCII codes of the correspounding characters in the string. The final word is 0.(<code>\0</code>)</p>
-<h4 id="end">.END<a class="headerlink" href="#end" title="Permanent link">&para;</a></h4>
-<p><code>.END</code> tells the assembler it has reached the end of the program.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Note does not stop the program during execution. In fact, <code>.END</code> does not even <strong>exist</strong> at the time of execution.</p>
-</div>
-<h2 id="the-assembly-process">The Assembly Process<a class="headerlink" href="#the-assembly-process" title="Permanent link">&para;</a></h2>
-<p>It's the job of the LC-3 assembler to perform the translation from the LC-3 assembly language into a machine language program.<br />
-We use the command <code>assemble</code> and it requires the filename of your assembly language program as an argument, and it produces the file outfile, which is in the ISA of LC-3.<br />
-<code>assemble soutiona1.asm outfile</code></p>
-<h3 id="a-two-pass-process">A Two-Pass Process<a class="headerlink" href="#a-two-pass-process" title="Permanent link">&para;</a></h3>
-<h4 id="the-first-pass-creating-the-symbol-table">The First Pass: Creating the Symbol Table<a class="headerlink" href="#the-first-pass-creating-the-symbol-table" title="Permanent link">&para;</a></h4>
-<p>The symbol table is simply a correspoundence of symbolic names with their 16-bit memory addresses. In the first pass we identify each label with the memory address of its assigned entry.</p>
-<p><strong><em>e.g.</em></strong>
-<img src="https://s2.loli.net/2022/07/16/5WHXTzQSvClqGLp.png" style="zoom:50%;" />  </p>
-<h4 id="the-second-pass-generating-the-machine-language-program">The Second Pass: Generating the Machine Language Program<a class="headerlink" href="#the-second-pass-generating-the-machine-language-program" title="Permanent link">&para;</a></h4>
-<p>The second pass consists of going through the assembly language line by line, with the help of the symbol table. At each line, the assembly language instruction is translated into an LC-3 machine language instruction.</p>
-<div class="admonition example">
-<p class="admonition-title">LD</p>
-<p>The only part of the LD instruction left to do is the PCoffset. So it's necessary that the address of the source is no more than +256 or -255 memory locations from the LD instruction. Otherwise, assembly error.</p>
-</div>
-<h3 id="beyond-the-assembly-of-a-single-assembly-language-program">Beyond the Assembly of a Single Assembly Language Program<a class="headerlink" href="#beyond-the-assembly-of-a-single-assembly-language-program" title="Permanent link">&para;</a></h3>
-<h4 id="the-executable-image">The Executable Image<a class="headerlink" href="#the-executable-image" title="Permanent link">&para;</a></h4>
-<p>When a computer begins execution of a program, the entity being executed is called a <em>executable image</em>. The executable image is created from modules often created independently by several different programmers(also different object files).  </p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>we write <code>PTR .FILL STARTofFILE</code> in the program but there is no such a label in our program while the label is in another module by different programmer. We can use <code>.EXTERNAL STARTofFILE</code>, then at <em>link time</em> when all modules are combined, the linker will find the symbol table entry.</p>
+<h2 id="_6">路径压缩<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">SetType</span><span class="w">  </span><span class="nf">Find</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w">  </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">DisjSet</span><span class="w">  </span><span class="n">S</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span><span class="w">   </span><span class="n">ElementType</span><span class="w">  </span><span class="n">root</span><span class="p">,</span><span class="w">  </span><span class="n">trail</span><span class="p">,</span><span class="w">  </span><span class="n">lead</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="p">;</span><span class="w">  </span><span class="cm">/* find the root */</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">root</span><span class="p">;</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lead</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">       </span><span class="n">lead</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">   </span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">       </span><span class="n">S</span><span class="p">[</span><span class="w"> </span><span class="n">trail</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="p">;</span><span class="w">   </span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="cm">/* collapsing */</span><span class="w"></span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="k">return</span><span class="w">  </span><span class="n">root</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</details>
+<p>路径压缩的效果是，从 X 到根的路径上每一个节点都使它的父节点变成根。<br />
+路径压缩与按大小求并完全兼容，可以同时实现，但不能与按高度求并（有时称为秩）</p>
+<h2 id="_7">按秩求并和路径压缩的最坏情形<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>令 <span class="arithmatex">\(T(M,N)\)</span> 执行 <span class="arithmatex">\(M\geq N\)</span> 次 <code>Find</code> 和 <span class="arithmatex">\(N-1\)</span> 次 <code>Union</code> 操作的最坏用时。那么 <span class="arithmatex">\(k_1M\alpha(M,N)\leq T(M,N)\leq k_2 M\alpha(M,N)\)</span> 对于某个正常数 <span class="arithmatex">\(k_1,k_2\)</span>.<br />
+其中 <span class="arithmatex">\(\alpha(M,N)\)</span> 是 Ackermann 函数.  </p>
+<div class="arithmatex">\[
+\begin{align*}
+A(i,j)=\left\{ \begin{matrix}2^j\quad    &amp; i=1\ and\ j\geq 1\\
+A(i-1,2)\quad &amp; i\geq 2\ and\ j=1\\
+A(i-1,A(i,j-1))\ &amp; i\geq 2\ and\ j\geq 2 \end{matrix}\right.
+\end{align*}
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>并查集: the disjoint set <br />
+等价关系: equivalence relations<br />
+按大小求并: union by size<br />
+路径压缩: path compression  </p>
 </div>
 
   <hr>
@@ -1567,11 +1347,11 @@ We use the command <code>assemble</code> and it requires the filename of your as
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年9月5日 23:38:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月14日 23:05:58</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年9月5日 23:38:05</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月14日 23:05:58</span>
       
     
   </small>
@@ -1646,7 +1426,7 @@ We use the command <code>assemble</code> and it requires the filename of your as
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../ICS-6/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Programming" rel="prev">
+        <a href="../heap/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 堆" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1655,20 +1435,20 @@ We use the command <code>assemble</code> and it requires the filename of your as
               <span class="md-footer__direction">
                 上一页
               </span>
-              Programming
+              堆
             </div>
           </div>
         </a>
       
       
         
-        <a href="../ICS-8/" class="md-footer__link md-footer__link--next" aria-label="下一页: Data Structures" rel="next">
+        <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-footer__link md-footer__link--next" aria-label="下一页: 线性代数Ⅱ(H)" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              Data Structures
+              线性代数Ⅱ(H)
             </div>
           </div>
           <div class="md-footer__button md-icon">
