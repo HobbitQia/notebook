@@ -1,3 +1,6 @@
+---
+counter: True  
+---
 
 # **Combinational Logic Circuits**
 

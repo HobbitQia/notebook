@@ -1,12 +1,15 @@
-
+---
+counter: True  
+---
+ 
 # Chapter 9 I/0
 
 !!! Abstract
-    Covered in Lecture 8, 2022.7.19  and Lecture 9, 2022.7.20  
-    Topics:  
-    1. Input & Output  
-    2. Trap  
-    3. Interrupt  
+    Covered in Lecture 8, 2022.7.19  and Lecture 9, 2022.7.20    
+    Topics:    
+    1. Input & Output    
+    2. Trap    
+    3. Interrupt    
 
 ## Privilege, Priority and the Memory Address Space
 

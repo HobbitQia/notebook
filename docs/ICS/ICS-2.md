@@ -1,11 +1,14 @@
+---
+counter: True  
+---
 
 # Chapter 2 Bits, Data Types and Operations
 
 !!! Abstract
-    Covered in Lecture 1 2022.7.11 and Lecture 2 2022.7.12  
-    Topics:
-    1. the bit binary digit codes  
-    2. data type(unsigned integer, signed integer, logical variable, float number, ASCII)
+    Covered in Lecture 1 2022.7.11 and Lecture 2 2022.7.12    
+    Topics:    
+    1. the bit binary digit codes    
+    2. data type(unsigned integer, signed integer, logical variable, float number, ASCII)  
 
 n bits, can represent $2^n$ numbers, ranging from 0 to $2^{n-1}$
 

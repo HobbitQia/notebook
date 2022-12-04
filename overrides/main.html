@@ -2,6 +2,9 @@
 
 {% block content %}
 {{ super() }}
+{% if page and page.meta and page.meta.counter %}
+<link rel="stylesheet" href="/css/counter.css">
+{% endif %}
 <!-- Giscus -->
 <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
 

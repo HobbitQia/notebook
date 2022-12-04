@@ -1,12 +1,15 @@
+---
+counter: True  
+---
 
 # Chapter 1 Introduction
 
 !!! Abstract
-    Covered in Lecture 1 2022.7.11
-    Topics:  
-    1. Two major themes: Abstraction and Hardware vs Software  
-    2. A computer system  
-    3. Level of Transfomation
+    Covered in Lecture 1 2022.7.11  
+    Topics:    
+    1. Two major themes: Abstraction and Hardware vs Software   
+    2. A computer system   
+    3. Level of Transfomation  
 
 ## Two major themes
 

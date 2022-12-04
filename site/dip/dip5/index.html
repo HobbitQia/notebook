@@ -1,0 +1,2108 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HobbitQia的笔记本">
+      
+      
+      
+        <link rel="canonical" href="https://note.hobbitqia.cc/dip/dip5/">
+      
+      <link rel="icon" href="../../log.ico">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>几何变换 - HobbitQia的笔记本</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGW+WenKai+Screen:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"LXGW WenKai Screen";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+      <link rel="stylesheet" href="../../css/card.css">
+    
+      <link rel="stylesheet" href="../../css/tasklist.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="brown">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#geometric-transform" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+      
+  <img src="../../log.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HobbitQia的笔记本
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              几何变换
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="brown"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HobbitQia/notebook/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HobbitQia/notebook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ICS/" class="md-tabs__link md-tabs__link--active">
+        Computer Science
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
+        Mathematics
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../link/" class="md-tabs__link">
+        友链
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+      
+  <img src="../../log.ico" alt="logo">
+
+    </a>
+    HobbitQia的笔记本
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HobbitQia/notebook/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HobbitQia/notebook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">Home</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Computer Science
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computer Science" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Computer Science
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ICS/">计算机系统概论</a>
+          
+            <label for="__nav_2_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="计算机系统概论" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机系统概论
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-2/" class="md-nav__link">
+        Bits, Data Types and Operations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-3/" class="md-nav__link">
+        Digital Logic Structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-4/" class="md-nav__link">
+        The von Neumann Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-5/" class="md-nav__link">
+        LC-3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-6/" class="md-nav__link">
+        Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-7/" class="md-nav__link">
+        Assembly Language
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-8/" class="md-nav__link">
+        Data Structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-9/" class="md-nav__link">
+        I/0
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          CSAPP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CSAPP" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          CSAPP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/5/" class="md-nav__link">
+        优化程序性能
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/6/" class="md-nav__link">
+        存储器层次结构
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/7/" class="md-nav__link">
+        链接
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/8/" class="md-nav__link">
+        异常控制流
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/9/" class="md-nav__link">
+        虚拟内存
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          数值分析
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数值分析" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          数值分析
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NA/NA01/" class="md-nav__link">
+        Mathematical Preliminaries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NA/NA02/" class="md-nav__link">
+        Solutions of Equations in One Variable
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../Logic/">计算机逻辑设计基础</a>
+          
+            <label for="__nav_2_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="计算机逻辑设计基础" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          计算机逻辑设计基础
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Logic/logic01/" class="md-nav__link">
+        数字系统和信息
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Logic/logic02/" class="md-nav__link">
+        组合逻辑电路
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Logic/logic03/" class="md-nav__link">
+        组合逻辑电路设计
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Logic/logic04/" class="md-nav__link">
+        时序逻辑电路
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Logic/logic06/" class="md-nav__link">
+        寄存器与寄存器传输
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ds/">数据结构与算法</a>
+          
+            <label for="__nav_2_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="数据结构与算法" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          数据结构与算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/algorithm/" class="md-nav__link">
+        算法分析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/tree/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/heap/" class="md-nav__link">
+        堆
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/set/" class="md-nav__link">
+        并查集
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/graph/" class="md-nav__link">
+        图论
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">图像信息处理</a>
+          
+            <label for="__nav_2_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="图像信息处理" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          图像信息处理
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          几何变换
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        几何变换
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simple-geometric-transform" class="md-nav__link">
+    Simple geometric transform
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple geometric transform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translation" class="md-nav__link">
+    Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror" class="md-nav__link">
+    Mirror
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation" class="md-nav__link">
+    Rotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale" class="md-nav__link">
+    Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shear" class="md-nav__link">
+    Shear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combination" class="md-nav__link">
+    Combination
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpolation" class="md-nav__link">
+    Interpolation
+  </a>
+  
+    <nav class="md-nav" aria-label="Interpolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nearest-neighbor" class="md-nav__link">
+    Nearest neighbor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-interpolation" class="md-nav__link">
+    Linear interpolation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rbf-interpolation" class="md-nav__link">
+    RBF interpolation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warp-and-morph" class="md-nav__link">
+    Warp and Morph
+  </a>
+  
+    <nav class="md-nav" aria-label="Warp and Morph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-morph" class="md-nav__link">
+    Image Morph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#morph-based-on-segment" class="md-nav__link">
+    Morph based on segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#morph-based-on-grid" class="md-nav__link">
+    Morph based on grid
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application" class="md-nav__link">
+    Application
+  </a>
+  
+    <nav class="md-nav" aria-label="Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lambertian-model" class="md-nav__link">
+    Lambertian model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dip6/" class="md-nav__link">
+        卷积与滤波
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dip7/" class="md-nav__link">
+        双边滤波的加速
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dip8/" class="md-nav__link">
+        引导滤波
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dip9/" class="md-nav__link">
+        稀疏范数滤波
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Mathematics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mathematics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mathematics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          线性代数
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="线性代数" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          线性代数
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
+        线性代数Ⅱ(H)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          友链
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="友链" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          友链
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../link/" class="md-nav__link">
+        Link
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simple-geometric-transform" class="md-nav__link">
+    Simple geometric transform
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple geometric transform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translation" class="md-nav__link">
+    Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror" class="md-nav__link">
+    Mirror
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation" class="md-nav__link">
+    Rotation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale" class="md-nav__link">
+    Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shear" class="md-nav__link">
+    Shear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combination" class="md-nav__link">
+    Combination
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpolation" class="md-nav__link">
+    Interpolation
+  </a>
+  
+    <nav class="md-nav" aria-label="Interpolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nearest-neighbor" class="md-nav__link">
+    Nearest neighbor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-interpolation" class="md-nav__link">
+    Linear interpolation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rbf-interpolation" class="md-nav__link">
+    RBF interpolation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warp-and-morph" class="md-nav__link">
+    Warp and Morph
+  </a>
+  
+    <nav class="md-nav" aria-label="Warp and Morph">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-morph" class="md-nav__link">
+    Image Morph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#morph-based-on-segment" class="md-nav__link">
+    Morph based on segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#morph-based-on-grid" class="md-nav__link">
+    Morph based on grid
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application" class="md-nav__link">
+    Application
+  </a>
+  
+    <nav class="md-nav" aria-label="Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lambertian-model" class="md-nav__link">
+    Lambertian model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/dip/dip5.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="geometric-transform">Geometric transform<a class="headerlink" href="#geometric-transform" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<ul>
+<li>Simple geometric transform  </li>
+<li>Interpolation  </li>
+<li>Warp and morph  </li>
+<li>Application  </li>
+</ul>
+</div>
+<p>利用变换函数改变图像中像素的位置，从而产生新图像的过程。 <br />
+几何变换不改变像素值，而是改变像素所在的位置。 </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211011356961.png" width = 60%/> </div>  </p>
+</div>
+<p><span class="arithmatex">\(g(x,y)=f(x^{'},y^{'})=f[a(x,y),b(x,y)]\)</span>  </p>
+<p><span class="arithmatex">\(f(x,y)\)</span> 表示输入图像， <span class="arithmatex">\(g(x,y)\)</span> 表示输出图像。函数 <span class="arithmatex">\(a(x,y)\)</span> 和 <span class="arithmatex">\(b(x,y)\)</span> 唯一地描述了空间变换。 </p>
+<p>几何变换根据难易程度通常可以归结为两类：  </p>
+<ul>
+<li><strong>简单变换</strong>——变换过程（各个像素变换前后的位置）以及变换参数可知时的变换，如图像的<em>平移、镜像、转置、旋转、缩放、错切变换</em>等。</li>
+<li><strong>一般变换</strong>——变换过程不是一目了然，变换参数难以测量时的变换。通常情况下，对图像畸变进行校正时，需要用到较为复杂的变换公式。  </li>
+</ul>
+<h2 id="simple-geometric-transform">Simple geometric transform<a class="headerlink" href="#simple-geometric-transform" title="Permanent link">&para;</a></h2>
+<h3 id="translation">Translation<a class="headerlink" href="#translation" title="Permanent link">&para;</a></h3>
+<p>将图像沿水平和竖直方向移动，从而产生新图像的过程。   </p>
+<div class="arithmatex">\[
+\left\{ \begin{matrix} x^{'}=x+x_0 \\ y^{'}=y+y_0 \end{matrix} \right.
+\]</div>
+<div class="arithmatex">\[
+\left[ \begin{matrix} x^{'}\\ y^{'}\\ 1 \end{matrix} \right]=\left[ \begin{matrix} 1 &amp; 0 &amp; x_0 \\ 0 &amp; 1 &amp; y_0 \\ 0 &amp; 0 &amp; 1 \end{matrix} \right] \left[ \begin{matrix} x\\ y\\ 1 \end{matrix} \right]
+\]</div>
+<p>平移后的景物与原图像相同，但“画布”一定是扩大了，否则就会丢失信息。</p>
+<h3 id="mirror">Mirror<a class="headerlink" href="#mirror" title="Permanent link">&para;</a></h3>
+<p>绕x轴或y轴翻转，从而产生与原图像对称的新图像的过程: <span class="arithmatex">\(\left\{ \begin{matrix} x^{'}=x \\ y^{'}=-y \end{matrix} \right.\)</span>
+绕x轴或y轴翻转，从而产生与原图像对称的新图像的过程: <span class="arithmatex">\(\left\{ \begin{matrix} x^{'}=-x \\ y^{'}=y \end{matrix} \right.\)</span></p>
+<div class="arithmatex">\[
+\left[ \begin{matrix} x^{'}\\ y^{'}\\ 1 \end{matrix} \right]=\left[ \begin{matrix} s_x &amp; 0 &amp; 0 \\ 0 &amp; s_y &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{matrix} \right] \left[ \begin{matrix} x\\ y\\ 1 \end{matrix} \right]
+\]</div>
+<div class="arithmatex">\[
+\left[ \begin{matrix} x^{'}\\ y^{'}\\ 1 \end{matrix} \right]=\left[ \begin{matrix} \cos\theta &amp; -\sin\theta &amp; 0 \\ \sin\theta &amp; \cos\theta &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{matrix} \right] \left[ \begin{matrix} x\\ y\\ 1 \end{matrix} \right]
+\]</div>
+<p>当 <span class="arithmatex">\(S_x = 1\)</span>，且 <span class="arithmatex">\(S_y = -1\)</span> 时实现绕x轴的镜像变换
+当 <span class="arithmatex">\(S_x = -1\)</span>，且 <span class="arithmatex">\(S_y = 1\)</span> 时实现绕y轴的镜像变换</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211011415259.png" width = 50%/> </div>
+
+<h3 id="rotation">Rotation<a class="headerlink" href="#rotation" title="Permanent link">&para;</a></h3>
+<p>绕原点旋转 <span class="arithmatex">\(\theta\)</span> 角，得到新图像的过程  </p>
+<div class="arithmatex">\[  
+\left\{ \begin{matrix} x^{'}=x\cos\theta - y\sin\theta\\ y^{'}=x\sin\theta + y\cos\theta \end{matrix} \right.
+\]</div>
+<div class="arithmatex">\[
+\left[ \begin{matrix} x^{'}\\ y^{'}\\ 1 \end{matrix} \right]=\left[ \begin{matrix} \cos\theta &amp; 0 &amp; x_0 \\ 0 &amp; 1 &amp; y_0 \\ 0 &amp; 0 &amp; 1 \end{matrix} \right] \left[ \begin{matrix} x\\ y\\ 1 \end{matrix} \right]
+\]</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211052250270.png" width = 60%/> </div>   </p>
+<p>四舍五入/保留原来背景颜色（空白）<br />
+空洞问题，图像经过旋转变换以后，新图像中会出现许多空洞，需要插入</p>
+</div>
+<p>解决：
+用插值方法填补。<br />
+行插值——按顺序寻找每一行中的空洞像素，设置其像素值与同一行中前一个像素的像素值相同。<br />
+还可以缩放。</p>
+<h3 id="scale">Scale<a class="headerlink" href="#scale" title="Permanent link">&para;</a></h3>
+<p>将图像乘以一定系数，从而产生新图像的过程。</p>
+<div class="arithmatex">\[
+\left\{ \begin{matrix} x^{'}=cx\\ y^{'}=dy \end{matrix} \right.
+\]</div>
+<p>或者用矩阵表示为 </p>
+<div class="arithmatex">\[
+\left[ \begin{matrix} x^{'}\\ y^{'}\\ 1 \end{matrix} \right]=\left[ \begin{matrix} c &amp;  0 &amp; 0 \\ 0 &amp; d &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{matrix} \right] \left[ \begin{matrix} x\\ y\\ 1 \end{matrix} \right]
+\]</div>
+<ul>
+<li>沿x轴方向缩放c倍（c&gt;1时为放大，0&lt;c&lt;1时为缩小）；沿y轴方向缩放d倍（d&gt;1时为放大，0&lt;d&lt;1时为缩小）。 </li>
+<li>当 <span class="arithmatex">\(c=d\)</span> 时，图像等比缩放；否则为非等比缩放，导致图像变形。</li>
+<li>缩小——按一定间隔选取某些行和列的像素构成缩小后的新图像；</li>
+<li>放大——新图像出现空行和空列，可采用插值的方法加以填补，但存在“马赛克”现象。 </li>
+</ul>
+<p><strong><em>e.g.</em></strong>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211011425412.png" width = 50%/> </div></p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211011425034.png" width = 30%/> </div>
+
+<h3 id="shear">Shear<a class="headerlink" href="#shear" title="Permanent link">&para;</a></h3>
+<p>图像的错切变换实际上是景物在平面上的非垂直投影效果。</p>
+<p>假设剪切变换的参数为 <span class="arithmatex">\(d_x\)</span> 或者 <span class="arithmatex">\(d_y\)</span>，那么可以用数学公式表现为  </p>
+<ul>
+<li><strong>Shear on x-axis:</strong> <span class="arithmatex">\(\left\{ \begin{matrix} a(x,y)=x+d_xy\\ b(x,y)=y \end{matrix} \right.\)</span></li>
+<li><strong>Shear on y-axis:</strong> <span class="arithmatex">\(\left\{ \begin{matrix} a(x,y)=x\\ b(x,y)=y+d_yx \end{matrix} \right.\)</span>
+仅 x 坐标或 y 坐标受到剪切或者 x、y 同时受到剪切的变换矩阵分别为：</li>
+</ul>
+<div class="arithmatex">\[
+\left( \begin{matrix} 1 &amp;  0  \\ d_x &amp; 1 \end{matrix} \right) 
+\left( \begin{matrix} 1 &amp;  d_y  \\ 0 &amp; 1 \end{matrix} \right)
+\left( \begin{matrix} 1 &amp;  d_y  \\ d_x &amp; 1 \end{matrix} \right)  
+\]</div>
+<p><strong><em>e.g.</em></strong>  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211052257196.png" width = 55%/> </div>
+
+<h3 id="combination">Combination<a class="headerlink" href="#combination" title="Permanent link">&para;</a></h3>
+<p>图像的组合变换是各项简单几何变换的混合操作。</p>
+<div class="arithmatex">\[
+\left[ \begin{matrix} x^{'}\\ y^{'}\\ 1 \end{matrix} \right]=\left[ \begin{matrix} a &amp;  b &amp; c \\ d &amp; e &amp; f \\ g &amp; h &amp; 1 \end{matrix} \right] \left[ \begin{matrix} x\\ y\\ 1 \end{matrix} \right]
+\]</div>
+<p>变换矩阵是由构成组合变换的各种简单变换的变换矩阵按<em>从左至右</em>的顺序逐次相乘以后得到的结果。<br />
+变换矩阵相乘时的顺序是不可以任意改变的</p>
+<h2 id="interpolation">Interpolation<a class="headerlink" href="#interpolation" title="Permanent link">&para;</a></h2>
+<p>插值是几何变换最常用的工具，利用已知像素值，采用不同的插值方法，可以模拟出未知像素的像素值。 </p>
+<h3 id="nearest-neighbor">Nearest neighbor<a class="headerlink" href="#nearest-neighbor" title="Permanent link">&para;</a></h3>
+<p><strong>最近邻插值</strong>：输出像素的灰度值等于离它所映射到的位置最近的输入像素的灰度值。   </p>
+<p>计算过程：<br />
+为了计算几何变换后新图像中某一点P’处的像素值，可以首先计算该几何变换的逆变换，计算出P’所对应的原图像中的位置P。通常情况下，P的位置不可能正好处在原图像的某一个像素位置上（即P点的坐标通常都不会正好是整数）。寻找与P点最接近的像素Q，把Q点的像素值作为新图像中P’点的像素值。 
+<img alt="" src="http://cdn.hobbitqia.cc/202211052258659.png" />
+当图像中包含明显的几何结构时，结果将不太光滑连续，从而在图像中产生人为的痕迹。 </p>
+<h3 id="linear-interpolation">Linear interpolation<a class="headerlink" href="#linear-interpolation" title="Permanent link">&para;</a></h3>
+<p>在一维情况下，已知x1和x2处的灰度值分别为g1和g2，则x3处的灰度值g3为：<br />
+<span class="arithmatex">\(g_3=\dfrac{g_2-g_1}{x_2-x_1}(x_3-x_1)+g_1\)</span></p>
+<p>但我们图像是二维的（行列），因此需要二维插值。  </p>
+<p>在二维情况下，称为双线性插值。
+已知图像的正方形网格上四个点A、B、C、D的灰度，求P点的灰度。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211011439253.png" width = 40%/> </div>
+
+<ul>
+<li>定义双线性方程 <span class="arithmatex">\(g(x,y)=ax+by+cxy+d\)</span></li>
+<li>分别将A、B、C、D四点的位置和灰度代入方程，得到方程组。</li>
+<li>解方程组，解出a、b、c、d四个系数。</li>
+<li>将P点的位置代入方程，得到P点的灰度。</li>
+</ul>
+<p>可以并行计算. 实际中可以分别在行列做两次线性插值，随后再在前两次基础上进行一次线性插值。</p>
+<h3 id="rbf-interpolation">RBF interpolation<a class="headerlink" href="#rbf-interpolation" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(G(x)=\sum_{i=1}^n w_iG(c_i)\)</span> where <span class="arithmatex">\(w_i=\dfrac{\phi(|x-c_i|)}{\sum_{i=1}^n\phi(|x-c_i|}\)</span>  </p>
+<p>其中 <span class="arithmatex">\(x\)</span> 可以是一个标量，也可以是一个向量，也就是说既可以是一维插值，也可以是二维、多维插值，取决于 <span class="arithmatex">\(x\)</span> 的维度。   </p>
+<p>用鼠标拖，离鼠标越近，受影响越小  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211121431480.png" width = 40%/> </div>
+
+<p>常用的核函数：</p>
+<ul>
+<li>Gaussian: <span class="arithmatex">\(\phi(r)=exp\{-\dfrac{e^2}{2\sigma^2}\}\)</span>  </li>
+<li>Multiquadrics: <span class="arithmatex">\(\phi(r)=\sqrt{1+\dfrac{r^2}{\sigma^2}}\)</span>  </li>
+<li>Linear: <span class="arithmatex">\(\phi(r)=r\)</span>  </li>
+<li>Cubic: <span class="arithmatex">\(\phi(r)=r^3\)</span>   </li>
+<li>Thinplate: <span class="arithmatex">\(\phi(r)=r^2\ln(r+1)\)</span></li>
+</ul>
+<h2 id="warp-and-morph">Warp and Morph<a class="headerlink" href="#warp-and-morph" title="Permanent link">&para;</a></h2>
+<p>Warp: 只改变像素的位置<br />
+Morph 不仅改变位置，还要改变颜色  </p>
+<h3 id="image-morph">Image Morph<a class="headerlink" href="#image-morph" title="Permanent link">&para;</a></h3>
+<p>这里讨论的 Morph 变形不同于一般的几何变换(Warp)<br />
+Morph 变形指景物的形体变化，它是使一幅图像逐步变化到另一幅图像的处理方法。
+这是一种较复杂的二维图像处理，需要对各像素点的<strong>颜色、位置</strong>作变换。 </p>
+<p>变形的起始图像和结束图像分别为两幅关键帧（起始帧和结束帧），从起始形状变化到结束形状的关键在于自动地生成中间形状，也即自动生成中间帧。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211121438617.png" width = 50%/> </div>
+
+<p>大小相同的两幅图的转换作静态变换。从一幅图a逐渐变化成第二幅图b   </p>
+<ul>
+<li>原理：让图a中每个像素的颜色，逐渐变成图b相同位置像素的颜色。</li>
+<li>方法：根据变换的快慢，设置相应的步长，将图a每一点的RGB逐渐变成图b相同位置象素的RGB。可以选择等比或等差的方式，或其它方式让：<span class="arithmatex">\(r^a\rightarrow r^b\)</span>   <br />
+如：<span class="arithmatex">\(I_i=I_{begin}+i*\dfrac{I_{end}-I_{begin}}{n}\)</span></li>
+<li>对于彩色图像，RGB三色同时从原图变到目标图像。可以分别变化，也可考虑RGB的相对比例关系同时变化。  </li>
+</ul>
+<p>对于灰度图像，可以直接用等比或等差级数定义步长，使颜色从原图变到目标图。</p>
+<p><strong>如何选择关键帧：</strong><br />
+选择两幅结构相似、大小相同的画面作为起始和结束关键帧，这样才能比较容易地实现自然、连续的中间变形过程。（否则效果很差）   </p>
+<h3 id="morph-based-on-segment">Morph based on segment<a class="headerlink" href="#morph-based-on-segment" title="Permanent link">&para;</a></h3>
+<p>以点为中心控制像素的移动。利用 RBF 的思路，移动线段。距离控制点越近，移动幅度越相似。</p>
+<p>在起始和结束画面上确定和勾画出各部分（主要轮廓）的结构对应关系，也即从起始画面上的一个点变到结束画面上的另一个对应点的位置，这是变形运算所需要的参数。根据需要，对应点的位置可以任意移动。调整起始帧的对应点位置，可以模拟摄像中的镜头渐变效果。</p>
+<p>在各点像素坐标变化的同时，每个像素的颜色RGB也一起从原图像改变为目标图像。</p>
+<p>这时可以采用不同的插值策略计算像素中间值（空间，颜色）</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211121455024.png" width = 35%/> </div>
+
+<h3 id="morph-based-on-grid">Morph based on grid<a class="headerlink" href="#morph-based-on-grid" title="Permanent link">&para;</a></h3>
+<p><strong>视点变换</strong>就是求在视点移动后原始图像变换生成的新视图。</p>
+<ul>
+<li>在用相机拍摄物体时，保持物体的位置不动，而将相机移离物体，这就相当于<strong>视点变换</strong>；</li>
+<li>如果我们保持相机固定位置，将物体移离相机，这就相当于<strong>模型转换</strong>。</li>
+</ul>
+<p>视点变形要求对物体有三维坐标知识。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211121500640.png" width = 40%/> </div>
+
+<h2 id="application">Application<a class="headerlink" href="#application" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211121502067.png" width = 50%/> </div> </p>
+<p>我们可以 <span class="arithmatex">\(v_{B'}=v_{B}+v_{A'}-v_A\)</span>, 但这样得到的表情细节丢失了。  </p>
+</div>
+<p>为此，我们需要先介绍一个光照模型 Lambertian model.  </p>
+<h3 id="lambertian-model">Lambertian model<a class="headerlink" href="#lambertian-model" title="Permanent link">&para;</a></h3>
+<p>假设空间中 m 点光源，曲面亮度如下：
+<span class="arithmatex">\(I=\rho\sum\limits_{1\leq i\leq m} S_iI_in_i\cdot l_i\equiv \rho E(n)\)</span> where <span class="arithmatex">\(S_i=\left\{\begin{matrix} 0, cannot\ be\ seen \\ 1, otherwise\end{matrix}\right.\)</span>  </p>
+<p>其中 <span class="arithmatex">\(l_i\)</span> 第 i 个光源照过来的角度，<span class="arithmatex">\(n\)</span> 表示当前这个曲面的法向量，所以 <span class="arithmatex">\(n\cdot l_i\)</span> 相当于余弦关系; <span class="arithmatex">\(I_i\)</span> 表示第 i 个光源的亮度；<span class="arithmatex">\(S_i\)</span> 表示曲面能不能被第 i 个点光源照到; $\rho $ 表示曲面的材质  </p>
+<p><strong>Expression ratio image</strong>: <span class="arithmatex">\(\dfrac{I'}{I}=\dfrac{E(n')}{E(n)}\)</span> (<span class="arithmatex">\(\rho\)</span> 一样，因为对同一个对象变换前后的材质是一样的) 简称 ERI</p>
+<p>ERI 是因为曲面变形所导致的亮度的变化；不依赖于材质的。</p>
+<p>假设在对应的点都有相同的法向量，材质不同，相同的形变</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th>Before deform</th>
+<th>After deform</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Surface 1</td>
+<td><span class="arithmatex">\(I_1=\rho_1E(n)\)</span></td>
+<td><span class="arithmatex">\(I_1^{'}=\rho_1E(n')\)</span></td>
+</tr>
+<tr>
+<td align="left">Surface 2</td>
+<td><span class="arithmatex">\(I_2=\rho_2E(n)\)</span></td>
+<td><span class="arithmatex">\(I_2^{'}=\rho_2E(n')\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>于是刚刚的问题转变为：（假设人脸有近似相同的法向量）</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th>Neutral</th>
+<th>Expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Person A</td>
+<td><span class="arithmatex">\(I_a=\rho_aE(n)\)</span></td>
+<td><span class="arithmatex">\(I_a^{'}=\rho_aE(n')\)</span></td>
+</tr>
+<tr>
+<td align="left">Person B</td>
+<td><span class="arithmatex">\(I_b=\rho_bE(n)\)</span></td>
+<td>$I_b^{'}=? $</td>
+</tr>
+</tbody>
+</table>
+<p>由刚刚的推导可得 <span class="arithmatex">\(I_b^{'}=\dfrac{I_a^{'}}{I_a}I_b\)</span>  </p>
+<p><strong>Algorithm:</strong>   </p>
+<ul>
+<li>mark feature points </li>
+<li>对每一个特征点 <span class="arithmatex">\(v_b\)</span> in B, warp it: <span class="arithmatex">\(v_{b'}=v_b+v_{a'}-v_a\)</span>, 令 <span class="arithmatex">\(B_g\)</span> 是 B 变形后的图像  </li>
+<li>用 <span class="arithmatex">\(B_g\)</span> 对齐 A A' 直到每个像素都能找到另外两种图像上的对应点</li>
+<li>计算 ratio image <span class="arithmatex">\(\dfrac{A'}{A}\)</span></li>
+<li><span class="arithmatex">\(B' = \dfrac{A'}{A} \cdot B_g\)</span></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">如何找像素的 coreespondence</p>
+<p>通过图像对齐，手工标记特征点后进行参数化。</p>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:04:21</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:04:21</span>
+      
+    
+  </small>
+</div>
+
+              
+
+<link rel="stylesheet" href="/css/counter.css">
+
+<!-- Giscus -->
+<h2 id="__comments">评论</h2>
+
+
+<!-- 这里改成你的Giscus代码 -->
+<script src="https://giscus.app/client.js"
+        data-repo="HobbitQia/notebook"
+        data-repo-id="R_kgDOHtZjDg"
+        data-category="General"
+        data-category-id="DIC_kwDOHtZjDs4CQZ7Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+<!-- Reload on palette change -->
+<script>
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object")
+        if (palette.color.scheme === "slate") {
+            var giscus = document.querySelector("script[src*=giscus]")
+            giscus.setAttribute("data-theme", "dark")
+        }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+                /* Instruct Giscus to change theme */
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
+
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 图像信息处理" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              图像信息处理
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../dip6/" class="md-footer__link md-footer__link--next" aria-label="下一页: 卷积与滤波" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              卷积与滤波
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 <a href="https://github.com/HobbitQia"  target="_blank" rel="noopener">HobbitQia</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/HobbitQia/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+      
+        <script src="../../js/katex.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

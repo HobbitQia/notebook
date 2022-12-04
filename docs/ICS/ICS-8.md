@@ -1,14 +1,17 @@
+---
+counter: True  
+---
 
 # Chapter 8 Data Structures
 
 !!! Abstract
-    Covered in Lecture 6, 2022.7.16 and Lecture 7, 2022.7.18  
-    Topics:  
-    1. Stack
-    2. Subroutine
-    3. Linked-List
-    4. Queue(self-learning)
-    5. Character Strings  
+    Covered in Lecture 6, 2022.7.16 and Lecture 7, 2022.7.18    
+    Topics:    
+    1. Stack  
+    2. Subroutine  
+    3. Linked-List  
+    4. Queue(self-learning)  
+    5. Character Strings    
     6. Recursion
 
 ## The Stack

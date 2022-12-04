@@ -12,7 +12,7 @@
       
         <link rel="canonical" href="https://note.hobbitqia.cc/Logic/logic04/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../log.ico">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
@@ -45,8 +45,6 @@
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
-    
-      <link rel="stylesheet" href="../../css/counter.css">
     
       <link rel="stylesheet" href="../../css/custom.css">
     
@@ -98,8 +96,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
+  <img src="../../log.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -270,6 +267,22 @@
   
 
       
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../link/" class="md-tabs__link">
+        友链
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -293,8 +306,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
+  <img src="../../log.ico" alt="logo">
 
     </a>
     HobbitQia的笔记本
@@ -375,6 +387,8 @@
       
       
       
+        
+          
         
           
         
@@ -801,6 +815,8 @@
         
           
         
+          
+        
       
       
         
@@ -913,23 +929,179 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#storing-state" class="md-nav__link">
-    Storing State
-  </a>
-  
-    <nav class="md-nav" aria-label="Storing State">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#latch" class="md-nav__link">
     Latch
   </a>
+  
+    <nav class="md-nav" aria-label="Latch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-nand-overline-s-overline-r-latch" class="md-nav__link">
+    Basic (NAND)  \(\overline S\) –  \(\overline R\) Latch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-nor-s-r-latch" class="md-nav__link">
+    Basic (NOR)  \(S\) – \(R\) Latch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clocked-s-r-latch" class="md-nav__link">
+    Clocked \(S\) - \(R\) Latch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-latch" class="md-nav__link">
+    \(D\) Latch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#flip-flop" class="md-nav__link">
     Flip-flop
+  </a>
+  
+    <nav class="md-nav" aria-label="Flip-flop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s-r-master-slave-flip-flop" class="md-nav__link">
+    S-R Master-Slave Flip-Flop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-triggered-d-flip-flop" class="md-nav__link">
+    Edge-Triggered D Flip-Flop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-table" class="md-nav__link">
+    State table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-diagrams" class="md-nav__link">
+    State Diagrams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flip-flop-timing-parameters" class="md-nav__link">
+    Flip-Flop Timing Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequential-circuit-design" class="md-nav__link">
+    Sequential Circuit Design
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequential Circuit Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulation" class="md-nav__link">
+    Formulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Formulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simplification-for-state-tables" class="md-nav__link">
+    Simplification for State Tables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-assignment" class="md-nav__link">
+    State Assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-mapping" class="md-nav__link">
+    Technology Mapping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-flip-flop-types" class="md-nav__link">
+    Other Flip-Flop Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Flip-Flop Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j-k-flip-flop" class="md-nav__link">
+    J-K Flip-flop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t-flip-flop" class="md-nav__link">
+    T Flip-flop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-flip-flop-descriptors" class="md-nav__link">
+    Basic Flip-Flop Descriptors
   </a>
   
 </li>
@@ -948,6 +1120,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic06/" class="md-nav__link">
+        寄存器与寄存器传输
+      </a>
     </li>
   
 
@@ -976,6 +1162,8 @@
         
           
             
+          
+        
           
         
           
@@ -1058,6 +1246,147 @@
     <li class="md-nav__item">
       <a href="../../ds/set/" class="md-nav__link">
         并查集
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/graph/" class="md-nav__link">
+        图论
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../dip/">图像信息处理</a>
+          
+            <label for="__nav_2_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="图像信息处理" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          图像信息处理
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip5/" class="md-nav__link">
+        几何变换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip6/" class="md-nav__link">
+        卷积与滤波
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip7/" class="md-nav__link">
+        双边滤波的加速
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip8/" class="md-nav__link">
+        引导滤波
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip9/" class="md-nav__link">
+        稀疏范数滤波
       </a>
     </li>
   
@@ -1166,6 +1495,58 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          友链
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="友链" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          友链
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../link/" class="md-nav__link">
+        Link
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1201,23 +1582,179 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#storing-state" class="md-nav__link">
-    Storing State
-  </a>
-  
-    <nav class="md-nav" aria-label="Storing State">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#latch" class="md-nav__link">
     Latch
   </a>
+  
+    <nav class="md-nav" aria-label="Latch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-nand-overline-s-overline-r-latch" class="md-nav__link">
+    Basic (NAND)  \(\overline S\) –  \(\overline R\) Latch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-nor-s-r-latch" class="md-nav__link">
+    Basic (NOR)  \(S\) – \(R\) Latch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clocked-s-r-latch" class="md-nav__link">
+    Clocked \(S\) - \(R\) Latch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-latch" class="md-nav__link">
+    \(D\) Latch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#flip-flop" class="md-nav__link">
     Flip-flop
+  </a>
+  
+    <nav class="md-nav" aria-label="Flip-flop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s-r-master-slave-flip-flop" class="md-nav__link">
+    S-R Master-Slave Flip-Flop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-triggered-d-flip-flop" class="md-nav__link">
+    Edge-Triggered D Flip-Flop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-table" class="md-nav__link">
+    State table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-diagrams" class="md-nav__link">
+    State Diagrams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flip-flop-timing-parameters" class="md-nav__link">
+    Flip-Flop Timing Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequential-circuit-design" class="md-nav__link">
+    Sequential Circuit Design
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequential Circuit Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulation" class="md-nav__link">
+    Formulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Formulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simplification-for-state-tables" class="md-nav__link">
+    Simplification for State Tables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-assignment" class="md-nav__link">
+    State Assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-mapping" class="md-nav__link">
+    Technology Mapping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-flip-flop-types" class="md-nav__link">
+    Other Flip-Flop Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Flip-Flop Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j-k-flip-flop" class="md-nav__link">
+    J-K Flip-flop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t-flip-flop" class="md-nav__link">
+    T Flip-flop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-flip-flop-descriptors" class="md-nav__link">
+    Basic Flip-Flop Descriptors
   </a>
   
 </li>
@@ -1256,7 +1793,7 @@
 <p class="admonition-title">Abstract</p>
 <ul>
 <li>Part 1 - Storage Elements and Analysis  <ul>
-<li>Introduction to sequential circuits  </li>
+<li>Introduction to sequential circuits   </li>
 <li>Types of sequential circuits  </li>
 <li>Storage elements  </li>
 <li>Latches  </li>
@@ -1276,23 +1813,28 @@
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211091011289.png" width = 50%/> </div>
 
 <p>时序电路包括：组合逻辑电路+存储元件</p>
-<p>Combinatorial Logic<br />
-<em> Next state function Next State = f(Inputs, State)  次态方程<br />
-</em> Output function (Mealy) Outputs = g(Inputs, State)
-* Output function (Moore) Outputs = h(State) 输入不会直接改变输出，而是通过状态来间接改变输出  </p>
-<p><strong>Types of Sequential Circuits</strong>  <br />
-* Depends on the times at which:
-    * storage elements observe their inputs, and 
-    * storage elements change their state 
-* Synchronous<br />
-状态更新一定发生在时钟周期的整周期上
-* Asynchronous<br />
+<p>Combinatorial Logic  </p>
+<ul>
+<li>Next state function Next State = f(Inputs, State)  次态方程  </li>
+<li>Output function (Mealy) Outputs = g(Inputs, State)</li>
+<li>Output function (Moore) Outputs = h(State) 输入不会直接改变输出，而是通过状态来间接改变输出  </li>
+</ul>
+<p><strong>Types of Sequential Circuits</strong>  </p>
+<ul>
+<li>Depends on the times at which:<ul>
+<li>storage elements observe their inputs, and </li>
+<li>storage elements change their state </li>
+</ul>
+</li>
+<li>Synchronous<br />
+状态更新一定发生在时钟周期的整周期上</li>
+<li>Asynchronous<br />
 状态更新可以在任意时间发生  <br />
 如果时钟也被看做一个输入，那么所有电路都是 Asynchronous      <br />
-Asynchronous 可以让我们在有需要的时候更新电路，降低电路的功耗   </p>
+Asynchronous 可以让我们在有需要的时候更新电路，降低电路的功耗   </li>
+</ul>
 <p>Discrete Event Simulation 离散事件仿真</p>
-<h3 id="storing-state">Storing State<a class="headerlink" href="#storing-state" title="Permanent link">&para;</a></h3>
-<h4 id="latch">Latch<a class="headerlink" href="#latch" title="Permanent link">&para;</a></h4>
+<h3 id="latch">Latch<a class="headerlink" href="#latch" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p><div align=center> <img src="http://cdn.hobbitqia.cc/202211091038178.png" width = 40%/> </div><br />
@@ -1300,7 +1842,7 @@ Asynchronous 可以让我们在有需要的时候更新电路，降低电路的�
 <p>The simple combinational circuit has now become a sequential circuit because its output is a function of a time sequence of input signals!<br />
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211091039908.png" width = 60%/> </div>   </p>
 </div>
-<h5 id="basic-nand-overline-s-overline-r-latch">Basic (NAND)  <span class="arithmatex">\(\overline S\)</span> –  <span class="arithmatex">\(\overline R\)</span> Latch<a class="headerlink" href="#basic-nand-overline-s-overline-r-latch" title="Permanent link">&para;</a></h5>
+<h4 id="basic-nand-overline-s-overline-r-latch">Basic (NAND)  <span class="arithmatex">\(\overline S\)</span> –  <span class="arithmatex">\(\overline R\)</span> Latch<a class="headerlink" href="#basic-nand-overline-s-overline-r-latch" title="Permanent link">&para;</a></h4>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211091041175.png" width = 40%/> </div>
 
 <table>
@@ -1367,7 +1909,7 @@ Asynchronous 可以让我们在有需要的时候更新电路，降低电路的�
 </table>
 <p>最后一步，两个引脚同时从 0 -&gt; 1, 那么两个与非门的输出都期望变成 0, 但只要有一个门的输出变为 0 另一个门就被锁住变成 1, 因此两个门不可能同时变化。但我们无法确定是哪个门会变成 1.<br />
 <span class="arithmatex">\(S=0,R=0\)</span> is <u><strong>forbidden</strong></u> as input pattern.   </p>
-<h5 id="basic-nor-s-r-latch">Basic (NOR)  <span class="arithmatex">\(S\)</span> – <span class="arithmatex">\(R\)</span> Latch<a class="headerlink" href="#basic-nor-s-r-latch" title="Permanent link">&para;</a></h5>
+<h4 id="basic-nor-s-r-latch">Basic (NOR)  <span class="arithmatex">\(S\)</span> – <span class="arithmatex">\(R\)</span> Latch<a class="headerlink" href="#basic-nor-s-r-latch" title="Permanent link">&para;</a></h4>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211091046159.png" width = 40%/> </div>
 
 <table>
@@ -1432,28 +1974,84 @@ Asynchronous 可以让我们在有需要的时候更新电路，降低电路的�
 </tr>
 </tbody>
 </table>
-<h5 id="clocked-s-r-latch">Clocked <span class="arithmatex">\(S\)</span> - <span class="arithmatex">\(R\)</span> Latch<a class="headerlink" href="#clocked-s-r-latch" title="Permanent link">&para;</a></h5>
+<h4 id="clocked-s-r-latch">Clocked <span class="arithmatex">\(S\)</span> - <span class="arithmatex">\(R\)</span> Latch<a class="headerlink" href="#clocked-s-r-latch" title="Permanent link">&para;</a></h4>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211091058462.png" width = 45%/> </div>
 
-<p><span class="arithmatex">\(C\)</span> 作为一个 ENABLE 的功能。当 <span class="arithmatex">\(C=0\)</span> 时，<span class="arithmatex">\(Q\)</span> 不会发生改变。当 <span class="arithmatex">\(C=1\)</span> 时，上面相当于 <span class="arithmatex">\(\overline S\)</span>, 下面相当于 <span class="arithmatex">\(\overline R\)</span>, 变成一个钟控的 SR 锁存器。<br />
-|<span class="arithmatex">\(C\)</span>|<span class="arithmatex">\(S\)</span>|<span class="arithmatex">\(R\)</span>|<span class="arithmatex">\(Q(t+1)\)</span>|
-|:-|-|-|-|
-|0|X|X|No change|
-|1|0|0|No change|
-|1|0|1|0: <em>Clear</em> Q|
-|1|1|0|1: <em>Set</em> Q|
-|1|1|1|Indeterminate|</p>
+<p><span class="arithmatex">\(C\)</span> 作为一个 ENABLE 的功能。当 <span class="arithmatex">\(C=0\)</span> 时，<span class="arithmatex">\(Q\)</span> 不会发生改变。当 <span class="arithmatex">\(C=1\)</span> 时，上面相当于 <span class="arithmatex">\(\overline S\)</span>, 下面相当于 <span class="arithmatex">\(\overline R\)</span>, 变成一个钟控的 SR 锁存器。  </p>
+<table>
+<thead>
+<tr>
+<th align="left"><span class="arithmatex">\(C\)</span></th>
+<th><span class="arithmatex">\(S\)</span></th>
+<th><span class="arithmatex">\(R\)</span></th>
+<th><span class="arithmatex">\(Q(t+1)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td>X</td>
+<td>X</td>
+<td>No change</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>0</td>
+<td>0</td>
+<td>No change</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>0</td>
+<td>1</td>
+<td>0: <em>Clear</em> Q</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>0</td>
+<td>1: <em>Set</em> Q</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>1</td>
+<td>Indeterminate</td>
+</tr>
+</tbody>
+</table>
 <p><span class="arithmatex">\(Q(t+1)\)</span> based on current state <span class="arithmatex">\(Q(t)\)</span> and current inputs <span class="arithmatex">\((S,R,C)\)</span></p>
-<h5 id="d-latch"><span class="arithmatex">\(D\)</span> Latch<a class="headerlink" href="#d-latch" title="Permanent link">&para;</a></h5>
+<h4 id="d-latch"><span class="arithmatex">\(D\)</span> Latch<a class="headerlink" href="#d-latch" title="Permanent link">&para;</a></h4>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211091105090.png" width = 45%/> </div>
 
-<p><span class="arithmatex">\(S\ R\)</span> 不会同时为 0.<br />
-|<span class="arithmatex">\(C\)</span>|<span class="arithmatex">\(D\)</span>|<span class="arithmatex">\(Q(t+1)\)</span>|
-|:-|-|-|
-|0|X|No change|
-|1|0|0: <em>Clear</em> Q|
-|0|1|1: <em>Set</em> Q|
-即当 <span class="arithmatex">\(C=1\)</span> 时 <span class="arithmatex">\(Q=D\)</span></p>
+<p><span class="arithmatex">\(S\ R\)</span> 不会同时为 0.  </p>
+<table>
+<thead>
+<tr>
+<th align="left"><span class="arithmatex">\(C\)</span></th>
+<th><span class="arithmatex">\(D\)</span></th>
+<th><span class="arithmatex">\(Q(t+1)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td>X</td>
+<td>No change</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>0</td>
+<td>0: <em>Clear</em> Q</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>1</td>
+<td>1: <em>Set</em> Q</td>
+</tr>
+</tbody>
+</table>
+<p>即当 <span class="arithmatex">\(C=1\)</span> 时 <span class="arithmatex">\(Q=D\)</span></p>
 <p>The graphic symbol for a <span class="arithmatex">\(D\)</span> latch:  </p>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211091106989.png" width = 30%/> </div>
 
@@ -1461,58 +2059,415 @@ Asynchronous 可以让我们在有需要的时候更新电路，降低电路的�
 <p class="admonition-title">Info</p>
 <p>在算门输入成本的时候，我们要分开算 G 和 GN. 因为锁存器同时为我们提供了 <span class="arithmatex">\(Q\)</span> 和 <span class="arithmatex">\(\overline Q\)</span>, 锁存器可以为后面的组合电路提供原变量和反变量。</p>
 </div>
-<h4 id="flip-flop">Flip-flop<a class="headerlink" href="#flip-flop" title="Permanent link">&para;</a></h4>
+<h3 id="flip-flop">Flip-flop<a class="headerlink" href="#flip-flop" title="Permanent link">&para;</a></h3>
 <p>锁存器不适合使用在电路中：不能做到一个周期，状态只更新一次。具体原因见 <a href="http://note.hobbitqia.cc/ICS/ICS-3/#the-synchronous-finite-state-machine">ICS Notes</a>  </p>
-<h5 id="s-r-master-slave-flip-flop">S-R Master-Slave Flip-Flop<a class="headerlink" href="#s-r-master-slave-flip-flop" title="Permanent link">&para;</a></h5>
+<h4 id="s-r-master-slave-flip-flop">S-R Master-Slave Flip-Flop<a class="headerlink" href="#s-r-master-slave-flip-flop" title="Permanent link">&para;</a></h4>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211091128641.png" width = 50%/> </div>
 
 <p>前面称为 master(主锁存器), 后面称为 slave(从锁存器)  <br />
 当 <span class="arithmatex">\(C=0\)</span> 时，主锁存器不变。  <br />
 <span class="arithmatex">\(C\)</span> 从 0 变为 1 时，主锁存器被使能，Q 改变，但从锁存器不变。</p>
 <p>周期变长一倍
-问题：当 S R 均为 0 时如果有小扰动，无法复原<br />
+一次性采样问题(1s catching)：当 S R 均为 0 时如果有小扰动，无法复原<br />
 要求主从触发器避免 S R 的扰动</p>
-<h5 id="edge-triggered-d-flip-flop">Edge-Triggered D Flip-Flop<a class="headerlink" href="#edge-triggered-d-flip-flop" title="Permanent link">&para;</a></h5>
+<h4 id="edge-triggered-d-flip-flop">Edge-Triggered D Flip-Flop<a class="headerlink" href="#edge-triggered-d-flip-flop" title="Permanent link">&para;</a></h4>
 <p>An <strong>edge-triggered flip-flop</strong> ignores the pulse while it is at a constant level and triggers only during a transition of the clock signal.<br />
 A <strong>master-slave D flip-flop</strong> which also exhibits <strong>edge-triggered</strong> behavior can be used.</p>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211111109804.png" width = 40%/> </div>
 
 <p>The delay of the S-R master-slave flip-flop can be avoided since the 1s-catching behavior is not present with D replacing S and R inputs. (D 锁存器不会出现 S R 同时为 0 的情况)</p>
-<p>Positive-Edge Triggered D Flip-Flop is Formed by adding inverter to clock input. (上升沿触发器)<br />
+<p><strong>Positive-Edge Triggered D Flip-Flop</strong> is Formed by adding inverter to clock input. (上升沿触发器)  <br />
 Q changes to the value on D applied at the positive clock edge within timing constraints to be specified</p>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211111112460.png" width = 40%/> </div>
 
 <p><strong>Actual Circuit of Edge-Triggered D Flip-Flop:</strong>  </p>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211111108389.png" width = 40%/> </div>
 
+<p>(和 D-Latch Flip-flop 有所不同)</p>
 <p><strong>Standard Symbols for Storage Elements:</strong>  </p>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211111116243.png" width = 50%/> </div>
 
 <ul>
 <li><strong>Direct Inputs</strong>  <br />
-Direct <span class="arithmatex">\(R\)</span> and/or <span class="arithmatex">\(S\)</span> inputs that control the state of the latches within the flip-flops are used for this <em>initialization</em>. </li>
+Direct <span class="arithmatex">\(R\)</span> and/or <span class="arithmatex">\(S\)</span> inputs that control the state of the latches within the flip-flops are used for this <em>initialization</em>.   </li>
 </ul>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211111118511.png" width = 20%/> </div>
 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
+<h3 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h3>
+<p><strong>General Model</strong>  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211181954243.png" width = 40%/> </div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>同步时序电路里 D 触发器的时钟输入端，统一接在一个系统时钟输入 CLK 信号上。（规定所有触发器何时进行状态改变，是额外提供的引脚，<u>不属于整个系统的信号输入</u>）</p>
+<ul>
+<li><strong>Current State</strong> at time (t) is stored in an array of flip-flops.</li>
+<li><strong>Next State</strong> at time (t+1) is a <em>Boolean function</em> of State and Inputs.  </li>
+<li><strong>Outputs</strong> at time (t) are a <em>Boolean function</em> of State (t) and (sometimes) Inputs (t).</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211181959796.png" width = 40%/> </div>    </p>
+<p>可以看到，cp 是时钟输入信号  </p>
+<ul>
+<li>input: <span class="arithmatex">\(x(t)\)</span>  </li>
+<li>output: <span class="arithmatex">\(y(t)\)</span>  </li>
+<li>
+<p>state: <span class="arithmatex">\((A(t),B(t))\)</span></p>
+</li>
+<li>
+<p>Boolean equations for the functions
+<span class="arithmatex">\(D_A(t) = A(t)x(t)+ B(t)x(t), A(t+1)=A(t)x(t)+ B(t)x(t), D_B(t) = A(t)x(t),B(t+1) = A(t)x(t), y(t) = x(t)(B(t) + A(t))\)</span>  <br />
+为什么 D = 次态方程</p>
+</li>
+</ul>
+</details>
+<h4 id="state-table"><strong>State table</strong><a class="headerlink" href="#state-table" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Present State</strong> – the values of the state variables for each allowed state.</li>
+<li><strong>Input</strong> – the input combinations allowed.</li>
+<li><strong>Next-state</strong> – the value of the state at time <span class="arithmatex">\((t+1)\)</span> based on the present state and the input.</li>
+<li><strong>Output</strong> – the value of the output as a function of the present state and (sometimes) the input.</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182022623.png" width = 40%/> </div>    </p>
+<p>代入刚刚写出的式子即可 <br />
+也可以使用另一种画法：(二维状态表，按照格雷码的顺序排列)  </p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182025700.png" width = 40%/> </div>   </p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在画状态表时，无法达到的状态也要画出来。因为可能程序受到某种扰动或者异常，可能会跳到原先无法到达的状态。</p>
+</div>
+<h4 id="state-diagrams"><strong>State Diagrams</strong><a class="headerlink" href="#state-diagrams" title="Permanent link">&para;</a></h4>
+<p>The sequential circuit function can be represented in graphical form as a state diagram with the following components:</p>
+<ul>
+<li>A <em>circle</em> with the state name in it for each state</li>
+<li>A <em>directed arc</em> from the Present State to the Next State for each state transition</li>
+<li>A <em>label</em> on each directed arc with the Input values which causes the state transition, and A label: <br />
+    输出和输入是否有关，无关标在圈里面，有关标在外面<ul>
+<li>On each circle with the output value produced, or</li>
+<li>On each directed arc with the output value produced.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Moore</strong> type output depends only on state(输出画在圈里面)  <br />
+<strong>Mealy</strong> type output depends on state and input(输出画在有向弧上)</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182034769.png" width = 40%/> </div> </p>
+<p>（斜杠左边表示外部输入，右边表示输出）  </p>
+</details>
+<p>Sequential Circuits or Sequential Machines are also called <strong>Finite State Machines (FSMs)</strong>.   </p>
+<ul>
+<li>
+<p><strong>Equivalent State Definitions</strong><br />
+两个状态，无论输入是什么，都会使这两个状态输出相同，次态也相同，那么这两个状态是等效状态。</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182045869.png" width = 35%/> </div> </p>
+<p>在这个图里我们可以发现 S2, S3 是等效状态。<br />
+合并 S2, S3 后：
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211182042842.png" width = 30%/> </div>   </p>
+<p>这个时候我们发现 S1 和 S2 又是等效状态，再次合并，最后得到：
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211182044392.png" width = 40%/> </div>   </p>
+</details>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">为什么要合并等效状态</p>
+<p>减少表示状态所需要的二进制位</p>
+</div>
+<details class="example">
+<summary>Moore and Mealy Example Diagrams</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182049556.png" width = 40%/> </div> </p>
+</details>
+<h4 id="flip-flop-timing-parameters">Flip-Flop Timing Parameters<a class="headerlink" href="#flip-flop-timing-parameters" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231009951.png" width = 50%/> </div>
+
+<ul>
+<li><span class="arithmatex">\(t_s\)</span> - setup time. 在下降之前要先准备好。</li>
+<li><span class="arithmatex">\(t_h\)</span> - hold time  </li>
+<li><span class="arithmatex">\(t_w\)</span> - clock pulse width  </li>
+<li><span class="arithmatex">\(t_{px}\)</span> - propagation delay. Measured from clock edge that triggers the output change to the output change.  </li>
+</ul>
+<details class="note">
+<summary>主从触发器和边缘触发器的 <span class="arithmatex">\(t_s\)</span></summary>
+<p>根据定义, <span class="arithmatex">\(t_s\)</span> 指在采样前触发器需要的准备时间。对于主从触发器，在信号处于上升沿的时候 S 部分的输入是不能改变的，否则可能有一次性采样问题，因此在信号处于上升沿都是触发器的准备时间。这也是为什么现在我们普遍使用边缘触发器的原因。 <br />
+对于 D 触发器而言，不要卡在时钟边沿改变 D 的输入，而是在时钟改变之前就进行，这样 D 触发器才能有足够的准备时间。 </p>
+</details>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231025540.png" width = 50%/> </div>
+
+<ul>
+<li><span class="arithmatex">\(t_p\)</span> - clock period   </li>
+<li><span class="arithmatex">\(t_{pd,COMB}\)</span> - total delay of combinational logic along the path from flip-flop output to flip-flop input  </li>
+<li><span class="arithmatex">\(t_{slack}\)</span> - extra time in the clock period in addition to the sum of the delays and setup time on a path. 松弛时间（休息）必须大于等于 0. </li>
+</ul>
+<p><strong>Time equation</strong>: <span class="arithmatex">\(t_p \geq \max (t_{pd,FF} + t_{pd,COMB} + t_s)\)</span> for all paths from flip-flop output to flip-flop input.  </p>
+<details class="example">
+<summary>Example</summary>
+<p>Compare the allowable combinational delay for a specific circuit: Using edge-triggered flip-flops; Using master-slave flip-flops.   </p>
+<ul>
+<li>Parameters: clock frequency = 250 Mhz; <span class="arithmatex">\(t_{pd,FF}(max)=1.0ns\)</span>; <span class="arithmatex">\(t_s(max)=0.3ns\)</span> for edge-triggered flip-flops; <span class="arithmatex">\(t_s = t_{wH} = 2.0 ns\)</span> for master-slave flip-flops  </li>
+<li>Calculation: <span class="arithmatex">\(t_p = \dfrac{1}{clock\ frequency} = 4.0 ns\)</span><ul>
+<li>Edge-triggered: <span class="arithmatex">\(4.0 \geq 1.0 + t_{pd,COMB} + 0.3, t_{pd,COMB} \leq 2.7 ns\)</span></li>
+<li>Master-slave: <span class="arithmatex">\(4.0 \geq 1.0 + t_{pd,COMB} + 2.0, t_{pd,COMB} \leq 1.0 ns\)</span></li>
+</ul>
+</li>
+</ul>
+</details>
+<h2 id="sequential-circuit-design">Sequential Circuit Design<a class="headerlink" href="#sequential-circuit-design" title="Permanent link">&para;</a></h2>
+<p>The Design procedure  </p>
+<ul>
+<li>Specification 需求和功能的描述，一般以文字形式  </li>
+<li>Formulation - Obtain a state diagram or state table</li>
+<li>State Assignment - Assign binary codes to the states</li>
+<li>Flip-Flop Input Equation Determination - Select flip-flop types and derive flip-flop equations from next state entries in the table</li>
+<li>Output Equation Determination - Derive output equations from output entries in the table</li>
+<li>Optimization - Optimize the equations</li>
+<li>Technology Mapping - Find circuit from equations and map to flip-flops and gate technology</li>
+<li>Verification - Verify correctness of final design</li>
+</ul>
+<h3 id="formulation">Formulation<a class="headerlink" href="#formulation" title="Permanent link">&para;</a></h3>
+<p>A state is an abstraction of the history of the past applied inputs to the circuit (including  power-up reset or system reset).   </p>
+<p>将文本化的需求变为用状态机描述（整个电路经过哪些状态？每个状态之间由哪个输入进行驱动？输出是什么？）</p>
+<p>这里我们以 Sequence Recognizers 为例，介绍 Formulation 的过程。</p>
+<details class="info">
+<summary>Sequence Recognizers</summary>
+<p>A <strong>sequence recognizer</strong> is a sequential circuit that produces a distinct output value whenever a prescribed pattern of input symbols occur in sequence, i.e, recognizes an input sequence occurence. <br />
+To develop a sequence recognizer state diagram:</p>
+<ul>
+<li>Begin in an initial state in which NONE of the initial portion of the sequence has occurred (typically “reset” state).</li>
+<li>Add a state that recognizes that the first symbol has occurred.</li>
+<li>Add states that recognize each successive symbol occurring.</li>
+<li>The final state represents the input sequence (possibly  less the final input value) occurence.</li>
+<li>Add state transition arcs which specify what happens when a symbol not in the proper sequence has occurred.</li>
+<li>Add other arcs on non-sequence inputs which transition to states that represent the input subsequence that has occurred.  </li>
+</ul>
+</details>
+<details class="example">
+<summary>Example</summary>
+<p>这里我们以识别 1101 为例.(Mealy 模型)  <br />
+after 110 and a 1, we have:<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231104003.png" width = 50%/> </div> </p>
+<p>注意在 D 状态之后，应该与 B 状态相连(因为 1101101)中的第三个 1 既可以是前一个序列的末尾 1, 也可以是下一个序列的起始 1. <br />
+我们补足状态之间的转移:<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231105830.png" width = 50%/> </div>   </p>
+<p>通过状态图得到状态表: 
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231109527.png" width = 50%/> </div>   </p>
+<p>如果将刚刚的状态图 转为Moore 模型，我们需要再加一个状态 E, 当到达 E 状态时表明我们得到了序列 1101. <br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231112070.png" width = 50%/> </div>  </p>
+<p>观察可以发现, B 和 D 对同样的输入，次态都是一样的。但是并不是等效状态，因为二者的输出不同。 </p>
+</details>
+<p>The <em>Moore</em> model for a sequence recognizer usually has <strong>more states</strong> than the <em>Mealy</em> model.</p>
+<h4 id="simplification-for-state-tables">Simplification for State Tables<a class="headerlink" href="#simplification-for-state-tables" title="Permanent link">&para;</a></h4>
+<p>所谓状态简化，就是要获得一个最小化的状态表。这个表不仅能正确地反映设计的全部要求，而且状态的数目最少。</p>
+<p><strong>“状态等效”</strong> 的三种情况：（在所有输入情况下）</p>
+<ul>
+<li>首先，输出相同</li>
+<li>
+<p>同时，次态相同/次态交错/次态循环</p>
+<div class="admonition example">
+<p class="admonition-title">等效</p>
+<ul>
+<li>
+<p>次态相同<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231125022.png" width = 30%/> </div> </p>
+</li>
+<li>
+<p>次态相同或交错
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231125043.png" width = 30%/> </div>  </p>
+</li>
+<li>
+<p>次态交错或等效<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211251510285.png" width = 30%/> </div>  </p>
+</li>
+<li>
+<p>次态交错或相同或循环
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231126009.png" width = 30%/> </div>  </p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+<p>状态简化方法：  </p>
+<ul>
+<li>
+<p><strong>观察法</strong>  </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211231128810.png" width = 45%/> </div>  </p>
+<ul>
+<li><span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(B\)</span>，<span class="arithmatex">\(C\)</span>和<span class="arithmatex">\(D\)</span>的输出完全相等；</li>
+<li><span class="arithmatex">\(C\)</span>和<span class="arithmatex">\(D\)</span>在输入的各种取值组合下，次态相同，因此<span class="arithmatex">\(C\)</span>和<span class="arithmatex">\(D\)</span>等效；</li>
+<li><span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(B\)</span>在<span class="arithmatex">\(X=1\)</span>时的次态不满足四条件之一，因此<span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(B\)</span>不等效;</li>
+<li>最大等效类为 <span class="arithmatex">\(\{A\}，\{B\}，\{C,D\}\)</span>,分别用 <span class="arithmatex">\(A', B', C'\)</span> 表示； </li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>隐含表法化简</strong>  </p>
+<ul>
+<li>作隐含表</li>
+<li>顺序比较，寻等效状态对<ul>
+<li>状态对等效，打“√”；</li>
+<li>状态对不等效，打“×”；</li>
+<li>状态对是否等效需进一步检查，则标记次态对。</li>
+</ul>
+</li>
+<li>进行关连比较，确定等效状态对</li>
+<li>确定最大等效类，作最小化状态表</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211231131399.png" width = 45%/> </div>   </p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211231134989.png" width = 30%/> </div>    </p>
+<p>由于<span class="arithmatex">\(CD\)</span>、<span class="arithmatex">\(DE\)</span>不等效，所以<span class="arithmatex">\(DG\)</span>不等效，画斜线标志。最后我们有 <span class="arithmatex">\(AB\rightarrow CF\)</span> <span class="arithmatex">\(AE→BE→CF\)</span>. 处于循环链中的每一个状态对都是等效状态对。<br />
+最后我们有  </p>
+<ul>
+<li>四个等效对 <span class="arithmatex">\((A,B), (A,E), (B,E), (C,F)\)</span></li>
+<li>最大等效类 <span class="arithmatex">\((A,B,E)\)</span></li>
+<li>四个状态 <span class="arithmatex">\((A,B,E), (C,F), (D), (G)\)</span></li>
+<li>令以上四个状态依次为 <span class="arithmatex">\(a, b, c, d\)</span></li>
+</ul>
+</div>
+</li>
+</ul>
+<h3 id="state-assignment">State Assignment<a class="headerlink" href="#state-assignment" title="Permanent link">&para;</a></h3>
+<p>Each of the <span class="arithmatex">\(m\)</span> states must be assigned a unique code<br />
+Minimum number of bits required is <span class="arithmatex">\(n\)</span> such that <span class="arithmatex">\(n\geq \lceil \log_2 m\rceil\)</span>  </p>
+<p>There are <span class="arithmatex">\(2^n - m\)</span> unused states. (不能省略，可能会因为异常陷入 unused states)</p>
+<details class="example">
+<summary>Different State Assignment</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211251517379.png" width = 30%/> </div>   </p>
+<ul>
+<li>
+<p>Counting Order Assignment: <span class="arithmatex">\(A = 0 0, B = 0 1, C = 1 0, D = 1 1\)</span><br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211251518861.png" width = 40%/> </div>   </p>
+</li>
+<li>
+<p>Gray Code Assignment: <span class="arithmatex">\(A = 0 0, B = 0 1, C = 1 1, D = 1 0\)</span><br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211251518916.png" width = 40%/> </div>   </p>
+</li>
+</ul>
+</details>
+<p>状态分配的方案不一样，所得到的输出函数和激励函数的表达式也不同，由此而设计出来的电路复杂度也不同。状态分配的任务是：</p>
+<ul>
+<li>决定编码的长度</li>
+<li>寻找一种最佳（很难找到）的或接近最佳的状态分配方案</li>
+</ul>
+<p>分配的基本原则: </p>
+<ul>
+<li>在相同输入条件下具有相同次态的现态，应尽可能分配相邻的二进制代码</li>
+<li>在相邻输入条件，同一现态的次态应尽可能分配相邻的二进制代码</li>
+<li>输出完全相同的现态应尽可能分配相邻的二进制代码</li>
+<li>最小化状态表中出现次数最多的状态或初始状态应分配逻辑 0  </li>
+<li>一般情况下，第一条原则较为重要，需优先考虑，其次要考虑由前三条原则得到的应分配相邻代码的状态对出现的次数，次数多的状态对应优先分配相邻的二进制代码。</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211251523674.png" width = 20%/> </div>   </p>
+<ul>
+<li>在相同输入条件下具有相同次态的现态，应尽可能分配相邻的二进制代码：A和B，A和C应相邻</li>
+<li>在相邻输入条件，同一现态的次态应尽可能分配相邻的二进制代码：C和D，C和A，B和D，A和B应相邻；</li>
+<li>输出完全相同的现态应尽可能分配相邻的二进制代码： A，B，C 三者应相邻，即A和B，A和C，B和C应相邻；</li>
+<li>最小化状态表中出现次数最多的状态或初始状态应分配逻辑0：A分配为逻辑0</li>
+</ul>
+<p>最后得到: 
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211251525780.png" width = 15%/> </div>   </p>
+</div>
+<h3 id="technology-mapping">Technology Mapping<a class="headerlink" href="#technology-mapping" title="Permanent link">&para;</a></h3>
+<p>Library: D flip-flops with Reset(not inverted), NAND gates with up to 4 inputs and inverters. </p>
+<p>方法同之前，先将与门或门等门转化为 NAND, 随后将 inverter 推出散出点。</p>
+<h3 id="other-flip-flop-types">Other Flip-Flop Types<a class="headerlink" href="#other-flip-flop-types" title="Permanent link">&para;</a></h3>
+<h4 id="j-k-flip-flop">J-K Flip-flop<a class="headerlink" href="#j-k-flip-flop" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Behavior<ul>
+<li>类似 SR 触发器, <span class="arithmatex">\(J\)</span> 相当于 <span class="arithmatex">\(S\)</span>, <span class="arithmatex">\(K\)</span> 相当于 <span class="arithmatex">\(R\)</span>.  </li>
+<li>但 <span class="arithmatex">\(J=K=1\)</span> 时，触发器相当于是一个求反的功能</li>
+<li>也有一次性采样的问题</li>
+</ul>
+</li>
+<li>
+<p>Implementation</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301022072.png" width = 40%/> </div>   </p>
+</li>
+<li>
+<p>Symbol</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301023020.png" width = 20%/> （三角表明是上升沿触发，若为圆圈则是下降沿触发）</div>   </p>
+</li>
+</ul>
+<h4 id="t-flip-flop">T Flip-flop<a class="headerlink" href="#t-flip-flop" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Behavior<ul>
+<li>类似 JK 触发器, 相当于 <span class="arithmatex">\(J=K=T\)</span>. 当 <span class="arithmatex">\(T = 0\)</span>, 状态不变; 当 <span class="arithmatex">\(T = 1\)</span>, 状态求反</li>
+<li>存在一次性采样的问题</li>
+<li>无法预置状态，因此需要一个 Reset 信号</li>
+</ul>
+</li>
+<li>
+<p>Implementation</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301028012.png" width = 40%/> </div>   </p>
+</li>
+<li>
+<p>Symbol</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301029728.png" width = 20%/> </div>   </p>
+</li>
+</ul>
+<h4 id="basic-flip-flop-descriptors">Basic Flip-Flop Descriptors<a class="headerlink" href="#basic-flip-flop-descriptors" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Used in analysis<br />
+    已知触发器的输入和现态，预测触发器的输出和次态  <ul>
+<li><strong>Characteristic table</strong> - defines the next state of the flip-flop in terms of flip-flop inputs and current state </li>
+<li><strong>Characteristic equation</strong> - defines the next state of the flip-flop as a Boolean function of the flip-flop inputs and the current state</li>
+</ul>
+</li>
+<li>Used in design<br />
+    已知现态和次态，预测我们要提供怎样的输入  <ul>
+<li><strong>Excitation table(激励表)</strong> - defines the flip-flop input variable values as function of the current state and next state  </li>
+</ul>
+</li>
+</ul>
+<details>
+<summary><b>D Flip-Flop Descriptors</b></summary>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301034218.png" width = 60%/> </div>   
+</details>
+
+<details>
+<summary><b>T Flip-Flop Descriptors</b></summary>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301035957.png" width = 60%/> </div>   
+</details>
+
+<details>
+<summary><b>S-R Flip-Flop Descriptors</b></summary>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301035525.png" width = 60%/> (注意这里有个条件 S R 不能同时为 1.) </div>   
+</details>
+
+<details>
+<summary><b>J-K Flip-Flop Descriptors</b></summary>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301416785.png" width = 60%/> </div>   
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月14日 23:05:57</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月22日 14:15:00</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月14日 23:05:57</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月22日 14:15:00</span>
       
     
   </small>
 </div>
 
               
+
 <!-- Giscus -->
 <h2 id="__comments">评论</h2>
 
@@ -1597,13 +2552,13 @@ Direct <span class="arithmatex">\(R\)</span> and/or <span class="arithmatex">\(S
       
       
         
-        <a href="../../ds/" class="md-footer__link md-footer__link--next" aria-label="下一页: 数据结构和算法" rel="next">
+        <a href="../logic06/" class="md-footer__link md-footer__link--next" aria-label="下一页: 寄存器与寄存器传输" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              数据结构和算法
+              寄存器与寄存器传输
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -1,10 +1,13 @@
+---
+counter: True  
+---
 
 # Chapter 4 The von Neumann Model
 
 !!! Abstract
-    Covered in Lecture 3, 2022.7.13 and Lecture 4, 2022.7.14
-    Topics:  
-    1. The von Neumann Model
+    Covered in Lecture 3, 2022.7.13 and Lecture 4, 2022.7.14  
+    Topics:    
+    1. The von Neumann Model  
     2. Brief introduction to the instruction in LC-3
 
 ## Basic Components

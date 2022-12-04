@@ -1,10 +1,13 @@
+---
+counter: True  
+---
 
 # Chapter 6 Programming
 
 !!! Abstract
-    Covered in Lecture 6, 2022.7.16
-    Topics:  
-    1. Structured Programming  
+    Covered in Lecture 6, 2022.7.16  
+    Topics:    
+    1. Structured Programming    
     2. Debugging
 
 ## Structured Programming

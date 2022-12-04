@@ -1,11 +1,14 @@
-
+---
+counter: True  
+---
+ 
 # Chapter 5 LC-3
 
 !!! Abstract
-    Covered in Lecture 4, 2022.7.14  and Lecture 5, 2022.7.15  
-    Topics:  
-    1. ISA of LC-3.  
-    2. Microarchitecture of LC-3.  
+    Covered in Lecture 4, 2022.7.14  and Lecture 5, 2022.7.15    
+    Topics:    
+    1. ISA of LC-3.    
+    2. Microarchitecture of LC-3.    
 
 ## ISA
 

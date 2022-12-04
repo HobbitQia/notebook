@@ -1,10 +1,13 @@
+---
+counter: True  
+---
 
 # Chapter 7 Assembly Language
 
 !!! Abstract
-    Covered in Lecture 5, 2022.7.16
-    Topics:  
-    1. Assembler
+    Covered in Lecture 5, 2022.7.16  
+    Topics:    
+    1. Assembler  
     2. Assembly Language
 
 ## Assembly Language

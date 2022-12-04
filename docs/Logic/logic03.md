@@ -1,3 +1,6 @@
+---
+counter: True  
+---
 
 # Combinational Logic Design
 
@@ -325,8 +328,8 @@ In general, $2^n$-to-1-line multiplexers:
 
 对于 $F(A,B,C)$ 当 A B 确定时，最后可能输出只可能为 $1,0,C,\overline C$  
 利用这点我们可以改造真值表，
-<div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211051611610.png" width =60%/> </div> 
-<div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211051608124.png" width =60%/> </div> 
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211051611610.png" width =60%/> </div> 
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211051608124.png" width =60%/> </div> 
 
 理论上还可以放更多变量到另一边
 
@@ -397,10 +400,10 @@ $$
 $$  
 
 这样 $C_{i+1}$ 可以从 cells 中去掉，同时我们可以推导得到一组跨越多个单元的进位方程：
-<div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211021138063.png" width = 75%/> </div>  
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211021138063.png" width = 75%/> </div>  
 
 于是我们可以得到下面的 **Carry Look-ahead Adder**:
-<div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211021005217.png" width = 75%/> </div>  
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211021005217.png" width = 75%/> </div>  
 
 这样的超前进位全加器，避免了因为位过多而造成延迟过大。高位的结果直接由低位的结果得到。
 
@@ -408,16 +411,16 @@ This could be extended to more than four bits; in practice, due to limited gate 
 
 The concept is extended another level by considering group **generate($G_{0-3}$)** and **group propagate($P_{0-3}$)** functions:
 
-<div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211021013734.png" width = 75%/> </div>  
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211021013734.png" width = 75%/> </div>  
 
 这样我们就得到了 16-bits adder
-<div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211021013734.png" width = 60%/> </div>  
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211021013734.png" width = 60%/> </div>  
 
 Exactly the same structure. So CLA could be used to generate **Group Carry**.   
 类似思路可得到 64 位的加法器。
 
 !!! Example
-    <div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211021157271.png" width = 70%/> </div>  
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202211021157271.png" width = 70%/> </div>  
 
 
 ### Unsigned Subtraction
@@ -427,7 +430,7 @@ Exactly the same structure. So CLA could be used to generate **Group Carry**.
 * If *an end borrow occurs*, the $N > M$ and the difference $M - N + 2^n$ is subtracted from $2^n$, and a minus sign is appended to the result.
 
 To do both unsigned addition and unsigned subtraction requires:
-<div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211021022095.png" width = 50%/> </div>  
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211021022095.png" width = 50%/> </div>  
 
 复杂，成本高
 
@@ -450,9 +453,9 @@ Subtraction is done by adding the complement of the subtrahend.
     To obtain the result $(N – M)$, take the 2's complement of the sum and place a $-$ to its left.
 
 !!! Example
-    * <div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211021032548.png" width = 50%/> </div>  
+    * <div align=center> <img src="http://cdn.hobbitqia.cc/202211021032548.png" width = 50%/> </div>  
     进位是 1 表明结果为正，不需对结果修正
-    * <div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211021033377.png" width = 50%/> </div>  
+    * <div align=center> <img src="http://cdn.hobbitqia.cc/202211021033377.png" width = 50%/> </div>  
     进位是 0 表明结果为负，需对结果修正
 
 ### Signed Integers
@@ -494,7 +497,7 @@ Form the complement of the number you are subtracting and follow the rules for a
     * 1101 - 0011  
     Complement 0011 to 1101 and add. Result is 1010. The carry out of the MSB is discarded.
 * 2’s Complement Adder/Subtractor  
-<div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211051720361.png" width = 60%/> </div>  
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211051720361.png" width = 60%/> </div>  
 
 利用异或门，当 S=0 时异或门相当于保持另一个信号，当 S=1 时异或门相当于对另一个信号取反。
 
@@ -502,7 +505,7 @@ Form the complement of the number you are subtracting and follow the rules for a
 **Overflow** occurs if n + 1 bits are required to contain the result from an n-bit addition or subtraction  
 
 !!! Example
-    <div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211021057462.png" width = 50%/> </div>  
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202211021057462.png" width = 50%/> </div>  
 
 Simplest way to implement overflow $V = C_n \oplus C_{n - 1}$
 $C_n$ 是溢出去的位，$C_{n-1}$ 是运算后的符号位。 截断
@@ -514,8 +517,8 @@ Decompose the arithmetic circuit into:
 * A block of logic that selects four choices for the B input to the adder 
 
 !!! Example
-    <div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211021105336.png" width = 55%/> </div> 
-    <div align=center> <img src="http://rkkk3hd8w.hn-bkt.clouddn.com/202211051740018.png" width = 55%/> </div> 
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202211021105336.png" width = 55%/> </div> 
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202211051740018.png" width = 55%/> </div> 
 
     其中 $Y_i=B_iS_0+\overline B_iS_1$  
     S0 S1 的变化可以给加法器提供不同的输入，包括 -1(二进制每一位都是 1) 0 $B$ $\overline B$ 

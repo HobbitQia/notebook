@@ -1,10 +1,13 @@
+---
+counter: True  
+---
 
 # Chapter 3 Digital Logic Structures
 
 !!! Abstract
-    Covered in Lecture 2, 2022.7.12 and Lecture 3, 2022.7.13  
-    Topics:  
-    1. Transistors  
+    Covered in Lecture 2, 2022.7.12 and Lecture 3, 2022.7.13   
+    Topics:    
+    1. Transistors   
     2.
 
 ## Transistors

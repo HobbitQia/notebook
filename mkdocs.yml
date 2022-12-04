@@ -9,8 +9,8 @@ copyright: Copyright &copy; 2022 <a href="https://github.com/HobbitQia"  target=
 theme: 
   name: material
   language: zh
-  icon: 
-    logo: material/notebook-outline
+  logo: log.ico
+  favicon: log.ico
   custom_dir: overrides
   features:
     - content.code.annotate
@@ -74,11 +74,10 @@ extra_css:
   - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   - https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
-  - css/counter.css
-  # - css/latex.css
   - css/custom.css
   - css/card.css
   - css/tasklist.css
+  
 
 extra_javascript:
   - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
@@ -94,10 +93,6 @@ extra:
 
 plugins:
   - search
-  # - add-number:
-  #       strict_mode: False
-  #       order: 2
-        # increment_pages: True
   - git-revision-date-localized:
       type: datetime
       timezone: Asia/Shanghai
@@ -140,12 +135,23 @@ nav:
       - 组合逻辑电路: Logic/logic02.md
       - 组合逻辑电路设计: Logic/logic03.md
       - 时序逻辑电路: Logic/logic04.md
+      - 寄存器与寄存器传输: Logic/logic06.md
     - 数据结构与算法: 
       - ds/index.md
       - 算法分析: ds/algorithm.md
       - 树: ds/tree.md
       - 堆: ds/heap.md
       - 并查集: ds/set.md
+      - 图论: ds/graph.md
+    - 图像信息处理:
+      - dip/index.md
+      - 几何变换: dip/dip5.md
+      - 卷积与滤波: dip/dip6.md
+      - 双边滤波的加速: dip/dip7.md
+      - 引导滤波: dip/dip8.md
+      - 稀疏范数滤波: dip/dip9.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
+  - 友链:
+    - link.md

@@ -1,3 +1,6 @@
+---
+counter: True  
+---
 
 # Digital Systems and Information
 
