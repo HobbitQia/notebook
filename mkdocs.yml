@@ -136,6 +136,8 @@ nav:
       - 组合逻辑电路设计: Logic/logic03.md
       - 时序逻辑电路: Logic/logic04.md
       - 寄存器与寄存器传输: Logic/logic06.md
+      - 数字硬件设计: Logic/logic05.md
+      - 内存基础: Logic/logic07.md
     - 数据结构与算法: 
       - ds/index.md
       - 算法分析: ds/algorithm.md
@@ -143,8 +145,11 @@ nav:
       - 堆: ds/heap.md
       - 并查集: ds/set.md
       - 图论: ds/graph.md
+      - 排序: ds/sort.md
     - 图像信息处理:
       - dip/index.md
+      - 图像信息处理介绍: dip/dip1.md
+      - 二值图像和形态学: dip/dip2.md
       - 几何变换: dip/dip5.md
       - 卷积与滤波: dip/dip6.md
       - 双边滤波的加速: dip/dip7.md

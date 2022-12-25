@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/dip/dip6/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/dip/dip1/">
       
       <link rel="icon" href="../../log.ico">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>卷积与滤波 - HobbitQia的笔记本</title>
+        <title>图像信息处理介绍 - HobbitQia的笔记本</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basic-image-operation-iv" class="md-skip">
+        <a href="#introduction" class="md-skip">
           跳转至
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              卷积与滤波
+              图像信息处理介绍
             
           </span>
         </div>
@@ -1149,11 +1149,195 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../dip1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          图像信息处理介绍
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         图像信息处理介绍
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#digital-image-representation" class="md-nav__link">
+    Digital Image Representation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-format" class="md-nav__link">
+    Image Format
+  </a>
+  
+    <nav class="md-nav" aria-label="Image Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bmp-format" class="md-nav__link">
+    BMP Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jpeg" class="md-nav__link">
+    JPEG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tiff" class="md-nav__link">
+    TIFF
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gif" class="md-nav__link">
+    GIF
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-principle-of-imaging" class="md-nav__link">
+    Basic Principle of Imaging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-and-color" class="md-nav__link">
+    Light and Color
+  </a>
+  
+    <nav class="md-nav" aria-label="Light and Color">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-vision-basic" class="md-nav__link">
+    Color Vision Basic
+  </a>
+  
+    <nav class="md-nav" aria-label="Color Vision Basic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-color-vision" class="md-nav__link">
+    Properties of Color Vision
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-space" class="md-nav__link">
+    Color Space
+  </a>
+  
+    <nav class="md-nav" aria-label="Color Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rgb-color-model" class="md-nav__link">
+    RGB Color Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmy-color-model" class="md-nav__link">
+    CMY Color Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hsv-color-model" class="md-nav__link">
+    HSV Color Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cie-xyz" class="md-nav__link">
+    CIE XYZ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cie-lab" class="md-nav__link">
+    CIE L*a*b
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cie-yuv" class="md-nav__link">
+    CIE YUV
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-processing-data-structure" class="md-nav__link">
+    Image Processing Data Structure
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1191,201 +1375,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          卷积与滤波
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../dip6/" class="md-nav__link">
         卷积与滤波
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1d-convolution" class="md-nav__link">
-    1D Convolution
-  </a>
-  
-    <nav class="md-nav" aria-label="1D Convolution">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition" class="md-nav__link">
-    Definition
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#computing-process" class="md-nav__link">
-    Computing process
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#property" class="md-nav__link">
-    Property
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#discrete-1d-convolution" class="md-nav__link">
-    Discrete 1D convolution
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#spatial-filtering" class="md-nav__link">
-    Spatial filtering
-  </a>
-  
-    <nav class="md-nav" aria-label="Spatial filtering">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#concept" class="md-nav__link">
-    Concept
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#procedure" class="md-nav__link">
-    Procedure
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#principle-of-filteringresponse" class="md-nav__link">
-    Principle of filtering——Response
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#spatial-filtering-for-smoothing" class="md-nav__link">
-    Spatial filtering for smoothing
-  </a>
-  
-    <nav class="md-nav" aria-label="Spatial filtering for smoothing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#linear-smoothing-filter" class="md-nav__link">
-    Linear smoothing filter
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#statistical-sorting-filter" class="md-nav__link">
-    Statistical sorting filter
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sharpening-spatial-filter" class="md-nav__link">
-    Sharpening spatial filter
-  </a>
-  
-    <nav class="md-nav" aria-label="Sharpening spatial filter">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gradient-based-operator" class="md-nav__link">
-    gradient based operator
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#laplacian-operator" class="md-nav__link">
-    Laplacian operator
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bilateral-filtering" class="md-nav__link">
-    Bilateral Filtering
-  </a>
-  
-    <nav class="md-nav" aria-label="Bilateral Filtering">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#denoising" class="md-nav__link">
-    Denoising
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tone-mapping" class="md-nav__link">
-    Tone mapping
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1614,37 +1608,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1d-convolution" class="md-nav__link">
-    1D Convolution
+  <a href="#digital-image-representation" class="md-nav__link">
+    Digital Image Representation
   </a>
   
-    <nav class="md-nav" aria-label="1D Convolution">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-format" class="md-nav__link">
+    Image Format
+  </a>
+  
+    <nav class="md-nav" aria-label="Image Format">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#definition" class="md-nav__link">
-    Definition
+  <a href="#bmp-format" class="md-nav__link">
+    BMP Format
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#computing-process" class="md-nav__link">
-    Computing process
+  <a href="#jpeg" class="md-nav__link">
+    JPEG
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#property" class="md-nav__link">
-    Property
+  <a href="#tiff" class="md-nav__link">
+    TIFF
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#discrete-1d-convolution" class="md-nav__link">
-    Discrete 1D convolution
+  <a href="#gif" class="md-nav__link">
+    GIF
   </a>
   
 </li>
@@ -1655,52 +1656,31 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#spatial-filtering" class="md-nav__link">
-    Spatial filtering
+  <a href="#basic-principle-of-imaging" class="md-nav__link">
+    Basic Principle of Imaging
   </a>
   
-    <nav class="md-nav" aria-label="Spatial filtering">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-and-color" class="md-nav__link">
+    Light and Color
+  </a>
+  
+    <nav class="md-nav" aria-label="Light and Color">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#concept" class="md-nav__link">
-    Concept
+  <a href="#color-vision-basic" class="md-nav__link">
+    Color Vision Basic
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#procedure" class="md-nav__link">
-    Procedure
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#principle-of-filteringresponse" class="md-nav__link">
-    Principle of filtering——Response
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#spatial-filtering-for-smoothing" class="md-nav__link">
-    Spatial filtering for smoothing
-  </a>
-  
-    <nav class="md-nav" aria-label="Spatial filtering for smoothing">
+    <nav class="md-nav" aria-label="Color Vision Basic">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#linear-smoothing-filter" class="md-nav__link">
-    Linear smoothing filter
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#statistical-sorting-filter" class="md-nav__link">
-    Statistical sorting filter
+  <a href="#properties-of-color-vision" class="md-nav__link">
+    Properties of Color Vision
   </a>
   
 </li>
@@ -1711,50 +1691,51 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sharpening-spatial-filter" class="md-nav__link">
-    Sharpening spatial filter
+  <a href="#color-space" class="md-nav__link">
+    Color Space
   </a>
   
-    <nav class="md-nav" aria-label="Sharpening spatial filter">
+    <nav class="md-nav" aria-label="Color Space">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gradient-based-operator" class="md-nav__link">
-    gradient based operator
+  <a href="#rgb-color-model" class="md-nav__link">
+    RGB Color Model
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#laplacian-operator" class="md-nav__link">
-    Laplacian operator
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bilateral-filtering" class="md-nav__link">
-    Bilateral Filtering
-  </a>
-  
-    <nav class="md-nav" aria-label="Bilateral Filtering">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#denoising" class="md-nav__link">
-    Denoising
+  <a href="#cmy-color-model" class="md-nav__link">
+    CMY Color Model
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tone-mapping" class="md-nav__link">
-    Tone mapping
+  <a href="#hsv-color-model" class="md-nav__link">
+    HSV Color Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cie-xyz" class="md-nav__link">
+    CIE XYZ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cie-lab" class="md-nav__link">
+    CIE L*a*b
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cie-yuv" class="md-nav__link">
+    CIE YUV
   </a>
   
 </li>
@@ -1766,6 +1747,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-processing-data-structure" class="md-nav__link">
+    Image Processing Data Structure
+  </a>
   
 </li>
       
@@ -1782,265 +1770,274 @@
               
 
                 
-  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/dip/dip6.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/dip/dip1.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="basic-image-operation-iv">Basic Image Operation (IV)<a class="headerlink" href="#basic-image-operation-iv" title="Permanent link">&para;</a></h1>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<ul>
-<li>Continuous 1D convolution  </li>
-<li>Properties of convolution  </li>
-<li>Discrete 1D convolution  </li>
-<li>Spatial domain filtering  </li>
-</ul>
+<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<h2 id="digital-image-representation">Digital Image Representation<a class="headerlink" href="#digital-image-representation" title="Permanent link">&para;</a></h2>
+<p>每个灰度图像可以看做是一个二维数组或者矩阵<br />
+灰度图像(grayscale image)一般每个像素（pixel）用一个字节（8bit）表示，此时最大能表示[0..255]共256个灰度级。  <br />
+32 位多了一个阿尔法通道, 用来表示透明度.    </p>
+<h2 id="image-format">Image Format<a class="headerlink" href="#image-format" title="Permanent link">&para;</a></h2>
+<p>目的: 存储图像信息<br />
+基于像素, 矩形区域.  <br />
+不同的图像格式和操作系统, 软件有关.  <br />
+编码方法: 有的有压缩, 包括有损压缩(信息有损失), 无损压缩 <br />
+常见格式: bmp, jpeg, tiff, gif, png...   </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>手机里一般是 jpeg.<br />
+tiff 主要用于地理信息系统.<br />
+gif 是动态的.<br />
+互联网一般是 png.  </p>
 </div>
-<h2 id="1d-convolution">1D Convolution<a class="headerlink" href="#1d-convolution" title="Permanent link">&para;</a></h2>
-<h3 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h3>
-<p>一维卷积</p>
-<p>两个一维连续函数 <span class="arithmatex">\(f(x)\)</span> 和 <span class="arithmatex">\(h(x)\)</span> 的卷积 <span class="arithmatex">\(g(x)\)</span> 为<br />
-<span class="arithmatex">\(g(x)=f(x)*h(x)=\int_{-\infty}^{\infty}f(t)h(x-t)dt\)</span>
-它表示两个函数的卷积可以转化成乘积的积分来计算。通常将 <span class="arithmatex">\(f(x)\)</span> 称为输入函数，将 <span class="arithmatex">\(h(x)\)</span> 称为卷积函数。  </p>
-<h3 id="computing-process">Computing process<a class="headerlink" href="#computing-process" title="Permanent link">&para;</a></h3>
-<p>已知两个函数，要求计算它们的卷积在任意点x处的值。</p>
+<h3 id="bmp-format">BMP Format<a class="headerlink" href="#bmp-format" title="Permanent link">&para;</a></h3>
+<p>Windows 系统里的标准形式, 有时被存为<code>.dib</code>文件.<br />
+大部分 BMP 文件是不压缩的形式, 但它本身还是支持图像压缩的，如 rle 格式（行程长度编码，runlength encoding）压缩格式等  </p>
+<p><img alt="image.png" src="https://s2.loli.net/2022/09/20/2rSizGlMnKpNCeh.png" /></p>
 <ul>
-<li>将卷积函数 <span class="arithmatex">\(h(t)\)</span> 反折  </li>
-</ul>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211121545929.png" width = 50%/> </div>
-
-<ul>
-<li>将反折后的卷积函数向右移动距离 <span class="arithmatex">\(x\)</span></li>
-</ul>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211121546738.png" width = 50%/> </div>
-
-<ul>
-<li>计算 f 和 h 在任意 t 的乘积，并积分</li>
-</ul>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211121547501.png" width = 50%/> </div>
-
-<p>对每一个 <span class="arithmatex">\(x\)</span> 值重复上述计算过程，就得到了输出曲线 <span class="arithmatex">\(g(x)\)</span>  <br />
-当 <span class="arithmatex">\(x\)</span> 变化时，反折的函数被平移通过静止不动的输入函数, <span class="arithmatex">\(g(x)\)</span> 值取决于这两个函数的重叠部分的累积。 </p>
-<h3 id="property">Property<a class="headerlink" href="#property" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Exchangeable</strong>: <span class="arithmatex">\(f(x)*g(x)=g(x)*f(x)\)</span>  </li>
-<li><strong>Distributive</strong>: <span class="arithmatex">\(f*(g+h)=f*g+f*h\)</span>  </li>
-<li><strong>Associative</strong>: <span class="arithmatex">\(f*(g*h)=(f*g)*h\)</span>  </li>
-</ul>
-<h3 id="discrete-1d-convolution">Discrete 1D convolution<a class="headerlink" href="#discrete-1d-convolution" title="Permanent link">&para;</a></h3>
-<p>对于离散序列，其卷积可用与连续函数相类似的方法求得。此时自变量变为下标，面积则由求和代替。 <br />
-对于两个长度均为 M 的序列 <span class="arithmatex">\(f(x)\)</span> 和 <span class="arithmatex">\(h(x)\)</span>，其卷积为: <span class="arithmatex">\(h(x)=f(x)*h(x)=\dfrac{1}{M}=\sum\limits_{t=0}^{M-1}f(t)h(x-t)\)</span></p>
-<p>有效范围：覆盖了所有 <span class="arithmatex">\(h(t)\)</span> 的点。</p>
-<p><strong><em>e.g.</em></strong>  </p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211121558881.png" width = 60%/> </div>
-
-<p><u><strong>卷积实质上是对图像像素的加权求和</strong></u>  </p>
-<h2 id="spatial-filtering">Spatial filtering<a class="headerlink" href="#spatial-filtering" title="Permanent link">&para;</a></h2>
-<h3 id="concept">Concept<a class="headerlink" href="#concept" title="Permanent link">&para;</a></h3>
-<p>滤波器是一个大小为 <span class="arithmatex">\(M\times N\)</span> 的窗口，窗口中的元素与原图像的处于窗口内的像素进行某种运算，结果作为新图像的一个像素。当窗口滑过原图像并完成上述运算之后，就能够得到一幅新图像。（本质就是刚刚的卷积）</p>
-<p>滤波器的别名：滤波器、掩模、核、模板，窗口</p>
-<p>滤波器子图像中的值是系数值，而不是像素值，它代表了影响新像素产生的权重。 </p>
-<p>卷积和形态学中有类似的问题：边界如何处理，可以扩展行列，也可以直接将中心从第二行开始。</p>
-<h3 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h3>
-<p>在待处理图像中逐点移动掩模，在每一点 <span class="arithmatex">\((x,y)\)</span> 处，滤波器在该点的响应通过实现定义的关系来计算。对于线性空间滤波，其响应由滤波器系数与滤波掩模扫过区域的对应像素值的乘积之和给出。 </p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211121602847.png" width = 55%/> </div>
-
-<h3 id="principle-of-filteringresponse">Principle of filtering——Response<a class="headerlink" href="#principle-of-filteringresponse" title="Permanent link">&para;</a></h3>
-<p>响应值: <span class="arithmatex">\(R=w(-1,-1)f(x-1,y-1)+w(-1,0)f(x-1, y)+\ldots +w(0,0)f(x,y)+\ldots+w(1,0)f(x+1,y)+w(1,1)f(x+1,y)\)</span><br />
-这实质上是一种卷积操作，卷积表示为: <span class="arithmatex">\(h(x)=f(x)*h(x)=\dfrac{1}{M}=\sum\limits_{t=0}^{M-1}f(t)h(x-t)\)</span>  </p>
-<p>通常，掩模的长宽都为奇数。假设分别为 <span class="arithmatex">\(2a+1\)</span> 和 <span class="arithmatex">\(2b+1\)</span>. 当窗口中心处于像素 <span class="arithmatex">\((x,y)\)</span> 处时，新的像素值为： 
-对图像 <span class="arithmatex">\(f\)</span> 中所有像素都与掩模进行运算之后，最终产生一幅新图像 <span class="arithmatex">\(g\)</span>.<br />
-<span class="arithmatex">\(g(x,y)=\sum\limits_{s=-a}^a\sum\limits_{t=-b}^b w(s,t)f(x+s,y+t)\)</span><br />
-即 <span class="arithmatex">\(R=w_1z_1+w_2z_2+\cdots+w_{mn}z_{mn}=\sum\limits_{i=1}^m w_iz_i\)</span></p>
-<p>图像在传输过程中，由于传输信道、采样系统质量较差，或受各种干扰的影响，而造成图像毛糙，此时，就需对图像进行平滑处理。平滑可以抑制高频成分，但也使图像变得模糊。 </p>
-<h3 id="spatial-filtering-for-smoothing">Spatial filtering for smoothing<a class="headerlink" href="#spatial-filtering-for-smoothing" title="Permanent link">&para;</a></h3>
-<p><strong>平滑空间滤波器</strong>（也叫低通滤波，因为平滑的部分一般是低频的）用于模糊处理和减少噪声。模糊处理经常用于预处理，例如，在提取大的目标之前去除图像中一些琐碎的细节，桥接直线或曲线的缝隙。 可以去掉噪声，但会使图模糊，一般用于预处理。</p>
-<h4 id="linear-smoothing-filter">Linear smoothing filter<a class="headerlink" href="#linear-smoothing-filter" title="Permanent link">&para;</a></h4>
-<p><strong>平滑线性空间滤波器</strong>的输出是包含在滤波掩模邻域内像素的简单平均值。因此，这些滤波器也称为<strong>均值滤波器</strong>。</p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211190921760.png" width = 25%/> </div>
-
-<p>均值滤波器的主要应用是去除图像中的不相干细节，即那些与滤波掩模尺寸相比更小的像素区域。  </p>
-<ul>
-<li>简单平均，表示窗口中每一个像素对响应的贡献是一样的  </li>
 <li>
-<p>加权平均，表示窗口中的像素对相应的贡献有大小之分。<br />
-两个3×3平滑（均值）滤波器掩模，每个掩模前边的乘数等于它的系数值的和，以计算平均值  </p>
+<p><strong>图像文件头</strong>:  <br />
+<img alt="image.png" src="https://s2.loli.net/2022/09/20/RDsOQWuCn7dEVob.png" />  </p>
+<ul>
+<li><strong><code>bfType</code></strong>: 说明文件的类型，该值必需是0x4D42，也就是字符'BM'.(C 语言可用 fopen 读)  </li>
+<li><strong><code>bfSize</code></strong>: 说明该位图文件的大小，用字节为单位</li>
+<li><strong><code>bfReserved1</code></strong>: 保留，必须设置为0</li>
+<li><strong><code>bfReserved2</code></strong>: 保留，必须设置为0</li>
+<li><strong><code>bfOffBits</code></strong>: 说明从文件头开始到实际的图象数据之间的字节的偏移量。这个参数是非常有用的，因为位图信息头和调色板的长度会根据不同情况而变化，所以你可以用这个偏移值迅速的从文件中读取到位数据.  </li>
+</ul>
+</li>
+<li>
+<p><strong>图像信息头</strong>:<br />
+<img alt="image.png" src="https://s2.loli.net/2022/09/20/cmXdJ4otrF2KhRu.png" />  </p>
+<ul>
+<li><strong><code>biSize</code></strong><br />
+说明 BITMAPINFOHEADER(图像信息头) 结构所需要的字数.  </li>
+<li><strong><code>biWidth</code></strong><br />
+说明图象的宽度，以象素为单位.  </li>
+<li><strong><code>biHeight</code></strong><br />
+说明图象的高度，以象素为单位. <br />
+注：这个值除了用于描述图像的高度之外，它还有另一个用处，就是指明该图像是倒向的位图，还是正向的位图。如果该值是一个正数，说明图像是倒向的(头朝上脚朝下)，如果该值是一个负数，则说明图像是正向的。大多数的BMP文件都是倒向的位图，也就是时，高度值是一个正数.(操作系统中会提前处理以保证我们看到的是正向的)    </li>
+<li><strong><code>biPlanes</code></strong><br />
+为目标设备说明位面数，其值将总是被设为 1.  </li>
+<li><strong><code>biBitCount</code></strong><br />
+每个像素多少位. 其值为1、4、8、16、24、或 32. <br />
+如果像素十六位, 即为伪彩色(介于黑白和彩色之间)   </li>
+<li><strong><code>biCompression</code></strong><br />
+说明图象数据压缩的类型，我们只讨论没有压缩的类型：BI_RGB.  </li>
+<li><strong><code>biSizeImage</code></strong><br />
+说明图象的大小，以字节为单位.  当用 BI_RGB 格式时，可设置为 0.  </li>
+<li><strong><code>biXPelsPerMeter/biYPelsPerMeter</code></strong><br />
+水平/垂直方向分辨率, 每米有多少个像素. 像素不是越多越好, 而是颗粒越小越好.   </li>
+<li><strong><code>biClrUsd</code></strong><br />
+位图中实际要使用的颜色索引的数量.(0 说明要使用所有调色板项).     </li>
+<li><strong><code>biClrImportant</code></strong><br />
+说明对图象显示有重要影响的颜色索引的数目，如果是 0，表示都重要. 当不得不抛弃颜色时, 会先把不重要的颜色丢掉.    </li>
+</ul>
+</li>
+<li>
+<p><strong>调色板(palette)</strong>.<br />
+<img alt="20220922170004" src="https://s2.loli.net/2022/09/22/FN79BkeVPctEzwA.png" /></p>
+<ul>
+<li>一个字节表示蓝色, 一个字节表示绿色, 一个字节表示红色, 一个字节总是 0.(BGR)   </li>
+<li>内存充足, 往往不再需要调色板, 直接存数据.  </li>
+</ul>
+</li>
+<li>
+<p><strong>位图数据(Bitmap data)</strong></p>
+<ul>
+<li>每一行的字节数必须是4的整倍数，如果不是，则需要补齐。  </li>
+<li>一般来说，.bMP文件的数据从下到上，从左到右的。也就是说，从文件中最先读到的是图象最下面一行的左边第一个象素，然后是左边第二个象素……接下来是倒数第二行左边第一个象素，左边第二个象素……依次类推 ，最后得到的是最上面一行的最右一个象素。</li>
+</ul>
+</li>
+</ul>
+<h3 id="jpeg">JPEG<a class="headerlink" href="#jpeg" title="Permanent link">&para;</a></h3>
+<ul>
+<li>压缩策略：根据压缩比要求，从高频到低频逐步削减信息</li>
+<li>好处<ul>
+<li>高频信息占用存储空间大，减少高频信息更容易获得高压缩比；</li>
+<li>低频信息可以保留物体的基本轮廓和色彩分布，最大限度维持图像质量。</li>
+<li>适合用于互联网</li>
+</ul>
+</li>
+</ul>
+<p>不适合用于线条画、文字、图标等，其有损压缩会导致这类对象的瑕疵严重</p>
+<h3 id="tiff">TIFF<a class="headerlink" href="#tiff" title="Permanent link">&para;</a></h3>
+<p>TIFF是Tagged Image File Format的缩写，是一个广为应用的光栅图像文件格式，它的来源有：扫描仪、CAD系统、地理信息<br />
+TIFF是一个非常稳定的文件格式，有很长的应用历史，有公共的软件库来读写TIFF格式的图像（支持各种操作系统）</p>
+<ul>
+<li>支持从高端到低端的设备</li>
+<li>可扩展性强，支持公共和私用的标记结构（每个公司有自己私有的部分）</li>
+<li>支持各种压缩格式</li>
+<li>有公共软件库支持</li>
+<li>二值图、灰度图、调色板、真彩色、其他扩展</li>
+</ul>
+<h3 id="gif">GIF<a class="headerlink" href="#gif" title="Permanent link">&para;</a></h3>
+<p>Graphics Interchange Format</p>
+<ul>
+<li>采用复杂的 LZW 编码方式</li>
+<li>一个 GIF 文件可以存储多幅图像</li>
+<li>带有色彩表（全局、局部色彩表）</li>
+<li>支持图像定序显示或覆盖(播放次序，如从后往前)</li>
+<li>可以错行存放</li>
+<li>支持文本覆盖嵌入</li>
+</ul>
+<h2 id="basic-principle-of-imaging">Basic Principle of Imaging<a class="headerlink" href="#basic-principle-of-imaging" title="Permanent link">&para;</a></h2>
+<p>通过使用透镜可以会聚更多的光线到一个成像点，只是只有在特殊的位置上才能达到这个目标，即大家以前就学习过的透镜聚焦。位于合适距离的物体点可以成清晰像，其他的点则会产生弥散圆。<br />
+通过改变镜头的形状可以改变聚焦时的物体点所需要的距离。</p>
+<p><strong>弥散圆</strong>(circle of confusion) ：在焦点前后，光线开始聚集和扩散，点的影像变模糊，形成一个扩大的圆。如果弥散圆的直径小于人眼的鉴别能力，在一定范围内实际影像产生的模糊是不能辨认的。不能辨认的直径叫做容许弥散圆。焦点前后各有一个容许弥散圆。对于6寸照片，观察距离25－30cm ，大概是底片对角线1/1000-1/1500，</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212200849300.png" width = 40%/></div>
+
+<p><strong>数码相机的成像过程：</strong></p>
+<ul>
+<li>当使用数码相机拍</li>
+<li>当CCD曝光后，光电二极管受到光线的激发而释放出电荷，生成感光元件的电信号。摄景物时，景物反射的光线通过数码相机的镜头透射到CCD上。</li>
+<li>CCD控制芯片利用感光元件中的控制信号线路对发光二极管产生的电流进行控制，由电流传输电路输出，CCD会将一次成像产生的电信号收集起来，统一输出到放大器。</li>
+<li>经过放大和滤波后的电信号被传送到ADC，由ADC将电信号（模拟信号）转换为数字信号，数值的大小和电信号的强度与电压的高低成正比，这些数值其实也就是图像的数据。</li>
+<li>此时这些图像数据还不能直接生成图像，还要输出到DSP（数字信号处理器）中，在DSP中，将会对这些图像数据进行色彩校正、白平衡处理，并编码为数码相机所支持的图像格式、分辨率，然后才会被存储为图像文件。</li>
+<li>当完成上述步骤后，图像文件就会被保存到存储器上,我们就可以欣赏了。</li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212191027895.png" width = 40%/></div>
+
+<h2 id="light-and-color">Light and Color<a class="headerlink" href="#light-and-color" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>色彩</strong><br />
+    色彩可以分为<strong>彩色</strong>（chromatic color）和<strong>消色</strong>（achromatic color）两大类。</p>
+<ul>
+<li><strong>彩色</strong>是指红、黄、蓝等单色以及它们的混合色。彩色物体对光谱各波长的反射具有选择性，所以它们在白光照射下呈现出不同的颜色。  </li>
+<li><strong>消色</strong>，又称非彩色，也就是我们通常所说的<strong>灰度</strong>，是指白色，黑色以及各种深浅不同的灰色。消色物体对光谱各波长的反射没有选择性，它们是中性色。</li>
+<li><strong>色觉</strong><br />
+<strong>色觉</strong>是指不同波长的光线作用于视网膜而在大脑中引起的感觉。人眼可见光线的波长是390nm～780nm，一般可辨出包括紫、蓝、青、绿、黄、橙、红7种主要颜色在内的120～180种不同的颜色。  </li>
+</ul>
+</li>
+<li>
+<p><strong>视网膜</strong><br />
+视网膜是人眼中最重要的组成部分，就像相机里的感光底片，专门负责感光成像。捕捉光并产生图像。 <br />
+瞳孔可以 放大放小   ---- 光圈<br />
+这里有两种视觉细胞</p>
+<ul>
+<li>锥形 数量少, 但可以区分色彩(前提: 光线比较充足，强光才能激发)</li>
+<li>杆状 数量多, 对光的亮度比较敏感, 但不能区分色彩</li>
+</ul>
+</li>
+</ul>
+<p><strong>三原色</strong>是目前最为代表性的色觉机制解释：<br />
+在视网膜上存在着三种分别对红、绿和蓝光线的波长特别敏感的视锥细胞或相应的感光色素，当不同波长的光线进入人眼时，与之相符或相近的视锥细胞发生不同程度的兴奋，于是在大脑产生相应的色觉；三种视锥细胞若受到同等程度的刺激，则产生消色。</p>
+<h3 id="color-vision-basic">Color Vision Basic<a class="headerlink" href="#color-vision-basic" title="Permanent link">&para;</a></h3>
+<p>国际照明委员会（Commission internationale de l‘éclairage），简称<strong>CIE</strong>，在1931年根据已有的实验结果，选择700nm（R）、541.6nm（G）、435.8nm（B）作为三原色，计算出相应的光谱三刺激值 r、g 、b ，其三刺激值曲线如图所示：</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212200836249.png" width = 60%/></div>
+
+<h4 id="properties-of-color-vision">Properties of Color Vision<a class="headerlink" href="#properties-of-color-vision" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>绝对色觉感知不准确，一般通过上下文判断。所以说有时候会出错，这个叫vision illusion</p>
 <details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211190925995.png" width = 25%/> </div> </p>
-<p>这样中间像素能更多地被保留，类似于一个高斯函数。</p>
+<summary>Vision Illusion</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202212200837146.png" width = 50%/></div>   </p>
 </details>
-</li>
-</ul>
-<p><span class="arithmatex">\(g(x,y)=\dfrac{\sum\limits_{s=-a}^a\sum\limits_{t=-b}^bw(s,t)f(x+s,y+t)}{\sum\limits_{s=-a}^a\sum\limits_{t=-b}^b w(s,t)}\)</span> 其中，滤波器大小为 <span class="arithmatex">\((2a+1) \times (2b+1)\)</span>，<span class="arithmatex">\(w\)</span> 为滤波器，<span class="arithmatex">\(f\)</span> 为输入图像，<span class="arithmatex">\(g\)</span> 为输出图像。</p>
-<p>滤波掩模的大小与图像的平滑效果有直接的关系。当掩模比较小时，可以观察到在整幅图像中有轻微的模糊，当掩模大小增加，模糊程度也随之增加。 卷积核越大，图越模糊，保留的细节越少（类似照相机的光圈）  </p>
-<p>为了对感兴趣物体得到一个粗略的描述而模糊一幅图像，这样，那些较小物体的强度与背景混合在一起了，较大物体变得像“斑点”而易于检测。掩模的大小由那些即将融入背景中去的物件尺寸来决定。 </p>
-<h4 id="statistical-sorting-filter">Statistical sorting filter<a class="headerlink" href="#statistical-sorting-filter" title="Permanent link">&para;</a></h4>
-<p><strong>统计滤波器</strong>是一种非线性的空间滤波器，它的响应是基于窗口内图像区域中像素值的排序，由统计排序结果决定的值代替中心像素的值。(每次都要排序，因此计算速度比线性滤波慢)
-统计滤波器中最常见的例子就是<strong>中值滤波器</strong>。</p>
-<ul>
-<li>用像素邻域内灰度的中值代替该像素的值。</li>
-<li>提供了优秀的去噪能力，比小尺寸的线性平滑滤波器的模糊程度明显要低。</li>
-<li>对处理脉冲噪声（也称为椒盐噪声）非常有效，因为这种噪声是以黑白点叠加在图像上的。 </li>
-</ul>
-<p>为了对一幅图像上的某个点作中值滤波处理。必须先将掩模内欲求的像素及其邻域的像素值排序，确定出中值，并将中值赋予该像素点。 </p>
-<p>常用 <span class="arithmatex">\(n\times n\)</span> 的中值滤波器去除那些相对于其邻域像素更亮或更暗，并且其区域小于 <span class="arithmatex">\(n^2/2\)</span>（滤波器区域的一半）的孤立像素集。 </p>
-<p>这个方法有利于突出图像中的细节或者增强被模糊了的细节。 </p>
-<h3 id="sharpening-spatial-filter">Sharpening spatial filter<a class="headerlink" href="#sharpening-spatial-filter" title="Permanent link">&para;</a></h3>
-<p>微分算子是实现锐化的工具，其响应程度与图像在该点处的突变程度有关。微分算子增强了边缘和其他突变（如噪声）并削弱了灰度变化缓慢的区域。 </p>
-<ul>
-<li>基于二阶微分的图像增强——<strong>拉普拉斯算子</strong> </li>
-<li>基于一阶微分的图像增强——<strong>梯度法</strong> </li>
-</ul>
-<p>对于一个整数值函数 <span class="arithmatex">\(f(x)\)</span> 来说，我们使用差分来表示微分算子：</p>
-<div class="arithmatex">\[\dfrac{\partial f}{\partial x}=f(x+1)-f(x)\]</div>
-<p>类似的，我们可以把二阶微分写成这样：</p>
-<div class="arithmatex">\[\dfrac{\partial^2 f}{\partial x^2}=f(x+1)+f(x-1)-2f(x)\]</div>
-<h4 id="gradient-based-operator">gradient based operator<a class="headerlink" href="#gradient-based-operator" title="Permanent link">&para;</a></h4>
-<p>对于一个二元函数 <span class="arithmatex">\(f(x,y)\)</span> 来说，我们首先定义一个二维的向量：</p>
-<div class="arithmatex">\[
-\nabla f=\left[\dfrac{G_x}{G_y}\right]=\left[\dfrac{\dfrac{\partial f}{\partial x}}{\dfrac{\partial f}{\partial y}}\right]
-\]</div>
-<p>它的幅值(Magnitude)被表示为：</p>
-<div class="arithmatex">\[
-\nabla f = (G_x^2+G_y^2)^{\frac{1}{2}}=\left[(\dfrac{\partial f}{\partial x})^2 + (\dfrac{\partial f}{\partial y})^2\right]^{\frac{1}{2}}
-\]</div>
-<p>当对整幅图像计算梯度时，运算量会很大，因此，在实际操作中，常用绝对值代替平方与平方根运算近似求梯度的模值</p>
-<div class="arithmatex">\[\nabla f\approx |G_x|+|G_y|\]</div>
-<p>另一种计算方法: Robert 交叉梯度算子</p>
-<h4 id="laplacian-operator">Laplacian operator<a class="headerlink" href="#laplacian-operator" title="Permanent link">&para;</a></h4>
-<p>对函数 <span class="arithmatex">\(f(x, y)\)</span>，拉普拉斯算子定义如下(和梯度不同，拉普拉斯算子是一个标量)</p>
-<div class="arithmatex">\[
-\nabla^2 f=\dfrac{\partial^2 f}{\partial x^2}+\dfrac{\partial^2 f}{\partial y^2}
-\]</div>
-<ul>
-<li>
-<p>两个变量的离散拉普拉斯函数是:  </p>
-<div class="arithmatex">\[
-\nabla^2 f(x,y)=f(x+1,y)+f(x-1,y)+f(x,y+1)+f(x,y-1)-4f(x,y)
-\]</div>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211191000941.png" width = 25%/> </div> </p>
-<p>相当于用这个卷积核对图像做卷积（这个卷积核是各向同性的，<em>rotation-invariant</em>）</p>
 </li>
 <li>
-<p>对角线上的元素也可以考虑进来设计掩膜：  </p>
-<div class="arithmatex">\[
-\begin{align*}
-\nabla^2 f(x,y) &amp; =f(x-1,y-1)+f(x,y-1)+f(x+1,y-1)+f(x-1,y)
-f(x+1,y)+f(x-1,y+1)+f(x,y+1)+f(x+1,y+1)-8f(x,y) \\
-&amp; = \sum\limits_{i=-1}^1\sum\limits_{j=-1}^1 f(x+i,y+j)-9f(x,y)
-\end{align*}
-\]</div>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211251702521.png" width = 25%/> </div> </p>
+<p>感知能力, 不同的人的感知能力也不同 </p>
+</li>
+<li>Weber's Law<br />
+感知到的对比度, 和背景的灰度成正比.  能被感知到的 deltaI 与 I 成正比(黄色线内符合这个定律)    </li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212200852411.png" width = 40%/></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<ul>
+<li>感知的优先程度和敏感度    <ul>
+<li>优先程度：同等条件下，人们往往会注意到<strong>色调</strong>（Hue, H）的变化，然后是<strong>饱和度</strong>（Saturation, S），然后是<strong>亮度</strong>（Value, V）。</li>
+<li>敏感度：人眼对于<strong>亮度</strong>的变化最为敏感，分辨能力最强。恰好与人眼的高动态能力相匹配。</li>
+</ul>
+</li>
+</ul>
+<h3 id="color-space">Color Space<a class="headerlink" href="#color-space" title="Permanent link">&para;</a></h3>
+<p>颜色模型包括一系列颜色模型，这些颜色模型是由国际照明委员会提出的，是基于人的眼睛对RGB的反应，被用于精确表示对色彩的接收。  </p>
+<p><strong>设备无关性</strong>：这些颜色模型被用来定义所谓的独立于设备的颜色。它能够在任何类型的设备上产生真实的颜色，例如：扫描仪、监视器和打印机。这些模型被广泛地使用，因为它们很容易被用于计算机，描述颜色的范围。</p>
+<ul>
+<li>
+<p>与<strong>设备有关</strong>的颜色模型:<br />
+RGB, CMY, HSV</p>
 </li>
 <li>
-<p>反过来  </p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211251703385.png" width = 45%/> </div> </p>
-<p>当拉普拉斯滤波后的图像与其它图像合并时（相加或相减），则必须考虑符号上的差别。 </p>
+<p>与<strong>设备无关</strong>的颜色模型：<br />
+主要是国际照明委员会(CIE, Commission Internationale de L‘Eclairage/International Commission on Illumination)定义的CIE<br />
+<strong>CIE XYZ, CIE L*a*b和 CIE YUV</strong><br />
+这些颜色模型被用来定义所谓的独立于设备的颜色。它能够在任何类型的设备上产生真实的颜色，例如：扫描仪、监视器和打印机。这些模型被广泛地使用，因为它们很容易被用于计算机，描述颜色的范围。</p>
 </li>
 </ul>
-<p><strong>Application</strong> <br />
-将原始图像和拉普拉斯图像叠加在一起的简单方法可以保护拉普拉斯锐化处理的效果，同时又能复原背景信息。 </p>
-<div class="arithmatex">\[
-g(x,y)=\left\{\begin{matrix}f(x,y)-\nabla^2f(x,y), If\ the\ center\ of\ the\ mask\ is\ negative \\
-    f(x,y)+\nabla^2f(x,y), If\ the\ center\ of\ the\ mask\ is\ positive \end{matrix} \right.
-\]</div>
-<details>
-<summary> Laplacian Example </summary>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211251707431.png" width = 90%/> </div> 
-</details>
+<h4 id="rgb-color-model">RGB Color Model<a class="headerlink" href="#rgb-color-model" title="Permanent link">&para;</a></h4>
+<p>RBG 颜色模型是三维直角坐标颜色系统中的一个单位正方体
+在正方体的主对角线上，各原色的量相等，产生由暗到亮的白色，即灰度。（0，0，0）为黑，（1，1，1）为白，正方体的其他6个角点分别为红、黄、绿、青、蓝和品红。
+RGB颜色模型构成的颜色空间是CIE原色空间的一个真子集。
+RGB颜色模型通常用于彩色阴极射线管和彩色光栅图形显示器（计算机和电视机采用）。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212200916284.png" width = 30%/></div>
 
-<h3 id="bilateral-filtering">Bilateral Filtering<a class="headerlink" href="#bilateral-filtering" title="Permanent link">&para;</a></h3>
-<p>保边滤波(edge-preserving)的一种</p>
-<details>
-<summary> Bilateral filtering Example </summary>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211251710809.png" width = 90%/> </div> 
-</details>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<h4 id="cmy-color-model">CMY Color Model<a class="headerlink" href="#cmy-color-model" title="Permanent link">&para;</a></h4>
+<p>彩色印刷或者彩色打印的纸张不能发射光线，因而印刷机或打印机就只能使用一些能够吸收特定光波而反射其他光波的油墨或者颜色。</p>
+<p>油墨或颜料的3种基色是以红、绿、蓝三色的补色青（Cyan）、品红（Magenta）、黄（Yellow）为基色。</p>
+<p>用CMY模型产生的颜色称为相减色，是因为它减掉了为视觉系统识别颜色所需要的反射光</p>
+<p>CMY空间与RGB空间互补，也就是用白色减去RGB空间中的某一颜色值就等于同样颜色在CMY空间中的值</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212200922855.png" width = 35%/></div>
 
-<p>目标：图像的平滑，但要把 large-scale 的结构保留, small-scale 的纹路抹掉。</p>
+<h4 id="hsv-color-model">HSV Color Model<a class="headerlink" href="#hsv-color-model" title="Permanent link">&para;</a></h4>
+<p>颜色空间是从人的视觉系统出发，用色调（Hue)、色饱和度（Saturation）和亮度（Intensity，或者Value）来</p>
+<p>圆锥的顶面对应于V=1，它包含RGB模型中的R=1，G=1，B=1三个面，故所代表的颜色较亮。色度H由绕V轴的旋转角给定。红色对应于角度0o，绿色对应于角度120o，蓝色对应于角度240o。描述颜色。</p>
+<p>在圆锥的顶点处，V=0，H和S无定义，代表黑色。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212200929318.png" width = 35%/></div>
+
 <ul>
-<li>space domain S, 表示像素可能的位置(高斯滤波主要考虑的)  </li>
-<li>intensity domain R, 像素可能的灰度值  </li>
+<li>符合人类视觉系统</li>
+<li>当采用RGB（或者CMY）颜色模型时，改变某一颜色的属性，比如改变色调就必须同时改变R、G、B（或者C、M、Y）三个坐标；而采用HSV颜色模型时只需改变H坐标。也就是说，HSV颜色模型中的三个坐标是独立的。合人眼对颜色的感觉。</li>
+<li>HSV颜色模型构成的是一个均匀的颜色空间，采用线性的标尺，彩色之间感觉上的距离与HSV颜色模型坐标上点的欧几里德距离成正比。</li>
 </ul>
-<p>想法:  </p>
-<ul>
-<li>每个样本都被周围的加权平均替代</li>
-<li>权重要同时反映距离中心像素的远近，以及像素值和中心像素值的相似度</li>
-</ul>
-<details class="info">
-<summary>Review of Gaussian Blur</summary>
-<div class="arithmatex">\[
-GB[I]_p=\sum\limits_{q\in S}G_\sigma (||p-q||)I_q
-\]</div>
-<p>当 G 满足高斯分布时：
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211251731410.png" width = 50%/> </div>  </p>
-<p>这里的 <span class="arithmatex">\(\sigma\)</span> 是我们选取窗口的大小。如何设置 <span class="arithmatex">\(\sigma\)</span>? 根据经验，通常的策略是是设置为图像大小的一个比例，如 2%.<br />
-可以起到平滑效果，但会使图像模糊，因为只考虑了距离因素。</p>
-</details>
-<div class="arithmatex">\[
-BF[I]_p=\dfrac{1}{W_p}\sum\limits_{q\in S}G_{\sigma_s} (||p-q||)G_{\sigma_r} (|I_p-I_q|)I_q
-\]</div>
-<ul>
-<li><span class="arithmatex">\(\dfrac{1}{W_p}\)</span> 归一化因子</li>
-<li><span class="arithmatex">\(G_{\sigma_s} (||p-q||)\)</span> 空间(spatial)的权重，和高斯滤波中相同(<span class="arithmatex">\(\sigma_s\)</span> 表示核的空间范围)</li>
-<li><span class="arithmatex">\(G_{\sigma_r} (|I_p-I_q|)\)</span> 灰度(range)的权重(注意这里只是一范式而非二范式，因为灰度只是标量)(<span class="arithmatex">\(\sigma_r\)</span> 表示灰度的范围)</li>
-</ul>
-<details>
-<summary> 范围变化对图像的影响 </summary>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211251743785.png" width = 90%/> </div> 
-</details>
+<h4 id="cie-xyz">CIE XYZ<a class="headerlink" href="#cie-xyz" title="Permanent link">&para;</a></h4>
+<p>XYZ 三刺激值的概念是以色视觉的三元理论为根据的，它说明人眼具有接受三原色(红、绿、蓝)的接受器，而所有的颜色均被视作该三原色的混合色。<br />
+1931年CIE制定了一种假想的标准观察者，设置配色函数 <span class="arithmatex">\(\overline x(\lambda)\)</span> <span class="arithmatex">\(\overline y(\lambda)\)</span> <span class="arithmatex">\(\overline z(\lambda)\)</span>
+XYZ三刺激值是利用这些标准观察者配色函数计算得来的。
+在此基础上，CIE于1931年规定了Yxy颜色空间，其中Y为亮度，x,y是从三刺激值XYZ计算得来的色坐标。它代表人类可见的颜色范围。</p>
+<h4 id="cie-lab">CIE L*a*b<a class="headerlink" href="#cie-lab" title="Permanent link">&para;</a></h4>
+<p>L<em>a</em>b<em>颜色空间是在1976年制定的，它是CIE XYZ颜色模型的改进型，以便克服原来的Yxy颜色空间存在的在x，y色度图上相等的距离并不相当于我们所觉察到的相等色差的问题。<br />
+它的“L”（明亮度），“a”（绿色到红色）和“b”(蓝色到黄色)代表许多的值。与XYZ比较，CIE L</em>a<em>b</em>颜色更适合于人眼的感觉。<br />
+利用CIE L<em>a</em>b*，颜色的亮度（L）、灰阶和饱和度（a,b）可以单独修正，这样，图像的整个颜色都可以在不改变图像或其亮度的情况下，发生改变。</p>
+<h4 id="cie-yuv">CIE YUV<a class="headerlink" href="#cie-yuv" title="Permanent link">&para;</a></h4>
+<p>在现代彩色电视系统中，通常采用三管彩色摄像机或彩色CCD（电荷耦合器件）摄像机，它把摄得的彩色图像信号，经分色，分别放大校正得到RGB，再经过矩阵变换电路得到亮度信号Y和两个色差信号R－Y、B－Y，最后发送端将亮度和色差三个信号分别进行编码，用同一信道发送出去。这就是我们常用的YUV颜色空间。</p>
+<p>采用YUV颜色空间的重要性是它的亮度信号Y和色度信号U、V是分离的。如果只有Y信号分量而没有U、V分量，那么这样表示的图就是黑白灰度图。彩色电视采用YUV空间正是为了用亮度信号Y解决彩色电视机与黑白电视机的兼容问题，使黑白电视机也能接收彩色信号。</p>
+<p>根据美国国家电视制式委员会，NTSC制式的标准，当白光的亮度用Y来表示时，它和红、绿、蓝三色光的关系可用如下式的方程描述：</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212200942506.png" width = 35%/></div>
 
-<p>如何设置参数: intensity proportional to edge amplitude(对每一个小窗口都需要重新计算 <span class="arithmatex">\(\sigma_r\)</span>)  </p>
-<p>可以反复在一张图像上做双边滤波，<span class="arithmatex">\(I_{(n+1)}=BF[I_{(n)}]\)</span></p>
-<p>若在彩色图上做双边滤波，只需要将式子改为  </p>
-<div class="arithmatex">\[
-BF[I]_p=\dfrac{1}{W_p}\sum\limits_{q\in S}G_{\sigma_s} (||p-q||)G_{\sigma_r} (|||C_p-C_q|||)I_q
-\]</div>
-<p>其中 <span class="arithmatex">\(|||C_p-C_q|||\)</span> 是三维向量(RGB/Lab) 的欧氏距离</p>
-<h4 id="denoising">Denoising<a class="headerlink" href="#denoising" title="Permanent link">&para;</a></h4>
+<h2 id="image-processing-data-structure">Image Processing Data Structure<a class="headerlink" href="#image-processing-data-structure" title="Permanent link">&para;</a></h2>
 <ul>
-<li>较小的空间 <span class="arithmatex">\(\sigma_s\)</span></li>
-<li>根据噪声水平调整 <span class="arithmatex">\(\sigma_r\)</span> </li>
-<li>可能不是最好的去噪方法，但能做好简洁性和效果的 tradeoff</li>
+<li>矩阵</li>
+<li>链式 <br />
+一个图像是由一个列表表示，其中每一行又是一个子列表。子列表的第一个元素表示目前是第几行，随后的数字成对出现。每对表示一段连续的序列的开头和结尾位置。  </li>
 </ul>
-<h4 id="tone-mapping">Tone mapping<a class="headerlink" href="#tone-mapping" title="Permanent link">&para;</a></h4>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211270913597.png" width = 55%/> </div>
-
-<p>将真实世界的</p>
-<ul>
-<li>输入: HDR Image(high-dynamic-range) 32 位图像，多出来的 8 位称为阿尔法通道，即透明度。每个像素是浮点数，这样可以增加范围。</li>
-</ul>
-<p>从 1:10000 压到 1:100？</p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211270918311.png" width = 55%/> </div>
-
-<p>减少低频，但可能会出现梯度逆转(halo)</p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211270919835.png" width = 55%/> </div>
-
-<div class="admonition question">
-<p class="admonition-title">Brute-force problem</p>
-<p>暴力实现双边滤波的时间可能会非常慢，因为他是非线性的，而且每个核都不一样，不能提前算出</p>
-</div>
+<div align=center> <img src="https://s2.loli.net/2022/10/11/eChauPRKWt8oOEk.png" width = 30%/></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:06:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月25日 15:12:26</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:06:05</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月25日 15:12:26</span>
       
     
   </small>
 </div>
 
               
-
-<link rel="stylesheet" href="/css/counter.css">
 
 <!-- Giscus -->
 <h2 id="__comments">评论</h2>
@@ -2110,7 +2107,7 @@ BF[I]_p=\dfrac{1}{W_p}\sum\limits_{q\in S}G_{\sigma_s} (||p-q||)G_{\sigma_r} (||
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../dip5/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 几何变换" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 图像信息处理" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2119,20 +2116,20 @@ BF[I]_p=\dfrac{1}{W_p}\sum\limits_{q\in S}G_{\sigma_s} (||p-q||)G_{\sigma_r} (||
               <span class="md-footer__direction">
                 上一页
               </span>
-              几何变换
+              图像信息处理
             </div>
           </div>
         </a>
       
       
         
-        <a href="../dip7/" class="md-footer__link md-footer__link--next" aria-label="下一页: 双边滤波的加速" rel="next">
+        <a href="../dip2/" class="md-footer__link md-footer__link--next" aria-label="下一页: 二值图像和形态学" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              双边滤波的加速
+              二值图像和形态学
             </div>
           </div>
           <div class="md-footer__button md-icon">
