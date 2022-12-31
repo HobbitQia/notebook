@@ -976,6 +976,8 @@
         
           
         
+          
+        
       
       
         
@@ -1082,6 +1084,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/hash/" class="md-nav__link">
+        散列
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1107,6 +1123,14 @@
         
           
             
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -1167,6 +1191,20 @@
     <li class="md-nav__item">
       <a href="../dip2/" class="md-nav__link">
         二值图像和形态学
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dip3/" class="md-nav__link">
+        图像灰度变换与直方图
       </a>
     </li>
   
@@ -1414,6 +1452,48 @@
     <li class="md-nav__item">
       <a href="../dip9/" class="md-nav__link">
         稀疏范数滤波
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dip10/" class="md-nav__link">
+        傅里叶变换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dip11/" class="md-nav__link">
+        图像特征检测和提取
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dip12/" class="md-nav__link">
+        深度学习
       </a>
     </li>
   
@@ -1951,7 +2031,7 @@ Morph 变形指景物的形体变化，它是使一幅图像逐步变化到另�
 <h3 id="lambertian-model">Lambertian model<a class="headerlink" href="#lambertian-model" title="Permanent link">&para;</a></h3>
 <p>假设空间中 m 点光源，曲面亮度如下：
 <span class="arithmatex">\(I=\rho\sum\limits_{1\leq i\leq m} S_iI_in_i\cdot l_i\equiv \rho E(n)\)</span> where <span class="arithmatex">\(S_i=\left\{\begin{matrix} 0, cannot\ be\ seen \\ 1, otherwise\end{matrix}\right.\)</span>  </p>
-<p>其中 <span class="arithmatex">\(l_i\)</span> 第 i 个光源照过来的角度，<span class="arithmatex">\(n\)</span> 表示当前这个曲面的法向量，所以 <span class="arithmatex">\(n\cdot l_i\)</span> 相当于余弦关系; <span class="arithmatex">\(I_i\)</span> 表示第 i 个光源的亮度；<span class="arithmatex">\(S_i\)</span> 表示曲面能不能被第 i 个点光源照到; $\rho $ 表示曲面的材质  </p>
+<p>其中 <span class="arithmatex">\(l_i\)</span> 第 i 个光源照过来的角度，<span class="arithmatex">\(n\)</span> 表示当前这个曲面的法向量，所以 <span class="arithmatex">\(n\cdot l_i\)</span> 相当于余弦关系; <span class="arithmatex">\(I_i\)</span> 表示第 i 个光源的亮度；<span class="arithmatex">\(S_i\)</span> 表示曲面能不能被第 i 个点光源照到; <span class="arithmatex">\(\rho\)</span> 表示曲面的材质  </p>
 <p><strong>Expression ratio image</strong>: <span class="arithmatex">\(\dfrac{I'}{I}=\dfrac{E(n')}{E(n)}\)</span> (<span class="arithmatex">\(\rho\)</span> 一样，因为对同一个对象变换前后的材质是一样的) 简称 ERI</p>
 <p>ERI 是因为曲面变形所导致的亮度的变化；不依赖于材质的。</p>
 <p>假设在对应的点都有相同的法向量，材质不同，相同的形变</p>
@@ -1994,7 +2074,7 @@ Morph 变形指景物的形体变化，它是使一幅图像逐步变化到另�
 <tr>
 <td align="left">Person B</td>
 <td><span class="arithmatex">\(I_b=\rho_bE(n)\)</span></td>
-<td>$I_b^{'}=? $</td>
+<td><span class="arithmatex">\(I_b^{'}=?\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -2099,7 +2179,7 @@ Morph 变形指景物的形体变化，它是使一幅图像逐步变化到另�
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../dip2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 二值图像和形态学" rel="prev">
+        <a href="../dip3/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 图像灰度变换与直方图" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2108,7 +2188,7 @@ Morph 变形指景物的形体变化，它是使一幅图像逐步变化到另�
               <span class="md-footer__direction">
                 上一页
               </span>
-              二值图像和形态学
+              图像灰度变换与直方图
             </div>
           </div>
         </a>

@@ -1,8 +1,11 @@
+---
+counter: True  
+---
 
 # Memory Basis
 
 !!! Abstract 
-    * Memory definitions
+    * Memory definitions  
     * Random Access Memory (RAM)
     * Static RAM (SRAM) integrated circuits
     * Dynamic RAM (DRAM) integrated circuits

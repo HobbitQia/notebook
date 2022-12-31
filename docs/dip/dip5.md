@@ -246,7 +246,7 @@ Morph 变形指景物的形体变化，它是使一幅图像逐步变化到另�
 假设空间中 m 点光源，曲面亮度如下：
 $I=\rho\sum\limits_{1\leq i\leq m} S_iI_in_i\cdot l_i\equiv \rho E(n)$ where $S_i=\left\{\begin{matrix} 0, cannot\ be\ seen \\ 1, otherwise\end{matrix}\right.$  
 
-其中 $l_i$ 第 i 个光源照过来的角度，$n$ 表示当前这个曲面的法向量，所以 $n\cdot l_i$ 相当于余弦关系; $I_i$ 表示第 i 个光源的亮度；$S_i$ 表示曲面能不能被第 i 个点光源照到; $\rho $ 表示曲面的材质  
+其中 $l_i$ 第 i 个光源照过来的角度，$n$ 表示当前这个曲面的法向量，所以 $n\cdot l_i$ 相当于余弦关系; $I_i$ 表示第 i 个光源的亮度；$S_i$ 表示曲面能不能被第 i 个点光源照到; $\rho$ 表示曲面的材质  
 
 **Expression ratio image**: $\dfrac{I'}{I}=\dfrac{E(n')}{E(n)}$ ($\rho$ 一样，因为对同一个对象变换前后的材质是一样的) 简称 ERI
 
@@ -264,7 +264,7 @@ ERI 是因为曲面变形所导致的亮度的变化；不依赖于材质的。
 | |Neutral| Expression|
 |:-|-|-|
 |Person A|$I_a=\rho_aE(n)$|$I_a^{'}=\rho_aE(n')$|
-|Person B|$I_b=\rho_bE(n)$|$I_b^{'}=? $| 
+|Person B|$I_b=\rho_bE(n)$|$I_b^{'}=?$| 
 
 由刚刚的推导可得 $I_b^{'}=\dfrac{I_a^{'}}{I_a}I_b$  
 

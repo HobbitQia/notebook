@@ -164,13 +164,13 @@ Other shifts are possible (rotates, arithmetic).
 
 Multiplexers connected to register inputs produce flexible transfer structures (Note: Clocks are omitted for clarity)
     
-    !!! Example
-        $K1:R0\leftarrow R1\quad K2\overline{K1}:R0\leftarrow R2$   
-        我们可以将其化简: $K1+K2\overline{K1}=K1+K2$ 就是 $R0$ 寄存器会被更新时的控制逻辑. 并用 $K1$ 作为 Mux 的选择信号。  
-        <div align=center> <img src="http://cdn.hobbitqia.cc/202211301635371.png" width = 35%/> </div>   
+!!! Example
+    $K1:R0\leftarrow R1\quad K2\overline{K1}:R0\leftarrow R2$   
+    我们可以将其化简: $K1+K2\overline{K1}=K1+K2$ 就是 $R0$ 寄存器会被更新时的控制逻辑. 并用 $K1$ 作为 Mux 的选择信号。  
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202211301635371.png" width = 35%/> </div>   
 
-        完整电路（假设寄存器均为 4 位）
-        <div align=center> <img src="http://cdn.hobbitqia.cc/202211301637817.png" width = 55%/> </div>
+    完整电路（假设寄存器均为 4 位）
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202211301637817.png" width = 55%/> </div>
 
 #### **Multiplexer and Bus-Based Transfers for Multiple Registers**  
 
@@ -347,7 +347,5 @@ Serial addition is a low cost way to add large numbers of operands, since a “t
 
 Other operations can be performed serially as well, such as parity generation/checking or more complex error-check codes.
 
-**Serial Adder**  
+**Serial Adder**   
 <div align=center> <img src="http://cdn.hobbitqia.cc/202212151430367.png" width = 30%/> </div>  
-
- c="http://cdn.hobbitqia.cc/202211301637817.png" width = 55%/> </div>

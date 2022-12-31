@@ -1276,6 +1276,8 @@
         
           
         
+          
+        
       
       
         
@@ -1382,6 +1384,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/hash/" class="md-nav__link">
+        散列
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1405,6 +1421,14 @@
         
           
             
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -1477,6 +1501,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../dip/dip3/" class="md-nav__link">
+        图像灰度变换与直方图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../dip/dip5/" class="md-nav__link">
         几何变换
       </a>
@@ -1535,6 +1573,48 @@
     <li class="md-nav__item">
       <a href="../../dip/dip9/" class="md-nav__link">
         稀疏范数滤波
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip10/" class="md-nav__link">
+        傅里叶变换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip11/" class="md-nav__link">
+        图像特征检测和提取
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip12/" class="md-nav__link">
+        深度学习
       </a>
     </li>
   
@@ -2231,9 +2311,11 @@ Maxterms 的求法不是很自然, 一般先求反函数的 Minterms 再将他�
 <p>Standard Forms 用来做<strong>电路实现</strong>, 一般会进行 SOM POM 化简, 但会省略一些东西. 依然按照 Standard Order, 但每一项中不一定需要所有变量.<br />
 SOP POS 也被称为<strong>两极函数</strong>.<br />
 如 <strong>SOP</strong>: <span class="arithmatex">\(ABD+\overline A \overline B C +B\)</span>, <strong>POS</strong>: <span class="arithmatex">\((A+B)\cdot  (A+\overline B+\overline C)\cdot  C\)</span> 他们路径上最多只需要经过两个电路门, 这称为二级电路.<br />
-反观 <span class="arithmatex">\((AB+C)(A+C), AB\overline C+AC(A+B)\)</span> 最多就需要经过三个电路门.<br />
-* 为什么需要降低电路门的级数? <br />
-电路门有延迟, 经过的电路门越多延迟越大, 意味着最后电路做出来的计算机不易提高功率.  </p>
+反观 <span class="arithmatex">\((AB+C)(A+C), AB\overline C+AC(A+B)\)</span> 最多就需要经过三个电路门.</p>
+<ul>
+<li>为什么需要降低电路门的级数? <br />
+电路门有延迟, 经过的电路门越多延迟越大, 意味着最后电路做出来的计算机不易提高功率.  </li>
+</ul>
 </div>
 <div class="admonition example">
 <p class="admonition-title"><span class="arithmatex">\(F = \overline A\overline  B C + A \overline B\overline  C + A\overline  B C + AB\overline C + ABC\)</span></p>
@@ -2449,7 +2531,8 @@ Hint: There are <em>seven</em> prime implicants!  </p>
 理想情况一个门的输入可以接无数个门的输入，但实际上因为每一个门的输入端都会花费一些电流，而门输出的电流是有限的，从集成电路本身会要求一个门的输出最多能拉多少门的输入。</li>
 <li>
 <p><strong>Fan-out 扇出系数</strong> – the number of standard loads driven by a gate output<br />
-    一个门的输出带了很多门的输入？（像火车头带了很多车厢）  </p>
+    一个门的输出带了很多门的输入？（像火车头带了很多车厢）<br />
+    一个门的输出不能接到太多门的输入上去，一般会用 buffer 做缓冲  </p>
 <ul>
 <li><strong><em>e.g.</em></strong> 1 standard load equals the load contributed by the input of 1 inverter.  </li>
 <li><strong>Transition time</strong> - the time required for the gate output to change from H to L, <span class="arithmatex">\(t_{HL}\)</span>, or from L to H, <span class="arithmatex">\(t_{LH}\)</span><br />

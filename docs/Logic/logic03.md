@@ -512,7 +512,8 @@ $C_n$ 是溢出去的位，$C_{n-1}$ 是运算后的符号位。 截断
 
 ### Arithmetic Logic Unit (ALU)
 
-Decompose the arithmetic circuit into:
+Decompose the arithmetic circuit into:  
+
 * An n-bit parallel adder
 * A block of logic that selects four choices for the B input to the adder 
 

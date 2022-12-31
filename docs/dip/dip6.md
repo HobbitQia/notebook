@@ -2,7 +2,7 @@
 counter: True  
 ---
 
-# Basic Image Operation (IV)
+# Convolution and Filtering
 
 !!! Abstract   
     * Continuous 1D convolution  

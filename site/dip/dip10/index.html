@@ -10,21 +10,21 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/ICS/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/dip/dip10/">
       
-      <link rel="icon" href="../log.ico">
+      <link rel="icon" href="../../log.ico">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>计算机系统概论 - HobbitQia的笔记本</title>
+        <title>傅里叶变换 - HobbitQia的笔记本</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -46,13 +46,13 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="../css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
-      <link rel="stylesheet" href="../css/card.css">
+      <link rel="stylesheet" href="../../css/card.css">
     
-      <link rel="stylesheet" href="../css/tasklist.css">
+      <link rel="stylesheet" href="../../css/tasklist.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#fourier-transform" class="md-skip">
           跳转至
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href="../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../log.ico" alt="logo">
+  <img src="../../log.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              计算机系统概论
+              傅里叶变换
             
           </span>
         </div>
@@ -212,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     </li>
@@ -235,7 +235,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../ICS/" class="md-tabs__link md-tabs__link--active">
         Computer Science
       </a>
     </li>
@@ -258,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
+      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
         Mathematics
       </a>
     </li>
@@ -276,7 +276,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../link/" class="md-tabs__link">
+      <a href="../../link/" class="md-tabs__link">
         友链
       </a>
     </li>
@@ -304,9 +304,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href="../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../log.ico" alt="logo">
+  <img src="../../log.ico" alt="logo">
 
     </a>
     HobbitQia的笔记本
@@ -351,7 +351,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="..">Home</a>
+          <a href="../..">Home</a>
           
         </div>
       
@@ -418,14 +418,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
       
       
@@ -456,8 +454,8 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="./">计算机系统概论</a>
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ICS/">计算机系统概论</a>
           
             <label for="__nav_2_1">
               <span class="md-nav__icon md-icon"></span>
@@ -480,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-1/" class="md-nav__link">
+      <a href="../../ICS/ICS-1/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -494,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-2/" class="md-nav__link">
+      <a href="../../ICS/ICS-2/" class="md-nav__link">
         Bits, Data Types and Operations
       </a>
     </li>
@@ -508,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-3/" class="md-nav__link">
+      <a href="../../ICS/ICS-3/" class="md-nav__link">
         Digital Logic Structures
       </a>
     </li>
@@ -522,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-4/" class="md-nav__link">
+      <a href="../../ICS/ICS-4/" class="md-nav__link">
         The von Neumann Model
       </a>
     </li>
@@ -536,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-5/" class="md-nav__link">
+      <a href="../../ICS/ICS-5/" class="md-nav__link">
         LC-3
       </a>
     </li>
@@ -550,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-6/" class="md-nav__link">
+      <a href="../../ICS/ICS-6/" class="md-nav__link">
         Programming
       </a>
     </li>
@@ -564,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-7/" class="md-nav__link">
+      <a href="../../ICS/ICS-7/" class="md-nav__link">
         Assembly Language
       </a>
     </li>
@@ -578,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-8/" class="md-nav__link">
+      <a href="../../ICS/ICS-8/" class="md-nav__link">
         Data Structures
       </a>
     </li>
@@ -592,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-9/" class="md-nav__link">
+      <a href="../../ICS/ICS-9/" class="md-nav__link">
         I/0
       </a>
     </li>
@@ -651,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/5/" class="md-nav__link">
+      <a href="../../CSAPP/5/" class="md-nav__link">
         优化程序性能
       </a>
     </li>
@@ -665,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/6/" class="md-nav__link">
+      <a href="../../CSAPP/6/" class="md-nav__link">
         存储器层次结构
       </a>
     </li>
@@ -679,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/7/" class="md-nav__link">
+      <a href="../../CSAPP/7/" class="md-nav__link">
         链接
       </a>
     </li>
@@ -693,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/8/" class="md-nav__link">
+      <a href="../../CSAPP/8/" class="md-nav__link">
         异常控制流
       </a>
     </li>
@@ -707,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/9/" class="md-nav__link">
+      <a href="../../CSAPP/9/" class="md-nav__link">
         虚拟内存
       </a>
     </li>
@@ -760,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NA/NA01/" class="md-nav__link">
+      <a href="../../NA/NA01/" class="md-nav__link">
         Mathematical Preliminaries
       </a>
     </li>
@@ -774,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NA/NA02/" class="md-nav__link">
+      <a href="../../NA/NA02/" class="md-nav__link">
         Solutions of Equations in One Variable
       </a>
     </li>
@@ -826,7 +824,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../Logic/">计算机逻辑设计基础</a>
+          <a href="../../Logic/">计算机逻辑设计基础</a>
           
             <label for="__nav_2_4">
               <span class="md-nav__icon md-icon"></span>
@@ -849,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic01/" class="md-nav__link">
+      <a href="../../Logic/logic01/" class="md-nav__link">
         数字系统和信息
       </a>
     </li>
@@ -863,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic02/" class="md-nav__link">
+      <a href="../../Logic/logic02/" class="md-nav__link">
         组合逻辑电路
       </a>
     </li>
@@ -877,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic03/" class="md-nav__link">
+      <a href="../../Logic/logic03/" class="md-nav__link">
         组合逻辑电路设计
       </a>
     </li>
@@ -891,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic04/" class="md-nav__link">
+      <a href="../../Logic/logic04/" class="md-nav__link">
         时序逻辑电路
       </a>
     </li>
@@ -905,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic06/" class="md-nav__link">
+      <a href="../../Logic/logic06/" class="md-nav__link">
         寄存器与寄存器传输
       </a>
     </li>
@@ -919,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic05/" class="md-nav__link">
+      <a href="../../Logic/logic05/" class="md-nav__link">
         数字硬件设计
       </a>
     </li>
@@ -933,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic07/" class="md-nav__link">
+      <a href="../../Logic/logic07/" class="md-nav__link">
         内存基础
       </a>
     </li>
@@ -985,7 +983,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../ds/">数据结构与算法</a>
+          <a href="../../ds/">数据结构与算法</a>
           
             <label for="__nav_2_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1008,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/algorithm/" class="md-nav__link">
+      <a href="../../ds/algorithm/" class="md-nav__link">
         算法分析
       </a>
     </li>
@@ -1022,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/tree/" class="md-nav__link">
+      <a href="../../ds/tree/" class="md-nav__link">
         树
       </a>
     </li>
@@ -1036,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/heap/" class="md-nav__link">
+      <a href="../../ds/heap/" class="md-nav__link">
         堆
       </a>
     </li>
@@ -1050,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/set/" class="md-nav__link">
+      <a href="../../ds/set/" class="md-nav__link">
         并查集
       </a>
     </li>
@@ -1064,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/graph/" class="md-nav__link">
+      <a href="../../ds/graph/" class="md-nav__link">
         图论
       </a>
     </li>
@@ -1078,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/sort/" class="md-nav__link">
+      <a href="../../ds/sort/" class="md-nav__link">
         排序
       </a>
     </li>
@@ -1092,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/hash/" class="md-nav__link">
+      <a href="../../ds/hash/" class="md-nav__link">
         散列
       </a>
     </li>
@@ -1111,12 +1109,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
       
       
       
@@ -1152,7 +1152,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../dip/">图像信息处理</a>
+          <a href="../">图像信息处理</a>
           
             <label for="__nav_2_6">
               <span class="md-nav__icon md-icon"></span>
@@ -1175,7 +1175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip1/" class="md-nav__link">
+      <a href="../dip1/" class="md-nav__link">
         图像信息处理介绍
       </a>
     </li>
@@ -1189,7 +1189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip2/" class="md-nav__link">
+      <a href="../dip2/" class="md-nav__link">
         二值图像和形态学
       </a>
     </li>
@@ -1203,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip3/" class="md-nav__link">
+      <a href="../dip3/" class="md-nav__link">
         图像灰度变换与直方图
       </a>
     </li>
@@ -1217,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip5/" class="md-nav__link">
+      <a href="../dip5/" class="md-nav__link">
         几何变换
       </a>
     </li>
@@ -1231,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip6/" class="md-nav__link">
+      <a href="../dip6/" class="md-nav__link">
         卷积与滤波
       </a>
     </li>
@@ -1245,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip7/" class="md-nav__link">
+      <a href="../dip7/" class="md-nav__link">
         双边滤波的加速
       </a>
     </li>
@@ -1259,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip8/" class="md-nav__link">
+      <a href="../dip8/" class="md-nav__link">
         引导滤波
       </a>
     </li>
@@ -1273,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip9/" class="md-nav__link">
+      <a href="../dip9/" class="md-nav__link">
         稀疏范数滤波
       </a>
     </li>
@@ -1285,11 +1285,120 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../dip/dip10/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          傅里叶变换
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         傅里叶变换
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fourier-transform_1" class="md-nav__link">
+    Fourier Transform
+  </a>
+  
+    <nav class="md-nav" aria-label="Fourier Transform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expansion-of-a-function" class="md-nav__link">
+    Expansion of a Function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fourier-series" class="md-nav__link">
+    Fourier Series
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-numbers" class="md-nav__link">
+    Complex Numbers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fourier-transform_2" class="md-nav__link">
+    Fourier Transform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-transform" class="md-nav__link">
+    Image Transform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discrete-fourier-transform-dft" class="md-nav__link">
+    Discrete Fourier Transform (DFT)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-fourier-transformfft" class="md-nav__link">
+    Fast Fourier Transform(FFT)
+  </a>
+  
+    <nav class="md-nav" aria-label="Fast Fourier Transform(FFT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principle" class="md-nav__link">
+    Principle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1301,7 +1410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip11/" class="md-nav__link">
+      <a href="../dip11/" class="md-nav__link">
         图像特征检测和提取
       </a>
     </li>
@@ -1315,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip12/" class="md-nav__link">
+      <a href="../dip12/" class="md-nav__link">
         深度学习
       </a>
     </li>
@@ -1404,7 +1513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
+      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
         线性代数Ⅱ(H)
       </a>
     </li>
@@ -1463,7 +1572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../link/" class="md-nav__link">
+      <a href="../../link/" class="md-nav__link">
         Link
       </a>
     </li>
@@ -1497,6 +1606,89 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fourier-transform_1" class="md-nav__link">
+    Fourier Transform
+  </a>
+  
+    <nav class="md-nav" aria-label="Fourier Transform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expansion-of-a-function" class="md-nav__link">
+    Expansion of a Function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fourier-series" class="md-nav__link">
+    Fourier Series
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-numbers" class="md-nav__link">
+    Complex Numbers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fourier-transform_2" class="md-nav__link">
+    Fourier Transform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-transform" class="md-nav__link">
+    Image Transform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discrete-fourier-transform-dft" class="md-nav__link">
+    Discrete Fourier Transform (DFT)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-fourier-transformfft" class="md-nav__link">
+    Fast Fourier Transform(FFT)
+  </a>
+  
+    <nav class="md-nav" aria-label="Fast Fourier Transform(FFT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principle" class="md-nav__link">
+    Principle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1508,56 +1700,169 @@
               
 
                 
-  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/ICS/index.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/dip/dip10.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="_1">计算机系统概论<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="fourier-transform">Fourier Transform<a class="headerlink" href="#fourier-transform" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>这里是浙江大学 <strong><em>计算机系统概论</em></strong> 课程笔记及相关知识<br />
-老师: Yale Patt and Jiang Xiaohong<br />
-参考:</p>
 <ul>
-<li><strong><em>Introduction to Computing Systems: From Bits and Gates to C and Beyond 3<sup>rd</sup></em></strong>(教材)  </li>
-<li>Patt上课时记的笔记和助教TSjj复习课笔记。</li>
+<li>Fourier and his work</li>
+<li>Background of Fourier Transform</li>
+<li>Fourier Transform</li>
+<li>Discrete Fourier Transform (1D)</li>
+<li>FFT</li>
+<li>Discrete Fourier Transform (2D)</li>
+<li>FFT for Image in Matlab</li>
 </ul>
 </div>
-<p>内容:</p>
+<h2 id="fourier-transform_1">Fourier Transform<a class="headerlink" href="#fourier-transform_1" title="Permanent link">&para;</a></h2>
+<h3 id="expansion-of-a-function">Expansion of a Function<a class="headerlink" href="#expansion-of-a-function" title="Permanent link">&para;</a></h3>
+<p>英国数学家泰勒在17世纪找到了用幂函数的无限线性组合表示一般的解析函数的方法。</p>
+<div class="arithmatex">\[
+f(x)=f(a)+f'(a)(x-a)+\dfrac{f''(a)}{2!}(x-a)^2+\dfrac{f'''(a)}{3!}(x-a)^3+\ldots+\dfrac{f^{(n)}(a)}{n!}(x-a)^n+\ldots
+\]</div>
+<h3 id="fourier-series">Fourier Series<a class="headerlink" href="#fourier-series" title="Permanent link">&para;</a></h3>
+<p>18世纪中叶，法国数学家傅里叶在研究热传导问题时，找到了三角函数的无限线性组合表示有限区间上的一般函数的方法，即把函数展开成三角级数。</p>
+<div class="arithmatex">\[
+\begin{align*}
+f(x) &amp; =\dfrac{1}{2}a_0+\sum\limits_{n=1}^{\infty}a_n\cos(nx)+\sum\limits_{n=1}^{\infty}b_n\sin(nx)\\
+a_0 &amp; = \dfrac{1}{\pi}\int_{-\pi}^{\pi}f(x)dx\\
+a_n &amp; =\dfrac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos(nx)dx\\
+b_n &amp; =\dfrac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(nx)dx
+\end{align*}
+\]</div>
+<p>简单的周期现象，简谐振动: <span class="arithmatex">\(y=A\sin(\omega t+\phi)\)</span><br />
+一个周期运动，物理学上可以分成若干个简谐振动的叠加: <span class="arithmatex">\(y=\sum\limits_{k=1}^n y_k=\sum\limits_{k=1}^n A_k\sin(k\omega t+\phi)\)</span></p>
+<details>
+<summary><b>Example</b></summary>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212022055702.png" width = 65%/></div> 
+</details>
+
+<h3 id="complex-numbers">Complex Numbers<a class="headerlink" href="#complex-numbers" title="Permanent link">&para;</a></h3>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212022210398.png" width = 35%/></div>
+
+<p>复数可以采用 <strong>Magnitude-Phase</strong>(vector) 表示，即 <span class="arithmatex">\(x=|x|e^{j\phi(x)}\)</span>, 其中 Magnitude <span class="arithmatex">\(|x|=\sqrt{a^2+b^2}\)</span>, Phase <span class="arithmatex">\(\phi(x)=\tan^{-1}(b/a)\)</span>  </p>
+<p>在这种表示下，复数乘法可以写作 <span class="arithmatex">\(xy=|x|e^{j\phi(x)}\cdot |y|e^{j\phi(y)}=|x||y|e^{j\phi(x)+\phi(y)}\)</span>  </p>
+<p>共轭复数 <span class="arithmatex">\(x^* = a-jb\)</span>, 它满足 <span class="arithmatex">\(|x|=|x^*|,\phi(x)=-\phi(x),xx^*=|x|^2\)</span>  </p>
+<p><strong>Euler Formula</strong>: <span class="arithmatex">\(e^{j\theta}=\cos(\theta)+j\sin(\theta)\)</span><br />
+它满足 <span class="arithmatex">\(|e^{j\theta}|=1, phi(e^{j\theta})=\theta,sin(\theta)=\dfrac{1}{2l}(e^{j\theta}-e^{-j\theta}),cos(\theta)=\dfrac{1}{2}(e^{j\theta}+e^{-j\theta})\)</span>  </p>
+<h3 id="fourier-transform_2">Fourier Transform<a class="headerlink" href="#fourier-transform_2" title="Permanent link">&para;</a></h3>
+<p>傅里叶变换是复傅里叶系数在给定区间上的一个推广。 <br />
+傅里叶分析指频率区域分析，其中 <span class="arithmatex">\(n\)</span> 较小时为低频， <span class="arithmatex">\(n\)</span> 较大时为高频。<br />
+注意到正弦波和余弦波都是无限长的，这是傅里叶分析的一个不足，因此微波(wavelet)分析比特定信号的分析更好。  </p>
+<details>
+<summary><b>Example</b></summary>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212022154802.png" width = 55%/></div> 
+</details>
+
+<p>对于非周期函数,如果函数 <span class="arithmatex">\(f(x)\)</span>只在区间 <span class="arithmatex">\([−\pi,\pi]\)</span> 上,也可展开成傅氏级数.<br />
+周期延拓  </p>
+<div class="arithmatex">\[
+\begin{align*}
+F(x)=\left\{\begin{matrix} 
+&amp; f(x) ,x \in(-\pi,\pi] \\  
+&amp; f(x-2k\pi) ,x\in ((2k-1)\pi,(2k+1)\pi], k=\pm 1 ,\pm 2,\ldots \end{matrix}\right.
+\end{align*}
+\]</div>
+<p>1-D 2-D Continuous</p>
+<h3 id="image-transform">Image Transform<a class="headerlink" href="#image-transform" title="Permanent link">&para;</a></h3>
+<p>很多时候，图像处理任务在变换域（频域）而不是空间域中执行得最好。  </p>
+<ul>
+<li>图像变换</li>
+<li>进行操作</li>
+<li>图像逆变换，回到空间域</li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212022223450.png" width = 60%/></div>
+
+<ul>
+<li>T</li>
+<li>InvT</li>
+</ul>
+<p>低频对应图像缓慢变化的信息（如连续的表面）；高频对应快速变化的信息（如边）</p>
+<p>Frequency Filtering Steps</p>
+<ul>
+<li>对 <span class="arithmatex">\(f(x)\)</span> 傅里叶变换 <span class="arithmatex">\(F(f(x))\)</span></li>
+<li>去掉不想要的频率 <span class="arithmatex">\(D(F(f(x)))\)</span></li>
+<li>转换回原来的信号 <span class="arithmatex">\(\hat f(x)=F^{-1}(D(F(f(x))))\)</span></li>
+</ul>
+<h3 id="discrete-fourier-transform-dft">Discrete Fourier Transform (DFT)<a class="headerlink" href="#discrete-fourier-transform-dft" title="Permanent link">&para;</a></h3>
+<p>Forward DFT<br />
+<span class="arithmatex">\(F(u)=\sum\limits_{x=0}^{N-1}f(x)e^{-\frac{j2\pi ux}{N}}, u=0,1,\ldots,N-1\)</span>  N 频率的数目，x 采样点的数目
+Inverse
+<span class="arithmatex">\(f(x)=\dfrac{1}{N}\sum\limits_{u=0}^{N-1}f(u)e^{\frac{j2\pi ux}{N}}, x=0,1,\ldots,N-1\)</span>  </p>
+<details class="example">
+<summary>Magnitude VS Phase</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202212102006776.png" width = 60%/></div>   </p>
+<p>如果我们只用振幅/相位作为信息重建图像，会得到什么样的结果？  </p>
 <ul>
 <li>
-<p><a href="ICS-1">Chapter 1: Introduction</a></p>
+<p>利用振幅<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212102007140.png" width = 25%/></div>   </p>
 </li>
 <li>
-<p><a href="ICS-2">Chapter 2: Bits, Data Types and Operations</a></p>
+<p>利用相位<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212102007841.png" width = 25%/></div>   </p>
 </li>
-<li><a href="ICS-3">Chapter 3: Digital Logic Structures</a></li>
-<li><a href="ICS-4">Chapter 4: The von Neumann Model</a></li>
-<li><a href="ICS-5">Chapter 5: LC-3</a></li>
-<li><a href="ICS-6">Chapter 6: Programming</a></li>
-<li><a href="ICS-7">Chapter 7: Assembly Language</a></li>
-<li><a href="ICS-8">Chapter 8: Data Structures</a></li>
-<li><a href="ICS-9">Chapter 9: I/0</a></li>
 </ul>
+<p>相位更多的传递了图像的结构信息！</p>
+</details>
+<h2 id="fast-fourier-transformfft">Fast Fourier Transform(FFT)<a class="headerlink" href="#fast-fourier-transformfft" title="Permanent link">&para;</a></h2>
+<ul>
+<li>将原始的 N 点序列依次分解为一系列短序列；</li>
+<li>求出这些短序列的离散傅立叶变换；</li>
+<li>组合出所需的变换值；</li>
+<li>计算量（乘除法）：<span class="arithmatex">\(2N^2\rightarrow 2N\lg_2N\)</span></li>
+</ul>
+<h3 id="principle">Principle<a class="headerlink" href="#principle" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(F(k)=\dfrac{1}{N}\sum\limits_{n=0}^{N-1}f(n)e^{\frac{j2\pi kn}{N}}\)</span>  </p>
+<p>Let <span class="arithmatex">\(W_N^{n,k}=e^{-j2\pi nk/N}\)</span> then DFT is <span class="arithmatex">\(F(k)=\dfrac{1}{N}\sum\limits_{n=0}^{N-1}f(n)W_N^{n,k}\)</span>  </p>
+<p>假定 <span class="arithmatex">\(N\)</span> 为 <span class="arithmatex">\(2\)</span> 的正整数幂：<span class="arithmatex">\(N=2^H\Rightarrow N=2M\)</span>, 将原式子分为奇数项和偶数项      </p>
+<div class="arithmatex">\[
+\begin{align*}
+F(k) &amp; = \dfrac{1}{2M} \sum\limits_{n=0}^{2M-1}f(n)W_{2M}^{n,k}\\
+&amp; = \dfrac{1}{2}\left[\dfrac{1}{M}\sum\limits_{n=0}^{M-1}f(2n)W_{2M}^{2n,k}+\dfrac{1}{M}\sum\limits_{n=0}^{M-1}f(2n+1)W_{2M}^{2n+1,k}\right]\\
+W_{2M}^{2n,k} &amp; = e^{-j2\pi \cdot 2nk/2M} = e^{-j2\pi nk/M} = W_M^{n,k}\\
+W_{2M}^{2n+1,k} &amp; = e^{-j2\pi \cdot (2n+1)k/2M} = e^{-j2\pi nk/M} \cdot e^{-j2\pi k/2M}= W_M^{n,k}\cdot  W_{2M}^k\\
+F(k) &amp; = \left[\sum\limits_{n=0}^{M-1}f(2n)W_M^{n,k}+\sum\limits_{n=0}^{M-1}f(2n+1)W_M^{n,k}W_{2M}^k\right], k=0,1,\ldots,M-1
+\end{align*}
+\]</div>
+<p>令 <span class="arithmatex">\(\left\{ \begin{matrix} F_e(k) &amp; = \sum\limits_{n=0}^{M-1}f(2n)W_M^{n,k} \\ F_o(k) &amp; = \sum\limits_{n=0}^{M-1}f(2n+1)W_M^{n,k} \end{matrix}\right.\)</span> 那么 <span class="arithmatex">\(F(k)=\lfloor F_e(k)+F_o(k)W_{2M}^k \rfloor\)</span>  </p>
+<p>如果 <span class="arithmatex">\(e, o\)</span> 是 <span class="arithmatex">\(2\)</span> 的幂次，还可以继续拆   </p>
+<p>对于 <span class="arithmatex">\(k=M,M+1\ldots,2M-1\)</span>  </p>
+<div class="arithmatex">\[
+\begin{align*}
+W_M^{n,k+M} &amp; = e^{-j2\pi (k+M)/M}\\
+    &amp; = e^{-j2\pi n k/M} \cdot e^{-j2n\pi}\\
+    &amp; = e^{-j2\pi n k /M}\\
+    &amp; = W_M^{n,k}\\
+W_{2M}^{k+M} &amp; = e^{-j2\pi k/2M\cdot e^{-j\pi}=-W_{2M}^k}
+\end{align*}
+\]</div>
+<p>因此 $F(k+M)=\lfloor F_e(k)-F_o(k)W_{2M}^k\rfloor  $    </p>
+<p>意义：对一个长度为 N 的序列进行傅立叶变换可以通过将其分成两半计算，对第一部分的计算需要通过计算两个长度为 N/2 长度序列的傅立叶变换式进行，然后利用这两个长度为 N/2 的序列可以得到第二部分的值。</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年9月5日 23:38:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月31日 10:05:25</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年9月5日 23:38:05</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月31日 10:05:25</span>
       
     
   </small>
 </div>
 
               
+
+<link rel="stylesheet" href="/css/counter.css">
 
 <!-- Giscus -->
 <h2 id="__comments">评论</h2>
@@ -1627,7 +1932,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="上一页: Welcome to HobbitQia&#39;s Notebook!" rel="prev">
+        <a href="../dip9/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 稀疏范数滤波" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1636,20 +1941,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              Welcome to HobbitQia's Notebook!
+              稀疏范数滤波
             </div>
           </div>
         </a>
       
       
         
-        <a href="ICS-1/" class="md-footer__link md-footer__link--next" aria-label="下一页: Introduction" rel="next">
+        <a href="../dip11/" class="md-footer__link md-footer__link--next" aria-label="下一页: 图像特征检测和提取" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              Introduction
+              图像特征检测和提取
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1696,14 +2001,14 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
       
-        <script src="../js/katex.js"></script>
+        <script src="../../js/katex.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

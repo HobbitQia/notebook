@@ -1189,6 +1189,8 @@
         
           
         
+          
+        
       
       
         
@@ -1295,6 +1297,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/hash/" class="md-nav__link">
+        散列
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1318,6 +1334,14 @@
         
           
             
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -1390,6 +1414,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../dip/dip3/" class="md-nav__link">
+        图像灰度变换与直方图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../dip/dip5/" class="md-nav__link">
         几何变换
       </a>
@@ -1448,6 +1486,48 @@
     <li class="md-nav__item">
       <a href="../../dip/dip9/" class="md-nav__link">
         稀疏范数滤波
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip10/" class="md-nav__link">
+        傅里叶变换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip11/" class="md-nav__link">
+        图像特征检测和提取
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip12/" class="md-nav__link">
+        深度学习
       </a>
     </li>
   
@@ -1990,14 +2070,14 @@ Elementary operations called <strong>microoperations</strong>  </li>
 </ul>
 <h4 id="multiplexer-based-transfers"><strong>Multiplexer-Based Transfers</strong><a class="headerlink" href="#multiplexer-based-transfers" title="Permanent link">&para;</a></h4>
 <p>Multiplexers connected to register inputs produce flexible transfer structures (Note: Clocks are omitted for clarity)</p>
-<div class="highlight"><pre><span></span><code>!!! Example
-    $K1:R0\leftarrow R1\quad K2\overline{K1}:R0\leftarrow R2$   
-    我们可以将其化简: $K1+K2\overline{K1}=K1+K2$ 就是 $R0$ 寄存器会被更新时的控制逻辑. 并用 $K1$ 作为 Mux 的选择信号。  
-    &lt;div align=center&gt; &lt;img src=&quot;http://cdn.hobbitqia.cc/202211301635371.png&quot; width = 35%/&gt; &lt;/div&gt;
-
-    完整电路（假设寄存器均为 4 位）
-    &lt;div align=center&gt; &lt;img src=&quot;http://cdn.hobbitqia.cc/202211301637817.png&quot; width = 55%/&gt; &lt;/div&gt;
-</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><span class="arithmatex">\(K1:R0\leftarrow R1\quad K2\overline{K1}:R0\leftarrow R2\)</span> <br />
+我们可以将其化简: <span class="arithmatex">\(K1+K2\overline{K1}=K1+K2\)</span> 就是 <span class="arithmatex">\(R0\)</span> 寄存器会被更新时的控制逻辑. 并用 <span class="arithmatex">\(K1\)</span> 作为 Mux 的选择信号。<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301635371.png" width = 35%/> </div>   </p>
+<p>完整电路（假设寄存器均为 4 位）
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301637817.png" width = 55%/> </div></p>
+</div>
 <h4 id="multiplexer-and-bus-based-transfers-for-multiple-registers"><strong>Multiplexer and Bus-Based Transfers for Multiple Registers</strong><a class="headerlink" href="#multiplexer-and-bus-based-transfers-for-multiple-registers" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
@@ -2187,17 +2267,15 @@ D8 &amp; = Q8 \oplus (Q1Q8 + Q1Q2Q4)
 <p>By using two shift registers for operands, a full adder, and a flip flop (for the carry), we can add two numbers serially, starting at the least significant bit.</p>
 <p>Serial addition is a low cost way to add large numbers of operands, since a “tree” of full adder cells can be made to any depth, and each new level doubles the number of operands.</p>
 <p>Other operations can be performed serially as well, such as parity generation/checking or more complex error-check codes.</p>
-<p><strong>Serial Adder</strong>  </p>
+<p><strong>Serial Adder</strong>   </p>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202212151430367.png" width = 30%/> </div>
-
-<p>c="<a href="http://cdn.hobbitqia.cc/202211301637817.png">http://cdn.hobbitqia.cc/202211301637817.png</a>" width = 55%/&gt; </div></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:06:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月25日 15:14:42</span>
       
         <br>
         创建日期:

@@ -1,3 +1,6 @@
+---
+counter: True  
+---
 
 # Binary Image and Morphological 
 
@@ -11,11 +14,11 @@ Pixel value is limited to 0 or 1.
 二值图像（Binary Image）中像素（Pixel）的值只有 [0,1] 或者 [0,255]，编程中一般用 [0,255] 来构造二值图像。
 
 * 优点：
-
     * 更小的内存需求 
     * 运行速度更快 
     * 为二值图像开发的算法往往可以用于灰度级图像 
     * 更便宜 
+
 * 缺点：
 
     * 应用范围毕竟有限； 

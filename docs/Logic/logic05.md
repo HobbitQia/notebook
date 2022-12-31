@@ -1,12 +1,16 @@
+---
+counter: True  
+---
 
 # Digital Hardware Implementation
 
 !!! Abstract 
-    Programmable Implementation Technologies
-    * Why Programmable Logic?
-    * Programming Technologies
-    * Read-Only Memories (ROMs)
-    * Programmable Logic Arrays (PLAs)
+    Programmable Implementation Technologies  
+    
+    * Why Programmable Logic?  
+    * Programming Technologies  
+    * Read-Only Memories (ROMs)  
+    * Programmable Logic Arrays (PLAs)  
     * Programmable Array Logic (PALs)
 
 ## Why Programmable Logic?

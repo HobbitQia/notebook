@@ -146,15 +146,20 @@ nav:
       - 并查集: ds/set.md
       - 图论: ds/graph.md
       - 排序: ds/sort.md
+      - 散列: ds/hash.md
     - 图像信息处理:
       - dip/index.md
       - 图像信息处理介绍: dip/dip1.md
       - 二值图像和形态学: dip/dip2.md
+      - 图像灰度变换与直方图: dip/dip3.md
       - 几何变换: dip/dip5.md
       - 卷积与滤波: dip/dip6.md
       - 双边滤波的加速: dip/dip7.md
       - 引导滤波: dip/dip8.md
       - 稀疏范数滤波: dip/dip9.md
+      - 傅里叶变换: dip/dip10.md
+      - 图像特征检测和提取: dip/dip11.md
+      - 深度学习: dip/dip12.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md

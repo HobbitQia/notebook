@@ -10,21 +10,21 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/ICS/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/dip/dip11/">
       
-      <link rel="icon" href="../log.ico">
+      <link rel="icon" href="../../log.ico">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>计算机系统概论 - HobbitQia的笔记本</title>
+        <title>图像特征检测和提取 - HobbitQia的笔记本</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -46,13 +46,13 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="../css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
-      <link rel="stylesheet" href="../css/card.css">
+      <link rel="stylesheet" href="../../css/card.css">
     
-      <link rel="stylesheet" href="../css/tasklist.css">
+      <link rel="stylesheet" href="../../css/tasklist.css">
     
-    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#image-feature" class="md-skip">
           跳转至
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href="../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../log.ico" alt="logo">
+  <img src="../../log.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              计算机系统概论
+              图像特征检测和提取
             
           </span>
         </div>
@@ -212,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     </li>
@@ -235,7 +235,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../ICS/" class="md-tabs__link md-tabs__link--active">
         Computer Science
       </a>
     </li>
@@ -258,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
+      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
         Mathematics
       </a>
     </li>
@@ -276,7 +276,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../link/" class="md-tabs__link">
+      <a href="../../link/" class="md-tabs__link">
         友链
       </a>
     </li>
@@ -304,9 +304,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href="../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../log.ico" alt="logo">
+  <img src="../../log.ico" alt="logo">
 
     </a>
     HobbitQia的笔记本
@@ -351,7 +351,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="..">Home</a>
+          <a href="../..">Home</a>
           
         </div>
       
@@ -418,14 +418,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
       
       
@@ -456,8 +454,8 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="./">计算机系统概论</a>
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ICS/">计算机系统概论</a>
           
             <label for="__nav_2_1">
               <span class="md-nav__icon md-icon"></span>
@@ -480,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-1/" class="md-nav__link">
+      <a href="../../ICS/ICS-1/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -494,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-2/" class="md-nav__link">
+      <a href="../../ICS/ICS-2/" class="md-nav__link">
         Bits, Data Types and Operations
       </a>
     </li>
@@ -508,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-3/" class="md-nav__link">
+      <a href="../../ICS/ICS-3/" class="md-nav__link">
         Digital Logic Structures
       </a>
     </li>
@@ -522,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-4/" class="md-nav__link">
+      <a href="../../ICS/ICS-4/" class="md-nav__link">
         The von Neumann Model
       </a>
     </li>
@@ -536,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-5/" class="md-nav__link">
+      <a href="../../ICS/ICS-5/" class="md-nav__link">
         LC-3
       </a>
     </li>
@@ -550,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-6/" class="md-nav__link">
+      <a href="../../ICS/ICS-6/" class="md-nav__link">
         Programming
       </a>
     </li>
@@ -564,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-7/" class="md-nav__link">
+      <a href="../../ICS/ICS-7/" class="md-nav__link">
         Assembly Language
       </a>
     </li>
@@ -578,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-8/" class="md-nav__link">
+      <a href="../../ICS/ICS-8/" class="md-nav__link">
         Data Structures
       </a>
     </li>
@@ -592,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ICS-9/" class="md-nav__link">
+      <a href="../../ICS/ICS-9/" class="md-nav__link">
         I/0
       </a>
     </li>
@@ -651,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/5/" class="md-nav__link">
+      <a href="../../CSAPP/5/" class="md-nav__link">
         优化程序性能
       </a>
     </li>
@@ -665,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/6/" class="md-nav__link">
+      <a href="../../CSAPP/6/" class="md-nav__link">
         存储器层次结构
       </a>
     </li>
@@ -679,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/7/" class="md-nav__link">
+      <a href="../../CSAPP/7/" class="md-nav__link">
         链接
       </a>
     </li>
@@ -693,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/8/" class="md-nav__link">
+      <a href="../../CSAPP/8/" class="md-nav__link">
         异常控制流
       </a>
     </li>
@@ -707,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/9/" class="md-nav__link">
+      <a href="../../CSAPP/9/" class="md-nav__link">
         虚拟内存
       </a>
     </li>
@@ -760,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NA/NA01/" class="md-nav__link">
+      <a href="../../NA/NA01/" class="md-nav__link">
         Mathematical Preliminaries
       </a>
     </li>
@@ -774,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NA/NA02/" class="md-nav__link">
+      <a href="../../NA/NA02/" class="md-nav__link">
         Solutions of Equations in One Variable
       </a>
     </li>
@@ -826,7 +824,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../Logic/">计算机逻辑设计基础</a>
+          <a href="../../Logic/">计算机逻辑设计基础</a>
           
             <label for="__nav_2_4">
               <span class="md-nav__icon md-icon"></span>
@@ -849,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic01/" class="md-nav__link">
+      <a href="../../Logic/logic01/" class="md-nav__link">
         数字系统和信息
       </a>
     </li>
@@ -863,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic02/" class="md-nav__link">
+      <a href="../../Logic/logic02/" class="md-nav__link">
         组合逻辑电路
       </a>
     </li>
@@ -877,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic03/" class="md-nav__link">
+      <a href="../../Logic/logic03/" class="md-nav__link">
         组合逻辑电路设计
       </a>
     </li>
@@ -891,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic04/" class="md-nav__link">
+      <a href="../../Logic/logic04/" class="md-nav__link">
         时序逻辑电路
       </a>
     </li>
@@ -905,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic06/" class="md-nav__link">
+      <a href="../../Logic/logic06/" class="md-nav__link">
         寄存器与寄存器传输
       </a>
     </li>
@@ -919,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic05/" class="md-nav__link">
+      <a href="../../Logic/logic05/" class="md-nav__link">
         数字硬件设计
       </a>
     </li>
@@ -933,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic07/" class="md-nav__link">
+      <a href="../../Logic/logic07/" class="md-nav__link">
         内存基础
       </a>
     </li>
@@ -985,7 +983,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../ds/">数据结构与算法</a>
+          <a href="../../ds/">数据结构与算法</a>
           
             <label for="__nav_2_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1008,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/algorithm/" class="md-nav__link">
+      <a href="../../ds/algorithm/" class="md-nav__link">
         算法分析
       </a>
     </li>
@@ -1022,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/tree/" class="md-nav__link">
+      <a href="../../ds/tree/" class="md-nav__link">
         树
       </a>
     </li>
@@ -1036,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/heap/" class="md-nav__link">
+      <a href="../../ds/heap/" class="md-nav__link">
         堆
       </a>
     </li>
@@ -1050,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/set/" class="md-nav__link">
+      <a href="../../ds/set/" class="md-nav__link">
         并查集
       </a>
     </li>
@@ -1064,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/graph/" class="md-nav__link">
+      <a href="../../ds/graph/" class="md-nav__link">
         图论
       </a>
     </li>
@@ -1078,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/sort/" class="md-nav__link">
+      <a href="../../ds/sort/" class="md-nav__link">
         排序
       </a>
     </li>
@@ -1092,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/hash/" class="md-nav__link">
+      <a href="../../ds/hash/" class="md-nav__link">
         散列
       </a>
     </li>
@@ -1111,12 +1109,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" checked>
       
       
       
@@ -1152,7 +1152,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../dip/">图像信息处理</a>
+          <a href="../">图像信息处理</a>
           
             <label for="__nav_2_6">
               <span class="md-nav__icon md-icon"></span>
@@ -1175,7 +1175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip1/" class="md-nav__link">
+      <a href="../dip1/" class="md-nav__link">
         图像信息处理介绍
       </a>
     </li>
@@ -1189,7 +1189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip2/" class="md-nav__link">
+      <a href="../dip2/" class="md-nav__link">
         二值图像和形态学
       </a>
     </li>
@@ -1203,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip3/" class="md-nav__link">
+      <a href="../dip3/" class="md-nav__link">
         图像灰度变换与直方图
       </a>
     </li>
@@ -1217,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip5/" class="md-nav__link">
+      <a href="../dip5/" class="md-nav__link">
         几何变换
       </a>
     </li>
@@ -1231,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip6/" class="md-nav__link">
+      <a href="../dip6/" class="md-nav__link">
         卷积与滤波
       </a>
     </li>
@@ -1245,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip7/" class="md-nav__link">
+      <a href="../dip7/" class="md-nav__link">
         双边滤波的加速
       </a>
     </li>
@@ -1259,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip8/" class="md-nav__link">
+      <a href="../dip8/" class="md-nav__link">
         引导滤波
       </a>
     </li>
@@ -1273,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip9/" class="md-nav__link">
+      <a href="../dip9/" class="md-nav__link">
         稀疏范数滤波
       </a>
     </li>
@@ -1287,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip10/" class="md-nav__link">
+      <a href="../dip10/" class="md-nav__link">
         傅里叶变换
       </a>
     </li>
@@ -1299,11 +1299,154 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../dip/dip11/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          图像特征检测和提取
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         图像特征检测和提取
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#image-matching" class="md-nav__link">
+    Image Matching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-detection" class="md-nav__link">
+    Feature detection
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-harries-operator" class="md-nav__link">
+    The Harries operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-properties" class="md-nav__link">
+    Some properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-invariant-detection" class="md-nav__link">
+    Scale Invariant Detection
+  </a>
+  
+    <nav class="md-nav" aria-label="Scale Invariant Detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#harris-laplacian" class="md-nav__link">
+    Harris-Laplacian
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sift" class="md-nav__link">
+    SIFT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sift-descriptor" class="md-nav__link">
+    SIFT Descriptor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#surf-detectors-and-descriptors" class="md-nav__link">
+    SURF detectors and descriptors
+  </a>
+  
+    <nav class="md-nav" aria-label="SURF detectors and descriptors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integral-image" class="md-nav__link">
+    Integral Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpolation" class="md-nav__link">
+    Interpolation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ransac" class="md-nav__link">
+    RANSAC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-blending-pyramid-creation" class="md-nav__link">
+    Image Blending - Pyramid Creation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1315,7 +1458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip12/" class="md-nav__link">
+      <a href="../dip12/" class="md-nav__link">
         深度学习
       </a>
     </li>
@@ -1404,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
+      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
         线性代数Ⅱ(H)
       </a>
     </li>
@@ -1463,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../link/" class="md-nav__link">
+      <a href="../../link/" class="md-nav__link">
         Link
       </a>
     </li>
@@ -1497,6 +1640,123 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#image-matching" class="md-nav__link">
+    Image Matching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-detection" class="md-nav__link">
+    Feature detection
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-harries-operator" class="md-nav__link">
+    The Harries operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-properties" class="md-nav__link">
+    Some properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-invariant-detection" class="md-nav__link">
+    Scale Invariant Detection
+  </a>
+  
+    <nav class="md-nav" aria-label="Scale Invariant Detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#harris-laplacian" class="md-nav__link">
+    Harris-Laplacian
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sift" class="md-nav__link">
+    SIFT
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sift-descriptor" class="md-nav__link">
+    SIFT Descriptor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#surf-detectors-and-descriptors" class="md-nav__link">
+    SURF detectors and descriptors
+  </a>
+  
+    <nav class="md-nav" aria-label="SURF detectors and descriptors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integral-image" class="md-nav__link">
+    Integral Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpolation" class="md-nav__link">
+    Interpolation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ransac" class="md-nav__link">
+    RANSAC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-blending-pyramid-creation" class="md-nav__link">
+    Image Blending - Pyramid Creation
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1508,56 +1768,322 @@
               
 
                 
-  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/ICS/index.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/dip/dip11.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="_1">计算机系统概论<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="image-feature">Image Feature<a class="headerlink" href="#image-feature" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>这里是浙江大学 <strong><em>计算机系统概论</em></strong> 课程笔记及相关知识<br />
-老师: Yale Patt and Jiang Xiaohong<br />
-参考:</p>
 <ul>
-<li><strong><em>Introduction to Computing Systems: From Bits and Gates to C and Beyond 3<sup>rd</sup></em></strong>(教材)  </li>
-<li>Patt上课时记的笔记和助教TSjj复习课笔记。</li>
+<li>Image feature  <ul>
+<li>Image matching  </li>
+<li>Feature detection  <ul>
+<li>Harris operator  </li>
+</ul>
+</li>
+<li>Invariance  <ul>
+<li>Scale Invariant Feature Transform (SIFT)  </li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
-<p>内容:</p>
+<h2 id="image-matching">Image Matching<a class="headerlink" href="#image-matching" title="Permanent link">&para;</a></h2>
+<p>做图像拼接: 检测两张图象的特征点，找到对应的点对，用这些点对对齐图像   </p>
+<h2 id="feature-detection">Feature detection<a class="headerlink" href="#feature-detection" title="Permanent link">&para;</a></h2>
+<p>提取出局部的具有几何不变性的特征   </p>
+<p>怎样找到一个好的特征？  ——找到一个非同寻常的区域     </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212102051293.png" width = 45%/></div>
+
+<p>我们考虑一个小窗口的像素  </p>
+<ul>
+<li><em>flat</em>: 在任何方向都不会有像素的改变</li>
+<li><em>egde</em>: 沿着边的方向不会有像素的改变</li>
+<li><em>corner</em>: 在任何方向都会有明显的改变  </li>
+</ul>
+<p>量化窗口像素的变化: <span class="arithmatex">\(W\)</span> 表示窗口，<span class="arithmatex">\((u,v)\)</span> 表示方向</p>
+<p><span class="arithmatex">\(E(u,v)=\sum\limits_{(x,y)\in W}[I(x+u,y+v)-I(x,y)]^2\)</span><br />
+泰勒展开: 
+<span class="arithmatex">\(I(x+u,y+v)-I(x,y)=\dfrac{\partial I}{\partial x}u + \dfrac{\partial I}{\partial y}v + higher\ order\ terms\)</span><br />
+如果移动 <span class="arithmatex">\((u,v)\)</span> 小，那么可以用一阶微分估计 <span class="arithmatex">\(I(x+u,y+v)-I(x,y)\approx \dfrac{\partial I}{\partial x}u + \dfrac{\partial I}{\partial y}v=\left[\begin{matrix}I_x &amp; I_y \end{matrix}\right]\left[\begin{matrix}u \\ v \end{matrix}\right]\)</span><br />
+将式子带入之前的公式得到  </p>
+<div class="arithmatex">\[
+\begin{align*}
+E(u,v) &amp; \approx \sum\limits_{(x,y)\in W} \left[\left[\begin{matrix}I_x &amp; I_y \end{matrix}\right]\left[\begin{matrix}u \\ v \end{matrix}\right]\right]^2\\
+ &amp; = \sum\limits_{(x,y)\in W}\left[\begin{matrix}u &amp; v \end{matrix}\right]\left[\begin{matrix}I_x^2 &amp; I_xI_y \\ I_yI_x &amp; I_y^2 \end{matrix}\right] \left[\begin{matrix}u \\ v \end{matrix}\right]
+\end{align*}
+\]</div>
+<p>沿着矩阵 <span class="arithmatex">\(H\)</span> 的两个特征向量，变化最大。<br />
+<span class="arithmatex">\(\lambda_{+}, \lambda_{-}\)</span> 比较大时，这是一个好的位置（因为沿各个方向的变化都较大）  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212131243187.png" width = 45%/></div>
+
+<p>一个大一个小: <span class="arithmatex">\(edge\)</span>; 两个都小: <span class="arithmatex">\(flat\)</span>   </p>
+<div class="admonition summary">
+<p class="admonition-title">Feature Detection</p>
+<ul>
+<li>计算图像中每个点的梯度</li>
+<li>通过梯度得到每个 windows 的 <span class="arithmatex">\(H\)</span> 矩阵</li>
+<li>计算特征值</li>
+<li>找到相应较大的点(<span class="arithmatex">\(\lambda_- &gt; Threshold\)</span>)  </li>
+<li>选择那些 <span class="arithmatex">\(\lambda_-\)</span> 是局部极大值的点作为特征</li>
+</ul>
+</div>
+<h3 id="the-harries-operator">The Harries operator<a class="headerlink" href="#the-harries-operator" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(\lambda_-\)</span> 是 Harries operator 用于特征检测的变体</p>
+<div class="arithmatex">\[
+\begin{align*}
+f &amp; = \dfrac{\lambda_1\lambda_2}{\lambda_1 + \lambda_2}\\
+&amp; = \dfrac{det(H)}{trace(H)}
+\end{align*}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(trace(H)=h_{11}+h_{22}\)</span></li>
+<li>这就是 “Harris Corner Detector” or “Harris Operator”, 这个算子得到的是一个响应值  </li>
+</ul>
+<h3 id="some-properties">Some properties<a class="headerlink" href="#some-properties" title="Permanent link">&para;</a></h3>
+<ul>
+<li>旋转不变性<br />
+椭圆旋转，但长轴短轴的形状不变，特征值也不变  </li>
+<li>对图像强度改变<ul>
+<li>对加法和数乘强度变化保持不变 <span class="arithmatex">\(I\rightarrow I+b,I\rightarrow aI\)</span><br />
+极值点不变</li>
+<li>图像尺度变化会有影响！
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202212131258337.png" width = 35%/></div>   </li>
+</ul>
+</li>
+</ul>
+<h3 id="scale-invariant-detection">Scale Invariant Detection<a class="headerlink" href="#scale-invariant-detection" title="Permanent link">&para;</a></h3>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212131301060.png" width = 60%/></div>
+
+<p>在区域内设计一个比例不变的函数  </p>
+<p>在不同的图像(比例不同)，极值点在同一个位置出现</p>
+<p>a. edge, 没有极值点
+b. 好几个极值点 不知道是哪个
+c. good</p>
+<p>能筛掉前两种</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212140010891.png" width = 60%/></div>
+
+<p>二者思路相同, kernal 略有差异  </p>
+<p><span class="arithmatex">\(f=Kernal * Image\)</span>  </p>
+<p><strong>kernals</strong>:</p>
+<ul>
+<li><span class="arithmatex">\(L=\sigma^2(G_{xx}(x,y\sigma)+G_{yy}(x,y,\sigma))\)</span></li>
+<li><span class="arithmatex">\(DoG=G(x,y,k\sigma)-G(x,y,\sigma)\)</span> 其中 <span class="arithmatex">\(G(x,y,\sigma)=\dfrac{1}{\sqrt{2\pi}}e^{-\frac{x^2+y^2}{2\sigma^2}}\)</span></li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212140017073.png" width = 40%/></div>
+
+<h4 id="harris-laplacian">Harris-Laplacian<a class="headerlink" href="#harris-laplacian" title="Permanent link">&para;</a></h4>
+<p>不同维度计算方法不一样  </p>
+<ul>
+<li>初始化：多尺度的 Harris corner detection(改变清晰度后，单独找角点)<br />
+只有在任何尺度上都是角点的点，才能被保留  </li>
+<li>基于拉普拉斯算子，进行尺度选择。对一个位置，哪一个尺度上拉普拉斯值最大，将这个位置和尺度作为角点。（唯一性，在这个尺度上是极大值，那么在另一个尺度上也是极大值，只是极大值的数值可能不同）？？？  </li>
+</ul>
+<p>Laplacian-of-Gaussian = "blob" detector <span class="arithmatex">\(\nabla^2 g=\dfrac{\partial^2 g}{\partial x^2}+\dfrac{\partial^2 g}{\partial y^2}\)</span>  </p>
+<p>在图像中给定的一个点，我们定义拉普拉斯响应值达到峰值的尺度为<strong>特征尺度(characteristic scale)</strong></p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212161925430.png" width = 40%/></div>
+
+<h4 id="sift">SIFT<a class="headerlink" href="#sift" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212161927455.png" width = 40%/></div>
+
+<p>三个方向都是 DOG.  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212161928750.png" width = 40%/></div>
+
+<p>对于画 × 的需要比较26个邻居才能得出其是否是极值，计算速度相对较慢。</p>
+<p>得到角点后，我们可以提取角点的特征，如方向性  </p>
 <ul>
 <li>
-<p><a href="ICS-1">Chapter 1: Introduction</a></p>
+<p>梯度和角度<br />
+其中 <span class="arithmatex">\(m(x,y)\)</span> 是点的幅值，即 x 方向的差分和 y 方向的差分的平方和<br />
+<span class="arithmatex">\(\theta(x,y)\)</span> 是通过 y 方向的梯度和比上 x 方向的梯度的反正切计算<br />
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202212161930783.png" width = 50%/></div> </p>
 </li>
 <li>
-<p><a href="ICS-2">Chapter 2: Bits, Data Types and Operations</a></p>
+<p>方向选择
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202212161933690.png" width = 40%/></div> </p>
+<p>可以用投票的方式定义邻域的朝向</p>
 </li>
-<li><a href="ICS-3">Chapter 3: Digital Logic Structures</a></li>
-<li><a href="ICS-4">Chapter 4: The von Neumann Model</a></li>
-<li><a href="ICS-5">Chapter 5: LC-3</a></li>
-<li><a href="ICS-6">Chapter 6: Programming</a></li>
-<li><a href="ICS-7">Chapter 7: Assembly Language</a></li>
-<li><a href="ICS-8">Chapter 8: Data Structures</a></li>
-<li><a href="ICS-9">Chapter 9: I/0</a></li>
 </ul>
+<h3 id="sift-descriptor">SIFT Descriptor<a class="headerlink" href="#sift-descriptor" title="Permanent link">&para;</a></h3>
+<p>Invariance: 
+假设这里有两幅图像 <span class="arithmatex">\(I_1, I_2\)</span>, 其中 <span class="arithmatex">\(I_2\)</span> 是 <span class="arithmatex">\(I_1\)</span> 经过某种变换后的版本（仿射变换，亮度等）<br />
+在变换中不变的特征称为<strong>变换不变性</strong>  </p>
+<p>SIFT 特征：旋转不变性<br />
+根据其主要梯度方向(dominant gradient orientation)旋转 patch, 这样可以使他处于规范方向  </p>
+<p><strong>Scale Invariant Feature Transform</strong><br />
+基本思想</p>
+<ul>
+<li>在检测到的特征角点周围选取 <span class="arithmatex">\(16\times16\)</span> 的方形窗口</li>
+<li>计算每个像素的边的朝向(梯度的角度- 90°)</li>
+<li>剔除弱边缘(小于阈值梯度幅度)</li>
+<li>创建剩下边的方向的直方图</li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212162013160.png" width = 40%/></div>
+
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212162013746.png" width = 20%/></div>
+
+<p>完整版：</p>
+<ul>
+<li>将 <span class="arithmatex">\(16\times16\)</span> 的窗口 划分为 <span class="arithmatex">\(4\times4\)</span> 的网格  </li>
+<li>对每个网格计算其方向直方图  </li>
+<li>16 cells * 8 orientations = 128 dimensional descriptor(128 维向量)</li>
+</ul>
+<div class="admonition summary">
+<p class="admonition-title">SIFT Feature</p>
+<ul>
+<li>Descriptor 128-D<ul>
+<li></li>
+<li>可以通过去掉光照变化带来的影响</li>
+</ul>
+</li>
+<li>位置 <span class="arithmatex">\((x,y)\)</span></li>
+<li>尺度，控制特征提取的覆盖范围</li>
+<li>方向，实现旋转不变的 descriptor</li>
+</ul>
+</div>
+<p>SIFT 特征可以对图像进行分类<br />
+Bag of visual words
+提取SIFT特征，将特征做一个聚类(kmeans)，将每个聚类中心称为 visual word 视觉单词</p>
+<div class="admonition summary">
+<p class="admonition-title">Conclusion of SIFT</p>
+<ul>
+<li>优点<ul>
+<li>期望在比例、旋转、光照等变化中的不变性。</li>
+<li>局部 patch 具有很强的区分性和表征能力。</li>
+<li>在刚性对象表示上非常有效。</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>提取耗时<br />
+对于大小为400 * 400的图像，平均需要1秒。</li>
+<li>对非刚性物体性能较差。<br />
+如人脸、动物等。</li>
+<li>在严重的仿射失真下可能无法工作。<br />
+局部补丁是一个圆，而不是一个椭圆调整到仿射失真。</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="surf-detectors-and-descriptors">SURF detectors and descriptors<a class="headerlink" href="#surf-detectors-and-descriptors" title="Permanent link">&para;</a></h2>
+<ul>
+<li>角点检测 repeatable</li>
+<li>特征提取：描述能力具有 dinstinctive robust</li>
+</ul>
+<p>都需要 fast</p>
+<p>SURF algorithm</p>
+<ul>
+<li>
+<p><strong>Interest point detector:</strong></p>
+<ul>
+<li>计算积分图像<br />
+坐标 <span class="arithmatex">\((x,y)\)</span> 的像素值是 前缀和 <span class="arithmatex">\(s(x,y)\)</span>(左上方长方形的像素值求和).</li>
+<li>应用二阶导数(近似，求差分的差分，可以用积分图近似)滤波器对图像滤波操作</li>
+<li>非极大抑制(在 <span class="arithmatex">\((x,y,\sigma)\)</span> 空间中寻找局部极大值，其他的丢掉)</li>
+<li>二次插值法</li>
+</ul>
+</li>
+<li>
+<p><strong>Interest point descriptor:</strong></p>
+<ul>
+<li>把窗口分为 <span class="arithmatex">\(t\times 4\)</span>(16 个子窗口)  </li>
+<li>计算 Haar 小波特征（离散情况下的近似）</li>
+<li>在每个子窗口内，计算 <span class="arithmatex">\(v_{subregion}=\left[\sum dx,\sum dy,\sum |dx|,\sum|dy|\right]\)</span>  </li>
+<li>这得到 64 个特征</li>
+</ul>
+</li>
+</ul>
+<h3 id="integral-image">Integral Image<a class="headerlink" href="#integral-image" title="Permanent link">&para;</a></h3>
+<p>Integral Image(a.k.a. Summed area table) 是</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212251944951.png" width = 30%/></div>
+
+<ul>
+<li><span class="arithmatex">\(S(x,y)=\sum\sum I(x,y)\)</span></li>
+<li><span class="arithmatex">\(V(l,t,r,b)=S(l,t)+S(r,b)-S(l,b)-S(r,t)\)</span> 得到矩形内的像素值的和   </li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212251950536.png" width = 55%/></div>
+
+<p>积分图让我们很方便的对尺度进行上采样</p>
+<h3 id="interpolation">Interpolation<a class="headerlink" href="#interpolation" title="Permanent link">&para;</a></h3>
+<p>不同尺度之间可以用插值来计算中间的尺度。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212251956479.png" width = 65%/></div>
+
+<div class="admonition info">
+<p class="admonition-title">Why SURF is better than SIFT</p>
+<ul>
+<li>维度低, 只用 64 维特征  </li>
+<li>在均匀、渐变、只有一条边的图像上 SIFT 无法分辨，但 SURF 可以  </li>
+<li>带噪声会使 SIFT 特征凌乱，对 SURF 几乎没有影响</li>
+</ul>
+</div>
+<h2 id="ransac">RANSAC<a class="headerlink" href="#ransac" title="Permanent link">&para;</a></h2>
+<p>RANSAC 解决图像拼接的离群点  </p>
+<p><strong>RANSAC RANdom SAmple Consensus</strong></p>
+<p>排除离群点，只关注并使用 inliers.  </p>
+<p>思想：如果离群点被选中计算当前的匹配，那么回归出来的线肯定不足以支撑剩下点的匹配，和真正 inlier 得到的线有很大的差异。</p>
+<p>RANSAC Loop</p>
+<ul>
+<li>随机选择种子点作为转换估计的基础</li>
+<li>计算种子点之间的变换  </li>
+<li>找到这次变换的 inliers</li>
+<li>如果 inliners 的数目足够多，那么重新计算所有 inliners 上的最小二乘法估计</li>
+<li>回归之后再计算 inliners 如此往复，继续调整。如果没有调整那我们可以停止循环。最终使得回归出的线达到最多的 inliners.   </li>
+</ul>
+<p>需要多少次取样？假设 <span class="arithmatex">\(w\)</span> 是 inliners 的一部分, <span class="arithmatex">\(n\)</span> 个需要用来定义前提的点，进行了 <span class="arithmatex">\(k\)</span> 次取样。  </p>
+<ul>
+<li><span class="arithmatex">\(n\)</span> 个点都是正确的 <span class="arithmatex">\(w^n\)</span></li>
+<li><span class="arithmatex">\(k\)</span> 次采样都失败了 <span class="arithmatex">\((1-w^n)^k\)</span></li>
+<li>选择 k 达到足够高使得失败的概率低于阈值  </li>
+</ul>
+<p>RANSAC 之后将数据划分为 outiler 和 inliner. </p>
+<ul>
+<li>优点<ul>
+<li>对于模型拟合问题是一种通用的方法</li>
+<li>容易实现，容易计算失败率</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>只能解决适度 outliers 时的情况，否则开销比较高</li>
+<li>很多实际问题中的 outliers 的比率较高（但有时挑选策略可以有帮助，而非随机选取）</li>
+</ul>
+</li>
+</ul>
+<h2 id="image-blending-pyramid-creation">Image Blending - Pyramid Creation<a class="headerlink" href="#image-blending-pyramid-creation" title="Permanent link">&para;</a></h2>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212252145478.png" width = 75%/></div>
+
+<div class="admonition info">
+<p class="admonition-title">Image Stitching</p>
+<ul>
+<li>Detect key points 检测特征点</li>
+<li>Build the SIFT descriptors 提取 SIFT 特征</li>
+<li>Match SIFT descriptors SIFT 特征匹配（求欧氏距离）</li>
+<li>Fitting the transformation 计算变换</li>
+<li>RANSAC 筛除外点</li>
+<li>Image Blending 图像融合，解决跳变</li>
+</ul>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年9月5日 23:38:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月31日 10:05:26</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年9月5日 23:38:05</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月31日 10:05:26</span>
       
     
   </small>
 </div>
 
               
+
+<link rel="stylesheet" href="/css/counter.css">
 
 <!-- Giscus -->
 <h2 id="__comments">评论</h2>
@@ -1627,7 +2153,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="上一页: Welcome to HobbitQia&#39;s Notebook!" rel="prev">
+        <a href="../dip10/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 傅里叶变换" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1636,20 +2162,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              Welcome to HobbitQia's Notebook!
+              傅里叶变换
             </div>
           </div>
         </a>
       
       
         
-        <a href="ICS-1/" class="md-footer__link md-footer__link--next" aria-label="下一页: Introduction" rel="next">
+        <a href="../dip12/" class="md-footer__link md-footer__link--next" aria-label="下一页: 深度学习" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              Introduction
+              深度学习
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1696,14 +2222,14 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
         <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
       
-        <script src="../js/katex.js"></script>
+        <script src="../../js/katex.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

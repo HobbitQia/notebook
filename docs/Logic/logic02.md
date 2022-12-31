@@ -196,7 +196,8 @@ SOP and POS are **two-level** network of gates.
     Standard Forms 用来做**电路实现**, 一般会进行 SOM POM 化简, 但会省略一些东西. 依然按照 Standard Order, 但每一项中不一定需要所有变量.  
     SOP POS 也被称为**两极函数**.  
     如 **SOP**: $ABD+\overline A \overline B C +B$, **POS**: $(A+B)\cdot  (A+\overline B+\overline C)\cdot  C$ 他们路径上最多只需要经过两个电路门, 这称为二级电路.  
-    反观 $(AB+C)(A+C), AB\overline C+AC(A+B)$ 最多就需要经过三个电路门.  
+    反观 $(AB+C)(A+C), AB\overline C+AC(A+B)$ 最多就需要经过三个电路门.
+    
     * 为什么需要降低电路门的级数?   
     电路门有延迟, 经过的电路门越多延迟越大, 意味着最后电路做出来的计算机不易提高功率.  
     
@@ -402,6 +403,7 @@ By placing “don't cares” (an “x” entry) in the function table or map, th
     理想情况一个门的输入可以接无数个门的输入，但实际上因为每一个门的输入端都会花费一些电流，而门输出的电流是有限的，从集成电路本身会要求一个门的输出最多能拉多少门的输入。
     * **Fan-out 扇出系数** – the number of standard loads driven by a gate output  
         一个门的输出带了很多门的输入？（像火车头带了很多车厢）  
+        一个门的输出不能接到太多门的输入上去，一般会用 buffer 做缓冲  
         
         * ***e.g.*** 1 standard load equals the load contributed by the input of 1 inverter.  
         * **Transition time** - the time required for the gate output to change from H to L, $t_{HL}$, or from L to H, $t_{LH}$  
