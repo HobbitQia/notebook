@@ -1949,26 +1949,85 @@
 
 
 <h1 id="sequential-circuits">Sequential Circuits<a class="headerlink" href="#sequential-circuits" title="Permanent link">&para;</a></h1>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
+<details class="abstract">
+<summary>Abstract</summary>
+<ol>
+<li>时序电路概念和组成<br />
+Introduction to Sequential Circuits  </li>
+<li>输出方程、激励函数、次态方程、输出方程类型 <br />
+Output function, Excitationfunction, Next state function, type of output functions  </li>
+<li>时序电路类型<br />
+Types of sequential circuits  </li>
+<li>电路延迟模型<br />
+Circuit delay model  </li>
+<li>
+<p>锁存器与触发器 <br />
+Latch and Flip-Flop</p>
 <ul>
-<li>Part 1 - Storage Elements and Analysis  <ul>
-<li>Introduction to sequential circuits   </li>
-<li>Types of sequential circuits  </li>
-<li>Storage elements  </li>
-<li>Latches  </li>
-<li>Flip-flops  </li>
-<li>Sequential circuit analysis  </li>
-<li>State tables  </li>
-<li>State diagrams  </li>
-<li>Equivalent states  </li>
-<li>Moore and Mealy Models  </li>
+<li>S-R锁存器的原理、特征表、特征方程，内部电路分析，不确定状态的原因及出现条件<br />
+Analysis of Basic S-R Latch, Characteristic Table, Characteristic Equation, reason of unstable state  </li>
+<li>D锁存器、D触发器的原理、特征表、特征方程，内部电路分析 <br />
+Theory of D Latch and D Flip-Flop, Characteristic Table, Characteristic Equation  </li>
+<li>JK触发器、T触发器的行为、特征表、特征方程<br />
+Behavior of JK Flip-Flop, TFlip-Flop, Characteristic Table, Characteristic Equation  </li>
+<li>脉冲触发和边沿触发的概念，脉冲触发的一次性采样行为原因<br />
+Concept  of  Master-slave and edge-triggered flip-flop, 1s catching of Mast-slave flip-flop  </li>
+<li>锁存器和触发器的时序，建立时间、保持时间、传输延迟等各种时序成分<br />
+Flip-Flop Timing Parameters, setup time, hold time, propagation delay  </li>
+<li>各种触发器的图形符号<br />
+Symbols of Flip-Flops  </li>
 </ul>
 </li>
-<li>Part 2 - Sequential Circuit Design  </li>
-<li>Part 3 – State Machine Design  </li>
+<li>
+<p>状态表、状态图<br />
+State Table, State Diagram  </p>
+</li>
+<li>
+<p>同步时序电路分析<br />
+Sequential Circuit Analysis  </p>
+<ul>
+<li>根据给定电路，写出输出方程和激励函数/次态方程  <br />
+Derive output functions and excitationfunction/Next state function  </li>
+<li>列出状态真值表<br />
+ObtainState truth table  </li>
+<li>列出时序电路的次态<br />
+List next state of sequential circuit  </li>
+<li>作状态表和状态图<br />
+ObtainState Table and State Diagram  </li>
+<li>分析时序电路的外部性能<br />
+Analysis the behavior of sequential circuit  </li>
+<li>对电路进行评述，通常需检查自恢复功能及画出时序波形图<br />
+Evaluate the circuit, validate the self-recovery ability  </li>
 </ul>
-</div>
+</li>
+<li>
+<p>电路和系统级时序分析，时序电路各路径的时序成分分析计算<br />
+Circuit and System Level Timing, analyze and compute time component along any path of the sequential circuit  <br />
+9．米利型和穆尔型电路分析<br />
+analyze Mealy and Moore type circuit<br />
+10．时序电路设计<br />
+Sequential Circuit Design  </p>
+<ul>
+<li>写出规格说明书<br />
+Specification  </li>
+<li>系统描述–从问题陈述中得出状态图和状态表<br />
+Formulation -Obtain a state diagram or state table  </li>
+<li>状态赋值–为状态表中的每个状态赋二进制代码<br />
+State Assignment -Assign binary codes to the states  </li>
+<li>得到触发器的输入方程-选择触发器的类型，从状态表的次态栏得到触发器的输入方程<br />
+Flip-Flop Input Equation Determination-Select flip-flop types and derive flip-flop equations from next state entries in the table  </li>
+<li>确定输出方程-从状态表的输出栏得到输出方程<br />
+Output Equation Determination-Derive output equations from output entries in the table  </li>
+<li>优化–优化触发器的输入方程和输出方程 <br />
+Optimization-Optimize the equations  </li>
+<li>工艺映射–根据方程画出电路图，并映射到触发器和门工艺<br />
+Technology Mapping-Find  circuit from equations and map to flip-flops and gate technology  </li>
+<li>验证–验证最终设计的正确性<br />
+Verification-Verify correctness of final design</li>
+</ul>
+</li>
+</ol>
+</details>
 <h2 id="storage-elements-and-analysis">Storage Elements and Analysis<a class="headerlink" href="#storage-elements-and-analysis" title="Permanent link">&para;</a></h2>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211091011289.png" width = 50%/> </div>
 
@@ -2253,8 +2312,6 @@ Direct <span class="arithmatex">\(R\)</span> and/or <span class="arithmatex">\(S
 </ul>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211111118511.png" width = 20%/> </div>
 
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
 <h3 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h3>
 <p><strong>General Model</strong>  </p>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211181954243.png" width = 40%/> </div>
@@ -2279,8 +2336,8 @@ Direct <span class="arithmatex">\(R\)</span> and/or <span class="arithmatex">\(S
 </li>
 <li>
 <p>Boolean equations for the functions
-<span class="arithmatex">\(D_A(t) = A(t)x(t)+ B(t)x(t), A(t+1)=A(t)x(t)+ B(t)x(t), D_B(t) = A(t)x(t),B(t+1) = A(t)x(t), y(t) = x(t)(B(t) + A(t))\)</span>  <br />
-为什么 D = 次态方程</p>
+<span class="arithmatex">\(D_A(t) = A(t)x(t)+ B(t)x(t), A(t+1)=A(t)x(t)+ B(t)x(t)\)</span>, <br />
+<span class="arithmatex">\(D_B(t) = A(t)x(t),B(t+1) = A(t)x(t), y(t) = x(t)(B(t) + A(t))\)</span>    </p>
 </li>
 </ul>
 </details>
@@ -2296,7 +2353,7 @@ Direct <span class="arithmatex">\(R\)</span> and/or <span class="arithmatex">\(S
 <p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182022623.png" width = 40%/> </div>    </p>
 <p>代入刚刚写出的式子即可 <br />
 也可以使用另一种画法：(二维状态表，按照格雷码的顺序排列)  </p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182025700.png" width = 40%/> </div>   </p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202301010950173.png" width = 40%/> </div>   </p>
 </details>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2420,7 +2477,7 @@ after 110 and a 1, we have:<br />
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211231109527.png" width = 50%/> </div>   </p>
 <p>如果将刚刚的状态图 转为Moore 模型，我们需要再加一个状态 E, 当到达 E 状态时表明我们得到了序列 1101. <br />
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211231112070.png" width = 50%/> </div>  </p>
-<p>观察可以发现, B 和 D 对同样的输入，次态都是一样的。但是并不是等效状态，因为二者的输出不同。 </p>
+<p>观察可以发现, B 和 E 对同样的输入，次态都是一样的。但是并不是等效状态，因为二者的输出不同。 </p>
 </details>
 <p>The <em>Moore</em> model for a sequence recognizer usually has <strong>more states</strong> than the <em>Mealy</em> model.</p>
 <h4 id="simplification-for-state-tables">Simplification for State Tables<a class="headerlink" href="#simplification-for-state-tables" title="Permanent link">&para;</a></h4>
@@ -2616,7 +2673,7 @@ Minimum number of bits required is <span class="arithmatex">\(n\)</span> such th
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:06:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月31日 10:07:19</span>
       
         <br>
         创建日期:

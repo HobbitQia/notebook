@@ -1911,6 +1911,66 @@
 
 
 <h1 id="register-and-register-transfers">Register and Register Transfers<a class="headerlink" href="#register-and-register-transfers" title="Permanent link">&para;</a></h1>
+<details class="abstract">
+<summary>Abstract</summary>
+<p>1．寄存器的概念、设计模型和结构<br />
+Register, Register Design Models  </p>
+<div class="highlight"><pre><span></span><code>* 门控时钟、并行加载控制  
+Registers with Clock Gating, Registers with Load-Controlled Feedback
+</code></pre></div>
+<ol start="2">
+<li>
+<p>寄存器传输操作基本概念<br />
+Register transfer operations  </p>
+<ul>
+<li>寄存器传输语言、基本微操作、条件传输原理、多寄存器传输的三种基本结构、原理和优缺点<br />
+Register Transfer Language (RTL), Microoperations, conditional transfer, three types of Register Transfer Structures: Multiplexer-Based Transfers, Bus-Based Transfers, Three-State Bus  </li>
+<li>RTL与硬件描述语言的关系<br />
+Relationship of RTL and Verilog, implementation of conditional operations</li>
+</ul>
+</li>
+<li>
+<p>移位寄存器的概念、结构<br />
+Shift Registers  </p>
+<ul>
+<li>串行输入、左移、右移、并行加载<br />
+serial input, shift left, shift right, parallel load  </li>
+</ul>
+</li>
+<li>
+<p>计数器的功能、类型<br />
+Function and type of counters  </p>
+<ul>
+<li>纹波计数器的结构、工作原理、优缺点<br />
+Structure, theory, characteristic of ripple counter  </li>
+<li>同步计数器的结构、工作原理、优缺点<br />
+Structure, theory, characteristic of synchronous counter  </li>
+<li>进位链、并行进位、并行加载<br />
+carry chain, parallel carry, parallel load</li>
+</ul>
+</li>
+<li>
+<p>采用同步时序电路设计方法设计模n计数器<br />
+Use the sequential logic model to designmodulo n counters  </p>
+</li>
+<li>采用输出结果反馈的方法设计模n计数器<br />
+Use output feedback model to design modulo n counters  </li>
+<li>
+<p>寄存器设计<br />
+RegisterDesign   </p>
+<ul>
+<li>基于寄存器单元的设计方法，采用多路复用器设计<br />
+RegisterCellDesign,Multiplexer Approach  </li>
+<li>基于时序电路设计方法的寄存器设计<br />
+Sequential Circuit Design Approach</li>
+</ul>
+</li>
+<li>
+<p>串行传输和微操作<br />
+Serial Transfers and Microoperations</p>
+</li>
+</ol>
+</details>
 <h2 id="registers">Registers<a class="headerlink" href="#registers" title="Permanent link">&para;</a></h2>
 <p><strong>Register</strong> – a collection of binary storage elements </p>
 <p>In theory, a register is a sequential logic which can be defined by a state table. More often, think of a register as storing a vector of binary values.  </p>
@@ -1947,7 +2007,7 @@
 <ul>
 <li>
 <p><strong>Registers with Clock Gating</strong><br />
-    The $\overline{Load} $(bar 表示低电平有效) signal enables the clock signal to pass through if 0 and prevents the clock signal from passing through if 1. (与 <span class="arithmatex">\(Load\)</span> 相反)</p>
+    The <span class="arithmatex">\(\overline{Load}\)</span>(bar 表示低电平有效) signal enables the clock signal to pass through if 0 and prevents the clock signal from passing through if 1. (与 <span class="arithmatex">\(Load\)</span> 相反)</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>For Positive Edge-Triggered  or Negative Pulse Master-Slave Flip-flop:<br />
@@ -1956,9 +2016,11 @@
 当 <span class="arithmatex">\(\overline{Load}\)</span> 信号为 1 时，时钟信号不再随着外部时钟改变，这时就是保持原有的数据。</p>
 </div>
 <p><strong>Clock Skew</strong> <br />
-问题在于我们是同步时序电路实现，要求时钟统一提供，这样所有的触发器会在同一时间完成操作。使用门控时钟的方式会带来更多的触发时间，时序电路从同步变为了异步的时序电路（触发有前有后）<br />
-<em> </em><em>Registers with Load-Controlled Feedback</em>*<br />
- Run the clock continuously, and  Selectively use a load control to change the register contents. </p>
+问题在于我们是同步时序电路实现，要求时钟统一提供，这样所有的触发器会在同一时间完成操作。使用门控时钟的方式会带来更多的触发时间，时序电路从同步变为了异步的时序电路（触发有前有后）  </p>
+</li>
+<li>
+<p><strong>Registers with Load-Controlled Feedback</strong><br />
+     Run the clock continuously, and  Selectively use a load control to change the register contents. </p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301524511.png" width = 60%/> </div>   </p>
@@ -2085,10 +2147,12 @@ Elementary operations called <strong>microoperations</strong>  </li>
     <div align=center> <img src="http://cdn.hobbitqia.cc/202212071014948.png" width = 30%/> </div>   </p>
 <p>There can be three distinct registers as source, so can simultaneously do any three register transfers. (totally flexible)<br />
 如我们可以既可以实现 <span class="arithmatex">\(R0\leftarrow R1\)</span> 也可以实现 <span class="arithmatex">\(R0\leftrightarrow R1\)</span><br />
-电路成本太高！
-* Shared transfer paths for registers <br />
-A shared transfer object is a called a <strong>bus</strong>(总线)   <br />
-<div align=center> <img src="http://cdn.hobbitqia.cc/202212071027079.png" width = 30%/> </div>    </p>
+电路成本太高！</p>
+</li>
+<li>
+<p>Shared transfer paths for registers <br />
+    A shared transfer object is a called a <strong>bus</strong>(总线)   <br />
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202212071027079.png" width = 30%/> </div>    </p>
 <p>A single bus driven by a multiplexer lowers cost, but limits the available transfers <br />
 不能同时 <span class="arithmatex">\(R0\leftarrow R1\)</span> <span class="arithmatex">\(R1\leftarrow R0\)</span>(类比：交换函数需要一个第三方变量)</p>
 </li>
@@ -2166,8 +2230,6 @@ By adding a mux between each shift register stage, data can be shifted or loaded
 <p><strong>Symbol for Synchronous Counter</strong>  </p>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202212072156682.png" width = 15%/> </div>
 
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
 <h3 id="other-counters-counter-with-parallel-load">Other Counters - Counter with Parallel Load<a class="headerlink" href="#other-counters-counter-with-parallel-load" title="Permanent link">&para;</a></h3>
 <p>在 D 输入触发器前加上 2-1 Mux(<code>Load</code> 是选择信号), 选择与门链的结果(<code>Load=0</code>) or 外部输入(<code>Load=1</code>)，可以实现并行加载和计数的选择控制</p>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202212072159957.png" width = 45%/> </div>
@@ -2200,12 +2262,16 @@ By adding a mux between each shift register stage, data can be shifted or loaded
 </table>
 <details class="example">
 <summary>Design Example:  Synchronous BCD</summary>
-<p>利用时序电路实现同步 BCD 计数器<br />
-* 状态表如下:(1010-1111 don't cares)  <br />
-<div align=center> <img src="http://cdn.hobbitqia.cc/202212072205418.png" width = 35%/> </div>  </p>
+<p>利用时序电路实现同步 BCD 计数器  </p>
 <ul>
-<li>基于上面的状态表，分别对 <span class="arithmatex">\(Q8,Q4,Q2,Q1\)</span> 画卡诺图<br />
-利用卡诺图两级优化  </li>
+<li>
+<p>状态表如下:(1010-1111 don't cares)  <br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212072205418.png" width = 35%/> </div>  </p>
+</li>
+<li>
+<p>基于上面的状态表，分别对 <span class="arithmatex">\(Q8,Q4,Q2,Q1\)</span> 画卡诺图<br />
+利用卡诺图两级优化  </p>
+</li>
 </ul>
 <div class="arithmatex">\[
 \begin{align*}
@@ -2275,7 +2341,7 @@ D8 &amp; = Q8 \oplus (Q1Q8 + Q1Q2Q4)
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月25日 15:14:42</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月31日 10:07:19</span>
       
         <br>
         创建日期:

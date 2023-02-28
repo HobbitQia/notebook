@@ -4,9 +4,45 @@ counter: True
 
 # **Combinational Logic Circuits**
 
+??? Abstract  
+    1. 布尔代数(Boolean)的概念  
+    Boolean Algebra   
+
+        * 变量与真值的关系  
+        Binary Variables  
+        * 二值逻辑和门  
+        Binary Logic and Gates
+        * 三种基本运算  
+        Three basic logic operations
+    2. 基本运算法则与电路符号  
+    Operation Definitions and Logic Gate Symbols
+    3. 基本运算公式、规则、反演，对偶规则  
+    basic identities, DeMorgan’s Theorem, Dual Theorem
+    4. 基本逻辑电路与其逻辑特性。与，或的开、关门特点，异或的同相、反相性质    
+    Logic Gates and implementation, AND, OR gates used to control gate open or close, 
+    XOR gates used as a controllable invertor
+    5. 逻辑函数的化简  
+    Simplification
+
+        * 化简的标准、公式化化简、最小项，最大项及其相互关系、卡诺图化简、质蕴涵项、必要质蕴涵项，门输入成本  
+        Boolean Algebraic Proof, Boolean Function Optimization, Canonical Forms, 
+        Minterms, Maxterms and their relationship, K-map simplification, Prime 
+        Implicants, Gate input Cotes
+        * 含任意项函数化简  
+        Don't Cares in K-Maps
+    6. 不同函数形式的变换及与最小项的关系    
+    SOM form, POM form, Standard forms, SOP form, POS form, Conversion between 
+    forms
+    7. 函数的五种表示形式：真值表、逻辑解析式、波形图、卡诺图、逻辑电路图  
+    Truth Table, Boolean Equations, Wave form, K-map, Logic Diagram
+    8. 高阻输出(三态门)  
+    Hi-Impedance Outputs, Three state buffer
+
 ## **Gate Circuits and Boolen Equations**
 
 ### **Binary Logic and Gates**
+
+#### Binary Logic
 
 **Binary variables** take one of two values. ***e.g.*** True/False, On/Off, Yes/No, 1/0...  
 
@@ -19,11 +55,11 @@ counter: True
 Truth tables a tabular listing of the values of a function for all possible combinations of values on its arguments.  
 
 **Logical Function Implementation**:  
-<div align=center> <img src="https://s2.loli.net/2022/09/21/ajembUl5EJZYKVB.png" width = 65%/> </div>  
+<div align=center> <img src="https://s2.loli.net/2022/09/21/ajembUl5EJZYKVB.png" width = 50%/> </div>  
 
-**Logical Gates**
+#### **Logical Gates**
 
-<div align=center> <img src="https://s2.loli.net/2022/09/21/UGSpbogHJDCtw6Y.png" width = 30%/> </div>  
+<div align=center> <img src="https://s2.loli.net/2022/09/21/UGSpbogHJDCtw6Y.png" width = 24%/> </div>  
 
 * PMOS / NMOS
     上面的是 PMOS, 下面是 NMOS.  PMOS 是 P 断 N 通, NMOS 是 N 断 P 通.  
@@ -72,7 +108,7 @@ The **dual** of an algebraic expression is obtained by interchanging + and · an
 **注: 非不变!**  
 **self-dual**: the dual expression = the original expression.  
 
-!!! Example
+??? Example "Boolean Algebraic Proofs 1"
     AB + A'C + BC = AB + A'C (Consensus Theorem)  
     Justification 1: 			1 . X = X  
     Justification 2: 			 
@@ -84,7 +120,7 @@ The **dual** of an algebraic expression is obtained by interchanging + and · an
     = AB . 1 + A’C . 1 = AB + A’C	X . 1 = X      
     最好将每一步用的公式写出来    
 
-!!! Example
+??? Example "Boolean Algebraic Proofs 2"
     (X+Y)'Z + XY' = Y'(X+Z)
     原式 = X’ Y’ Z + X Y’ (A + B)’ = A’ . B’ (DeMorgan’s Law)  
     = Y’ X’ Z + Y’ X A . B = B . A (Commutative Law)  
@@ -94,7 +130,7 @@ The **dual** of an algebraic expression is obtained by interchanging + and · an
     = Y’ (X + Z)		1 . A = A, A + B = B + A (Commutative Law)  
     <u>**留意定理 15**</u>
 
-!!! Example
+??? Example "Boolean Algebraic Proofs 3"
     <div align=center> <img src="https://s2.loli.net/2022/09/22/BjRTKiAuZDbUqOn.png" width = 80%/> </div>   
 
 **Complementing Functions**  
@@ -172,13 +208,13 @@ The complement of a function expressed as a sum of minterms is constructed by se
 It also can be writed as $\overline F= \overline m_1 \cdot \overline m_3 \cdot \overline m_5 \cdot \overline m_7 = M_1 \cdot M_3 \cdot M_5 \cdot M_7=\prod _M(1,3,5,7)$    
 
 !!! Note "Conversion between Forms"
-    **Idea**: $F=\sum_m m_i$ while $\overline F = \sum_M M_i$  
+    **Idea**: $F=\sum_m m_i$ while $\overline{F} = \sum_M M_i$  
     Maxterms 的求法不是很自然, 一般先求反函数的 Minterms 再将他们取反转为 Minterms.    
     
     * Find the function complement by swapping terms in the list with terms not in the list.  
     * Change from products to sums, or vice versa.  
 
-    如上文的例子中  $F(x,y,z)=\sum_m(1,3,5,7), \overline F=\sum_m(0,2,4,6)$ 故 $F = \prod_M(0,2,4,6)$
+    如上文的例子中  $F(x,y,z)=\sum_m(1,3,5,7), \overline{F}=\sum_m(0,2,4,6)$ 故 $F = \prod_M(0,2,4,6)$
 
 **Standard Forms**  
 
@@ -361,6 +397,7 @@ By placing “don't cares” (an “x” entry) in the function table or map, th
 * A **Prime Implicant**(质蕴含项) is a product term obtained by combining the maximum possible number of adjacent squares in the map into a rectangle with the number of squares a power of 2.  
 * A prime implicant is called an **Essential Prime Implicant**(必要质蕴涵项) if it is the only prime implicant that covers (includes) one or more minterms.  
 
+质蕴涵项是对某个 "1" 而言包括它的最大方形。对某个 "1" 而言如果它的质蕴涵项只有一个，那么它是必要的。
 
 1. Find All Prime Implicants
 2. Find Essential ones
@@ -422,7 +459,7 @@ Delay is usually measured at the 50% point with respect to the H and L output vo
 High-to-low ($t_{PHL}$) and low-to-high ($t_{PLH}$) output signal changes may have different propagation delays.  
 注意 HL/PL 指的是**输出端**的时间变化。
 
-<div align=center> <img src="https://s2.loli.net/2022/10/12/IkTbnZLFaNsQwHo.png" width = 70%/> </div>    
+<div align=center> <img src="https://s2.loli.net/2022/10/12/IkTbnZLFaNsQwHo.png" width = 70%/> </div>
 
 !!! Info
     如果这里有 n 个非门串联
@@ -463,6 +500,7 @@ The fan-out loading a gate’s output affects the gate’s propagation delay。
         SL is the number of standard loads the gate is driving, **i. e.**, its fan-out in standard loads
         For SL = 4.5, tpd = 0.165 ns  
         由工艺程度+负载情况决定  
+
 * Cost/Performance Tradeoffs  
 
     !!! Example
@@ -496,7 +534,7 @@ Gate classifications
 
 #### Buffer  
 
-<div align=center> <img src="https://s2.loli.net/2022/10/12/AwQ6U9eyPaKthMF.png" width = 40%/> </div>    
+<div align=center> <img src="https://s2.loli.net/2022/10/12/AwQ6U9eyPaKthMF.png" width = 40%/> </div>
 
 没有逻辑功能，但有很强的带负载的能力，能够拉高电平，降低传输延迟。
 
@@ -504,7 +542,7 @@ Gate classifications
 
 <div align=center> <img src="https://s2.loli.net/2022/10/12/5TbIg9RKjenUcLP.png" width = 40%/> </div>   
 
-与非也可以认为是*先非后或* $F=\overline  X + \overline Y + \overline Z$  
+与非也可以认为是*先非后或* $F=\overline{X} + \overline{Y} + \overline{Z}$  
 A NAND gate with one input degenerates to an inverter.  
 **Universal gate** - a gate type that can implement any Boolean function. 
 最高效
@@ -574,7 +612,8 @@ eXclusive OR(XOR) and XNORs gate
 有条件情况下允许门的输出接在一起。  
 
 * 3-State Buffer
-<div align=center> <img src="https://s2.loli.net/2022/10/12/c3V8MaJdS7ZqPTX.png" width = 40%/> </div>  
+<div align=center> <img src="https://s2.loli.net/2022/10/12/c3V8MaJdS7ZqPTX.png" width = 30%/> </div> 
+
 * Resolving 3-State Values on a  Connection  
 把两个三态门的输出接在一起：  
 *Resolution Table*  

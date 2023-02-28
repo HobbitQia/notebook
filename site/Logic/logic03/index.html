@@ -915,6 +915,47 @@
     Design Procedure
   </a>
   
+    <nav class="md-nav" aria-label="Design Procedure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hierarchical-design" class="md-nav__link">
+    Hierarchical Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-procedure_1" class="md-nav__link">
+    Design Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chip-design-styles" class="md-nav__link">
+    Chip Design Styles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping-to-nand-gates" class="md-nav__link">
+    Mapping to NAND gates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1764,6 +1805,47 @@
     Design Procedure
   </a>
   
+    <nav class="md-nav" aria-label="Design Procedure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hierarchical-design" class="md-nav__link">
+    Hierarchical Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-procedure_1" class="md-nav__link">
+    Design Procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chip-design-styles" class="md-nav__link">
+    Chip Design Styles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping-to-nand-gates" class="md-nav__link">
+    Mapping to NAND gates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2019,7 +2101,7 @@
 <div align=center> <img src="https://s2.loli.net/2022/10/19/mFjkGSI2oVJ7cPn.png" width = 50%/> </div>
 
 <p>no state</p>
-<p><strong>Hierarchical Design</strong></p>
+<h3 id="hierarchical-design"><strong>Hierarchical Design</strong><a class="headerlink" href="#hierarchical-design" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Decompose the function into smaller pieces called <em>blocks</em></li>
 <li>Decompose each block’s function into smaller blocks, repeating as necessary until all blocks are small enough</li>
@@ -2041,7 +2123,7 @@
 <li>A top-down design proceeds from an abstract, high-level specification to a more and more detailed design by decomposition and successive refinement   </li>
 <li>A bottom-up design starts with detailed primitive blocks and combines them into larger and more complex functional blocks</li>
 </ul>
-<p><strong>Design Procedure</strong></p>
+<h3 id="design-procedure_1"><strong>Design Procedure</strong><a class="headerlink" href="#design-procedure_1" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Specification</strong>  <br />
 Write a specification for the circuit if one is not already available</li>
@@ -2056,16 +2138,18 @@ Write a specification for the circuit if one is not already available</li>
 <li>
 <p>Apply <u>2-level and multiple-level</u> optimization</p>
 </li>
-<li>Draw a logic diagram or provide a netlist for the resulting circuit using ANDs, ORs, and inverters
-4. <strong>Technology Mapping</strong><br />
+<li>Draw a logic diagram or provide a netlist for the resulting circuit using ANDs, ORs, and inverters</li>
+</ul>
+</li>
+<li>
+<p><strong>Technology Mapping</strong><br />
 Map the logic diagram or netlist to the implementation 
 为什么需要这步？<br />
 很多时候需要用预先定义好的与非门，或者其他基本模块（如 XOR）直接套入电路中去，可以降低电路的成本和延迟。
-technology selected
-5. <strong>Verification</strong>
-Verify the correctness of the final design manually or using simulation.(仿真)</li>
-</ul>
+technology selected  </p>
 </li>
+<li><strong>Verification</strong>
+Verify the correctness of the final design manually or using simulation.(仿真)</li>
 </ol>
 <div class="admonition example">
 <p class="admonition-title">BCD to Excess-3 code converter</p>
@@ -2108,13 +2192,15 @@ W X Y Z 输出也需要四个逻辑函数。<br />
 <li>
 <p><strong>Technology Mapping</strong><br />
 Mapping with a library containing  inverters and 2-input NAND, 2-input NOR, and 2-2 AOI(与或非) gates  <br />
-<div align=center> <img src="https://s2.loli.net/2022/10/19/euHEt5Plhx7O2nW.png" width = 60%/> </div>  </p>
+<div align=center> <img src="https://s2.loli.net/2022/10/19/euHEt5Plhx7O2nW.png" width = 60%/> </div>   </p>
 </li>
-<li></li>
+<li>
+<p><strong>Verification</strong></p>
+</li>
 </ol>
 </div>
 <p>(为什么有的时候算 G, 有的时候算 GN. 因为触发器同时有原变量和反变量，所以很多时候不需要单独算 GN.）  </p>
-<p><strong>Chip Design Styles</strong></p>
+<h3 id="chip-design-styles"><strong>Chip Design Styles</strong><a class="headerlink" href="#chip-design-styles" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Full custom: 全部自己定制化，不用先定义好的模型。（因为库会考虑通用性，完整，带来成本开销比较高，延迟也相对大）<br />
 这种实现方式，研发成本高，但生产成本最低。 
@@ -2129,13 +2215,12 @@ Justifiable only for dense, fast chips with high sales volume.  </li>
 <li><strong>Cell library</strong> - a collection of cells available for design using a particular implementation technology</li>
 <li><strong>Cell characterization</strong> - a detailed specification of a cell for use by a designer - often based on actual cell design and fabrication and measured values<br />
 包括原理图，芯片面积，输入负载，延迟，工艺映射的模板库，硬件描述语言如何实现。</li>
-<li></li>
 </ul>
 <p><strong><em>e.g.</em></strong>  </p>
 <div align=center> <img src="https://s2.loli.net/2022/10/19/roAdtEPxz8CKRSB.png" width = 60%/> </div>
 
-<p><strong>Mapping to NAND gates</strong><br />
-如何只用 NAND/NOR 做工艺映射<br />
+<h3 id="mapping-to-nand-gates"><strong>Mapping to NAND gates</strong><a class="headerlink" href="#mapping-to-nand-gates" title="Permanent link">&para;</a></h3>
+<p>如何只用 NAND/NOR 做工艺映射<br />
 假设：不考虑 gate loading 和 delay. 可以有任意输入的与非/或非门。
 The mapping is accomplished by:</p>
 <ul>
@@ -2151,14 +2236,14 @@ The mapping is accomplished by:</p>
 <ul>
 <li>Canceling inverter pairs</li>
 </ul>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
+<details class="example">
+<summary>Example</summary>
 <p><div align=center> <img src="https://s2.loli.net/2022/10/19/a7HokC9vTUDYliy.png" width = 60%/> </div>  </p>
 <p>b -&gt; c 就是把 5 推出散出点，随后和其他非门相消。</p>
-</div>
+</details>
 <p>NONR 与 NAND 基本相同，除了 replace 这步。</p>
-<p><strong>Verification</strong><br />
-验证方法：真值表/仿真/逻辑函数</p>
+<h3 id="verification"><strong>Verification</strong><a class="headerlink" href="#verification" title="Permanent link">&para;</a></h3>
+<p>验证方法：真值表/仿真/逻辑函数</p>
 <p>小细节：仿真输出中有小脉冲，因为延迟产生。如果没有惯性延迟，我们要考虑把它吸收掉。<br />
 Behaviour Simulation 看不到，因为他不考虑传输延迟。多考虑使用有延迟的仿真</p>
 <h2 id="combinational-logic">Combinational Logic<a class="headerlink" href="#combinational-logic" title="Permanent link">&para;</a></h2>
@@ -2201,19 +2286,20 @@ Behaviour Simulation 看不到，因为他不考虑传输延迟。多考虑使�
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p><div align=center> <img src="https://s2.loli.net/2022/10/19/xRg2MLXJmoWhrI5.png" width = 60%/> </div><br />
-朴素实现 n-to-m 的译码器需要 <span class="arithmatex">\(n\times m\)</span> 个门.(<span class="arithmatex">\(2\times 2^n\)</span>)  </p>
+朴素实现 n-to-m 的译码器有 <span class="arithmatex">\(n\times m\)</span> 门输入成本.(<span class="arithmatex">\(2\times 2^n\)</span>)  </p>
 </div>
 <p>译码器常用于内存，接在地址总线。 <span class="arithmatex">\(32-2^{32}\)</span> 译码. 成本 <span class="arithmatex">\(32\times 2^{32}\)</span><br />
 如何减少实现成本？</p>
 <h4 id="decode-expansion"><strong>Decode Expansion</strong><a class="headerlink" href="#decode-expansion" title="Permanent link">&para;</a></h4>
-<p>3 8 译码器，输入分成两部分，A 用 1-2 译码器, B C 用 2-4 译码器
-<img alt="image.png" src="https://s2.loli.net/2022/10/19/OsIKYDaELmCX51A.png" /></p>
+<p>3-8 译码器，输入分成两部分，A 用 1-2 译码器, B C 用 2-4 译码器  </p>
+<div align=center> <img src="https://s2.loli.net/2022/10/19/OsIKYDaELmCX51A.png" width = 40%/> </div>
+
 <p>抽象为行列译码：一组是行译码，一组是列译码。
 对于 <span class="arithmatex">\(n - 2^n\)</span>
 设计两个译码器，一个 <span class="arithmatex">\(\dfrac{n}{2}\)</span> 输入 <span class="arithmatex">\(2^{\frac{n}{2}}\)</span> 的行译码器，一个 <span class="arithmatex">\(\dfrac{n}{2}\)</span> 输入 <span class="arithmatex">\(2^{\frac{n}{2}}\)</span> 输出的列译码器。  </p>
-<p>这样再把行列的输出用 2-AND 连接，我们只需要 <span class="arithmatex">\(2^{\frac{n}{2}}\times 2^{\frac{n}{2}}=2^n\)</span> 个 AND 门, 成本是 <span class="arithmatex">\(2^n\times 2 =2^{n+1}\)</span>.   </p>
+<p>这样再把行列的输出用 2-AND 连接，我们只需要 <span class="arithmatex">\(2^{\frac{n}{2}}\times 2^{\frac{n}{2}}=2^n\)</span> 个 AND 门, 中间与门阵列的成本是 <span class="arithmatex">\(2^n\times 2 =2^{n+1}\)</span>.   </p>
 <div align=center> <img src="https://s2.loli.net/2022/10/25/wYCzfQAUh1Xb26D.jpg" width = 40%/> </div>
-<p>译码延迟加大，提高成本。</p>
+<p>译码延迟加大，但降低成本。  </p>
 <h4 id="decoder-with-enable"><strong>Decoder with Enable</strong><a class="headerlink" href="#decoder-with-enable" title="Permanent link">&para;</a></h4>
 <div align=center> <img src="https://s2.loli.net/2022/10/19/uUB7Hqam6NbZ2VT.png" width = 50%/> </div>
 <div align=center> <img src="https://s2.loli.net/2022/10/19/yW1c8ZKViGx7rBH.png" width = 50%/> </div>
@@ -2232,17 +2318,17 @@ In this case, called <strong>demultiplexer(分配器)</strong>.<br />
 <li>m OR gates, one for each output</li>
 </ul>
 <p>把最小项或起来，得到任意的逻辑函数</p>
-<div class="admonition example">
-<p class="admonition-title">Binary Adder</p>
-<p><div align=center> <img src="https://s2.loli.net/2022/10/19/hDrbmXvcl4RwJ6z.png" width = 80%/> </div>   </p>
-</div>
+<details class="example">
+<summary>Binary Adder</summary>
+<p><div align=center> <img src="https://s2.loli.net/2022/10/19/hDrbmXvcl4RwJ6z.png" width = 60%/> </div>   </p>
+</details>
 <div class="admonition example">
 <p class="admonition-title">BCD-to-Segment Decoder</p>
-<p><div align=center> <img src="https://s2.loli.net/2022/10/25/CZpkVDJqXi56LcP.png" width = 70%/> </div> <br />
+<p><div align=center> <img src="https://s2.loli.net/2022/10/25/CZpkVDJqXi56LcP.png" width = 55%/> </div> <br />
 七段数码管里，亮不同的段即可表示不同的数字
-<div align=center> <img src="https://s2.loli.net/2022/10/25/bxNO3m2gfHlIaUn.png" width = 70%/> </div> <br />
-上为共阳极，下为共阴极
-什么意思？？？</p>
+<div align=center> <img src="https://s2.loli.net/2022/10/25/bxNO3m2gfHlIaUn.png" width = 55%/> </div> <br />
+上为共阳极（输出 0 才能亮，阴极相反）下为共阴极<br />
+输入不同的数字，亮对应的数码管，使其可以显示在数码管上  </p>
 </div>
 <h3 id="encoding">Encoding<a class="headerlink" href="#encoding" title="Permanent link">&para;</a></h3>
 <p>Encoding - the opposite of decoding - the conversion of an m-bit input code to a n-bit output code with <span class="arithmatex">\(n &lt;=m &lt;= 2^n\)</span>  such that each valid code word produces a unique output code<br />
@@ -2300,7 +2386,7 @@ Equation: <span class="arithmatex">\(Y=\overline S I_0+SI_1\)</span>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p><div align=center> <img src="https://s2.loli.net/2022/10/26/pm9vS4xE2ayCz6I.png" width =45%/> </div>   </p>
-<p>任何时刻译码器只有一个输出是 1, 相当于只有一个与门被 enable, 其余都 diable. 这样就能选择出 enable 的信号。
+<p>任何时刻译码器只有一个输出是 1, 相当于只有一个与门被 enable, 其余都 disable. 这样就能选择出 enable 的信号。
 <div align=center> <img src="https://s2.loli.net/2022/10/26/eMUhvDtrsTfzOlu.png" width =50%/> </div> </p>
 <p>多位的数据选择。这里有四组信号，每组信号都是四个输入的一位，但选择逻辑对于四组信号是一样的，因此最后选出来的都是同一组信号。即最后输出的四位信号都来自同一根总线，</p>
 </div>
@@ -2321,7 +2407,7 @@ Equation: <span class="arithmatex">\(Y=\overline S I_0+SI_1\)</span>
 <p>相当于利用 ABC 查表，如果 mux 选择出一位（根据真值表得到）<br />
 注意引脚顺序！</p>
 </div>
-<p>我们可以做进一步改进，n+1 变量用 <span class="arithmatex">\(2^n-1\)</span> mux</p>
+<p>我们可以做进一步改进，<span class="arithmatex">\(n+1\)</span> 变量用 <span class="arithmatex">\(2^n-1\)</span> mux</p>
 <p>对于 <span class="arithmatex">\(F(A,B,C)\)</span> 当 A B 确定时，最后可能输出只可能为 <span class="arithmatex">\(1,0,C,\overline C\)</span><br />
 利用这点我们可以改造真值表，</p>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202211051611610.png" width =60%/> </div>
@@ -2525,7 +2611,7 @@ S0 S1 的变化可以给加法器提供不同的输入，包括 -1(二进制每�
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:06:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月31日 10:07:19</span>
       
         <br>
         创建日期:

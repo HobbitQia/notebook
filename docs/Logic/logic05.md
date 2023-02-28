@@ -4,14 +4,15 @@ counter: True
 
 # Digital Hardware Implementation
 
-!!! Abstract 
-    Programmable Implementation Technologies  
-    
-    * Why Programmable Logic?  
-    * Programming Technologies  
-    * Read-Only Memories (ROMs)  
-    * Programmable Logic Arrays (PLAs)  
-    * Programmable Array Logic (PALs)
+!!! Abstract  
+    1. 可编程技术  
+    Programmable TechnologyROM、PAL、PLA，使用ROM、PAL和PLA来实现逻辑电路  
+    2. ROMReadOnly Memory  
+    结构、编程方法、作为存储器的使用  
+    3. PALProgrammable Array Logic  
+    结构、编程方法、使用时的主要约束、输出反馈的作用、多函数实现、编程表  
+    4. PLAProgrammable Logic Array  
+    结构、编程方法、使用时的主要约束、输出反向的作用、多函数实现、编程表
 
 ## Why Programmable Logic?
 

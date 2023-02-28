@@ -126,9 +126,6 @@ nav:
       - 链接: CSAPP/7.md
       - 异常控制流: CSAPP/8.md
       - 虚拟内存: CSAPP/9.md
-    - 数值分析:
-      - Mathematical Preliminaries: NA/NA01.md
-      - Solutions of Equations in One Variable: NA/NA02.md
     - 计算机逻辑设计基础: 
       - Logic/index.md
       - 数字系统和信息: Logic/logic01.md
@@ -160,6 +157,8 @@ nav:
       - 傅里叶变换: dip/dip10.md
       - 图像特征检测和提取: dip/dip11.md
       - 深度学习: dip/dip12.md
+    - 面向对象程序设计:
+      - OOP/oop1.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md

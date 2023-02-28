@@ -4,6 +4,47 @@ counter: True
 
 # Register and Register Transfers
 
+??? Abstract
+    1. 寄存器的概念、设计模型和结构  
+    Register, Register Design Models  
+
+        * 门控时钟、并行加载控制  
+        Registers with Clock Gating, Registers with Load-Controlled Feedback  
+    2. 寄存器传输操作基本概念  
+    Register transfer operations  
+
+        * 寄存器传输语言、基本微操作、条件传输原理、多寄存器传输的三种基本结构、原理和优缺点  
+        Register Transfer Language (RTL), Microoperations, conditional transfer, three types of Register Transfer Structures: Multiplexer-Based Transfers, Bus-Based Transfers, Three-State Bus  
+        * RTL与硬件描述语言的关系  
+        Relationship of RTL and Verilog, implementation of conditional operations
+    3. 移位寄存器的概念、结构  
+    Shift Registers  
+
+        * 串行输入、左移、右移、并行加载  
+        serial input, shift left, shift right, parallel load  
+    4. 计数器的功能、类型  
+    Function and type of counters  
+    
+        * 纹波计数器的结构、工作原理、优缺点  
+        Structure, theory, characteristic of ripple counter  
+        * 同步计数器的结构、工作原理、优缺点  
+        Structure, theory, characteristic of synchronous counter  
+        * 进位链、并行进位、并行加载  
+        carry chain, parallel carry, parallel load
+    5. 采用同步时序电路设计方法设计模n计数器  
+    Use the sequential logic model to designmodulo n counters  
+    6. 采用输出结果反馈的方法设计模n计数器  
+    Use output feedback model to design modulo n counters  
+    7. 寄存器设计  
+    RegisterDesign   
+
+        * 基于寄存器单元的设计方法，采用多路复用器设计  
+        RegisterCellDesign,Multiplexer Approach  
+        * 基于时序电路设计方法的寄存器设计  
+        Sequential Circuit Design Approach
+    8. 串行传输和微操作  
+    Serial Transfers and Microoperations
+
 ## Registers
 
 **Register** – a collection of binary storage elements 
@@ -45,7 +86,7 @@ Due to the large numbers of states and input combinations as n becomes large, th
 **Solution**  
 
 * **Registers with Clock Gating**  
-    The $\overline{Load} $(bar 表示低电平有效) signal enables the clock signal to pass through if 0 and prevents the clock signal from passing through if 1. (与 $Load$ 相反)
+    The $\overline{Load}$(bar 表示低电平有效) signal enables the clock signal to pass through if 0 and prevents the clock signal from passing through if 1. (与 $Load$ 相反)
     
     !!! Example 
         For Positive Edge-Triggered  or Negative Pulse Master-Slave Flip-flop:  
@@ -55,6 +96,7 @@ Due to the large numbers of states and input combinations as n becomes large, th
         当 $\overline{Load}$ 信号为 1 时，时钟信号不再随着外部时钟改变，这时就是保持原有的数据。
     **Clock Skew**   
     问题在于我们是同步时序电路实现，要求时钟统一提供，这样所有的触发器会在同一时间完成操作。使用门控时钟的方式会带来更多的触发时间，时序电路从同步变为了异步的时序电路（触发有前有后）  
+
 * **Registers with Load-Controlled Feedback**  
      Run the clock continuously, and  Selectively use a load control to change the register contents. 
 
@@ -180,6 +222,7 @@ Multiplexers connected to register inputs produce flexible transfer structures (
     There can be three distinct registers as source, so can simultaneously do any three register transfers. (totally flexible)  
     如我们可以既可以实现 $R0\leftarrow R1$ 也可以实现 $R0\leftrightarrow R1$  
     电路成本太高！
+
 * Shared transfer paths for registers   
     A shared transfer object is a called a **bus**(总线)     
     <div align=center> <img src="http://cdn.hobbitqia.cc/202212071027079.png" width = 30%/> </div>    
@@ -193,7 +236,6 @@ Multiplexers connected to register inputs produce flexible transfer structures (
 
 Same simultaneous transfer capability as multiplexer bus  
 我们将寄存器和三态门封装在一起考虑，那么我们只需要一个外部引脚(n bits), 但多路复用器的方法需要两根位宽是 n 的引脚（因为三态门的外部引脚是可以双向传输数据的）
-
 
 ### Shift Registers
 
@@ -265,7 +307,7 @@ up-counter: incrementer $S=A+1$
 <div align=center> <img src="http://cdn.hobbitqia.cc/202212072154054.png" width = 25%/> </div>  
 
 **Symbol for Synchronous Counter**  
-<div align=center> <img src="http://cdn.hobbitqia.cc/202212072156682.png" width = 15%/> </div>    
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212072156682.png" width = 15%/> </div> 
 
 ### Other Counters - Counter with Parallel Load
 
@@ -281,6 +323,7 @@ up-counter: incrementer $S=A+1$
 
 ??? Example "Design Example:  Synchronous BCD"
     利用时序电路实现同步 BCD 计数器  
+
     * 状态表如下:(1010-1111 don't cares)    
     <div align=center> <img src="http://cdn.hobbitqia.cc/202212072205418.png" width = 35%/> </div>  
     

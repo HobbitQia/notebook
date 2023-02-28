@@ -909,6 +909,26 @@
     Binary Logic and Gates
   </a>
   
+    <nav class="md-nav" aria-label="Binary Logic and Gates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-logic" class="md-nav__link">
+    Binary Logic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-gates" class="md-nav__link">
+    Logical Gates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1814,6 +1834,26 @@
     Binary Logic and Gates
   </a>
   
+    <nav class="md-nav" aria-label="Binary Logic and Gates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-logic" class="md-nav__link">
+    Binary Logic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-gates" class="md-nav__link">
+    Logical Gates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2085,8 +2125,56 @@
 
 
 <h1 id="combinational-logic-circuits"><strong>Combinational Logic Circuits</strong><a class="headerlink" href="#combinational-logic-circuits" title="Permanent link">&para;</a></h1>
+<details class="abstract">
+<summary>Abstract</summary>
+<ol>
+<li>
+<p>布尔代数(Boolean)的概念<br />
+Boolean Algebra   </p>
+<ul>
+<li>变量与真值的关系<br />
+Binary Variables  </li>
+<li>二值逻辑和门<br />
+Binary Logic and Gates</li>
+<li>三种基本运算<br />
+Three basic logic operations</li>
+</ul>
+</li>
+<li>
+<p>基本运算法则与电路符号<br />
+Operation Definitions and Logic Gate Symbols</p>
+</li>
+<li>基本运算公式、规则、反演，对偶规则<br />
+basic identities, DeMorgan’s Theorem, Dual Theorem</li>
+<li>基本逻辑电路与其逻辑特性。与，或的开、关门特点，异或的同相、反相性质  <br />
+Logic Gates and implementation, AND, OR gates used to control gate open or close, 
+XOR gates used as a controllable invertor</li>
+<li>
+<p>逻辑函数的化简<br />
+Simplification</p>
+<ul>
+<li>化简的标准、公式化化简、最小项，最大项及其相互关系、卡诺图化简、质蕴涵项、必要质蕴涵项，门输入成本<br />
+Boolean Algebraic Proof, Boolean Function Optimization, Canonical Forms, 
+Minterms, Maxterms and their relationship, K-map simplification, Prime 
+Implicants, Gate input Cotes</li>
+<li>含任意项函数化简<br />
+Don't Cares in K-Maps</li>
+</ul>
+</li>
+<li>
+<p>不同函数形式的变换及与最小项的关系  <br />
+SOM form, POM form, Standard forms, SOP form, POS form, Conversion between 
+forms</p>
+</li>
+<li>函数的五种表示形式：真值表、逻辑解析式、波形图、卡诺图、逻辑电路图<br />
+Truth Table, Boolean Equations, Wave form, K-map, Logic Diagram</li>
+<li>高阻输出(三态门)<br />
+Hi-Impedance Outputs, Three state buffer</li>
+</ol>
+</details>
 <h2 id="gate-circuits-and-boolen-equations"><strong>Gate Circuits and Boolen Equations</strong><a class="headerlink" href="#gate-circuits-and-boolen-equations" title="Permanent link">&para;</a></h2>
 <h3 id="binary-logic-and-gates"><strong>Binary Logic and Gates</strong><a class="headerlink" href="#binary-logic-and-gates" title="Permanent link">&para;</a></h3>
+<h4 id="binary-logic">Binary Logic<a class="headerlink" href="#binary-logic" title="Permanent link">&para;</a></h4>
 <p><strong>Binary variables</strong> take one of two values. <strong><em>e.g.</em></strong> True/False, On/Off, Yes/No, 1/0...  </p>
 <p><strong>Logical variables</strong> operate on <em>binary variables</em> and <em>binary values</em>.  </p>
 <ul>
@@ -2096,10 +2184,10 @@
 </ul>
 <p>Truth tables a tabular listing of the values of a function for all possible combinations of values on its arguments.  </p>
 <p><strong>Logical Function Implementation</strong>:  </p>
-<div align=center> <img src="https://s2.loli.net/2022/09/21/ajembUl5EJZYKVB.png" width = 65%/> </div>
+<div align=center> <img src="https://s2.loli.net/2022/09/21/ajembUl5EJZYKVB.png" width = 50%/> </div>
 
-<p><strong>Logical Gates</strong></p>
-<div align=center> <img src="https://s2.loli.net/2022/09/21/UGSpbogHJDCtw6Y.png" width = 30%/> </div>
+<h4 id="logical-gates"><strong>Logical Gates</strong><a class="headerlink" href="#logical-gates" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="https://s2.loli.net/2022/09/21/UGSpbogHJDCtw6Y.png" width = 24%/> </div>
 
 <ul>
 <li>PMOS / NMOS
@@ -2143,8 +2231,8 @@ The delay between an input change(s) and the resulting output change is the gate
 对偶式可以用于函数化简.<br />
 <strong>注: 非不变!</strong><br />
 <strong>self-dual</strong>: the dual expression = the original expression.  </p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
+<details class="example">
+<summary>Boolean Algebraic Proofs 1</summary>
 <p>AB + A'C + BC = AB + A'C (Consensus Theorem)<br />
 Justification 1:            1 . X = X<br />
 Justification 2:           <br />
@@ -2155,9 +2243,9 @@ X + X’ = 1<br />
 = AB (1 + C) + A’C (1 + B)  X(Y + Z) = XY +XZ (Distributive Law)<br />
 = AB . 1 + A’C . 1 = AB + A’C   X . 1 = X    <br />
 最好将每一步用的公式写出来    </p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
+</details>
+<details class="example">
+<summary>Boolean Algebraic Proofs 2</summary>
 <p>(X+Y)'Z + XY' = Y'(X+Z)
 原式 = X’ Y’ Z + X Y’ (A + B)’ = A’ . B’ (DeMorgan’s Law)<br />
 = Y’ X’ Z + Y’ X A . B = B . A (Commutative Law)<br />
@@ -2166,11 +2254,11 @@ X + X’ = 1<br />
 = Y’ . 1 . (Z + X)        A + A’ = 1
 = Y’ (X + Z)        1 . A = A, A + B = B + A (Commutative Law)<br />
 <u><strong>留意定理 15</strong></u></p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
+</details>
+<details class="example">
+<summary>Boolean Algebraic Proofs 3</summary>
 <p><div align=center> <img src="https://s2.loli.net/2022/09/22/BjRTKiAuZDbUqOn.png" width = 80%/> </div>   </p>
-</div>
+</details>
 <p><strong>Complementing Functions</strong><br />
 Use Demorgan's Theroem  </p>
 <ul>
@@ -2283,13 +2371,13 @@ The complement of a function expressed as a sum of minterms is constructed by se
 It also can be writed as <span class="arithmatex">\(\overline F= \overline m_1 \cdot \overline m_3 \cdot \overline m_5 \cdot \overline m_7 = M_1 \cdot M_3 \cdot M_5 \cdot M_7=\prod _M(1,3,5,7)\)</span>    </p>
 <div class="admonition note">
 <p class="admonition-title">Conversion between Forms</p>
-<p><strong>Idea</strong>: <span class="arithmatex">\(F=\sum_m m_i\)</span> while <span class="arithmatex">\(\overline F = \sum_M M_i\)</span><br />
+<p><strong>Idea</strong>: <span class="arithmatex">\(F=\sum_m m_i\)</span> while <span class="arithmatex">\(\overline{F} = \sum_M M_i\)</span><br />
 Maxterms 的求法不是很自然, 一般先求反函数的 Minterms 再将他们取反转为 Minterms.    </p>
 <ul>
 <li>Find the function complement by swapping terms in the list with terms not in the list.  </li>
 <li>Change from products to sums, or vice versa.  </li>
 </ul>
-<p>如上文的例子中  <span class="arithmatex">\(F(x,y,z)=\sum_m(1,3,5,7), \overline F=\sum_m(0,2,4,6)\)</span> 故 <span class="arithmatex">\(F = \prod_M(0,2,4,6)\)</span></p>
+<p>如上文的例子中  <span class="arithmatex">\(F(x,y,z)=\sum_m(1,3,5,7), \overline{F}=\sum_m(0,2,4,6)\)</span> 故 <span class="arithmatex">\(F = \prod_M(0,2,4,6)\)</span></p>
 </div>
 <p><strong>Standard Forms</strong>  </p>
 <ul>
@@ -2487,6 +2575,7 @@ F = (B + D)(A + B')  </p>
 <li>A <strong>Prime Implicant</strong>(质蕴含项) is a product term obtained by combining the maximum possible number of adjacent squares in the map into a rectangle with the number of squares a power of 2.  </li>
 <li>A prime implicant is called an <strong>Essential Prime Implicant</strong>(必要质蕴涵项) if it is the only prime implicant that covers (includes) one or more minterms.  </li>
 </ul>
+<p>质蕴涵项是对某个 "1" 而言包括它的最大方形。对某个 "1" 而言如果它的质蕴涵项只有一个，那么它是必要的。</p>
 <ol>
 <li>Find All Prime Implicants</li>
 <li>Find Essential ones</li>
@@ -2557,8 +2646,6 @@ High-to-low (<span class="arithmatex">\(t_{PHL}\)</span>) and low-to-high (<span
 注意 HL/PL 指的是<strong>输出端</strong>的时间变化。</p>
 <div align=center> <img src="https://s2.loli.net/2022/10/12/IkTbnZLFaNsQwHo.png" width = 70%/> </div>
 
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>如果这里有 n 个非门串联
@@ -2609,9 +2696,9 @@ SL is the number of standard loads the gate is driving, <strong>i. e.</strong>, 
 For SL = 4.5, tpd = 0.165 ns<br />
 由工艺程度+负载情况决定  </p>
 </div>
-<ul>
-<li>Cost/Performance Tradeoffs  </li>
-</ul>
+</li>
+<li>
+<p>Cost/Performance Tradeoffs  </p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>NAND gate G with 20 standard loads on its output has a delay of 0.45 ns and has a normalized cost of 2.0.<br />
@@ -2643,13 +2730,11 @@ A buffer H has a normalized cost of 1.5. The NAND gate driving the buffer with 2
 <h4 id="buffer">Buffer<a class="headerlink" href="#buffer" title="Permanent link">&para;</a></h4>
 <div align=center> <img src="https://s2.loli.net/2022/10/12/AwQ6U9eyPaKthMF.png" width = 40%/> </div>
 
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
 <p>没有逻辑功能，但有很强的带负载的能力，能够拉高电平，降低传输延迟。</p>
 <h4 id="nand">NAND<a class="headerlink" href="#nand" title="Permanent link">&para;</a></h4>
 <div align=center> <img src="https://s2.loli.net/2022/10/12/5TbIg9RKjenUcLP.png" width = 40%/> </div>
 
-<p>与非也可以认为是<em>先非后或</em> <span class="arithmatex">\(F=\overline  X + \overline Y + \overline Z\)</span><br />
+<p>与非也可以认为是<em>先非后或</em> <span class="arithmatex">\(F=\overline{X} + \overline{Y} + \overline{Z}\)</span><br />
 A NAND gate with one input degenerates to an inverter.<br />
 <strong>Universal gate</strong> - a gate type that can implement any Boolean function. 
 最高效</p>
@@ -2738,10 +2823,13 @@ A NAND gate with one input degenerates to an inverter.<br />
 <ul>
 <li>3-State Buffer</li>
 </ul>
-<div align=center> <img src="https://s2.loli.net/2022/10/12/c3V8MaJdS7ZqPTX.png" width = 40%/> </div>
-<p>* Resolving 3-State Values on a  Connection<br />
+<div align=center> <img src="https://s2.loli.net/2022/10/12/c3V8MaJdS7ZqPTX.png" width = 30%/> </div>
+
+<ul>
+<li>Resolving 3-State Values on a  Connection<br />
 把两个三态门的输出接在一起：<br />
-<em>Resolution Table</em>  </p>
+<em>Resolution Table</em>  </li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -2803,7 +2891,7 @@ Numbers of inputs on first-level “gates” or directly to second-level “gate
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:06:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月31日 10:07:19</span>
       
         <br>
         创建日期:

@@ -4,21 +4,69 @@ counter: True
 
 # Sequential Circuits
 
-!!! Abstract
-    * Part 1 - Storage Elements and Analysis  
-        * Introduction to sequential circuits   
-        * Types of sequential circuits  
-        * Storage elements  
-        * Latches  
-        * Flip-flops  
-        * Sequential circuit analysis  
-        * State tables  
-        * State diagrams  
-        * Equivalent states  
-        * Moore and Mealy Models  
-    * Part 2 - Sequential Circuit Design  
-    * Part 3 – State Machine Design  
+??? Abstract
+    1. 时序电路概念和组成  
+    Introduction to Sequential Circuits  
+    2. 输出方程、激励函数、次态方程、输出方程类型   
+    Output function, Excitationfunction, Next state function, type of output functions  
+    3. 时序电路类型  
+    Types of sequential circuits  
+    4. 电路延迟模型  
+    Circuit delay model  
+    5. 锁存器与触发器   
+    Latch and Flip-Flop
 
+        * S-R锁存器的原理、特征表、特征方程，内部电路分析，不确定状态的原因及出现条件  
+        Analysis of Basic S-R Latch, Characteristic Table, Characteristic Equation, reason of unstable state  
+        * D锁存器、D触发器的原理、特征表、特征方程，内部电路分析   
+        Theory of D Latch and D Flip-Flop, Characteristic Table, Characteristic Equation  
+        * JK触发器、T触发器的行为、特征表、特征方程  
+        Behavior of JK Flip-Flop, TFlip-Flop, Characteristic Table, Characteristic Equation  
+        * 脉冲触发和边沿触发的概念，脉冲触发的一次性采样行为原因  
+        Concept  of  Master-slave and edge-triggered flip-flop, 1s catching of Mast-slave flip-flop  
+        * 锁存器和触发器的时序，建立时间、保持时间、传输延迟等各种时序成分  
+        Flip-Flop Timing Parameters, setup time, hold time, propagation delay  
+        * 各种触发器的图形符号  
+        Symbols of Flip-Flops  
+    6. 状态表、状态图  
+    State Table, State Diagram  
+    7. 同步时序电路分析  
+    Sequential Circuit Analysis  
+    
+        * 根据给定电路，写出输出方程和激励函数/次态方程    
+        Derive output functions and excitationfunction/Next state function  
+        * 列出状态真值表  
+        ObtainState truth table  
+        * 列出时序电路的次态  
+        List next state of sequential circuit  
+        * 作状态表和状态图  
+        ObtainState Table and State Diagram  
+        * 分析时序电路的外部性能  
+        Analysis the behavior of sequential circuit  
+        * 对电路进行评述，通常需检查自恢复功能及画出时序波形图  
+        Evaluate the circuit, validate the self-recovery ability  
+    8. 电路和系统级时序分析，时序电路各路径的时序成分分析计算  
+    Circuit and System Level Timing, analyze and compute time component along any path of the sequential circuit    
+    9．米利型和穆尔型电路分析  
+    analyze Mealy and Moore type circuit  
+    10．时序电路设计  
+    Sequential Circuit Design  
+        * 写出规格说明书  
+        Specification  
+        * 系统描述–从问题陈述中得出状态图和状态表  
+        Formulation -Obtain a state diagram or state table  
+        * 状态赋值–为状态表中的每个状态赋二进制代码  
+        State Assignment -Assign binary codes to the states  
+        * 得到触发器的输入方程-选择触发器的类型，从状态表的次态栏得到触发器的输入方程  
+        Flip-Flop Input Equation Determination-Select flip-flop types and derive flip-flop equations from next state entries in the table  
+        * 确定输出方程-从状态表的输出栏得到输出方程  
+        Output Equation Determination-Derive output equations from output entries in the table  
+        * 优化–优化触发器的输入方程和输出方程   
+        Optimization-Optimize the equations  
+        * 工艺映射–根据方程画出电路图，并映射到触发器和门工艺  
+        Technology Mapping-Find  circuit from equations and map to flip-flops and gate technology  
+        * 验证–验证最终设计的正确性  
+        Verification-Verify correctness of final design
 
 ## Storage Elements and Analysis
 
@@ -164,7 +212,7 @@ Q changes to the value on D applied at the positive clock edge within timing con
 * **Direct Inputs**    
 Direct $R$ and/or $S$ inputs that control the state of the latches within the flip-flops are used for this *initialization*.   
 
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211111118511.png" width = 20%/> </div>    
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211111118511.png" width = 20%/> </div>
 
 ### Analysis
 
@@ -188,8 +236,8 @@ Direct $R$ and/or $S$ inputs that control the state of the latches within the fl
     * state: $(A(t),B(t))$
     
     * Boolean equations for the functions
-    $D_A(t) = A(t)x(t)+ B(t)x(t), A(t+1)=A(t)x(t)+ B(t)x(t), D_B(t) = A(t)x(t),B(t+1) = A(t)x(t), y(t) = x(t)(B(t) + A(t))$    
-    为什么 D = 次态方程
+    $D_A(t) = A(t)x(t)+ B(t)x(t), A(t+1)=A(t)x(t)+ B(t)x(t)$,   
+    $D_B(t) = A(t)x(t),B(t+1) = A(t)x(t), y(t) = x(t)(B(t) + A(t))$    
 
 #### **State table**  
 
@@ -204,7 +252,7 @@ Direct $R$ and/or $S$ inputs that control the state of the latches within the fl
     代入刚刚写出的式子即可   
     也可以使用另一种画法：(二维状态表，按照格雷码的顺序排列)  
     
-    <div align=center> <img src="http://cdn.hobbitqia.cc/202211182025700.png" width = 40%/> </div>   
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202301010950173.png" width = 40%/> </div>   
 
 !!! Note 
     在画状态表时，无法达到的状态也要画出来。因为可能程序受到某种扰动或者异常，可能会跳到原先无法到达的状态。
@@ -326,7 +374,7 @@ A state is an abstraction of the history of the past applied inputs to the circu
     如果将刚刚的状态图 转为Moore 模型，我们需要再加一个状态 E, 当到达 E 状态时表明我们得到了序列 1101.   
     <div align=center> <img src="http://cdn.hobbitqia.cc/202211231112070.png" width = 50%/> </div>  
 
-    观察可以发现, B 和 D 对同样的输入，次态都是一样的。但是并不是等效状态，因为二者的输出不同。 
+    观察可以发现, B 和 E 对同样的输入，次态都是一样的。但是并不是等效状态，因为二者的输出不同。 
 
 The *Moore* model for a sequence recognizer usually has **more states** than the *Mealy* model.
 

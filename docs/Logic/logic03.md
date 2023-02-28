@@ -21,7 +21,7 @@ A combinational logic circuit has:
 
 no state
 
-**Hierarchical Design**
+### **Hierarchical Design**
 
 * Decompose the function into smaller pieces called *blocks*
 * Decompose each block’s function into smaller blocks, repeating as necessary until all blocks are small enough
@@ -44,7 +44,7 @@ no state
 * A bottom-up design starts with detailed primitive blocks and combines them into larger and more complex functional blocks
 
 
-**Design Procedure**
+### **Design Procedure**
 
 1. **Specification**    
 Write a specification for the circuit if one is not already available
@@ -56,11 +56,12 @@ Write a specification for the circuit if one is not already available
 
     * Apply <u>2-level and multiple-level</u> optimization
     * Draw a logic diagram or provide a netlist for the resulting circuit using ANDs, ORs, and inverters
+
 4. **Technology Mapping**  
 Map the logic diagram or netlist to the implementation 
 为什么需要这步？  
 很多时候需要用预先定义好的与非门，或者其他基本模块（如 XOR）直接套入电路中去，可以降低电路的成本和延迟。
-technology selected
+technology selected  
 5. **Verification**
 Verify the correctness of the final design manually or using simulation.(仿真)
 
@@ -93,13 +94,14 @@ Verify the correctness of the final design manually or using simulation.(仿真)
         为什么要算 T1 非：ABCD 是外部输入的引脚，一般同时有原变量和反变量。但 T1 是内部产生的信号，对这个信号的非要自己计算得到。
     4. **Technology Mapping**  
     Mapping with a library containing  inverters and 2-input NAND, 2-input NOR, and 2-2 AOI(与或非) gates    
-    <div align=center> <img src="https://s2.loli.net/2022/10/19/euHEt5Plhx7O2nW.png" width = 60%/> </div>  
-    5. 
+    <div align=center> <img src="https://s2.loli.net/2022/10/19/euHEt5Plhx7O2nW.png" width = 60%/> </div>   
+
+    5. **Verification**
 
 
 (为什么有的时候算 G, 有的时候算 GN. 因为触发器同时有原变量和反变量，所以很多时候不需要单独算 GN.）  
 
-**Chip Design Styles**
+### **Chip Design Styles**
 
 * Full custom: 全部自己定制化，不用先定义好的模型。（因为库会考虑通用性，完整，带来成本开销比较高，延迟也相对大）  
 这种实现方式，研发成本高，但生产成本最低。 
@@ -114,12 +116,12 @@ Cell Libraries
 * **Cell library** - a collection of cells available for design using a particular implementation technology
 * **Cell characterization** - a detailed specification of a cell for use by a designer - often based on actual cell design and fabrication and measured values  
 包括原理图，芯片面积，输入负载，延迟，工艺映射的模板库，硬件描述语言如何实现。
-* 
 
 ***e.g.***  
 <div align=center> <img src="https://s2.loli.net/2022/10/19/roAdtEPxz8CKRSB.png" width = 60%/> </div>  
 
-**Mapping to NAND gates**  
+### **Mapping to NAND gates**  
+
 如何只用 NAND/NOR 做工艺映射  
 假设：不考虑 gate loading 和 delay. 可以有任意输入的与非/或非门。
 The mapping is accomplished by:
@@ -132,14 +134,14 @@ The mapping is accomplished by:
 
 * Canceling inverter pairs
 
-!!! Example
+??? Example
     <div align=center> <img src="https://s2.loli.net/2022/10/19/a7HokC9vTUDYliy.png" width = 60%/> </div>  
 
     b -> c 就是把 5 推出散出点，随后和其他非门相消。
 
 NONR 与 NAND 基本相同，除了 replace 这步。
 
-**Verification**  
+### **Verification**  
 验证方法：真值表/仿真/逻辑函数
 
 小细节：仿真输出中有小脉冲，因为延迟产生。如果没有惯性延迟，我们要考虑把它吸收掉。  
@@ -191,23 +193,23 @@ The value on the output when it is disable can be Hi-Z (as for three-state buffe
 
 !!! Example 
     <div align=center> <img src="https://s2.loli.net/2022/10/19/xRg2MLXJmoWhrI5.png" width = 60%/> </div>  
-    朴素实现 n-to-m 的译码器需要 $n\times m$ 个门.($2\times 2^n$)  
+    朴素实现 n-to-m 的译码器有 $n\times m$ 门输入成本.($2\times 2^n$)  
 
 译码器常用于内存，接在地址总线。 $32-2^{32}$ 译码. 成本 $32\times 2^{32}$  
 如何减少实现成本？
 
 #### **Decode Expansion**
 
-3 8 译码器，输入分成两部分，A 用 1-2 译码器, B C 用 2-4 译码器
-![image.png](https://s2.loli.net/2022/10/19/OsIKYDaELmCX51A.png)
+3-8 译码器，输入分成两部分，A 用 1-2 译码器, B C 用 2-4 译码器  
+<div align=center> <img src="https://s2.loli.net/2022/10/19/OsIKYDaELmCX51A.png" width = 40%/> </div>
 
 抽象为行列译码：一组是行译码，一组是列译码。
 对于 $n - 2^n$
 设计两个译码器，一个 $\dfrac{n}{2}$ 输入 $2^{\frac{n}{2}}$ 的行译码器，一个 $\dfrac{n}{2}$ 输入 $2^{\frac{n}{2}}$ 输出的列译码器。  
 
-这样再把行列的输出用 2-AND 连接，我们只需要 $2^{\frac{n}{2}}\times 2^{\frac{n}{2}}=2^n$ 个 AND 门, 成本是 $2^n\times 2 =2^{n+1}$.   
+这样再把行列的输出用 2-AND 连接，我们只需要 $2^{\frac{n}{2}}\times 2^{\frac{n}{2}}=2^n$ 个 AND 门, 中间与门阵列的成本是 $2^n\times 2 =2^{n+1}$.   
 <div align=center> <img src="https://s2.loli.net/2022/10/25/wYCzfQAUh1Xb26D.jpg" width = 40%/> </div>  
-译码延迟加大，提高成本。
+译码延迟加大，但降低成本。  
 
 #### **Decoder with Enable**
 
@@ -229,15 +231,15 @@ Implement m functions of n variables with:
 
 把最小项或起来，得到任意的逻辑函数
 
-!!! Example "Binary Adder"
-    <div align=center> <img src="https://s2.loli.net/2022/10/19/hDrbmXvcl4RwJ6z.png" width = 80%/> </div>   
+??? Example "Binary Adder"
+    <div align=center> <img src="https://s2.loli.net/2022/10/19/hDrbmXvcl4RwJ6z.png" width = 60%/> </div>   
 
 !!! Example "BCD-to-Segment Decoder"
-    <div align=center> <img src="https://s2.loli.net/2022/10/25/CZpkVDJqXi56LcP.png" width = 70%/> </div>   
+    <div align=center> <img src="https://s2.loli.net/2022/10/25/CZpkVDJqXi56LcP.png" width = 55%/> </div>   
     七段数码管里，亮不同的段即可表示不同的数字
-    <div align=center> <img src="https://s2.loli.net/2022/10/25/bxNO3m2gfHlIaUn.png" width = 70%/> </div>   
-    上为共阳极，下为共阴极
-    什么意思？？？
+    <div align=center> <img src="https://s2.loli.net/2022/10/25/bxNO3m2gfHlIaUn.png" width = 55%/> </div>   
+    上为共阳极（输出 0 才能亮，阴极相反）下为共阴极  
+    输入不同的数字，亮对应的数码管，使其可以显示在数码管上  
     
 ### Encoding
 
@@ -298,7 +300,7 @@ In general, $2^n$-to-1-line multiplexers:
 !!! Example
     <div align=center> <img src="https://s2.loli.net/2022/10/26/pm9vS4xE2ayCz6I.png" width =45%/> </div>   
     
-    任何时刻译码器只有一个输出是 1, 相当于只有一个与门被 enable, 其余都 diable. 这样就能选择出 enable 的信号。
+    任何时刻译码器只有一个输出是 1, 相当于只有一个与门被 enable, 其余都 disable. 这样就能选择出 enable 的信号。
     <div align=center> <img src="https://s2.loli.net/2022/10/26/eMUhvDtrsTfzOlu.png" width =50%/> </div> 
 
     多位的数据选择。这里有四组信号，每组信号都是四个输入的一位，但选择逻辑对于四组信号是一样的，因此最后选出来的都是同一组信号。即最后输出的四位信号都来自同一根总线，
@@ -324,7 +326,7 @@ In general, $2^n$-to-1-line multiplexers:
     相当于利用 ABC 查表，如果 mux 选择出一位（根据真值表得到）  
     注意引脚顺序！
     
-我们可以做进一步改进，n+1 变量用 $2^n-1$ mux
+我们可以做进一步改进，$n+1$ 变量用 $2^n-1$ mux
 
 对于 $F(A,B,C)$ 当 A B 确定时，最后可能输出只可能为 $1,0,C,\overline C$  
 利用这点我们可以改造真值表，

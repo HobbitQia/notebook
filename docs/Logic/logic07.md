@@ -4,11 +4,37 @@ counter: True
 
 # Memory Basis
 
-!!! Abstract 
-    * Memory definitions  
-    * Random Access Memory (RAM)
-    * Static RAM (SRAM) integrated circuits
-    * Dynamic RAM (DRAM) integrated circuits
+??? Abstract 
+    1. 存储器基本概念  
+    Basic concepts of memory  
+
+        * 存储器定义、RAM的定义、存储器地址概念定义、存储器基本数据单元和操作  
+        Memory definitions, RAM, memory address, RAM cell, basic memory operations  
+    2. 存储器的组织  
+    memory organization  
+
+        * 地址、字长和存储单元个数之间关系  
+        Relationship between address, word width and storage cells  
+    3. 存储器的基本结构框图  
+    Memory block diagram    
+    
+        * 地址线、数据线、控制线    
+        Address lines, Data lines, Control lines  
+    4. 读、写过程中各信号的时序、DRAM的访问时序  
+    Memory Read or Write Operation Timing, DRAM Read Timing  
+    5. 静态RAM和动态RAM的基本概念  
+    Basic concepts of Static RAM and Dynamic RAM  
+        
+        * 静态存储器SRAM结构、动态存储器DRAM结构、区别  
+        Structure and difference of SRAM and DRAM   
+    6. DRAM控制电路与刷新  
+    DRAM block diagram and refresh  
+    7. 两次（分时）地址加载，先加载行地址后加载列地址  
+    Row Address and Column Address  
+    8. 存储器的字扩展和位扩展方法  
+    Memory word expansion and width expansion  
+    9. 同步SDRAM的猝发读的基本概念  
+    Burst read in SDRAM  
 
 ## Memory Concepts
 

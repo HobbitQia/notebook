@@ -910,6 +910,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#information-representation" class="md-nav__link">
+    Information Representation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#number-systems-representation" class="md-nav__link">
     Number Systems - Representation
   </a>
@@ -949,6 +956,20 @@
           <li class="md-nav__item">
   <a href="#parity-bit-error-detection-codes" class="md-nav__link">
     Parity Bit Error-Detection Codes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gray-codes" class="md-nav__link">
+    Gray Codes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unicode" class="md-nav__link">
+    Unicode
   </a>
   
 </li>
@@ -1646,6 +1667,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#information-representation" class="md-nav__link">
+    Information Representation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#number-systems-representation" class="md-nav__link">
     Number Systems - Representation
   </a>
@@ -1689,6 +1717,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#gray-codes" class="md-nav__link">
+    Gray Codes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unicode" class="md-nav__link">
+    Unicode
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1719,9 +1761,44 @@
 
 
 <h1 id="digital-systems-and-information">Digital Systems and Information<a class="headerlink" href="#digital-systems-and-information" title="Permanent link">&para;</a></h1>
+<details class="abstract">
+<summary>Abstract</summary>
+<ol>
+<li>数字系统：数字信号，典型数字系统。  <br />
+Digital Systems: Digital signal, typical digital systems</li>
+<li>计算机内信息表示法  <br />
+Information Representation</li>
+<li>
+<p>数制   <br />
+Number systems   </p>
+<ul>
+<li>进位计数制的概念和十、二、十六、八制数的表示<br />
+Positive radix, positional number systems, decimal, binary, octal and hexadecimal  </li>
+<li>不同进位数制之间的转换<br />
+Conversion Between Bases</li>
+</ul>
+</li>
+<li>
+<p>编码的概念及带符号二进制数的编码。<br />
+Representation for unsigned and signed binary numbers  </p>
+<ul>
+<li>真值、指定长度的机器数：原码、反码、补码。<br />
+Magnitude, Signed-Magnitude, Signed-1’s Complement, Signed-2’s Complement    </li>
+<li>十进制数的二进制编码：BCD 码<br />
+Binary coded decimal (BCD)  </li>
+<li>字符编码：ASCII<br />
+ASCII Character Codes</li>
+</ul>
+</li>
+<li>
+<p>各种信息的编码<br />
+Non-numeric Binary Codes</p>
+</li>
+</ol>
+</details>
 <h2 id="digital-systems">Digital Systems<a class="headerlink" href="#digital-systems" title="Permanent link">&para;</a></h2>
 <h3 id="types-of-digital-systems">Types of Digital Systems<a class="headerlink" href="#types-of-digital-systems" title="Permanent link">&para;</a></h3>
-<div align=center> <img src="https://s2.loli.net/2022/09/14/UV18FgmT9fyNPYH.png" width = 60%/> </div>
+<div align=center> <img src="https://s2.loli.net/2022/09/14/UV18FgmT9fyNPYH.png" width = 40%/> </div>
 
 <ul>
 <li>no state presen: Combinational Logic System(output = Function(Input)).  </li>
@@ -1762,12 +1839,18 @@
 <li>量化: (带误差) 离散化数据  </li>
 </ul>
 </div>
+<h2 id="information-representation">Information Representation<a class="headerlink" href="#information-representation" title="Permanent link">&para;</a></h2>
+<p>Binary values are represented abstractly by:  </p>
+<ul>
+<li>digits 0 and 1</li>
+<li>words (symbols) False (F) and True (T)</li>
+<li>words (symbols) Low (L) and High (H) </li>
+<li>and words On and Off.</li>
+</ul>
+<p>Binary values are represented by values or ranges of values of physical quantities</p>
 <p><strong>信号的分类:</strong>  </p>
 <div align=center> <img src="https://s2.loli.net/2022/09/14/xgXCaJe28Gj1ouI.png" width = 60%/> </div>
 
-<div class="admonition question">
-<p class="admonition-title">为什么最后一个时间也是离散的</p>
-</div>
 <p>为什么选择二进制数值表示? ---更好<strong>对抗数据传输中的干扰</strong>  </p>
 <div align=center> <img src="https://s2.loli.net/2022/09/14/kyOa5pP7oFs24ic.png" width = 50%/> </div>
 <p>噪声容限 0.3V(0.6-0.9 0.1-0.4之间可以继续保留信息的正确性)  </p>
@@ -1776,16 +1859,16 @@
 <span class="arithmatex">\(A_{n-1}A_{n-2}\cdots A_1A_0.A_{-1}A_{-2}\dots A_{-m}\)</span>.<br />
 <span class="arithmatex">\(Number_r = (\sum\limits_{i=0}^{i=n-1}A_i\times r^i)+(\sum\limits_{j=-m}^{j=-1}A_j\times r^j)\)</span></p>
 <ul>
-<li><span class="arithmatex">\(2^10 = 1024\)</span> is Kilo, denoted "K".  </li>
-<li><span class="arithmatex">\(2^20\)</span> is Mega, denoted "M".  </li>
-<li><span class="arithmatex">\(2^30\)</span> is Giga, denoted "G".  </li>
-<li><span class="arithmatex">\(2^40\)</span> is Tera, denoted "T".  </li>
+<li><span class="arithmatex">\(2^{10} = 1024\)</span> is Kilo, denoted "K".  </li>
+<li><span class="arithmatex">\(2^{20}\)</span> is Mega, denoted "M".  </li>
+<li><span class="arithmatex">\(2^{30}\)</span> is Giga, denoted "G".  </li>
+<li><span class="arithmatex">\(2^{40}\)</span> is Tera, denoted "T".  </li>
 </ul>
 <h3 id="binary-arithmetic">Binary Arithmetic<a class="headerlink" href="#binary-arithmetic" title="Permanent link">&para;</a></h3>
 <p><strong>二进制乘法:</strong> 根据乘数对应位是 1 还是 0, 如果是 1 就移位并加起来.  </p>
 <p><strong>Convert between Bases</strong>  </p>
 <ul>
-<li><strong>Integral Part</strong>
+<li><strong>Integral Part</strong><br />
 Repeatedly <em>divide</em> the number by the new radix and save the remainders. The digits for the new radix are the remainders in reverse order of their computation. If the new radix is &gt; 10, then convert all remainders &gt; 10 to digits A, B, ...  </li>
 <li><strong>Fractional Part</strong><br />
 Repeatedly <em>multiply</em> the fraction by the new radix and save the integer digits that result.  The digits for the new radix are the integer digits in order of their computation.If the new radix is &gt; 10, then convert all integers &gt; 10 to digits A, B, ... </li>
@@ -1797,6 +1880,19 @@ Repeatedly <em>multiply</em> the fraction by the new radix and save the integer 
 </div>
 <h3 id="binary-coding">Binary Coding<a class="headerlink" href="#binary-coding" title="Permanent link">&para;</a></h3>
 <p>二进制编码</p>
+<ul>
+<li>Numeric  <ul>
+<li>Must represent range of data needed</li>
+<li>Very desirable to represent data such that simple, straightforward computation for common arithmetic operations permitted</li>
+<li>Tight relation to binary numbers</li>
+</ul>
+</li>
+<li>Non-numeric  <ul>
+<li>Greater flexibility since arithmetic operations not applied.</li>
+<li>Not tied to binary numbers</li>
+</ul>
+</li>
+</ul>
 <p>Given M elements to be reprented by a binary code, the minimum number of bits, n satisfies <span class="arithmatex">\(2^n&gt;=M&gt;2^{n-1}\)</span> so <span class="arithmatex">\(n=\lfloor{log_2{M}}\rfloor\)</span>.  </p>
 <p>可以 r = 2 表示 4 个元素(00, 01, 10, 11), 也可以 r = 4(0001, 0010, 0100, 1000). <br />
 The second code is called <strong>"one hot" code(独热编码)</strong>.  </p>
@@ -1814,7 +1910,7 @@ The second code is called <strong>"one hot" code(独热编码)</strong>.  </p>
 <p><strong>注:</strong><br />
 13 = D = 1101(进制转化), 但在以上方式中会被表示成 0001 0011(BCD码), 我们应该分别编码每个数字.   </p>
 <h4 id="bcd-codes">BCD Codes<a class="headerlink" href="#bcd-codes" title="Permanent link">&para;</a></h4>
-<p>可以计算, 但要修正.  +</p>
+<p>可以计算，但要修正。（超过 9 要加 6）</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p><div align=center> <img src="https://s2.loli.net/2022/09/16/9tD37pBY5k68PEu.png" width = 60%/> </div>  </p>
@@ -1836,6 +1932,26 @@ The second code is called <strong>"one hot" code(独热编码)</strong>.  </p>
 <p>用来检测数据传输中是否发生错误</p>
 <p>A code word has <strong>even parity</strong> if the number of 1’s in the code word is even.<br />
 A code word has <strong>odd parity</strong> if the number of 1’s in the code word is odd.</p>
+<p>添加一位，表示编码的奇偶性。对偶校验来说，当 1 的个数为偶数时校验位为 0; 对奇校验来说，当 1 的个数为奇数时校验位为 1.  </p>
+<h4 id="gray-codes">Gray Codes<a class="headerlink" href="#gray-codes" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212311059553.png" width = 60%/> </div>
+
+<div class="admonition example">
+<p class="admonition-title">应用: 光学传感器</p>
+<p>编码器盘包含不透明区域和透明区域。<br />
+Opaque表示0 ,clear表示1。光通过编码器的每一个环，与编码的一个位相对应，照射在传感器上，产生一个0或1<br />
+<div align=center> <img src="https://s2.loli.net/2022/09/22/UclV3JgmaqixPGT.png" width = 80%/> </div>  </p>
+<p>角编码器, 测量转轴转向的角度.<br />
+三个传感器不会在同一条直线(安装误差), 存在中间状况.<br />
+但格雷编码盘, 相邻编码只差一位, 对结果不会带来影响.  </p>
+<p>例如对于二进制编码 011 和 100 来说，还有可能出现 000, 001, 010, 110, 101, 111; 但对于格雷编码，任何时候他都能产生正确的编号。</p>
+</div>
+<h4 id="unicode">Unicode<a class="headerlink" href="#unicode" title="Permanent link">&para;</a></h4>
+<p>Unicode extends ASCII to 65536(ASCII 最多只有 7 个二进制位, 后扩展为 8 个)</p>
+<ul>
+<li>2 bytes(16 bits) code words  </li>
+<li>可以用来编码中文/韩文...等字符(ASCII 只能处理英文字母)</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
