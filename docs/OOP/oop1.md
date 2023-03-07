@@ -4,6 +4,12 @@ counter: True
 
 # Introduction
 
+??? Abstract
+    * Input and output in C++ with `cin` and `cout`
+    * The string class, the dot `.` operator
+    * Pointer to an object, the arrow `->` operator
+    * Dynamic memory allocation with `new` and `delet`
+
 ## The First C++ Program
 
 ``` C++

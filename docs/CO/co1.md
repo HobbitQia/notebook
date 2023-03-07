@@ -1,3 +1,8 @@
+---
+counter: True  
+---
+
+# Computer Abstractions and Technology
 
 ## 8 Ideas in Computer Architecture
 
@@ -68,4 +73,37 @@ Performance depends on
 * Algorithm: affects IC, possibly CPI
 * Programming language: affects IC, CPI
 * Compiler: affects IC, CPI
-* Instruction set architecture: 
+* Instruction set architecture
+
+### Incredible performance improvement
+
+#### Uniprocessor 
+
+<div align=center> <img src="http://cdn.hobbitqia.cc/202303061519455.png" width = 65%/> </div>  
+
+**Three Walls**
+
+* **Power Wall**  
+$Power = Capactive\ load \times Voltage^2\ Frequency$  
+<div align=center> <img src="http://cdn.hobbitqia.cc/202303061521236.png" width = 55%/> </div>  
+
+主频提高了很多，但功耗并没有得到这么多的提升，因为我们降低了工作电压 (5V-1V)  
+现在工作电压不能再降低了（否则泄漏电流占比太大），因此我们不能再提高功率了。  
+* **Memory Wall**  
+Memory 的性能增长不如 CPU 的性能增长，大部分时间花在读写内存了，影响整体性能。  
+* **ITP Wall**  
+difficulty to find enough parallelism in the instructions stream of a single process to keep higher performance processor cores busy.   
+指令集并行程度
+
+#### Multiprocessors  
+
+requires explicitly **parallel programming**.  
+
+* Amdahl's Law: Improve an aspect of a computer and expecting improvement in overall performance.  
+实际上, $T_{improved}=\dfrac{T_{affected}}{improvement\ factor}+T_{unaffected}$. ***e.g.*** 对某一方面优化 90%, 并不能使 CPU 整体性能优化 90%.   
+Corollary: make the common case fast.  
+* Low Power Not at Idle.  
+机器在没有工作时也有功耗损失。  
+* MIPS as a Performance Metric    
+    * MIPS: Millions of Instructions Per Second  
+    * 这个参数需要在其他参数一致时，才有比较意义。不同的 ISA 之间不能仅凭 MIPS 比较。
