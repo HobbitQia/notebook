@@ -165,10 +165,11 @@ nav:
       - 关系模型: DB/db2.md
     - 计算机组成:
       - 计算机概要与技术: CO/co1.md
-      - 计算机的算术运算: CO/co2.md
+      - 计算机的算术运算: CO/co3.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
     - 数据建模与分析:
+      - 感知机: MLT/mlt2.md
   - 友链:
     - link.md

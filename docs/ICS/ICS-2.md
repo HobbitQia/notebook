@@ -83,15 +83,15 @@ Normalized form: $N=(-1)^S\times M\times 2^E$
 
 * S: sign. $S=1$ indicates the number is negative.
 * M: 尾数. Normally, $M=1.frac$.
-* E: 阶码. Normally, $E=exp-Bias$ where $Bias=127$ for floating point numbers.
+* E: 阶码. Normally, $E=exp-Bias$ where $Bias=127$ for floating point numbers. $Bias = 1023$ for double.  
 
 !!! Note Special cases
 
     * 当 $exp=0$ 时, 规定 $M=0.frac$.  
     其中 $frac=0$ 时, 表示的数字为 0.(可能有 +0/-0)  
     * 当 $exp=1111\ 1111$时  
-      * 若 $frac=0$, 则表示 $+\inf/-\inf $.  
-      * 若 $frac\neq 0$, 则表示 NaN(Not a number). ***e.g.*** $1/0, \inf/\inf$.  
+        * 若 $frac=0$, 则表示 $+\inf /$ $-\inf$.  
+        * 若 $frac\neq 0$, 则表示 NaN(Not a number). ***e.g.*** $1/0, \inf/\inf$.  
 
 How to represent decimal number in the floating point type?  
 

@@ -37,7 +37,7 @@ A **relation instance** $r$ defined over schema R is denoted by $r(R)$.
 
 ## Keys
 
-Let $K\sube R$   
+Let $K\subsetneqq R$   
 
 * $K$ is a **superkey (超键)** of $R$ if values for K are sufficient to identify (唯一确定) a unique tuple of each possible relation $r(R)$  
 ***e.g.*** $\{ID\}$ or $\{ID, name\}$
@@ -219,9 +219,10 @@ $r\ltimes_\theta s$ 保留 $r$ 中能与 $s$ 相连的元组。
 
 #### Division
 
-Given relations $r(R)$ and $s(S)$, such that $S \sub R$, $r\div s$ is the largest relation $t(R-S)$ such that $t\times s \sube r$  
+Given relations $r(R)$ and $s(S)$, such that $S \subset R$, $r\div s$ is the largest relation $t(R-S)$ such that $t\times s \subsetneqq  r$  
 
 We can write $r\div s$ as  
+
 $$
 \begin{align*}
     temp1 & \leftarrow \Pi_{R-S}(r)\\
