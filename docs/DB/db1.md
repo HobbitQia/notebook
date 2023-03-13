@@ -130,6 +130,7 @@ e.g. dept_name value in any instructor tuple must appear in department relation
 ### Data Manipulation Language (DML, 数据操作语言)
 
 Two classes of languages 
+
 * Procedural (过程式)– user specifies what data is required and how to get those data ***e.g.*** C
 * Declarative (nonprocedural，陈述式，非过程式) – user specifies what data is required without specifying how to get those data ***e.g.*** SQL
 
