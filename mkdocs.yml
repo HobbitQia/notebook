@@ -158,8 +158,8 @@ nav:
       - 图像特征检测和提取: dip/dip11.md
       - 深度学习: dip/dip12.md
     - 面向对象程序设计:
-      - OOP/oop1.md
-      - 类: OOP/oop2.md
+      - Introduction: OOP/oop1.md
+      - Class: OOP/oop2.md
     - 数据库系统:
       - 数据库介绍: DB/db1.md
       - 关系模型: DB/db2.md

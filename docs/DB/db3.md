@@ -4,7 +4,7 @@ counter: True
 
 # Introduction to SQL
 
-!!! Abstract 
+??? Abstract 
     * Data Definition
     * Basic Query Structure
     * Additional Basic Operations
@@ -310,7 +310,6 @@ A **subquery** is a **select-from-where** expression that is nested within anoth
     where salary > some (select salary
                                         from instructor
                                         where dept_name = ’Biology’);
-
     ```
 
 #### Scalar Subquery
@@ -425,4 +424,4 @@ The order is important. So it can be done better using the **`case`** statement.
 
 ??? Example
     <div align=center> <img src="http://cdn.hobbitqia.cc/202303131648286.png" width = 60%/> </div>   
-    <div align=center> <img src="http://cdn.hobbitqia.cc/202303131648760.png" width = 60%/> </div>   ttp://cdn.hobbitqia.cc/202303131648760.png" width = 60%/> </div>   
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202303131648760.png" width = 60%/> </div>
