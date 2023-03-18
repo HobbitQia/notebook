@@ -167,6 +167,7 @@ nav:
     - 计算机组成:
       - 计算机概要与技术: CO/co1.md
       - 计算机的算术运算: CO/co3.md
+      - 指令：计算机的语言: CO/co2.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
