@@ -197,7 +197,8 @@ $r\bowtie_\theta s=\sigma_\theta (r\times s)$
 
 Computes the join and then adds tuples form one relation that does not match tuples in the other relation to the result of the join.   
 
-Uses *null values*:
+Uses *null values*:  
+
 * **null** signifies that the value is unknown or does not exist 
 * All comparisons involving null are (roughly speaking) false by definition
 

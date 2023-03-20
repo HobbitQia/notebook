@@ -20,7 +20,7 @@ counter: True
 
 
 Instruction Characteristics
-<div align=center> <img src="http://cdn.hobbitqia.cc/202303151112148.png" width = 50%/> </div>    
+<div align=center> <img src="http://cdn.hobbitqia.cc/202303151112148.png" width = 50%/> </div>
 
 指令集基本的结构：Operation 操作; Operand 操作数
 
@@ -63,7 +63,7 @@ Instruction Characteristics
 * **Design Principle 2 - Smaller is faster.**   
 寄存器不是越多越好，多了之后访问慢。  
 
-<div align=center> <img src="http://cdn.hobbitqia.cc/202303172234060.png" width = 55%/> </div>  
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202303172234060.png" width = 55%/> </div>  
 
     !!! Info "为什么寄存器 `x0` 一直为 0"
         Make the common fast. 因为经常有 0 参与计算，将其存在一个寄存器中，便于计算。
@@ -86,12 +86,12 @@ Instruction Characteristics
     ??? Example "Little vs Big Endian"
         <div align=center> <img src="http://cdn.hobbitqia.cc/202303180940405.png" width = 60%/> </div>
  
-小端：低位放在地址较小处；大端相反   
+    小端：低位放在地址较小处；大端相反   
 * RISC-V dose not require words to be aligned in memory   
     * words align: 一个字是 4 字节，我们要求字的起始地址一定要是 4 的倍数。
 
     !!! Example "Memory Alignment"
-        
+        <div align=center> <img src="http://cdn.hobbitqia.cc/202303180929272.png" width = 60%/> </div>
         第一个是对齐的，第二个是不对齐的。
 
     * 不对齐的好处是省空间

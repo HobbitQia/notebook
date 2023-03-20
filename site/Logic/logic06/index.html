@@ -1,0 +1,2754 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HobbitQia的笔记本">
+      
+      
+      
+        <link rel="canonical" href="https://note.hobbitqia.cc/Logic/logic06/">
+      
+      <link rel="icon" href="../../log.ico">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>寄存器与寄存器传输 - HobbitQia的笔记本</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGW+WenKai+Screen:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"LXGW WenKai Screen";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+      <link rel="stylesheet" href="../../css/card.css">
+    
+      <link rel="stylesheet" href="../../css/tasklist.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="brown">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#register-and-register-transfers" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+      
+  <img src="../../log.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HobbitQia的笔记本
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              寄存器与寄存器传输
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="brown"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HobbitQia/notebook/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HobbitQia/notebook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ICS/" class="md-tabs__link md-tabs__link--active">
+        Computer Science
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
+        Mathematics
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../link/" class="md-tabs__link">
+        友链
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+      
+  <img src="../../log.ico" alt="logo">
+
+    </a>
+    HobbitQia的笔记本
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HobbitQia/notebook/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HobbitQia/notebook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">Home</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Computer Science
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computer Science" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Computer Science
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ICS/">计算机系统概论</a>
+          
+            <label for="__nav_2_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="计算机系统概论" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机系统概论
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-2/" class="md-nav__link">
+        Bits, Data Types and Operations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-3/" class="md-nav__link">
+        Digital Logic Structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-4/" class="md-nav__link">
+        The von Neumann Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-5/" class="md-nav__link">
+        LC-3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-6/" class="md-nav__link">
+        Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-7/" class="md-nav__link">
+        Assembly Language
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-8/" class="md-nav__link">
+        Data Structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-9/" class="md-nav__link">
+        I/0
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          CSAPP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CSAPP" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          CSAPP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/5/" class="md-nav__link">
+        优化程序性能
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/6/" class="md-nav__link">
+        存储器层次结构
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/7/" class="md-nav__link">
+        链接
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/8/" class="md-nav__link">
+        异常控制流
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/9/" class="md-nav__link">
+        虚拟内存
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">计算机逻辑设计基础</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="计算机逻辑设计基础" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          计算机逻辑设计基础
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic01/" class="md-nav__link">
+        数字系统和信息
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic02/" class="md-nav__link">
+        组合逻辑电路
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic03/" class="md-nav__link">
+        组合逻辑电路设计
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic04/" class="md-nav__link">
+        时序逻辑电路
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          寄存器与寄存器传输
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        寄存器与寄存器传输
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#registers" class="md-nav__link">
+    Registers
+  </a>
+  
+    <nav class="md-nav" aria-label="Registers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#register-storage-and-load-enable" class="md-nav__link">
+    Register Storage and Load Enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-transfer-operations" class="md-nav__link">
+    Register Transfer Operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-cell-design" class="md-nav__link">
+    Register Cell Design
+  </a>
+  
+    <nav class="md-nav" aria-label="Register Cell Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specifications" class="md-nav__link">
+    Specifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    Design
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microoperations" class="md-nav__link">
+    Microoperations
+  </a>
+  
+    <nav class="md-nav" aria-label="Microoperations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-microoperations" class="md-nav__link">
+    Arithmetic Microoperations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-microoperations" class="md-nav__link">
+    Logical Microoperations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shift-microoperations" class="md-nav__link">
+    Shift Microoperations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-transfer-structures" class="md-nav__link">
+    Register Transfer Structures
+  </a>
+  
+    <nav class="md-nav" aria-label="Register Transfer Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiplexer-based-transfers" class="md-nav__link">
+    Multiplexer-Based Transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplexer-and-bus-based-transfers-for-multiple-registers" class="md-nav__link">
+    Multiplexer and Bus-Based Transfers for Multiple Registers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-state-bus" class="md-nav__link">
+    Three-State Bus
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shift-registers" class="md-nav__link">
+    Shift Registers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#counters" class="md-nav__link">
+    Counters
+  </a>
+  
+    <nav class="md-nav" aria-label="Counters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ripple-counter" class="md-nav__link">
+    Ripple Counter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronous-counters" class="md-nav__link">
+    Synchronous Counters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-counters-counter-with-parallel-load" class="md-nav__link">
+    Other Counters - Counter with Parallel Load
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-counters-counting-modulo-n" class="md-nav__link">
+    Other Counters - Counting Modulo N
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serial-operations" class="md-nav__link">
+    Serial Operations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic05/" class="md-nav__link">
+        数字硬件设计
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic07/" class="md-nav__link">
+        内存基础
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ds/">数据结构与算法</a>
+          
+            <label for="__nav_2_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="数据结构与算法" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          数据结构与算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/algorithm/" class="md-nav__link">
+        算法分析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/tree/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/heap/" class="md-nav__link">
+        堆
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/set/" class="md-nav__link">
+        并查集
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/graph/" class="md-nav__link">
+        图论
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/sort/" class="md-nav__link">
+        排序
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/hash/" class="md-nav__link">
+        散列
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../dip/">图像信息处理</a>
+          
+            <label for="__nav_2_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="图像信息处理" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          图像信息处理
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip1/" class="md-nav__link">
+        图像信息处理介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip2/" class="md-nav__link">
+        二值图像和形态学
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip3/" class="md-nav__link">
+        图像灰度变换与直方图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip5/" class="md-nav__link">
+        几何变换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip6/" class="md-nav__link">
+        卷积与滤波
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip7/" class="md-nav__link">
+        双边滤波的加速
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip8/" class="md-nav__link">
+        引导滤波
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip9/" class="md-nav__link">
+        稀疏范数滤波
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip10/" class="md-nav__link">
+        傅里叶变换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip11/" class="md-nav__link">
+        图像特征检测和提取
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip12/" class="md-nav__link">
+        深度学习
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          面向对象程序设计
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="面向对象程序设计" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          面向对象程序设计
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop2/" class="md-nav__link">
+        Class
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          数据库系统
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据库系统" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          数据库系统
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db1/" class="md-nav__link">
+        数据库介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db2/" class="md-nav__link">
+        关系模型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db3/" class="md-nav__link">
+        SQL 语言介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db4/" class="md-nav__link">
+        中级数据库
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_8">
+          计算机组成
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机组成" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          计算机组成
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CO/co1/" class="md-nav__link">
+        计算机概要与技术
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CO/co3/" class="md-nav__link">
+        计算机的算术运算
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CO/co2/" class="md-nav__link">
+        指令：计算机的语言
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Mathematics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mathematics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mathematics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          线性代数
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="线性代数" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          线性代数
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
+        线性代数Ⅱ(H)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          数据建模与分析
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据建模与分析" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据建模与分析
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLT/mlt2/" class="md-nav__link">
+        感知机
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          友链
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="友链" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          友链
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../link/" class="md-nav__link">
+        Link
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#registers" class="md-nav__link">
+    Registers
+  </a>
+  
+    <nav class="md-nav" aria-label="Registers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#register-storage-and-load-enable" class="md-nav__link">
+    Register Storage and Load Enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-transfer-operations" class="md-nav__link">
+    Register Transfer Operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-cell-design" class="md-nav__link">
+    Register Cell Design
+  </a>
+  
+    <nav class="md-nav" aria-label="Register Cell Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specifications" class="md-nav__link">
+    Specifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    Design
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microoperations" class="md-nav__link">
+    Microoperations
+  </a>
+  
+    <nav class="md-nav" aria-label="Microoperations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-microoperations" class="md-nav__link">
+    Arithmetic Microoperations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-microoperations" class="md-nav__link">
+    Logical Microoperations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shift-microoperations" class="md-nav__link">
+    Shift Microoperations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-transfer-structures" class="md-nav__link">
+    Register Transfer Structures
+  </a>
+  
+    <nav class="md-nav" aria-label="Register Transfer Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiplexer-based-transfers" class="md-nav__link">
+    Multiplexer-Based Transfers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplexer-and-bus-based-transfers-for-multiple-registers" class="md-nav__link">
+    Multiplexer and Bus-Based Transfers for Multiple Registers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-state-bus" class="md-nav__link">
+    Three-State Bus
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shift-registers" class="md-nav__link">
+    Shift Registers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#counters" class="md-nav__link">
+    Counters
+  </a>
+  
+    <nav class="md-nav" aria-label="Counters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ripple-counter" class="md-nav__link">
+    Ripple Counter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronous-counters" class="md-nav__link">
+    Synchronous Counters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-counters-counter-with-parallel-load" class="md-nav__link">
+    Other Counters - Counter with Parallel Load
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-counters-counting-modulo-n" class="md-nav__link">
+    Other Counters - Counting Modulo N
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serial-operations" class="md-nav__link">
+    Serial Operations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/Logic/logic06.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="register-and-register-transfers">Register and Register Transfers<a class="headerlink" href="#register-and-register-transfers" title="Permanent link">&para;</a></h1>
+<details class="abstract">
+<summary>Abstract</summary>
+<ol>
+<li>
+<p>寄存器的概念、设计模型和结构<br />
+Register, Register Design Models  </p>
+<ul>
+<li>门控时钟、并行加载控制<br />
+Registers with Clock Gating, Registers with Load-Controlled Feedback  </li>
+</ul>
+</li>
+<li>
+<p>寄存器传输操作基本概念<br />
+Register transfer operations  </p>
+<ul>
+<li>寄存器传输语言、基本微操作、条件传输原理、多寄存器传输的三种基本结构、原理和优缺点<br />
+Register Transfer Language (RTL), Microoperations, conditional transfer, three types of Register Transfer Structures: Multiplexer-Based Transfers, Bus-Based Transfers, Three-State Bus  </li>
+<li>RTL与硬件描述语言的关系<br />
+Relationship of RTL and Verilog, implementation of conditional operations</li>
+</ul>
+</li>
+<li>
+<p>移位寄存器的概念、结构<br />
+Shift Registers  </p>
+<ul>
+<li>串行输入、左移、右移、并行加载<br />
+serial input, shift left, shift right, parallel load  </li>
+</ul>
+</li>
+<li>
+<p>计数器的功能、类型<br />
+Function and type of counters  </p>
+<ul>
+<li>纹波计数器的结构、工作原理、优缺点<br />
+Structure, theory, characteristic of ripple counter  </li>
+<li>同步计数器的结构、工作原理、优缺点<br />
+Structure, theory, characteristic of synchronous counter  </li>
+<li>进位链、并行进位、并行加载<br />
+carry chain, parallel carry, parallel load</li>
+</ul>
+</li>
+<li>
+<p>采用同步时序电路设计方法设计模n计数器<br />
+Use the sequential logic model to designmodulo n counters  </p>
+</li>
+<li>采用输出结果反馈的方法设计模n计数器<br />
+Use output feedback model to design modulo n counters  </li>
+<li>
+<p>寄存器设计<br />
+RegisterDesign   </p>
+<ul>
+<li>基于寄存器单元的设计方法，采用多路复用器设计<br />
+RegisterCellDesign,Multiplexer Approach  </li>
+<li>基于时序电路设计方法的寄存器设计<br />
+Sequential Circuit Design Approach</li>
+</ul>
+</li>
+<li>
+<p>串行传输和微操作<br />
+Serial Transfers and Microoperations</p>
+</li>
+</ol>
+</details>
+<h2 id="registers">Registers<a class="headerlink" href="#registers" title="Permanent link">&para;</a></h2>
+<p><strong>Register</strong> – a collection of binary storage elements </p>
+<p>In theory, a register is a sequential logic which can be defined by a state table. More often, think of a register as storing a vector of binary values.  </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301052753.png" width = 50%/> </div>  </p>
+<p>如果有 <span class="arithmatex">\(n\)</span> 位寄存器，需要 <span class="arithmatex">\(2^n\)</span> 状态. <span class="arithmatex">\(n\)</span> 可能会很大，导致需要的状态，可能的输入组合、输出函数会很大。</p>
+</div>
+<p>Due to the large numbers of states and input combinations as n becomes large, the state diagram/state table model is not feasible!</p>
+<ul>
+<li>Add predefined combinational circuits to registers(<strong><em>e.g.</em></strong> To count up, connect the register flip-flops to an incrementer)</li>
+<li>Design individual cells using the state diagram/state table model and combine them into a register <br />
+把寄存器拆成单位的来设计，再考虑多位的拼接，最后组成多位寄存器。</li>
+</ul>
+<h3 id="register-storage-and-load-enable">Register Storage and Load Enable<a class="headerlink" href="#register-storage-and-load-enable" title="Permanent link">&para;</a></h3>
+<p><strong>Expectations</strong>:  </p>
+<ul>
+<li>A register can store information for <em>multiple clock cycles</em></li>
+<li>To “store” or “load” information should be controlled by a signal</li>
+</ul>
+<p>但在刚刚的例子中，每个周期都会保存新的数据，不能做到在多个周期保留数据，因此是不行的。</p>
+<p><strong>Realizing expectations</strong>:</p>
+<ul>
+<li>Use a signal to block the clock to the register</li>
+<li>Use a signal to control feedback of the output of the register back to its inputs</li>
+<li>Use other SR or JK flip-flops, that for (0,0) applied, store their state</li>
+</ul>
+<p><u><strong>Load</strong></u> is a frequent name for  the signal that controls   register storage and loading</p>
+<ul>
+<li><code>Load = 1</code>: Load the values on the data inputs(加载外部新数据) </li>
+<li><code>Load = 0</code>: Store the values in the register(保持原有的数据)</li>
+</ul>
+<p><strong>Solution</strong>  </p>
+<ul>
+<li>
+<p><strong>Registers with Clock Gating</strong><br />
+    The <span class="arithmatex">\(\overline{Load}\)</span>(bar 表示低电平有效) signal enables the clock signal to pass through if 0 and prevents the clock signal from passing through if 1. (与 <span class="arithmatex">\(Load\)</span> 相反)</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>For Positive Edge-Triggered  or Negative Pulse Master-Slave Flip-flop:<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301504389.png" width = 40%/> </div>   </p>
+<p><span class="arithmatex">\(Gated\ Clock = Clock + \overline{Load}\)</span>
+当 <span class="arithmatex">\(\overline{Load}\)</span> 信号为 1 时，时钟信号不再随着外部时钟改变，这时就是保持原有的数据。</p>
+</div>
+<p><strong>Clock Skew</strong> <br />
+问题在于我们是同步时序电路实现，要求时钟统一提供，这样所有的触发器会在同一时间完成操作。使用门控时钟的方式会带来更多的触发时间，时序电路从同步变为了异步的时序电路（触发有前有后）  </p>
+</li>
+<li>
+<p><strong>Registers with Load-Controlled Feedback</strong><br />
+     Run the clock continuously, and  Selectively use a load control to change the register contents. </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301524511.png" width = 60%/> </div>   </p>
+</div>
+</li>
+</ul>
+<h3 id="register-transfer-operations">Register Transfer Operations<a class="headerlink" href="#register-transfer-operations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Register Transfer Operations</strong> – The movement and processing of data stored in registers</p>
+</li>
+<li>
+<p>Three basic components:</p>
+<ul>
+<li>set of registers(源寄存器，目标寄存器)</li>
+<li>operations</li>
+<li>control of operations</li>
+</ul>
+</li>
+<li>Elementary Operations -- load, count, shift, add, bitwise "OR", etc.<br />
+Elementary operations called <strong>microoperations</strong>  </li>
+</ul>
+<p><strong>Register Notation</strong>  </p>
+<ul>
+<li>Letters and numbers  – denotes a register (<strong><em>e.g.</em></strong>  <span class="arithmatex">\(R2, PC, IR\)</span>)</li>
+<li>Parentheses <span class="arithmatex">\((\ )\)</span> – denotes a range of register bits (<strong><em>e.g.</em></strong> <span class="arithmatex">\(R1(1), PC(7:0), PC(L)\)</span>)</li>
+<li><strong>Arrow</strong> <span class="arithmatex">\((\leftarrow)\)</span> – denotes data transfer (<strong><em>e.g.</em></strong> <span class="arithmatex">\(R1 \leftarrow R2, PC(L) \leftarrow R0\)</span>) H 代表高位, L 代表低位(如 <span class="arithmatex">\(PC(L),PC(H)\)</span> 分别代表 <span class="arithmatex">\(PC\)</span> 的高八位和低八位)</li>
+<li><strong>Comma</strong> – separates parallel operations</li>
+<li><strong>Brackets</strong> <span class="arithmatex">\([\ ]\)</span> – Specifies a memory address (<strong><em>e.g.</em></strong> <span class="arithmatex">\(R0 \leftarrow  M[AR],   R3 \leftarrow M[PC]\)</span>) 寻址</li>
+</ul>
+<details class="example">
+<summary>Conditional Transfer</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301556875.png" width = 50%/> </div>   </p>
+<p>如果 <span class="arithmatex">\(K1=1\)</span> 那么将 <span class="arithmatex">\(R1\)</span> 的信号传给 <span class="arithmatex">\(R2\)</span>, 我们可以写为 <span class="arithmatex">\(K1:(R2\leftarrow R1)\)</span>, 其中 <span class="arithmatex">\(R1\)</span> 是一个控制变量，表明条件执行的发生是否发生。</p>
+</details>
+<h3 id="register-cell-design">Register Cell Design<a class="headerlink" href="#register-cell-design" title="Permanent link">&para;</a></h3>
+<p>Assume that a register consists of identical cells.(每个位执行相同操作)  </p>
+<ul>
+<li>Design representative cell for the register </li>
+<li>Connect copies of the cell together to form the register</li>
+<li>Applying appropriate <em>"boundary conditions"</em> to cells that need to be different and contract if appropriate</li>
+</ul>
+<h4 id="specifications">Specifications<a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h4>
+<ul>
+<li>A register</li>
+<li>Data inputs to the register</li>
+<li>Control input combinations to the register<br />
+<strong><em>e.g.</em></strong> 控制输入: Load, Shift, Add. 我们可以用三个引脚分别表示控制输入(not encoded, one-hot code)，也可以用两个引脚 S0 S1 的组合来表示控制输入(encoded)  </li>
+<li>A set of register functions (typically specified as register transfers) 即规定控制输入的函数是对数据进行什么样的操作</li>
+<li>A hold state specification(<strong><em>e.g.</em></strong> If all control inputs are 0, hold the current register state)  </li>
+</ul>
+<h4 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h4>
+<p>设计时，除了 Multiplexer Approach 还有 Sequential Circuit Design Approach</p>
+<ul>
+<li>Find a state diagram or state table  </li>
+<li>Use the design procedure in Chapter 4 to complete the cell design  </li>
+<li>For optimization:<ul>
+<li>Use K-maps for up to 4 to 6 variables</li>
+<li>Otherwise, use computer-aided or manual optimization</li>
+</ul>
+</li>
+</ul>
+<h2 id="microoperations">Microoperations<a class="headerlink" href="#microoperations" title="Permanent link">&para;</a></h2>
+<p>Logical Groupings:  </p>
+<ul>
+<li><strong>Transfer</strong> - move data from one register to another</li>
+<li><strong>Arithmetic</strong> - perform arithmetic on data in registers <span class="arithmatex">\(+-\times /\)</span></li>
+<li><strong>Logic</strong> - manipulate data or use bitwise logical operations <span class="arithmatex">\(\wedge \vee \oplus \ \overline{x}\)</span></li>
+<li><strong>Shift</strong> - shift data in registers</li>
+</ul>
+<details>
+<summary>+</summary>
+<p>"+" 在逻辑表达式中表示或，在算术表达式中表示加法。<br />
+如 <span class="arithmatex">\((K1 + K2):  R1 \leftarrow R1 +R3\)</span>, 左边为或，右边为加。</p>
+</details>
+<details class="example">
+<summary>RTL, VHDL, Verilog Symbols for Register Transfers</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301618933.png" width = 60%/> </div>   </p>
+</details>
+<h3 id="arithmetic-microoperations">Arithmetic Microoperations<a class="headerlink" href="#arithmetic-microoperations" title="Permanent link">&para;</a></h3>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301623755.png" width = 60%/> </div>
+
+<ul>
+<li>Note that any register may be specified for source 1, source 2, or destination.</li>
+<li>These simple microoperations operate on the whole word</li>
+</ul>
+<h3 id="logical-microoperations">Logical Microoperations<a class="headerlink" href="#logical-microoperations" title="Permanent link">&para;</a></h3>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301624281.png" width = 60%/> </div>
+
+<h3 id="shift-microoperations">Shift Microoperations<a class="headerlink" href="#shift-microoperations" title="Permanent link">&para;</a></h3>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301624735.png" width = 40%/> </div>
+
+<p>These shifts <em>"zero fill"</em>. Sometimes a separate flip-flop is used to provide the data shifted in, or to “catch” the data shifted out.</p>
+<p>Other shifts are possible (rotates, arithmetic).</p>
+<details class="example">
+<summary>Example</summary>
+<p>假设 <span class="arithmatex">\(R2=1100\ 1001\)</span>  </p>
+<ul>
+<li><span class="arithmatex">\(R1 \leftarrow sl\ R2\)</span> 之后 <span class="arithmatex">\(R2=1001\ 0010\)</span></li>
+<li><span class="arithmatex">\(R1 \leftarrow sr\ R2\)</span> 之后 <span class="arithmatex">\(R2=0110\ 0100\)</span> </li>
+</ul>
+</details>
+<h3 id="register-transfer-structures">Register Transfer Structures<a class="headerlink" href="#register-transfer-structures" title="Permanent link">&para;</a></h3>
+<ul>
+<li><u><strong>Multiplexer-Based Transfers</strong></u> - Multiple inputs are selected by a multiplexer dedicated to the register</li>
+<li><u><strong>Bus-Based Transfers</strong></u> - Multiple inputs are selected by a shared multiplexer driving a bus that feeds inputs to multiple registers</li>
+<li><u><strong>Three-State Bus</strong></u>  - Multiple inputs are selected by 3-state drivers with outputs connected to a bus that feeds multiple registers</li>
+<li><u><strong>Other Transfer Structures</strong></u> -  Use multiple multiplexers, multiple buses, and combinations of all the above</li>
+</ul>
+<h4 id="multiplexer-based-transfers"><strong>Multiplexer-Based Transfers</strong><a class="headerlink" href="#multiplexer-based-transfers" title="Permanent link">&para;</a></h4>
+<p>Multiplexers connected to register inputs produce flexible transfer structures (Note: Clocks are omitted for clarity)</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><span class="arithmatex">\(K1:R0\leftarrow R1\quad K2\overline{K1}:R0\leftarrow R2\)</span> <br />
+我们可以将其化简: <span class="arithmatex">\(K1+K2\overline{K1}=K1+K2\)</span> 就是 <span class="arithmatex">\(R0\)</span> 寄存器会被更新时的控制逻辑. 并用 <span class="arithmatex">\(K1\)</span> 作为 Mux 的选择信号。<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301635371.png" width = 35%/> </div>   </p>
+<p>完整电路（假设寄存器均为 4 位）
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301637817.png" width = 55%/> </div></p>
+</div>
+<h4 id="multiplexer-and-bus-based-transfers-for-multiple-registers"><strong>Multiplexer and Bus-Based Transfers for Multiple Registers</strong><a class="headerlink" href="#multiplexer-and-bus-based-transfers-for-multiple-registers" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Multiplexer dedicated to each register <br />
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202212071014948.png" width = 30%/> </div>   </p>
+<p>There can be three distinct registers as source, so can simultaneously do any three register transfers. (totally flexible)<br />
+如我们可以既可以实现 <span class="arithmatex">\(R0\leftarrow R1\)</span> 也可以实现 <span class="arithmatex">\(R0\leftrightarrow R1\)</span><br />
+电路成本太高！</p>
+</li>
+<li>
+<p>Shared transfer paths for registers <br />
+    A shared transfer object is a called a <strong>bus</strong>(总线)   <br />
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202212071027079.png" width = 30%/> </div>    </p>
+<p>A single bus driven by a multiplexer lowers cost, but limits the available transfers <br />
+不能同时 <span class="arithmatex">\(R0\leftarrow R1\)</span> <span class="arithmatex">\(R1\leftarrow R0\)</span>(类比：交换函数需要一个第三方变量)</p>
+</li>
+</ul>
+<h4 id="three-state-bus"><strong>Three-State Bus</strong><a class="headerlink" href="#three-state-bus" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212071035388.png" width = 15%/> </div>
+
+<p>Same simultaneous transfer capability as multiplexer bus<br />
+我们将寄存器和三态门封装在一起考虑，那么我们只需要一个外部引脚(n bits), 但多路复用器的方法需要两根位宽是 n 的引脚（因为三态门的外部引脚是可以双向传输数据的）</p>
+<h3 id="shift-registers">Shift Registers<a class="headerlink" href="#shift-registers" title="Permanent link">&para;</a></h3>
+<p>Shift Registers move data laterally within the register toward its MSB or LSB position</p>
+<p>In the simplest case, the shift register is simply a set of D flip-flops connected in a row like this:</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212071048436.png" width = 45%/> </div>
+
+<ul>
+<li>Data input, <strong><em>In</em></strong>, is called a <strong>serial input</strong> or the <strong>shift right input</strong>.</li>
+<li>Data output, <strong><em>Out</em></strong>, is often called the <strong>serial output</strong>.</li>
+<li>
+<p>The vector <strong><em>(A, B, C, Out)</em></strong> is called the <strong>parallel output</strong>.</p>
+</li>
+<li>
+<p><strong>Parallel Load Shift Registers</strong><br />
+By adding a mux between each shift register stage, data can be shifted or loaded
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202212072254902.png" width = 40%/> </div>  </p>
+<p>If SHIFT is low,<span class="arithmatex">\(D_A\)</span> and <span class="arithmatex">\(D_B\)</span> are replaced by the data on DA and DB lines, else data shifts right on each clock.<br />
+缺点: 没有数据保持操作，需要多添加一个选择项(3-1 选择)
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212072258715.png" width = 40%/> </div> </p>
+</li>
+</ul>
+<h2 id="counters">Counters<a class="headerlink" href="#counters" title="Permanent link">&para;</a></h2>
+<p><strong>Counters</strong> are sequential circuits which "count" through a specific state sequence.  They can <em>count up</em>, <em>count down</em>, or <em>count through other fixed sequences</em>.  Two distinct types are in common usage:</p>
+<ul>
+<li><strong>Ripple Counters</strong>  <ul>
+<li>Clock connected to the flip-flop clock input on the LSB bit flip-flop</li>
+<li>For all other bits, a flip-flop output is connected to the clock input, thus circuit is not truly synchronous!</li>
+<li>Output change is delayed more for each bit toward the MSB.</li>
+<li>Resurgent because of low power consumption</li>
+</ul>
+</li>
+<li><strong>Synchronous Counters</strong><ul>
+<li>Clock is directly connected to the flip-flop clock inputs</li>
+<li>Logic is used to implement the desired state sequencing</li>
+</ul>
+</li>
+</ul>
+<h3 id="ripple-counter">Ripple Counter<a class="headerlink" href="#ripple-counter" title="Permanent link">&para;</a></h3>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212071103119.png" width = 30%/> </div>
+
+<p>每个时钟周期，A 计数器翻转一次。当 A 处于下降沿的时候 B 会进行一次求反。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212071105477.png" width = 30%/> </div>
+
+<p>每个触发器的时钟，没有接在同一个系统时钟上，是一个异步时序电路。</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>考虑 3 位触发器，理想上 <span class="arithmatex">\(C=B=A=1\)</span> 后从全 1 立即变成全 0. 但因为门延迟，实际变化过程为<span class="arithmatex">\(111-110-100-000\)</span>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212071112469.png" width = 30%/> </div>  </p>
+<p>此外对于 <span class="arithmatex">\(n\)</span> bits, 最坏时间延迟是 <span class="arithmatex">\(n\cdot t_{PHL}\)</span>, 速度会非常慢</p>
+</div>
+<h3 id="synchronous-counters">Synchronous Counters<a class="headerlink" href="#synchronous-counters" title="Permanent link">&para;</a></h3>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212071121247.png" width = 35%/> </div>
+
+<p>up-counter: incrementer <span class="arithmatex">\(S=A+1\)</span>  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212072137820.png" width = 25%/> </div>
+
+<p>当位数增加，不利于化简设计。观察 <span class="arithmatex">\(Q_2\)</span>, 我们发现每次翻转的时候 <span class="arithmatex">\(Q_1,Q_0\)</span> 均为 1. 类似在二进制计数器中 <span class="arithmatex">\(Q_n\)</span> 只有在低 <span class="arithmatex">\(n-1\)</span> 位均为 1 时才会取反。<br />
+我们可以用异或门，接在控制引脚和本位输出上，利用控制引脚来实现对本位输出的保持/取反。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212072141991.png" width = 45%/> </div>
+
+<p>这里的控制信号是一个与门链，<code>Count Enable</code> 是与门链的使能。（若 <code>Enable</code> 为 0, 所有的与门链均为 0, 这时电路相当于是保持功能）<br />
+最后与门链输出一个 <code>Carry Output</code>, 表示所有位为 1 且 <code>Enable=1</code>. CO 是用于做<strong>级联</strong>（如两个四位计数器拼成一个八位计数器）接在后续计数器的 <code>Enable</code> 上。  </p>
+<p>存在问题：与门链是串接的，当计数器位数大时，与门链的传输延迟可能会影响计数器。 <br />
+<strong><em>parallel gating</em></strong>:  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212072154054.png" width = 25%/> </div>
+
+<p><strong>Symbol for Synchronous Counter</strong>  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212072156682.png" width = 15%/> </div>
+
+<h3 id="other-counters-counter-with-parallel-load">Other Counters - Counter with Parallel Load<a class="headerlink" href="#other-counters-counter-with-parallel-load" title="Permanent link">&para;</a></h3>
+<p>在 D 输入触发器前加上 2-1 Mux(<code>Load</code> 是选择信号), 选择与门链的结果(<code>Load=0</code>) or 外部输入(<code>Load=1</code>)，可以实现并行加载和计数的选择控制</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212072159957.png" width = 45%/> </div>
+
+<table>
+<thead>
+<tr>
+<th align="left">Load</th>
+<th>Count</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td>0</td>
+<td>Hold Stored Value</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>1</td>
+<td>Count Up Stored Value</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>X</td>
+<td>Load D</td>
+</tr>
+</tbody>
+</table>
+<details class="example">
+<summary>Design Example:  Synchronous BCD</summary>
+<p>利用时序电路实现同步 BCD 计数器  </p>
+<ul>
+<li>
+<p>状态表如下:(1010-1111 don't cares)  <br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212072205418.png" width = 35%/> </div>  </p>
+</li>
+<li>
+<p>基于上面的状态表，分别对 <span class="arithmatex">\(Q8,Q4,Q2,Q1\)</span> 画卡诺图<br />
+利用卡诺图两级优化  </p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*}
+D1 &amp; = \overline {Q1}\\ 
+D2 &amp; = Q2 \oplus Q1\overline{Q8}\\
+D4 &amp; = Q4 \oplus Q1Q2\\
+D8 &amp; = Q8 \oplus (Q1Q8 + Q1Q2Q4)
+\end{align*}
+\]</div>
+<ul>
+<li>画出电路图，添加复位引脚(reset) <br />
+可以增加在触发器输入端(synchronous); 或者直接接在 D 触发器的异步复位 R 一端(asynchronous)</li>
+<li>如果电路因为干扰，跳到了无关态，能否恢复 ?  <br />
+画出无关态的次态
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212072213214.png" width = 35%/> </div>  </li>
+</ul>
+<p>可以看到不会跳到异常状态后进入死锁，画出状态图如下 <br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212072215501.png" width = 30%/> </div>  </p>
+</details>
+<h3 id="other-counters-counting-modulo-n">Other Counters - Counting Modulo N<a class="headerlink" href="#other-counters-counting-modulo-n" title="Permanent link">&para;</a></h3>
+<p>BCD 码计数器就是模 10 计数器。
+常用做法是将二进制计数器进行功能转换，利用同步/异步清零，加载功能，达到 <span class="arithmatex">\(N\)</span> 时中止计数结果 </p>
+<ul>
+<li>
+<p>检测值到达 N 后直接用异步清零引脚将计数器清零</p>
+<div class="admonition example">
+<p class="admonition-title">Counting Modulo 7: Detect 7 and Asynchronously Clear</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202212072229218.png" width = 30%/> </div>  </p>
+<ul>
+<li>A synchronous 4-bit binary counter with an asynchronous <span class="arithmatex">\(Clear\)</span>(异步复位脚，后同) is used to make a Modulo 7 counter.   </li>
+<li>Use the <span class="arithmatex">\(\overline{Clear}\)</span> feature to detect the count 7 and clear the count to 0. This gives a count of 0, 1, 2, 3, 4, 5, 6, 7(short)0, 1, 2, 3, 4, 5, 6, 7(short)0, etc. <br />
+但会短暂出现 7 这个状态，可能会带来干扰  </li>
+</ul>
+</div>
+<ul>
+<li>检测值达到 <span class="arithmatex">\(N-1\)</span> 时利用同步清零的方式在下个周期上升沿将计数器清零</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Counting Modulo 7: Synchronously Load on Terminal Count of 6</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202212072229384.png" width = 30%/> </div>  </p>
+<ul>
+<li>A synchronous 4-bit binary counter with a synchronous load and an asynchronous <span class="arithmatex">\(Clear\)</span> is used to make a Modulo 7 counter </li>
+<li>Use the Load feature to detect the count "6" and load in "zero".  This gives a count of 0, 1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6, 0, ...<br />
+不会直接清零，而是在到达 <span class="arithmatex">\(N-1\)</span> 的时候，在下个时钟上升沿将其清零  </li>
+</ul>
+<p>如果需要设计从某个中间值(非零)开始计数的计数器，只需要将每次复位赋的外部输入变为该数字即可(如果是 mod 15, 可以不需要用与门，直接利用之前的 <code>Carry Output</code> 即可)  </p>
+</div>
+</li>
+</ul>
+<details class="info">
+<summary>多位计数器</summary>
+<p>多位寄存器，分开设计，如设计时间，低位为模 10 计数器，高位为模 6 计时器，低位的 <code>Carry Output</code> 既作为低位的同步清零信号，又是高位的 <code>Enable</code> 信号.  </p>
+</details>
+<h2 id="serial-operations">Serial Operations<a class="headerlink" href="#serial-operations" title="Permanent link">&para;</a></h2>
+<p>串行：<br />
+寄存器一次只接受一个二进制位，如果传输 n 位需要 n 个时钟周期。</p>
+<p>需要的引线数量少，两个设备之间只需要一条线和一条地线就可以了。而且因为引线少，我们可以让其时钟频率达到非常高。</p>
+<p><strong><em>e.g.</em></strong> 设备与设备之间常使用串行(外设), USB, 以太网线   </p>
+<p>By using two shift registers for operands, a full adder, and a flip flop (for the carry), we can add two numbers serially, starting at the least significant bit.</p>
+<p>Serial addition is a low cost way to add large numbers of operands, since a “tree” of full adder cells can be made to any depth, and each new level doubles the number of operands.</p>
+<p>Other operations can be performed serially as well, such as parity generation/checking or more complex error-check codes.</p>
+<p><strong>Serial Adder</strong>   </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202212151430367.png" width = 30%/> </div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年2月28日 21:23:12</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:06:05</span>
+      
+    
+  </small>
+</div>
+
+              
+
+<link rel="stylesheet" href="/css/counter.css">
+
+<!-- Giscus -->
+<h2 id="__comments">评论</h2>
+
+
+<!-- 这里改成你的Giscus代码 -->
+<script src="https://giscus.app/client.js"
+        data-repo="HobbitQia/notebook"
+        data-repo-id="R_kgDOHtZjDg"
+        data-category="General"
+        data-category-id="DIC_kwDOHtZjDs4CQZ7Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+<!-- Reload on palette change -->
+<script>
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object")
+        if (palette.color.scheme === "slate") {
+            var giscus = document.querySelector("script[src*=giscus]")
+            giscus.setAttribute("data-theme", "dark")
+        }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+                /* Instruct Giscus to change theme */
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
+
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../logic04/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 时序逻辑电路" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              时序逻辑电路
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../logic05/" class="md-footer__link md-footer__link--next" aria-label="下一页: 数字硬件设计" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              数字硬件设计
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 <a href="https://github.com/HobbitQia"  target="_blank" rel="noopener">HobbitQia</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/HobbitQia/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+      
+        <script src="../../js/katex.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

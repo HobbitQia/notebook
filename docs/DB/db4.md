@@ -19,7 +19,7 @@ counter: True
 * Join operations are typically used as subquery expressions in the from clause
 * Join condition – defines which tuples in the two relations match, and what attributes are present in the result of the join.
 * Join type – defines how tuples in each relation that do not match any tuple in the other relation (based on the join condition) are treated.  
-<div align=center> <img src="http://cdn.hobbitqia.cc/202303201002582.png" width = 60%/> </div>    
+<div align=center> <img src="http://cdn.hobbitqia.cc/202303201002582.png" width = 60%/> </div>
 
 * using 是一个等值连接，类似于自然连接，这些属性相同才能连接
 
@@ -259,7 +259,7 @@ Privileges can be granted to roles.
 
 `create role <role-name>` 创造角色，随后可以把权限授予给他。  
 然后我们可以把角色的权限授予给用户/其他角色。  
-<div align=center> <img src="http://cdn.hobbitqia.cc/202303202311665.png" width = 60%/> </div>    
+<div align=center> <img src="http://cdn.hobbitqia.cc/202303202311665.png" width = 60%/> </div>
 
 ??? Example
     ``` SQL
@@ -280,7 +280,7 @@ Privileges can be granted to roles.
 
 !!! Example
     `grant reference (dept_name) on department to Mariano;`
-    <div align=center> <img src="http://cdn.hobbitqia.cc/202303202316369.png" width = 50%/> </div>    
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202303202316369.png" width = 50%/> </div>
 
 如果不作为权限，我们可以通过间接的外键约束和 cascade 删掉被引用的数据。（删掉饮用者，则被引用者也要被删除）因此这也是个权限
     
@@ -294,5 +294,4 @@ Privileges can be granted to roles.
     * `revoke grant option  for select on department from Amit;`  
     收回用户转授的权力。  
 
-<div align=center> <img src="http://cdn.hobbitqia.cc/202303202319768.png" width = 50%/> </div>    
-        
+<div align=center> <img src="http://cdn.hobbitqia.cc/202303202319768.png" width = 50%/> </div>
