@@ -157,13 +157,14 @@ nav:
       - 傅里叶变换: dip/dip10.md
       - 图像特征检测和提取: dip/dip11.md
       - 深度学习: dip/dip12.md
-    - 面向对象程序设计:
+    - 面向对象程序设计: 
       - Introduction: OOP/oop1.md
       - Class: OOP/oop2.md
     - 数据库系统:
       - 数据库介绍: DB/db1.md
       - 关系模型: DB/db2.md
       - SQL 语言介绍: DB/db3.md
+      - 中级数据库: DB/db4.md
     - 计算机组成:
       - 计算机概要与技术: CO/co1.md
       - 计算机的算术运算: CO/co3.md
