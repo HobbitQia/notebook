@@ -4,7 +4,7 @@ counter: True
 
 # Class
 
-??? Abstract
+!!! Abstract
     * How to decalare a class
     * The declaration and definition of a class
     * Constructor and Destructor
