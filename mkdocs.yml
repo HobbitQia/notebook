@@ -168,6 +168,7 @@ nav:
       - SQL 语言介绍: DB/db3.md
       - 中级 SQL: DB/db4.md
       - 高级 SQL: DB/db5.md
+      - 实体-关系模型: DB/db6.md
     - 计算机组成:
       - 计算机概要与技术: CO/co1.md
       - 计算机的算术运算: CO/co3.md
