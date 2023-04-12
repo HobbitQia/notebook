@@ -162,6 +162,8 @@ nav:
       - Class: OOP/oop2.md
       - Container: OOP/oop3.md
       - Function: OOP/oop4.md
+      - Constant and Static: OOP/oop5.md
+      - Inheritance: OOP/oop6.md
     - 数据库系统:
       - 数据库介绍: DB/db1.md
       - 关系模型: DB/db2.md
