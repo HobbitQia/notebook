@@ -140,3 +140,23 @@ Manager::Manager( const string& name, const string& ssn, const string& title = "
 :Employee(name, ssn), m_title( title ) {
 }
 ```
+
+有什么是没有继承得到：
+
+构造函数没有被继承，但父类的构造会被自动调用。析构同理。   
+赋值的运算符不会被继承。  
+
+Inheritance
+
+* Public: `class Derived : public Base ...`
+* Protected: `class Derived : protected Base ...`
+* Private: `class Derived : private Base ...`
+    * default
+
+Inheritance Type (B is)| public| protected| private|
+|:-|-|-|-|
+public A |public in B| protected in B |hidden|
+private A |private in B| private in B| hidden|
+protected A| protected in B| protected in B| hidden|
+
+private 继承：私生子，外界不能知道他的父亲是谁。即 B 的用户不能看到 A 的 public 函数。其实是一种组合，父类的函数、变量变为私有。    

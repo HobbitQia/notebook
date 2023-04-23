@@ -182,5 +182,8 @@ nav:
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
     - 数据建模与分析:
       - 感知机: MLT/mlt2.md
+  - Miscellaneous:
+    - Android:
+      - 触控事件的数据流: android/dataflow.md
   - 友链:
     - link.md

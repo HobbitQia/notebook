@@ -213,3 +213,84 @@ Let $F_i$ be the set of all functional dependencies in $F^+$ that include only a
 
 ??? Example
     <div align=center> <img src="http://cdn.hobbitqia.cc/202304102300227.png" width = 60%/> </div>
+
+### Third Normal Form
+
+任何一个非平凡函数依赖，如果左边不是一个 super key, 那么右边必须包含在一个 candidate key 里面。
+
+A relation schema $R$ is in third normal form (3NF) if for all: $\alpha\rightarrow \beta $ in $F^+$ at least one of the following holds:
+
+* $\alpha\rightarrow \beta$ is trivial (i.e., $\beta \in \alpha$)
+* $\alpha$ is a superkey for R
+* Each attribute A in $\beta-\alpha$ is contained in a candidate key for $R$.  
+候选码有很多个，包含在某一个候选码即可。  
+
+??? Example
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202304171009939.png" width = 60%/> </div>
+
+<div align=center> <img src="http://cdn.hobbitqia.cc/202304171012987.png" width = 60%/> </div>
+
+**Goals of Normalization**
+
+In the case that a relation scheme R is not in “good” form, decompose it into a set of relation scheme  $\{R_1, R_2, \ldots, R_n\}$ such that 
+
+* each relation scheme is in good form (**i.e.**, BCNF or 3NF)
+* the decomposition is a lossless-join decomposition
+* Preferably, the decomposition should be dependency preserving
+
+??? Example "E-R Modeling and Normal Forms"
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202304171022642.png" width = 60%/> </div>
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202304171019402.png" width = 60%/> </div>
+
+    这里的无损分解，先指定一个路径，考虑每两个关系直接是否无损（公共属性是否为其中一个关系的 key）。
+
+## Multivalued Dependencies
+
+There are database schemas in BCNF that do not seem to be sufficiently normalized.  
+
+!!! Example 
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202304171028076.png" width = 60%/> </div>
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202304171031482.png" width = 60%/> </div>
+
+    存在两种不相关的多值依赖。老师 id 可以多值决定 child_name, 又可以多值决定 phone, 但这两个属性是不相关的，放在一个表里就会组合。  
+    第二张图的为 **Fourth Normal Form (4NF)**.
+
+四范式：不存在非平凡的多值依赖。
+
+Let R be a relation schema and let $\alpha\subset R$ and $\beta\subset R$. The **multivalued dependency** $\alpha\rightarrow\rightarrow\beta$ holds on $R$ if in any legal relation $r(R)$, for all pairs for tuples $t_1$ and $t_2$ in $r$ such that $t_1[\alpha] = t_2 [\alpha]$, there exist tuples $t_3$ and $t_4$ in $r$ such that: 
+
+$$
+t_3[\alpha] = t_4[\alpha] = t_1[\alpha]=t_2[\alpha]\\
+t_3[\beta]=t_1[\beta]\\
+t_3[R-\beta]=t_2[R-\beta]\\
+t_4[\beta]=t_2[\beta]\\
+t_4[R-\beta]=t_1[R-\beta]
+$$
+
+<div align=center> <img src="http://cdn.hobbitqia.cc/202304171035922.png" width = 60%/> </div>
+
+A relation schema $R$ is in **4NF** with respect to a set $D$ of functional and multivalued dependencies if for all multivalued dependencies in $D^+$ of the form $\alpha\rightarrow \rightarrow \beta$, where $\alpha\subset R$ and $\beta\subset R$, at least one of the following hold:
+
+* $\alpha\rightarrow \rightarrow \beta$ is trivial (i.e., $\beta \subset \alpha$ or $\alpha \cup \beta= R$)    
+即除了 $\alpha,\beta$ 为没有其他属性。
+* $\alpha$ is a superkey for schema $R$
+
+任何一个多值依赖，要么左边就是个 key, 要么这个依赖是平凡的。
+
+<div align=center> <img src="http://cdn.hobbitqia.cc/202304171039053.png" width = 60%/> </div>
+
+??? Example "E-R Modeling and Normal Forms"
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202304171039627.png" width = 60%/> </div>
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202304171044548.png" width = 60%/> </div>
+
+    不是 BCNF, 因此也不是 4NF. 
+
+## Overall Database Design Process
+
+Denormalization for Performance
+
+Some aspects of database design are not caught by normalization.  
+有时候我们需要引入冗余，来保持性能。
+
+!!! Example
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202304171100043.png" width = 60%/> </div>

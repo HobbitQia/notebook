@@ -120,6 +120,7 @@ Can always treat a non-const value as const.
 ``` C++
 const Currency the_raise(42, 38);
 ```
+
 * What members can access the internals?
 * How can the object be protected from change?
 * Solution: declare member functions const
@@ -159,9 +160,7 @@ class A {
 };
 ```
 has to be initialized in initializer list of the constructor.  
-
-p22
-
+<!-- p22 -->
 ## `static`
 
 * Two basic meanings
