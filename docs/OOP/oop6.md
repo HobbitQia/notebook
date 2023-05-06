@@ -8,8 +8,6 @@ counter: True
     * composition
     * inheritance
 
-继承和组合都是用已有的类来构建新的类。
-
 ## Composition
 
 Composition: reusing the implementation
@@ -160,3 +158,29 @@ private A |private in B| private in B| hidden|
 protected A| protected in B| protected in B| hidden|
 
 private 继承：私生子，外界不能知道他的父亲是谁。即 B 的用户不能看到 A 的 public 函数。其实是一种组合，父类的函数、变量变为私有。    
+
+``` C++
+
+int main()
+{
+    Employee p1("John");
+    Manager p2("Tom Jordan", );
+    p1.print();
+    p2.print();
+    p1.print("Welcome:");
+    //p2.print("Welcome:");     报错
+    Employee *p = &p1;
+    p->print();
+    p = &p2;
+    p->print();             // 按 Employee 里面的函数输出，而不是 Manager
+}
+```
+
+要调用父类的成员函数，要 `Employee::print()`. 
+
+初始化列表是属于 body 的，要和 `{}` 一起。  
+父类的构造是在子类的构造之前。
+
+子类重新定义了父类的某个函数，就会把其他 overloaded 的函数覆盖掉（C++ 独有，无法解释），如上面的例子中, `p2.print("welcome")` 会报错。
+
+如果在 Employee 中的 `print` 函数加上 `virtual`, `p->print()` 就会输出。
