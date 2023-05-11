@@ -1,0 +1,3403 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HobbitQia的笔记本">
+      
+      
+      
+        <link rel="canonical" href="https://note.hobbitqia.cc/Logic/logic04/">
+      
+      <link rel="icon" href="../../log.ico">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>时序逻辑电路 - HobbitQia的笔记本</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGW+WenKai+Screen:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"LXGW WenKai Screen";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+      <link rel="stylesheet" href="../../css/card.css">
+    
+      <link rel="stylesheet" href="../../css/tasklist.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="brown">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sequential-circuits" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+      
+  <img src="../../log.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HobbitQia的笔记本
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              时序逻辑电路
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="brown"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HobbitQia/notebook/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HobbitQia/notebook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ICS/" class="md-tabs__link md-tabs__link--active">
+        Computer Science
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
+        Mathematics
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../android/dataflow/" class="md-tabs__link">
+        Miscellaneous
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../link/" class="md-tabs__link">
+        友链
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+      
+  <img src="../../log.ico" alt="logo">
+
+    </a>
+    HobbitQia的笔记本
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HobbitQia/notebook/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HobbitQia/notebook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">Home</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Computer Science
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computer Science" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Computer Science
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ICS/">计算机系统概论</a>
+          
+            <label for="__nav_2_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="计算机系统概论" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          计算机系统概论
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-2/" class="md-nav__link">
+        Bits, Data Types and Operations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-3/" class="md-nav__link">
+        Digital Logic Structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-4/" class="md-nav__link">
+        The von Neumann Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-5/" class="md-nav__link">
+        LC-3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-6/" class="md-nav__link">
+        Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-7/" class="md-nav__link">
+        Assembly Language
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-8/" class="md-nav__link">
+        Data Structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-9/" class="md-nav__link">
+        I/0
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          CSAPP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CSAPP" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          CSAPP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/5/" class="md-nav__link">
+        优化程序性能
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/6/" class="md-nav__link">
+        存储器层次结构
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/7/" class="md-nav__link">
+        链接
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/8/" class="md-nav__link">
+        异常控制流
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSAPP/9/" class="md-nav__link">
+        虚拟内存
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">计算机逻辑设计基础</a>
+          
+            <label for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="计算机逻辑设计基础" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          计算机逻辑设计基础
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic01/" class="md-nav__link">
+        数字系统和信息
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic02/" class="md-nav__link">
+        组合逻辑电路
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic03/" class="md-nav__link">
+        组合逻辑电路设计
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          时序逻辑电路
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        时序逻辑电路
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#storage-elements-and-analysis" class="md-nav__link">
+    Storage Elements and Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage Elements and Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#latch" class="md-nav__link">
+    Latch
+  </a>
+  
+    <nav class="md-nav" aria-label="Latch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-nand-overline-s-overline-r-latch" class="md-nav__link">
+    Basic (NAND)  \(\overline S\) –  \(\overline R\) Latch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-nor-s-r-latch" class="md-nav__link">
+    Basic (NOR)  \(S\) – \(R\) Latch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clocked-s-r-latch" class="md-nav__link">
+    Clocked \(S\) - \(R\) Latch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-latch" class="md-nav__link">
+    \(D\) Latch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flip-flop" class="md-nav__link">
+    Flip-flop
+  </a>
+  
+    <nav class="md-nav" aria-label="Flip-flop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s-r-master-slave-flip-flop" class="md-nav__link">
+    S-R Master-Slave Flip-Flop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-triggered-d-flip-flop" class="md-nav__link">
+    Edge-Triggered D Flip-Flop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-table" class="md-nav__link">
+    State table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-diagrams" class="md-nav__link">
+    State Diagrams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flip-flop-timing-parameters" class="md-nav__link">
+    Flip-Flop Timing Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequential-circuit-design" class="md-nav__link">
+    Sequential Circuit Design
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequential Circuit Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulation" class="md-nav__link">
+    Formulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Formulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simplification-for-state-tables" class="md-nav__link">
+    Simplification for State Tables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-assignment" class="md-nav__link">
+    State Assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-mapping" class="md-nav__link">
+    Technology Mapping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-flip-flop-types" class="md-nav__link">
+    Other Flip-Flop Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Flip-Flop Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j-k-flip-flop" class="md-nav__link">
+    J-K Flip-flop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t-flip-flop" class="md-nav__link">
+    T Flip-flop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-flip-flop-descriptors" class="md-nav__link">
+    Basic Flip-Flop Descriptors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic06/" class="md-nav__link">
+        寄存器与寄存器传输
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic05/" class="md-nav__link">
+        数字硬件设计
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logic07/" class="md-nav__link">
+        内存基础
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ds/">数据结构与算法</a>
+          
+            <label for="__nav_2_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="数据结构与算法" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          数据结构与算法
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/algorithm/" class="md-nav__link">
+        算法分析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/tree/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/heap/" class="md-nav__link">
+        堆
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/set/" class="md-nav__link">
+        并查集
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/graph/" class="md-nav__link">
+        图论
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/sort/" class="md-nav__link">
+        排序
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ds/hash/" class="md-nav__link">
+        散列
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../dip/">图像信息处理</a>
+          
+            <label for="__nav_2_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="图像信息处理" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          图像信息处理
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip1/" class="md-nav__link">
+        图像信息处理介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip2/" class="md-nav__link">
+        二值图像和形态学
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip3/" class="md-nav__link">
+        图像灰度变换与直方图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip5/" class="md-nav__link">
+        几何变换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip6/" class="md-nav__link">
+        卷积与滤波
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip7/" class="md-nav__link">
+        双边滤波的加速
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip8/" class="md-nav__link">
+        引导滤波
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip9/" class="md-nav__link">
+        稀疏范数滤波
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip10/" class="md-nav__link">
+        傅里叶变换
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip11/" class="md-nav__link">
+        图像特征检测和提取
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dip/dip12/" class="md-nav__link">
+        深度学习
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          面向对象程序设计
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="面向对象程序设计" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          面向对象程序设计
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop2/" class="md-nav__link">
+        Class
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop3/" class="md-nav__link">
+        Container
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop4/" class="md-nav__link">
+        Function
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop5/" class="md-nav__link">
+        Constant and Static
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop6/" class="md-nav__link">
+        Inheritance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop7/" class="md-nav__link">
+        Polymorphism
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop8/" class="md-nav__link">
+        Copy Ctor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop9/" class="md-nav__link">
+        Overloaded Operators
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          数据库系统
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据库系统" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          数据库系统
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db1/" class="md-nav__link">
+        数据库介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db2/" class="md-nav__link">
+        关系模型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db3/" class="md-nav__link">
+        SQL 语言介绍
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db4/" class="md-nav__link">
+        中级 SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db5/" class="md-nav__link">
+        高级 SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db6/" class="md-nav__link">
+        实体-关系模型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db7/" class="md-nav__link">
+        关系数据库设计
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db8/" class="md-nav__link">
+        物理存储系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db9/" class="md-nav__link">
+        数据存储结构
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_8">
+          计算机组成
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机组成" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          计算机组成
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CO/co1/" class="md-nav__link">
+        计算机概要与技术
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CO/co3/" class="md-nav__link">
+        计算机的算术运算
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CO/co2/" class="md-nav__link">
+        指令：计算机的语言
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CO/co4/" class="md-nav__link">
+        处理器
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Mathematics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mathematics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Mathematics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          线性代数
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="线性代数" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          线性代数
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
+        线性代数Ⅱ(H)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          数据建模与分析
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数据建模与分析" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据建模与分析
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MLT/mlt2/" class="md-nav__link">
+        感知机
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Miscellaneous
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Miscellaneous" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Miscellaneous
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Android
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Android" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/dataflow/" class="md-nav__link">
+        触控事件的数据流
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          友链
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="友链" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          友链
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../link/" class="md-nav__link">
+        Link
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#storage-elements-and-analysis" class="md-nav__link">
+    Storage Elements and Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage Elements and Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#latch" class="md-nav__link">
+    Latch
+  </a>
+  
+    <nav class="md-nav" aria-label="Latch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-nand-overline-s-overline-r-latch" class="md-nav__link">
+    Basic (NAND)  \(\overline S\) –  \(\overline R\) Latch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-nor-s-r-latch" class="md-nav__link">
+    Basic (NOR)  \(S\) – \(R\) Latch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clocked-s-r-latch" class="md-nav__link">
+    Clocked \(S\) - \(R\) Latch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-latch" class="md-nav__link">
+    \(D\) Latch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flip-flop" class="md-nav__link">
+    Flip-flop
+  </a>
+  
+    <nav class="md-nav" aria-label="Flip-flop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s-r-master-slave-flip-flop" class="md-nav__link">
+    S-R Master-Slave Flip-Flop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-triggered-d-flip-flop" class="md-nav__link">
+    Edge-Triggered D Flip-Flop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-table" class="md-nav__link">
+    State table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-diagrams" class="md-nav__link">
+    State Diagrams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flip-flop-timing-parameters" class="md-nav__link">
+    Flip-Flop Timing Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequential-circuit-design" class="md-nav__link">
+    Sequential Circuit Design
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequential Circuit Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulation" class="md-nav__link">
+    Formulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Formulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simplification-for-state-tables" class="md-nav__link">
+    Simplification for State Tables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-assignment" class="md-nav__link">
+    State Assignment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-mapping" class="md-nav__link">
+    Technology Mapping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-flip-flop-types" class="md-nav__link">
+    Other Flip-Flop Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Flip-Flop Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#j-k-flip-flop" class="md-nav__link">
+    J-K Flip-flop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t-flip-flop" class="md-nav__link">
+    T Flip-flop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-flip-flop-descriptors" class="md-nav__link">
+    Basic Flip-Flop Descriptors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+
+                
+  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/Logic/logic04.md" title="编辑此页" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="sequential-circuits">Sequential Circuits<a class="headerlink" href="#sequential-circuits" title="Permanent link">&para;</a></h1>
+<details class="abstract">
+<summary>Abstract</summary>
+<ol>
+<li>时序电路概念和组成<br />
+Introduction to Sequential Circuits  </li>
+<li>输出方程、激励函数、次态方程、输出方程类型 <br />
+Output function, Excitationfunction, Next state function, type of output functions  </li>
+<li>时序电路类型<br />
+Types of sequential circuits  </li>
+<li>电路延迟模型<br />
+Circuit delay model  </li>
+<li>
+<p>锁存器与触发器 <br />
+Latch and Flip-Flop</p>
+<ul>
+<li>S-R锁存器的原理、特征表、特征方程，内部电路分析，不确定状态的原因及出现条件<br />
+Analysis of Basic S-R Latch, Characteristic Table, Characteristic Equation, reason of unstable state  </li>
+<li>D锁存器、D触发器的原理、特征表、特征方程，内部电路分析 <br />
+Theory of D Latch and D Flip-Flop, Characteristic Table, Characteristic Equation  </li>
+<li>JK触发器、T触发器的行为、特征表、特征方程<br />
+Behavior of JK Flip-Flop, TFlip-Flop, Characteristic Table, Characteristic Equation  </li>
+<li>脉冲触发和边沿触发的概念，脉冲触发的一次性采样行为原因<br />
+Concept  of  Master-slave and edge-triggered flip-flop, 1s catching of Mast-slave flip-flop  </li>
+<li>锁存器和触发器的时序，建立时间、保持时间、传输延迟等各种时序成分<br />
+Flip-Flop Timing Parameters, setup time, hold time, propagation delay  </li>
+<li>各种触发器的图形符号<br />
+Symbols of Flip-Flops  </li>
+</ul>
+</li>
+<li>
+<p>状态表、状态图<br />
+State Table, State Diagram  </p>
+</li>
+<li>
+<p>同步时序电路分析<br />
+Sequential Circuit Analysis  </p>
+<ul>
+<li>根据给定电路，写出输出方程和激励函数/次态方程  <br />
+Derive output functions and excitationfunction/Next state function  </li>
+<li>列出状态真值表<br />
+ObtainState truth table  </li>
+<li>列出时序电路的次态<br />
+List next state of sequential circuit  </li>
+<li>作状态表和状态图<br />
+ObtainState Table and State Diagram  </li>
+<li>分析时序电路的外部性能<br />
+Analysis the behavior of sequential circuit  </li>
+<li>对电路进行评述，通常需检查自恢复功能及画出时序波形图<br />
+Evaluate the circuit, validate the self-recovery ability  </li>
+</ul>
+</li>
+<li>
+<p>电路和系统级时序分析，时序电路各路径的时序成分分析计算<br />
+Circuit and System Level Timing, analyze and compute time component along any path of the sequential circuit  <br />
+9．米利型和穆尔型电路分析<br />
+analyze Mealy and Moore type circuit<br />
+10．时序电路设计<br />
+Sequential Circuit Design  </p>
+<ul>
+<li>写出规格说明书<br />
+Specification  </li>
+<li>系统描述–从问题陈述中得出状态图和状态表<br />
+Formulation -Obtain a state diagram or state table  </li>
+<li>状态赋值–为状态表中的每个状态赋二进制代码<br />
+State Assignment -Assign binary codes to the states  </li>
+<li>得到触发器的输入方程-选择触发器的类型，从状态表的次态栏得到触发器的输入方程<br />
+Flip-Flop Input Equation Determination-Select flip-flop types and derive flip-flop equations from next state entries in the table  </li>
+<li>确定输出方程-从状态表的输出栏得到输出方程<br />
+Output Equation Determination-Derive output equations from output entries in the table  </li>
+<li>优化–优化触发器的输入方程和输出方程 <br />
+Optimization-Optimize the equations  </li>
+<li>工艺映射–根据方程画出电路图，并映射到触发器和门工艺<br />
+Technology Mapping-Find  circuit from equations and map to flip-flops and gate technology  </li>
+<li>验证–验证最终设计的正确性<br />
+Verification-Verify correctness of final design</li>
+</ul>
+</li>
+</ol>
+</details>
+<h2 id="storage-elements-and-analysis">Storage Elements and Analysis<a class="headerlink" href="#storage-elements-and-analysis" title="Permanent link">&para;</a></h2>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091011289.png" width = 50%/> </div>
+
+<p>时序电路包括：组合逻辑电路+存储元件</p>
+<p>Combinatorial Logic  </p>
+<ul>
+<li>Next state function Next State = f(Inputs, State)  次态方程  </li>
+<li>Output function (Mealy) Outputs = g(Inputs, State)</li>
+<li>Output function (Moore) Outputs = h(State) 输入不会直接改变输出，而是通过状态来间接改变输出  </li>
+</ul>
+<p><strong>Types of Sequential Circuits</strong>  </p>
+<ul>
+<li>Depends on the times at which:<ul>
+<li>storage elements observe their inputs, and </li>
+<li>storage elements change their state </li>
+</ul>
+</li>
+<li>Synchronous<br />
+状态更新一定发生在时钟周期的整周期上</li>
+<li>Asynchronous<br />
+状态更新可以在任意时间发生  <br />
+如果时钟也被看做一个输入，那么所有电路都是 Asynchronous      <br />
+Asynchronous 可以让我们在有需要的时候更新电路，降低电路的功耗   </li>
+</ul>
+<p>Discrete Event Simulation 离散事件仿真</p>
+<h3 id="latch">Latch<a class="headerlink" href="#latch" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211091038178.png" width = 40%/> </div><br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091038137.png" width = 55%/> </div>   </p>
+<p>The simple combinational circuit has now become a sequential circuit because its output is a function of a time sequence of input signals!<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091039908.png" width = 60%/> </div>   </p>
+</div>
+<h4 id="basic-nand-overline-s-overline-r-latch">Basic (NAND)  <span class="arithmatex">\(\overline S\)</span> –  <span class="arithmatex">\(\overline R\)</span> Latch<a class="headerlink" href="#basic-nand-overline-s-overline-r-latch" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091041175.png" width = 40%/> </div>
+
+<table>
+<thead>
+<tr>
+<th align="left"><span class="arithmatex">\(R\)</span></th>
+<th><span class="arithmatex">\(S\)</span></th>
+<th><span class="arithmatex">\(Q\)</span></th>
+<th><span class="arithmatex">\(\overline Q\)</span></th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>?</td>
+<td>?</td>
+<td>Stored state unknown</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td><em>Set</em> Q to 1</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>Now Q <em>remembers</em> 1</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td><em>Reset</em> Q to 0</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>Now Q <em>remembers</em> 0</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>Both go high</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>?</td>
+<td>?</td>
+<td>Unstable!</td>
+</tr>
+</tbody>
+</table>
+<p>最后一步，两个引脚同时从 0 -&gt; 1, 那么两个与非门的输出都期望变成 0, 但只要有一个门的输出变为 0 另一个门就被锁住变成 1, 因此两个门不可能同时变化。但我们无法确定是哪个门会变成 1.<br />
+<span class="arithmatex">\(S=0,R=0\)</span> is <u><strong>forbidden</strong></u> as input pattern.   </p>
+<h4 id="basic-nor-s-r-latch">Basic (NOR)  <span class="arithmatex">\(S\)</span> – <span class="arithmatex">\(R\)</span> Latch<a class="headerlink" href="#basic-nor-s-r-latch" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091046159.png" width = 40%/> </div>
+
+<table>
+<thead>
+<tr>
+<th align="left"><span class="arithmatex">\(R\)</span></th>
+<th><span class="arithmatex">\(S\)</span></th>
+<th><span class="arithmatex">\(Q\)</span></th>
+<th><span class="arithmatex">\(\overline Q\)</span></th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td>0</td>
+<td>?</td>
+<td>?</td>
+<td>Stored state unknown</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td><em>Set</em> Q to 1</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>Now Q <em>remembers</em> 1</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td><em>Reset</em> Q to 0</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>Now Q <em>remembers</em> 0</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>Both go high</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>0</td>
+<td>?</td>
+<td>?</td>
+<td>Unstable!</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clocked-s-r-latch">Clocked <span class="arithmatex">\(S\)</span> - <span class="arithmatex">\(R\)</span> Latch<a class="headerlink" href="#clocked-s-r-latch" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091058462.png" width = 45%/> </div>
+
+<p><span class="arithmatex">\(C\)</span> 作为一个 ENABLE 的功能。当 <span class="arithmatex">\(C=0\)</span> 时，<span class="arithmatex">\(Q\)</span> 不会发生改变。当 <span class="arithmatex">\(C=1\)</span> 时，上面相当于 <span class="arithmatex">\(\overline S\)</span>, 下面相当于 <span class="arithmatex">\(\overline R\)</span>, 变成一个钟控的 SR 锁存器。  </p>
+<table>
+<thead>
+<tr>
+<th align="left"><span class="arithmatex">\(C\)</span></th>
+<th><span class="arithmatex">\(S\)</span></th>
+<th><span class="arithmatex">\(R\)</span></th>
+<th><span class="arithmatex">\(Q(t+1)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td>X</td>
+<td>X</td>
+<td>No change</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>0</td>
+<td>0</td>
+<td>No change</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>0</td>
+<td>1</td>
+<td>0: <em>Clear</em> Q</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>0</td>
+<td>1: <em>Set</em> Q</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>1</td>
+<td>1</td>
+<td>Indeterminate</td>
+</tr>
+</tbody>
+</table>
+<p><span class="arithmatex">\(Q(t+1)\)</span> based on current state <span class="arithmatex">\(Q(t)\)</span> and current inputs <span class="arithmatex">\((S,R,C)\)</span></p>
+<h4 id="d-latch"><span class="arithmatex">\(D\)</span> Latch<a class="headerlink" href="#d-latch" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091105090.png" width = 45%/> </div>
+
+<p><span class="arithmatex">\(S\ R\)</span> 不会同时为 0.  </p>
+<table>
+<thead>
+<tr>
+<th align="left"><span class="arithmatex">\(C\)</span></th>
+<th><span class="arithmatex">\(D\)</span></th>
+<th><span class="arithmatex">\(Q(t+1)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td>X</td>
+<td>No change</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td>0</td>
+<td>0: <em>Clear</em> Q</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td>1</td>
+<td>1: <em>Set</em> Q</td>
+</tr>
+</tbody>
+</table>
+<p>即当 <span class="arithmatex">\(C=1\)</span> 时 <span class="arithmatex">\(Q=D\)</span></p>
+<p>The graphic symbol for a <span class="arithmatex">\(D\)</span> latch:  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091106989.png" width = 30%/> </div>
+
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>在算门输入成本的时候，我们要分开算 G 和 GN. 因为锁存器同时为我们提供了 <span class="arithmatex">\(Q\)</span> 和 <span class="arithmatex">\(\overline Q\)</span>, 锁存器可以为后面的组合电路提供原变量和反变量。</p>
+</div>
+<h3 id="flip-flop">Flip-flop<a class="headerlink" href="#flip-flop" title="Permanent link">&para;</a></h3>
+<p>锁存器不适合使用在电路中：不能做到一个周期，状态只更新一次。具体原因见 <a href="http://note.hobbitqia.cc/ICS/ICS-3/#the-synchronous-finite-state-machine">ICS Notes</a>  </p>
+<h4 id="s-r-master-slave-flip-flop">S-R Master-Slave Flip-Flop<a class="headerlink" href="#s-r-master-slave-flip-flop" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211091128641.png" width = 50%/> </div>
+
+<p>前面称为 master(主锁存器), 后面称为 slave(从锁存器)  <br />
+当 <span class="arithmatex">\(C=0\)</span> 时，主锁存器不变。  <br />
+<span class="arithmatex">\(C\)</span> 从 0 变为 1 时，主锁存器被使能，Q 改变，但从锁存器不变。</p>
+<p>周期变长一倍
+一次性采样问题(1s catching)：当 S R 均为 0 时如果有小扰动，无法复原<br />
+要求主从触发器避免 S R 的扰动</p>
+<h4 id="edge-triggered-d-flip-flop">Edge-Triggered D Flip-Flop<a class="headerlink" href="#edge-triggered-d-flip-flop" title="Permanent link">&para;</a></h4>
+<p>An <strong>edge-triggered flip-flop</strong> ignores the pulse while it is at a constant level and triggers only during a transition of the clock signal.<br />
+A <strong>master-slave D flip-flop</strong> which also exhibits <strong>edge-triggered</strong> behavior can be used.</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211111109804.png" width = 40%/> </div>
+
+<p>The delay of the S-R master-slave flip-flop can be avoided since the 1s-catching behavior is not present with D replacing S and R inputs. (D 锁存器不会出现 S R 同时为 0 的情况)</p>
+<p><strong>Positive-Edge Triggered D Flip-Flop</strong> is Formed by adding inverter to clock input. (上升沿触发器)  <br />
+Q changes to the value on D applied at the positive clock edge within timing constraints to be specified</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211111112460.png" width = 40%/> </div>
+
+<p><strong>Actual Circuit of Edge-Triggered D Flip-Flop:</strong>  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211111108389.png" width = 40%/> </div>
+
+<p>(和 D-Latch Flip-flop 有所不同)</p>
+<p><strong>Standard Symbols for Storage Elements:</strong>  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211111116243.png" width = 50%/> </div>
+
+<ul>
+<li><strong>Direct Inputs</strong>  <br />
+Direct <span class="arithmatex">\(R\)</span> and/or <span class="arithmatex">\(S\)</span> inputs that control the state of the latches within the flip-flops are used for this <em>initialization</em>.   </li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211111118511.png" width = 20%/> </div>
+
+<h3 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h3>
+<p><strong>General Model</strong>  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211181954243.png" width = 40%/> </div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<p>同步时序电路里 D 触发器的时钟输入端，统一接在一个系统时钟输入 CLK 信号上。（规定所有触发器何时进行状态改变，是额外提供的引脚，<u>不属于整个系统的信号输入</u>）</p>
+<ul>
+<li><strong>Current State</strong> at time (t) is stored in an array of flip-flops.</li>
+<li><strong>Next State</strong> at time (t+1) is a <em>Boolean function</em> of State and Inputs.  </li>
+<li><strong>Outputs</strong> at time (t) are a <em>Boolean function</em> of State (t) and (sometimes) Inputs (t).</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211181959796.png" width = 40%/> </div>    </p>
+<p>可以看到，cp 是时钟输入信号  </p>
+<ul>
+<li>input: <span class="arithmatex">\(x(t)\)</span>  </li>
+<li>output: <span class="arithmatex">\(y(t)\)</span>  </li>
+<li>
+<p>state: <span class="arithmatex">\((A(t),B(t))\)</span></p>
+</li>
+<li>
+<p>Boolean equations for the functions
+<span class="arithmatex">\(D_A(t) = A(t)x(t)+ B(t)x(t), A(t+1)=A(t)x(t)+ B(t)x(t)\)</span>, <br />
+<span class="arithmatex">\(D_B(t) = A(t)x(t),B(t+1) = A(t)x(t), y(t) = x(t)(B(t) + A(t))\)</span>    </p>
+</li>
+</ul>
+</details>
+<h4 id="state-table"><strong>State table</strong><a class="headerlink" href="#state-table" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Present State</strong> – the values of the state variables for each allowed state.</li>
+<li><strong>Input</strong> – the input combinations allowed.</li>
+<li><strong>Next-state</strong> – the value of the state at time <span class="arithmatex">\((t+1)\)</span> based on the present state and the input.</li>
+<li><strong>Output</strong> – the value of the output as a function of the present state and (sometimes) the input.</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182022623.png" width = 40%/> </div>    </p>
+<p>代入刚刚写出的式子即可 <br />
+也可以使用另一种画法：(二维状态表，按照格雷码的顺序排列)  </p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202301010950173.png" width = 40%/> </div>   </p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在画状态表时，无法达到的状态也要画出来。因为可能程序受到某种扰动或者异常，可能会跳到原先无法到达的状态。</p>
+</div>
+<h4 id="state-diagrams"><strong>State Diagrams</strong><a class="headerlink" href="#state-diagrams" title="Permanent link">&para;</a></h4>
+<p>The sequential circuit function can be represented in graphical form as a state diagram with the following components:</p>
+<ul>
+<li>A <em>circle</em> with the state name in it for each state</li>
+<li>A <em>directed arc</em> from the Present State to the Next State for each state transition</li>
+<li>A <em>label</em> on each directed arc with the Input values which causes the state transition, and A label: <br />
+    输出和输入是否有关，无关标在圈里面，有关标在外面<ul>
+<li>On each circle with the output value produced, or</li>
+<li>On each directed arc with the output value produced.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Moore</strong> type output depends only on state(输出画在圈里面)  <br />
+<strong>Mealy</strong> type output depends on state and input(输出画在有向弧上)</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182034769.png" width = 40%/> </div> </p>
+<p>（斜杠左边表示外部输入，右边表示输出）  </p>
+</details>
+<p>Sequential Circuits or Sequential Machines are also called <strong>Finite State Machines (FSMs)</strong>.   </p>
+<ul>
+<li>
+<p><strong>Equivalent State Definitions</strong><br />
+两个状态，无论输入是什么，都会使这两个状态输出相同，次态也相同，那么这两个状态是等效状态。</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182045869.png" width = 35%/> </div> </p>
+<p>在这个图里我们可以发现 S2, S3 是等效状态。<br />
+合并 S2, S3 后：
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211182042842.png" width = 30%/> </div>   </p>
+<p>这个时候我们发现 S1 和 S2 又是等效状态，再次合并，最后得到：
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211182044392.png" width = 40%/> </div>   </p>
+</details>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">为什么要合并等效状态</p>
+<p>减少表示状态所需要的二进制位</p>
+</div>
+<details class="example">
+<summary>Moore and Mealy Example Diagrams</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182049556.png" width = 40%/> </div> </p>
+</details>
+<h4 id="flip-flop-timing-parameters">Flip-Flop Timing Parameters<a class="headerlink" href="#flip-flop-timing-parameters" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231009951.png" width = 50%/> </div>
+
+<ul>
+<li><span class="arithmatex">\(t_s\)</span> - setup time. 在下降之前要先准备好。</li>
+<li><span class="arithmatex">\(t_h\)</span> - hold time  </li>
+<li><span class="arithmatex">\(t_w\)</span> - clock pulse width  </li>
+<li><span class="arithmatex">\(t_{px}\)</span> - propagation delay. Measured from clock edge that triggers the output change to the output change.  </li>
+</ul>
+<details class="note">
+<summary>主从触发器和边缘触发器的 <span class="arithmatex">\(t_s\)</span></summary>
+<p>根据定义, <span class="arithmatex">\(t_s\)</span> 指在采样前触发器需要的准备时间。对于主从触发器，在信号处于上升沿的时候 S 部分的输入是不能改变的，否则可能有一次性采样问题，因此在信号处于上升沿都是触发器的准备时间。这也是为什么现在我们普遍使用边缘触发器的原因。 <br />
+对于 D 触发器而言，不要卡在时钟边沿改变 D 的输入，而是在时钟改变之前就进行，这样 D 触发器才能有足够的准备时间。 </p>
+</details>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231025540.png" width = 50%/> </div>
+
+<ul>
+<li><span class="arithmatex">\(t_p\)</span> - clock period   </li>
+<li><span class="arithmatex">\(t_{pd,COMB}\)</span> - total delay of combinational logic along the path from flip-flop output to flip-flop input  </li>
+<li><span class="arithmatex">\(t_{slack}\)</span> - extra time in the clock period in addition to the sum of the delays and setup time on a path. 松弛时间（休息）必须大于等于 0. </li>
+</ul>
+<p><strong>Time equation</strong>: <span class="arithmatex">\(t_p \geq \max (t_{pd,FF} + t_{pd,COMB} + t_s)\)</span> for all paths from flip-flop output to flip-flop input.  </p>
+<details class="example">
+<summary>Example</summary>
+<p>Compare the allowable combinational delay for a specific circuit: Using edge-triggered flip-flops; Using master-slave flip-flops.   </p>
+<ul>
+<li>Parameters: clock frequency = 250 Mhz; <span class="arithmatex">\(t_{pd,FF}(max)=1.0ns\)</span>; <span class="arithmatex">\(t_s(max)=0.3ns\)</span> for edge-triggered flip-flops; <span class="arithmatex">\(t_s = t_{wH} = 2.0 ns\)</span> for master-slave flip-flops  </li>
+<li>Calculation: <span class="arithmatex">\(t_p = \dfrac{1}{clock\ frequency} = 4.0 ns\)</span><ul>
+<li>Edge-triggered: <span class="arithmatex">\(4.0 \geq 1.0 + t_{pd,COMB} + 0.3, t_{pd,COMB} \leq 2.7 ns\)</span></li>
+<li>Master-slave: <span class="arithmatex">\(4.0 \geq 1.0 + t_{pd,COMB} + 2.0, t_{pd,COMB} \leq 1.0 ns\)</span></li>
+</ul>
+</li>
+</ul>
+</details>
+<h2 id="sequential-circuit-design">Sequential Circuit Design<a class="headerlink" href="#sequential-circuit-design" title="Permanent link">&para;</a></h2>
+<p>The Design procedure  </p>
+<ul>
+<li>Specification 需求和功能的描述，一般以文字形式  </li>
+<li>Formulation - Obtain a state diagram or state table</li>
+<li>State Assignment - Assign binary codes to the states</li>
+<li>Flip-Flop Input Equation Determination - Select flip-flop types and derive flip-flop equations from next state entries in the table</li>
+<li>Output Equation Determination - Derive output equations from output entries in the table</li>
+<li>Optimization - Optimize the equations</li>
+<li>Technology Mapping - Find circuit from equations and map to flip-flops and gate technology</li>
+<li>Verification - Verify correctness of final design</li>
+</ul>
+<h3 id="formulation">Formulation<a class="headerlink" href="#formulation" title="Permanent link">&para;</a></h3>
+<p>A state is an abstraction of the history of the past applied inputs to the circuit (including  power-up reset or system reset).   </p>
+<p>将文本化的需求变为用状态机描述（整个电路经过哪些状态？每个状态之间由哪个输入进行驱动？输出是什么？）</p>
+<p>这里我们以 Sequence Recognizers 为例，介绍 Formulation 的过程。</p>
+<details class="info">
+<summary>Sequence Recognizers</summary>
+<p>A <strong>sequence recognizer</strong> is a sequential circuit that produces a distinct output value whenever a prescribed pattern of input symbols occur in sequence, i.e, recognizes an input sequence occurence. <br />
+To develop a sequence recognizer state diagram:</p>
+<ul>
+<li>Begin in an initial state in which NONE of the initial portion of the sequence has occurred (typically “reset” state).</li>
+<li>Add a state that recognizes that the first symbol has occurred.</li>
+<li>Add states that recognize each successive symbol occurring.</li>
+<li>The final state represents the input sequence (possibly  less the final input value) occurence.</li>
+<li>Add state transition arcs which specify what happens when a symbol not in the proper sequence has occurred.</li>
+<li>Add other arcs on non-sequence inputs which transition to states that represent the input subsequence that has occurred.  </li>
+</ul>
+</details>
+<details class="example">
+<summary>Example</summary>
+<p>这里我们以识别 1101 为例.(Mealy 模型)  <br />
+after 110 and a 1, we have:<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231104003.png" width = 50%/> </div> </p>
+<p>注意在 D 状态之后，应该与 B 状态相连(因为 1101101)中的第三个 1 既可以是前一个序列的末尾 1, 也可以是下一个序列的起始 1. <br />
+我们补足状态之间的转移:<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231105830.png" width = 50%/> </div>   </p>
+<p>通过状态图得到状态表: 
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231109527.png" width = 50%/> </div>   </p>
+<p>如果将刚刚的状态图 转为Moore 模型，我们需要再加一个状态 E, 当到达 E 状态时表明我们得到了序列 1101. <br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231112070.png" width = 50%/> </div>  </p>
+<p>观察可以发现, B 和 E 对同样的输入，次态都是一样的。但是并不是等效状态，因为二者的输出不同。 </p>
+</details>
+<p>The <em>Moore</em> model for a sequence recognizer usually has <strong>more states</strong> than the <em>Mealy</em> model.</p>
+<h4 id="simplification-for-state-tables">Simplification for State Tables<a class="headerlink" href="#simplification-for-state-tables" title="Permanent link">&para;</a></h4>
+<p>所谓状态简化，就是要获得一个最小化的状态表。这个表不仅能正确地反映设计的全部要求，而且状态的数目最少。</p>
+<p><strong>“状态等效”</strong> 的三种情况：（在所有输入情况下）</p>
+<ul>
+<li>首先，输出相同</li>
+<li>
+<p>同时，次态相同/次态交错/次态循环</p>
+<div class="admonition example">
+<p class="admonition-title">等效</p>
+<ul>
+<li>
+<p>次态相同<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231125022.png" width = 30%/> </div> </p>
+</li>
+<li>
+<p>次态相同或交错
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231125043.png" width = 30%/> </div>  </p>
+</li>
+<li>
+<p>次态交错或等效<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211251510285.png" width = 30%/> </div>  </p>
+</li>
+<li>
+<p>次态交错或相同或循环
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211231126009.png" width = 30%/> </div>  </p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+<p>状态简化方法：  </p>
+<ul>
+<li>
+<p><strong>观察法</strong>  </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211231128810.png" width = 45%/> </div>  </p>
+<ul>
+<li><span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(B\)</span>，<span class="arithmatex">\(C\)</span>和<span class="arithmatex">\(D\)</span>的输出完全相等；</li>
+<li><span class="arithmatex">\(C\)</span>和<span class="arithmatex">\(D\)</span>在输入的各种取值组合下，次态相同，因此<span class="arithmatex">\(C\)</span>和<span class="arithmatex">\(D\)</span>等效；</li>
+<li><span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(B\)</span>在<span class="arithmatex">\(X=1\)</span>时的次态不满足四条件之一，因此<span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(B\)</span>不等效;</li>
+<li>最大等效类为 <span class="arithmatex">\(\{A\}，\{B\}，\{C,D\}\)</span>,分别用 <span class="arithmatex">\(A', B', C'\)</span> 表示； </li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>隐含表法化简</strong>  </p>
+<ul>
+<li>作隐含表</li>
+<li>顺序比较，寻等效状态对<ul>
+<li>状态对等效，打“√”；</li>
+<li>状态对不等效，打“×”；</li>
+<li>状态对是否等效需进一步检查，则标记次态对。</li>
+</ul>
+</li>
+<li>进行关连比较，确定等效状态对</li>
+<li>确定最大等效类，作最小化状态表</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211231131399.png" width = 45%/> </div>   </p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211231134989.png" width = 30%/> </div>    </p>
+<p>由于<span class="arithmatex">\(CD\)</span>、<span class="arithmatex">\(DE\)</span>不等效，所以<span class="arithmatex">\(DG\)</span>不等效，画斜线标志。最后我们有 <span class="arithmatex">\(AB\rightarrow CF\)</span> <span class="arithmatex">\(AE→BE→CF\)</span>. 处于循环链中的每一个状态对都是等效状态对。<br />
+最后我们有  </p>
+<ul>
+<li>四个等效对 <span class="arithmatex">\((A,B), (A,E), (B,E), (C,F)\)</span></li>
+<li>最大等效类 <span class="arithmatex">\((A,B,E)\)</span></li>
+<li>四个状态 <span class="arithmatex">\((A,B,E), (C,F), (D), (G)\)</span></li>
+<li>令以上四个状态依次为 <span class="arithmatex">\(a, b, c, d\)</span></li>
+</ul>
+</div>
+</li>
+</ul>
+<h3 id="state-assignment">State Assignment<a class="headerlink" href="#state-assignment" title="Permanent link">&para;</a></h3>
+<p>Each of the <span class="arithmatex">\(m\)</span> states must be assigned a unique code<br />
+Minimum number of bits required is <span class="arithmatex">\(n\)</span> such that <span class="arithmatex">\(n\geq \lceil \log_2 m\rceil\)</span>  </p>
+<p>There are <span class="arithmatex">\(2^n - m\)</span> unused states. (不能省略，可能会因为异常陷入 unused states)</p>
+<details class="example">
+<summary>Different State Assignment</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211251517379.png" width = 30%/> </div>   </p>
+<ul>
+<li>
+<p>Counting Order Assignment: <span class="arithmatex">\(A = 0 0, B = 0 1, C = 1 0, D = 1 1\)</span><br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211251518861.png" width = 40%/> </div>   </p>
+</li>
+<li>
+<p>Gray Code Assignment: <span class="arithmatex">\(A = 0 0, B = 0 1, C = 1 1, D = 1 0\)</span><br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211251518916.png" width = 40%/> </div>   </p>
+</li>
+</ul>
+</details>
+<p>状态分配的方案不一样，所得到的输出函数和激励函数的表达式也不同，由此而设计出来的电路复杂度也不同。状态分配的任务是：</p>
+<ul>
+<li>决定编码的长度</li>
+<li>寻找一种最佳（很难找到）的或接近最佳的状态分配方案</li>
+</ul>
+<p>分配的基本原则: </p>
+<ul>
+<li>在相同输入条件下具有相同次态的现态，应尽可能分配相邻的二进制代码</li>
+<li>在相邻输入条件，同一现态的次态应尽可能分配相邻的二进制代码</li>
+<li>输出完全相同的现态应尽可能分配相邻的二进制代码</li>
+<li>最小化状态表中出现次数最多的状态或初始状态应分配逻辑 0  </li>
+<li>一般情况下，第一条原则较为重要，需优先考虑，其次要考虑由前三条原则得到的应分配相邻代码的状态对出现的次数，次数多的状态对应优先分配相邻的二进制代码。</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211251523674.png" width = 20%/> </div>   </p>
+<ul>
+<li>在相同输入条件下具有相同次态的现态，应尽可能分配相邻的二进制代码：A和B，A和C应相邻</li>
+<li>在相邻输入条件，同一现态的次态应尽可能分配相邻的二进制代码：C和D，C和A，B和D，A和B应相邻；</li>
+<li>输出完全相同的现态应尽可能分配相邻的二进制代码： A，B，C 三者应相邻，即A和B，A和C，B和C应相邻；</li>
+<li>最小化状态表中出现次数最多的状态或初始状态应分配逻辑0：A分配为逻辑0</li>
+</ul>
+<p>最后得到: 
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211251525780.png" width = 15%/> </div>   </p>
+</div>
+<h3 id="technology-mapping">Technology Mapping<a class="headerlink" href="#technology-mapping" title="Permanent link">&para;</a></h3>
+<p>Library: D flip-flops with Reset(not inverted), NAND gates with up to 4 inputs and inverters. </p>
+<p>方法同之前，先将与门或门等门转化为 NAND, 随后将 inverter 推出散出点。</p>
+<h3 id="other-flip-flop-types">Other Flip-Flop Types<a class="headerlink" href="#other-flip-flop-types" title="Permanent link">&para;</a></h3>
+<h4 id="j-k-flip-flop">J-K Flip-flop<a class="headerlink" href="#j-k-flip-flop" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Behavior<ul>
+<li>类似 SR 触发器, <span class="arithmatex">\(J\)</span> 相当于 <span class="arithmatex">\(S\)</span>, <span class="arithmatex">\(K\)</span> 相当于 <span class="arithmatex">\(R\)</span>.  </li>
+<li>但 <span class="arithmatex">\(J=K=1\)</span> 时，触发器相当于是一个求反的功能</li>
+<li>也有一次性采样的问题</li>
+</ul>
+</li>
+<li>
+<p>Implementation</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301022072.png" width = 40%/> </div>   </p>
+</li>
+<li>
+<p>Symbol</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301023020.png" width = 20%/> （三角表明是上升沿触发，若为圆圈则是下降沿触发）</div>   </p>
+</li>
+</ul>
+<h4 id="t-flip-flop">T Flip-flop<a class="headerlink" href="#t-flip-flop" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Behavior<ul>
+<li>类似 JK 触发器, 相当于 <span class="arithmatex">\(J=K=T\)</span>. 当 <span class="arithmatex">\(T = 0\)</span>, 状态不变; 当 <span class="arithmatex">\(T = 1\)</span>, 状态求反</li>
+<li>存在一次性采样的问题</li>
+<li>无法预置状态，因此需要一个 Reset 信号</li>
+</ul>
+</li>
+<li>
+<p>Implementation</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301028012.png" width = 40%/> </div>   </p>
+</li>
+<li>
+<p>Symbol</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301029728.png" width = 20%/> </div>   </p>
+</li>
+</ul>
+<h4 id="basic-flip-flop-descriptors">Basic Flip-Flop Descriptors<a class="headerlink" href="#basic-flip-flop-descriptors" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Used in analysis<br />
+    已知触发器的输入和现态，预测触发器的输出和次态  <ul>
+<li><strong>Characteristic table</strong> - defines the next state of the flip-flop in terms of flip-flop inputs and current state </li>
+<li><strong>Characteristic equation</strong> - defines the next state of the flip-flop as a Boolean function of the flip-flop inputs and the current state</li>
+</ul>
+</li>
+<li>Used in design<br />
+    已知现态和次态，预测我们要提供怎样的输入  <ul>
+<li><strong>Excitation table(激励表)</strong> - defines the flip-flop input variable values as function of the current state and next state  </li>
+</ul>
+</li>
+</ul>
+<details>
+<summary><b>D Flip-Flop Descriptors</b></summary>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301034218.png" width = 60%/> </div>   
+</details>
+
+<details>
+<summary><b>T Flip-Flop Descriptors</b></summary>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301035957.png" width = 60%/> </div>   
+</details>
+
+<details>
+<summary><b>S-R Flip-Flop Descriptors</b></summary>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301035525.png" width = 60%/> (注意这里有个条件 S R 不能同时为 1.) </div>   
+</details>
+
+<details>
+<summary><b>J-K Flip-Flop Descriptors</b></summary>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202211301416785.png" width = 60%/> </div>   
+</details>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年2月28日 21:23:12</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月22日 14:15:00</span>
+      
+    
+  </small>
+</div>
+
+              
+
+<link rel="stylesheet" href="/css/counter.css">
+
+<!-- Giscus -->
+<h2 id="__comments">评论</h2>
+
+
+<!-- 这里改成你的Giscus代码 -->
+<script src="https://giscus.app/client.js"
+        data-repo="HobbitQia/notebook"
+        data-repo-id="R_kgDOHtZjDg"
+        data-category="General"
+        data-category-id="DIC_kwDOHtZjDs4CQZ7Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+<!-- Reload on palette change -->
+<script>
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object")
+        if (palette.color.scheme === "slate") {
+            var giscus = document.querySelector("script[src*=giscus]")
+            giscus.setAttribute("data-theme", "dark")
+        }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+                /* Instruct Giscus to change theme */
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
+
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../logic03/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 组合逻辑电路设计" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              组合逻辑电路设计
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../logic06/" class="md-footer__link md-footer__link--next" aria-label="下一页: 寄存器与寄存器传输" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              寄存器与寄存器传输
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 <a href="https://github.com/HobbitQia"  target="_blank" rel="noopener">HobbitQia</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/HobbitQia/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+      
+        <script src="../../js/katex.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
