@@ -124,7 +124,6 @@ operator(not function)
 
 * `new`   
 `new` 返回指向地址空间的指针。但 `new` 知道地址空间的类型（与 `malloc` 不同）。
-
     * `new int;`
     * `new Stash;`
     * `new int[10];`

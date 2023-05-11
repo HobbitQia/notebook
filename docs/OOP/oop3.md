@@ -142,6 +142,7 @@ int main( ) {
     return 0;
 }
 ```
+
 * 这是**泛型定义 (generic classes)**，我们需要指定`vector` 和 `vector` 内的元素类型。（`vector<int> x`）
 * `vector<int>::iterator` 是一个类型。实际上 p 不是一个指针，这里利用了 C++ 的运算符重载。
 
