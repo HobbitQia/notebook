@@ -167,6 +167,7 @@ nav:
       - Polymorphism: OOP/oop7.md
       - Copy Ctor: OOP/oop8.md
       - Overloaded Operators: OOP/oop9.md
+      - Templates: OOP/oop10.md
     - 数据库系统:
       - 数据库介绍: DB/db1.md
       - 关系模型: DB/db2.md
@@ -178,6 +179,7 @@ nav:
       - 物理存储系统: DB/db8.md
       - 数据存储结构: DB/db9.md
       - 索引: DB/db10.md
+      - 查询处理: DB/db11.md
     - 计算机组成:
       - 计算机概要与技术: CO/co1.md
       - 计算机的算术运算: CO/co3.md

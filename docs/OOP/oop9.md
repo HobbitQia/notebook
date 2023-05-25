@@ -218,3 +218,65 @@ ostream& tab ( ostream& out ) {
 } 
 cout << "Hello" << tab << "World!" << endl;
 ```
+
+### Copying vs. Initialization
+
+* Assignment Operator 
+    * Must be a member function  
+    必须是成员函数
+    * Will be generated for you if you don't provide one    –Same behavior as automatic copy ctor -- memberwise assignment
+    * Check for assignment to self  
+    拷贝构造之前，内存的指针 `p` 是没有值的，但是赋值的时候 `p` 是有值的。所以需要先 `delete p` 再 `new`. 
+    但如果是自己赋值给自己，源操作的内存已经被 `delete` 掉了。 
+    * Be sure to assign to all data members
+    * Return a reference to `*this`
+
+## Type Conversion
+
+User-defined Type conversions  
+`(int)3.5` 单目的运算符，可以重载  
+``` C++
+class PathName {
+ string name;
+public:
+ // or could be multi-argument with defaults
+ PathName(const string&);
+ ~ PathName();
+};
+...
+string abc("abc");
+PathName xyz(abc); // OK!
+xyz = abc; // OK abc => PathName
+```
+这里我们会先利用 `abc` 构造一个 PathName 的对象，随后赋值给 xyz.  
+以其他变量为参数的构造函数可以帮助我们做赋值。  
+我们在构造函数前面加上 `explicit` 关键字，即 `explicit PathName(const string&);` 即我们的构造函数只能用来做构造，不能把 `string` 对象赋值给 `PathName`.  
+这样编译时就会出错。 
+
+Conversion operations   
+
+* Operator name is any type descriptor
+* No explicit arguments
+* No return type
+* Compiler will use it as a type conversion from $X \Rightarrow T$
+
+``` C++
+class Rational {
+public:
+ ...
+ operator double() const; // Rational to double
+}
+Rational::operator double() const { 
+ return numerator_/(double)denominator_;
+}
+Rational r(1,3); 
+double d = r; // r=>double
+```  
+
+不需要写返回类型。 
+如果我们在重载的运算符前面加上 `explicit`, 那么我们就必须写作 `double d = (double)r;`  
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305230853637.png" width = 60%/> </div>
+
+想将 T 转化为 C, 那么需要一个 `C(T)` 的不加 `explicit`的构造函数，或者 `operator C()` 的重载。如果两个都有，编译器会出错。
+
+Use explicit conversion functions. 

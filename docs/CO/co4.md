@@ -2,6 +2,7 @@
 counter: True  
 ---
 
+
 # The Processor
 
 <div align=center> <img src="http://cdn.hobbitqia.cc/202303311644374.png" width = 65%/> </div>
@@ -474,9 +475,78 @@ In RISC-V: **Supervisor Exception Cause Register(SCAUSE)**
     * Direct  
     所有异常跳到固定地址。  
     * Vectored Interrupts  
+    中断向量  
     Handler address determined by the cause.  
-    Exception vector address to be added to a vector table base register
+    Exception vector address to be added to a vector table base register  
 
 当多个异常/中断同时来时，如何处理？
 
 ### Handler Actions
+
+中断服务程序
+
+* Read cause, and transfer to relevant handler
+* Determine action required  
+* If restartable  
+    * Take corrective action
+    * use SEPC to return to program
+* Otherwise
+    * Terminate program
+    * Report error using SEPC, SCAUSE, ...
+
+### Exceptions in a Pipeline
+
+Another form of control hazard.  
+
+Consider malfunction on add in EX stage.  `add x1, x2, x1` 
+
+* Prevent x1 from being clobbered
+* Complete previous instructions
+* Flush add and subsequent instructions
+* Set SEPC and SCAUSE register values
+* Transfer control to handler
+
+## Instruction-Level Parallelism (ILP)
+
+Pipelining: executing multiple instructions in parallel  
+指令级并行
+
+To increase ILP
+
+* Deeper pipeline  
+让每一级流水线做更少的事情，这样也可以提高工作频率。  
+但流水线不能无限细分，因为流水线寄存器也会带来开销。  
+* **Multiple issue**   
+多发射  
+这样可以做到 CPI < 1. 使用 **Instructions Per Cycle (IPC)**  
+
+### Multiple issue
+
+* Static multiple issue  
+编译器把能够同时放到流水线的指令排好  
+编译器要能检测，避免竞争
+* Dynamic multiple issue  
+CPU 自己决定执行那些指令，编译器会帮忙重排指令，但还是由 CPU 解决竞争。
+
+#### Static multiple issue
+
+??? Example "RISC-V with Static Dual Issue" 
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202305070002576.png" width = 45%/> </div>
+
+    ALU/branch 指令不用访问内存。
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202305070006563.png" width = 45%/> </div>
+
+    所以这两条不能同时发出，因为存在竞争关系。
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202305070006098.png" width = 45%/> </div>
+
+Loop Unrolling  
+循环展开（但注意指令间要尽量减少相同寄存器的依赖）
+
+Use different registers per replication
+
+* Called “register renaming”
+* Avoid loop-carried “anti-dependencies”
+
+
+??? Example "Loop Unrolling Example"
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202305070012380.png" width = 45%/> </div>
