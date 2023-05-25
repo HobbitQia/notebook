@@ -1320,6 +1320,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_6">
@@ -1460,6 +1462,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop10/" class="md-nav__link">
+        Templates
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1480,6 +1496,10 @@
       
       
       
+        
+          
+        
+          
         
           
         
@@ -1633,6 +1653,34 @@
     <li class="md-nav__item">
       <a href="../../DB/db9/" class="md-nav__link">
         数据存储结构
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db10/" class="md-nav__link">
+        索引
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/db11/" class="md-nav__link">
+        查询处理
       </a>
     </li>
   
@@ -2074,6 +2122,46 @@
   <a href="#handler-actions" class="md-nav__link">
     Handler Actions
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exceptions-in-a-pipeline" class="md-nav__link">
+    Exceptions in a Pipeline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instruction-level-parallelism-ilp" class="md-nav__link">
+    Instruction-Level Parallelism (ILP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Instruction-Level Parallelism (ILP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-issue" class="md-nav__link">
+    Multiple issue
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple issue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static-multiple-issue" class="md-nav__link">
+    Static multiple issue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2725,6 +2813,46 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#exceptions-in-a-pipeline" class="md-nav__link">
+    Exceptions in a Pipeline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instruction-level-parallelism-ilp" class="md-nav__link">
+    Instruction-Level Parallelism (ILP)
+  </a>
+  
+    <nav class="md-nav" aria-label="Instruction-Level Parallelism (ILP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-issue" class="md-nav__link">
+    Multiple issue
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple issue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static-multiple-issue" class="md-nav__link">
+    Static multiple issue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3248,20 +3376,86 @@ In RISC-V: <strong>Supervisor Exception Cause Register(SCAUSE)</strong><br />
 <li>Direct<br />
 所有异常跳到固定地址。  </li>
 <li>Vectored Interrupts<br />
+中断向量<br />
 Handler address determined by the cause.<br />
-Exception vector address to be added to a vector table base register</li>
+Exception vector address to be added to a vector table base register  </li>
 </ul>
 </li>
 </ul>
 <p>当多个异常/中断同时来时，如何处理？</p>
 <h3 id="handler-actions">Handler Actions<a class="headerlink" href="#handler-actions" title="Permanent link">&para;</a></h3>
+<p>中断服务程序</p>
+<ul>
+<li>Read cause, and transfer to relevant handler</li>
+<li>Determine action required  </li>
+<li>If restartable  <ul>
+<li>Take corrective action</li>
+<li>use SEPC to return to program</li>
+</ul>
+</li>
+<li>Otherwise<ul>
+<li>Terminate program</li>
+<li>Report error using SEPC, SCAUSE, ...</li>
+</ul>
+</li>
+</ul>
+<h3 id="exceptions-in-a-pipeline">Exceptions in a Pipeline<a class="headerlink" href="#exceptions-in-a-pipeline" title="Permanent link">&para;</a></h3>
+<p>Another form of control hazard.  </p>
+<p>Consider malfunction on add in EX stage.  <code>add x1, x2, x1</code> </p>
+<ul>
+<li>Prevent x1 from being clobbered</li>
+<li>Complete previous instructions</li>
+<li>Flush add and subsequent instructions</li>
+<li>Set SEPC and SCAUSE register values</li>
+<li>Transfer control to handler</li>
+</ul>
+<h2 id="instruction-level-parallelism-ilp">Instruction-Level Parallelism (ILP)<a class="headerlink" href="#instruction-level-parallelism-ilp" title="Permanent link">&para;</a></h2>
+<p>Pipelining: executing multiple instructions in parallel<br />
+指令级并行</p>
+<p>To increase ILP</p>
+<ul>
+<li>Deeper pipeline<br />
+让每一级流水线做更少的事情，这样也可以提高工作频率。<br />
+但流水线不能无限细分，因为流水线寄存器也会带来开销。  </li>
+<li><strong>Multiple issue</strong> <br />
+多发射<br />
+这样可以做到 CPI &lt; 1. 使用 <strong>Instructions Per Cycle (IPC)</strong>  </li>
+</ul>
+<h3 id="multiple-issue">Multiple issue<a class="headerlink" href="#multiple-issue" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Static multiple issue<br />
+编译器把能够同时放到流水线的指令排好<br />
+编译器要能检测，避免竞争</li>
+<li>Dynamic multiple issue<br />
+CPU 自己决定执行那些指令，编译器会帮忙重排指令，但还是由 CPU 解决竞争。</li>
+</ul>
+<h4 id="static-multiple-issue">Static multiple issue<a class="headerlink" href="#static-multiple-issue" title="Permanent link">&para;</a></h4>
+<details class="example">
+<summary>RISC-V with Static Dual Issue</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202305070002576.png" width = 45%/> </div></p>
+<p>ALU/branch 指令不用访问内存。
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305070006563.png" width = 45%/> </div></p>
+<p>所以这两条不能同时发出，因为存在竞争关系。
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305070006098.png" width = 45%/> </div></p>
+</details>
+<p>Loop Unrolling<br />
+循环展开（但注意指令间要尽量减少相同寄存器的依赖）</p>
+<p>Use different registers per replication</p>
+<ul>
+<li>Called “register renaming”</li>
+<li>Avoid loop-carried “anti-dependencies”</li>
+</ul>
+<details class="example">
+<summary>Loop Unrolling Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202305070012380.png" width = 45%/> </div></p>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年5月6日 22:41:58</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年5月25日 19:21:37</span>
       
         <br>
         创建日期:
