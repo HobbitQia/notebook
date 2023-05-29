@@ -109,32 +109,6 @@ nav:
   - Home:
     - index.md
   - Computer Science:
-    - 计算机系统概论: 
-      - ICS/index.md
-      - Introduction: ICS/ICS-1.md
-      - Bits, Data Types and Operations: ICS/ICS-2.md
-      - Digital Logic Structures: ICS/ICS-3.md
-      - The von Neumann Model: ICS/ICS-4.md
-      - LC-3: ICS/ICS-5.md
-      - Programming: ICS/ICS-6.md
-      - Assembly Language: ICS/ICS-7.md
-      - Data Structures: ICS/ICS-8.md
-      - I/0: ICS/ICS-9.md
-    - CSAPP:
-      - 优化程序性能: CSAPP/5.md
-      - 存储器层次结构: CSAPP/6.md
-      - 链接: CSAPP/7.md
-      - 异常控制流: CSAPP/8.md
-      - 虚拟内存: CSAPP/9.md
-    - 计算机逻辑设计基础: 
-      - Logic/index.md
-      - 数字系统和信息: Logic/logic01.md
-      - 组合逻辑电路: Logic/logic02.md
-      - 组合逻辑电路设计: Logic/logic03.md
-      - 时序逻辑电路: Logic/logic04.md
-      - 寄存器与寄存器传输: Logic/logic06.md
-      - 数字硬件设计: Logic/logic05.md
-      - 内存基础: Logic/logic07.md
     - 数据结构与算法: 
       - ds/index.md
       - 算法分析: ds/algorithm.md
@@ -168,6 +142,33 @@ nav:
       - Copy Ctor: OOP/oop8.md
       - Overloaded Operators: OOP/oop9.md
       - Templates: OOP/oop10.md
+  - System: 
+    - 计算机系统概论: 
+      - ICS/index.md
+      - Introduction: ICS/ICS-1.md
+      - Bits, Data Types and Operations: ICS/ICS-2.md
+      - Digital Logic Structures: ICS/ICS-3.md
+      - The von Neumann Model: ICS/ICS-4.md
+      - LC-3: ICS/ICS-5.md
+      - Programming: ICS/ICS-6.md
+      - Assembly Language: ICS/ICS-7.md
+      - Data Structures: ICS/ICS-8.md
+      - I/0: ICS/ICS-9.md
+    - CSAPP:
+      - 优化程序性能: CSAPP/5.md
+      - 存储器层次结构: CSAPP/6.md
+      - 链接: CSAPP/7.md
+      - 异常控制流: CSAPP/8.md
+      - 虚拟内存: CSAPP/9.md
+    - 计算机逻辑设计基础: 
+      - Logic/index.md
+      - 数字系统和信息: Logic/logic01.md
+      - 组合逻辑电路: Logic/logic02.md
+      - 组合逻辑电路设计: Logic/logic03.md
+      - 时序逻辑电路: Logic/logic04.md
+      - 寄存器与寄存器传输: Logic/logic06.md
+      - 数字硬件设计: Logic/logic05.md
+      - 内存基础: Logic/logic07.md
     - 数据库系统:
       - 数据库介绍: DB/db1.md
       - 关系模型: DB/db2.md
@@ -180,6 +181,7 @@ nav:
       - 数据存储结构: DB/db9.md
       - 索引: DB/db10.md
       - 查询处理: DB/db11.md
+      - 查询优化: DB/db12.md
     - 计算机组成:
       - 计算机概要与技术: CO/co1.md
       - 计算机的算术运算: CO/co3.md
