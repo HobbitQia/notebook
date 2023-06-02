@@ -2,7 +2,6 @@
 counter: True  
 ---
 
-
 # The Processor
 
 <div align=center> <img src="http://cdn.hobbitqia.cc/202303311644374.png" width = 65%/> </div>

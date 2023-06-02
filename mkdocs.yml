@@ -182,15 +182,19 @@ nav:
       - 索引: DB/db10.md
       - 查询处理: DB/db11.md
       - 查询优化: DB/db12.md
+      - 事务: DB/db13.md
+      - 并发控制: DB/db14.md 
     - 计算机组成:
       - 计算机概要与技术: CO/co1.md
       - 计算机的算术运算: CO/co3.md
       - 指令：计算机的语言: CO/co2.md
       - 处理器: CO/co4.md
+      - 内存层次架构: CO/co5.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
     - 数据建模与分析:
+      - 读书报告: MLT/report.md
       - 感知机: MLT/mlt2.md
   - Miscellaneous:
     - Android:
