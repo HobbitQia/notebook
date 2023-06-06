@@ -362,7 +362,8 @@ Using multilevel caches:
 
 ## Virtual Memory
 
-Main Memory act as a “Cache” for the secondary storage.
+Main Memory act as a “Cache” for the secondary storage.  
+把主存当作磁盘的缓存。
 
 * Efficient and safe sharing of memory among multiple programs.  
 不同程序有自己的内存空间，我们希望只考虑自己的空间，不在乎其他程序放在哪里。让进程认为是自己独有这块地址空间。
@@ -392,23 +393,28 @@ page 是映射的最小单位。
 要减少 miss
 * can handle the faults in software instead of hardware  
 缺页是由操作系统处理的，而不是硬件(cache 是硬件做的)
-* using *write-through* is too expensive so we use ****write back****
+* using *write-through* is too expensive so we use ****write back****  
+硬盘操作太慢了，我们只在被踢出的时候写回。因此突然断电的时候数据会丢失。
 
 <div align=center> <img src="http://cdn.hobbitqia.cc/202306022106720.png" width = 50%/> </div>
 
 ### Page Tables
 
-pgtbl 本身存在 memory 里。
+pgtbl 本身存在 memory 里，记录地址的映射关系。（索引是虚拟地址的高位，找到表中对应项，就是物理地址）
 <div align=center> <img src="http://cdn.hobbitqia.cc/202306022107379.png" width = 60%/> </div>
 
 每个进程都有自己的 **Page table**, **Program counter** and the **page table register**.  
 进程之间切换，切换页表就可以了。
+
+Virtual memory systems use fully associative mapping method.  
+为了提高命中率，我们采用全相联的方式。这导致替换策略（比如 LRU）很复杂，但因为是 OS 编写，所以问题不大。
 <div align=center> <img src="http://cdn.hobbitqia.cc/202306022119500.png" width = 50%/> </div>
 
 ??? Example "How larger page table?"
     <div align=center> <img src="http://cdn.hobbitqia.cc/202306022121353.png" width = 50%/> </div>
 
-    页表要能把所有的页都能放下。  
+    entry size 指的是页表里每条的大小。  
+    页表要能把所有的页都能放下。（每个虚拟页都需要存放对应的物理页）  
     我们需要减小页表的大小。
 
 disk write 很慢，因此我们用 write-back 的策略，需要有一个 dirty bit.  
@@ -416,15 +422,30 @@ The dirty bit is set when a page is first written. If the dirty bit of a page is
 
 ### Making Address Translation Fast--TLB
 
-在 pgtbl 上找是很慢的，因此我们引入了 TLB.  
-The **TLB (Translation-lookaside Buffer)** acts as Cache on the page table
+在 pgtbl 上找也是很慢的，因此我们引入了 TLB.(CPU 内)    
+The **TLB (Translation-lookaside Buffer)** acts as Cache on the page table  
+虚拟地址，先在 TLB 找，找不到再去内存里的页表找。一般 16~512 entries.
 <div align=center> <img src="http://cdn.hobbitqia.cc/202306022128528.png" width = 60%/> </div>
+
+??? Example "FastMATH Memory Hierarchy"
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202306052332712.png" width = 60%/> </div>
+
+??? Example "Possible combinations of Event"
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202306052335301.png" width = 60%/> </div>
+
+    最后三个不可能。不在 pgtbl 中那肯定也不在 TLB 中，说明数据页还没有进入内存，那 cache 里面肯定也不能有数据。
 
 ### Page faults
 
-When the OS creates a process, it usually creates the space on disk for all the pages of a process.  
+When the OS creates a process, it usually creates the space on disk for all the pages of a process.   
+OS 启动时，把要用的 page 全部放到一个地方(swap space) 便于查找，记录页在硬盘的什么位置。（有的 OS 可能用另外的表来维护页在硬盘的位置）
 
 * When a page fault occurs, the OS will be given control through exception mechanism.
 * The OS will find the page in the disk by the page table.
 * Next, the OS will bring the requested page into main memory. If all the pages in main memory are in use, the OS will use LRU strategy to choose a page to replace
 
+### Protection in the virtual memory System
+
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306052339551.png" width = 60%/> </div>
+
+只有操作系统知道其他进程的地址空间。
