@@ -142,6 +142,7 @@ nav:
       - Copy Ctor: OOP/oop8.md
       - Overloaded Operators: OOP/oop9.md
       - Templates: OOP/oop10.md
+      - Exception: OOP/oop11.md
   - System: 
     - 计算机系统概论: 
       - ICS/index.md
