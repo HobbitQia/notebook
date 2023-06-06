@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/ICS/ICS-3/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/CO/co5/">
       
       <link rel="icon" href="../../log.ico">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>Digital Logic Structures - HobbitQia的笔记本</title>
+        <title>内存层次架构 - HobbitQia的笔记本</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-3-digital-logic-structures" class="md-skip">
+        <a href="#large-and-fast-exploiting-memory-hierarchy" class="md-skip">
           跳转至
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Digital Logic Structures
+              内存层次架构
             
           </span>
         </div>
@@ -258,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../ICS/" class="md-tabs__link md-tabs__link--active">
         System
       </a>
     </li>
@@ -1081,14 +1081,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
       
       
       
@@ -1120,7 +1118,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">计算机系统概论</a>
+          <a href="../../ICS/">计算机系统概论</a>
           
             <label for="__nav_3_1">
               <span class="md-nav__icon md-icon"></span>
@@ -1143,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-1/" class="md-nav__link">
+      <a href="../../ICS/ICS-1/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1157,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-2/" class="md-nav__link">
+      <a href="../../ICS/ICS-2/" class="md-nav__link">
         Bits, Data Types and Operations
       </a>
     </li>
@@ -1169,249 +1167,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Digital Logic Structures
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-3/" class="md-nav__link">
         Digital Logic Structures
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#transistors" class="md-nav__link">
-    Transistors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logical-gates" class="md-nav__link">
-    Logical Gates
-  </a>
-  
-    <nav class="md-nav" aria-label="Logical Gates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-not-gateinverter" class="md-nav__link">
-    The Not Gate(Inverter)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#or-and-nor-gates" class="md-nav__link">
-    OR and NOR Gates
-  </a>
-  
-    <nav class="md-nav" aria-label="OR and NOR Gates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nor-gate" class="md-nav__link">
-    NOR Gate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#or-gate" class="md-nav__link">
-    OR Gate
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#and-and-nand-gates" class="md-nav__link">
-    AND and NAND Gates
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#combinational-logic-circuits" class="md-nav__link">
-    Combinational Logic Circuits
-  </a>
-  
-    <nav class="md-nav" aria-label="Combinational Logic Circuits">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#decoder" class="md-nav__link">
-    Decoder(译码器)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#muxmultiplexer" class="md-nav__link">
-    Mux(Multiplexer 数据选择器)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#one-bit-adderfull-adder" class="md-nav__link">
-    One-Bit Adder(Full Adder)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plathe-programmable-logic-array" class="md-nav__link">
-    PLA(the Programmable Logic Array)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#logic-completeness" class="md-nav__link">
-    Logic Completeness
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-storage-elements" class="md-nav__link">
-    Basic Storage Elements
-  </a>
-  
-    <nav class="md-nav" aria-label="Basic Storage Elements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-r-s-latchrs" class="md-nav__link">
-    The R-S Latch(RS 锁存器)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-gated-d-latchd" class="md-nav__link">
-    The Gated D Latch(D 锁存器)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-concept-of-memory" class="md-nav__link">
-    The Concept of Memory
-  </a>
-  
-    <nav class="md-nav" aria-label="The Concept of Memory">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#address-space" class="md-nav__link">
-    Address Space
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#addressability" class="md-nav__link">
-    Addressability
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sequential-logic-circuits" class="md-nav__link">
-    Sequential Logic Circuits
-  </a>
-  
-    <nav class="md-nav" aria-label="Sequential Logic Circuits">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#state" class="md-nav__link">
-    State
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#finite-state-machine" class="md-nav__link">
-    Finite State Machine
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-synchronous-finite-state-machine" class="md-nav__link">
-    The Synchronous Finite State Machine
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#master-slave-flip-flop" class="md-nav__link">
-    Master-Slave Flip-flop
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1423,7 +1183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-4/" class="md-nav__link">
+      <a href="../../ICS/ICS-4/" class="md-nav__link">
         The von Neumann Model
       </a>
     </li>
@@ -1437,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-5/" class="md-nav__link">
+      <a href="../../ICS/ICS-5/" class="md-nav__link">
         LC-3
       </a>
     </li>
@@ -1451,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-6/" class="md-nav__link">
+      <a href="../../ICS/ICS-6/" class="md-nav__link">
         Programming
       </a>
     </li>
@@ -1465,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-7/" class="md-nav__link">
+      <a href="../../ICS/ICS-7/" class="md-nav__link">
         Assembly Language
       </a>
     </li>
@@ -1479,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-8/" class="md-nav__link">
+      <a href="../../ICS/ICS-8/" class="md-nav__link">
         Data Structures
       </a>
     </li>
@@ -1493,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-9/" class="md-nav__link">
+      <a href="../../ICS/ICS-9/" class="md-nav__link">
         I/0
       </a>
     </li>
@@ -2045,12 +1805,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" checked>
       
       
       
@@ -2085,7 +1847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co1/" class="md-nav__link">
+      <a href="../co1/" class="md-nav__link">
         计算机概要与技术
       </a>
     </li>
@@ -2099,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co3/" class="md-nav__link">
+      <a href="../co3/" class="md-nav__link">
         计算机的算术运算
       </a>
     </li>
@@ -2113,7 +1875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co2/" class="md-nav__link">
+      <a href="../co2/" class="md-nav__link">
         指令：计算机的语言
       </a>
     </li>
@@ -2127,7 +1889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co4/" class="md-nav__link">
+      <a href="../co4/" class="md-nav__link">
         处理器
       </a>
     </li>
@@ -2139,11 +1901,229 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../CO/co5/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          内存层次架构
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         内存层次架构
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#memory-technologies" class="md-nav__link">
+    Memory Technologies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-hierarchy-introduction" class="md-nav__link">
+    Memory Hierarchy Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-basics-of-cache" class="md-nav__link">
+    The basics of Cache
+  </a>
+  
+    <nav class="md-nav" aria-label="The basics of Cache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-mapped-cache" class="md-nav__link">
+    Direct Mapped Cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-cache-hit-and-misses" class="md-nav__link">
+    Handling Cache hit and Misses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-concept-in-cache" class="md-nav__link">
+    Deep concept in Cache
+  </a>
+  
+    <nav class="md-nav" aria-label="Deep concept in Cache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block-placement" class="md-nav__link">
+    Block Placement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-identification" class="md-nav__link">
+    Block Identification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-replacement" class="md-nav__link">
+    Block Replacement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-strategy" class="md-nav__link">
+    Write Strategy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designing-the-memory-system-to-support-cache" class="md-nav__link">
+    Designing the Memory system to Support Cache
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measuring-and-improving-cache-performance" class="md-nav__link">
+    Measuring and improving cache performance
+  </a>
+  
+    <nav class="md-nav" aria-label="Measuring and improving cache performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measuring-cache-performance" class="md-nav__link">
+    Measuring cache performance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improving" class="md-nav__link">
+    Improving
+  </a>
+  
+    <nav class="md-nav" aria-label="Improving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reducing-cache-misses-by-more-flexible-placement-of-blocks" class="md-nav__link">
+    Reducing cache misses by more flexible placement of blocks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decreasing-miss-penalty-with-multilevel-caches" class="md-nav__link">
+    Decreasing miss penalty with multilevel caches
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-memory" class="md-nav__link">
+    Virtual Memory
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtual Memory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pages-virtual-memory-blocks" class="md-nav__link">
+    Pages: virtual memory blocks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-tables" class="md-nav__link">
+    Page Tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#making-address-translation-fast-tlb" class="md-nav__link">
+    Making Address Translation Fast--TLB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-faults" class="md-nav__link">
+    Page faults
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protection-in-the-virtual-memory-system" class="md-nav__link">
+    Protection in the virtual memory System
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2488,45 +2468,80 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#transistors" class="md-nav__link">
-    Transistors
+  <a href="#memory-technologies" class="md-nav__link">
+    Memory Technologies
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#logical-gates" class="md-nav__link">
-    Logical Gates
+  <a href="#memory-hierarchy-introduction" class="md-nav__link">
+    Memory Hierarchy Introduction
   </a>
   
-    <nav class="md-nav" aria-label="Logical Gates">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-basics-of-cache" class="md-nav__link">
+    The basics of Cache
+  </a>
+  
+    <nav class="md-nav" aria-label="The basics of Cache">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-not-gateinverter" class="md-nav__link">
-    The Not Gate(Inverter)
+  <a href="#direct-mapped-cache" class="md-nav__link">
+    Direct Mapped Cache
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#or-and-nor-gates" class="md-nav__link">
-    OR and NOR Gates
-  </a>
-  
-    <nav class="md-nav" aria-label="OR and NOR Gates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nor-gate" class="md-nav__link">
-    NOR Gate
+  <a href="#handling-cache-hit-and-misses" class="md-nav__link">
+    Handling Cache hit and Misses
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#or-gate" class="md-nav__link">
-    OR Gate
+  <a href="#deep-concept-in-cache" class="md-nav__link">
+    Deep concept in Cache
+  </a>
+  
+    <nav class="md-nav" aria-label="Deep concept in Cache">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block-placement" class="md-nav__link">
+    Block Placement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-identification" class="md-nav__link">
+    Block Identification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block-replacement" class="md-nav__link">
+    Block Replacement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-strategy" class="md-nav__link">
+    Write Strategy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#designing-the-memory-system-to-support-cache" class="md-nav__link">
+    Designing the Memory system to Support Cache
   </a>
   
 </li>
@@ -2536,10 +2551,50 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#and-and-nand-gates" class="md-nav__link">
-    AND and NAND Gates
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measuring-and-improving-cache-performance" class="md-nav__link">
+    Measuring and improving cache performance
   </a>
+  
+    <nav class="md-nav" aria-label="Measuring and improving cache performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measuring-cache-performance" class="md-nav__link">
+    Measuring cache performance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improving" class="md-nav__link">
+    Improving
+  </a>
+  
+    <nav class="md-nav" aria-label="Improving">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reducing-cache-misses-by-more-flexible-placement-of-blocks" class="md-nav__link">
+    Reducing cache misses by more flexible placement of blocks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decreasing-miss-penalty-with-multilevel-caches" class="md-nav__link">
+    Decreasing miss penalty with multilevel caches
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2549,139 +2604,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#combinational-logic-circuits" class="md-nav__link">
-    Combinational Logic Circuits
+  <a href="#virtual-memory" class="md-nav__link">
+    Virtual Memory
   </a>
   
-    <nav class="md-nav" aria-label="Combinational Logic Circuits">
+    <nav class="md-nav" aria-label="Virtual Memory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#decoder" class="md-nav__link">
-    Decoder(译码器)
+  <a href="#pages-virtual-memory-blocks" class="md-nav__link">
+    Pages: virtual memory blocks
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#muxmultiplexer" class="md-nav__link">
-    Mux(Multiplexer 数据选择器)
+  <a href="#page-tables" class="md-nav__link">
+    Page Tables
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#one-bit-adderfull-adder" class="md-nav__link">
-    One-Bit Adder(Full Adder)
+  <a href="#making-address-translation-fast-tlb" class="md-nav__link">
+    Making Address Translation Fast--TLB
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#plathe-programmable-logic-array" class="md-nav__link">
-    PLA(the Programmable Logic Array)
+  <a href="#page-faults" class="md-nav__link">
+    Page faults
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#logic-completeness" class="md-nav__link">
-    Logic Completeness
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-storage-elements" class="md-nav__link">
-    Basic Storage Elements
-  </a>
-  
-    <nav class="md-nav" aria-label="Basic Storage Elements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-r-s-latchrs" class="md-nav__link">
-    The R-S Latch(RS 锁存器)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-gated-d-latchd" class="md-nav__link">
-    The Gated D Latch(D 锁存器)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-concept-of-memory" class="md-nav__link">
-    The Concept of Memory
-  </a>
-  
-    <nav class="md-nav" aria-label="The Concept of Memory">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#address-space" class="md-nav__link">
-    Address Space
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#addressability" class="md-nav__link">
-    Addressability
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sequential-logic-circuits" class="md-nav__link">
-    Sequential Logic Circuits
-  </a>
-  
-    <nav class="md-nav" aria-label="Sequential Logic Circuits">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#state" class="md-nav__link">
-    State
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#finite-state-machine" class="md-nav__link">
-    Finite State Machine
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-synchronous-finite-state-machine" class="md-nav__link">
-    The Synchronous Finite State Machine
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#master-slave-flip-flop" class="md-nav__link">
-    Master-Slave Flip-flop
+  <a href="#protection-in-the-virtual-memory-system" class="md-nav__link">
+    Protection in the virtual memory System
   </a>
   
 </li>
@@ -2704,433 +2664,493 @@
               
 
                 
-  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/ICS/ICS-3.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/CO/co5.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="chapter-3-digital-logic-structures">Chapter 3 Digital Logic Structures<a class="headerlink" href="#chapter-3-digital-logic-structures" title="Permanent link">&para;</a></h1>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p>Covered in Lecture 2, 2022.7.12 and Lecture 3, 2022.7.13 <br />
-Topics:  <br />
-1. Transistors <br />
-2.</p>
-</div>
-<h2 id="transistors">Transistors<a class="headerlink" href="#transistors" title="Permanent link">&para;</a></h2>
+<h1 id="large-and-fast-exploiting-memory-hierarchy">Large and Fast: Exploiting Memory Hierarchy<a class="headerlink" href="#large-and-fast-exploiting-memory-hierarchy" title="Permanent link">&para;</a></h1>
+<details class="abstract">
+<summary>Abstract</summary>
 <ul>
-<li>N-type  </li>
+<li>Memory Technologies</li>
+<li>Memory Hierarchy Introduction</li>
+<li>The basics of Cache</li>
+<li>Measuring and improving cache performance</li>
+<li>Dependable Memory Hierarchy</li>
+<li>Virtual Machines</li>
+<li>Virtual Memory</li>
+<li>A common Framework for Memory Hierarchy</li>
+<li>Using FSM to Control a simple Cache</li>
 </ul>
-<p><img src="https://s2.loli.net/2022/07/13/4MBlCI7aZRmeitE.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-<p>Gate 通 1.2V 的时候导线接通(short circuit), 通 0V 时导线断开(open circuit).<br />
-其中 Gate 称作栅极, Drain 称作漏极, Source 称作源极.</p>
+</details>
+<h2 id="memory-technologies">Memory Technologies<a class="headerlink" href="#memory-technologies" title="Permanent link">&para;</a></h2>
 <ul>
-<li>P-type  </li>
+<li>SRAM<ul>
+<li>value is stored on a pair of inverting gates</li>
+<li>very fast but takes up more space than DRAM </li>
 </ul>
-<p><img src="https://s2.loli.net/2022/07/13/q6gvIWHsdmaGct5.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-<p>Gate 通 0V 的时候导线接通, 通 1.2V 时导线断开.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>P-type: P断N通<br />
-N-type: N断P通<br />
-其中 P 指 Positive(1.2V/接电源正极)
-其中 N 指 Negtive(0V/接地/接电源负极)  </p>
-</div>
-<h2 id="logical-gates">Logical Gates<a class="headerlink" href="#logical-gates" title="Permanent link">&para;</a></h2>
-<p><img src="https://s2.loli.net/2022/07/13/fRBsIbMO4ymXuok.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-<p>其中可以直接用小空心圆表示"非".</p>
-<h3 id="the-not-gateinverter">The Not Gate(Inverter)<a class="headerlink" href="#the-not-gateinverter" title="Permanent link">&para;</a></h3>
-<p><img src="https://s2.loli.net/2022/07/13/rxGOo6JvXKNhHzW.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-<table>
-<thead>
-<tr>
-<th align="center">In</th>
-<th align="center">Out</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-</tbody>
-</table>
-<h3 id="or-and-nor-gates">OR and NOR Gates<a class="headerlink" href="#or-and-nor-gates" title="Permanent link">&para;</a></h3>
-<h4 id="nor-gate">NOR Gate<a class="headerlink" href="#nor-gate" title="Permanent link">&para;</a></h4>
-<p><img src="https://s2.loli.net/2022/07/13/j71IwuRmBV45MPG.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-<div class="admonition question">
-<p class="admonition-title">为什么不可以直接将 P-type 直接接地?</p>
-<p>这样 C 始终和地接触, 当 A, B 的值均为 0 时, 上方也会接通. 这样 C 会同时和高低电压接通. may burn the house!(by Patt)</p>
-</div>
-<h4 id="or-gate">OR Gate<a class="headerlink" href="#or-gate" title="Permanent link">&para;</a></h4>
-<p><img src="https://s2.loli.net/2022/07/13/1R6pJGnLDKjAoc4.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-<table>
-<thead>
-<tr>
-<th align="center">A(in)</th>
-<th align="center">B(in)</th>
-<th align="center">C(NOR)</th>
-<th align="center">D(OR)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition question 为什么不能将 nor 中的 n-type 和 p-type交换">
-<p class="admonition-title">Question</p>
-<p><img src="https://s2.loli.net/2022/07/13/cFxfIDN5SUCoyrR.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-<p>但 P 型 mos 晶体管的源极必须接正极, 漏极必须接负极. 否则会有传输电压损失.</p>
-</div>
-<h3 id="and-and-nand-gates">AND and NAND Gates<a class="headerlink" href="#and-and-nand-gates" title="Permanent link">&para;</a></h3>
-<p><img src="https://s2.loli.net/2022/07/13/v4xgFIGbjZup7tN.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-<table>
-<thead>
-<tr>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">C(NAND)</th>
-<th align="center">D(AND)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">0</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">0</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-</tbody>
-</table>
-<h2 id="combinational-logic-circuits">Combinational Logic Circuits<a class="headerlink" href="#combinational-logic-circuits" title="Permanent link">&para;</a></h2>
-<p>property: only about <strong>Right now</strong>, means their result is independent on the any past information stored in memory.</p>
-<h3 id="decoder">Decoder(译码器)<a class="headerlink" href="#decoder" title="Permanent link">&para;</a></h3>
-<p><img src="https://s2.loli.net/2022/07/13/tFqapTXjw45yoIS.png" alt="image-20220712095105334" style="zoom:50%;" /></p>
-<p>n input, <span class="arithmatex">\(2^n\)</span> outputs, only one output is logically 1 correspounding to the input pattern.</p>
-<h3 id="muxmultiplexer">Mux(Multiplexer 数据选择器)<a class="headerlink" href="#muxmultiplexer" title="Permanent link">&para;</a></h3>
-<p>The funtion of a mux is to select only one of the input and connect it to the output.</p>
-<div class="admonition example a 2-to-1 mux">
-<p class="admonition-title">Example</p>
-<p><img src="https://s2.loli.net/2022/07/13/BEtW2OZhmrQYHld.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-<p><span class="arithmatex">\(S=0\)</span>, C 输出 A 的值; <span class="arithmatex">\(S=1\)</span>, C 输出 B 的值.<br />
-简写为:<br />
-<img src="https://s2.loli.net/2022/07/13/kuCd5sxTehWnDL7.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-</div>
-<p>In general, a mux consist of <span class="arithmatex">\(2^n\)</span> inputs and n select lines.<br />
-<span class="arithmatex">\(2^n\)</span> 个输入对应各不相同的选择线的组合(n 条线有 <span class="arithmatex">\(2^n\)</span> 种组合), 对于给定的一个 S(n bits), 有且仅有一个输入被选中.  </p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p><img src="https://s2.loli.net/2022/07/13/Fk9w71aVWZeSgry.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-<p>线上的一撇加数字表示信号的位数. <strong><em>e.g.</em></strong> 图中 ABCD 都是一位的输入信号, 但选择信号 S 为两位.  </p>
-</div>
-<h3 id="one-bit-adderfull-adder">One-Bit Adder(Full Adder)<a class="headerlink" href="#one-bit-adderfull-adder" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="center"><span class="arithmatex">\(A_i\)</span></th>
-<th><span class="arithmatex">\(B_i\)</span></th>
-<th><span class="arithmatex">\(C_i\)</span></th>
-<th><span class="arithmatex">\(C_{i+1}\)</span></th>
-<th><span class="arithmatex">\(S_i\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td align="center">0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>其中 <span class="arithmatex">\(A_i, B_i\)</span> 表示 A/B 的第 i 位, <span class="arithmatex">\(S_i\)</span> 表示执行加法之后第 i 位的值, <span class="arithmatex">\(C_{i+1}\)</span> 表示是否有进位.  </p>
-<p><img src="https://s2.loli.net/2022/07/13/BhzxNoVGR3PpcEn.png" alt="image-20220712095105334" style="zoom:45%;" /></p>
-<p>A circuit for adding two 4-bit binary numbers using block above.</p>
-<p><img src="https://s2.loli.net/2022/07/13/4x6NagoweuQiH9G.png" alt="image-20220712095105334" style="zoom:50%;" /></p>
-<p>其中,最右边的一个电路相当于是半加器(half adder), 因为他相当于没有进位(carry=0), 另外三个电路是全加器.</p>
-<h3 id="plathe-programmable-logic-array">PLA(the Programmable Logic Array)<a class="headerlink" href="#plathe-programmable-logic-array" title="Permanent link">&para;</a></h3>
-<p><img src="https://s2.loli.net/2022/07/13/Jydgo23W4rhKLUP.png" alt="image-20220712095105334" style="zoom:50%;" /></p>
-<p>其中 <span class="arithmatex">\(2^n\)</span> 个输入, 经过 Decoder 得到输入的组合. 最后得到我们希望生成的函数.  </p>
-<h3 id="logic-completeness">Logic Completeness<a class="headerlink" href="#logic-completeness" title="Permanent link">&para;</a></h3>
-<p>{AND, OR, NOT} is logically complete because we can buile a circuit to carry out the specification of any truth table without other kind of gate(by PLA).  </p>
-<p>!!! Question Is NAND logically completeness?<br />
-    Yes.<br />
-<span class="arithmatex">\(P\ NAND\ Q=NOT (P\ AND\ Q)\)</span><br />
-    so <span class="arithmatex">\(P\ NAND\ P=NOT\ P\)</span>, <span class="arithmatex">\(P\ AND\ Q=NOT(P\ NAND\ Q)\)</span>, <span class="arithmatex">\(P\ OR\ Q=(NOT\ P)\ NAND (NOT\ Q)\)</span>  </p>
-<h2 id="basic-storage-elements">Basic Storage Elements<a class="headerlink" href="#basic-storage-elements" title="Permanent link">&para;</a></h2>
-<h3 id="the-r-s-latchrs">The R-S Latch(RS 锁存器)<a class="headerlink" href="#the-r-s-latchrs" title="Permanent link">&para;</a></h3>
-<p><img src="https://s2.loli.net/2022/07/13/1q34eL7YgPtEAVh.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-<p>其中 a 既是我们存储的值, 也是我们要输出的值(a 输出 Q, b 输出非 Q).<br />
-工作过程:  </p>
+</li>
+<li>DRAM<ul>
+<li>value is stored as a charge on capacitor (must be refreshed)</li>
+<li>very small but slower than SRAM (factor of 5 to 10</li>
+</ul>
+</li>
+</ul>
+<p>见<a href="https://note.hobbitqia.cc/Logic/logic07/">计逻部分</a></p>
+<h2 id="memory-hierarchy-introduction">Memory Hierarchy Introduction<a class="headerlink" href="#memory-hierarchy-introduction" title="Permanent link">&para;</a></h2>
+<p>Programs access a small proportion of their address space at any time  </p>
 <ul>
-<li>起初<span class="arithmatex">\(S=R=1\)</span>, 处于混沌状态, 不知 a/b 的值.</li>
-<li>使用时:  </li>
-<li>把 S(set) 拨一下到 0, 则 a-&gt;1, 成功将 1 存入.<br />
-    再把 S-&gt;1, 此时 <span class="arithmatex">\(S=R=1\)</span> 处于正常工作状态, 只要 S/R 不改变, 存储的值就不会改变.  </li>
-<li>把 R(reset) 把 0, 则 a-&gt;0, 成功将 0 存入.<br />
-    再把 R-&gt;1, 回到正常工作状态.  </li>
-<li>非正常工作状态: <span class="arithmatex">\(S=R=0\)</span>, 混沌状态, 而且此时 <span class="arithmatex">\(a=b=1\)</span>, 不满足 Q 与非 Q 的定义, 此时电路的输出取决电路的性质.  </li>
+<li>Temporal locality<br />
+Items accessed recently are likely to be accessed again soon<br />
+如 for 循环，跑过一次后我们大概率还要执行循环体里的代码</li>
+<li>Spatial locality<br />
+Items near those accessed recently are likely to be accessed soon<br />
+如数组，我们访问了这个元素后大概率还要访问后面的元素</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th align="left">R</th>
-<th>S</th>
-<th>Q</th>
-<th>非Q</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">1</td>
-<td>1</td>
-<td>?</td>
-<td>?</td>
-<td>Unknown</td>
-</tr>
-<tr>
-<td align="left">0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>Set</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>The latch "remenber" the value</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>Reset</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>The latch "remenber" the value</td>
-</tr>
-<tr>
-<td align="left">0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>Both go to high</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>1</td>
-<td>?</td>
-<td>?</td>
-<td>Unknown</td>
-</tr>
-</tbody>
-</table>
-<h3 id="the-gated-d-latchd">The Gated D Latch(D 锁存器)<a class="headerlink" href="#the-gated-d-latchd" title="Permanent link">&para;</a></h3>
-<p><img src="https://s2.loli.net/2022/07/13/KaLE1pbzG3UiNvY.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-<p>WE: Write Enable.  </p>
+<p>利用局部性：</p>
 <ul>
-<li>WE is asserted(WE=1, can write): D-&gt;1, S=1 R=0, 1 is stored. D-&gt;0, S=0 R=1, 0 is stored.
-Thus, we can think that the Gated D Latch store the value of D.  </li>
-<li>WE is not asserted(WE=0, only read): R=1 S=1, so whether D is 0 or 1 it cannot change the stored value.</li>
+<li>Memory hierarchy</li>
+<li>Store everything on disk</li>
+<li>Copy recently accessed (and nearby) items from disk to smaller DRAM memory<ul>
+<li>Main memory</li>
 </ul>
-<h2 id="the-concept-of-memory">The Concept of Memory<a class="headerlink" href="#the-concept-of-memory" title="Permanent link">&para;</a></h2>
-<h3 id="address-space">Address Space<a class="headerlink" href="#address-space" title="Permanent link">&para;</a></h3>
-<p>We refer to the unique identifier associated with each memory location as its <strong>address</strong>.  </p>
-<p>We refer to the total number of uniquely identifiable locations as the memory’s <strong>address space</strong>.</p>
-<h3 id="addressability">Addressability<a class="headerlink" href="#addressability" title="Permanent link">&para;</a></h3>
-<p>We refer to the number of bits of information stored in each location as its <strong>addressability</strong>.</p>
-<p>For <span class="arithmatex">\(2^n\)</span>-by-m-bit memory, its address space is <span class="arithmatex">\(2^n\)</span> while its addressability is m.</p>
-<div class="admonition example an analogy of dormitory">
-<p class="admonition-title">Example</p>
-<p>假设玉湖七幢 6 楼为一块内存, 其中这一楼一共有 20 间寝室, 这就是内存空间.(因为每间寝室都有独一无二的寝室号)<br />
-而每间寝室都是四人间, 因此可寻址能力是 4, 表示最小的寻址单元.</p>
-</div>
+</li>
+<li>Copy more recently accessed (and nearby) items from DRAM to smaller SRAM 
+memory<ul>
+<li>Cache memory attached to CPU</li>
+</ul>
+</li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305252023530.png" width = 45%/> </div>
+
+<ul>
+<li><strong>Block</strong> (aka <strong>line</strong>): unit of copying<br />
+向上级存储器搬数据的最小单位（可能有很多个字）</li>
+<li><strong>Hit</strong>: If accessed data is present in upper level<br />
+命中 - 上层的存储器有我们要的数据，不需要去下层存储器寻找<ul>
+<li>hit ratio: hits/accesses</li>
+<li>hit time: 访问上层存储的时间以及决定是否命中的时间</li>
+</ul>
+</li>
+<li><strong>Miss</strong>: If accessed data is absent<br />
+需要从下层存储器中把对应数据的块搬到上层，接着从上层把数据读走<ul>
+<li>miss penalty </li>
+<li>miss rate: 1 - hit ratio</li>
+<li>miss time: 替代上层存储器的块的时间和把这个块给处理器的时间</li>
+</ul>
+</li>
+</ul>
+<p>Exploiting Memory Hierarchy</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305252033223.png" width = 45%/> </div>
+
+<p>接下来我们关注两部分：</p>
+<ul>
+<li>The basics of Cache: SRAM and DRAM(main memory)<br />
+解决速度问题</li>
+<li>Virtual Memory: DRAM and DISK<br />
+解决容量问题  </li>
+</ul>
+<h2 id="the-basics-of-cache">The basics of Cache<a class="headerlink" href="#the-basics-of-cache" title="Permanent link">&para;</a></h2>
+<p>For each item of data at the lower level, there is exactly one location in the cache where it might be.<br />
+So, lots of items at the lower level share locations in the upper level.<br />
+多个块会映射到同一个位置。</p>
+<ul>
+<li>How do we know if a data item is in the cache?<br />
+如何知道数据是否在 cache 中？</li>
+<li>If it is, how do we find it?<br />
+如果有，如何找到数据？</li>
+</ul>
+<h3 id="direct-mapped-cache">Direct Mapped Cache<a class="headerlink" href="#direct-mapped-cache" title="Permanent link">&para;</a></h3>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305301541770.png" width = 55%/> </div>
+
+<p>memory address is modulo the number of blocks in the cache<br />
+取模。</p>
+<ul>
+<li>Store block address as well as the data
+我们需要知道 cache 放的是哪个块。<ul>
+<li>Actually, only need the high-order bits</li>
+<li>Called the <strong>tag</strong>  </li>
+</ul>
+</li>
+<li>Valid bit: 1 = present, 0 = not present<br />
+我们需要知道 cache 里是否有放有效的块。</li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305301546465.png" width = 55%/> </div>
+
+<ul>
+<li>byte offset 地址
+如果一个 block 是一个字，那么 byte offset 应该有 2 位。<br />
+注意 CPU 给出的地址都是以 byte 为最小寻址单元的。</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p>这里省略了后面的 byte offset.
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305301553756.png" width = 40%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305301555320.png" width = 40%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305301556643.png" width = 40%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305301558565.png" width = 40%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305301558669.png" width = 40%/> </div></p>
+</details>
+<ul>
+<li>byte offset 位宽由 block size 决定。</li>
+<li>index 位宽由 cache size 决定</li>
+<li>tag 位宽由总的地址位宽减掉其他位决定</li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305301600840.png" width = 50%/> </div>
+
 <div class="admonition example">
-<p class="admonition-title">A <span class="arithmatex">\(2^2\)</span>-by-3-Bit Memory</p>
-<p><img src="https://s2.loli.net/2022/07/13/aypCXuQ51PNbO97.png" alt="image-20220712095105334" style="zoom:50%;" />  </p>
-<p>其中 A[] 表示地址, D[] 表示数据.(A[1:0] 可以理解为 Python 里的 list)  </p>
-<ul>
-<li>从 A[1:0] 中输入地址, 通过 Decoder 对应某一行. 其中每一行为 3 bits, 因此有三个存储器.  </li>
-<li>WE=0 时读取数据, 此时每个 bit 中的存储器(R=S=1, 只能读)将其中的值读出, 通过 mux 最后输出出来得到 D[2:0].  </li>
-<li>WE=1 时写入数据, 此时每个 bit 中为 D锁存器, 由上文可知会直接写入 D 的值, 即 <span class="arithmatex">\(D_i[2:0]\)</span>. 此时也会有输出.  </li>
-</ul>
+<p class="admonition-title">Bits in Cache</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202305301601001.png" width = 50%/> </div></p>
 </div>
-<h2 id="sequential-logic-circuits">Sequential Logic Circuits<a class="headerlink" href="#sequential-logic-circuits" title="Permanent link">&para;</a></h2>
-<p>property: they contain store elements to keep track of prior history information.</p>
-<h3 id="state">State<a class="headerlink" href="#state" title="Permanent link">&para;</a></h3>
-<p>The state of a system is a snapshot of all the relevant elements of the system at the moment the snapshot is taken.  </p>
-<h3 id="finite-state-machine">Finite State Machine<a class="headerlink" href="#finite-state-machine" title="Permanent link">&para;</a></h3>
-<p>A finite state machine contains:</p>
+<details class="example">
+<summary>Mapping an Address to Multiword Cache Block</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202305301613776.png" width = 50%/> </div></p>
+</details>
+<h3 id="handling-cache-hit-and-misses">Handling Cache hit and Misses<a class="headerlink" href="#handling-cache-hit-and-misses" title="Permanent link">&para;</a></h3>
 <ul>
-<li>A finite number of states.  </li>
-<li>A finite number of external inputs.  </li>
-<li>A finite number of external outpus.  </li>
-<li>An explicit specification of all state transitions.  </li>
-<li>An explicit specification of what determines each external output value.  </li>
+<li>Read hits</li>
+<li>Read misses—two kinds of misses<ul>
+<li>data cache miss</li>
+<li>instruction cache miss<br />
+Stall the CPU, fetch block from memory, deliver to cache, restart CPU read<br />
+1. Send the original PC value (current PC-4) to the memory. <br />
+因为 PC 取值完就变成 +4 了，所以当前执行的其实是 PC-4
+2. Instruct main memory to perform a read and wait for the memory to complete its 
+access.<br />
+3. Write the cache entry, putting the data from memory in the data portion of the 
+entry, writing the upper bits of the address (from the ALU) into the tag field, and 
+turning the valid bit on.<br />
+4. Restart the instruction execution at the first step, which will refetch the instruction 
+again, this time finding it in the cache.  </li>
 </ul>
-<div class="admonition example">
-<p class="admonition-title">Combination lock</p>
-<p>我们需要依次拨到 R3-L22-R13(L/R 代表拨的方向), 锁才能打开. 否则如R13-L2-R也是不能打开锁的.<br />
-state machine:  </p>
-<p><img src="https://s2.loli.net/2022/07/13/f3hBqsj8JSI5Zk1.png" style="zoom:50%;" />  </p>
-</div>
-<h3 id="the-synchronous-finite-state-machine">The Synchronous Finite State Machine<a class="headerlink" href="#the-synchronous-finite-state-machine" title="Permanent link">&para;</a></h3>
-<p>In the example above, there is no fixed amount of time between successive inputs to the finite state machine, which means we can dial R3 and wait for a day then dail L22. (asynchoronous)
-However, computers work in <strong>synchronous</strong> way because the state transistions take place, one after the other, at identical fixed units of time.</p>
-<p><img alt="clcok.png" src="https://s2.loli.net/2022/07/13/81HsFPbeVazRC3W.png" /></p>
-<div class="admonition example">
-<p class="admonition-title">Example:A Danger Sign</p>
-<p><img src="https://s2.loli.net/2022/07/13/HNUJFsTq5hfQP8L.png" style="zoom:40%;" />  </p>
-<p>起初, 1-5 号灯处于关闭. 当开关处于 ON 状态时, 第一个单位时间后 1, 2 灯亮; 第二个单位时间后 3, 4 灯亮; 第三个单位时间后, 5 灯亮.<br />
-状态机:<br />
-<img src="https://s2.loli.net/2022/07/13/wtLzEbcY84gQyIq.png" style="zoom:40%;" />  </p>
-<p>其对应的电路:<br />
-<img src="https://s2.loli.net/2022/07/13/4lMvICXLq6cF3Zj.png" style="zoom:45%;" />  </p>
-<p>其中 store element 1 存储低位, element 2 存储高位.</p>
-<p>由此得到的组合电路:(可通过真值表得到)</p>
-<p><img src="https://s2.loli.net/2022/07/13/YX4t7a9iZ8Qdow1.png" style="zoom:45%;" />  </p>
-</div>
-<p>But in the previous example, there is a question: The process is so fast that the input of next cyle will be the output of the last cycle almost immediately. So we have no idea what the state of the finite state machine woule be for the next clock cycle.</p>
-<h3 id="master-slave-flip-flop">Master-Slave Flip-flop<a class="headerlink" href="#master-slave-flip-flop" title="Permanent link">&para;</a></h3>
-<p><img alt="master.png" src="https://s2.loli.net/2022/07/13/SvocDE9pmib7z4u.png" /></p>
-<p><img alt="time.png" src="https://s2.loli.net/2022/07/13/ADFOSx39CmskXJc.png" /></p>
-<p>process:  </p>
+</li>
+<li>Write hits<ul>
+<li><strong>write-back</strong>: Cause Inconsistent<br />
+只把数据写到 cache 中。以后再把 block 搬回到内存。</li>
+<li><strong>write-through</strong>: Ensuring Consistent<br />
+既把数据写到 cache 中又写到内存中。<br />
+Slower! -- write buffer</li>
+</ul>
+</li>
+<li>Write misses<br />
+read the entire block into the cache, then write the word</li>
+</ul>
+<h3 id="deep-concept-in-cache">Deep concept in Cache<a class="headerlink" href="#deep-concept-in-cache" title="Permanent link">&para;</a></h3>
 <ul>
-<li>In the first half A(WE=1), the slave read the value from the master and update the value by combinational circuits(Q) while the master remain the same.</li>
-<li>In the second half B(WE=0), the value updated by combinational circuit is stored in master while the slave remain the same.</li>
-<li>
-<p>Timing diagram</p>
-<ol>
-<li>
-<p>the slave load the value from the master.  </p>
+<li>Q1: Where can a block be placed in the upper level? (Block placement)</li>
+<li>Q2: How is a block found if it is in the upper level? (Block identification)</li>
+<li>Q3: Which block should be replaced on a miss? (Block replacement)</li>
+<li>Q4: What happens on a write? (Write strategy)</li>
+</ul>
+<h4 id="block-placement">Block Placement<a class="headerlink" href="#block-placement" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Direct mapped<br />
+Block can only go in one place in the cache<br />
+块只能去一个地方，通常取模</li>
+<li>Fully associative 全相联<br />
+Block can go anywhere in cache.<br />
+哪里空了去哪里</li>
+<li>Set associative 级相联<br />
+Block can go in one of a set of places in the cache. <br />
+A set is a group of blocks in the cache.<br />
+上两种方法的结合。把一组块组合成 set, 一个块取模找到这个组号，可以去组里的任意一个块。<br />
+Direct mapped 相当于 1-way set associative, Fully associative 相当于 m-way set-associative(m blocks)</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306011101837.png" width = 55%/> </div></p>
+</details>
+<h4 id="block-identification">Block Identification<a class="headerlink" href="#block-identification" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Tag<br />
+直接映射只需要比较一个块的 tag, 级相联需要比较 set 里所有块的 tag.  </li>
+<li>Valid bit</li>
+</ul>
+<p>The Format of the Physical Address</p>
+<ul>
+<li>The Index field selects<br />
+全相联没有 index. <ul>
+<li>The set, in case of a set-associative cache 级相联 <span class="arithmatex">\(\log_2(sets)\)</span></li>
+<li>The block, in case of a direct-mapped cache 直接映射 <span class="arithmatex">\(\log_2(blocks)\)</span></li>
+</ul>
 </li>
-<li>
-<p>the combinational logic finishes its update/calculation(proper delay). So it enters the next cycle.  </p>
+<li>The Byte Offset field selects<br />
+由一个块内 byte 的数目决定. <span class="arithmatex">\(\log_2(size of block)\)</span></li>
+<li>The Tag is used to find the matching block within a set or in the cache</li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306011111285.png" width = 60%/> </div>
+
+<details class="example">
+<summary>Direct-mapped Cache Example (1-word Blocks)</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306011112917.png" width = 50%/> </div></p>
+</details>
+<details class="example">
+<summary>Fully-Associative Cache example (1-word Blocks)</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306011113653.png" width = 50%/> </div></p>
+</details>
+<details class="example">
+<summary>2-Way Set-Associative Cache</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306011115647.png" width = 50%/> </div></p>
+<p>注意这里应该是对 Set0 里面的 tag 比较。</p>
+</details>
+<h4 id="block-replacement">Block Replacement<a class="headerlink" href="#block-replacement" title="Permanent link">&para;</a></h4>
+<p>In a direct-mapped cache, there is only one block that can be replaced.<br />
+In set-associative and fully-associative caches, there are N blocks (where N is the degree of associativity).</p>
+<ul>
+<li><strong>Random replacement</strong> - randomly pick any block<ul>
+<li>Easy to implement in hardware, just requires a random number generator  </li>
+<li>Spreads allocation uniformly across cache</li>
+<li>May evict a block that is about to be accessed</li>
+</ul>
 </li>
-<li>
-<p>the master load the updated value, so it also enters the next value.  </p>
+<li><strong>Least-recently used (LRU)</strong> - pick the block in the set which was least recently accessed<ul>
+<li>Assumed more recently accessed blocks more likely to be referenced again</li>
+<li>This requires extra bits in the cache to keep track of accesses. <br />
+需要额外的位数！</li>
+</ul>
 </li>
-<li>
-<p>repeat 1  </p>
+<li><strong>First in,first out(FIFO)</strong> - Choose a block from the set which was first came into the cache</li>
+</ul>
+<h4 id="write-strategy">Write Strategy<a class="headerlink" href="#write-strategy" title="Permanent link">&para;</a></h4>
+<ul>
+<li>If the data is written to memory, the cache is called a <strong>write through</strong> cache<ul>
+<li>Can always discard cached data - most up-to-date data is in memory<br />
+好处是可以随时把 cache 的内容丢掉。</li>
+<li>Cache control bit: only a <em>valid</em> bit</li>
+<li>memory (or other processors) always have latest data</li>
+</ul>
 </li>
-</ol>
+<li>If the data is NOT written to memory, the cache is called a <strong>write-back</strong> cache<ul>
+<li>Can’t just discard cached data - may have to write it back to memory</li>
+<li>Cache control bits: both <em>valid</em> and <em>dirty</em> bits</li>
+<li>much lower bandwidth, since data often overwritten multiple times</li>
+</ul>
 </li>
 </ul>
+<p>写回需要时间，我们需要 write stall.<br />
+<strong>Write stall</strong> -- When the CPU must wait for writes to complete during write through.<br />
+我们往往使用 write buffer.  </p>
+<ul>
+<li>A small cache that can hold a few values waiting to go to main memory.</li>
+<li>It does not entirely eliminate stalls since it is possible for the buffer to fill if the burst is larger than the buffer.<br />
+buffer 可能被填满，不能完全避免 write stall. </li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306011133671.png" width = 50%/> </div>
+
+<p>存在问题：当我如果要读的时候，数据还在 buffer 里没有被写入内存。因此我们需要先在 buffer 里面比较，如果没有再在内存里找。</p>
+<p>Write misses</p>
+<ul>
+<li>Write allocate<br />
+The block is loaded into the cache on a miss before anything else occurs.<br />
+常与 write back 搭配</li>
+<li>Write around (no write allocate)<br />
+常与 write through 搭配<ul>
+<li>The block is only written to main memory</li>
+<li>It is not stored in the cache.</li>
+</ul>
+</li>
+</ul>
+<p>Larger blocks exploit spatial locality</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306011146485.png" width = 50%/> </div>
+
+<h4 id="designing-the-memory-system-to-support-cache">Designing the Memory system to Support Cache<a class="headerlink" href="#designing-the-memory-system-to-support-cache" title="Permanent link">&para;</a></h4>
+<p>为了提高 cache 的性能，我们有不同的 memory 组织架构</p>
+<ul>
+<li>
+<p>Performance basic memory organization
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202306011148690.png" width = 60%/> </div></p>
+</li>
+<li>
+<p>Performance in Wider Main Memory<br />
+    一次可以读出两个 word. 
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202306011150779.png" width = 60%/> </div></p>
+<p>但这时内存太大了，开销大。
+* Performance in Four-way interleaved memory
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306011154501.png" width = 60%/> </div></p>
+<p>内存分为多个 banks, 并行访问。</p>
+</li>
+</ul>
+<h2 id="measuring-and-improving-cache-performance">Measuring and improving cache performance<a class="headerlink" href="#measuring-and-improving-cache-performance" title="Permanent link">&para;</a></h2>
+<ul>
+<li>How to measure cache performance?</li>
+<li>How to improve performance?<ul>
+<li>Reducing cache misses by more flexible placement of blocks</li>
+<li>Reducing the miss penalty using multilevel caches</li>
+</ul>
+</li>
+</ul>
+<p>Average Memory Assess time = hit time + miss time =  hit rate <span class="arithmatex">\(\times\)</span> Cache time + miss rate <span class="arithmatex">\(\times\)</span> memory time</p>
+<h3 id="measuring-cache-performance">Measuring cache performance<a class="headerlink" href="#measuring-cache-performance" title="Permanent link">&para;</a></h3>
+<p>We use CPU time to measure cache performance.<br />
+$
+CPU  Time = CPU  execution  clock  cycles + 
+Memory-stall  clock  cycles \times Clock  cycle  time
+$<br />
+这里 CPU 的执行时间在设计流水线的时候已经确定了，我们无需考虑。</p>
+<div class="arithmatex">\[
+\begin{align*}
+Memory-stall\  clock\ cycles &amp; =  instructions \times miss\  ratio \times miss \  penalty \\ &amp; = Read-stall\  cycles + Write-stall\  cycles
+\end{align*}
+\]</div>
+<ul>
+<li>For Read-stall<br />
+<span class="arithmatex">\(Read-stall\ cycles = \dfrac{Read}{Program}\times Read\ miss\ rate \times Read\ miss\ penalty\)</span><br />
+包括取指和数据加载。</li>
+<li>For a write-through plus write buffer scheme<br />
+<span class="arithmatex">\(Write-stall\ cycles = \left(\dfrac{Write}{Program} \times Write\ miss\ rate \times Write\ miss\ penalty\right)+Write\ buffer\ stalls\)</span><ul>
+<li>If the write buffer stalls are small, we can safely ignore them.<br />
+一般来说 buffer 不会溢出。</li>
+<li>If the cache block size is one word, the write miss penalty is 0.<br />
+大小是一个 word, 替换出去就直接写了。</li>
+</ul>
+</li>
+</ul>
+<p>In most write-through cache organizations, the read and write miss penalties are the same.(为了简便，我们这里这么假设)  <br />
+If we neglect the write buffer stalls, we get the following equation: </p>
+<div class="arithmatex">\[
+\begin{align*}
+Memory-stall\ clock\ cycles
+&amp; =\dfrac{Memory\ accesses}{Program}\times Miss\ rate\times Miss\ penalty\\
+&amp; =\dfrac{Instructions}{Program}\times \dfrac{Misses}{Instructions}\times Miss\ penalty
+\end{align*}
+\]</div>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306021835934.png" width = 50%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306021842560.png" width = 50%/> </div></p>
+<p>内存占了性能瓶颈。<br />
+假设我们把时钟频率提高两倍。这样 penalty 需要的时钟周期翻倍。<br />
+此时 CPU 性能实际只提升 1.23 倍。
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306021924424.png" width = 50%/> </div></p>
+</details>
+<h3 id="improving">Improving<a class="headerlink" href="#improving" title="Permanent link">&para;</a></h3>
+<p>提高 cache 命中率；减小 penalty.  </p>
+<h4 id="reducing-cache-misses-by-more-flexible-placement-of-blocks">Reducing cache misses by more flexible placement of blocks<a class="headerlink" href="#reducing-cache-misses-by-more-flexible-placement-of-blocks" title="Permanent link">&para;</a></h4>
+<p>如果我们正好以模长为步距访问，就会一直 miss. 但其实此时 cache 中还有很多空位。</p>
+<details class="example">
+<summary>The disadvantage of a direct-mapped cache</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306021932583.png" width = 50%/> </div></p>
+</details>
+<details class="example">
+<summary>Miss rate versus set-associative</summary>
+<p>注意 block addr 是忽略了地位的 byte offset 的。
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306021934540.png" width = 50%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306021935378.png" width = 50%/> </div></p>
+</details>
+<details class="example">
+<summary>Size of tags versus set associativity</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306021943052.png" width = 50%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306021945118.png" width = 50%/> </div></p>
+</details>
+<h4 id="decreasing-miss-penalty-with-multilevel-caches">Decreasing miss penalty with multilevel caches<a class="headerlink" href="#decreasing-miss-penalty-with-multilevel-caches" title="Permanent link">&para;</a></h4>
+<p>Add a second level cache:</p>
+<ul>
+<li>often primary cache is on the same chip as the processor</li>
+<li>use SRAMs to add another cache above primary memory (DRAM)</li>
+<li>miss penalty goes down if data is in 2<sup>nd</sup> level cache</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306022009397.png" width = 50%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306022012192.png" width = 50%/> </div></p>
+</details>
+<p>Using multilevel caches:</p>
+<ul>
+<li>try and optimize the hit time on the 1<sup>st</sup> level cache</li>
+<li>try and optimize the miss rate on the 2<sup>nd</sup> level cache</li>
+</ul>
+<h2 id="virtual-memory">Virtual Memory<a class="headerlink" href="#virtual-memory" title="Permanent link">&para;</a></h2>
+<p>Main Memory act as a “Cache” for the secondary storage.<br />
+把主存当作磁盘的缓存。</p>
+<ul>
+<li>Efficient and safe sharing of memory among multiple programs.<br />
+不同程序有自己的内存空间，我们希望只考虑自己的空间，不在乎其他程序放在哪里。让进程认为是自己独有这块地址空间。</li>
+<li>Remove the programming burdens of a small, limited amount of main memory.  </li>
+</ul>
+<p>Translation of a program’s address space to physical address.<br />
+虚拟内存的作用就是翻译。（内存是碎片化的，我们需要让程序认为地址是连续的）</p>
+<p>Advantages:</p>
+<ul>
+<li>illusion of having more physical memory</li>
+<li>program relocation </li>
+<li>protection</li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306022027075.png" width = 50%/> </div>
+
+<h3 id="pages-virtual-memory-blocks">Pages: virtual memory blocks<a class="headerlink" href="#pages-virtual-memory-blocks" title="Permanent link">&para;</a></h3>
+<p>page 是映射的最小单位。  </p>
+<p>虚拟页的数量比物理页多（现在不一定）。</p>
+<p><strong>Page faults</strong>: the data is not in memory, retrieve it from disk</p>
+<ul>
+<li>huge miss penalty, thus pages should be fairly large <strong><em>e.g.</em></strong> 4KB</li>
+<li>reducing page faults is important<br />
+要减少 miss</li>
+<li>can handle the faults in software instead of hardware<br />
+缺页是由操作系统处理的，而不是硬件(cache 是硬件做的)</li>
+<li>using <em>write-through</em> is too expensive so we use <strong><em>*write back</em></strong>*<br />
+硬盘操作太慢了，我们只在被踢出的时候写回。因此突然断电的时候数据会丢失。</li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306022106720.png" width = 50%/> </div>
+
+<h3 id="page-tables">Page Tables<a class="headerlink" href="#page-tables" title="Permanent link">&para;</a></h3>
+<p>pgtbl 本身存在 memory 里，记录地址的映射关系。（索引是虚拟地址的高位，找到表中对应项，就是物理地址）</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306022107379.png" width = 60%/> </div>
+
+<p>每个进程都有自己的 <strong>Page table</strong>, <strong>Program counter</strong> and the <strong>page table register</strong>.<br />
+进程之间切换，切换页表就可以了。</p>
+<p>Virtual memory systems use fully associative mapping method.<br />
+为了提高命中率，我们采用全相联的方式。这导致替换策略（比如 LRU）很复杂，但因为是 OS 编写，所以问题不大。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306022119500.png" width = 50%/> </div>
+
+<details class="example">
+<summary>How larger page table?</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306022121353.png" width = 50%/> </div></p>
+<p>entry size 指的是页表里每条的大小。<br />
+页表要能把所有的页都能放下。（每个虚拟页都需要存放对应的物理页）<br />
+我们需要减小页表的大小。</p>
+</details>
+<p>disk write 很慢，因此我们用 write-back 的策略，需要有一个 dirty bit.<br />
+The dirty bit is set when a page is first written. If the dirty bit of a page is set, the page must be written back to disk before being replaced.</p>
+<h3 id="making-address-translation-fast-tlb">Making Address Translation Fast--TLB<a class="headerlink" href="#making-address-translation-fast-tlb" title="Permanent link">&para;</a></h3>
+<p>在 pgtbl 上找也是很慢的，因此我们引入了 TLB.(CPU 内)  <br />
+The <strong>TLB (Translation-lookaside Buffer)</strong> acts as Cache on the page table<br />
+虚拟地址，先在 TLB 找，找不到再去内存里的页表找。一般 16~512 entries.</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306022128528.png" width = 60%/> </div>
+
+<details class="example">
+<summary>FastMATH Memory Hierarchy</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306052332712.png" width = 60%/> </div></p>
+</details>
+<details class="example">
+<summary>Possible combinations of Event</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306052335301.png" width = 60%/> </div></p>
+<p>最后三个不可能。不在 pgtbl 中那肯定也不在 TLB 中，说明数据页还没有进入内存，那 cache 里面肯定也不能有数据。</p>
+</details>
+<h3 id="page-faults">Page faults<a class="headerlink" href="#page-faults" title="Permanent link">&para;</a></h3>
+<p>When the OS creates a process, it usually creates the space on disk for all the pages of a process. <br />
+OS 启动时，把要用的 page 全部放到一个地方(swap space) 便于查找，记录页在硬盘的什么位置。（有的 OS 可能用另外的表来维护页在硬盘的位置）</p>
+<ul>
+<li>When a page fault occurs, the OS will be given control through exception mechanism.</li>
+<li>The OS will find the page in the disk by the page table.</li>
+<li>Next, the OS will bring the requested page into main memory. If all the pages in main memory are in use, the OS will use LRU strategy to choose a page to replace</li>
+</ul>
+<h3 id="protection-in-the-virtual-memory-system">Protection in the virtual memory System<a class="headerlink" href="#protection-in-the-virtual-memory-system" title="Permanent link">&para;</a></h3>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306052339551.png" width = 60%/> </div>
+
+<p>只有操作系统知道其他进程的地址空间。</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:06:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年6月6日 08:27:14</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年9月5日 23:38:05</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年6月2日 23:16:40</span>
       
     
   </small>
@@ -3208,7 +3228,7 @@ However, computers work in <strong>synchronous</strong> way because the state tr
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../ICS-2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Bits, Data Types and Operations" rel="prev">
+        <a href="../co4/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 处理器" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3217,20 +3237,20 @@ However, computers work in <strong>synchronous</strong> way because the state tr
               <span class="md-footer__direction">
                 上一页
               </span>
-              Bits, Data Types and Operations
+              处理器
             </div>
           </div>
         </a>
       
       
         
-        <a href="../ICS-4/" class="md-footer__link md-footer__link--next" aria-label="下一页: The von Neumann Model" rel="next">
+        <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-footer__link md-footer__link--next" aria-label="下一页: 线性代数Ⅱ(H)" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              The von Neumann Model
+              线性代数Ⅱ(H)
             </div>
           </div>
           <div class="md-footer__button md-icon">
