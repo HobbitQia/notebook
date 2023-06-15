@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/Logic/logic04/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/DB/db15/">
       
       <link rel="icon" href="../../log.ico">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>时序逻辑电路 - HobbitQia的笔记本</title>
+        <title>故障恢复 - HobbitQia的笔记本</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sequential-circuits" class="md-skip">
+        <a href="#recovery-system" class="md-skip">
           跳转至
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              时序逻辑电路
+              故障恢复
             
           </span>
         </div>
@@ -1419,14 +1419,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
       
       
       
@@ -1454,7 +1452,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">计算机逻辑设计基础</a>
+          <a href="../../Logic/">计算机逻辑设计基础</a>
           
             <label for="__nav_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1477,7 +1475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logic01/" class="md-nav__link">
+      <a href="../../Logic/logic01/" class="md-nav__link">
         数字系统和信息
       </a>
     </li>
@@ -1491,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logic02/" class="md-nav__link">
+      <a href="../../Logic/logic02/" class="md-nav__link">
         组合逻辑电路
       </a>
     </li>
@@ -1505,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logic03/" class="md-nav__link">
+      <a href="../../Logic/logic03/" class="md-nav__link">
         组合逻辑电路设计
       </a>
     </li>
@@ -1517,241 +1515,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          时序逻辑电路
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Logic/logic04/" class="md-nav__link">
         时序逻辑电路
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#storage-elements-and-analysis" class="md-nav__link">
-    Storage Elements and Analysis
-  </a>
-  
-    <nav class="md-nav" aria-label="Storage Elements and Analysis">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#latch" class="md-nav__link">
-    Latch
-  </a>
-  
-    <nav class="md-nav" aria-label="Latch">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-nand-overline-s-overline-r-latch" class="md-nav__link">
-    Basic (NAND)  \(\overline S\) –  \(\overline R\) Latch
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#basic-nor-s-r-latch" class="md-nav__link">
-    Basic (NOR)  \(S\) – \(R\) Latch
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clocked-s-r-latch" class="md-nav__link">
-    Clocked \(S\) - \(R\) Latch
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#d-latch" class="md-nav__link">
-    \(D\) Latch
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flip-flop" class="md-nav__link">
-    Flip-flop
-  </a>
-  
-    <nav class="md-nav" aria-label="Flip-flop">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#s-r-master-slave-flip-flop" class="md-nav__link">
-    S-R Master-Slave Flip-Flop
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edge-triggered-d-flip-flop" class="md-nav__link">
-    Edge-Triggered D Flip-Flop
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#analysis" class="md-nav__link">
-    Analysis
-  </a>
-  
-    <nav class="md-nav" aria-label="Analysis">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#state-table" class="md-nav__link">
-    State table
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#state-diagrams" class="md-nav__link">
-    State Diagrams
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flip-flop-timing-parameters" class="md-nav__link">
-    Flip-Flop Timing Parameters
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sequential-circuit-design" class="md-nav__link">
-    Sequential Circuit Design
-  </a>
-  
-    <nav class="md-nav" aria-label="Sequential Circuit Design">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#formulation" class="md-nav__link">
-    Formulation
-  </a>
-  
-    <nav class="md-nav" aria-label="Formulation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simplification-for-state-tables" class="md-nav__link">
-    Simplification for State Tables
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#state-assignment" class="md-nav__link">
-    State Assignment
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#technology-mapping" class="md-nav__link">
-    Technology Mapping
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-flip-flop-types" class="md-nav__link">
-    Other Flip-Flop Types
-  </a>
-  
-    <nav class="md-nav" aria-label="Other Flip-Flop Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#j-k-flip-flop" class="md-nav__link">
-    J-K Flip-flop
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#t-flip-flop" class="md-nav__link">
-    T Flip-flop
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#basic-flip-flop-descriptors" class="md-nav__link">
-    Basic Flip-Flop Descriptors
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1763,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logic06/" class="md-nav__link">
+      <a href="../../Logic/logic06/" class="md-nav__link">
         寄存器与寄存器传输
       </a>
     </li>
@@ -1777,7 +1545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logic05/" class="md-nav__link">
+      <a href="../../Logic/logic05/" class="md-nav__link">
         数字硬件设计
       </a>
     </li>
@@ -1791,7 +1559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logic07/" class="md-nav__link">
+      <a href="../../Logic/logic07/" class="md-nav__link">
         内存基础
       </a>
     </li>
@@ -1810,12 +1578,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" checked>
       
       
       
@@ -1870,7 +1640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db1/" class="md-nav__link">
+      <a href="../db1/" class="md-nav__link">
         数据库介绍
       </a>
     </li>
@@ -1884,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db2/" class="md-nav__link">
+      <a href="../db2/" class="md-nav__link">
         关系模型
       </a>
     </li>
@@ -1898,7 +1668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db3/" class="md-nav__link">
+      <a href="../db3/" class="md-nav__link">
         SQL 语言介绍
       </a>
     </li>
@@ -1912,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db4/" class="md-nav__link">
+      <a href="../db4/" class="md-nav__link">
         中级 SQL
       </a>
     </li>
@@ -1926,7 +1696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db5/" class="md-nav__link">
+      <a href="../db5/" class="md-nav__link">
         高级 SQL
       </a>
     </li>
@@ -1940,7 +1710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db6/" class="md-nav__link">
+      <a href="../db6/" class="md-nav__link">
         实体-关系模型
       </a>
     </li>
@@ -1954,7 +1724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db7/" class="md-nav__link">
+      <a href="../db7/" class="md-nav__link">
         关系数据库设计
       </a>
     </li>
@@ -1968,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db8/" class="md-nav__link">
+      <a href="../db8/" class="md-nav__link">
         物理存储系统
       </a>
     </li>
@@ -1982,7 +1752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db9/" class="md-nav__link">
+      <a href="../db9/" class="md-nav__link">
         数据存储结构
       </a>
     </li>
@@ -1996,7 +1766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db10/" class="md-nav__link">
+      <a href="../db10/" class="md-nav__link">
         索引
       </a>
     </li>
@@ -2010,7 +1780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db11/" class="md-nav__link">
+      <a href="../db11/" class="md-nav__link">
         查询处理
       </a>
     </li>
@@ -2024,7 +1794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db12/" class="md-nav__link">
+      <a href="../db12/" class="md-nav__link">
         查询优化
       </a>
     </li>
@@ -2038,7 +1808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db13/" class="md-nav__link">
+      <a href="../db13/" class="md-nav__link">
         事务
       </a>
     </li>
@@ -2052,7 +1822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db14/" class="md-nav__link">
+      <a href="../db14/" class="md-nav__link">
         并发控制
       </a>
     </li>
@@ -2064,11 +1834,195 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../DB/db15/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          故障恢复
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         故障恢复
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#failure-classification" class="md-nav__link">
+    Failure Classification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-structure" class="md-nav__link">
+    Storage Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-recovery" class="md-nav__link">
+    Database Recovery
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log-based-recovery" class="md-nav__link">
+    Log-Based Recovery
+  </a>
+  
+    <nav class="md-nav" aria-label="Log-Based Recovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#log-records" class="md-nav__link">
+    Log Records
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-ahead-logging" class="md-nav__link">
+    Write-Ahead Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaction-commit" class="md-nav__link">
+    Transaction Commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#undo-and-redo-operations" class="md-nav__link">
+    Undo(撤销) and Redo（重做） Operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkpoints" class="md-nav__link">
+    Checkpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-record-buffering" class="md-nav__link">
+    Log Record Buffering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuzzy-checkpointing" class="md-nav__link">
+    Fuzzy Checkpointing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure-with-loss-of-nonvolatile-storage" class="md-nav__link">
+    Failure with Loss of Nonvolatile Storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recovery-with-early-lock-release-and-logical-undo-operations" class="md-nav__link">
+    Recovery with Early Lock Release and Logical Undo Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Recovery with Early Lock Release and Logical Undo Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-undo-logging" class="md-nav__link">
+    Logical Undo Logging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aries-recovery-algorithm" class="md-nav__link">
+    ARIES Recovery Algorithm
+  </a>
+  
+    <nav class="md-nav" aria-label="ARIES Recovery Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aries-data-structures" class="md-nav__link">
+    ARIES Data Structures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aries-recovery-algorithm_1" class="md-nav__link">
+    ARIES Recovery Algorithm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2528,112 +2482,31 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#storage-elements-and-analysis" class="md-nav__link">
-    Storage Elements and Analysis
+  <a href="#failure-classification" class="md-nav__link">
+    Failure Classification
   </a>
   
-    <nav class="md-nav" aria-label="Storage Elements and Analysis">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-structure" class="md-nav__link">
+    Storage Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage Structure">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#latch" class="md-nav__link">
-    Latch
-  </a>
-  
-    <nav class="md-nav" aria-label="Latch">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-nand-overline-s-overline-r-latch" class="md-nav__link">
-    Basic (NAND)  \(\overline S\) –  \(\overline R\) Latch
+  <a href="#implementation" class="md-nav__link">
+    Implementation
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#basic-nor-s-r-latch" class="md-nav__link">
-    Basic (NOR)  \(S\) – \(R\) Latch
+  <a href="#database-recovery" class="md-nav__link">
+    Database Recovery
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clocked-s-r-latch" class="md-nav__link">
-    Clocked \(S\) - \(R\) Latch
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#d-latch" class="md-nav__link">
-    \(D\) Latch
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flip-flop" class="md-nav__link">
-    Flip-flop
-  </a>
-  
-    <nav class="md-nav" aria-label="Flip-flop">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#s-r-master-slave-flip-flop" class="md-nav__link">
-    S-R Master-Slave Flip-Flop
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edge-triggered-d-flip-flop" class="md-nav__link">
-    Edge-Triggered D Flip-Flop
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#analysis" class="md-nav__link">
-    Analysis
-  </a>
-  
-    <nav class="md-nav" aria-label="Analysis">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#state-table" class="md-nav__link">
-    State table
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#state-diagrams" class="md-nav__link">
-    State Diagrams
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flip-flop-timing-parameters" class="md-nav__link">
-    Flip-Flop Timing Parameters
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2643,24 +2516,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sequential-circuit-design" class="md-nav__link">
-    Sequential Circuit Design
+  <a href="#log-based-recovery" class="md-nav__link">
+    Log-Based Recovery
   </a>
   
-    <nav class="md-nav" aria-label="Sequential Circuit Design">
+    <nav class="md-nav" aria-label="Log-Based Recovery">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#formulation" class="md-nav__link">
-    Formulation
+  <a href="#log-records" class="md-nav__link">
+    Log Records
   </a>
   
-    <nav class="md-nav" aria-label="Formulation">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#simplification-for-state-tables" class="md-nav__link">
-    Simplification for State Tables
+  <a href="#write-ahead-logging" class="md-nav__link">
+    Write-Ahead Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaction-commit" class="md-nav__link">
+    Transaction Commit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#undo-and-redo-operations" class="md-nav__link">
+    Undo(撤销) and Redo（重做） Operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkpoints" class="md-nav__link">
+    Checkpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-record-buffering" class="md-nav__link">
+    Log Record Buffering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuzzy-checkpointing" class="md-nav__link">
+    Fuzzy Checkpointing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure-with-loss-of-nonvolatile-storage" class="md-nav__link">
+    Failure with Loss of Nonvolatile Storage
   </a>
   
 </li>
@@ -2669,52 +2583,46 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#state-assignment" class="md-nav__link">
-    State Assignment
+      
+        <li class="md-nav__item">
+  <a href="#recovery-with-early-lock-release-and-logical-undo-operations" class="md-nav__link">
+    Recovery with Early Lock Release and Logical Undo Operations
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#technology-mapping" class="md-nav__link">
-    Technology Mapping
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-flip-flop-types" class="md-nav__link">
-    Other Flip-Flop Types
-  </a>
-  
-    <nav class="md-nav" aria-label="Other Flip-Flop Types">
+    <nav class="md-nav" aria-label="Recovery with Early Lock Release and Logical Undo Operations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#j-k-flip-flop" class="md-nav__link">
-    J-K Flip-flop
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#t-flip-flop" class="md-nav__link">
-    T Flip-flop
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#basic-flip-flop-descriptors" class="md-nav__link">
-    Basic Flip-Flop Descriptors
+  <a href="#logical-undo-logging" class="md-nav__link">
+    Logical Undo Logging
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aries-recovery-algorithm" class="md-nav__link">
+    ARIES Recovery Algorithm
+  </a>
+  
+    <nav class="md-nav" aria-label="ARIES Recovery Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aries-data-structures" class="md-nav__link">
+    ARIES Data Structures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aries-recovery-algorithm_1" class="md-nav__link">
+    ARIES Recovery Algorithm
+  </a>
   
 </li>
         
@@ -2736,742 +2644,267 @@
               
 
                 
-  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/Logic/logic04.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/DB/db15.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="sequential-circuits">Sequential Circuits<a class="headerlink" href="#sequential-circuits" title="Permanent link">&para;</a></h1>
-<details class="abstract">
-<summary>Abstract</summary>
-<ol>
-<li>时序电路概念和组成<br />
-Introduction to Sequential Circuits  </li>
-<li>输出方程、激励函数、次态方程、输出方程类型 <br />
-Output function, Excitationfunction, Next state function, type of output functions  </li>
-<li>时序电路类型<br />
-Types of sequential circuits  </li>
-<li>电路延迟模型<br />
-Circuit delay model  </li>
-<li>
-<p>锁存器与触发器 <br />
-Latch and Flip-Flop</p>
-<ul>
-<li>S-R锁存器的原理、特征表、特征方程，内部电路分析，不确定状态的原因及出现条件<br />
-Analysis of Basic S-R Latch, Characteristic Table, Characteristic Equation, reason of unstable state  </li>
-<li>D锁存器、D触发器的原理、特征表、特征方程，内部电路分析 <br />
-Theory of D Latch and D Flip-Flop, Characteristic Table, Characteristic Equation  </li>
-<li>JK触发器、T触发器的行为、特征表、特征方程<br />
-Behavior of JK Flip-Flop, TFlip-Flop, Characteristic Table, Characteristic Equation  </li>
-<li>脉冲触发和边沿触发的概念，脉冲触发的一次性采样行为原因<br />
-Concept  of  Master-slave and edge-triggered flip-flop, 1s catching of Mast-slave flip-flop  </li>
-<li>锁存器和触发器的时序，建立时间、保持时间、传输延迟等各种时序成分<br />
-Flip-Flop Timing Parameters, setup time, hold time, propagation delay  </li>
-<li>各种触发器的图形符号<br />
-Symbols of Flip-Flops  </li>
-</ul>
-</li>
-<li>
-<p>状态表、状态图<br />
-State Table, State Diagram  </p>
-</li>
-<li>
-<p>同步时序电路分析<br />
-Sequential Circuit Analysis  </p>
-<ul>
-<li>根据给定电路，写出输出方程和激励函数/次态方程  <br />
-Derive output functions and excitationfunction/Next state function  </li>
-<li>列出状态真值表<br />
-ObtainState truth table  </li>
-<li>列出时序电路的次态<br />
-List next state of sequential circuit  </li>
-<li>作状态表和状态图<br />
-ObtainState Table and State Diagram  </li>
-<li>分析时序电路的外部性能<br />
-Analysis the behavior of sequential circuit  </li>
-<li>对电路进行评述，通常需检查自恢复功能及画出时序波形图<br />
-Evaluate the circuit, validate the self-recovery ability  </li>
-</ul>
-</li>
-<li>
-<p>电路和系统级时序分析，时序电路各路径的时序成分分析计算<br />
-Circuit and System Level Timing, analyze and compute time component along any path of the sequential circuit  <br />
-9．米利型和穆尔型电路分析<br />
-analyze Mealy and Moore type circuit<br />
-10．时序电路设计<br />
-Sequential Circuit Design  </p>
-<ul>
-<li>写出规格说明书<br />
-Specification  </li>
-<li>系统描述–从问题陈述中得出状态图和状态表<br />
-Formulation -Obtain a state diagram or state table  </li>
-<li>状态赋值–为状态表中的每个状态赋二进制代码<br />
-State Assignment -Assign binary codes to the states  </li>
-<li>得到触发器的输入方程-选择触发器的类型，从状态表的次态栏得到触发器的输入方程<br />
-Flip-Flop Input Equation Determination-Select flip-flop types and derive flip-flop equations from next state entries in the table  </li>
-<li>确定输出方程-从状态表的输出栏得到输出方程<br />
-Output Equation Determination-Derive output equations from output entries in the table  </li>
-<li>优化–优化触发器的输入方程和输出方程 <br />
-Optimization-Optimize the equations  </li>
-<li>工艺映射–根据方程画出电路图，并映射到触发器和门工艺<br />
-Technology Mapping-Find  circuit from equations and map to flip-flops and gate technology  </li>
-<li>验证–验证最终设计的正确性<br />
-Verification-Verify correctness of final design</li>
-</ul>
-</li>
-</ol>
-</details>
-<h2 id="storage-elements-and-analysis">Storage Elements and Analysis<a class="headerlink" href="#storage-elements-and-analysis" title="Permanent link">&para;</a></h2>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211091011289.png" width = 50%/> </div>
+<h1 id="recovery-system">Recovery System<a class="headerlink" href="#recovery-system" title="Permanent link">&para;</a></h1>
+<h2 id="failure-classification">Failure Classification<a class="headerlink" href="#failure-classification" title="Permanent link">&para;</a></h2>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306121002428.png" width = 60%/> </div>
 
-<p>时序电路包括：组合逻辑电路+存储元件</p>
-<p>Combinatorial Logic  </p>
 <ul>
-<li>Next state function Next State = f(Inputs, State)  次态方程  </li>
-<li>Output function (Mealy) Outputs = g(Inputs, State)</li>
-<li>Output function (Moore) Outputs = h(State) 输入不会直接改变输出，而是通过状态来间接改变输出  </li>
+<li>Database application<br />
+逻辑错误：比如不满足数据库约束条件（主键）
+系统错误：死锁。
+常用方法是撤销 undo, 把这个事件抹掉。（基于日志，在产生修改之前先记日志，故障后可以根据日志进行撤销）<br />
+记日志比较快（顺序访问）</li>
+<li>DBMS<br />
+掉电、硬件故障、软件故障<br />
+system crash 是全局性的，所有运行的程序都会受到影响。分为两类：一类是事务已经提交（但是数据还在缓冲区），另一类是正在执行的事务（还没有提交）。<br />
+已经提交的事务要 redo(数据可能没写回去), 没有完成的事务要 undo. 
+先记日志，现在的数据库采用 repeating history 的方法。</li>
+<li>Database<br />
+介质故障 <br />
+要防止介质故障，需要做备份（拷贝或者远程）  </li>
 </ul>
-<p><strong>Types of Sequential Circuits</strong>  </p>
+<h2 id="storage-structure">Storage Structure<a class="headerlink" href="#storage-structure" title="Permanent link">&para;</a></h2>
+<p>日志可能也会出故障？我们假设日志存储在 Stable storage 里。</p>
 <ul>
-<li>Depends on the times at which:<ul>
-<li>storage elements observe their inputs, and </li>
-<li>storage elements change their state </li>
+<li>Volatile storage  </li>
+<li>Nonvolatile storage<br />
+survives system crashes</li>
+<li>Stable storage:<ul>
+<li>a mythical(虚拟的) form of storage that survives all failures</li>
+<li>approximated by maintaining multiple copies on distinct nonvolatile media<br />
+可以近似实现</li>
 </ul>
 </li>
-<li>Synchronous<br />
-状态更新一定发生在时钟周期的整周期上</li>
-<li>Asynchronous<br />
-状态更新可以在任意时间发生  <br />
-如果时钟也被看做一个输入，那么所有电路都是 Asynchronous      <br />
-Asynchronous 可以让我们在有需要的时候更新电路，降低电路的功耗   </li>
 </ul>
-<p>Discrete Event Simulation 离散事件仿真</p>
-<h3 id="latch">Latch<a class="headerlink" href="#latch" title="Permanent link">&para;</a></h3>
+<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Maintain multiple copies of each block on separate disks</li>
+<li>Failure during data transfer can still result in inconsistent copies<br />
+修改过程中可能发生故障</li>
+<li>Protecting storage media from failure during data transfer </li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306121013745.png" width = 60%/> </div>
+
+<h3 id="database-recovery">Database Recovery<a class="headerlink" href="#database-recovery" title="Permanent link">&para;</a></h3>
+<p><strong>Recovery algorithms</strong> are techniques to ensure database consistency and transaction <strong>atomicity</strong> and <strong>durability</strong> despite failures.  </p>
+<p>Recovery algorithms have two parts</p>
+<ul>
+<li>Actions taken during normal transaction processing to ensure enough information exists to recover from failures<br />
+先记日志</li>
+<li>Actions taken after a failure to recover the database contents to a state that ensures atomicity, consistency and durability  </li>
+</ul>
+<p>理想的算法：恢复得很快，对事务正常操作没有影响（记录信息的时候不能消耗太多性能），即兼顾上面两个部分。恢复的过程和并行控制是相关的。</p>
+<p>We assume that strict two-phase locking ensures no dirty read.<br />
+使用严格两阶段封锁协议保证没有脏数据。</p>
+<p><strong>Idempotent(幂等性)</strong>: An recovery algorithm is said to be idempotent if executing it several times gives the same result as executing it once.<br />
+算法恢复多次的效果是一样的。（恢复过程中可能也发生 crash）</p>
+<h2 id="log-based-recovery">Log-Based Recovery<a class="headerlink" href="#log-based-recovery" title="Permanent link">&para;</a></h2>
+<h3 id="log-records">Log Records<a class="headerlink" href="#log-records" title="Permanent link">&para;</a></h3>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306121021188.png" width = 70%/> </div>
+
+<p>A <strong>log</strong> is kept on stable storage(稳定存储器). <br />
+The log is a sequence of <strong>log records</strong>, and maintains a record of update activities on the database.</p>
+<ul>
+<li>When transaction Ti starts, it registers itself by writing a <strong>“start”</strong> log record: <span class="arithmatex">\(&lt;T_i\  start&gt;\)</span><br />
+事务开始. Ti 表示事务的 id. </li>
+<li>Before Ti executes write(X), writing <strong>“update</strong>” log record <span class="arithmatex">\(&lt;T_i, X,  V_1,  V_2&gt;\)</span> <br />
+事务把 X 数据项的值从 V1(old value) 改为 V2(new value).<br />
+这个就是恢复的基础. undo 就用 old value, redo 用 new value.<br />
+Insert 就是 old 为空, Delete 就是 new 为空。</li>
+<li>When Ti finishes it last statement, writing <strong>“commit”</strong> log record: <span class="arithmatex">\(&lt;T_i\  commit&gt;\)</span> </li>
+<li>When Ti  complete rollback, writing <strong>“abort”</strong> log record: <span class="arithmatex">\(&lt;T_i\  abort&gt;\)</span> </li>
+</ul>
 <div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211091038178.png" width = 40%/> </div><br />
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211091038137.png" width = 55%/> </div>   </p>
-<p>The simple combinational circuit has now become a sequential circuit because its output is a function of a time sequence of input signals!<br />
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211091039908.png" width = 60%/> </div>   </p>
+<p class="admonition-title">Log Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306121024663.png" width = 60%/> </div></p>
+<p>这里当执行到 T2 回滚的时候我们会进行恢复（绿色的行表示补偿日志）比如 T2 把 C 恢复为 500, T3 把 B 恢复为 300, 最后 T2 abort. (undo 操作也会记录到日志中)<br />
+发生 crash 的时候 repeat history(undo 正常的操作也会重复), 随后得到并执行 undo list.(事务开始后先把事务放进去，如果提交或者回滚了就把事务移除) 只需要把 T4 undo.(假设故障前只执行到 15 行) </p>
 </div>
-<h4 id="basic-nand-overline-s-overline-r-latch">Basic (NAND)  <span class="arithmatex">\(\overline S\)</span> –  <span class="arithmatex">\(\overline R\)</span> Latch<a class="headerlink" href="#basic-nand-overline-s-overline-r-latch" title="Permanent link">&para;</a></h4>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211091041175.png" width = 40%/> </div>
-
-<table>
-<thead>
-<tr>
-<th align="left"><span class="arithmatex">\(R\)</span></th>
-<th><span class="arithmatex">\(S\)</span></th>
-<th><span class="arithmatex">\(Q\)</span></th>
-<th><span class="arithmatex">\(\overline Q\)</span></th>
-<th>Comment</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">1</td>
-<td>1</td>
-<td>?</td>
-<td>?</td>
-<td>Stored state unknown</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td><em>Set</em> Q to 1</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>Now Q <em>remembers</em> 1</td>
-</tr>
-<tr>
-<td align="left">0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td><em>Reset</em> Q to 0</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>Now Q <em>remembers</em> 0</td>
-</tr>
-<tr>
-<td align="left">0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>Both go high</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>1</td>
-<td>?</td>
-<td>?</td>
-<td>Unstable!</td>
-</tr>
-</tbody>
-</table>
-<p>最后一步，两个引脚同时从 0 -&gt; 1, 那么两个与非门的输出都期望变成 0, 但只要有一个门的输出变为 0 另一个门就被锁住变成 1, 因此两个门不可能同时变化。但我们无法确定是哪个门会变成 1.<br />
-<span class="arithmatex">\(S=0,R=0\)</span> is <u><strong>forbidden</strong></u> as input pattern.   </p>
-<h4 id="basic-nor-s-r-latch">Basic (NOR)  <span class="arithmatex">\(S\)</span> – <span class="arithmatex">\(R\)</span> Latch<a class="headerlink" href="#basic-nor-s-r-latch" title="Permanent link">&para;</a></h4>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211091046159.png" width = 40%/> </div>
-
-<table>
-<thead>
-<tr>
-<th align="left"><span class="arithmatex">\(R\)</span></th>
-<th><span class="arithmatex">\(S\)</span></th>
-<th><span class="arithmatex">\(Q\)</span></th>
-<th><span class="arithmatex">\(\overline Q\)</span></th>
-<th>Comment</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">0</td>
-<td>0</td>
-<td>?</td>
-<td>?</td>
-<td>Stored state unknown</td>
-</tr>
-<tr>
-<td align="left">0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td><em>Set</em> Q to 1</td>
-</tr>
-<tr>
-<td align="left">0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>Now Q <em>remembers</em> 1</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td><em>Reset</em> Q to 0</td>
-</tr>
-<tr>
-<td align="left">0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>Now Q <em>remembers</em> 0</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>Both go high</td>
-</tr>
-<tr>
-<td align="left">0</td>
-<td>0</td>
-<td>?</td>
-<td>?</td>
-<td>Unstable!</td>
-</tr>
-</tbody>
-</table>
-<h4 id="clocked-s-r-latch">Clocked <span class="arithmatex">\(S\)</span> - <span class="arithmatex">\(R\)</span> Latch<a class="headerlink" href="#clocked-s-r-latch" title="Permanent link">&para;</a></h4>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211091058462.png" width = 45%/> </div>
-
-<p><span class="arithmatex">\(C\)</span> 作为一个 ENABLE 的功能。当 <span class="arithmatex">\(C=0\)</span> 时，<span class="arithmatex">\(Q\)</span> 不会发生改变。当 <span class="arithmatex">\(C=1\)</span> 时，上面相当于 <span class="arithmatex">\(\overline S\)</span>, 下面相当于 <span class="arithmatex">\(\overline R\)</span>, 变成一个钟控的 SR 锁存器。  </p>
-<table>
-<thead>
-<tr>
-<th align="left"><span class="arithmatex">\(C\)</span></th>
-<th><span class="arithmatex">\(S\)</span></th>
-<th><span class="arithmatex">\(R\)</span></th>
-<th><span class="arithmatex">\(Q(t+1)\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">0</td>
-<td>X</td>
-<td>X</td>
-<td>No change</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>0</td>
-<td>0</td>
-<td>No change</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>0</td>
-<td>1</td>
-<td>0: <em>Clear</em> Q</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>1</td>
-<td>0</td>
-<td>1: <em>Set</em> Q</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>1</td>
-<td>1</td>
-<td>Indeterminate</td>
-</tr>
-</tbody>
-</table>
-<p><span class="arithmatex">\(Q(t+1)\)</span> based on current state <span class="arithmatex">\(Q(t)\)</span> and current inputs <span class="arithmatex">\((S,R,C)\)</span></p>
-<h4 id="d-latch"><span class="arithmatex">\(D\)</span> Latch<a class="headerlink" href="#d-latch" title="Permanent link">&para;</a></h4>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211091105090.png" width = 45%/> </div>
-
-<p><span class="arithmatex">\(S\ R\)</span> 不会同时为 0.  </p>
-<table>
-<thead>
-<tr>
-<th align="left"><span class="arithmatex">\(C\)</span></th>
-<th><span class="arithmatex">\(D\)</span></th>
-<th><span class="arithmatex">\(Q(t+1)\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">0</td>
-<td>X</td>
-<td>No change</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td>0</td>
-<td>0: <em>Clear</em> Q</td>
-</tr>
-<tr>
-<td align="left">0</td>
-<td>1</td>
-<td>1: <em>Set</em> Q</td>
-</tr>
-</tbody>
-</table>
-<p>即当 <span class="arithmatex">\(C=1\)</span> 时 <span class="arithmatex">\(Q=D\)</span></p>
-<p>The graphic symbol for a <span class="arithmatex">\(D\)</span> latch:  </p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211091106989.png" width = 30%/> </div>
-
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>在算门输入成本的时候，我们要分开算 G 和 GN. 因为锁存器同时为我们提供了 <span class="arithmatex">\(Q\)</span> 和 <span class="arithmatex">\(\overline Q\)</span>, 锁存器可以为后面的组合电路提供原变量和反变量。</p>
-</div>
-<h3 id="flip-flop">Flip-flop<a class="headerlink" href="#flip-flop" title="Permanent link">&para;</a></h3>
-<p>锁存器不适合使用在电路中：不能做到一个周期，状态只更新一次。具体原因见 <a href="http://note.hobbitqia.cc/ICS/ICS-3/#the-synchronous-finite-state-machine">ICS Notes</a>  </p>
-<h4 id="s-r-master-slave-flip-flop">S-R Master-Slave Flip-Flop<a class="headerlink" href="#s-r-master-slave-flip-flop" title="Permanent link">&para;</a></h4>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211091128641.png" width = 50%/> </div>
-
-<p>前面称为 master(主锁存器), 后面称为 slave(从锁存器)  <br />
-当 <span class="arithmatex">\(C=0\)</span> 时，主锁存器不变。  <br />
-<span class="arithmatex">\(C\)</span> 从 0 变为 1 时，主锁存器被使能，Q 改变，但从锁存器不变。</p>
-<p>周期变长一倍
-一次性采样问题(1s catching)：当 S R 均为 0 时如果有小扰动，无法复原<br />
-要求主从触发器避免 S R 的扰动</p>
-<h4 id="edge-triggered-d-flip-flop">Edge-Triggered D Flip-Flop<a class="headerlink" href="#edge-triggered-d-flip-flop" title="Permanent link">&para;</a></h4>
-<p>An <strong>edge-triggered flip-flop</strong> ignores the pulse while it is at a constant level and triggers only during a transition of the clock signal.<br />
-A <strong>master-slave D flip-flop</strong> which also exhibits <strong>edge-triggered</strong> behavior can be used.</p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211111109804.png" width = 40%/> </div>
-
-<p>The delay of the S-R master-slave flip-flop can be avoided since the 1s-catching behavior is not present with D replacing S and R inputs. (D 锁存器不会出现 S R 同时为 0 的情况)</p>
-<p><strong>Positive-Edge Triggered D Flip-Flop</strong> is Formed by adding inverter to clock input. (上升沿触发器)  <br />
-Q changes to the value on D applied at the positive clock edge within timing constraints to be specified</p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211111112460.png" width = 40%/> </div>
-
-<p><strong>Actual Circuit of Edge-Triggered D Flip-Flop:</strong>  </p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211111108389.png" width = 40%/> </div>
-
-<p>(和 D-Latch Flip-flop 有所不同)</p>
-<p><strong>Standard Symbols for Storage Elements:</strong>  </p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211111116243.png" width = 50%/> </div>
-
+<h3 id="write-ahead-logging">Write-Ahead Logging<a class="headerlink" href="#write-ahead-logging" title="Permanent link">&para;</a></h3>
+<p>Before a data in main memory is output to the database, the log records pertaining to data must have been output to stable storage.<br />
+先写日志原则。<br />
+数据修改之前，和数据有关的记录要先写入日志。</p>
+<h3 id="transaction-commit">Transaction Commit<a class="headerlink" href="#transaction-commit" title="Permanent link">&para;</a></h3>
+<p>A transaction is said to have committed when its <em>commit log record</em> is output to <em>stable storage</em><br />
+日志已经记录 commit, 说明事务已经提交。（因为后续可以根据这个恢复状态了）<br />
+但此时数据不一定已经写回到数据库里（不一定高校）<br />
+all previous log records of the transaction must have been output already </p>
+<p>Writes performed by a transaction may still be in the buffer when the transaction commits, and may be output later.  <br />
+不一定在磁盘。如果立刻将 block 写回磁盘可能引起大量 I/O 操作</p>
+<h3 id="undo-and-redo-operations">Undo(撤销) and Redo（重做） Operations<a class="headerlink" href="#undo-and-redo-operations" title="Permanent link">&para;</a></h3>
+<h3 id="checkpoints">Checkpoints<a class="headerlink" href="#checkpoints" title="Permanent link">&para;</a></h3>
+<p>Redoing/undoing all transactions recorded in the log can be very slow.<br />
+Streamline recovery procedure by periodically performing checkpointing.<br />
+重演历史可能很长。checkpoint 是确认之前的操作都已经反映到数据库里去了，这样重演的时候就可以直接从 checkpoint 开始。</p>
 <ul>
-<li><strong>Direct Inputs</strong>  <br />
-Direct <span class="arithmatex">\(R\)</span> and/or <span class="arithmatex">\(S\)</span> inputs that control the state of the latches within the flip-flops are used for this <em>initialization</em>.   </li>
+<li>Output all log records currently residing in main memory onto stable storage.<br />
+日志不是生成就往内存写，而是有一个日志缓冲区。<br />
+确保把日志项写到日志中去了。</li>
+<li>Output all modified buffer blocks to the disk.<br />
+把 buffer 里所有数据都刷写一遍。</li>
+<li>Write a log record <span class="arithmatex">\(&lt;checkpoint\ L&gt;\)</span> onto stable storage where L is a list of all transactions active at the time of checkpoint. <br />
+写一个日志的标记（新的日志类型）. L 是当前正在工作的事务的表。（用来做 undo list 的初始化列表）</li>
+<li>All updates are stopped while doing checkpointing!!!
+做 checkpoint 的时候其他活跃事务都要停下来。</li>
 </ul>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211111118511.png" width = 20%/> </div>
-
-<h3 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h3>
-<p><strong>General Model</strong>  </p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211181954243.png" width = 40%/> </div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-<p>同步时序电路里 D 触发器的时钟输入端，统一接在一个系统时钟输入 CLK 信号上。（规定所有触发器何时进行状态改变，是额外提供的引脚，<u>不属于整个系统的信号输入</u>）</p>
-<ul>
-<li><strong>Current State</strong> at time (t) is stored in an array of flip-flops.</li>
-<li><strong>Next State</strong> at time (t+1) is a <em>Boolean function</em> of State and Inputs.  </li>
-<li><strong>Outputs</strong> at time (t) are a <em>Boolean function</em> of State (t) and (sometimes) Inputs (t).</li>
-</ul>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211181959796.png" width = 40%/> </div>    </p>
-<p>可以看到，cp 是时钟输入信号  </p>
-<ul>
-<li>input: <span class="arithmatex">\(x(t)\)</span>  </li>
-<li>output: <span class="arithmatex">\(y(t)\)</span>  </li>
-<li>
-<p>state: <span class="arithmatex">\((A(t),B(t))\)</span></p>
-</li>
-<li>
-<p>Boolean equations for the functions
-<span class="arithmatex">\(D_A(t) = A(t)x(t)+ B(t)x(t), A(t+1)=A(t)x(t)+ B(t)x(t)\)</span>, <br />
-<span class="arithmatex">\(D_B(t) = A(t)x(t),B(t+1) = A(t)x(t), y(t) = x(t)(B(t) + A(t))\)</span>    </p>
-</li>
-</ul>
-</details>
-<h4 id="state-table"><strong>State table</strong><a class="headerlink" href="#state-table" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>Present State</strong> – the values of the state variables for each allowed state.</li>
-<li><strong>Input</strong> – the input combinations allowed.</li>
-<li><strong>Next-state</strong> – the value of the state at time <span class="arithmatex">\((t+1)\)</span> based on the present state and the input.</li>
-<li><strong>Output</strong> – the value of the output as a function of the present state and (sometimes) the input.</li>
-</ul>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182022623.png" width = 40%/> </div>    </p>
-<p>代入刚刚写出的式子即可 <br />
-也可以使用另一种画法：(二维状态表，按照格雷码的顺序排列)  </p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202301010950173.png" width = 40%/> </div>   </p>
-</details>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>在画状态表时，无法达到的状态也要画出来。因为可能程序受到某种扰动或者异常，可能会跳到原先无法到达的状态。</p>
-</div>
-<h4 id="state-diagrams"><strong>State Diagrams</strong><a class="headerlink" href="#state-diagrams" title="Permanent link">&para;</a></h4>
-<p>The sequential circuit function can be represented in graphical form as a state diagram with the following components:</p>
-<ul>
-<li>A <em>circle</em> with the state name in it for each state</li>
-<li>A <em>directed arc</em> from the Present State to the Next State for each state transition</li>
-<li>A <em>label</em> on each directed arc with the Input values which causes the state transition, and A label: <br />
-    输出和输入是否有关，无关标在圈里面，有关标在外面<ul>
-<li>On each circle with the output value produced, or</li>
-<li>On each directed arc with the output value produced.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Moore</strong> type output depends only on state(输出画在圈里面)  <br />
-<strong>Mealy</strong> type output depends on state and input(输出画在有向弧上)</p>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182034769.png" width = 40%/> </div> </p>
-<p>（斜杠左边表示外部输入，右边表示输出）  </p>
-</details>
-<p>Sequential Circuits or Sequential Machines are also called <strong>Finite State Machines (FSMs)</strong>.   </p>
-<ul>
-<li>
-<p><strong>Equivalent State Definitions</strong><br />
-两个状态，无论输入是什么，都会使这两个状态输出相同，次态也相同，那么这两个状态是等效状态。</p>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182045869.png" width = 35%/> </div> </p>
-<p>在这个图里我们可以发现 S2, S3 是等效状态。<br />
-合并 S2, S3 后：
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211182042842.png" width = 30%/> </div>   </p>
-<p>这个时候我们发现 S1 和 S2 又是等效状态，再次合并，最后得到：
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211182044392.png" width = 40%/> </div>   </p>
-</details>
-</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">为什么要合并等效状态</p>
-<p>减少表示状态所需要的二进制位</p>
-</div>
-<details class="example">
-<summary>Moore and Mealy Example Diagrams</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211182049556.png" width = 40%/> </div> </p>
-</details>
-<h4 id="flip-flop-timing-parameters">Flip-Flop Timing Parameters<a class="headerlink" href="#flip-flop-timing-parameters" title="Permanent link">&para;</a></h4>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211231009951.png" width = 50%/> </div>
-
-<ul>
-<li><span class="arithmatex">\(t_s\)</span> - setup time. 在下降之前要先准备好。</li>
-<li><span class="arithmatex">\(t_h\)</span> - hold time  </li>
-<li><span class="arithmatex">\(t_w\)</span> - clock pulse width  </li>
-<li><span class="arithmatex">\(t_{px}\)</span> - propagation delay. Measured from clock edge that triggers the output change to the output change.  </li>
-</ul>
-<details class="note">
-<summary>主从触发器和边缘触发器的 <span class="arithmatex">\(t_s\)</span></summary>
-<p>根据定义, <span class="arithmatex">\(t_s\)</span> 指在采样前触发器需要的准备时间。对于主从触发器，在信号处于上升沿的时候 S 部分的输入是不能改变的，否则可能有一次性采样问题，因此在信号处于上升沿都是触发器的准备时间。这也是为什么现在我们普遍使用边缘触发器的原因。 <br />
-对于 D 触发器而言，不要卡在时钟边沿改变 D 的输入，而是在时钟改变之前就进行，这样 D 触发器才能有足够的准备时间。 </p>
-</details>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211231025540.png" width = 50%/> </div>
-
-<ul>
-<li><span class="arithmatex">\(t_p\)</span> - clock period   </li>
-<li><span class="arithmatex">\(t_{pd,COMB}\)</span> - total delay of combinational logic along the path from flip-flop output to flip-flop input  </li>
-<li><span class="arithmatex">\(t_{slack}\)</span> - extra time in the clock period in addition to the sum of the delays and setup time on a path. 松弛时间（休息）必须大于等于 0. </li>
-</ul>
-<p><strong>Time equation</strong>: <span class="arithmatex">\(t_p \geq \max (t_{pd,FF} + t_{pd,COMB} + t_s)\)</span> for all paths from flip-flop output to flip-flop input.  </p>
-<details class="example">
-<summary>Example</summary>
-<p>Compare the allowable combinational delay for a specific circuit: Using edge-triggered flip-flops; Using master-slave flip-flops.   </p>
-<ul>
-<li>Parameters: clock frequency = 250 Mhz; <span class="arithmatex">\(t_{pd,FF}(max)=1.0ns\)</span>; <span class="arithmatex">\(t_s(max)=0.3ns\)</span> for edge-triggered flip-flops; <span class="arithmatex">\(t_s = t_{wH} = 2.0 ns\)</span> for master-slave flip-flops  </li>
-<li>Calculation: <span class="arithmatex">\(t_p = \dfrac{1}{clock\ frequency} = 4.0 ns\)</span><ul>
-<li>Edge-triggered: <span class="arithmatex">\(4.0 \geq 1.0 + t_{pd,COMB} + 0.3, t_{pd,COMB} \leq 2.7 ns\)</span></li>
-<li>Master-slave: <span class="arithmatex">\(4.0 \geq 1.0 + t_{pd,COMB} + 2.0, t_{pd,COMB} \leq 1.0 ns\)</span></li>
-</ul>
-</li>
-</ul>
-</details>
-<h2 id="sequential-circuit-design">Sequential Circuit Design<a class="headerlink" href="#sequential-circuit-design" title="Permanent link">&para;</a></h2>
-<p>The Design procedure  </p>
-<ul>
-<li>Specification 需求和功能的描述，一般以文字形式  </li>
-<li>Formulation - Obtain a state diagram or state table</li>
-<li>State Assignment - Assign binary codes to the states</li>
-<li>Flip-Flop Input Equation Determination - Select flip-flop types and derive flip-flop equations from next state entries in the table</li>
-<li>Output Equation Determination - Derive output equations from output entries in the table</li>
-<li>Optimization - Optimize the equations</li>
-<li>Technology Mapping - Find circuit from equations and map to flip-flops and gate technology</li>
-<li>Verification - Verify correctness of final design</li>
-</ul>
-<h3 id="formulation">Formulation<a class="headerlink" href="#formulation" title="Permanent link">&para;</a></h3>
-<p>A state is an abstraction of the history of the past applied inputs to the circuit (including  power-up reset or system reset).   </p>
-<p>将文本化的需求变为用状态机描述（整个电路经过哪些状态？每个状态之间由哪个输入进行驱动？输出是什么？）</p>
-<p>这里我们以 Sequence Recognizers 为例，介绍 Formulation 的过程。</p>
-<details class="info">
-<summary>Sequence Recognizers</summary>
-<p>A <strong>sequence recognizer</strong> is a sequential circuit that produces a distinct output value whenever a prescribed pattern of input symbols occur in sequence, i.e, recognizes an input sequence occurence. <br />
-To develop a sequence recognizer state diagram:</p>
-<ul>
-<li>Begin in an initial state in which NONE of the initial portion of the sequence has occurred (typically “reset” state).</li>
-<li>Add a state that recognizes that the first symbol has occurred.</li>
-<li>Add states that recognize each successive symbol occurring.</li>
-<li>The final state represents the input sequence (possibly  less the final input value) occurence.</li>
-<li>Add state transition arcs which specify what happens when a symbol not in the proper sequence has occurred.</li>
-<li>Add other arcs on non-sequence inputs which transition to states that represent the input subsequence that has occurred.  </li>
-</ul>
-</details>
-<details class="example">
-<summary>Example</summary>
-<p>这里我们以识别 1101 为例.(Mealy 模型)  <br />
-after 110 and a 1, we have:<br />
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211231104003.png" width = 50%/> </div> </p>
-<p>注意在 D 状态之后，应该与 B 状态相连(因为 1101101)中的第三个 1 既可以是前一个序列的末尾 1, 也可以是下一个序列的起始 1. <br />
-我们补足状态之间的转移:<br />
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211231105830.png" width = 50%/> </div>   </p>
-<p>通过状态图得到状态表: 
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211231109527.png" width = 50%/> </div>   </p>
-<p>如果将刚刚的状态图 转为Moore 模型，我们需要再加一个状态 E, 当到达 E 状态时表明我们得到了序列 1101. <br />
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211231112070.png" width = 50%/> </div>  </p>
-<p>观察可以发现, B 和 E 对同样的输入，次态都是一样的。但是并不是等效状态，因为二者的输出不同。 </p>
-</details>
-<p>The <em>Moore</em> model for a sequence recognizer usually has <strong>more states</strong> than the <em>Mealy</em> model.</p>
-<h4 id="simplification-for-state-tables">Simplification for State Tables<a class="headerlink" href="#simplification-for-state-tables" title="Permanent link">&para;</a></h4>
-<p>所谓状态简化，就是要获得一个最小化的状态表。这个表不仅能正确地反映设计的全部要求，而且状态的数目最少。</p>
-<p><strong>“状态等效”</strong> 的三种情况：（在所有输入情况下）</p>
-<ul>
-<li>首先，输出相同</li>
-<li>
-<p>同时，次态相同/次态交错/次态循环</p>
 <div class="admonition example">
-<p class="admonition-title">等效</p>
-<ul>
-<li>
-<p>次态相同<br />
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211231125022.png" width = 30%/> </div> </p>
-</li>
-<li>
-<p>次态相同或交错
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211231125043.png" width = 30%/> </div>  </p>
-</li>
-<li>
-<p>次态交错或等效<br />
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211251510285.png" width = 30%/> </div>  </p>
-</li>
-<li>
-<p>次态交错或相同或循环
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211231126009.png" width = 30%/> </div>  </p>
-</li>
-</ul>
+<p class="admonition-title">Log File with Checkpoint : Example</p>
+<p><div align=center><img src="http://cdn.hobbitqia.cc/202306121846448.png" width = 60%/> </div></p>
+<p>重演历史从最近的 checkpoint 重演. {T2 T4} 作为 undo list 的初始化值。  </p>
 </div>
-</li>
-</ul>
-<p>状态简化方法：  </p>
+<p>checkpoint 之间的间隔应该如何确定？<br />
+根据日志量。</p>
+<details class="example">
+<summary>Example of Recovery</summary>
+<p><div align=center><img src="http://cdn.hobbitqia.cc/202306121858750.png" width = 60%/> </div></p>
+</details>
+<h3 id="log-record-buffering">Log Record Buffering<a class="headerlink" href="#log-record-buffering" title="Permanent link">&para;</a></h3>
+<div align=center><img src="http://cdn.hobbitqia.cc/202306121859013.png" width = 60%/> </div>
+
+<p>我们在把数据 buffer 中的块写到数据库时，要先把块对应的日志先写到日志文件（直接把日志全部刷写一遍）。<br />
+事务提交之后有一个对日志的强制刷写。</p>
+<p><strong>Group commit</strong>: several log records can be output using a single output operation, reducing the I/O cost. 
+commit 可能在日志里等待一段时间, 等到 buffer 里有足够多的日志记录再写出去。 </p>
 <ul>
-<li>
-<p><strong>观察法</strong>  </p>
+<li>The recovery algorithm supports the <strong>no-force policy(非强制)</strong>: <strong>i.e.</strong>, updated blocks need not be written to disk when transaction commits.<br />
+好的恢复算法：我事务 commit 了但不强制日志刷写出去。</li>
+<li>The recovery algorithm supports the <strong>steal policy(窃取策略)</strong>:<strong>i.e.</strong>, blocks containing updates of uncommitted transactions can be written to disk, even before the transaction commits. 
+事务提交之前脏数据能不能被写到磁盘里去？（同样地需要先把日志写出去）</li>
+</ul>
+<h3 id="fuzzy-checkpointing">Fuzzy Checkpointing<a class="headerlink" href="#fuzzy-checkpointing" title="Permanent link">&para;</a></h3>
+<p>Fuzzy 模糊</p>
+<p>做 checkpoint 的时候我们如果要求其他活跃事务都停下来，一次性把脏数据都刷写出去，吞吐率会忽高忽低，系统的可用性就比较差。<br />
+记录脏数据，在后面不 check 的时候慢慢写。</p>
+<ul>
+<li>Temporarily stop all updates by transactions</li>
+<li>Write a <span class="arithmatex">\(&lt;checkpoint\ L&gt;\)</span> log record and force log to stable storage</li>
+<li>Note list M of modified buffer blocks</li>
+<li>Now permit transactions to proceed with their actions</li>
+<li>Output to disk all modified buffer blocks in list M</li>
+</ul>
+<div align=center><img src="http://cdn.hobbitqia.cc/202306121916858.png" width = 60%/> </div>
+
+<p>在把所有脏数据都写回磁盘后，我们会认定这个 checkpoint. 有一个指针指向最近一次成功的 checkpoint.<br />
+这样 checkpoint 的时候就只需要记录一下，不用一下子写脏数据了。</p>
+<h3 id="failure-with-loss-of-nonvolatile-storage">Failure with Loss of Nonvolatile Storage<a class="headerlink" href="#failure-with-loss-of-nonvolatile-storage" title="Permanent link">&para;</a></h3>
+<div align=center><img src="http://cdn.hobbitqia.cc/202306121918751.png" width = 60%/> </div>
+
+<p>Can be extended to allow transactions to be active during dump; known as fuzzy dump or online dump.<br />
+类似于 checkpoint, 不是完全备份，而是记录一下，随后慢慢备份。</p>
+<h2 id="recovery-with-early-lock-release-and-logical-undo-operations">Recovery with Early Lock Release and Logical Undo Operations<a class="headerlink" href="#recovery-with-early-lock-release-and-logical-undo-operations" title="Permanent link">&para;</a></h2>
+<h3 id="logical-undo-logging">Logical Undo Logging<a class="headerlink" href="#logical-undo-logging" title="Permanent link">&para;</a></h3>
+<p>如果早放锁，后续恢复为 old value 可能没有意义。比如存款 100, 转入 100. 那么我们恢复为 100(物理撤销) 就没有意义。这个时候应该采用逻辑撤销，即如果 <code>a+=100</code>, 恢复时就应该 <code>a-=100</code>. </p>
+<div align=center><img src="http://cdn.hobbitqia.cc/202306121925529.png" width = 60%/> </div>
+
+<p>如 B+ 树的插入和删除操作。<br />
+我们需要对逻辑操作记日志。</p>
 <div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211231128810.png" width = 45%/> </div>  </p>
-<ul>
-<li><span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(B\)</span>，<span class="arithmatex">\(C\)</span>和<span class="arithmatex">\(D\)</span>的输出完全相等；</li>
-<li><span class="arithmatex">\(C\)</span>和<span class="arithmatex">\(D\)</span>在输入的各种取值组合下，次态相同，因此<span class="arithmatex">\(C\)</span>和<span class="arithmatex">\(D\)</span>等效；</li>
-<li><span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(B\)</span>在<span class="arithmatex">\(X=1\)</span>时的次态不满足四条件之一，因此<span class="arithmatex">\(A\)</span>和<span class="arithmatex">\(B\)</span>不等效;</li>
-<li>最大等效类为 <span class="arithmatex">\(\{A\}，\{B\}，\{C,D\}\)</span>,分别用 <span class="arithmatex">\(A', B', C'\)</span> 表示； </li>
-</ul>
+<p class="admonition-title">Transaction Rollback with Logical Undo</p>
+<p><div align=center><img src="http://cdn.hobbitqia.cc/202306121928688.png" width = 60%/> </div></p>
+<p>需要把每个操作的日志项记录下来（开始和结束）. C 表示自加操作。这里在 end 时会记录 logical undo 的操作(减法撤销对应加法)<br />
+注意我们是在 end 的时候记录逻辑撤销的方法，如果这个操作还没有结束，那么我们只能物理撤销。<br />
+这里我们早放锁了，没有遵循严格两阶段放锁协议。在 T0 还没有提交的时候 T1 就对数据进行了修改.<br />
+恢复中做的是物理撤销(old+new), begin/end 这些日志就不需要记录了。</p>
 </div>
-</li>
-<li>
-<p><strong>隐含表法化简</strong>  </p>
+<div class="admonition example">
+<p class="admonition-title">Failure Recovery with Logical Undo</p>
+<p><div align=center><img src="http://cdn.hobbitqia.cc/202306121935921.png" width = 60%/> </div></p>
+<p>这里还没有 T2 end, 因此物理撤销。</p>
+</div>
+<h2 id="aries-recovery-algorithm">ARIES Recovery Algorithm<a class="headerlink" href="#aries-recovery-algorithm" title="Permanent link">&para;</a></h2>
+<p><u>ARIES is a state of the art recovery method.</u>  </p>
+<p>每个日志都有一个日志编号 <strong>log sequence number (LSN)</strong><br />
+每个数据块里都会记一个 LSN, 表示这个块反应了最近哪个日志的操作。</p>
+<h3 id="aries-data-structures">ARIES Data Structures<a class="headerlink" href="#aries-data-structures" title="Permanent link">&para;</a></h3>
 <ul>
-<li>作隐含表</li>
-<li>顺序比较，寻等效状态对<ul>
-<li>状态对等效，打“√”；</li>
-<li>状态对不等效，打“×”；</li>
-<li>状态对是否等效需进一步检查，则标记次态对。</li>
+<li><strong>Log sequence number (LSN)</strong> identifies each log record  <ul>
+<li>Must be sequentially increasing</li>
 </ul>
 </li>
-<li>进行关连比较，确定等效状态对</li>
-<li>确定最大等效类，作最小化状态表</li>
+<li><strong>Page LSN</strong><br />
+每个页(块的 LSN)</li>
+<li><strong>Log records of several different types</strong></li>
+<li><strong>Dirty page table</strong><br />
+脏页表要记录在日志中。</li>
+</ul>
+<p>Log Record</p>
+<div align=center><img src="http://cdn.hobbitqia.cc/202306121951678.png" width = 50%/> </div>
+
+<p>日志记录通过 UndoNextLSN 串起来，提高恢复效率。</p>
+<p>DirtyPage Table  </p>
+<ul>
+<li>PageLSN of the page</li>
+<li>RecLSN is an LSN such that log records before this LSN have already been applied to the page version on disk
+每一页都有 PageLSN 和 RecLSN, Rec 反应的是最近的被反映到数据库的日志。</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">ARIES Data Structures</p>
+<p><div align=center><img src="http://cdn.hobbitqia.cc/202306121955805.png" width = 60%/> </div></p>
+<p>这里 4894.1 表示这个块里的第一个数据。
+RecLSN 表示 7564 开始数据就没有反映到数据库中去了。</p>
+</div>
+<ul>
+<li>Checkpoint log record<ul>
+<li>Contains: <ul>
+<li>DirtyPageTable and list of active transactions  </li>
+<li>For each active transaction, LastLSN, the LSN of the last log record written by the transaction<br />
+要记最近的事务项（从哪里开始恢复）</li>
+</ul>
+</li>
+<li>Fixed position on disk notes LSN of last completed checkpoint log record</li>
+</ul>
+</li>
+<li>Dirty pages are not written out at checkpoint time<br />
+Instead, they are flushed out continuously, in the background<br />
+脏页不会在 check 的时候写出去。</li>
+<li>Checkpoint is thus very low overhead
+can be done frequently</li>
+</ul>
+<h3 id="aries-recovery-algorithm_1">ARIES Recovery Algorithm<a class="headerlink" href="#aries-recovery-algorithm_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Analysis pass  <ul>
+<li>Which transactions to undo (undo-list)  </li>
+<li>Which pages were dirty (disk version not up to date) at time of crash<br />
+得到 dirty page table. </li>
+<li>RedoLSN: LSN from which redo should start<br />
+真正的 redo 要从哪里开始(RecLSN 的最小值就是 redo 的起点)</li>
+</ul>
+</li>
+<li>Redo pass<br />
+从 RedoLSN 开始重演<br />
+<strong>RecLSN</strong> and <strong>PageLSNs</strong> are used to avoid redoing actions already reflected on page.<br />
+用来优化，有些日志不用 redo(没有意义)</li>
+<li>Undo pass<br />
+把 undolist 进行撤销操作。</li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211231131399.png" width = 45%/> </div>   </p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211231134989.png" width = 30%/> </div>    </p>
-<p>由于<span class="arithmatex">\(CD\)</span>、<span class="arithmatex">\(DE\)</span>不等效，所以<span class="arithmatex">\(DG\)</span>不等效，画斜线标志。最后我们有 <span class="arithmatex">\(AB\rightarrow CF\)</span> <span class="arithmatex">\(AE→BE→CF\)</span>. 处于循环链中的每一个状态对都是等效状态对。<br />
-最后我们有  </p>
-<ul>
-<li>四个等效对 <span class="arithmatex">\((A,B), (A,E), (B,E), (C,F)\)</span></li>
-<li>最大等效类 <span class="arithmatex">\((A,B,E)\)</span></li>
-<li>四个状态 <span class="arithmatex">\((A,B,E), (C,F), (D), (G)\)</span></li>
-<li>令以上四个状态依次为 <span class="arithmatex">\(a, b, c, d\)</span></li>
-</ul>
+<p><div align=center><img src="http://cdn.hobbitqia.cc/202306122017889.png" width = 60%/> </div>
+<div align=center><img src="http://cdn.hobbitqia.cc/202306122025645.png" width = 60%/> </div></p>
+<p>crash 之后，得到上页的 Dirty Page Table 和 Active TXN Table 以及磁盘里的日志。</p>
 </div>
-</li>
-</ul>
-<h3 id="state-assignment">State Assignment<a class="headerlink" href="#state-assignment" title="Permanent link">&para;</a></h3>
-<p>Each of the <span class="arithmatex">\(m\)</span> states must be assigned a unique code<br />
-Minimum number of bits required is <span class="arithmatex">\(n\)</span> such that <span class="arithmatex">\(n\geq \lceil \log_2 m\rceil\)</span>  </p>
-<p>There are <span class="arithmatex">\(2^n - m\)</span> unused states. (不能省略，可能会因为异常陷入 unused states)</p>
-<details class="example">
-<summary>Different State Assignment</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211251517379.png" width = 30%/> </div>   </p>
-<ul>
-<li>
-<p>Counting Order Assignment: <span class="arithmatex">\(A = 0 0, B = 0 1, C = 1 0, D = 1 1\)</span><br />
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211251518861.png" width = 40%/> </div>   </p>
-</li>
-<li>
-<p>Gray Code Assignment: <span class="arithmatex">\(A = 0 0, B = 0 1, C = 1 1, D = 1 0\)</span><br />
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211251518916.png" width = 40%/> </div>   </p>
-</li>
-</ul>
-</details>
-<p>状态分配的方案不一样，所得到的输出函数和激励函数的表达式也不同，由此而设计出来的电路复杂度也不同。状态分配的任务是：</p>
-<ul>
-<li>决定编码的长度</li>
-<li>寻找一种最佳（很难找到）的或接近最佳的状态分配方案</li>
-</ul>
-<p>分配的基本原则: </p>
-<ul>
-<li>在相同输入条件下具有相同次态的现态，应尽可能分配相邻的二进制代码</li>
-<li>在相邻输入条件，同一现态的次态应尽可能分配相邻的二进制代码</li>
-<li>输出完全相同的现态应尽可能分配相邻的二进制代码</li>
-<li>最小化状态表中出现次数最多的状态或初始状态应分配逻辑 0  </li>
-<li>一般情况下，第一条原则较为重要，需优先考虑，其次要考虑由前三条原则得到的应分配相邻代码的状态对出现的次数，次数多的状态对应优先分配相邻的二进制代码。</li>
-</ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211251523674.png" width = 20%/> </div>   </p>
-<ul>
-<li>在相同输入条件下具有相同次态的现态，应尽可能分配相邻的二进制代码：A和B，A和C应相邻</li>
-<li>在相邻输入条件，同一现态的次态应尽可能分配相邻的二进制代码：C和D，C和A，B和D，A和B应相邻；</li>
-<li>输出完全相同的现态应尽可能分配相邻的二进制代码： A，B，C 三者应相邻，即A和B，A和C，B和C应相邻；</li>
-<li>最小化状态表中出现次数最多的状态或初始状态应分配逻辑0：A分配为逻辑0</li>
-</ul>
-<p>最后得到: 
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211251525780.png" width = 15%/> </div>   </p>
+<p><div align=center><img src="http://cdn.hobbitqia.cc/202306122028882.png" width = 60%/> </div></p>
+<p>要把 2390 加到表里去。</p>
 </div>
-<h3 id="technology-mapping">Technology Mapping<a class="headerlink" href="#technology-mapping" title="Permanent link">&para;</a></h3>
-<p>Library: D flip-flops with Reset(not inverted), NAND gates with up to 4 inputs and inverters. </p>
-<p>方法同之前，先将与门或门等门转化为 NAND, 随后将 inverter 推出散出点。</p>
-<h3 id="other-flip-flop-types">Other Flip-Flop Types<a class="headerlink" href="#other-flip-flop-types" title="Permanent link">&para;</a></h3>
-<h4 id="j-k-flip-flop">J-K Flip-flop<a class="headerlink" href="#j-k-flip-flop" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Behavior<ul>
-<li>类似 SR 触发器, <span class="arithmatex">\(J\)</span> 相当于 <span class="arithmatex">\(S\)</span>, <span class="arithmatex">\(K\)</span> 相当于 <span class="arithmatex">\(R\)</span>.  </li>
-<li>但 <span class="arithmatex">\(J=K=1\)</span> 时，触发器相当于是一个求反的功能</li>
-<li>也有一次性采样的问题</li>
-</ul>
-</li>
-<li>
-<p>Implementation</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301022072.png" width = 40%/> </div>   </p>
-</li>
-<li>
-<p>Symbol</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301023020.png" width = 20%/> （三角表明是上升沿触发，若为圆圈则是下降沿触发）</div>   </p>
-</li>
-</ul>
-<h4 id="t-flip-flop">T Flip-flop<a class="headerlink" href="#t-flip-flop" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Behavior<ul>
-<li>类似 JK 触发器, 相当于 <span class="arithmatex">\(J=K=T\)</span>. 当 <span class="arithmatex">\(T = 0\)</span>, 状态不变; 当 <span class="arithmatex">\(T = 1\)</span>, 状态求反</li>
-<li>存在一次性采样的问题</li>
-<li>无法预置状态，因此需要一个 Reset 信号</li>
-</ul>
-</li>
-<li>
-<p>Implementation</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301028012.png" width = 40%/> </div>   </p>
-</li>
-<li>
-<p>Symbol</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211301029728.png" width = 20%/> </div>   </p>
-</li>
-</ul>
-<h4 id="basic-flip-flop-descriptors">Basic Flip-Flop Descriptors<a class="headerlink" href="#basic-flip-flop-descriptors" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Used in analysis<br />
-    已知触发器的输入和现态，预测触发器的输出和次态  <ul>
-<li><strong>Characteristic table</strong> - defines the next state of the flip-flop in terms of flip-flop inputs and current state </li>
-<li><strong>Characteristic equation</strong> - defines the next state of the flip-flop as a Boolean function of the flip-flop inputs and the current state</li>
-</ul>
-</li>
-<li>Used in design<br />
-    已知现态和次态，预测我们要提供怎样的输入  <ul>
-<li><strong>Excitation table(激励表)</strong> - defines the flip-flop input variable values as function of the current state and next state  </li>
-</ul>
-</li>
-</ul>
-<details>
-<summary><b>D Flip-Flop Descriptors</b></summary>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211301034218.png" width = 60%/> </div>   
-</details>
-
-<details>
-<summary><b>T Flip-Flop Descriptors</b></summary>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211301035957.png" width = 60%/> </div>   
-</details>
-
-<details>
-<summary><b>S-R Flip-Flop Descriptors</b></summary>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211301035525.png" width = 60%/> (注意这里有个条件 S R 不能同时为 1.) </div>   
-</details>
-
-<details>
-<summary><b>J-K Flip-Flop Descriptors</b></summary>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211301416785.png" width = 60%/> </div>   
-</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年2月28日 21:23:12</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年6月15日 11:30:23</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月22日 14:15:00</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年6月15日 11:30:23</span>
       
     
   </small>
@@ -3549,7 +2982,7 @@ Minimum number of bits required is <span class="arithmatex">\(n\)</span> such th
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../logic03/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 组合逻辑电路设计" rel="prev">
+        <a href="../db14/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 并发控制" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3558,20 +2991,20 @@ Minimum number of bits required is <span class="arithmatex">\(n\)</span> such th
               <span class="md-footer__direction">
                 上一页
               </span>
-              组合逻辑电路设计
+              并发控制
             </div>
           </div>
         </a>
       
       
         
-        <a href="../logic06/" class="md-footer__link md-footer__link--next" aria-label="下一页: 寄存器与寄存器传输" rel="next">
+        <a href="../../CO/co1/" class="md-footer__link md-footer__link--next" aria-label="下一页: 计算机概要与技术" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              寄存器与寄存器传输
+              计算机概要与技术
             </div>
           </div>
           <div class="md-footer__button md-icon">
