@@ -186,6 +186,7 @@ nav:
       - 查询优化: DB/db12.md
       - 事务: DB/db13.md
       - 并发控制: DB/db14.md 
+      - 故障恢复: DB/db15.md
     - 计算机组成:
       - 计算机概要与技术: CO/co1.md
       - 计算机的算术运算: CO/co3.md
