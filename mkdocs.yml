@@ -132,6 +132,7 @@ nav:
       - 图像特征检测和提取: dip/dip11.md
       - 深度学习: dip/dip12.md
     - 面向对象程序设计: 
+      - OOP/index.md
       - Introduction: OOP/oop1.md
       - Class: OOP/oop2.md
       - Container: OOP/oop3.md
@@ -172,6 +173,7 @@ nav:
       - 数字硬件设计: Logic/logic05.md
       - 内存基础: Logic/logic07.md
     - 数据库系统:
+      - DB/index.md
       - 数据库介绍: DB/db1.md
       - 关系模型: DB/db2.md
       - SQL 语言介绍: DB/db3.md
@@ -188,6 +190,7 @@ nav:
       - 并发控制: DB/db14.md 
       - 故障恢复: DB/db15.md
     - 计算机组成:
+      - CO/index.md
       - 计算机概要与技术: CO/co1.md
       - 计算机的算术运算: CO/co3.md
       - 指令：计算机的语言: CO/co2.md
