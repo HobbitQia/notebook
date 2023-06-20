@@ -80,6 +80,7 @@ extra_css:
   
 
 extra_javascript:
+  - 'js/baidu-tongji.js'
   - https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js
   - js/katex.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -87,7 +88,6 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
-    - 'js/baidu-tongji.js'
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/HobbitQia/
