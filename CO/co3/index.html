@@ -2756,13 +2756,15 @@
 </li>
 </ul>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202303102259194.png" width = 60%/> </div>
-<p>实际上这里结果是 129 位，防止 carry 丢失</p>
-<div class="highlight"><pre><span></span><code>??? Example
+
+<div class="highlight"><pre><span></span><code>实际上这里结果是 129 位，防止 carry 丢失
+
+??? Example
     &lt;div align=center&gt; &lt;img src=&quot;http://cdn.hobbitqia.cc/202303102303764.png&quot; width = 60%/&gt; &lt;/div&gt;
 
-    这里最开始余数就是整个被除数。开始减之前，要把余数左移一位，用来放商。  
+    这里最开始余数就是整个被除数。   
     类似乘法，这里的除数只和被除数的高位相减。如果减出来是负数，需要加回去。每次减完之后先左移，然后最右边的一位放商。   
-    最开始需要先左移一位，来放商。
+    4.1 时其实我们已经结束了除法操作，此时的高位就是我们的余数，但是这最后一次的结果还没有放回到 Reminder 中，因此我们需要再往左移一位为商留出空间，放入后，再把高位余数往右移动以抵消影响。（个人认为可以直接对低位左移一位即可）
 </code></pre></div>
 <p>带符号的除法：要求余数和被除数符号相同。<br />
 除零会产生溢出，由软件检测。</p>
@@ -2849,14 +2851,11 @@
 </ul>
 <details class="example">
 <summary>Example</summary>
-<div class="highlight"><pre><span></span><code>&lt;div align=center&gt; &lt;img src=&quot;http://cdn.hobbitqia.cc/202303150835508.png&quot; width = 70%/&gt; &lt;/div&gt;
-</code></pre></div>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303150835508.png" width = 70%/> </div></p>
 </details>
 <p><strong>FP Adder Hardware</strong>  </p>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202303102359833.png" width = 60%/> </div>
 
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
 <ul>
 <li>step 1 在选择指数大的，并进行对齐。同时尾数可能还要加上前导 1. </li>
 <li>step 3 是对结果进行标准化。</li>
@@ -2876,13 +2875,11 @@
 <p>注意 Exponet 中是有 Bias 的，两个数的 exp 部分相加后还要再减去 Bias. </p>
 <details class="example">
 <summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303150843378.png" width = 60%/> </div>    </p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303150843378.png" width = 60%/> </div></p>
 </details>
 <p><strong>Data Flow</strong></p>
 <div align=center> <img src="http://cdn.hobbitqia.cc/202303150844961.png" width = 60%/> </div>
 
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
 <ul>
 <li>右边往回的箭头: Rounding 后可能会进位。</li>
 <li>Incr 用于标准化结果，与右侧 Shift Right 配合。</li>
