@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/MLT/report/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/CO/co6/">
       
       <link rel="icon" href="../../log.ico">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>读书报告 - HobbitQia的笔记本</title>
+        <title>存储和 IO - HobbitQia的笔记本</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#distance-metric-learning-for-large-marginnearest-neighbor-classification" class="md-skip">
+        <a href="#storage-networks-and-other-peripherals" class="md-skip">
           跳转至
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              读书报告
+              存储和 IO
             
           </span>
         </div>
@@ -245,6 +245,8 @@
         
   
   
+    
+  
 
 
   
@@ -256,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../ICS/" class="md-tabs__link">
+      <a href="../../ICS/" class="md-tabs__link md-tabs__link--active">
         System
       </a>
     </li>
@@ -268,8 +270,6 @@
         
   
   
-    
-  
 
 
   
@@ -281,7 +281,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
         Mathematics
       </a>
     </li>
@@ -1085,12 +1085,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -1875,12 +1877,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" checked>
       
       
       
@@ -1906,7 +1910,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../CO/">计算机组成与设计</a>
+          <a href="../">计算机组成与设计</a>
           
             <label for="__nav_3_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1929,7 +1933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co1/" class="md-nav__link">
+      <a href="../co1/" class="md-nav__link">
         计算机概要与技术
       </a>
     </li>
@@ -1943,7 +1947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co3/" class="md-nav__link">
+      <a href="../co3/" class="md-nav__link">
         计算机的算术运算
       </a>
     </li>
@@ -1957,7 +1961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co2/" class="md-nav__link">
+      <a href="../co2/" class="md-nav__link">
         指令：计算机的语言
       </a>
     </li>
@@ -1971,7 +1975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co4/" class="md-nav__link">
+      <a href="../co4/" class="md-nav__link">
         处理器
       </a>
     </li>
@@ -1985,7 +1989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co5/" class="md-nav__link">
+      <a href="../co5/" class="md-nav__link">
         内存层次架构
       </a>
     </li>
@@ -1997,11 +2001,269 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../CO/co6/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          存储和 IO
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         存储和 IO
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amdahls-law" class="md-nav__link">
+    Amdahl’s law
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-storage-and-dependability" class="md-nav__link">
+    Disk Storage and Dependability
+  </a>
+  
+    <nav class="md-nav" aria-label="Disk Storage and Dependability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-organization-of-hard-disk" class="md-nav__link">
+    The organization of hard disk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-access-data-of-disk" class="md-nav__link">
+    To access data of disk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flash-storage" class="md-nav__link">
+    Flash Storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-performance-issues" class="md-nav__link">
+    Disk Performance Issues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependability" class="md-nav__link">
+    Dependability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redundant-arrays-of-inexpensive-disks" class="md-nav__link">
+    Redundant Arrays of (Inexpensive) Disks
+  </a>
+  
+    <nav class="md-nav" aria-label="Redundant Arrays of (Inexpensive) Disks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raid-0-no-redundancy" class="md-nav__link">
+    RAID 0: No Redundancy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raid-1-disk-mirroringshadowing" class="md-nav__link">
+    RAID 1: Disk Mirroring/Shadowing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raid-3-bit-interleaved-parity-disk" class="md-nav__link">
+    RAID 3: Bit-Interleaved Parity Disk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raid-4-block-interleaved-parity" class="md-nav__link">
+    RAID 4: Block-Interleaved Parity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raid-5-high-io-rate-interleaved-parity" class="md-nav__link">
+    RAID 5: High I/O Rate Interleaved Parity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raid-6-pq-redundancy" class="md-nav__link">
+    RAID 6: P+Q Redundancy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buses-and-other-connections-between-processors-memory-and-io-devices" class="md-nav__link">
+    Buses and Other Connections between Processors Memory, and I/O Devices
+  </a>
+  
+    <nav class="md-nav" aria-label="Buses and Other Connections between Processors Memory, and I/O Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bus-basics" class="md-nav__link">
+    Bus Basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronous-vs-asynchronous" class="md-nav__link">
+    Synchronous vs. Asynchronous
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bus-arbitration" class="md-nav__link">
+    Bus Arbitration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-analysis-of-synchronous-versus-asynchronous-buses" class="md-nav__link">
+    Performance analysis of Synchronous versus Asynchronous buses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfacing-io-devices-to-the-memory-processor-and-operating-system" class="md-nav__link">
+    Interfacing I/O Devices to the Memory, Processor, and Operating System
+  </a>
+  
+    <nav class="md-nav" aria-label="Interfacing I/O Devices to the Memory, Processor, and Operating System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#communication-with-the-processor" class="md-nav__link">
+    Communication with the Processor
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication with the Processor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interrupt-driven-io-mode" class="md-nav__link">
+    Interrupt-Driven I/O mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dma-transfer-mode" class="md-nav__link">
+    DMA transfer mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#io-performance-measures-examples-from-disk-and-file-systems" class="md-nav__link">
+    I/O Performance Measures: Examples from Disk and File Systems
+  </a>
+  
+    <nav class="md-nav" aria-label="I/O Performance Measures: Examples from Disk and File Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#designing-an-io-system" class="md-nav__link">
+    Designing an I/O system
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2026,14 +2288,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -2111,14 +2371,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
       
       
       
@@ -2145,113 +2403,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          读书报告
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../MLT/report/" class="md-nav__link">
         读书报告
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    研究背景
-  </a>
-  
-    <nav class="md-nav" aria-label="研究背景">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    问题介绍
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    相关工作
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    主要思路
-  </a>
-  
-    <nav class="md-nav" aria-label="主要思路">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    凸优化
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    基于能量分类
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    成果和扩展
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    讨论
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2263,7 +2419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mlt2/" class="md-nav__link">
+      <a href="../../MLT/mlt2/" class="md-nav__link">
         感知机
       </a>
     </li>
@@ -2452,23 +2608,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    研究背景
+  <a href="#introduction" class="md-nav__link">
+    Introduction
   </a>
   
-    <nav class="md-nav" aria-label="研究背景">
+    <nav class="md-nav" aria-label="Introduction">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    问题介绍
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    相关工作
+  <a href="#amdahls-law" class="md-nav__link">
+    Amdahl’s law
   </a>
   
 </li>
@@ -2479,23 +2628,140 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    主要思路
+  <a href="#disk-storage-and-dependability" class="md-nav__link">
+    Disk Storage and Dependability
   </a>
   
-    <nav class="md-nav" aria-label="主要思路">
+    <nav class="md-nav" aria-label="Disk Storage and Dependability">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    凸优化
+  <a href="#the-organization-of-hard-disk" class="md-nav__link">
+    The organization of hard disk
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    基于能量分类
+  <a href="#to-access-data-of-disk" class="md-nav__link">
+    To access data of disk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flash-storage" class="md-nav__link">
+    Flash Storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-performance-issues" class="md-nav__link">
+    Disk Performance Issues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependability" class="md-nav__link">
+    Dependability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redundant-arrays-of-inexpensive-disks" class="md-nav__link">
+    Redundant Arrays of (Inexpensive) Disks
+  </a>
+  
+    <nav class="md-nav" aria-label="Redundant Arrays of (Inexpensive) Disks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raid-0-no-redundancy" class="md-nav__link">
+    RAID 0: No Redundancy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raid-1-disk-mirroringshadowing" class="md-nav__link">
+    RAID 1: Disk Mirroring/Shadowing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raid-3-bit-interleaved-parity-disk" class="md-nav__link">
+    RAID 3: Bit-Interleaved Parity Disk
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raid-4-block-interleaved-parity" class="md-nav__link">
+    RAID 4: Block-Interleaved Parity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raid-5-high-io-rate-interleaved-parity" class="md-nav__link">
+    RAID 5: High I/O Rate Interleaved Parity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raid-6-pq-redundancy" class="md-nav__link">
+    RAID 6: P+Q Redundancy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buses-and-other-connections-between-processors-memory-and-io-devices" class="md-nav__link">
+    Buses and Other Connections between Processors Memory, and I/O Devices
+  </a>
+  
+    <nav class="md-nav" aria-label="Buses and Other Connections between Processors Memory, and I/O Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bus-basics" class="md-nav__link">
+    Bus Basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronous-vs-asynchronous" class="md-nav__link">
+    Synchronous vs. Asynchronous
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bus-arbitration" class="md-nav__link">
+    Bus Arbitration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-analysis-of-synchronous-versus-asynchronous-buses" class="md-nav__link">
+    Performance analysis of Synchronous versus Asynchronous buses
   </a>
   
 </li>
@@ -2506,16 +2772,62 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    成果和扩展
+  <a href="#interfacing-io-devices-to-the-memory-processor-and-operating-system" class="md-nav__link">
+    Interfacing I/O Devices to the Memory, Processor, and Operating System
   </a>
+  
+    <nav class="md-nav" aria-label="Interfacing I/O Devices to the Memory, Processor, and Operating System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#communication-with-the-processor" class="md-nav__link">
+    Communication with the Processor
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication with the Processor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interrupt-driven-io-mode" class="md-nav__link">
+    Interrupt-Driven I/O mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dma-transfer-mode" class="md-nav__link">
+    DMA transfer mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    讨论
+  <a href="#io-performance-measures-examples-from-disk-and-file-systems" class="md-nav__link">
+    I/O Performance Measures: Examples from Disk and File Systems
   </a>
+  
+    <nav class="md-nav" aria-label="I/O Performance Measures: Examples from Disk and File Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#designing-an-io-system" class="md-nav__link">
+    Designing an I/O system
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2532,146 +2844,453 @@
               
 
                 
-  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/MLT/report.md" title="编辑此页" class="md-content__button md-icon">
+  <a href="https://github.com/HobbitQia/notebook/edit/master/docs/CO/co6.md" title="编辑此页" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="distance-metric-learning-for-large-marginnearest-neighbor-classification">Distance Metric Learning for Large MarginNearest Neighbor Classification 读书报告<a class="headerlink" href="#distance-metric-learning-for-large-marginnearest-neighbor-classification" title="Permanent link">&para;</a></h1>
-<h2 id="_1">研究背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="_2">问题介绍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>我们在课上已经学过了 <strong><em>kNN</em>(k-Nearest Neighbors, k近邻)</strong> 算法。<em>kNN</em> 算法对于新的输入实例，在训练数据集中找到与该实例最邻近的 k 个实例，并通过多数表决的规则，由这 k 个实例中的多数类决定输入实例的类。<br />
-其中<strong>距离度量</strong>是 k 近邻法的三要素之一，而不同的距离度量也可能产生不同的结果。实际上 <em>kNN</em> 分类的准确性在很大程度上取决于用于计算不同示例之间距离的度量标准。 <br />
-常规情况下，我们但大多数的实现都会使用欧几里得距离计算简单距离。但这却忽略了可以从大型带标签示例训练集中估计出来的任何统计正态分布。于是我们想得到一种度量，能够结合训练集本身的统计特征，这样可以更好地做预测分类。  </p>
-<p>论文的方法是基于 <em>Mahalanobis</em> 距离度量进行距离度量学习，其目标是 <strong>使 k 个最近邻的实例总是属于同一类，而来自不同类别的示例则被分隔开。</strong></p>
-<h3 id="_3">相关工作<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>当 <span class="arithmatex">\(M=L^\top L\)</span> 时我们定义马氏度量为 <span class="arithmatex">\(D_M(x_i,x_j)=(x_i-x_j)^\top M(x_i-x_j)\)</span>. 这相当于通过线性变换 <span class="arithmatex">\(\vec x' =L\vec x\)</span> 后计算欧氏距离。而距离度量学习的目标可以从两方面来看：学习一个线性变换 <span class="arithmatex">\(\vec x' = L\vec x\)</span>; 学习马氏度量 <span class="arithmatex">\(M=L^\top L\)</span>.  </p>
+<h1 id="storage-networks-and-other-peripherals">Storage, Networks and Other Peripherals<a class="headerlink" href="#storage-networks-and-other-peripherals" title="Permanent link">&para;</a></h1>
+<details class="abstract">
+<summary>Abstract</summary>
 <ul>
-<li>学习线性变换 <span class="arithmatex">\(L\)</span> 时，应用最广泛的是<strong>特征向量</strong>方法。<br />
-这里 <span class="arithmatex">\(L\)</span> 可以看作 <span class="arithmatex">\(M\)</span> 的诱因。<br />
-常用的方法有 PCA(主成分分析)，LDA(线性判别分析)，RCA(相关成分分析).  </li>
-<li>
-<p>学习马氏度量 <span class="arithmatex">\(M\)</span> 时，常用<strong>凸优化</strong>的方法。  </p>
-<ul>
-<li><strong>MMC(MAHALANOBIS METRIC FOR CLUSTERING, 马氏距离聚类)</strong><br />
-即最小化类别相似的输入之间的距离，同时最大化类别不同的输入之间的距离，并将其表示为一个凸优化问题。  </li>
+<li>Introduction</li>
+<li>Disk Storage and Dependability</li>
+<li>Networks (Skim)</li>
+<li>Buses and Other Connections between Processors Memory, and I/O Devices</li>
+<li>Interfacing I/O Devices to the Memory, Processor, and Operating System</li>
+<li>I/O Performance Measures: <br />
+Examples from Disk and File Systems</li>
+<li>Designing an I/O system</li>
+<li>Real Stuff: A Typical Desktop I/O System</li>
 </ul>
-<div class="arithmatex">\[
-\begin{align*}
-Maximize\  &amp; \sum_{i,j}(1-y_{ij})\sqrt{\mathcal{D}_M(\vec x_i,\vec x_j)} \\
-subject\ to
-&amp; \ (1) \sum_{ij}y_{ij}\sqrt{\mathcal{D}_M(\vec x_i,\vec x_j)} \leq 1\\
-&amp; \ (2)\mathbf{M}\succeq 0
-\end{align*}
-\]</div>
+</details>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>除了 CPU 的设备我们都认为是 I/O.  </p>
+<p>Assessing I/O system performance is very difficult.<br />
+不同的场景有不同的评估。</p>
+<p>Performance of I/O system depends on:</p>
 <ul>
-<li><strong>POLA(The Pseudometric Online Learning Algorithm, 伪度量在线学习算法)</strong><br />
-POLA 与 MMA 类似，试图学习一种度量方法，它可以缩短标记相似的输入之间的距离，并扩展标记不同的输入之间的距离。不同之处在于，它明确地鼓励使用有限的边界来分隔不同的标记输入。</li>
-<li><strong>NCA(Neighborhood Component Analysis, 邻域成分分析)</strong>  <br />
-NCA 中的随机分类器是通过附近训练实例的多数投票来标记查询，但不一定是 k 个最近邻。NCA 对于不同样本之间定义了一个 softmax 概率：</li>
+<li>connection between devices and the system</li>
+<li>the memory hierarchy</li>
+<li>the operating system</li>
 </ul>
-<div class="arithmatex">\[
-p_{ij}=\begin{cases}
-\dfrac{exp(-||\mathbf{L}x_i-\mathbf{L}x_j||^2)}{\sum_{k\neq i}(exp(-||\mathbf{L}x_i-\mathbf{L}x_k||^2))} \quad &amp; if\ i\neq j \\ \quad \quad \quad \quad \quad \quad 0   \quad &amp; if\ i=j 
-\end{cases}
-\]</div>
-<p>而损失函数定义为 <span class="arithmatex">\(\epsilon_{NCA}=1-\dfrac{1}{n}\sum_{ij}p_{ij}y_{ij}\)</span>
-* 上述三个方法中, POLA 和 MMC 有着相同的优势和劣势。这两种算法都基于凸优化，不存在伪局部极小值。但对输入和类标签的分布做了隐含的假设（单峰或者正态分布），但 <em>kNN</em> 并没有隐含地对输入分布做出参数假设。而对于 NCA 来说，虽然距离度量的参数是连续可微的，但上式不是凸的，也不能用特征向量方法最小化, 即 NCA 中的优化可能存在伪局部极小值。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306072304626.png" width = 60%/> </div>
+
+<p>CPU 和 I/O 由总线连接. I/O 往往通过中断的方式通知 CPU 有事件处理。<br />
+不同的设备有不同的驱动(I/O controller)</p>
+<p>Three characters of IO</p>
+<ul>
+<li>Behavior<br />
+Input (read once), output (write only, cannot read) ,or storage (can be reread and usually rewritten)<br />
+输入/输出/存储</li>
+<li>Partner<br />
+Either a human or a machine is at the other end of the I/O device, either feeding data on input or reading data on output.<br />
+和谁对接？人/机器</li>
+<li>Data rate<br />
+The peak rate at which data can be transferred between the I/O device and the main memory or processor.<br />
+数据传输速率</li>
+</ul>
+<p>I/O performance depends on the application.  </p>
+<ul>
+<li>Throughput
+单位时间传输的数据量；单位时间 I/O 的操作数。</li>
+<li>Response time <strong><em>e.g.</em></strong>, workstation and PC</li>
+<li>both throughput and response time <strong><em>e.g.</em></strong>, ATM
+不同的应用场景关心不同的方面。</li>
+</ul>
+<h3 id="amdahls-law">Amdahl’s law<a class="headerlink" href="#amdahls-law" title="Permanent link">&para;</a></h3>
+<p>Sequential part can limit speedup  </p>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306072325911.png" width = 50%/> </div></p>
+<p>想用 100 个 CPU 完成 90 倍的加速。这要求不能被并行执行的部分最多占 0.1%. </p>
+</details>
+<p>Remind us that ignoring I/O is dangerous. </p>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306072328275.png" width = 50%/> </div></p>
+</details>
+<h2 id="disk-storage-and-dependability">Disk Storage and Dependability<a class="headerlink" href="#disk-storage-and-dependability" title="Permanent link">&para;</a></h2>
+<p>Two major types of magnetic disks</p>
+<ul>
+<li>floppy disks<br />
+软盘（内存）</li>
+<li>hard disks<ul>
+<li>larger</li>
+<li>higher density</li>
+<li>higher data rate</li>
+<li>more than one platter</li>
+</ul>
 </li>
 </ul>
-<h2 id="_4">主要思路<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>论文提出的距离度量学习基于上述算法。<br />
-该模型基于两个直觉</p>
+<h3 id="the-organization-of-hard-disk">The organization of hard disk<a class="headerlink" href="#the-organization-of-hard-disk" title="Permanent link">&para;</a></h3>
 <ul>
-<li>每个训练输入 <span class="arithmatex">\(\vec x_i\)</span> 应与其 k 个最近邻居共享相同的标签 <span class="arithmatex">\(y_i\)</span></li>
-<li>其次，具有不同标签的训练输入应被广泛分离。</li>
+<li>platters: disk consists of a collection of platters, each of which has two recordable disk surfaces
+盘</li>
+<li>tracks: each disk surface is divided into concentric circles<br />
+盘上有很多个轨道</li>
+<li>sectors: each track is in turn divided into sectors, which is the smallest unit that can be read or written<br />
+每条轨道被分为若干个扇区</li>
 </ul>
-<p>这里论文提出了两个概念, <strong>target neighors(目标邻居)</strong> 和 <strong>impostors(伪装者)</strong>  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306072332199.png" width = 50%/> </div>
+
+<h3 id="to-access-data-of-disk">To access data of disk<a class="headerlink" href="#to-access-data-of-disk" title="Permanent link">&para;</a></h3>
 <ul>
-<li>目标邻居<br />
-学习开始时我们就指定每个输入 <span class="arithmatex">\(\vec x_i\)</span> 的目标邻居，即我们最希望 <span class="arithmatex">\(\vec x_i\)</span> 接近的点。我们希望通过学习输入空间的线性变换，让 <span class="arithmatex">\(\vec x_i\)</span> 的目标邻居成为其 k 近邻邻居。<br />
-我们用 <span class="arithmatex">\(i\leadsto j\)</span> 表示 <span class="arithmatex">\(i\)</span> 是 <span class="arithmatex">\(j\)</span> 的目标邻居，注意到这个关系不是对称的。<br />
-在实际应用中，我们可能会有预备知识、辅助信息指定目标邻居。如果没有可以根据欧几里德距离计算具有相同类别标签的 k 个最近邻居。</li>
-<li>伪装者<br />
-周界是每个输入的目标邻居构成的范围。我们把侵入周界的异类标签点称为伪装者。<br />
-为了增强算法的鲁棒性，我们在周界与异类点保持一个分类裕度。满足 <span class="arithmatex">\(||\mathbf{L}(\vec x_i-\vec x_l)||^2 \leq ||\mathbf{L}(\vec x_i - \vec x_j)||^2 + 1\)</span> (这里 <span class="arithmatex">\(x_i, x_j\)</span> 标签相同, <span class="arithmatex">\(x_j\)</span> 是 <span class="arithmatex">\(x_i\)</span> 的目标邻居) 的点 <span class="arithmatex">\(x_l\)</span> 为伪装点。<br />
-论文中也给出了图解释
-<img alt="1" src="http://cdn.hobbitqia.cc/202305131044364.png" /></li>
+<li><strong>Seek</strong>: position read/write head over the proper track<br />
+数据不一定刚好在圈上，需要找到数据对应的圈。</li>
+<li>
+<p><strong>Rotational latency</strong>: wait for desired sector<br />
+找到圈后，等待旋转到数据起点。</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306072336724.png" width = 50%/> </div></p>
+</details>
+</li>
+<li>
+<p><strong>Transfer</strong>: time to transfer a sector (1 KB/sector) function of rotation speed<br />
+把硬盘数据搬到内存。</p>
+</li>
 </ul>
-<p>基于上面的两个直觉，论文的模型中损失函数存在两个竞争项</p>
+<div class="admonition example">
+<p class="admonition-title">Disk Read Time</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306072338521.png" width = 50%/> </div></p>
+</div>
+<h3 id="flash-storage">Flash Storage<a class="headerlink" href="#flash-storage" title="Permanent link">&para;</a></h3>
+<p>Nonvolatile semiconductor storage</p>
 <ul>
-<li>一个项惩罚相同标签但距离较远的附近输入之间的大距离<br />
-<span class="arithmatex">\(\epsilon_{pull}(\mathbf{L})=\sum\limits_{j\leadsto i}||\mathbf{L}(\vec x_i - \vec x_j)||^2\)</span>  <br />
-值得注意的是，这里<strong>仅惩罚输入和其目标邻居之间的大距离</strong>而并<strong>不惩罚所有同类标记输入之间的大距离</strong>。这是因为准确的 <em>kNN</em> 分类并不要求所有同类标记输入都紧密聚集在一起。</li>
-<li>一个项惩罚不同标签之间距离过小的输入 <br />
-<span class="arithmatex">\(\epsilon_{push}(\mathbf{L})=\sum\limits_{i,j\leadsto i}\sum\limits_l (1-y_{il})\left[1+||\mathbf{L}(\vec x_i-\vec x_j)^2-||\mathbf{L}(\vec x_i -\vec x_l)||^2\right]_{+}\)</span>  </li>
-<li>最后我们得到合页损失函数 <span class="arithmatex">\(\epsilon(\mathbf{L})=(1-\mu)\epsilon_{pull}(\mathbf{L})+\mu \epsilon_{pull}(\mathbf{L})\)</span>  <br />
-论文中提到合页损失函数对 <span class="arithmatex">\(\mu\)</span> 的取值并不敏感，一般取 0.5 即可。</li>
+<li>100× – 1000× faster than disk</li>
+<li>Smaller, lower power, more robust</li>
+<li>But more $/GB (between disk and DRAM)</li>
 </ul>
-<h3 id="_5">凸优化<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>我们对损失函数的线性变换的距离用马氏距离表示 <span class="arithmatex">\(\epsilon(\mathbf{M})=(1-\mu)\sum\limits_{i,j\leadsto i}\mathcal{D}_\mathbf{M}(\vec x_i, \vec x_j)+\mu\sum\limits_{i,j\leadsto i}\sum\limits_l(1-y_{il})\left[1+\mathcal{D}_\mathbf{M}(\vec x_i-\vec x_j)-\mathcal{D}_\mathbf{M}(\vec x_i-\vec x_l)\right]_+\)</span><br />
-这样的损失函数损失是一个基于半正定矩阵限制条件的凸优化问题。 </p>
-<p>有时候周界的条件不一定能严格满足，因此我们引入一个非负松弛变量 <span class="arithmatex">\(\xi_{ijl}\)</span>. 得到下面的凸优化问题</p>
-<div class="arithmatex">\[
-\begin{align*}
-Minimize &amp; \ (1-\mu)\sum_{i,j\leadsto i}(\vec x_i-\vec x_j)^\top \mathbf{M}(\vec x_i- \vec x_j)+\mu \sum_{i, j\leadsto i,l}(1-y_{il})\xi_{ijl} \\
-subject\ to \ &amp; (1) \ (\vec x_i-\vec x_l)^\top \mathbf{M}(\vec x_i-\vec x_l) - (\vec x_i-\vec x_j)^\top \mathbf{M} (\vec x_i-\vec x_j) \geq 1-\xi_{ijl}\\
-&amp; (2) \ \xi_{ijl}\geq 0\\
-&amp; (3) \ \mathbf{M}\succeq 0
-\end{align*}
-\]</div>
-<p>此外，这里我们可以发现大部分的松弛变量 <span class="arithmatex">\(\xi_{ijl}=0\)</span> 而非正值，可以得到特殊目的的求解器。该求解器基于子梯度下降算法和交替投影算法，可以加速求解的过程。</p>
-<h3 id="_6">基于能量分类<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>基于 <em>Mahalabonis Metric</em> 的矩阵 <span class="arithmatex">\(M\)</span> 可用于 <em>kNN</em> 算法来解决分类问题，也可以直接使用损耗函数作为所谓的“基于能量的”分类器。 <br />
-对于一个测试样本，我们把它作为一个额外的训练样本，对可能的标签分别计算损失函数的值，最后选择损失函数值最小的类别作为这个样本的预测值。  </p>
-<div class="arithmatex">\[
-y_t = \arg\min\left\{(1-\mu)\sum\limits_{j\leadsto t}\mathcal{D}_\mathbf{M}(\vec x_t,\vec x_j) + \mu\sum\limits_{j\leadsto t,l}(1-y_{tl})\left[1+\mathcal{D}_\mathbf{M}(\vec x_t-\vec x_j)-\mathcal{D}_\mathbf{M}(\vec x_t-\vec x_l)\right]_+ +\mu\sum\limits_{i,j\leadsto t}(1-y_{it})\left[1+\mathcal{D}_\mathbf{M}(\vec x_i-\vec x_j)-\mathcal{D}_\mathbf{M}(\vec x_i-\vec x_t)\right]
-\right\}.
-\]</div>
-<h2 id="_7">成果和扩展<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<p>实验中评估了九个不同大小和难度的数据集的 LMNN 分类。其中一些数据集来自于图像、语音和文本的集合，产生了非常高维的输入，针对这些使用了PCA来减少训练前输入的维数。其中测试集包括小数据集、人脸识别任务、语音识别、字母识别、文本分类、手写数字识别。<br />
-在各种大小和难易程度数据集上测试后发现，在此方式下训练出来的指标能够显著提高 <em>kNN</em> 分类结果，具体如下：</p>
+<p>Flash Types</p>
 <ul>
-<li>使用<strong>马氏距离</strong>的 LMNN 分类方法始终优于使用<strong>欧几里得距离</strong>的 <em>kNN</em> 分类方法。</li>
-<li><strong>基于能量的决策规则</strong>进一步改善了使用马氏距离进行 <em>kNN</em> 分类</li>
-<li>当需要某种形式降维预处理时, LMNN分类与 PCA 相比LDA效果更好。</li>
-<li>LMNN 分类对较大数据集产生更大的改进。<br />
-论文认为随着样本密度增加，可以选择的目标邻居学习到更可靠的判别信号。（选择的方法是基于降维后的输入空间中的欧几里得距离选择目标邻居）</li>
-<li>基于能量的 LMNN 算法与 SVM 水平相当。</li>
+<li><strong>NOR flash</strong>: bit cell like a NOR gate<ul>
+<li>Random read/write access<br />
+可以随意读写</li>
+<li>Used for instruction memory in embedded systems<br />
+因此在嵌入式中作为指令存储</li>
 </ul>
-<p>除此之外，论文还提出了朴素 LMNN 算法可以有的改善</p>
+</li>
+<li><strong>NAND flash</strong>: bit cell like a NAND gate<ul>
+<li>Denser (bits/area), but block-at-a-time access<br />
+密度可以更高，但是读写要以 block 为单位。</li>
+<li>Cheaper per GB  </li>
+<li>Used for USB keys, media storage  </li>
+</ul>
+</li>
+</ul>
+<p>Flash bits wears out after 100000’s of accesses.<br />
+因此不适合做 RAM/硬盘的替代。<br />
+当已经被磨损时，就把本来的数据映射到其他内存。</p>
+<h3 id="disk-performance-issues">Disk Performance Issues<a class="headerlink" href="#disk-performance-issues" title="Permanent link">&para;</a></h3>
+<p>一般得到的是 average seek time. </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306081622578.png" width = 60%/> </div>
+
+<h3 id="dependability">Dependability<a class="headerlink" href="#dependability" title="Permanent link">&para;</a></h3>
+<p>衡量硬盘的指标就是可靠性 Dependability(Reliability).  </p>
+<p>Computer system dependability is the quality of delivered service such that reliance can justifiably be placed on this  service.<br />
+连续提供服务的时间。</p>
 <ul>
-<li><strong>Multi-pass LMNN(多次迭代 LMNN)</strong><br />
-LMNN 存在需要预先指定目标邻居的缺点。我们默认选择的欧几里得距离不一定能符合实际运用的情况。因此可以采用迭代的方式，每轮迭代基于之前结果重新指定目标邻居。  </li>
-<li><strong>Multi-metric LMNN(多尺度 LMNN)</strong><br />
-在某些数据集上，输入空间的全局线性变换可能不足以改进<em>kNN</em>分类。我们可以学习多个本地线性转换而不是单一全局线性转换。<br />
-具体可以使用 K-means 等聚类算法先对数据进行分割聚类，随后对每一个聚类训练一个局部的马氏距离，最后将结果组合。</li>
-<li><strong>Kernel Version</strong><br />
-和上课所讲的 SVM 中的核方法类似, LMNN 也可以利用核方法扩展到一个非线性特征空间。  </li>
-<li><strong>Dimensionality Reduction(维数归约)</strong><br />
-根据训练出来的线性变换矩阵 <span class="arithmatex">\(L\)</span>, 取他的主特征（特征值最大的特征向量）构建映射矩阵 <span class="arithmatex">\(P\)</span>, 原数据就可以通过映射矩阵进行降维。  </li>
-<li><strong>Ball Tree</strong> <br />
-<em>kNN</em> 的复杂度依赖于样本数量和样本的维度，当数据量和维度特别大的时候，每次计算的复杂度会很高. Ball Tree 的每个分割点距离的边界等于球心到测试点距离减去球的半径。经过测试发现 Ball Tree 对于不同的维度数据都能达到搜索的优化。维度越低，这种优化效率越高。</li>
+<li>MTTF mean time to failure  平均无故障时间</li>
+<li>MTTR mean time to repair 平均修复时间</li>
+<li>MTBF (Mean Time Between Failures) 平均故障间隔时间<br />
+= MTTF+ MTTR</li>
 </ul>
-<h2 id="_8">讨论<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<p>这篇论文讲解了一种基于马氏度量的训练方法，将训练的过程转化为解决一个 SDP 问题。同时基于此提出了不依赖超参数的 LMNN 算法，极大提升了 <em>kNN</em> 分类器的准确性；同时还提出了基于能量的算法，以解决分类问题。</p>
-<p>回顾这篇论文，虽然主要涉及到度量学习的相关内容，但思想上和我们上课学习的 SVM 是很接近的。<br />
-支持向量机本质上也是要找一个最大化分类裕度的超平面，并用这个超平面完成分类任务。（和前文提到的周界类似）而这是一个凸二次规划问题。对于数据集中线性不可分的情况，即函数间隔无法大于 1 的点我们引入了松弛变量，改写后的优化问题其实就是在寻找最大裕度的决策边界和松弛因子组合，使得违背线性可分的数据点影响最小。<br />
-而论文中的算法就是将上述 SVM 的 <em>margin</em> 思想应用到了 <em>kNN</em> 算法中，即求一个距离度量，使得样本点及其目标邻居组成的周界的分类裕度尽可能大。 </p>
-<p>此外我认为论文中提到的扩展也很好地改善了朴素 LMNN 算法中的一些问题，也和我们上课所学的内容息息相关。这些优化思想也具有相当的普适性：迭代训练，每次的目标邻居是基于之前的训练结果；先聚类再基于每个类分别训练度量；利用核方法映射到高维空间；数据降维；以及 ball tree 优化 <em>kNN</em> 近邻搜索。</p>
-<p>个人认为，这个方法不仅适用于 <em>kNN</em> 问题，还可以尝试将其应用于任何基于输入样本距离度量的监督学习问题，以提高性能。</p>
+<p>因此可用的时间就是 <span class="arithmatex">\(\dfrac{MTTF}{MTTF+MTTR}\)</span></p>
+<p>improve MTTF</p>
+<ul>
+<li>Fault avoidance <br />
+preventing fault occurrence by construction<br />
+在硬盘寿命到达前替换硬盘</li>
+<li>Fault tolerance<br />
+using redundancy to allow the service to comply with the service specification despite faults occurring, which applies primarily to hardware faults<br />
+多个地方备份</li>
+<li>Fault forecasting<br />
+predicting the presence and creation of faults, which applies to hardware and software faults<br />
+预见故障，采取措施</li>
+</ul>
+<h3 id="redundant-arrays-of-inexpensive-disks">Redundant Arrays of (Inexpensive) Disks<a class="headerlink" href="#redundant-arrays-of-inexpensive-disks" title="Permanent link">&para;</a></h3>
+<p>不同设备对硬盘的需求量不同。<br />
+能不能用小硬盘组合成大硬盘？<br />
+好处是可以有多个读写口，同时访问。坏处是坏掉的概率更大了。</p>
+<p>Hot spares support reconstruction in parallel with access: very high media availability can be achieved.<br />
+热备份可以支持数据重建。</p>
+<ul>
+<li>Files are "striped" across multiple disks  </li>
+<li>Redundancy yields high data availability  </li>
+<li>Disks will still fail</li>
+<li>Contents reconstructed from data redundantly stored in the array<br />
+数据可以从冗余的用于备份的硬盘里恢复，代价是容量会有损失。</li>
+</ul>
+<p>RAID</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306081635472.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306081637953.png" width = 60%/> </div>
+
+<h4 id="raid-0-no-redundancy">RAID 0: No Redundancy<a class="headerlink" href="#raid-0-no-redundancy" title="Permanent link">&para;</a></h4>
+<p>Data is striped across a disk array but there is no redundancy to tolerate disk failure.<br />
+数据被放在多个盘里提高并行，速度可以提高（因为能同时访问）</p>
+<p>RAID 0 something of a misnomer as there is no Redundancy</p>
+<h4 id="raid-1-disk-mirroringshadowing">RAID 1: Disk Mirroring/Shadowing<a class="headerlink" href="#raid-1-disk-mirroringshadowing" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306081638944.png" width = 50%/> </div>
+
+<ul>
+<li>Each disk is fully duplicated onto its “mirror”<br />
+每一个盘的内容都被复制放到另一个盘里。</li>
+<li>Bandwidth sacrifice on write<br />
+写的时候需要同时写两个盘，读可能被优化。</li>
+<li>Most expensive solution: 100% capacity overhead</li>
+</ul>
+<h4 id="raid-3-bit-interleaved-parity-disk">RAID 3: Bit-Interleaved Parity Disk<a class="headerlink" href="#raid-3-bit-interleaved-parity-disk" title="Permanent link">&para;</a></h4>
+<p>P contains sum of other disks per stripe mod 2 (“parity”)<br />
+如第 1、2、3 个盘的第一个 bit 做奇偶校验放在第 4 个盘。</p>
+<p>当其中一个盘挂掉的时候，读出其他盘的数据我们可以推出原来盘的数据。  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306081641490.png" width = 60%/> </div>
+
+<p>哪个盘坏了？（不知道x</p>
+<h4 id="raid-4-block-interleaved-parity">RAID 4: Block-Interleaved Parity<a class="headerlink" href="#raid-4-block-interleaved-parity" title="Permanent link">&para;</a></h4>
+<p>RAID 3 relies on parity disk to discover errors on Read. </p>
+<p>我们希望自己的盘有自己的 error detection, 不需要校验盘来检验自己对不对，盘与盘之间没有依赖关系。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306081646245.png" width = 60%/> </div>
+
+<p>把自己每个 block 做了校验位，放到备份盘中。</p>
+<p>当我们同时读 D0, D5 时 Paritybit 会被读两次。<br />
+Small Write 增加开销。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306081649639.png" width = 60%/> </div>
+
+<h4 id="raid-5-high-io-rate-interleaved-parity">RAID 5: High I/O Rate Interleaved Parity<a class="headerlink" href="#raid-5-high-io-rate-interleaved-parity" title="Permanent link">&para;</a></h4>
+<p>P 盘是不定的。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306081651961.png" width = 60%/> </div>
+
+<h4 id="raid-6-pq-redundancy">RAID 6: P+Q Redundancy<a class="headerlink" href="#raid-6-pq-redundancy" title="Permanent link">&para;</a></h4>
+<p>有 P, Q 两位，可以恢复出两个盘的内容。</p>
+<div class="admonition summary">
+<p class="admonition-title">RAID Techniques</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306081652365.png" width = 60%/> </div></p>
+</div>
+<h2 id="buses-and-other-connections-between-processors-memory-and-io-devices">Buses and Other Connections between Processors Memory, and I/O Devices<a class="headerlink" href="#buses-and-other-connections-between-processors-memory-and-io-devices" title="Permanent link">&para;</a></h2>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306231639947.png" width = 60%/> </div>
+
+<p><strong>Bus</strong>: Shared communication link (one or more wires)<br />
+一条高速公路和各条小道，给不同车辆共享通行。</p>
+<p>Difficult Design:</p>
+<ul>
+<li>may be bottleneck<br />
+很容易成为性能的 bottleneck(瓶颈).</li>
+<li>length of the bus</li>
+<li>number of devices</li>
+<li>tradeoffs (fast bus accesses and high bandwidth)</li>
+<li>support for many different devices</li>
+<li>cost</li>
+</ul>
+<h3 id="bus-basics">Bus Basics<a class="headerlink" href="#bus-basics" title="Permanent link">&para;</a></h3>
+<p>总线不是一条线，而是多条线组合在一起。把各种路、设备连接起来。</p>
+<p>A bus contains two types of lines</p>
+<ul>
+<li>Control lines: signal requests and acknowledgments, and to indicate what types of information is on the data lines.<br />
+比如给外设发送读取命令，外设发送可以读的信号。</li>
+<li>Data lines: carry information (<strong><em>e.g.</em></strong>, data, addresses, and complex commands) between the source and the destination.</li>
+</ul>
+<p><strong>Bus transaction</strong><br />
+sending the address and receiving or sending the data <br />
+总线传输的两部分，送地址，送数据。</p>
+<ul>
+<li>Types of buses<ul>
+<li>processor-memory : short high speed, custom design)  </li>
+<li>backplane : high speed, often standardized, <strong><em>e.g.</em></strong>, PCI)</li>
+<li>I/O : lengthy, different devices, standardized, <strong><em>e.g.</em></strong>, SCSI)</li>
+</ul>
+</li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306231648577.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306231647551.png" width = 60%/> </div>
+
+<p>以前的 CPU 只有一条总线，如果 IO 设备和 Memory 接在一起，他们的速度需要遵守一样的协议。<br />
+IO 设备是很慢的，会占用 Bus, 现在我们把任务丢过去后可以等处理好了再来拿。<br />
+不同 IO 设备之间数据传输不需要占用总线。</p>
+<h3 id="synchronous-vs-asynchronous">Synchronous vs. Asynchronous<a class="headerlink" href="#synchronous-vs-asynchronous" title="Permanent link">&para;</a></h3>
+<p>同步总线或者异步总线</p>
+<ul>
+<li><strong>Synchronous bus</strong>: use a clock and a fixed <em>protocol</em>, fast and small but every device must operate at same rate and clock skew requires the bus to be short<br />
+所有设备需要以同样的频率。<br />
+clock skew, 即上升沿无法对齐</li>
+<li>
+<p><strong>Asynchronous bus</strong>: don’t use a clock and instead use <em>handshaking</em><br />
+A serial of steps used to coordinate asynchronous bus transfers.  </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306231653192.png" width = 50%/> </div></p>
+<ol>
+<li>When memory sees the ReadReq line, it reads the address from the data bus, begin the memory read operation，then raises Ack to tell the device that the ReadReq signal has been seen.  </li>
+<li>I/O device sees the Ack line high and releases the ReadReq data lines.  </li>
+<li>Memory sees that ReadReq is low and drops the Ack line.  </li>
+<li>When the memory has the data ready, it places the data on the data lines and raises DataRdy.  </li>
+<li>The I/O device sees DataRdy, reads the data from the bus , and signals that it has the data by raising ACK.   </li>
+<li>The memory sees Ack signals, drops DataRdy, and releases the data lines.  </li>
+<li>Finally, the I/O device, seeing DataRdy go low, drops the ACK line, which indicates that the transmission is completed.  </li>
+</ol>
+<p>读数据时, CPU 把 read request 拉起来。内存看到后，会把 Data 总线上的读走（即地址），随后进行内存读取，同时把 Ack 信号拉起来，告诉 IO 设备我们已经接收到 read request 了. IO 设备看到 Ack 后把自己的 read request 放下，内存看到 read request 放下后，把 Ack 也放下。<br />
+内存读出数据后，会把 data ready 拉起来，把数据放在 data line 上. IO 设备看到 data ready 后会把数据取走，并把 Ack 信号拉起。内存看到 Ack 信号后会放下 data ready 信号，随后 IO 设备放下 ack 信号。</p>
+</div>
+</li>
+</ul>
+<h3 id="bus-arbitration">Bus Arbitration<a class="headerlink" href="#bus-arbitration" title="Permanent link">&para;</a></h3>
+<p>总线上有很多设备，多个设备要访问同一个内存时，需要总线仲裁，获得总线的所有权。  </p>
+<p>multiple device desiring to communicate could each try to assert the control and data lines for different transfers.<br />
+a bus master is needed. Bus masters initiate and control all bus requests.<br />
+实际上现在 master 的设备也有多个，不同 master 之间也有竞争（CPU, 显存等都是一个 master）。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306231659748.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306231700134.png" width = 60%/> </div>
+
+<p>上面的例子中只有一个 CPU 是 master, 可以占领总线，并让 IO 设备执行操作。</p>
+<p>能主动发起操作（操作 Bus）的设备叫做 Bus Master, 一般是 CPU.<br />
+决定哪个 master 能够操作总线的设备叫做总线仲裁。  </p>
+<p>Two factors in choosing which device to grant the bus:</p>
+<ul>
+<li>bus priority</li>
+<li>fairness<br />
+公平性，不让某个设备一直占用总线。</li>
+</ul>
+<h3 id="performance-analysis-of-synchronous-versus-asynchronous-buses">Performance analysis of Synchronous versus Asynchronous buses<a class="headerlink" href="#performance-analysis-of-synchronous-versus-asynchronous-buses" title="Permanent link">&para;</a></h3>
+<p>评价总线的性能 - 带宽  bandwidth</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306231706454.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306231706872.png" width = 60%/> </div></p>
+<p>异步时钟 step1 结束时内存已经拿到地址了，这个过程中 step234 可以同时做。</p>
+</div>
+<ul>
+<li>Increasing data bus width</li>
+<li>Use separate address and data lines</li>
+<li>transfer multiple words<br />
+一次传输多个数据</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Increasing the Bus Bandwidth</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306231712313.png" width = 60%/> </div></p>
+<p>burst 传输，地址发一次，读多个数据。如读地址 4, 我们可以返回 4 5 6 7 的数据。  </p>
+<ul>
+<li>
+<p>the 4-word block transfers
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306231715050.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306232217459.png" width = 60%/> </div></p>
+</li>
+<li>
+<p>the 16-word block transfers
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306232219660.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306232220418.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306232222353.png" width = 60%/> </div></p>
+</li>
+</ul>
+</div>
+<h2 id="interfacing-io-devices-to-the-memory-processor-and-operating-system">Interfacing I/O Devices to the Memory, Processor, and Operating System<a class="headerlink" href="#interfacing-io-devices-to-the-memory-processor-and-operating-system" title="Permanent link">&para;</a></h2>
+<p>IO 设备（需要驱动）怎么和 OS 通信  </p>
+<ul>
+<li>The OS must be able to give commands to the I/O devices.<br />
+OS 要能给 IO 设备发出命令，比如启动、关机。</li>
+<li>The device must be able to notify the OS, when I/O device completed an operation or has encountered an error.<br />
+IO 有方式，在设备完成操作或者遇到错误时，要能通知 OS. 比如打印结束，可以继续传输数据了。</li>
+<li>Data must be transferred between memory and an I/O device.<br />
+数据要能在内存和 IO 设备之间传输。</li>
+</ul>
+<p>CPU 要能访问到 IO 设备，需要有一个地址。（注意这个地址不能进入 cache, 否则我们就无法获得 IO 设备的最新状态了）</p>
+<ul>
+<li>memory-mapped I/O<br />
+把内存地址中的一部分分出来给 IO 设备用，这样就可以用 ld sd 来访问。</li>
+<li>special I/O instructions<br />
+<strong><em>e.g.</em></strong> x86 中 in al,port out port,al. RISC-V 中没有</li>
+</ul>
+<p>IO 设备需要有对应的寄存器存储状态  </p>
+<ul>
+<li>The Status register (a done bit, an error bit...)</li>
+<li>The Data register, The command register</li>
+</ul>
+<h3 id="communication-with-the-processor">Communication with the Processor<a class="headerlink" href="#communication-with-the-processor" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Polling: The processor periodically checks status bit to see if it is time for the next I/O operation.<br />
+定期检查设备，但是会占用 CPU. </li>
+<li>Interrupt: When an I/O device wants to notify processor that it has completed some operation or needs attentions, it causes processor to be interrupted.<br />
+当 IO 设备完成操作给 CPU 一个中断，等待其响应。好处是 CPU 可以一直做自己的事情。</li>
+<li>DMA (direct memory access): the device controller transfer data directly to or from memory without involving processor.<br />
+IO 设备直接和内存交互，不需要 CPU 参与。</li>
+</ul>
+<h4 id="interrupt-driven-io-mode">Interrupt-Driven I/O mode<a class="headerlink" href="#interrupt-driven-io-mode" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306232242586.png" width = 60%/> </div>
+
+<p>假设 IO 是个打印机。每次打印一个字符，就会给 CPU 发一个中断。CPU 会去读取打印机的状态，看是否完成。完成后 CPU 继续做自己的事情。</p>
+<h4 id="dma-transfer-mode">DMA transfer mode<a class="headerlink" href="#dma-transfer-mode" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306232243449.png" width = 60%/> </div>
+
+<p>CPU 需要配置 DMA. DMA 会和 IO 设备交互，把数据搬到内存，不需要 CPU 参与。</p>
+<p>A DMA transfer need three steps:</p>
+<ul>
+<li>The processor sets up the DMA by supplying some information, including the identity of the device, the operation, the memory address that is the source or destination of the data to be transferred, and the number of bytes to transfer. <br />
+CPU 配置 DMA，包括哪个设备、做什么操作、内存地址、数据大小等。</li>
+<li>The DMA starts the operation on the device and arbitrates for the bus. If the request requires more than one transfer on the bus, the DMA unit generates the next memory address and initiates the next transfer.<br />
+DMA 开始操作设备，占用总线。如果需要多次传输，DMA 会生成下一个内存地址，开始下一次传输。<br />
+DMA 也是挂在总线上的 master, 优先级没有 CPU 高。因此他会趁 CPU 空闲的时候搬运数据，可以充分利用总线。</li>
+<li>Once the DMA transfer is complete, the controller interrupts the processor, which then examines whether errors occur. <br />
+DMA 完成后，给 CPU 发中断，CPU 检查是否有错误。</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Compare polling, interrupts, DMA</p>
+<ul>
+<li>The disadvantage of polling is that it wastes a lot of processor time. When the CPU polls the I/O device periodically, the I/O devices maybe have no request or have not get ready.<br />
+polling 的坏处是浪费了大量的 CPU 的时间。CPU 定期轮询 IO 设备可能没有请求或者没有准备好。  </li>
+<li>If the I/O operations is interrupt driven, the OS can work on other tasks while data is being read from or written to the device.<br />
+如果 IO 操作是中断驱动的，OS 可以在数据从设备读取或写入时处理其他任务。</li>
+<li>Because DMA doesn’t need the control of processor, it will not consume much of processor time.<br />
+DMA 不需要 CPU 控制，不会消耗 CPU 时间。<br />
+但 DMA 其实只是搬运数据时有用，其实和 polling interrupt 不对立。</li>
+</ul>
+</div>
+<details class="example">
+<summary>Overhead of Polling in an I/O System</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306232249676.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306232250773.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306232250498.png" width = 60%/> </div></p>
+</details>
+<details class="example">
+<summary>Overhead of Interrupt-Driven I/O</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306232253481.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306232255768.png" width = 60%/> </div></p>
+<p>polling 必须时时刻刻查询，中断只需要在真正有数据传输（比如 5% 的时间）时再去处理。</p>
+</details>
+<details class="example">
+<summary>Overhead of I/O Using DMA</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306232305327.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306232305655.png" width = 60%/> </div></p>
+</details>
+<h2 id="io-performance-measures-examples-from-disk-and-file-systems">I/O Performance Measures: Examples from Disk and File Systems<a class="headerlink" href="#io-performance-measures-examples-from-disk-and-file-systems" title="Permanent link">&para;</a></h2>
+<p>CPU 有 benchmark, IO 也有 benchmark 来衡量性能。</p>
+<p><strong>I/O rate</strong>: the number of disk access per second, as opposed to data rate  </p>
+<h3 id="designing-an-io-system">Designing an I/O system<a class="headerlink" href="#designing-an-io-system" title="Permanent link">&para;</a></h3>
+<p>整个计算机系统 CPU+bus+I/O  </p>
+<ul>
+<li>Find the weakest link in the I/O system, which is the component in the I/O path that will constrain the design. Both the workload and configuration limits may dictate where the weakest link is located.<br />
+速度由最慢的决定。<br />
+看哪个部分最弱，其他部分保证可以满足最弱的条件即可。</li>
+<li>Configure this component to sustain the required bandwidth.  </li>
+<li>Determine the requirements for the rest of the system and configure them to support this bandwidth.  </li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202306232313649.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306232313215.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306232319472.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202306232320523.png" width = 60%/> </div></p>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年6月2日 23:16:40</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年6月23日 23:23:21</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年6月2日 23:16:40</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年6月23日 23:23:21</span>
       
     
   </small>
@@ -2749,7 +3368,7 @@ LMNN 存在需要预先指定目标邻居的缺点。我们默认选择的欧几
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 线性代数Ⅱ(H)" rel="prev">
+        <a href="../co5/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 内存层次架构" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2758,20 +3377,20 @@ LMNN 存在需要预先指定目标邻居的缺点。我们默认选择的欧几
               <span class="md-footer__direction">
                 上一页
               </span>
-              线性代数Ⅱ(H)
+              内存层次架构
             </div>
           </div>
         </a>
       
       
         
-        <a href="../mlt2/" class="md-footer__link md-footer__link--next" aria-label="下一页: 感知机" rel="next">
+        <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-footer__link md-footer__link--next" aria-label="下一页: 线性代数Ⅱ(H)" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              感知机
+              线性代数Ⅱ(H)
             </div>
           </div>
           <div class="md-footer__button md-icon">
