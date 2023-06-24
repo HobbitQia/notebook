@@ -8,4 +8,12 @@
 
 虽然上的是刘老师的课，但本笔记内容均来自马德老师的 PPT 和智云课堂（逃。
 
-Cheating Sheet 绘制中...
+Cheating Sheet 如下
+<div class="card file-block" markdown="1">
+<div class="file-icon"><img src="/assets/images/pdf.svg" style="height: 3em;"></div>
+<div class="file-body">
+<div class="file-title">数据库系统 Cheating Sheet by HobbitQia</div>
+<div class="file-meta">2.4 MB / 2 P / 2023-06-24</div>
+</div>
+<a class="down-button" target="_blank" href="/assets/files/CO_A4_HobbitQia.pdf" markdown="1">:fontawesome-solid-download: 下载</a>
+</div>
