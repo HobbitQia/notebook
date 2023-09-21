@@ -200,7 +200,7 @@ nav:
       - 存储和 IO: CO/co6.md
     - 计算机体系结构:
       - CA/index.md
-      - 计算机设计基础: CA/CA-1.md
+      - 计算机设计基础: CA/CA1.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
