@@ -198,6 +198,9 @@ nav:
       - 处理器: CO/co4.md
       - 内存层次架构: CO/co5.md
       - 存储和 IO: CO/co6.md
+    - 计算机体系结构:
+      - CA/index.md
+      - 计算机设计基础: CA/CA-1.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
