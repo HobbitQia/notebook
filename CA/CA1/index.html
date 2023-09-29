@@ -16,7 +16,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/">
+        <link rel="next" href="../CA2/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -2629,6 +2629,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -2739,10 +2741,91 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#quantitative-approaches" class="md-nav__link">
+    Quantitative approaches
+  </a>
+  
+    <nav class="md-nav" aria-label="Quantitative approaches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu-performance" class="md-nav__link">
+    CPU Performance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amdahls-law" class="md-nav__link">
+    Amdahl's Law
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#great-architecture-ideas" class="md-nav__link">
+    Great Architecture Ideas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isa" class="md-nav__link">
+    ISA
+  </a>
+  
+    <nav class="md-nav" aria-label="ISA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#isa-classification-basis" class="md-nav__link">
+    ISA Classification Basis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpr-classification" class="md-nav__link">
+    GPR Classification
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CA2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    流水线
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3187,6 +3270,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#quantitative-approaches" class="md-nav__link">
+    Quantitative approaches
+  </a>
+  
+    <nav class="md-nav" aria-label="Quantitative approaches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu-performance" class="md-nav__link">
+    CPU Performance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amdahls-law" class="md-nav__link">
+    Amdahl's Law
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#great-architecture-ideas" class="md-nav__link">
+    Great Architecture Ideas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isa" class="md-nav__link">
+    ISA
+  </a>
+  
+    <nav class="md-nav" aria-label="ISA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#isa-classification-basis" class="md-nav__link">
+    ISA Classification Basis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpr-classification" class="md-nav__link">
+    GPR Classification
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3282,13 +3426,124 @@ PC: Personal Computers</li>
 <li>Parallel processing technology<br />
 不同层次、粒度的并行</li>
 </ul>
+<h2 id="quantitative-approaches">Quantitative approaches<a class="headerlink" href="#quantitative-approaches" title="Permanent link">&para;</a></h2>
+<h3 id="cpu-performance">CPU Performance<a class="headerlink" href="#cpu-performance" title="Permanent link">&para;</a></h3>
+<ul>
+<li>CPU 执行时间 = CPU 时钟周期数 * CPU 时钟周期时间 = CPU 时钟周期数 / CPU 时钟频率</li>
+<li>IC：Instruction Count，指令数</li>
+<li>CPI：Cycle Per Instruction，每条指令的时钟周期数<ul>
+<li>由 CPU 硬件决定</li>
+<li>不同的指令也会有不同的 CPI，平均 CPI 取决于指令的组合方式</li>
+<li>CPI = CPU 时钟周期数 / IC</li>
+<li>CPU 执行时间 = IC * CPI / CPU 时钟频率</li>
+</ul>
+</li>
+</ul>
+<h3 id="amdahls-law">Amdahl's Law<a class="headerlink" href="#amdahls-law" title="Permanent link">&para;</a></h3>
+<p>Amdahl's Law: the performance improvement to be gained from using some faster mode of execution is limited by the fraction of the time the faster mode can be used.<br />
+当提升系统性能时，有多大的收益受限于被提升的部分所占的运行时间比例</p>
+<p><span class="arithmatex">\(T_{improved}=\dfrac{T_{affected}}{\text{improvement factor}}+T_{unaffected}\)</span></p>
+<p>Make the common case fast!</p>
+<p>也被用来分析可行性</p>
+<ul>
+<li>
+<p>加速比<br />
+$$
+\begin{align<em>}
+\text{Speedup} &amp; =\dfrac{\text{Performance for entire task}<em>\text{using Enhancement}}{\text{Performance for entire task}</em>\text{without Enhancement}}\
+&amp; = \dfrac{\text{Total Execution Time}<em>\text{without Enhancement}}{\text{Total Execution Time}</em>\text{using Enhancement}}
+\end{align</em>}
+$$  </p>
+<p>加速比 Sp = 改进后的性能 / 改进前的性能 = 改进前的时间 / 改进后的时间
+* 执行时间<br />
+<span class="arithmatex">\(T_{new} = T_{old}\times \left((1-f)+\dfrac{f}{Sp}\right)\)</span><br />
+<span class="arithmatex">\(f\)</span> 指改进的部分所占的比例
+* <span class="arithmatex">\(Sp_{overall} = \dfrac{T_{old}}{T_{new}} = \dfrac{1}{(1-f)+\dfrac{f}{Sp}}\)</span>
+* 其中 <span class="arithmatex">\(Sp\)</span> 为被优化部分的加速比，<span class="arithmatex">\(Sp_\text{overall}\)</span> 为整体加速比，<span class="arithmatex">\(f\)</span> 为被优化部分所占的运行时间比例</p>
+</li>
+</ul>
+<h2 id="great-architecture-ideas">Great Architecture Ideas<a class="headerlink" href="#great-architecture-ideas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>摩尔定律<ul>
+<li>每过 18-24 个月，集成电路的晶体管数量将增加一倍</li>
+</ul>
+</li>
+<li>使用抽象来简化设计</li>
+<li>让最常见的情况更快</li>
+<li>通过并行来提高性能</li>
+<li>由很多级别的并行，比如指令集并行、进程并行等</li>
+<li>通过流水线来提高性能<ul>
+<li>将任务分为多段，让多个任务的不同阶段同时进行</li>
+<li>通常用来提高指令吞吐量</li>
+</ul>
+</li>
+<li>通过预测来提高性能</li>
+<li>使用层次化的内存<ul>
+<li>让最常访问的数据在更高层级，访问更快</li>
+</ul>
+</li>
+</ul>
+<h2 id="isa">ISA<a class="headerlink" href="#isa" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Instruction Set Architecture  </li>
+</ul>
+<div align = center><img src="https://cdn.hobbitqia.cc/20230928223516.png" width=60%></div>
+
+<p>Instruction Set Design Issues</p>
+<ul>
+<li>Where are operands stored?<br />
+registers, memory, stack, accumulator</li>
+<li>How many explicit operands are there? (Classification of ISAs) <br />
+0, 1, 2, or 3 </li>
+<li>How is the operand location specified? (Addressing Modes)<br />
+register, immediate, indirect, ...</li>
+<li>What type &amp; size of operands are supported? (Data Representation)<br />
+byte, int, float, double, string, vector, ...</li>
+<li>What operations are supported? (Types of Instructions)<br />
+add, sub, mul, move, compare, ...</li>
+</ul>
+<p>Basic Principles</p>
+<ul>
+<li>Compatibility</li>
+<li>Versatility</li>
+<li>High efficiency</li>
+<li>Security</li>
+</ul>
+<h3 id="isa-classification-basis">ISA Classification Basis<a class="headerlink" href="#isa-classification-basis" title="Permanent link">&para;</a></h3>
+<p>这里主要指的是从哪里取数，存到哪里以及计算的规则。</p>
+<ul>
+<li>stack
+    First operand removed from second op replaced by the result.  </li>
+<li>accumulator<ul>
+<li>One implicit operand: the accumulator; one explicit operand: mem location</li>
+<li>Accumulator is both an implicit input operand and a result  </li>
+</ul>
+</li>
+<li>register<ul>
+<li>Register-memory architecture<br />
+任何指令都可以访存</li>
+<li>Load-store architecture<br />
+只有 load/store 的时候才能访存，其他时候都是基于寄存器操作 </li>
+</ul>
+</li>
+</ul>
+<h3 id="gpr-classification">GPR Classification<a class="headerlink" href="#gpr-classification" title="Permanent link">&para;</a></h3>
+<div align = center><img src="https://cdn.hobbitqia.cc/20230928225257.png" width=60%></div>
+<div align = center><img src="https://cdn.hobbitqia.cc/20230928225337.png" width=60%></div>
+
+<div class="admonition example">
+<p class="admonition-title">A+B</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20230928225409.png" width=60%></div></p>
+<p>More: try to do with D=A<em>B-(A+C</em>B)</p>
+</div>
+<p>GPR 速度快，但是 GPR 太多也会有资源的浪费和性能下降（如寻找对应的寄存器）</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月22日 00:26:08</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年9月29日 09:34:54</span>
       
         <br>
         创建日期:
