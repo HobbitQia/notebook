@@ -146,6 +146,11 @@ nav:
       - Templates: OOP/oop10.md
       - Exception: OOP/oop11.md
       - Smart Pointers: OOP/oop12.md
+    - 量子计算理论与软件系统: 
+      - Quan/index.md
+      - 量子态与量子门: Quan/chap1.md
+    - 计算理论:
+      - TCS/index.md
   - System: 
     - 计算机系统概论: 
       - ICS/index.md

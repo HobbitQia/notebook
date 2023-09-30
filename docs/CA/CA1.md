@@ -9,7 +9,7 @@ counter: True
 ## Introduction
 
 Von Neumann Structure
-<div align = center><img src="https://cdn.hobbitqia.cc/20230921203050.png" width=60%></div>
+<div align = center><img src="https://cdn.hobbitqia.cc/20230921203050.png" width=80%></div>
 
 **Classes of Computers**
 
@@ -105,14 +105,16 @@ Make the common case fast!
 也被用来分析可行性
 
 * 加速比  
-$$
-\begin{align*}
-\text{Speedup} & =\dfrac{\text{Performance for entire task}_\text{using Enhancement}}{\text{Performance for entire task}_\text{without Enhancement}}\\
-& = \dfrac{\text{Total Execution Time}_\text{without Enhancement}}{\text{Total Execution Time}_\text{using Enhancement}}
-\end{align*}
-$$  
+
+    $$
+    \begin{align*}
+    \text{Speedup} & =\dfrac{\text{Performance for entire task}_\text{using Enhancement}}{\text{Performance for entire task}_\text{without Enhancement}}\\
+    & = \dfrac{\text{Total Execution Time}_\text{without Enhancement}}{\text{Total Execution Time}_\text{using Enhancement}}
+    \end{align*}
+    $$  
 
     加速比 Sp = 改进后的性能 / 改进前的性能 = 改进前的时间 / 改进后的时间
+
 * 执行时间  
 $T_{new} = T_{old}\times \left((1-f)+\dfrac{f}{Sp}\right)$  
 $f$ 指改进的部分所占的比例
@@ -182,6 +184,6 @@ Basic Principles
 !!! Example "A+B"
     <div align = center><img src="https://cdn.hobbitqia.cc/20230928225409.png" width=60%></div>
 
-    More: try to do with D=A*B-(A+C*B)
+    More: try to do with $D=A*B-(A+C*B)$
 
 GPR 速度快，但是 GPR 太多也会有资源的浪费和性能下降（如寻找对应的寄存器）

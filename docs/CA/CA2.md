@@ -49,13 +49,13 @@ Three modes of execution
 好处：时间缩短 2/3，但需要更复杂的硬件，而且需要单独的 FETCH DECODE EXE 部件。
     <div align = center><img src="https://cdn.hobbitqia.cc/20230928231838.png" width=60%></div>
 
-如何实现重叠 - buffer  
+如何实现重叠？- buffer  
 Adding instruction buffer between memory and instruction decode unit.  
-
 添加 buffer 之后，IF 阶段时间变得很短，此时可以和 ID 阶段合并（把二次重叠变为了一次重叠）。
 
 但如果合并后 IFID 和 EX 阶段时间不一致，也会有执行部件的浪费。  
-如何平滑速度的差异？- 加 buffer  
+如何平滑速度的差异？- buffer  
+
 Common features: They work by FIFO, and are composed of a group of several storage units that can be accessed quickly and related control logic. 
 <div align = center><img src="https://cdn.hobbitqia.cc/20230928232451.png" width=60%></div>
 <div align = center><img src="https://cdn.hobbitqia.cc/20230928232708.png" width=60%></div>
@@ -82,7 +82,7 @@ Characteristics of pipelining
     动态流水线：同一个时刻流水线可以做多个功能。  
 
         ??? Example
-        <div align = center><img src="https://cdn.hobbitqia.cc/20230928233501.png" width=60%></div>
+            <div align = center><img src="https://cdn.hobbitqia.cc/20230928233501.png" width=60%></div>
 
         可以不用等浮点加法第 n 条结束，就可以开始浮点乘法。
 
@@ -99,7 +99,7 @@ Characteristics of pipelining
 非线性，功能部件可能多次使用，造成回路
 
     ??? Example
-    <div align = center><img src="https://cdn.hobbitqia.cc/20230929093030.png" width=60%></div>
+        <div align = center><img src="https://cdn.hobbitqia.cc/20230929093030.png" width=60%></div>
 
 还可以分为顺序/乱序：
 
