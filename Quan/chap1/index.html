@@ -1544,8 +1544,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    量子隐形传态
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toffoli" class="md-nav__link">
     Toffoli 门
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    量子计算的并行性
   </a>
   
 </li>
@@ -1640,6 +1654,8 @@
   
     
     
+      
+        
       
         
       
@@ -2983,6 +2999,86 @@
 
               
             
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../OS/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    操作系统原理与实践
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_3_7">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            操作系统原理与实践
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/chap1.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OS 结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3470,8 +3566,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    量子隐形传态
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#toffoli" class="md-nav__link">
     Toffoli 门
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    量子计算的并行性
   </a>
   
 </li>
@@ -3552,7 +3662,8 @@
 <h2 id="_6">多量子比特<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>两个量子比特，基本状态就有 00, 01, 10, 11。
 <img alt="" src="https://cdn.hobbitqia.cc/20230929165443.png" /></p>
-<p>量子纠缠是量子叠加的必然结果。</p>
+<p>量子纠缠是量子叠加的必然结果。
+如果一个多量子比特可以分解为多个单量子比特的张量积，则称该多量子比特为非纠缠态，否则称为纠缠态。</p>
 <p><img alt="" src="https://cdn.hobbitqia.cc/20230929165511.png" /></p>
 <h3 id="_7">贝尔态<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <div class="arithmatex">\[
@@ -3623,9 +3734,20 @@
 <h3 id="swap-cswap">SWAP 门及 CSWAP 门<a class="headerlink" href="#swap-cswap" title="Permanent link">&para;</a></h3>
 <p>SWAP 用于交换两个量子比特的状态。</p>
 <p><img alt="" src="https://cdn.hobbitqia.cc/20230929222335.png" /></p>
+<h3 id="_10">量子隐形传态<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20231009192636.png" /></p>
+<p>Alice 拿了高位比特，Bob 拿了低位。
+这里的 <span class="arithmatex">\(\phi_{AB}\)</span> 是 Alice, Bob 最开始的 qubits, <span class="arithmatex">\(\psi\)</span> 是 Alice 想要传递给 Bob 的信息。这两份比特是不纠缠的。<span class="arithmatex">\(\phi_0\)</span> 等于这两份比特的张量积。
+把 Alice 手里的两个比特进行纠缠，即把 Bob 的比特拿出去，Alice 的两个比特写在一起。
+<img alt="" src="https://cdn.hobbitqia.cc/20231009192728.png" />
+<img alt="" src="https://cdn.hobbitqia.cc/20231009192852.png" /></p>
 <h3 id="toffoli">Toffoli 门<a class="headerlink" href="#toffoli" title="Permanent link">&para;</a></h3>
 <p>Toffoli 门即 CCNOT 门，它涉及 3 个量子比特，两个控制比特，一个目标比特，两个高位都为 1 时 (高位为控制比特)，才将低位量子态翻转。</p>
+<p>控制门就打点，被控制的比特打上十字。</p>
 <p>To be completed...</p>
+<h3 id="_11">量子计算的并行性<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(\oplus\)</span> 是异或。
+在量子计算中利用叠加态，可以在一个电路中同时计算多个函数值。</p>
 
   <hr>
 <div class="md-source-file">
