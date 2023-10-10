@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://note.hobbitqia.cc/OS/chap01/">
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -20,7 +24,7 @@
     
     
       
-        <title>OS Structures - HobbitQia的笔记本</title>
+        <title>OS 结构 - HobbitQia的笔记本</title>
       
     
     
@@ -120,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OS Structures
+              OS 结构
             
           </span>
         </div>
@@ -271,16 +275,20 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../ICS/" class="md-tabs__link">
           
   
@@ -1497,6 +1505,8 @@
       
   
   
+    
+  
   
     
     
@@ -1517,13 +1527,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -1536,7 +1546,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             System
@@ -2849,6 +2859,8 @@
                 
   
   
+    
+  
   
     
     
@@ -2861,13 +2873,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
         
           
           
@@ -2888,7 +2900,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             操作系统原理与实践
@@ -2901,9 +2913,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../chap1.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    OS 结构
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2912,6 +2944,107 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operating-system-services" class="md-nav__link">
+    Operating System Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-calls" class="md-nav__link">
+    System Calls
+  </a>
+  
+    <nav class="md-nav" aria-label="System Calls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-of-system-call-write" class="md-nav__link">
+    Example of System Call - write
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-calls_1" class="md-nav__link">
+    System Calls
+  </a>
+  
+    <nav class="md-nav" aria-label="System Calls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-call-parameter-passing" class="md-nav__link">
+    System Call Parameter Passing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-of-system-calls" class="md-nav__link">
+    Types of System Calls
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linkers-and-loaders" class="md-nav__link">
+    Linkers and Loaders
+  </a>
+  
+    <nav class="md-nav" aria-label="Linkers and Loaders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elf-binary-basics" class="md-nav__link">
+    ELF binary basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking" class="md-nav__link">
+    Linking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3599,11 +3732,11 @@ create process, terminate process; end, abort; </li>
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月10日 12:56:52</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月10日 14:11:02</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月10日 12:56:52</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月10日 14:11:02</span>
       
     
   </small>
