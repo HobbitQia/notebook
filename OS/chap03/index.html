@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/DB/db3/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/OS/chap03/">
       
       
-        <link rel="prev" href="../db2/">
+        <link rel="prev" href="../chap02/">
       
       
-        <link rel="next" href="../db4/">
+        <link rel="next" href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>SQL 语言介绍 - HobbitQia的笔记本</title>
+        <title>进程间通信 - HobbitQia的笔记本</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-to-sql" class="md-skip">
+        <a href="#processes" class="md-skip">
           跳转至
         </a>
       
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SQL 语言介绍
+              进程间通信
             
           </span>
         </div>
@@ -2179,8 +2179,6 @@
                 
   
   
-    
-  
   
     
     
@@ -2221,18 +2219,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../DB/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2248,7 +2246,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             数据库系统
@@ -2263,7 +2261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db1/" class="md-nav__link">
+      <a href="../../DB/db1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2283,7 +2281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db2/" class="md-nav__link">
+      <a href="../../DB/db2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2301,29 +2299,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    SQL 语言介绍
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../DB/db3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2332,266 +2310,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data-definition" class="md-nav__link">
-    Data Definition
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Definition">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#domain-types-in-sql" class="md-nav__link">
-    Domain Types in SQL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#built-in-data-types-in-sql" class="md-nav__link">
-    Built-in Data Types in SQL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-table-construct" class="md-nav__link">
-    Create Table Construct
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#drop-and-alter-table-constructs" class="md-nav__link">
-    Drop and Alter Table Constructs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-query-structure" class="md-nav__link">
-    Basic Query Structure
-  </a>
-  
-    <nav class="md-nav" aria-label="Basic Query Structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-select-clause" class="md-nav__link">
-    The select Clause
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-where-clause" class="md-nav__link">
-    The where Clause
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-from-clause" class="md-nav__link">
-    The from clause
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#natural-join" class="md-nav__link">
-    Natural Join
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-rename-operation" class="md-nav__link">
-    The Rename Operation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#string-operations" class="md-nav__link">
-    String Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ordering-the-display-of-tuples" class="md-nav__link">
-    Ordering the Display of Tuples
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-limit-clause" class="md-nav__link">
-    The limit Clause
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-operations" class="md-nav__link">
-    Set Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#null-values" class="md-nav__link">
-    Null Values
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aggregate-functions" class="md-nav__link">
-    Aggregate Functions
-  </a>
-  
-    <nav class="md-nav" aria-label="Aggregate Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#having-clause" class="md-nav__link">
-    Having Clause
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#null-values-and-aggregates" class="md-nav__link">
-    Null Values and Aggregates
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nested-subqueries" class="md-nav__link">
-    Nested Subqueries
-  </a>
-  
-    <nav class="md-nav" aria-label="Nested Subqueries">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-membership" class="md-nav__link">
-    Set Membership
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-comparison" class="md-nav__link">
-    Set Comparison
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scalar-subquery" class="md-nav__link">
-    Scalar Subquery
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test-for-empty-relations" class="md-nav__link">
-    Test for Empty Relations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test-for-absence-of-duplicate-tuples" class="md-nav__link">
-    Test for Absence of Duplicate Tuples
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#with-clause" class="md-nav__link">
-    With Clause
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modification-of-the-database" class="md-nav__link">
-    Modification of the Database
-  </a>
-  
-    <nav class="md-nav" aria-label="Modification of the Database">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#deletion" class="md-nav__link">
-    Deletion
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#insertion" class="md-nav__link">
-    Insertion
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#updates" class="md-nav__link">
-    Updates
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2603,7 +2321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db4/" class="md-nav__link">
+      <a href="../../DB/db4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2623,7 +2341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db5/" class="md-nav__link">
+      <a href="../../DB/db5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2643,7 +2361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db6/" class="md-nav__link">
+      <a href="../../DB/db6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2663,7 +2381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db7/" class="md-nav__link">
+      <a href="../../DB/db7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2683,7 +2401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db8/" class="md-nav__link">
+      <a href="../../DB/db8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2703,7 +2421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db9/" class="md-nav__link">
+      <a href="../../DB/db9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2723,7 +2441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db10/" class="md-nav__link">
+      <a href="../../DB/db10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2743,7 +2461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db11/" class="md-nav__link">
+      <a href="../../DB/db11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2763,7 +2481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db12/" class="md-nav__link">
+      <a href="../../DB/db12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2783,7 +2501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db13/" class="md-nav__link">
+      <a href="../../DB/db13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2803,7 +2521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db14/" class="md-nav__link">
+      <a href="../../DB/db14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2823,7 +2541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db15/" class="md-nav__link">
+      <a href="../../DB/db15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3141,6 +2859,8 @@
                 
   
   
+    
+  
   
     
     
@@ -3157,18 +2877,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../OS/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3184,7 +2904,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             操作系统原理与实践
@@ -3199,7 +2919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap01/" class="md-nav__link">
+      <a href="../chap01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3219,7 +2939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap02/" class="md-nav__link">
+      <a href="../chap02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3237,9 +2957,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../OS/chap03/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    进程间通信
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3248,6 +2988,154 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#process-concept" class="md-nav__link">
+    Process Concept
+  </a>
+  
+    <nav class="md-nav" aria-label="Process Concept">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-stack" class="md-nav__link">
+    The Stack
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-control-block-pcb" class="md-nav__link">
+    Process Control Block (PCB)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-state" class="md-nav__link">
+    Process State
+  </a>
+  
+    <nav class="md-nav" aria-label="Process State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process-creation" class="md-nav__link">
+    Process Creation
+  </a>
+  
+    <nav class="md-nav" aria-label="Process Creation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-fork-system-call" class="md-nav__link">
+    The fork() System Call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-execve-system-call" class="md-nav__link">
+    The execve() System Call
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-terminations" class="md-nav__link">
+    Process Terminations
+  </a>
+  
+    <nav class="md-nav" aria-label="Process Terminations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processes-and-signals" class="md-nav__link">
+    Processes and Signals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zombie" class="md-nav__link">
+    Zombie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orphans" class="md-nav__link">
+    Orphans
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-scheduling" class="md-nav__link">
+    Process Scheduling
+  </a>
+  
+    <nav class="md-nav" aria-label="Process Scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context-switch" class="md-nav__link">
+    Context Switch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    Takeaway
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3672,37 +3560,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-definition" class="md-nav__link">
-    Data Definition
+  <a href="#process-concept" class="md-nav__link">
+    Process Concept
   </a>
   
-    <nav class="md-nav" aria-label="Data Definition">
+    <nav class="md-nav" aria-label="Process Concept">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#domain-types-in-sql" class="md-nav__link">
-    Domain Types in SQL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#built-in-data-types-in-sql" class="md-nav__link">
-    Built-in Data Types in SQL
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-table-construct" class="md-nav__link">
-    Create Table Construct
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#drop-and-alter-table-constructs" class="md-nav__link">
-    Drop and Alter Table Constructs
+  <a href="#the-stack" class="md-nav__link">
+    The Stack
   </a>
   
 </li>
@@ -3713,101 +3580,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-query-structure" class="md-nav__link">
-    Basic Query Structure
+  <a href="#process-control-block-pcb" class="md-nav__link">
+    Process Control Block (PCB)
   </a>
   
-    <nav class="md-nav" aria-label="Basic Query Structure">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-state" class="md-nav__link">
+    Process State
+  </a>
+  
+    <nav class="md-nav" aria-label="Process State">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-select-clause" class="md-nav__link">
-    The select Clause
+  <a href="#process-creation" class="md-nav__link">
+    Process Creation
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-where-clause" class="md-nav__link">
-    The where Clause
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-from-clause" class="md-nav__link">
-    The from clause
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#natural-join" class="md-nav__link">
-    Natural Join
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-rename-operation" class="md-nav__link">
-    The Rename Operation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#string-operations" class="md-nav__link">
-    String Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ordering-the-display-of-tuples" class="md-nav__link">
-    Ordering the Display of Tuples
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-limit-clause" class="md-nav__link">
-    The limit Clause
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-operations" class="md-nav__link">
-    Set Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#null-values" class="md-nav__link">
-    Null Values
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aggregate-functions" class="md-nav__link">
-    Aggregate Functions
-  </a>
-  
-    <nav class="md-nav" aria-label="Aggregate Functions">
+    <nav class="md-nav" aria-label="Process Creation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#having-clause" class="md-nav__link">
-    Having Clause
+  <a href="#the-fork-system-call" class="md-nav__link">
+    The fork() System Call
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#null-values-and-aggregates" class="md-nav__link">
-    Null Values and Aggregates
+  <a href="#the-execve-system-call" class="md-nav__link">
+    The execve() System Call
   </a>
   
 </li>
@@ -3818,44 +3622,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nested-subqueries" class="md-nav__link">
-    Nested Subqueries
+  <a href="#process-terminations" class="md-nav__link">
+    Process Terminations
   </a>
   
-    <nav class="md-nav" aria-label="Nested Subqueries">
+    <nav class="md-nav" aria-label="Process Terminations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#set-membership" class="md-nav__link">
-    Set Membership
+  <a href="#processes-and-signals" class="md-nav__link">
+    Processes and Signals
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#set-comparison" class="md-nav__link">
-    Set Comparison
+  <a href="#zombie" class="md-nav__link">
+    Zombie
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#scalar-subquery" class="md-nav__link">
-    Scalar Subquery
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test-for-empty-relations" class="md-nav__link">
-    Test for Empty Relations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test-for-absence-of-duplicate-tuples" class="md-nav__link">
-    Test for Absence of Duplicate Tuples
+  <a href="#orphans" class="md-nav__link">
+    Orphans
   </a>
   
 </li>
@@ -3866,9 +3656,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#with-clause" class="md-nav__link">
-    With Clause
+  <a href="#process-scheduling" class="md-nav__link">
+    Process Scheduling
   </a>
+  
+    <nav class="md-nav" aria-label="Process Scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context-switch" class="md-nav__link">
+    Context Switch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3878,36 +3681,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modification-of-the-database" class="md-nav__link">
-    Modification of the Database
+  <a href="#takeaway" class="md-nav__link">
+    Takeaway
   </a>
-  
-    <nav class="md-nav" aria-label="Modification of the Database">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#deletion" class="md-nav__link">
-    Deletion
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#insertion" class="md-nav__link">
-    Insertion
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#updates" class="md-nav__link">
-    Updates
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3930,412 +3706,372 @@
   
 
 
-<h1 id="introduction-to-sql">Introduction to SQL<a class="headerlink" href="#introduction-to-sql" title="Permanent link">&para;</a></h1>
+<h1 id="processes">Processes<a class="headerlink" href="#processes" title="Permanent link">&para;</a></h1>
 <details class="abstract">
 <summary>Abstract</summary>
 <ul>
-<li>Data Definition</li>
-<li>Basic Query Structure</li>
-<li>Additional Basic Operations</li>
-<li>Set Operations</li>
-<li>Null Values</li>
-<li>Aggregate Functions</li>
-<li>Nested Subqueries</li>
-<li>Modification of the Database </li>
-</ul>
-</details>
-<h2 id="data-definition">Data Definition<a class="headerlink" href="#data-definition" title="Permanent link">&para;</a></h2>
-<h3 id="domain-types-in-sql">Domain Types in SQL<a class="headerlink" href="#domain-types-in-sql" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>char(n).</code> Fixed length character string, with user-specified length n. <br />
-定长字符串. C 语言里字符串结尾有 <code>\0</code>, 但数据库里没有，长度由定义而得。  </li>
-<li><code>varchar(n).</code> Variable length character strings, with user-specified maximum length n.<br />
-不定长字符串。不同的数据类型比较可能有问题（比如定长和不定长的字符串）</li>
-<li><code>int.</code> Integer (a finite subset of the integers that is machine-dependent).</li>
-<li><code>smallint.</code> Small integer (a machine-dependent subset of the integer domain type).</li>
-<li><code>numeric(p,d).</code> Fixed point number, with user-specified precision of p digits, with d digits to the right of decimal point.   <br />
-p 表示有效数字位数, d 表示小数点后多少位。
-<strong><em>e.g.</em></strong> <code>number(3,1)</code> allows 44.5 to be store exactly,  but neither 444.5 or 0.32</li>
-<li>real, double precision.  Floating point and double-precision floating point numbers, with machine-dependent precision.</li>
-<li><code>float(n).</code> Floating point number, with user-specified precision of at least n digits.</li>
-</ul>
-<h3 id="built-in-data-types-in-sql">Built-in Data Types in SQL<a class="headerlink" href="#built-in-data-types-in-sql" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>date</strong>: Dates, containing a (4 digit) year, month and date<br />
-<strong><em>e.g.</em></strong> date ‘2005-7-27’</li>
-<li><strong>time</strong>: Time of day, in hours, minutes and seconds.
-<strong><em>e.g.</em></strong> time ‘09:00:30’         time ‘09:00:30.75’</li>
-<li>timestamp: date plus time of day
-<strong><em>e.g.</em></strong> timestamp  ‘2005-7-27 09:00:30.75’</li>
-<li><strong>interval</strong>: period of time
-<strong><em>e.g.</em></strong> interval  ‘1’ day  <ul>
-<li>Subtracting a date/time/timestamp value from another gives an interval value.  </li>
-<li>Interval values can be added to date/time/timestamp values</li>
-<li>built-in date, time functions: <code>current_date(), current_time(), year(x), month(x), day(x), hour(x), minute(x), second(x)</code></li>
+<li>Process Concept</li>
+<li>Process Control Block</li>
+<li>Process State<ul>
+<li>Process Creation</li>
+<li>Process Termination</li>
+<li>Process and Signal</li>
 </ul>
 </li>
-</ul>
-<h3 id="create-table-construct">Create Table Construct<a class="headerlink" href="#create-table-construct" title="Permanent link">&para;</a></h3>
-<p>An SQL relation is defined using the create table command:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">(</span><span class="n">A1</span><span class="w"> </span><span class="n">D1</span><span class="p">,</span><span class="w"> </span><span class="n">A2</span><span class="w"> </span><span class="n">D2</span><span class="p">,</span><span class="w"> </span><span class="p">...,</span><span class="w"> </span><span class="n">An</span><span class="w"> </span><span class="n">Dn</span><span class="p">,</span><span class="w">           </span><span class="p">(</span><span class="n">integrity</span><span class="o">-</span><span class="n">constraint1</span><span class="p">),</span><span class="w">            </span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">..,</span><span class="w">         </span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">(</span><span class="n">integrity</span><span class="o">-</span><span class="n">constraintk</span><span class="p">))</span>
-</code></pre></div></p>
-<ul>
-<li><span class="arithmatex">\(r\)</span> is the name of the relation</li>
-<li>each <span class="arithmatex">\(Ai\)</span> is an <em>attribute name</em> in the schema of relation <span class="arithmatex">\(r\)</span></li>
-<li><span class="arithmatex">\(Di\)</span> is the <em>data type</em> of values in the domain of attribute <span class="arithmatex">\(Ai\)</span>  </li>
-</ul>
-<p><strong>Integrity Constraints in Create Table</strong></p>
-<ul>
-<li><code>not null</code></li>
-<li>primary key <span class="arithmatex">\((A_1,\ldots,A_n)\)</span><br />
-不能为空; 表内不能有相同的 keys. 否则这样的数据是插入不进去的。</li>
-<li>foreign key <span class="arithmatex">\((A_m,\ldots,A_n)\)</span> references r<br />
-隐含：引用对应表的主键。    </li>
-</ul>
-<p>如果不符合完整性约束条件，插入可能会失败。</p>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131016449.png" width = 60%/> </div>  </p>
-</details>
-<p>可以给一个缺省值 <strong><em>e.g.</em></strong>　<code>default 0</code></p>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131020440.png" width = 60%/> </div>    </p>
-<p><code>sec_id</code> can be dropped from primary key above, to ensure a student cannot be registered for two sections of the same course in the same semester</p>
-</details>
-<p>如果引用的表中有条目被删除，可能会破坏完整性约束条件。有下面的方法：  </p>
-<ul>
-<li><em>restrict</em>: 如果有条目是被引用的，那么不允许删除。</li>
-<li><em>cascade</em>: 引用的条目被删了之后，引用者也一并删除</li>
-<li><em>set null</em>: 引用者的指针设为 <code>null</code>. </li>
-<li><em>set default</em> </li>
-</ul>
-<p>如果引用的表中有更新，也有类似上面的四种方法。<br />
-在 <code>create table</code> 中定义  </p>
-<ul>
-<li><code>on delete cascade  |set null |restrict |set default</code></li>
-<li><code>on update cascade  |set null |restrict |set default</code></li>
-</ul>
-<h3 id="drop-and-alter-table-constructs">Drop and Alter Table Constructs<a class="headerlink" href="#drop-and-alter-table-constructs" title="Permanent link">&para;</a></h3>
-<ul>
-<li>drop table student
-Deletes the table and its contents <br />
-把内容和表全删了，之后不能再往表里插入。</li>
-<li>delete from student<br />
-Deletes all contents of table, but retains table</li>
-<li>alter table <br />
-可以动态修改表的定义 <ul>
-<li><code>alter table r add A D</code><ul>
-<li>where A is the name of the attribute to be added to relation r  and D is the domain of A.</li>
-<li>All tuples in the relation are assigned null as the value for the new attribute.<br />
-<strong><em>e.g.</em></strong> <code>alter table student add resume varchar(256);</code></li>
-<li>还可以增加外键约束条件，也可以删掉</li>
-</ul>
-</li>
-<li><code>alter table r drop A</code>     <ul>
-<li>where A is the name of an attribute of relation r</li>
-<li><em>Dropping of attributes not supported by many databases</em> <br />
-可以生成一个新的表，然后把除了要删的列以外的列搬移过去。  </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<details class="info">
-<summary>关系数据库的三层抽象</summary>
-<ul>
-<li>用户层：由 DML 定义操作, 如 <code>select</code> 语句。</li>
-<li>逻辑层：由 <code>create table</code> 决定，我们定义了表的元素，以及各种键，构成了模式图。</li>
+<li>Process Scheduling</li>
 </ul>
 </details>
-<h2 id="basic-query-structure">Basic Query Structure<a class="headerlink" href="#basic-query-structure" title="Permanent link">&para;</a></h2>
-<h3 id="the-select-clause">The <code>select</code> Clause<a class="headerlink" href="#the-select-clause" title="Permanent link">&para;</a></h3>
-<p>The <strong><code>select</code></strong> clause list the attributes desired in the result of a query.  </p>
-<p><u>SQL names are case insensitive</u> <br />
-大小写不敏感。（属性名字、表的名字等）</p>
+<h2 id="process-concept">Process Concept<a class="headerlink" href="#process-concept" title="Permanent link">&para;</a></h2>
+<p><strong>Process</strong>: a unit of resource allocation and protection  </p>
 <ul>
-<li>To force the elimination of duplicates, insert the keyword <strong><code>distinct</code></strong> after select.
-<strong><em>e.g.</em></strong> <code>select distinct dept_name from instructor</code><br />
-可以加 <strong>all</strong> 表示不去重，<del>加不加无所谓</del></li>
-<li>An asterisk in the select clause denotes “all attributes”<br />
-<strong><em>e.g.</em></strong> <code>select * from instructor</code></li>
-<li>The select clause can contain arithmetic expressions involving the operation, +, –, <span class="arithmatex">\(\div\)</span>, and /, and operating on constants or attributes of tuples.<br />
-可以有加减乘除运算 <strong><em>e.g.</em></strong> <code>select ID, name, salary/12 from instructor</code></li>
+<li>A process is a program in execution<br />
+一个在执行的程序（ELF 文件），跑起来后要分配资源（CPU，内存，IO），就成为了一个进程。</li>
+<li>Multiple processes can be associated to the same program.<br />
+一个 program 可以运行多次，每次运行都产生一个新的进程。</li>
+<li>A running system consists of multiple processes.  </li>
+<li>“job” and “process” are used interchangeably in OS texts.  </li>
 </ul>
-<h3 id="the-where-clause">The <code>where</code> Clause<a class="headerlink" href="#the-where-clause" title="Permanent link">&para;</a></h3>
-<p>The <strong><code>where</code></strong> clause specifies conditions that the result must satisfy. <br />
-Corresponds to the selection predicate of the relational algebra.  </p>
+<p>Process includes（其实就是 ELF 的内容）</p>
 <ul>
-<li>SQL includes a <strong><code>between</code></strong> comparison operator
-<strong><em>e.g.</em></strong> <code>select name from instructor where salary between 90000 and 100000</code></li>
-<li>Tuple comparison<br />
-元组相等等价于各个元素都相等。
-<strong><em>e.g.</em></strong> <code>select name, course_id from instructor, teaches where (instructor.ID, dept_name) = (teaches.ID, ’Biology’);</code>  </li>
-</ul>
-<h3 id="the-from-clause">The <code>from</code> clause<a class="headerlink" href="#the-from-clause" title="Permanent link">&para;</a></h3>
-<p>The <strong><code>from</code></strong> clause lists the relations involved in the query.<br />
-Corresponds to the <strong>Cartesian product</strong> operation of the relational algebra.  </p>
-<h3 id="natural-join">Natural Join<a class="headerlink" href="#natural-join" title="Permanent link">&para;</a></h3>
-<p><strong><em>e.g.</em></strong> <code>select * from instructor natural join teaches;</code></p>
-<p><strong><em>e.g.</em></strong> <code>select name, course_id from instructor, teaches where instructor.ID = teaches.ID;</code><br />
-<code>select name, course_id from instructor natural join teaches;</code> <br />
-上面两条语句是等价的。</p>
-<p><u><strong>Unrelated attributes with same name</strong> which get equated incorrectly!</u>  </p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><code>course(course_id,title, dept_name,credits）</code>, <code>teaches(ID, course_id,sec_id,semester, year)</code>, <code>instructor(ID, name, dept_name,salary）</code> 这里的 department 含义各有不同，不能直接自然连接。<br />
-可以写成 <code>select name, title from (instructor natural join teaches）join course using(course_id);</code> 即规定连接的属性，对应于 <span class="arithmatex">\(\sigma_\theta\)</span>   </p>
-<p>Find students who takes courses across his/her department.<br />
-可写作 </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">select</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">id</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="p">(</span><span class="n">student</span><span class="w"> </span><span class="k">natural</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">takes</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">           </span><span class="k">join</span><span class="w"> </span><span class="n">course</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">course_id</span><span class="err">）</span><span class="w"> </span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">dept_name</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">course</span><span class="p">.</span><span class="n">dept_name</span>
-</code></pre></div>
-</div>
-<h3 id="the-rename-operation">The Rename Operation<a class="headerlink" href="#the-rename-operation" title="Permanent link">&para;</a></h3>
-<p>The SQL allows renaming relations and attributes using the <strong><code>as</code></strong> clause.<br />
-<code>old-name as new-name</code></p>
-<p><strong><em>e.g.</em></strong> 
-<code>select distinct T. name from instructor as T, instructor as S where T.salary &gt; S.salary and S.dept_name = ‘Comp. Sci.’</code></p>
-<ul>
-<li>Keyword <strong><code>as</code></strong> is optional and may be omitted.  </li>
-</ul>
-<h3 id="string-operations">String Operations<a class="headerlink" href="#string-operations" title="Permanent link">&para;</a></h3>
-<p>SQL includes a <strong>string-matching operator</strong> for comparisons on character strings.  The operator <strong><code>like</code></strong> uses patterns that are described using two special characters. </p>
-<p>注意单引号表示字符串。</p>
-<ul>
-<li><strong>percent (%)</strong>.  The % character matches any substring.<br />
-<strong><em>e.g.</em></strong> <code>select name from instructor where name like '%dar%';</code>
-找名字里面含有 <code>dar</code> 的字符串。 </li>
-<li><strong>underscore (_)</strong>.  The _ character matches any character.  </li>
+<li>code (also called the text)<br />
+initially stored on disk in an executable file</li>
+<li>data section<br />
+global variables (<code>.bss</code> and <code>.data</code> in x86 assembly)</li>
+<li>program counter<br />
+points to the next instruction to execute (i.e., an address in the code)</li>
+<li>content of the processor’s registers</li>
+<li>a stack</li>
+<li>a heap</li>
 </ul>
 <div class="admonition example">
-<p class="admonition-title">Match the string</p>
-<p>匹配字符串 <code>'100 %'</code> 但是 <code>%</code> 符号被我们作为了通配符，这里我们需要用到转义符 <code>\</code>. <code>\%</code> 即将 <code>%</code> 作为正常字符匹配。<br />
-<code>\</code> 也可以是一个基本符号，我们需要在后面写出 <code>escape</code> 表示其在这里作为转义符。类似地我们还可以将转义符定义为 <code>#</code>. 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">like</span><span class="w"> </span><span class="err">‘</span><span class="mi">100</span><span class="w"> </span><span class="err">\</span><span class="o">%</span><span class="s1">&#39;  escape  &#39;</span><span class="err">\</span><span class="s1">&#39; </span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="s1">like ‘100 \%&#39;</span><span class="w">  </span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">like</span><span class="w"> </span><span class="err">‘</span><span class="mi">100</span><span class="w">  </span><span class="o">#%</span><span class="s1">&#39;  escape  ‘#&#39;</span><span class="w"> </span>
-</code></pre></div></p>
+<p class="admonition-title">Memory Layout of a C Program</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20231011231535.png" width=60%></div></p>
+<ul>
+<li><code>int x;</code> unitialized data, </li>
+<li><code>int y = 15;</code> initialized data</li>
+<li>临时变量在栈上，malloc 在堆上。</li>
+</ul>
 </div>
-<p>SQL supports a variety of string operations such as</p>
-<ul>
-<li>concatenation (using <code>||</code>)</li>
-<li>converting from upper to lower case (and vice versa)</li>
-<li>finding string length, extracting substrings, etc.  </li>
-</ul>
-<h3 id="ordering-the-display-of-tuples">Ordering the Display of Tuples<a class="headerlink" href="#ordering-the-display-of-tuples" title="Permanent link">&para;</a></h3>
-<p>关系是无序的，但我们可能规定显示出来的顺序。</p>
-<ul>
-<li>We may specify desc for <em>descending</em> order or asc for <em>ascending</em> order, for each attribute; ascending order is the default.<br />
-<strong><em>e.g.</em></strong> <code>order by name desc</code><br />
-可以排序的类型，如字符串、数字。</li>
-<li>Can sort on multiple attributes<br />
-<strong><em>e.g.</em></strong> <code>order by  dept_name, name</code> 先按第一个排，如果第一个元素相同再按第二个排。</li>
-</ul>
-<h3 id="the-limit-clause">The <code>limit</code> Clause<a class="headerlink" href="#the-limit-clause" title="Permanent link">&para;</a></h3>
-<p>The <strong><code>limit</code></strong> clause can be used to constrain the number of rows returned by the select statement. <br />
-limit clause takes one or two numeric arguments, which must both be nonnegative integer constants: </p>
-<ul>
-<li><code>limit offset, row_count</code></li>
-<li><code>limit row_count == limit 0, row_count</code></li>
-</ul>
-<p><strong><em>e.g.</em></strong>  <code>select  name from instructor order by salary desc limit 3；   //  limit 0,3</code></p>
-<h3 id="set-operations">Set Operations<a class="headerlink" href="#set-operations" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>union, intersect, except</code> 是严格的集合操作，会对结果去重.</li>
-<li><code>union all</code>, <code>intersect all</code> and <code>except all</code>. 保持多重集。</li>
-</ul>
+<h3 id="the-stack">The Stack<a class="headerlink" href="#the-stack" title="Permanent link">&para;</a></h3>
+<p>每个函数运行时都会分配栈的一部分，即一个栈帧 stack frame. </p>
 <details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131639119.png" width = 50%/> </div>  </p>
+<summary>Simple Runtime Stack</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20231010163732.png" width=30%></div></p>
 </details>
-<h3 id="null-values">Null Values<a class="headerlink" href="#null-values" title="Permanent link">&para;</a></h3>
-<p><strong>null</strong> signifies <em>an unknown value</em> or that <em>a value does not exist</em>.</p>
+<p>引入栈是为了解决函数调用的问题。  </p>
+<p>Any function needs to have some “state” so that it can run. </p>
 <ul>
-<li>The result of any arithmetic expression involving null is null.<br />
-<strong><em>e.g.</em></strong> <code>5 + null</code> returns null</li>
-<li>The predicate is null can be used to check for null values.<br />
-<strong><em>e.g.</em></strong> Find all instructors whose salary is null. <br />
-<code>select name from instructor where salary is null</code></li>
-<li>Comparisons with null values return the special truth value: <strong>unknown</strong>.  </li>
+<li>Parameters passed to it by whatever function called it</li>
+<li>Local variables</li>
+<li>The address of the instruction that should be executed once the function<br />
+returns: the return address</li>
+<li>The value that it will return</li>
 </ul>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202303131118989.png" width = 50%/> </div>
+<p>栈从上（高地址）往下（低地址），堆从下往上。如果碰面就发生了溢出。</p>
+<div class="admonition note">
+<p class="admonition-title">Runtime Stack Growth</p>
+<p>如果我们运行一个程序两次，内存布局不一定相同。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011204707.png" width=65%></div></p>
+<p>stack 和 heap 称为动态内存，相当于是 OS 给进程的两张草稿纸，用多少取决于当前的执行状态。</p>
+</div>
+<h2 id="process-control-block-pcb">Process Control Block (PCB)<a class="headerlink" href="#process-control-block-pcb" title="Permanent link">&para;</a></h2>
+<p>Each process has and only has a <strong>PCB</strong>. Information associated with each process.<br />
+控制块，每一个进程有且只有一个 PCB. 整个 PCB 存在内存里。  </p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231010164638.png" width=25%></div>
 
 <ul>
-<li>Result of select predicate is treated as false if it evaluates to unknown</li>
+<li>Process state</li>
+<li>Program counter</li>
+<li>CPU registers</li>
+<li>CPU-scheduling information</li>
+<li>Memory-management information</li>
+<li>Accounting information</li>
+<li>I/O status information</li>
 </ul>
-<h3 id="aggregate-functions">Aggregate Functions<a class="headerlink" href="#aggregate-functions" title="Permanent link">&para;</a></h3>
+<p>Represented by the C structure <code>task_struct</code>. </p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011205333.png" width=65%></div>
+
+<p>所有的 <code>task_struct</code> 是通过链表串起来的。</p>
+<h2 id="process-state">Process State<a class="headerlink" href="#process-state" title="Permanent link">&para;</a></h2>
+<p>As a process executes, it changes state</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231010164518.png" width=75%></div>
+
+<ul>
+<li><strong>New</strong>: The process is being created</li>
+<li><strong>Running</strong>: Instructions are being executed</li>
+<li><strong>Waiting</strong>: The process is waiting for some events to occur</li>
+<li><strong>Ready</strong>: The process is waiting to be assigned to a processor</li>
+<li><strong>Terminated</strong>: The process has finished execution</li>
+</ul>
+<!-- p17 必考 -->
+
+<h3 id="process-creation">Process Creation<a class="headerlink" href="#process-creation" title="Permanent link">&para;</a></h3>
+<p>A process may create new processes, in which case it becomes a parent.</p>
+<p>Each process has a <strong>pid</strong> (process ID).  </p>
+<ul>
+<li>
+<p><strong>ppid</strong> refers to the parent’s pid</p>
+<details class="example">
+<summary>Process Tree</summary>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20231010165405.png" /></p>
+</details>
+</li>
+<li>
+<p>The child may inherit/share some of the resources of its parent, or may have entirely new ones.<br />
+子进程继承父进程的资源（如打开的文件）</p>
+</li>
+<li>A parent can also pass input to a child.  </li>
+<li>Upon creation of a child, the parent can either<ul>
+<li>continue execution, or</li>
+<li>wait for the child’s completion</li>
+</ul>
+</li>
+<li>The child could be either<ul>
+<li>a clone of the parent (<strong>i.e.</strong>, have a copy of the address space), or </li>
+<li>be an entirely new program</li>
+</ul>
+</li>
+</ul>
+<h4 id="the-fork-system-call">The <code>fork()</code> System Call<a class="headerlink" href="#the-fork-system-call" title="Permanent link">&para;</a></h4>
+<p><code>fork()</code> creates a new process.  <br />
+The child is is a copy of the parent, but</p>
+<ul>
+<li>It has a different pid (and thus ppid)</li>
+<li>Its resource utilization (so far) is set to 0</li>
+<li><code>fork()</code> returns the child’s pid to the parent, and 0 to the child.<br />
+<code>fork</code> 会把 child 的 pid 返回给 parent，给 child 返回 0. (how to implement?)  </li>
+<li>Both processes continue execution after the call to <code>fork()</code></li>
+</ul>
 <details class="example">
 <summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131120904.png" width = 60%/> </div>  </p>
-</details>
-<p>注意在 <code>select</code> 里出现的属性，除了统计函数以外，一定要是分组属性里出现过的。</p>
-<h4 id="having-clause">Having Clause<a class="headerlink" href="#having-clause" title="Permanent link">&para;</a></h4>
-<p>对分组后的组进行筛选。  </p>
-<p><strong><em>e.g.</em></strong> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">select</span><span class="w"> </span><span class="n">dept_name</span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">cnt</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">where</span><span class="w">  </span><span class="n">salary</span><span class="w"> </span><span class="o">&gt;=</span><span class="mi">100000</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">dept_name</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">having</span><span class="w">  </span><span class="k">count</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">cnt</span><span class="p">;</span>
-</code></pre></div></p>
-<p>predicates in the <strong><code>having</code></strong> clause are applied <em>after the formation of groups</em> whereas predicates in the <strong><code>where</code></strong> clause are applied <em>before forming groups</em>.  </p>
-<h4 id="null-values-and-aggregates">Null Values and Aggregates<a class="headerlink" href="#null-values-and-aggregates" title="Permanent link">&para;</a></h4>
-<p><code>select sum (salary) from instructor</code>  </p>
-<ul>
-<li>Above statement ignores null amounts</li>
-<li>Result is null if there is no non-null amount</li>
-<li>All aggregate operations except <code>count(*)</code> ignore tuples with null values on the aggregated attributes</li>
-</ul>
-<details class="example">
-<summary>Arithmetric expression with Aggregate functions</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131130602.png" width = 60%/> </div>    </p>
-<p>第二个表示重名率小于千分之一的系。</p>
-</details>
-<h3 id="nested-subqueries">Nested Subqueries<a class="headerlink" href="#nested-subqueries" title="Permanent link">&para;</a></h3>
-<p>A <strong>subquery</strong> is a <strong>select-from-where</strong> expression that is nested within another query.</p>
-<h4 id="set-membership">Set Membership<a class="headerlink" href="#set-membership" title="Permanent link">&para;</a></h4>
-<p><code>in, not in</code></p>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131147512.png" width = 60%/> </div>    </p>
-</details>
-<p>除了单个元素外，元组也可以使用 <code>in, not in</code> </p>
-<h4 id="set-comparison">Set Comparison<a class="headerlink" href="#set-comparison" title="Permanent link">&para;</a></h4>
-<ul>
-<li><code>some</code> 某些成员   </li>
-<li><code>all</code> 所有成员</li>
-</ul>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>工资大于生物系中的某些老师的老师.<br />
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">where</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">some</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">salary</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">                                    </span><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">                                    </span><span class="k">where</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">’</span><span class="n">Biology</span><span class="err">’</span><span class="p">);</span>
-</code></pre></div></p>
-</div>
-<h4 id="scalar-subquery">Scalar Subquery<a class="headerlink" href="#scalar-subquery" title="Permanent link">&para;</a></h4>
-<p><strong>Scalar (标量) subquery</strong> is one which is used where a single value is expected.  </p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">where</span><span class="w">  </span><span class="n">salary</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">budget</span><span class="w">  </span><span class="k">from</span><span class="w"> </span><span class="n">department</span><span class="w"> </span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="n">department</span><span class="p">.</span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">instructor</span><span class="p">.</span><span class="n">dept_name</span><span class="p">)</span>
+<p>What does the following code print?
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fork</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// PARENT</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="c1">// ask the OS to put me in waiting</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">fprintf</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span><span class="err">”</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">%</span><span class="n">d</span><span class="err">\</span><span class="n">n</span><span class="err">”</span><span class="p">,</span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// CHILD</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
 </code></pre></div>
-<p>这里 <code>dept_name</code> 是这个表的主键，只返回一个元组，这种情况下是可以不用 <code>some, all</code> 的。</p>
-</div>
-<p>Runtime error if subquery returns more than one result tuple.  </p>
-<h4 id="test-for-empty-relations">Test for Empty Relations<a class="headerlink" href="#test-for-empty-relations" title="Permanent link">&para;</a></h4>
-<p>The exists construct returns the value true if the argument subquery is nonempty.</p>
+The answer should be 12.<br />
+<code>fork</code> 之后变量的值相同，但并不是同一个变量。（相当于一份拷贝）
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011211326.png" width=55%></div>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011211428.png" width=55%></div></p>
+</details>
+<details class="example">
+<summary>Example</summary>
+<p>How many processes does this C program create?
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">arg</span><span class="p">[])</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">fork</span><span class="w"> </span><span class="p">();</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fork</span><span class="w"> </span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="n">fork</span><span class="w"> </span><span class="p">();</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">fork</span><span class="w"> </span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</code></pre></div>
+The answer should be 12.</p>
+</details>
+<h4 id="the-execve-system-call">The <code>execve()</code> System Call<a class="headerlink" href="#the-execve-system-call" title="Permanent link">&para;</a></h4>
+<p><code>execve()</code> system call used after a <code>fork()</code> to replace the process’ memory space with a new program.<br />
+<code>execve()</code> 会把之前的进程资源全部丢掉，再 load 新的 binary，映射新的内存，分的新的堆和栈，常接在 <code>fork()</code> 后面使用。</p>
+<div class="admonition note">
+<p class="admonition-title">the pros and cons of <code>fork()</code></p>
 <ul>
-<li><code>exists r</code> <span class="arithmatex">\(\Leftrightarrow r \neq \emptyset\)</span></li>
-<li><code>not exists r</code> <span class="arithmatex">\(\Leftrightarrow r = \emptyset\)</span></li>
+<li>Pros<ul>
+<li>简洁：不需要参数</li>
+<li>分工：<code>fork</code> 搭起骨架，<code>exec</code> 赋予灵魂</li>
+<li>联系：保持进程与进程之间的关系</li>
 </ul>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>09FALL 开的课，而且 10SPRING 也开了课。
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">select</span><span class="w"> </span><span class="n">course_id</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">from</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">S</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">where</span><span class="w"> </span><span class="n">semester</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">’</span><span class="n">Fall</span><span class="err">’</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">year</span><span class="o">=</span><span class="w"> </span><span class="mi">2009</span><span class="w"> </span><span class="k">and</span><span class="w">                </span><span class="k">exists</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w">                            </span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">from</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">T</span><span class="w">                      </span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="n">semester</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">’</span><span class="n">Spring</span><span class="err">’</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">year</span><span class="o">=</span><span class="w"> </span><span class="mi">2010</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">course_id</span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">course_id</span><span class="p">);</span>
-</code></pre></div></p>
+</li>
+<li>Cons<ul>
+<li>复杂：两个系统调用</li>
+<li>性能差</li>
+<li>安全问题</li>
+</ul>
+</li>
+<li>Clone syscal: fork + exec</li>
+</ul>
 </div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Find all students who have taken all courses offered in the Biology department.<br />
-SQL 语句往往需要逆向考虑，即找到这样的学生，不存在他没选过的生物系的课。<br />
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">select</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">name</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">from</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">S</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">where</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">course_id</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">                        </span><span class="k">from</span><span class="w"> </span><span class="n">course</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">                        </span><span class="k">where</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">’</span><span class="n">Biology</span><span class="err">’</span><span class="p">)</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">                </span><span class="k">except</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">                    </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">course_id</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">                        </span><span class="k">from</span><span class="w"> </span><span class="n">takes</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">T</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">                        </span><span class="k">where</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">ID</span><span class="p">));</span>
-</code></pre></div></p>
-</div>
-<h4 id="test-for-absence-of-duplicate-tuples">Test for Absence of Duplicate Tuples<a class="headerlink" href="#test-for-absence-of-duplicate-tuples" title="Permanent link">&para;</a></h4>
-<p>The <strong><code>unique</code></strong> construct tests whether a subquery has any duplicate tuples in its result.<br />
-验证是否是一个集合，而非多重集。  </p>
+<h3 id="process-terminations">Process Terminations<a class="headerlink" href="#process-terminations" title="Permanent link">&para;</a></h3>
+<p>A process terminates itself with the <code>exit()</code> system call.<br />
+调用 exit 后终止进程，释放资源。</p>
 <ul>
-<li>Evaluates to “true” on an empty set. <br />
-可以将 unique 理解为 at most once. </li>
+<li>This call takes as argument an integer that is called the process’s exit/return/error code.  </li>
+<li>All resources of a process are deallocated by the OS.<br />
+<code>exit</code> 终止之后会把资源都释放。</li>
+<li>A process can cause the termination of another process.  <ul>
+<li>Using something called “signals” and the <code>kill()</code> system call</li>
 </ul>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131208597.png" width = 60%/> </div>    </p>
-<p>如果不加 exist, 可能有没开过的课也被算进去。我们这里求得是恰好只开过一次的。</p>
+</li>
+<li>A parent can wait for a child to complete.<br />
+<code>wait()</code> and <code>waitpid()</code></li>
+</ul>
+<h4 id="processes-and-signals">Processes and Signals<a class="headerlink" href="#processes-and-signals" title="Permanent link">&para;</a></h4>
+<p>A process can receive signals. And each signal causes a default behavior in the process.<br />
+<strong><em>e.g.</em></strong> 当我们想要终止一个程序时，我们可以敲入 <code>Ctrl+C</code>，这相当于对当前进程发送了 <code>SIGINT</code> 信号，就会终止当前进程。</p>
+<p>Manipulating Signals</p>
+<ul>
+<li>The <code>signal()</code> system call allows a process to specify what action to do on a signal<br />
+我们可以修改有些信号的处理程序。</li>
+<li>Signals like <code>SIGKILL</code> and <code>SIGSTOP</code> cannot be ignored or handled by the user, for security reasons</li>
+</ul>
+<h4 id="zombie">Zombie<a class="headerlink" href="#zombie" title="Permanent link">&para;</a></h4>
+<p>When a child process terminates</p>
+<ul>
+<li>Remains as a <strong>zombie</strong> in an “undead” state.  </li>
+<li>Until it is “reaped” (garbage collected) by the OS.<br />
+一个进程结束了，但依然还在占用资源。（他可以释放自己的资源，除了 PCB 是不能由自己释放的）</li>
+</ul>
+<p>Get rid of zombies: When a child exits, a <code>SIGCHLD</code> signal is sent to the parent.<br />
+我们可以通过给 <code>SIGCHILD</code> 信号加一个 handler，里面调用 <code>wait</code> 来回收进程。</p>
+<h4 id="orphans">Orphans<a class="headerlink" href="#orphans" title="Permanent link">&para;</a></h4>
+<p>An <strong>orphan</strong> process is one whose parent has died.<br />
+子进程还在运行时，它的父进程终止了，那么它就成为了一个孤儿进程。</p>
+<p>pid 1 会收养 orphan，因此孤儿进程不会成为 zombie。（pid 1 进程一定会回收子进程）</p>
+<p>这里存在一个 trick，可以创建一个与当前进程的父进程完全无关的进程：先 <code>fork()</code> 一个进程，随后杀死自己，那么当前进程的子进程就会被 pid 1 收养，就脱离了原来的父进程。</p>
+<h3 id="process-scheduling">Process Scheduling<a class="headerlink" href="#process-scheduling" title="Permanent link">&para;</a></h3>
+<p>一个 CPU 只能运行一个进程，我们希望提高使用效率。进程处于 Waiting 状态的时候 CPU 如果跟着等待是对资源的浪费。</p>
+<p><strong>Process scheduler</strong> selects among ready processes for next execution on CPU core.  </p>
+<p>Maintains scheduling queues of processes: </p>
+<ul>
+<li>Ready queue - set of all processes residing in main memory, ready and waiting to execute.<br />
+只有一个 ready queue, ready queue 不会空，因为 IDLE 进程一直在里面。</li>
+<li>Wait queue - set of processes waiting for an event.<br />
+很多个等待队列，一个被等待的事件对应一个等待队列。当我们这个事件到来之时，我们从事件对应的队列选择一个进程。</li>
+<li>Processes migrate among the various queues.  </li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Ready and Wait Queue</p>
+<p>当我们想要插入一个新的进程时，直接通过双向链表接上即可。通过偏移量找到对应地址，并通过强制类型转换得到 <code>task_struct</code>。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011215154.png" width=65%></div></p>
 </div>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131210226.png" width = 60%/> </div>    </p>
-<p>也可以用 <code>group by count(*) &gt; 1</code> 实现。</p>
-</details>
-<h3 id="with-clause">With Clause<a class="headerlink" href="#with-clause" title="Permanent link">&para;</a></h3>
-<p>The <strong><code>with</code></strong> clause provides a way of defining a temporary view whose definition is available only to the query in which the with clause occurs.<br />
-构造一个临时表  </p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Find all departments with the maximum budget.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">with</span><span class="w"> </span><span class="n">max_budget</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">max</span><span class="p">(</span><span class="n">budget</span><span class="p">)</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="n">department</span><span class="p">)</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">select</span><span class="w"> </span><span class="n">dept_name</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">from</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="n">max_budget</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="k">where</span><span class="w"> </span><span class="n">department</span><span class="p">.</span><span class="n">budget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max_budget</span><span class="p">.</span><span class="n">value</span><span class="p">;</span>
-</code></pre></div></p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231010190355.png" width=65%></div>
+
+<p>首先从 ready queue 中拿一个进程去 CPU，</p>
+<ul>
+<li>如果到时间了（过了一个时间片），就直接把自己放到 ready queue; </li>
+<li>如果要等待 I/O 事件，就把自己放进 wait queue，等待 I/O 事件发生后再把自己唤醒，放回 ready queue.</li>
+<li>创建子进程之后子进程放到 ready queue 中，如果调用了 <code>wait</code>，那么父进程等待子进程终止后，进入 ready queue.</li>
+</ul>
+<h4 id="context-switch">Context Switch<a class="headerlink" href="#context-switch" title="Permanent link">&para;</a></h4>
+<p>A <strong>context switch</strong> occurs when the CPU switches from one process to another.</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231010190452.png" width=60%></div>
+
+<ul>
+<li>When CPU switches to another process, the system must save the state of the old process and load the saved state for the new process via a context switch.<br />
+上下文切换时，存储当前进程的状态，并加载目标进程的状态。</li>
+<li>Context of a process represented in the PCB<br />
+state 主要指寄存器的值，页表...</li>
+<li>Context-switch time is overhead; the system does no useful work while switching. 
+上下文切换不做有意义的事情，是 pure overhead. </li>
+</ul>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011215736.png" width=70%></div>
+
+<ul>
+<li><code>cpu_context</code> 在 <code>task_struct</code> 中，且有一个偏移量。因此这里我们先 load 这个偏移量到寄存器 <code>x10</code>。</li>
+<li><code>x8</code> 指向要被换出去的进程的 <code>task_struct</code>, 随后我们将要存的寄存器存入 <code>task_struct</code> 中。</li>
+<li>随后 <code>x8</code> 指向要被换进来的进程的 <code>task_struct</code>, 随后我们将要取的寄存器从 <code>task_struct</code> 中取出。</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">为什么 switch 中只保存部分寄存器？</p>
+<p>我们上下文切换时会调用 <code>cpu_switch_to</code> 函数。其他寄存器在 arm 架构中属于 caller-saved registers，因此不用在 <code>cpu_switch_to</code> 中保存，<code>cpu_switch_to</code> 中存的是 callee-saved registers. </p>
 </div>
-<details class="example">
-<summary>Complex Queries using With Clause</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131219550.png" width = 60%/> </div> </p>
-</details>
-<h2 id="modification-of-the-database">Modification of the Database<a class="headerlink" href="#modification-of-the-database" title="Permanent link">&para;</a></h2>
-<h3 id="deletion">Deletion<a class="headerlink" href="#deletion" title="Permanent link">&para;</a></h3>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131643578.png" width = 60%/> </div> </p>
-</details>
-<h3 id="insertion">Insertion<a class="headerlink" href="#insertion" title="Permanent link">&para;</a></h3>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131644921.png" width = 60%/> </div>   </p>
-<p>第二种写法，可以不用严格按照定义的元素顺序，只要和自己写的对应即可。</p>
-</details>
-<p>除了基本写法，我们还可以在 <code>insert</code> 后跟查询语句，把查询结果插入到表里去。</p>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131646513.png" width = 60%/> </div>   </p>
-</details>
-<h3 id="updates">Updates<a class="headerlink" href="#updates" title="Permanent link">&para;</a></h3>
-<p><code>update ... set ...</code></p>
-<p>The order is important. So it can be done better using the <strong><code>case</code></strong> statement.  </p>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131648286.png" width = 60%/> </div> <br />
-<div align=center> <img src="http://cdn.hobbitqia.cc/202303131648760.png" width = 60%/> </div></p>
-</details>
+<p>一个进程在内核中运行时重要的 data structures: </p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011221353.png" width=70%></div>
+
+<ul>
+<li>内核栈低地址处有 <code>thread_info</code>, 指向 <code>task_struct</code>, 内有 <code>cpu_context</code>.</li>
+<li>内核栈高地址处有 <code>pt_regs</code>, 保存了寄存器的值。（不是 <code>cpu_context</code> 中的寄存器）<br />
+从用户空间到内核空间时，也会有一次上下文切换，这时候会保存用户空间的所有寄存器，然后加载内核空间的寄存器。</li>
+<li>stack frame</li>
+</ul>
+<p>Context switching between two kernel threads.<br />
+context 一定在 kernel mode 执行。为了安全，上下文切换涉及到寄存器的修改。</p>
+<div class="admonition note">
+<p class="admonition-title">Context Switch Scenarios - kernel</p>
+<p>When and where are the context (regs) been saved?  </p>
+<ul>
+<li>When: In <code>context_switch</code>, more specifically, in cpu_switch_to</li>
+<li>Where: In PCB, more specifically, in cpu_context</li>
+<li>All regs are running kernel code, termed kernel context
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011222054.png" width=70%></div></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Context Switch Scenarios - user</p>
+<ul>
+<li>When and where are the user context (regs) been saved?<ul>
+<li>When: <code>kernel_entry</code>（进入内核时存寄存器），<code>kernel_exit</code>（离开内核时取出寄存器）; Where: per-thread kernel stack, more specifically <code>pt_regs</code></li>
+</ul>
+</li>
+<li>When and where are the kernel context (regs) saved saved?<ul>
+<li>When: <code>cpu_switch_to</code>; Where: <code>cpu_context</code>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011222153.png" width=70%></div></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><code>fork()</code> return values</p>
+<p>How does <code>fork()</code> return two values?</p>
+<ul>
+<li>
+<p>对于父进程，<code>fork</code> 相当于是一个系统调用。通过 <code>kernel_entry</code> 进入内核态，将用户态上下文存在 <code>pt_regs</code> 中。返回值（pid）通过 <code>pt_regs</code> 的寄存器值返回。<br />
+（系统调用的返回值在 <code>x0</code> 中，我们把这个值存到 <code>pt_regs</code> 中，这样后面从内核切换到用户态时就可以加载返回值到 <code>x0</code>）
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011224012.png" width=70%></div></p>
+</li>
+<li>
+<p>对于子进程，会调用 <code>copy_thread</code> 函数。他会拷贝寄存器，并把 <code>regs[0]=0</code>。这样在后续 <code>kernel_exit</code> 后就可以把值返回到子进程。<br />
+注意到此时子进程的 <code>pc</code> 被设置为了 <code>ret_from_fork</code>（调用 <code>ret_to_user</code>，再调用 <code>kernel_exit</code>），<code>sp</code> 被设置为了 <code>pt_</code>regs`.<br />
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011224646.png" width=70%></div></p>
+</li>
+</ul>
+</div>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<div class="admonition summary">
+<p class="admonition-title">Takeaway</p>
+<ul>
+<li>Process Concept<ul>
+<li>Process vs Program</li>
+</ul>
+</li>
+<li>Process Control Block<ul>
+<li><code>task_struct</code></li>
+</ul>
+</li>
+<li>Process State<ul>
+<li>Five states, who has a queue</li>
+<li>How to create and terminate a process </li>
+</ul>
+</li>
+<li>Process Scheduling<ul>
+<li><code>cpu_switch_to</code><ul>
+<li>Where are registers saved?</li>
+</ul>
+</li>
+<li><code>fork</code><ul>
+<li>Why returns two values?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年3月14日 20:26:45</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月11日 23:23:27</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年3月13日 16:51:16</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月11日 23:23:27</span>
       
     
   </small>

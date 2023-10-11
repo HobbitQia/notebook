@@ -16,7 +16,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/">
+        <link rel="next" href="../chap02/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -2871,6 +2871,10 @@
       
         
       
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -3036,6 +3040,60 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#running-a-binary" class="md-nav__link">
+    Running a binary
+  </a>
+  
+    <nav class="md-nav" aria-label="Running a binary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-a-binary-statically-linked" class="md-nav__link">
+    Running a binary (Statically-linked)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-a-binary-dynamically-linked" class="md-nav__link">
+    Running a binary (Dynamically-linked)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-applications-are-operating-system-specific" class="md-nav__link">
+    Why Applications are Operating System Specific
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operating-system-design-and-implementation" class="md-nav__link">
+    Operating-System Design and Implementation
+  </a>
+  
+    <nav class="md-nav" aria-label="Operating-System Design and Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3045,6 +3103,46 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    进程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    进程间通信
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3544,6 +3642,60 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#running-a-binary" class="md-nav__link">
+    Running a binary
+  </a>
+  
+    <nav class="md-nav" aria-label="Running a binary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-a-binary-statically-linked" class="md-nav__link">
+    Running a binary (Statically-linked)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-a-binary-dynamically-linked" class="md-nav__link">
+    Running a binary (Dynamically-linked)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-applications-are-operating-system-specific" class="md-nav__link">
+    Why Applications are Operating System Specific
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operating-system-design-and-implementation" class="md-nav__link">
+    Operating-System Design and Implementation
+  </a>
+  
+    <nav class="md-nav" aria-label="Operating-System Design and Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3726,17 +3878,141 @@ create process, terminate process; end, abort; </li>
 </ul>
 </li>
 </ul>
+<h3 id="running-a-binary">Running a binary<a class="headerlink" href="#running-a-binary" title="Permanent link">&para;</a></h3>
+<p>运行时的内存布局：</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011192630.png" width=70%></div>
+
+<p>ELF section 被映射到内存里面的不同 segment。
+注意区分堆和栈，分配数据时 stack 快，heap 慢。</p>
+<ul>
+<li>who setup ELF files mapping?<ul>
+<li>Kernel</li>
+<li>exec syscall</li>
+</ul>
+</li>
+<li>who setup stack and heap?<ul>
+<li>Kernel</li>
+<li>exec syscall</li>
+</ul>
+</li>
+<li>who setups libraries?<ul>
+<li>Loader</li>
+<li>ld-xxx</li>
+</ul>
+</li>
+</ul>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011193053.png" width=70%></div>
+
+<ul>
+<li>text: r-xp </li>
+<li>r--p: rodatas</li>
+<li>rw-p: data</li>
+<li>.bss: uninitialized variables. 给一个全局变量不给值，早期编译器记录它在 <code>.bss</code> 段里，但没有实际空间，映射到内存时就初始化为 0。</li>
+<li>heap/stack 匿名映射，没有一个文件支持。映射为可读可写。</li>
+</ul>
+<h4 id="running-a-binary-statically-linked">Running a binary (Statically-linked)<a class="headerlink" href="#running-a-binary-statically-linked" title="Permanent link">&para;</a></h4>
+<p>首先我们通过 <code>strace</code> 查看运行静态链接文件过程中发生的系统调用。</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011193535.png" width=65%></div>
+
+<ul>
+<li><code>execve</code> 执行对应路径的文件</li>
+<li><code>brk</code> 扩充栈</li>
+<li><code>write</code> 执行程序里的 <code>printf</code> 功能</li>
+</ul>
+<p>系统如何知道我们要执行的程序从哪一行开始执行？</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011193809.png" width=65%></div>
+
+<p>通过 entry point address!<br />
+<code>sys_execve()</code> 里有 <code>load_elf_binary</code> 函数，从 ELF 头读地址到 <code>elf_entry</code>，把地址当作 <code>regs-&gt;pc</code>。然后调用 <code>start_thread</code> 函数。</p>
+<p>ELF 里有 entry point address（通过 <code>readelf -h</code>）</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011194022.png" width=65%></div>
+
+<p>entry point address 不是 <code>main()</code> 的地址，而是 <code>_start</code> 的地址，里面会调用 <code>__libc_start_main</code> 函数，里面才调用 <code>main()</code> 函数。<br />
+<code>_start</code> 是在读取命令行参数并且传给 <code>main</code>。</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011194100.png" width=65%></div>
+
+<p><code>cat /proc/pid/maps</code> 里可以看到进程的内存映射。static 的条目更少，因为需要的东西已经打包到 <code>a.static</code> 内了，不需要外部的库。而 dynamic 需要外部的库。</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20231011194702.png" /></p>
+</div>
+<h4 id="running-a-binary-dynamically-linked">Running a binary (Dynamically-linked)<a class="headerlink" href="#running-a-binary-dynamically-linked" title="Permanent link">&para;</a></h4>
+<p>相比于静态链接，动态链接：</p>
+<ul>
+<li>需要一个 loader。</li>
+<li>动态链接的内存布局中条目更多。</li>
+<li>动态链接的系统调用比静态的多。</li>
+<li>动态链接的 entry point 的地址很小，也是对应 <code>_start</code> 的地址，里面有些 symbol 还没有被解析。</li>
+</ul>
+<p>类似地，我们先通过 <code>strace</code> 查看运行动态链接文件中使用了哪些系统调用。<br />
+可以看到相比于静态链接，多出来的系统都用都和 ld 有关，即 dynamic loader。  </p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011200524.png" width=60%></div>
+
+<p>动态链接有 <code>.interp</code> 段，在 <code>load_elf_binary</code> 函数中会走另一个分支：entry point 会指向 loader 的地址。</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231011200358.png" width=60%></div>
+
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20231010145430.png" /></p>
+<p>多出来的系统调用是为了先把 loader 加载进来，loader 再把 libc 加载。<br />
+内存布局里多映射的条目也是为了给 loader 使用。</p>
+</div>
+<h2 id="why-applications-are-operating-system-specific">Why Applications are Operating System Specific<a class="headerlink" href="#why-applications-are-operating-system-specific" title="Permanent link">&para;</a></h2>
+<ul>
+<li>开发的软件不能直接跨平台调用，因为操作系统不同导致系统调用不同，下面的硬件也不同。  <ul>
+<li>像 Java 开发的软件可以，因为有 JVM 提供了跨系统的平台。</li>
+</ul>
+</li>
+<li><strong>Application Binary Interface</strong> (ABI) is architecture equivalent of API, defines how different components of binary code can interface for a given operating system on a given architecture, CPU, etc...
+Application Binary Interface (ABI) 更贴近硬件架构</li>
+</ul>
+<h2 id="operating-system-design-and-implementation">Operating-System Design and Implementation<a class="headerlink" href="#operating-system-design-and-implementation" title="Permanent link">&para;</a></h2>
+<p>策略 VS 机制：</p>
+<ul>
+<li><strong>Policy</strong>: What will be done?  </li>
+<li><strong>Mechanism</strong>: How to do it?</li>
+</ul>
+<p><u>The separation of policy from mechanism.</u><br />
+把策略和机制分开。</p>
+<details class="example">
+<summary>The Door Example</summary>
+<p>我们的一个策略：只允许上 OS 的同学进入曹西-201。对应的实现（机制）可以是：我们做一把锁，给 88 个同学都配一把。但这样的策略存在很多被 break 的可能。另一个机制：每个人凭学生卡/人脸识别进入。</p>
+</details>
+<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
+<p>宏内核里放有很多 driver，而 driver 出问题，直接影响到 CPU 的 scheduler.    </p>
+<p><strong>microkernel</strong>: Moves as much from the kernel into user space. <br />
+把 driver, file system... 都放到 user space，只留下最核心的东西在 kernel space.  </p>
+<ul>
+<li>benefits: <ul>
+<li>Easier to extend a microkernel</li>
+<li>Easier to port the operating system to new architectures</li>
+<li>More reliable (less code is running in kernel mode)</li>
+<li>More secure</li>
+</ul>
+</li>
+<li>detriments: <ul>
+<li>Performance overhead of user space to kernel space communication  </li>
+</ul>
+</li>
+</ul>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231010153159.png" width=60%></div>
+
+<p>Many modern operating systems implement <strong>loadable kernel modules</strong> (LKMs).  </p>
+<div class="admonition note">
+<p class="admonition-title">Operating-System Debugging</p>
+<p>Kernighan’s Law: “Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.”</p>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月10日 14:11:02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月11日 23:23:27</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月10日 14:11:02</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年10月11日 23:23:27</span>
       
     
   </small>
