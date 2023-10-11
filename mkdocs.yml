@@ -207,6 +207,11 @@ nav:
       - CA/index.md
       - 计算机设计基础: CA/CA1.md
       - 流水线: CA/CA2.md
+    - 操作系统原理与实践:
+      - OS/index.md
+      - OS 结构: OS/chap01.md
+      - 进程: OS/chap02.md
+      - 进程间通信: OS/chap03.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md

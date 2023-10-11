@@ -77,6 +77,7 @@ To be completed...
 ![](https://cdn.hobbitqia.cc/20230929165443.png)
 
 量子纠缠是量子叠加的必然结果。
+如果一个多量子比特可以分解为多个单量子比特的张量积，则称该多量子比特为非纠缠态，否则称为纠缠态。
 
 ![](https://cdn.hobbitqia.cc/20230929165511.png)
 
@@ -161,8 +162,25 @@ SWAP 用于交换两个量子比特的状态。
 
 ![](https://cdn.hobbitqia.cc/20230929222335.png)
 
+### 量子隐形传态
+
+![](https://cdn.hobbitqia.cc/20231009192636.png)
+
+Alice 拿了高位比特，Bob 拿了低位。
+这里的 $\phi_{AB}$ 是 Alice, Bob 最开始的 qubits, $\psi$ 是 Alice 想要传递给 Bob 的信息。这两份比特是不纠缠的。$\phi_0$ 等于这两份比特的张量积。
+把 Alice 手里的两个比特进行纠缠，即把 Bob 的比特拿出去，Alice 的两个比特写在一起。
+![](https://cdn.hobbitqia.cc/20231009192728.png)
+![](https://cdn.hobbitqia.cc/20231009192852.png)
+
 ### Toffoli 门
 
 Toffoli 门即 CCNOT 门，它涉及 3 个量子比特，两个控制比特，一个目标比特，两个高位都为 1 时 (高位为控制比特)，才将低位量子态翻转。
 
+控制门就打点，被控制的比特打上十字。
+
 To be completed...
+
+### 量子计算的并行性
+
+$\oplus$ 是异或。
+在量子计算中利用叠加态，可以在一个电路中同时计算多个函数值。
