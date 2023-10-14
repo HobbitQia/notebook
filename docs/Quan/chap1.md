@@ -41,7 +41,7 @@ $$
 
 ### 量子态矢内积
 
-bra-ket 表示法，其中 bra $|\psi \rangle$ 表示一个列向量，其对应的 ket 为 $\langle \psi |$，且 $\langle \psi |$ 为 $|\psi \rangle$ 的共轭转置，即 $\langle \psi |=[\alpha^*\quad \beta^*]$（$\alpha^*, \beta^*$ 为 $\alpha,\beta$ 的共轭复数）
+bra-ket 表示法，其中 bra $|\psi \rangle$ 表示一个列向量，其对应的 ket 为 $\langle \psi |$，且 $\langle \psi |$ 为 $|\psi \rangle$ 的**共轭转置**，即 $\langle \psi |=[\alpha^*\quad \beta^*]$（$\alpha^*, \beta^*$ 为 $\alpha,\beta$ 的共轭复数；对向量转置，对里面的元素求共轭）
 
 两个向量的内积是一个标量，定义为 ket 向量和 bra 向量的矩阵乘积：
 
@@ -59,7 +59,15 @@ $$
 * 向量的各分量为复数；
 * 向量的欧几里得范数为 1
 
-量子不可克隆：不能找到一个算符（矩阵），把量子态 $|\psi\rangle$ 映射到到另一个量子态 $|\psi\rangle|\psi\rangle$ 的叠加态上。？？
+量子不可克隆：不能找到一个算符（矩阵），把量子态 $|\psi\rangle$ 映射到到另一个量子态 $|\psi\rangle|\psi\rangle$ 的叠加态上。  
+To be completed...
+
+### 张量积
+
+**张量积**将两个向量空间的向量合并成一个更大的向量空间，可表示为 $V\oplus W$。张量积可以获得多个量子态的复合量子态。对于一个复合的量子态，我们可以通过张量积的方式将其分解为若干个单量子比特。
+![](https://cdn.hobbitqia.cc/20231013205927.png)
+
+***e.g.*** $|00\rangle = |0\rangle \oplus |0\rangle, |01\rangle = |0\rangle \oplus |1\rangle$
 
 ### 量子比特的几何表示
 
@@ -77,9 +85,15 @@ To be completed...
 ![](https://cdn.hobbitqia.cc/20230929165443.png)
 
 量子纠缠是量子叠加的必然结果。
-如果一个多量子比特可以分解为多个单量子比特的张量积，则称该多量子比特为非纠缠态，否则称为纠缠态。
+如果一个多量子比特可以分解为多个单量子比特的张量积，则称该多量子比特为**非纠缠态**，否则称为**纠缠态**。
 
-![](https://cdn.hobbitqia.cc/20230929165511.png)
+!!! Example "纠缠判定"
+    * $\dfrac{1}{2} | 00\rangle + \dfrac{1}{2} | 01\rangle - \dfrac{1}{2} | 10\rangle - \dfrac{1}{2} | 11\rangle$ 可以分解为 $\left(\dfrac{1}{\sqrt 2} | 0\rangle - \dfrac{1}{\sqrt 2} | 1\rangle\right)\oplus\left(\dfrac{1}{\sqrt 2} | 0\rangle + \dfrac{1}{\sqrt 2} | 1\rangle\right), 所以是无关的可分的。  
+    * $\dfrac{1}{\sqrt 2} | 00\rangle + \dfrac{1}{\sqrt 2} | 11\rangle$ 不能分解，因此是不可分的、纠缠的。  
+    纠缠意味着你测了第一个比特之后，第二个比特不用测量就可以知道结果。
+
+!!! Exampl "复合系统"
+
 
 ### 贝尔态
 
@@ -125,9 +139,9 @@ $$
 ## 多量子门
 
 假设我们有酉矩阵 U，可以被表达为如下形式：
-![](https://cdn.hobbitqia.cc/20230929213409.png)
 
-CNOT 门（Controlled-NOT Gate）
+### CNOT 门（Controlled-NOT Gate）
+
 一种理解异或门的思路是“受控非门”：输入 A 是一种“控制端”，当 A 为 1 的时候，XOR 对 B 施加非门；而当 A 为 0 的时候，则不施加非门。
 ![](https://cdn.hobbitqia.cc/20230929213809.png)
 
@@ -148,9 +162,7 @@ $$
 $$
 
 !!! Example
-    我们输入基态 $q_0q_1=|00\rangle$，我们先让 $q_0$ 通过 Hadamard 门，变为叠加态，然后再让 $q_0q_1$ 通过 CNOT 门，这样就得到了贝尔态 $|\psi^+\rangle=\dfrac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$。
-
-    <div align = center><img src="https://cdn.hobbitqia.cc/20230929215823.png" width=45%></div>
+    我们输入基态 $q_0q_1=|00\rangle$，我们先让 $q_0$ 通过 Hadamard 门，变为叠加态，得到 $\dfrac{1}{\sqrt 2}\left(|00\rangle + |10 \rangle\right)$ 然后再让 $q_0q_1$ 通过 CNOT 门，这样就得到了贝尔态 $|\psi^+\rangle=\dfrac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$。
 
 量子隐形传态（量子保密通信）
 <!-- ![](https://cdn.hobbitqia.cc/20230929220115.png) -->
@@ -158,9 +170,17 @@ To be completed...
 
 ### SWAP 门及 CSWAP 门
 
-SWAP 用于交换两个量子比特的状态。
+SWAP 用于交换两个量子比特的状态。电路写法一般是打两个叉。
 
 ![](https://cdn.hobbitqia.cc/20230929222335.png)
+
+### Toffoli 门
+
+Toffoli 门即 CCNOT 门，它涉及 3 个量子比特，两个控制比特，一个目标比特，两个高位都为 1 时 (高位为控制比特)，才将低位量子态翻转。
+
+控制门就打点，被控制的比特打上十字。
+
+To be completed...
 
 ### 量子隐形传态
 
@@ -172,15 +192,36 @@ Alice 拿了高位比特，Bob 拿了低位。
 ![](https://cdn.hobbitqia.cc/20231009192728.png)
 ![](https://cdn.hobbitqia.cc/20231009192852.png)
 
-### Toffoli 门
+总结，我们对 Alice 的两个比特做操作：先将要发送的 qubit 和持有的 qubit 纠缠并通过 CNOT 门，随后对要发送的 qubit 做 Hadamard 变换，最后测量两个比特，根据得到的结果，对 Bob 的 qubit 做相应的操作，就可以得到 Alice 想要传递的信息。
 
-Toffoli 门即 CCNOT 门，它涉及 3 个量子比特，两个控制比特，一个目标比特，两个高位都为 1 时 (高位为控制比特)，才将低位量子态翻转。
+![](https://cdn.hobbitqia.cc/20231013214043.png)
 
-控制门就打点，被控制的比特打上十字。
+## 量子计算的并行性
 
-To be completed...
+在量子计算中利用叠加态，可以在一次电路操作中同时计算多个函数值。
 
-### 量子计算的并行性
+!!! Question
+    假设某个函数是下面的一种。尝试最少且足够的次数，来确定它是常数函数还是平衡函数。
+    ![](https://cdn.hobbitqia.cc/20231013214912.png)
 
-$\oplus$ 是异或。
-在量子计算中利用叠加态，可以在一个电路中同时计算多个函数值。
+对经典计算机来说，需要尝试 $\dfrac{2^n}{2}+1$ 次（也就是一半多一次），才能确保足够可以判断未知函数
+
+对量子计算机来说：
+![](https://cdn.hobbitqia.cc/20231013215128.png)
+
+### Deutsch 算法
+
+Deutsch 算法（$\oplus$ 是异或。）
+![](https://cdn.hobbitqia.cc/20231013215636.png)
+
+$$
+\psi_1 = \left[\dfrac{|0\rangle + |1\rangle}{\sqrt 2}\right]\oplus\left[\dfrac{|0\rangle - |1\rangle}{\sqrt 2}\right]
+$$
+
+![](https://cdn.hobbitqia.cc/20231013215935.png)
+
+（第一步可以枚举情况推出）
+![](https://cdn.hobbitqia.cc/20231013220609.png)
+![](https://cdn.hobbitqia.cc/20231013221001.png)
+
+我们不能得到 f 的具体值，但是可以通过量子叠加的方式同时计算，并得到 f 的相关性质。
