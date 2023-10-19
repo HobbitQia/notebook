@@ -226,7 +226,7 @@ SOP and POS are **two-level** network of gates.
 * **SOP**  
 
     * The first level consists of n-input ***AND*** gates  
-    * The second level is a single ***OR*** gate (with fewer than 2^n^ inputs)
+    * The second level is a single ***OR*** gate (with fewer than $2^n$ inputs)
     
 !!! Info
     Standard Forms 用来做**电路实现**, 一般会进行 SOM POM 化简, 但会省略一些东西. 依然按照 Standard Order, 但每一项中不一定需要所有变量.  
@@ -340,7 +340,7 @@ The **K-map** can be viewed as
 
 **Combining Squares**
 
-可以画 2^n^ 大小的方形格(即一次要包括 2^n^ 个小方格)  
+可以画 $2^n$ 大小的方形格(即一次要包括 $2^n$ 个小方格)  
 For 3-variable **K-Map**:  
 
 * One square represents a minterm with three variables  

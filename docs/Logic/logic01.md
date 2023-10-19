@@ -55,7 +55,7 @@ counter: True
 **analog input(模拟输入)**:  
 
 * **A-to-D**: 把模拟信号转化为数字信号(处理器不能处理模拟信号)  
-* **D-to-A**: 处理后把数字信号转化为膜你信号
+* **D-to-A**: 处理后把数字信号转化为模拟信号
 * 也有其他的数字输入输出(如按键)
 
 **核心**: AD & DA, 嵌入式系统区别于日常计算机
@@ -125,7 +125,7 @@ Repeatedly *multiply* the fraction by the new radix and save the integer digits 
     * Not tied to binary numbers
 
 
-Given M elements to be reprented by a binary code, the minimum number of bits, n satisfies $2^n>=M>2^{n-1}$ so $n=\lfloor{log_2{M}}\rfloor$.  
+Given M elements to be reprented by a binary code, the minimum number of bits, n satisfies $2^n>=M>2^{n-1}$ so $n=\lceil{log_2{M}}\rceil$.  
  
 可以 r = 2 表示 4 个元素(00, 01, 10, 11), 也可以 r = 4(0001, 0010, 0100, 1000).   
 The second code is called **"one hot" code(独热编码)**.  
@@ -171,11 +171,11 @@ The second code is called **"one hot" code(独热编码)**.
 A code word has **even parity** if the number of 1’s in the code word is even.  
 A code word has **odd parity** if the number of 1’s in the code word is odd.
 
-添加一位，表示编码的奇偶性。对偶校验来说，当 1 的个数为偶数时校验位为 0; 对奇校验来说，当 1 的个数为奇数时校验位为 1.  
+添加一位，表示编码的奇偶性。对偶校验来说，当 1 的个数为偶数时校验位为 0; 对奇校验来说，当 1 的个数为奇数时校验位为 0.  
 
 #### Gray Codes
 
-<div align=center> <img src="http://cdn.hobbitqia.cc/202212311059553.png" width = 60%/> </div> 
+<div align=center> <img src="https://cdn.hobbitqia.cc/%609WW%7B85J6)%60D)JW974FTHGX.png" width = 60%/> </div> 
 
 !!! Example "应用: 光学传感器"   
     编码器盘包含不透明区域和透明区域。  
