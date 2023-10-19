@@ -3720,7 +3720,7 @@ Non-numeric Binary Codes</p>
 <p><strong>analog input(模拟输入)</strong>:  </p>
 <ul>
 <li><strong>A-to-D</strong>: 把模拟信号转化为数字信号(处理器不能处理模拟信号)  </li>
-<li><strong>D-to-A</strong>: 处理后把数字信号转化为膜你信号</li>
+<li><strong>D-to-A</strong>: 处理后把数字信号转化为模拟信号</li>
 <li>也有其他的数字输入输出(如按键)</li>
 </ul>
 <p><strong>核心</strong>: AD &amp; DA, 嵌入式系统区别于日常计算机</p>
@@ -3787,7 +3787,7 @@ Repeatedly <em>multiply</em> the fraction by the new radix and save the integer 
 </ul>
 </li>
 </ul>
-<p>Given M elements to be reprented by a binary code, the minimum number of bits, n satisfies <span class="arithmatex">\(2^n&gt;=M&gt;2^{n-1}\)</span> so <span class="arithmatex">\(n=\lfloor{log_2{M}}\rfloor\)</span>.  </p>
+<p>Given M elements to be reprented by a binary code, the minimum number of bits, n satisfies <span class="arithmatex">\(2^n&gt;=M&gt;2^{n-1}\)</span> so <span class="arithmatex">\(n=\lceil{log_2{M}}\rceil\)</span>.  </p>
 <p>可以 r = 2 表示 4 个元素(00, 01, 10, 11), 也可以 r = 4(0001, 0010, 0100, 1000). <br />
 The second code is called <strong>"one hot" code(独热编码)</strong>.  </p>
 <p>常见对十进制的十个数字进行编码:  </p>
@@ -3826,9 +3826,9 @@ The second code is called <strong>"one hot" code(独热编码)</strong>.  </p>
 <p>用来检测数据传输中是否发生错误</p>
 <p>A code word has <strong>even parity</strong> if the number of 1’s in the code word is even.<br />
 A code word has <strong>odd parity</strong> if the number of 1’s in the code word is odd.</p>
-<p>添加一位，表示编码的奇偶性。对偶校验来说，当 1 的个数为偶数时校验位为 0; 对奇校验来说，当 1 的个数为奇数时校验位为 1.  </p>
+<p>添加一位，表示编码的奇偶性。对偶校验来说，当 1 的个数为偶数时校验位为 0; 对奇校验来说，当 1 的个数为奇数时校验位为 0.  </p>
 <h4 id="gray-codes">Gray Codes<a class="headerlink" href="#gray-codes" title="Permanent link">&para;</a></h4>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202212311059553.png" width = 60%/> </div>
+<div align=center> <img src="https://cdn.hobbitqia.cc/%609WW%7B85J6)%60D)JW974FTHGX.png" width = 60%/> </div>
 
 <div class="admonition example">
 <p class="admonition-title">应用: 光学传感器</p>
