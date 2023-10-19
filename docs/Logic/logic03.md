@@ -5,49 +5,49 @@ counter: True
 # Combinational Logic Design
 
 ??? Abstract
-    1． 组合电路定义（逻辑电路的两大类型：组合逻辑电路、时序逻辑电路）  
+    1. 组合电路定义（逻辑电路的两大类型：组合逻辑电路、时序逻辑电路）  
     Definition of Combinational Circuits  
-    2． 模块与层次设计  
+    2. 模块与层次设计  
     Hierarchical Design  
-    3． 逻辑事件的描述方法*  
+    3. 逻辑事件的描述方法*  
     Description of logic events  
-    4． 逻辑门的主要参数  
+    4. 逻辑门的主要参数  
     Technology Parameters  
     扇入（Fan-in）、扇出（Fan-out）、噪音容限（Noise Margin）、门的成本（Cost for a gate）、传输延迟（Propagation Delay）  
-    5． 器件状态值或状态表与正逻辑，负逻辑的概念  
+    5. 器件状态值或状态表与正逻辑，负逻辑的概念  
     Positive and Negative Logic  
-    6． 三态门使用原则与总线（BUS）  
+    6. 三态门使用原则与总线（BUS）  
     BUS  
-    7． 信号系统延时、延时模型、上升和下降时间、时钟上升和下降沿概念。  
+    7. 信号系统延时、延时模型、上升和下降时间、时钟上升和下降沿概念。  
     Delay Models, Positive and Negative Edge  
-    8． 组合逻辑电路分析方法  
+    8. 组合逻辑电路分析方法  
     Analysis of Combinational Circuits  
-    9． 组合逻辑电路的设计方法  
+    9. 组合逻辑电路的设计方法  
     Design of Combinational Circuits  
-    10．函数与函数模块，基本逻辑功能  
+    10. 函数与函数模块，基本逻辑功能  
     Functions and functional blocks  
-    11．计算机中的常用组合逻辑电路（功能芯片）  
+    11. 计算机中的常用组合逻辑电路（功能芯片）  
     Frequently used Combinational Circuit in Computer Design  
     译码器、编码器、数据选择器（多路复用选择器）、数据分配器。  
-    12．组合函数的实现技术  
+    12. 组合函数的实现技术  
     Implementing Combinational Functions Using:  
     译码器和或门  
     Decoders and OR gates  
     多路复用器（加反相器）  
     Multiplexers (and inverter)  
-    13．使能信号（EN，OE）的作用    
+    13. 使能信号（EN，OE）的作用    
     Function of Enable Signal  
-    14．组合电路的迭代结构  
+    14. 组合电路的迭代结构  
     Iterative combinational circuits  
-    15．算术函数：了解加、减、乘、除、增量函数及运算  
+    15. 算术函数：了解加、减、乘、除、增量函数及运算  
     Arithmetic function: Add, subtraction, multiplication, division, increment  
-    16．补码运算  
+    16. 补码运算  
     2’s complement  
-    17．半加器及全加器函数及电路设计  
+    17. 半加器及全加器函数及电路设计  
     Equations and Circuit implementation of 1 bit Half Adder and Full Adder  
-    18．多位全加器、全减器及设计  
+    18. 多位全加器、全减器及设计  
     Design of multiple-bit Full Adder/ Subtracter  
-    19．超前进位：进位传递与延迟，进位函数：generate, Gi、propagate, Pi  
+    19. 超前进位：进位传递与延迟，进位函数：generate, Gi、propagate, Pi  
     Carry Lookahead: carry propagation and delay  
 
 ## Design Procedure
