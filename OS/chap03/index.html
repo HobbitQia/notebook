@@ -3019,6 +3019,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#message-passing" class="md-nav__link">
+    Message Passing
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Passing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementing-message-passing" class="md-nav__link">
+    Implementing Message-Passing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipes" class="md-nav__link">
+    Pipes
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3466,6 +3493,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#message-passing" class="md-nav__link">
+    Message Passing
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Passing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementing-message-passing" class="md-nav__link">
+    Implementing Message-Passing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipes" class="md-nav__link">
+    Pipes
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3530,7 +3584,94 @@ Reasons for cooperating processes:</p>
 </ul>
 <h3 id="shared-memory">Shared Memory<a class="headerlink" href="#shared-memory" title="Permanent link">&para;</a></h3>
 <p>Processes need to establish a shared memory region.  </p>
-<div align = center><img src="https://cdn.hobbitqia.cc/20231011230419.png" width=70%></div>
+<div class="admonition example">
+<p class="admonition-title">producer/consumer example</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20231011230419.png" width=70%></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20231024103056.png" width=70%></div></p>
+<p><code>ipcs -a</code> 可以查看当前 IPC 的状态。</p>
+</div>
+<p>存在问题：不安全。任何人拿到 <code>share_id</code> 都可以把共享内存 attach 到自己进程上，可以观察到其他进程的数据、甚至做 DOS 攻击。</p>
+<p>而且很 cubersome，会发生各种 error 需要处理。（现在使用不多）</p>
+<h3 id="message-passing">Message Passing<a class="headerlink" href="#message-passing" title="Permanent link">&para;</a></h3>
+<p>Two fundamental operations:</p>
+<ul>
+<li><strong>send</strong>: to send a message (<strong>i.e.</strong>, some bytes)</li>
+<li><strong>recv</strong>: to receive a message</li>
+</ul>
+<p>If processes P and Q wish to communicate they</p>
+<ul>
+<li>
+<p>establish a communication “link” between them</p>
+<p>This “link” is an abstraction that can be implemented in many ways (even with shared memory!!)</p>
+</li>
+<li>
+<p>place calls to <code>send()</code> and <code>recv()</code></p>
+</li>
+<li>optionally shutdown the communication “link”</li>
+</ul>
+<h4 id="implementing-message-passing">Implementing Message-Passing<a class="headerlink" href="#implementing-message-passing" title="Permanent link">&para;</a></h4>
+<p>Implementation of communication link</p>
+<ul>
+<li>Physical:<ul>
+<li>Shared memory</li>
+<li>Hardware bus</li>
+<li>Network</li>
+</ul>
+</li>
+<li>
+<p>Logical:</p>
+<ul>
+<li>
+<p>Direct or indirect</p>
+<ul>
+<li>
+<p>Direct  </p>
+<p>有一个 P 和 Q，直接发信息。如果有 n 个进程，需要建立 <span class="arithmatex">\(C_2^n\)</span> 个连接。</p>
+</li>
+<li>
+<p>Indirect</p>
+<p>有一个 mailbox，发信息相当于发给一个 mailbox。如果有多个进程，我们需要确定是由哪个进程接收信息。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Synchronous or asynchronous</p>
+<ul>
+<li>
+<p>Synchronous: Blocking is considered synchronous</p>
+<p>即我们发信息，如果接收者没收到信息，发送者就堵塞着不走；我们收信息，如果发送者没有发送信息，接送者就堵塞着不走。</p>
+</li>
+<li>
+<p>Asynchronous: Non-blocking is considered asynchronous</p>
+</li>
+<li>异步效率更高，同步时效性更高。<ul>
+<li>Automatic or explicit buffering</li>
+</ul>
+</li>
+<li>Zero capacity - no messages are queued on a link. Sender must wait for receiver. </li>
+<li>Bounded capacity - finite length of n messages. Sender must wait if link full.X</li>
+<li>Unbounded capacity - infinite length. Sender never waits.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="pipes">Pipes<a class="headerlink" href="#pipes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Ordinary pipes  </p>
+<p>没有名字，只能通过 <code>fork()</code> 来传播。</p>
+</li>
+<li>
+<p>Named pipes</p>
+<p>可以把名字通过网络/文件传播，这样就能交互。</p>
+</li>
+</ul>
+<p>In UNIX, a pipe is <strong>mono-directional</strong>. 
+要实现两个方向一定需要两个 pipe。</p>
 
   <hr>
 <div class="md-source-file">
