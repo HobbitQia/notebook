@@ -3099,6 +3099,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -3188,6 +3190,26 @@
   
   <span class="md-ellipsis">
     进程间通信
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CA/chap03.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    内存层次
   </span>
   
 
@@ -4131,23 +4153,29 @@ The block is loaded into the cache on a miss before anything else occurs.<br />
 </ul>
 <p>Average Memory Assess time = hit time + miss time =  hit rate <span class="arithmatex">\(\times\)</span> Cache time + miss rate <span class="arithmatex">\(\times\)</span> memory time</p>
 <h3 id="measuring-cache-performance">Measuring cache performance<a class="headerlink" href="#measuring-cache-performance" title="Permanent link">&para;</a></h3>
-<p>We use CPU time to measure cache performance.<br />
-$
-CPU  Time = CPU  execution  clock  cycles + 
-Memory-stall  clock  cycles \times Clock  cycle  time
-$<br />
-这里 CPU 的执行时间在设计流水线的时候已经确定了，我们无需考虑。</p>
+<p>We use CPU time to measure cache performance.  </p>
+<div class="arithmatex">\[
+CPU\  Time = CPU\  execution\  clock\  cycles + 
+Memory-stall\  clock\  cycles \times Clock\  cycle\  time
+\]</div>
+<p>这里 CPU 的执行时间在设计流水线的时候已经确定了，我们无需考虑。</p>
 <div class="arithmatex">\[
 \begin{align*}
 Memory-stall\  clock\ cycles &amp; =  instructions \times miss\  ratio \times miss \  penalty \\ &amp; = Read-stall\  cycles + Write-stall\  cycles
 \end{align*}
 \]</div>
 <ul>
-<li>For Read-stall<br />
-<span class="arithmatex">\(Read-stall\ cycles = \dfrac{Read}{Program}\times Read\ miss\ rate \times Read\ miss\ penalty\)</span><br />
-包括取指和数据加载。</li>
-<li>For a write-through plus write buffer scheme<br />
-<span class="arithmatex">\(Write-stall\ cycles = \left(\dfrac{Write}{Program} \times Write\ miss\ rate \times Write\ miss\ penalty\right)+Write\ buffer\ stalls\)</span><ul>
+<li>
+<p>For Read-stall  </p>
+<div class="arithmatex">\[
+Read-stall\ cycles = \dfrac{Read}{Program}\times Read\ miss\ rate \times Read\ miss\ penalty
+\]</div>
+<p>包括取指和数据加载。</p>
+</li>
+<li>
+<p>For a write-through plus write buffer scheme<br />
+<span class="arithmatex">\(Write-stall\ cycles = \left(\dfrac{Write}{Program} \times Write\ miss\ rate \times Write\ miss\ penalty\right)+Write\ buffer\ stalls\)</span></p>
+<ul>
 <li>If the write buffer stalls are small, we can safely ignore them.<br />
 一般来说 buffer 不会溢出。</li>
 <li>If the cache block size is one word, the write miss penalty is 0.<br />

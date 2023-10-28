@@ -3056,6 +3056,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#schedule-of-nonlinear-pipelining" class="md-nav__link">
+    Schedule of Nonlinear pipelining
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3083,6 +3097,8 @@
       
         
           
+        
+      
         
       
         
@@ -3180,6 +3196,26 @@
   
   <span class="md-ellipsis">
     进程间通信
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap03.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    内存层次
   </span>
   
 
@@ -3783,6 +3819,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#schedule-of-nonlinear-pipelining" class="md-nav__link">
+    Schedule of Nonlinear pipelining
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4146,6 +4196,90 @@ Adding instruction buffer between memory and instruction decode unit.<br />
 </ul>
 </li>
 </ul>
+<h2 id="schedule-of-nonlinear-pipelining">Schedule of Nonlinear pipelining<a class="headerlink" href="#schedule-of-nonlinear-pipelining" title="Permanent link">&para;</a></h2>
+<p>对于非线性流水线，功能部件可能经历多次，有调度问题。</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>纵轴代表不同的功能部件，横坐标表示拍数。即每一拍需要用到的功能部件。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231028102338.png" width=60%></div></p>
+</div>
+<p>算法：</p>
+<ul>
+<li>
+<p>Initial conflict vector</p>
+<p>二进制表示，第几拍是不能使用的。将几个二进制数取并集。</p>
+</li>
+<li>
+<p>Conflict vector</p>
+</li>
+<li>State transition graph</li>
+<li>Circular queue</li>
+<li>Shortest average interval</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<ul>
+<li>
+<p>Initial conflict vector</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20231028103110.png" width=60%></div></p>
+<p>对每一个部件分开来看
+    * 第一个部件，隔 8 拍会产生冲突；第二个部件：1，5，6；第三个部件：无；第四、五个部件：1
+    * 将对应二进制数的第 1、5、6、8 位设为 1，其他位为 0，得到了初始的冲突向量 10110001。</p>
+</li>
+<li>
+<p>Conflict vector</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20231028104553.png" width=60%></div></p>
+<p>对于第三列，隔两拍进下一条指令，我们就把冲突向量向右移两位（高位补 0），得到了新的冲突向量，并和本来的冲突向量或起来得到 CCV。（注意这里最左侧的一列表示向右移动了多少次）</p>
+<p>找到了一个循环调度：2-2-7</p>
+</li>
+<li>
+<p>State transition graph</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20231028105340.png " width=60%></div></p>
+</li>
+</ul>
+</div>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<ol>
+<li>How the instruction is executed<ul>
+<li>Sequential execution</li>
+<li>Overlap once</li>
+<li>Second overlap</li>
+<li>Pipeline</li>
+</ul>
+</li>
+<li>Classification of pipelines<ul>
+<li>Single function, multi-function</li>
+<li>Static, dynamic</li>
+<li>Linear, non-linear</li>
+<li>In-order, out-of-order</li>
+</ul>
+</li>
+<li>Performance indicators of the pipeline<ul>
+<li>Throughput rate</li>
+<li>Speedup ratio effectiveness</li>
+</ul>
+</li>
+<li>Factors affecting the performance of the pipeline<ul>
+<li>Pipeline design</li>
+<li>Type of instructions</li>
+<li>Instructions related<ul>
+<li>Data dependence</li>
+<li>Name dependence</li>
+<li>Control dependence</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Dynamic Branch Prediction<ul>
+<li>Branch History Table (BHT)</li>
+<li>Branch-Target Buffer (BTB)</li>
+</ul>
+</li>
+<li>Non-linear pipeline scheduling problem</li>
+</ol>
+</div>
 
   <hr>
 <div class="md-source-file">
