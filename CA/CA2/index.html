@@ -2771,6 +2771,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -3079,6 +3081,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap03.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    内存层次
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3097,8 +3119,6 @@
       
         
           
-        
-      
         
       
         
@@ -3196,26 +3216,6 @@
   
   <span class="md-ellipsis">
     进程间通信
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../chap03.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    内存层次
   </span>
   
 
@@ -4222,9 +4222,11 @@ Adding instruction buffer between memory and instruction decode unit.<br />
 <li>
 <p>Initial conflict vector</p>
 <p><div align = center><img src="https://cdn.hobbitqia.cc/20231028103110.png" width=60%></div></p>
-<p>对每一个部件分开来看
-    * 第一个部件，隔 8 拍会产生冲突；第二个部件：1，5，6；第三个部件：无；第四、五个部件：1
-    * 将对应二进制数的第 1、5、6、8 位设为 1，其他位为 0，得到了初始的冲突向量 10110001。</p>
+<p>对每一个部件分开来看</p>
+<ul>
+<li>第一个部件，隔 8 拍会产生冲突；第二个部件：1，5，6；第三个部件：无；第四、五个部件：1</li>
+<li>将对应二进制数的第 1、5、6、8 位设为 1，其他位为 0，得到了初始的冲突向量 10110001。</li>
+</ul>
 </li>
 <li>
 <p>Conflict vector</p>
