@@ -24,7 +24,7 @@ counter: True
 * A running system consists of multiple processes.  
 * “job” and “process” are used interchangeably in OS texts.  
 
-Process includes（其实就是 ELF 的内容）
+Process includes（其中前四项在 ELF 中，堆和栈是运行时的信息在 ELF 之外）
 
 * code (also called the text)  
 initially stored on disk in an executable file
@@ -276,11 +276,16 @@ state 主要指寄存器的值，页表...
 <div align = center><img src="https://cdn.hobbitqia.cc/20231011221353.png" width=70%></div>
 
 * 内核栈低地址处有 `thread_info`, 指向 `task_struct`, 内有 `cpu_context`.
+
+    注意到 `task_struct` 并不在栈上，只是有指针指向他。（因为 `task_struct` 太大了，因此放了个指针。后来大家认为栈位置暴露后就能找到 `task_struct` 的地址，因此后来指针也没了）
+
 * 内核栈高地址处有 `pt_regs`, 保存了寄存器的值。（不是 `cpu_context` 中的寄存器）  
 从用户空间到内核空间时，也会有一次上下文切换，这时候会保存用户空间的所有寄存器，然后加载内核空间的寄存器。
 * stack frame
 
-Context switching between two kernel threads.  
+    执行函数调用的时候，会有一个栈帧，先存储返回地址。所以栈一旦切换，程序对应的返回地址也被切换了。
+
+**Context switching between two kernel threads.**  
 context 一定在 kernel mode 执行。为了安全，上下文切换涉及到寄存器的修改。
 
 !!! Note "Context Switch Scenarios - kernel"
@@ -301,13 +306,19 @@ context 一定在 kernel mode 执行。为了安全，上下文切换涉及到�
 !!! Info "`fork()` return values"  
     How does `fork()` return two values?
     
+    * 调用 `fork` 后会调用 `do_fork` 函数，随后调用 `copy_process` 最后进入 `copy_thread` 函数。它会把 `task_struct` 里的 `thread` 进行拷贝。
     * 对于父进程，`fork` 相当于是一个系统调用。通过 `kernel_entry` 进入内核态，将用户态上下文存在 `pt_regs` 中。返回值（pid）通过 `pt_regs` 的寄存器值返回。  
     （系统调用的返回值在 `x0` 中，我们把这个值存到 `pt_regs` 中，这样后面从内核切换到用户态时就可以加载返回值到 `x0`）
     <div align = center><img src="https://cdn.hobbitqia.cc/20231011224012.png" width=70%></div>
 
     * 对于子进程，会调用 `copy_thread` 函数。他会拷贝寄存器，并把 `regs[0]=0`。这样在后续 `kernel_exit` 后就可以把值返回到子进程。  
-    注意到此时子进程的 `pc` 被设置为了 `ret_from_fork`（调用 `ret_to_user`，再调用 `kernel_exit`），`sp` 被设置为了 `pt_`regs`.  
+    注意到此时子进程的 `pc`（ARM 里的 `pc` 类似于 RISC-V 里的 `ra`，存储返回地址）被设置为了 `ret_from_fork`（调用 `ret_to_user`，再调用 `kernel_exit`），`sp` 被设置为了 `pt_regs`.  
     <div align = center><img src="https://cdn.hobbitqia.cc/20231011224646.png" width=70%></div>
+    
+    * 注意到当 `fork` 之后，我们从父进程返回，此时子进程处于 READY 状态，等待 CPU 的调度。第一次调度时子进程在切换上下文之后会从 `ret_from_fork` 开始执行，随后调用 `ret_to_user`，再调用 `kernel_exit`（把存在 `pt_regs` 里的寄存器全部恢复），从而返回 0。
+
+!!! Question "调用 `write` 的系统调用会不会有上下文切换"
+    不会，只是从 user space 通过 `kernel_entry` 进入 kernel space，执行对应的 handler，执行完后通过 `kernel_exit` 返回 user space。
 
 ## Takeaway
 

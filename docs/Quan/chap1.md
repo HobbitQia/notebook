@@ -41,7 +41,7 @@ $$
 
 ### 量子态矢内积
 
-bra-ket 表示法，其中 bra $|\psi \rangle$ 表示一个列向量，其对应的 ket 为 $\langle \psi |$，且 $\langle \psi |$ 为 $|\psi \rangle$ 的**共轭转置**，即 $\langle \psi |=[\alpha^*\quad \beta^*]$（$\alpha^*, \beta^*$ 为 $\alpha,\beta$ 的共轭复数；对向量转置，对里面的元素求共轭）
+bra-ket 表示法，其中 bra $|\psi \rangle$ 表示一个列向量，其对应的 ket 为 $\langle \psi |$，且 $\langle \psi |$ 为 $|\psi \rangle$ 的**共轭转置**，即 $\langle \psi |=[\alpha^*\quad \beta^*]$（$\alpha^*, \beta^*$ 为 $\alpha,\beta$ 的**共轭**复数；对向量转置，对里面的元素求**共轭**）
 
 两个向量的内积是一个标量，定义为 ket 向量和 bra 向量的矩阵乘积：
 

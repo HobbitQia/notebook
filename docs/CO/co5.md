@@ -281,10 +281,12 @@ Average Memory Assess time = hit time + miss time =  hit rate $\times$ Cache tim
 ### Measuring cache performance
 
 We use CPU time to measure cache performance.  
-$
+
+$$
 CPU\  Time = CPU\  execution\  clock\  cycles + 
 Memory-stall\  clock\  cycles \times Clock\  cycle\  time
-$  
+$$  
+
 这里 CPU 的执行时间在设计流水线的时候已经确定了，我们无需考虑。
 
 $$
@@ -294,8 +296,13 @@ Memory-stall\  clock\ cycles & =  instructions \times miss\  ratio \times miss \
 $$
 
 * For Read-stall  
-$Read-stall\ cycles = \dfrac{Read}{Program}\times Read\ miss\ rate \times Read\ miss\ penalty$  
-包括取指和数据加载。
+
+    $$
+    Read-stall\ cycles = \dfrac{Read}{Program}\times Read\ miss\ rate \times Read\ miss\ penalty
+    $$  
+    
+    包括取指和数据加载。
+
 * For a write-through plus write buffer scheme  
 $Write-stall\ cycles = \left(\dfrac{Write}{Program} \times Write\ miss\ rate \times Write\ miss\ penalty\right)+Write\ buffer\ stalls$
     * If the write buffer stalls are small, we can safely ignore them.  

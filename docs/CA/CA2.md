@@ -342,3 +342,72 @@ Use dynamic prediction
     * It can provide multiple instructions at the branch target once, which is necessary for the multi processor;
     * branch folding
         * It is possible to achieve unconditional branching without delay, or sometimes conditional branching without delay
+
+## Schedule of Nonlinear pipelining
+
+对于非线性流水线，功能部件可能经历多次，有调度问题。
+
+!!! Question
+    纵轴代表不同的功能部件，横坐标表示拍数。即每一拍需要用到的功能部件。
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231028102338.png" width=60%></div>
+
+算法：
+
+* Initial conflict vector
+
+    二进制表示，第几拍是不能使用的。将几个二进制数取并集。
+
+* Conflict vector
+* State transition graph
+* Circular queue
+* Shortest average interval
+
+!!! Example
+    * Initial conflict vector
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20231028103110.png" width=60%></div>
+
+        对每一个部件分开来看
+
+        * 第一个部件，隔 8 拍会产生冲突；第二个部件：1，5，6；第三个部件：无；第四、五个部件：1
+        * 将对应二进制数的第 1、5、6、8 位设为 1，其他位为 0，得到了初始的冲突向量 10110001。
+    
+    * Conflict vector
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20231028104553.png" width=60%></div>
+
+        对于第三列，隔两拍进下一条指令，我们就把冲突向量向右移两位（高位补 0），得到了新的冲突向量，并和本来的冲突向量或起来得到 CCV。（注意这里最左侧的一列表示向右移动了多少次）
+
+        找到了一个循环调度：2-2-7
+    
+    * State transition graph
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20231028105340.png " width=60%></div>
+
+## Summary
+
+!!! Summary
+    1. How the instruction is executed
+        * Sequential execution
+        * Overlap once
+        * Second overlap
+        * Pipeline
+    2. Classification of pipelines
+        * Single function, multi-function
+        * Static, dynamic
+        * Linear, non-linear
+        * In-order, out-of-order
+    3. Performance indicators of the pipeline
+        * Throughput rate
+        * Speedup ratio effectiveness
+    4. Factors affecting the performance of the pipeline
+        * Pipeline design
+        * Type of instructions
+        * Instructions related
+            * Data dependence
+            * Name dependence
+            * Control dependence
+    5. Dynamic Branch Prediction
+        * Branch History Table (BHT)
+        * Branch-Target Buffer (BTB)
+    6. Non-linear pipeline scheduling problem
