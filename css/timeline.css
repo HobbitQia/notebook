@@ -107,7 +107,7 @@
 }
 
 .changelog-content a {
-    color: #e3e3e3;
+    color: var(--md-default-fg-color);
 }
 
 
