@@ -4,7 +4,15 @@ counter: False
 
 # Welcome to HobbitQia's Notebook!  
 
-这里是 HobbitQia 的笔记本📓~ 
+这里是 HobbitQia 的笔记本📓~ 欢迎来玩捏~
+
+!!! warning ""
+    <div style="text-align: center; font-size:20px"  markdown="1">
+    我从山中来 带着兰花草  
+    家中无富贵 口袋无财宝  
+    寒风终刺骨 勤为好仕途  
+    博得明月出 用兰花换锦服
+    </div>
 
 ## About me
 
