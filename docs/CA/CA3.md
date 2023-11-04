@@ -190,4 +190,118 @@ How to improve
 
 ## Virtual Memory
 
-需要大内存时，虚拟内存让用户无感地使用 Memory。
+物理内存有限，虚拟内存让用户体验到一个抽象的更大的内存。
+
+* Why virtual memory?
+
+    可以让进程使用不连续的物理内存空间（虚拟地址上是连续的）；更好地隔离不同进程。
+
+* virtual-physical address translation
+* memory protection/sharing among multi-program
+
+Virtual Memory = Main Memory + Secondary Storage
+
+* Virtual Memory Allocation
+    * Paged virtual memory
+
+        **page**: fixed-size block
+    
+    * Segmented virtual memory
+
+        **segment**: variable-size block
+    
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231104161447.png" width=50%></div>
+
+!!! Info "Paging vs Segmentation"
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231104161606.png" width=50%></div>
+
+    分页式的易于实现，方便替换。现在常用段页式结合，或者纯页式。
+
+### How virtual memory works?
+
+Cache 的四个问题在虚拟内存中都有对应。
+
+* Q1. Where can a block be placed in main memory?
+
+    缺失代价很高，因此我们采用全相联的方式，以降低 miss rate。
+
+* Q2. How is a block found if it is in main memory?
+
+    虚拟地址分两部分，偏移量和页号。页号是页表的索引。
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231104161916.png" width=50%></div>
+    
+* Q3. Which block should be replaced on a virtual memory miss?
+
+    Least Recently Used (LRU) block, with use/reference bit.
+
+* Q4. What happens on a write?
+
+    Write-back strategy, with diry bit.
+
+### Page Table
+
+* Page tables are often large
+
+    ***e.g.*** 32-bit virtual address, 4KB pages, 4 bytes per page table entry.  
+    page table size: $(2^{32}/2^{12}) \times 2^2 = 2^{22}$ bytes = $4$ MB
+* Logically two memory accesses for data access:
+    * one to obtain the physical address from page table;
+    * one to get the data from the physical address;
+
+正常来说页表需要两次内存访问，访问效率低下，因此我们需要 cache page table，即 TLB。
+
+**Translation lookaside buffer (TLB)**
+
+* tag: portions of the virtual address (VPN);
+* data: a physical page frame number (PPN), protection field, valid bit, use bit, dirty bit;
+
+!!! Example
+    发送 tag (VPN) 尝试匹配，并看访问类型是否违规。如果匹配成功，就把对应的 PPN 送到 Mux，将偏移量加上 PPN 得到物理地址。
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231104170717.png" width=50%></div>
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231104170729.png" width=50%></div>
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231104171003.png" width=50%></div>
+
+### Page Size Selection
+
+* Pros of *larger* page size
+    * Smaller page table, less memory (or other resources used for the memory map);
+
+        页更少，所以页表更小。
+    
+    * Larger cache with fast cache hit;
+
+        页更大，所以 cache 命中的时间更短（因为我们需要遍历的页更少）。
+
+    * Transferring larger pages to or from secondary storage is more efficient than transferring smaller pages;
+
+        一次搬运更多的数据，所以更高效，小页可能需要搬运多次。
+
+    * Map more memory, reduce the number of TLB misses;
+
+        TLB miss 次数更少。
+
+* Pros of *smaller* page size
+    * Conserve storage
+        
+        When a contiguous region of virtual memory is not equal in size to a multiple of the page size, a small page size results in less wasted storage.
+
+        减少对内存的使用，内部碎片更少。
+
+Use both: **multiple page sizes**
+
+!!! Note "Address Translation"
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231104175034.png" width=80%></div>
+
+## Summary 
+
+!! Summary
+    * Memory hierarchy
+        * From single level to multi level
+        * Evaluate the performance parameters of the storage system (average price per bit C; hit rate H; average memory access time T)
+    * Cache basic knowledge
+        * Mapping rules
+        * Access method
+        * Replacement algorithm
+        * Write strategy
+        * Cache performance analysis
+    * Virtual Memory (the influence of memory organization structure on Cache failure rate)

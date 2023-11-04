@@ -102,13 +102,44 @@ Implementation of communication link
 
 ### Pipes
 
-* Ordinary pipes  
+* **Ordinary pipes**  
     
     没有名字，只能通过 `fork()` 来传播。
 
-* Named pipes
+    * *Producer* writes to one end (the **write-end** of the pipe)
+    * *Consumer* reads from the other end (the **read-end** of the pipe)
+    
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231031094344.png" width=70%></div>
 
-    可以把名字通过网络/文件传播，这样就能交互。
+    注意 `fd[0]` 是 read-end，`fd[1]` 是 write-end（对于双方都是）
 
-In UNIX, a pipe is **mono-directional**. 
+* **Named pipes**
+
+    可以把名字通过网络/文件传播，这样就能交互。（可以使用 `mkfifo` 创建 named pipes）
+
+In UNIX, a pipe is **mono-directional**.   
 要实现两个方向一定需要两个 pipe。
+
+### Client-Server Communication
+
+广义上的 IPC，因为是跑在两个物理机器上的交互。
+
+* Sockets
+* RPCs
+
+    所有的交互都是和 stub 通信，stub 会和远端的 server 通信。
+    存在网络问题，如丢包。
+
+* Java RMI
+
+    RPC in Java
+
+## Takeaway
+
+!!! Summary "Takeaway"
+    * Communicating processes are the basis for many programs/services
+    * OSes provide two main ways for processes to communicate
+        * shared memory
+        * message-passing
+    * Each way comes with many variants and in many flavors
+    * Signals, Pipes, Sockets, RPCs, RMIs, etc.
