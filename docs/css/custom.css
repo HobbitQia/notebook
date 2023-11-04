@@ -6,7 +6,9 @@
     font-family: "Times New Roman", "Songti SC";
     font-weight: 600;
   } */
-  
+  .md-nav__link {
+    zoom: 105%
+  }
   .md-typeset h1, .md-typeset h2 {
     font-weight: 600;
   }
@@ -20,7 +22,7 @@
   }
   
   .md-typeset {
-    font-size: .75rem;
+    font-size: .77rem;
   }
   
   .md-typeset h3 {
