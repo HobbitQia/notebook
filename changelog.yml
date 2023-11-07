@@ -1,10 +1,14 @@
 - "2023":
+  - "2023-11-7": 
+    - newpage:
+        text: System > 操作系统原理与实践 > 同步
+        href: /OS/chap06
   - "2023-11-4": 
     - newpage:
         text: System > 操作系统原理与实践 > 线程、调度
-        href: /OS/chap04.md
+        href: /OS/chap04
     - pageupdate:
         text: System > 计算机体系结构 > 内存层次
-        href: /CA/CA3.md
+        href: /CA/CA3
   - "2023-10-31":
     - function: 笔记本样式大更新！
