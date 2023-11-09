@@ -16,7 +16,7 @@
         <link rel="prev" href="../chap05/">
       
       
-        <link rel="next" href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/">
+        <link rel="next" href="../chap07/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -2981,6 +2981,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -3341,6 +3343,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#synchronization-examples" class="md-nav__link">
+    Synchronization Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Synchronization Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bounded-buffer-problem" class="md-nav__link">
+    Bounded-Buffer Problem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readers-writers-problem" class="md-nav__link">
+    Readers-writers problem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dining-philosophers-problem" class="md-nav__link">
+    Dining-philosophers problem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#takeaway" class="md-nav__link">
     Takeaway
   </a>
@@ -3351,6 +3387,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chap07/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    死锁
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3880,6 +3936,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#synchronization-examples" class="md-nav__link">
+    Synchronization Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Synchronization Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bounded-buffer-problem" class="md-nav__link">
+    Bounded-Buffer Problem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readers-writers-problem" class="md-nav__link">
+    Readers-writers problem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dining-philosophers-problem" class="md-nav__link">
+    Dining-philosophers problem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#takeaway" class="md-nav__link">
     Takeaway
   </a>
@@ -4062,7 +4152,8 @@
 </div>
 <div class="admonition example">
 <p class="admonition-title">Bounded Waiting for Test-and-Set Lock</p>
-<p><div align = center><img src="https://cdn.hobbitqia.cc/20231107105603.png" width=55%></div></p>
+<p>上面的程序满足前两个条件，不一定满足 bounded waiting。下面的代码可以把锁从 T0 传到 T1，再传到 T2。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231107105603.png" width=55%></div></p>
 </div>
 <h4 id="compare-and-swap-instruction">Compare-and-Swap Instruction<a class="headerlink" href="#compare-and-swap-instruction" title="Permanent link">&para;</a></h4>
 <p>Executed atomically, the swap takes place only under this condition.</p>
@@ -4207,7 +4298,8 @@ When the lock is locked, change process’s state to SLEEP, add to the queue, an
 </div>
 <details class="example">
 <summary>Semaphore w/ waiting queue in practice</summary>
-<p><div align = center><img src="https://cdn.hobbitqia.cc/20231107114117.png" width=50%></div>
+<p>真实实现里，需要有 spinlock 来保护 semaphore 操作的原子性。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231107114117.png" width=50%></div>
 <div align = center><img src="https://cdn.hobbitqia.cc/20231107114150.png" width=50%></div></p>
 </details>
 <h2 id="deadlock-and-starvation">Deadlock and Starvation<a class="headerlink" href="#deadlock-and-starvation" title="Permanent link">&para;</a></h2>
@@ -4360,9 +4452,132 @@ When the lock is locked, change process’s state to SLEEP, add to the queue, an
 <p><div align = center><img src="https://cdn.hobbitqia.cc/20231107121742.png" width=50%></div></p>
 </details>
 <ul>
-<li>Condition variable can wake up all threads, semaphore can only wake up one by one.  </li>
-<li>Mutex is used to guarantee that operations are atomic.</li>
+<li>Condition variable can wake up all threads, semaphore can only wake up one by one.   </li>
+<li>
+<p>Sometimes we only care if the queue is empty or not, while don’t care the queue length.</p>
+<p>有的时候我们不关心等待队列的长度，那么 semaphore 的 val 就没有用处了。</p>
+</li>
+<li>
+<p>Mutex is used to guarantee that operations are atomic.</p>
+</li>
 </ul>
+<h2 id="synchronization-examples">Synchronization Examples<a class="headerlink" href="#synchronization-examples" title="Permanent link">&para;</a></h2>
+<p>一般我们用信号量解决问题，因为信号量相对来说功能更多，而且很多操作系统对信号量做了更多设计，用来避免 busy waiting 等问题。</p>
+<p>一个信号量用来表示 一类资源的余量；<code>wait()</code> 等待到其有余量时从中取走一个，而 <code>signal()</code> 释放一个资源。</p>
+<h3 id="bounded-buffer-problem">Bounded-Buffer Problem<a class="headerlink" href="#bounded-buffer-problem" title="Permanent link">&para;</a></h3>
+<p>Two processes, the producer and the consumer share n buffers</p>
+<ul>
+<li>
+<p>the producer generates data, puts it into the buffer.</p>
+<ul>
+<li>
+<p>the producer won’t try to add data into the buffer if it is full.</p>
+<p>当 buffer 满的时候，生产者不能再放数据，应该 sleep。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>the consumer consumes data by removing it from the buffer.</p>
+<ul>
+<li>
+<p>the consumer won’t try to remove data from an empty buffer.</p>
+<p>当 buffer 空的时候，消费者不能再取数据，应该 sleep。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>定义哪些 mutex 和 semaphor?<br />
+buffer 需要互斥的保护，因此需要一个 mutex。当它满了的时候就让 producer 睡眠，当它空的时候就让 consumer 睡眠，因此需要两个 semaphor。</p>
+<ul>
+<li>The producer process
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="c1">//produce an item</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="n">wait</span><span class="p">(</span><span class="n">empty</span><span class="o">-</span><span class="n">slots</span><span class="p">);</span><span class="w">      </span><span class="c1">// 把 empty-slots 减一（初始为 N）</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="n">wait</span><span class="p">(</span><span class="n">mutex</span><span class="p">);</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="c1">//add the item to the buffer</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">    </span><span class="n">signal</span><span class="p">(</span><span class="n">mutex</span><span class="p">);</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">    </span><span class="n">signal</span><span class="p">(</span><span class="n">full</span><span class="o">-</span><span class="n">slots</span><span class="p">);</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">TRUE</span><span class="p">)</span>
+</code></pre></div>
+    这里 <code>wait()</code> 的顺序不能调换：如果先 <code>wait(mutex)</code>，那么 <code>wait(empty-slots)</code> 之后，如果 buffer 空了，那么这个时候就会带着 mutex 休眠，这样另一个进程也拿不到这个锁了。</li>
+<li>The consumer process
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="c1">//produce an item</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="n">wait</span><span class="p">(</span><span class="n">full</span><span class="o">-</span><span class="n">slots</span><span class="p">);</span><span class="w">           </span><span class="c1">// 把 full-slots 减一（初始为 0）</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="n">wait</span><span class="p">(</span><span class="n">mutex</span><span class="p">);</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">    </span><span class="c1">//remove the item to the buffer</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">    </span><span class="n">signal</span><span class="p">(</span><span class="n">mutex</span><span class="p">);</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">    </span><span class="n">signal</span><span class="p">(</span><span class="n">empty</span><span class="o">-</span><span class="n">slots</span><span class="p">);</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">TRUE</span><span class="p">)</span>
+</code></pre></div></li>
+</ul>
+<h3 id="readers-writers-problem">Readers-writers problem<a class="headerlink" href="#readers-writers-problem" title="Permanent link">&para;</a></h3>
+<p>A data set is shared among a number of concurrent processes</p>
+<ul>
+<li>readers: only read the data set; they do not perform any updates</li>
+<li>writers: can both read and write</li>
+</ul>
+<p>多个 reader 可以共享，即同时读；但只能有一个 write 访问数据（写和读也不共享）。</p>
+<p>Solution:</p>
+<ul>
+<li>semaphore <em>mutex</em> initialized to 1</li>
+<li>semaphore <em>write</em> initialized to 1</li>
+<li>
+<p>integer <em>readcount</em> initialized to 0</p>
+</li>
+<li>
+<p>The writer process  <br />
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">The</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="n">process</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="n">wait</span><span class="p">(</span><span class="n">write</span><span class="p">);</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="c1">//write the shared data</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">    </span><span class="p">....</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">    </span><span class="n">signal</span><span class="p">(</span><span class="n">write</span><span class="p">);</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">TRUE</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>The reader process
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="n">wait</span><span class="p">(</span><span class="n">mutex</span><span class="p">);</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="n">readcount</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">readcount</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">        </span><span class="n">wait</span><span class="p">(</span><span class="n">write</span><span class="p">);</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">    </span><span class="n">signal</span><span class="p">(</span><span class="n">mutex</span><span class="p">)</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">    </span><span class="c1">//reading data</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">    </span><span class="n">wait</span><span class="p">(</span><span class="n">mutex</span><span class="p">);</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">    </span><span class="n">readcount</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">readcount</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">        </span><span class="n">signal</span><span class="p">(</span><span class="n">write</span><span class="p">);</span>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="w">    </span><span class="n">signal</span><span class="p">(</span><span class="n">mutex</span><span class="p">);</span>
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="p">(</span><span class="n">TRUE</span><span class="p">);</span>
+</code></pre></div>
+    mutex 用来保护 <code>readcount</code>。这里如果 count 是 1，就获得 <code>write</code> 的锁来保护这个 read。假设 writer 拿到了锁，来了 5 个 reader，那么第一个会 sleep 在 write 上，剩下 4 个 reader 会 sleep 在 mutex 上。<br />
+    怎样才能不带着锁休眠？</li>
+</ul>
+<p>Two variations of readers-writers problem</p>
+<ul>
+<li>
+<p>Reader first</p>
+<p>如果有 reader holds data，writer 永远拿不到锁，要等所有的 reader 结束。</p>
+</li>
+<li>
+<p>Writer first</p>
+<p>如果 write ready 了，他就会尽可能早地进行写操作。如果有 reader hold data，那么需要等待 ready writer 结束后再读。</p>
+</li>
+</ul>
+<p>上面的代码是 Reader first。</p>
+<h3 id="dining-philosophers-problem">Dining-philosophers problem<a class="headerlink" href="#dining-philosophers-problem" title="Permanent link">&para;</a></h3>
+<p>Philosophers spend their lives thinking and eating, they sit in a round table, but don’t interact with each other.  </p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231109205206.png" width=50%></div>
+
+<p>每次只能拿一根筷子，但是要拿到两只筷子才能吃饭。例如如果每个人都先拿自己右边的筷子，再准备拿左边的筷子，就会卡死。</p>
+<p>Solution: only odd philosophers start left-hand first, and even philosophers start right-hand first. This does not deadlock.</p>
 <h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
 <div class="admonition summary">
 <p class="admonition-title">Takeaway</p>
@@ -4398,11 +4613,11 @@ When the lock is locked, change process’s state to SLEEP, add to the queue, an
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年11月7日 12:26:22</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年11月9日 23:43:11</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年11月7日 12:26:22</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年11月9日 23:43:11</span>
       
     
   </small>

@@ -3284,6 +3284,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -3433,6 +3435,26 @@
   
   <span class="md-ellipsis">
     同步
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/chap07/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    死锁
   </span>
   
 
@@ -4216,14 +4238,16 @@ W X Y Z 输出也需要四个逻辑函数。<br />
 单独 ABCD 四输入 对应一个输出 W, 用卡诺图化简。
 <div align=center> <img src="https://s2.loli.net/2022/10/19/2PfAVW6G4v8Oyko.png" width = 50%/> </div>  </li>
 </ul>
-<p>得到 <span class="arithmatex">\(W=A+BC+BD, X=\overline B C+\overline B D+B \overline C\overline D, Y=CD+\overline C\overline D, Z=\overline D\)</span>
-* multiple-level<br />
+<p>得到 <span class="arithmatex">\(W=A+BC+BD, X=\overline B C+\overline B D+B \overline C\overline D, Y=CD+\overline C\overline D, Z=\overline D\)</span></p>
+<ul>
+<li>multiple-level<br />
 <span class="arithmatex">\(G=7+10+6+0=23\)</span>.<br />
 优化后: <span class="arithmatex">\(T_1=C+D, W=A+BT_1, X=\overline B T_1B \overline C\overline D, Y=CD+\overline C\overline D, Z=\overline D\)</span><br />
 <span class="arithmatex">\(G=2+4+7+6+0=19\)</span>, 最多是三级电路。
 <span class="arithmatex">\(\overline C\overline D=\overline{C+D}=\overline{T_1},T_1=C+D, W=A+BT_1, X=\overline B T_1B \overline C\overline D, Y=CD+\overline C\overline D, Z=\overline D\)</span>  <br />
 <span class="arithmatex">\(G = 2 +1 + 4 + 6 + 4 + 0 = 17\)</span>，最多是四级电路。
-为什么要算 T1 非：ABCD 是外部输入的引脚，一般同时有原变量和反变量。但 T1 是内部产生的信号，对这个信号的非要自己计算得到。</p>
+为什么要算 T1 非：ABCD 是外部输入的引脚，一般同时有原变量和反变量。但 T1 是内部产生的信号，对这个信号的非要自己计算得到。</li>
+</ul>
 </li>
 <li>
 <p><strong>Technology Mapping</strong><br />

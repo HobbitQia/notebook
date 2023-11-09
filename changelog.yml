@@ -1,4 +1,8 @@
 - "2023":
+  - "2023-11-9": 
+    - newpage:
+        text: System > 操作系统原理与实践 > 死锁
+        href: /OS/chap07
   - "2023-11-7": 
     - newpage:
         text: System > 操作系统原理与实践 > 同步
