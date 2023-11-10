@@ -215,6 +215,7 @@ nav:
       - 计算机设计基础: CA/CA1.md
       - 流水线: CA/CA2.md
       - 内存层次: CA/CA3.md
+      - 指令级并行: CA/CA4.md
     - 操作系统原理与实践:
       - OS/index.md
       - OS 结构: OS/chap01.md
@@ -222,6 +223,8 @@ nav:
       - 进程间通信: OS/chap03.md
       - 线程: OS/chap04.md
       - 调度: OS/chap05.md
+      - 同步: OS/chap06.md
+      - 死锁: OS/chap07.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md

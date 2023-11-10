@@ -126,6 +126,7 @@ Verify the correctness of the final design manually or using simulation.(仿真)
         <div align=center> <img src="https://s2.loli.net/2022/10/19/2PfAVW6G4v8Oyko.png" width = 50%/> </div>  
 
         得到 $W=A+BC+BD, X=\overline B C+\overline B D+B \overline C\overline D, Y=CD+\overline C\overline D, Z=\overline D$
+        
         * multiple-level  
         $G=7+10+6+0=23$.  
         优化后: $T_1=C+D, W=A+BT_1, X=\overline B T_1B \overline C\overline D, Y=CD+\overline C\overline D, Z=\overline D$  
