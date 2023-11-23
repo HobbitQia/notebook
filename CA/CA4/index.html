@@ -3029,6 +3029,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hardware-based-speculation" class="md-nav__link">
+    Hardware-Based Speculation
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3056,6 +3063,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3241,6 +3252,46 @@
   
   <span class="md-ellipsis">
     死锁
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/chap08/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主存
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/chap09/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    虚拟内存
   </span>
   
 
@@ -3630,6 +3681,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hardware-based-speculation" class="md-nav__link">
+    Hardware-Based Speculation
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3716,22 +3774,20 @@
 <ul>
 <li>busy 代表当前这个单元是否有指令正在使用。op 表示这个单元正在被哪类指令使用。</li>
 <li>Fi、Fj、Fk 代表源操作数和目的操作数（Fi 为源，Fj、Fk 为目的）。</li>
-<li>
-<p>Qj、Qk 代表源操作数来自哪个部件</p>
-<ul>
+<li>Qj、Qk 代表源操作数来自哪个部件<ul>
 <li>如 Mult1 的 Qj=Integer 说明来自整数部件（此时正在执行 Load 指令）</li>
 </ul>
 </li>
 <li>
-<p>Rj、Rk 代表源操作数的状态</p>
 <ul>
 <li>
 <p>yes - operands is ready but no ready.</p>
 <p>没读是因为其他的操作数还没有 read。</p>
 </li>
-<li>
-<p>no &amp; Qj=null: operand is read.</p>
-</li>
+</ul>
+<p>Rj、Rk 代表源操作数的状态</p>
+<ul>
+<li>no &amp; Qj=null: operand is read.</li>
 <li>
 <p>no &amp; Qj!=null: operand is not ready.</p>
 <p>其他指令会修改这个操作数，而且还没有执行完毕。</p>
@@ -3755,6 +3811,7 @@
 <details class="answer">
 <summary>Answer</summary>
 <p><div align = center><img src="https://cdn.hobbitqia.cc/20231110163118.png" width=50%></div></p>
+<p>注意到在这之后，最后一条 ADD 指令必须等到 DIV 指令 RO 之后才能 WB（否则会修改 F6）。</p>
 </details>
 </div>
 <p>Scoreboard 算法可以检测出来冲突，但没有解决冲突，还是通过阻塞的方式来解决，scoreboard 上面的信息也比较繁杂，效率不高。</p>
@@ -3843,16 +3900,14 @@
 <p><strong>Reservation stations table</strong>: The reservation station keeps the state of each operation that has issued.</p>
 <p>保留站（功能部件）状态表，记录有多少指令在用。这里相比之前的 scoreboard 做了简化，对于源操作数只有两组数据。</p>
 <p>Each reservation station has seven fields:</p>
-<ul>
-<li><strong>Op</strong>: The operation to perform on source operands.</li>
-<li><strong>Qj</strong>, Qk: The reservation stations that will produce the corresponding source operand.</li>
-<li><strong>Vj</strong>, Vk: The value of the source operands.</li>
-<li><strong>Busy</strong>: Indicates that this reservation station and its accompanying functional unit are occupied.</li>
-<li>
-<p><strong>A</strong>: Used to hold information for the memory address calculation for a load or store.</p>
-<p>Load/Store 指令的目标地址。</p>
-</li>
-</ul>
+<div class="highlight"><pre><span></span><code>* **Op**: The operation to perform on source operands.
+* **Qj**, Qk: The reservation stations that will produce the corresponding source operand.
+* **Vj**, Vk: The value of the source operands.
+* **Busy**: Indicates that this reservation station and its accompanying functional unit are occupied.
+* **A**: Used to hold information for the memory address calculation for a load or store.
+
+    Load/Store 指令的目标地址。
+</code></pre></div>
 </li>
 <li>
 <p><strong>Register status table (Field Qi)</strong>: The number of the reservation station that contains the operation whose result should be stored into this register.</p>
@@ -3877,8 +3932,7 @@
 <div align = center><img src="https://cdn.hobbitqia.cc/20231110172518.png" width=50%></div></p>
 <p>可以看到此时名相关已经不存在了：在指令 5 进入保留站的时候，F6 的值已经读出来并且放到了保留站中，此时无论指令 6 什么时候执行完，写回 F6 的值，都不会影响指令 5 的操作数，因此不再有依赖。也不会出现指令 6 写回了指令 5 才取操作数的情况，因为我们是顺序发射的，指令 5 一定在指令 6 之前发射。</p>
 </div>
-<!-- 执行结束后指令不能立刻出去，需要按进来的顺序出去，如果后进来的指令先结束，那么就需要等待它前面的指令都结束了才能出去。 -->
-
+<p>执行结束后指令不能立刻出去，需要按进来的顺序出去，如果后进来的指令先结束，那么就需要等待它前面的指令都结束了才能出去。</p>
 <div class="admonition summary">
 <p class="admonition-title">Summary</p>
 <ul>
@@ -3905,15 +3959,75 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p>Does out-of-order execution mean out-of-order completion?</p>
+<p>Does out-of-order execution mean out-of-order completion?  </p>
 </div>
+<h2 id="hardware-based-speculation">Hardware-Based Speculation<a class="headerlink" href="#hardware-based-speculation" title="Permanent link">&para;</a></h2>
+<p>为了让指令执行完成的顺序也是顺序的，我们添加了一个 reorder buffer。</p>
+<p>结果先写到 reorder buffer，在 buffer 里按照指令流出的顺序以此写回寄存器。因此我们在每个指令后面加上一个 commit 状态，当前面的指令都 commit 之后才能 commit。</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231117200559.png" width=50%></div>
+
+<p>The basic structure of a FP unit using Tomasulo’s algorithm and extended to handle speculation:</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231117200746.png" width=60%></div>
+
+<ul>
+<li><strong>Issue</strong>: get instruction from FP Op Queue</li>
+<li><strong>Execution</strong>: operate on operands (EX)</li>
+<li><strong>Write result</strong>: finish execution (WB)</li>
+<li><strong>Commit</strong>: update register with reorder result</li>
+</ul>
+<p>Hardware-based speculation combines three key ideas:</p>
+<ul>
+<li>dynamic branch prediction to choose which instructions to execute</li>
+<li>speculation to allow the execution of instructions before the control dependences are resolved (with the ability to undo the effects of an incorrectly speculated sequence)</li>
+<li>dynamic scheduling to deal with the scheduling of different combinations of basic blocks</li>
+</ul>
+<p>前面的 IS 和 EX 阶段与 Tomasulo’s Approach 一致，只是在 WB 阶段加了一个 commit 状态，只有当指令 commit 之后才能写回寄存器。</p>
+<ul>
+<li>WB<ul>
+<li>The ROB holds the result of an instruction between the time the operation associated with the instruction completes and the time the instruction commits.</li>
+<li>The ROB is a source of operands for instructions, just as the reservation stations provide operands in Tomasulo’s algorithm.</li>
+</ul>
+</li>
+<li>
+<p>instruction commit </p>
+<ul>
+<li>
+<p>The key idea behind implementing speculation is to allow instructions to execute out of order but to force them to commit in order and to prevent any irrevocable action (such as updating state or taking an exception) until an instruction commits.</p>
+<p>把 ROB 结果写到对应的寄存器里。</p>
+</li>
+<li>
+<p>The reorder buffer (ROB) provides additional registers in the same way as the reservation stations in Tomasulo’s algorithm extend the register set.</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Show what the status tables look like when the FMUL.D is ready to commit.<br />
+Dest 这里填的是保留站的名称，而不是寄存器的名称。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231117201549.png" width=50%></div></p>
+<p>ROB 需要知道我们是从哪条指令来的，标 busy 的是当前正在执行的指令（即还没有 commit）
+<div align = center><img src="https://cdn.hobbitqia.cc/20231117201602.png" width=50%></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Practice in Class</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20231117201850.png" width=50%></div></p>
+<p>实际上加上 ROB 之后，前面的执行和 Tomasulo’s Approach 是一样的，只是多了一个 commit 状态，在后面加一列，需要按照流出顺序提交即可。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231117204124.png" width=50%></div></p>
+</div>
+<ul>
+<li>Instructions are finished in order according to ROB.d</li>
+<li>It can be precise exception. </li>
+<li>It is easily extended to integer register and integer function unit.</li>
+<li>But the hardware is too complex.</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年11月10日 17:39:14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年11月23日 21:35:03</span>
       
         <br>
         创建日期:

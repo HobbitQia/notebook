@@ -1,4 +1,11 @@
 - "2023":
+  - "2023-11-16": 
+    - newpage:
+        text: System > 操作系统原理与实践 > 主存
+        href: /OS/chap08
+    - newpage:
+        text: System > 计算机体系结构 > 指令级并行
+        href: /CA/CA4
   - "2023-11-10": 
     - newpage:
         text: System > 计算机体系结构 > 指令级并行
