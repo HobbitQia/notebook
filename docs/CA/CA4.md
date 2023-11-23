@@ -97,6 +97,8 @@ The basic structure of a processor with scoreboard:
     ??? Answer 
         <div align = center><img src="https://cdn.hobbitqia.cc/20231110163118.png" width=50%></div>
 
+        注意到在这之后，最后一条 ADD 指令必须等到 DIV 指令 RO 之后才能 WB（否则会修改 F6）。
+
 Scoreboard 算法可以检测出来冲突，但没有解决冲突，还是通过阻塞的方式来解决，scoreboard 上面的信息也比较繁杂，效率不高。
 
 ### Tomasulo’s Approach
@@ -204,7 +206,7 @@ There are three tables for Tomasulo’s Approach.
 
     可以看到此时名相关已经不存在了：在指令 5 进入保留站的时候，F6 的值已经读出来并且放到了保留站中，此时无论指令 6 什么时候执行完，写回 F6 的值，都不会影响指令 5 的操作数，因此不再有依赖。也不会出现指令 6 写回了指令 5 才取操作数的情况，因为我们是顺序发射的，指令 5 一定在指令 6 之前发射。
     
-<!-- 执行结束后指令不能立刻出去，需要按进来的顺序出去，如果后进来的指令先结束，那么就需要等待它前面的指令都结束了才能出去。 -->
+执行结束后指令不能立刻出去，需要按进来的顺序出去，如果后进来的指令先结束，那么就需要等待它前面的指令都结束了才能出去。
 
 !!! Summary
     * Tomasula’s Algorithm main contributions
@@ -222,4 +224,57 @@ There are three tables for Tomasulo’s Approach.
     * The limitations on ILP approaches directly led to the movement to multicore.
 
 !!! Question
-    Does out-of-order execution mean out-of-order completion?
+    Does out-of-order execution mean out-of-order completion?  
+
+## Hardware-Based Speculation
+
+为了让指令执行完成的顺序也是顺序的，我们添加了一个 reorder buffer。
+
+结果先写到 reorder buffer，在 buffer 里按照指令流出的顺序以此写回寄存器。因此我们在每个指令后面加上一个 commit 状态，当前面的指令都 commit 之后才能 commit。
+
+<div align = center><img src="https://cdn.hobbitqia.cc/20231117200559.png" width=50%></div>
+
+The basic structure of a FP unit using Tomasulo’s algorithm and extended to handle speculation:
+<div align = center><img src="https://cdn.hobbitqia.cc/20231117200746.png" width=60%></div>
+
+* **Issue**: get instruction from FP Op Queue
+* **Execution**: operate on operands (EX)
+* **Write result**: finish execution (WB)
+* **Commit**: update register with reorder result
+
+Hardware-based speculation combines three key ideas:
+
+* dynamic branch prediction to choose which instructions to execute
+* speculation to allow the execution of instructions before the control dependences are resolved (with the ability to undo the effects of an incorrectly speculated sequence)
+* dynamic scheduling to deal with the scheduling of different combinations of basic blocks
+
+前面的 IS 和 EX 阶段与 Tomasulo’s Approach 一致，只是在 WB 阶段加了一个 commit 状态，只有当指令 commit 之后才能写回寄存器。
+
+* WB
+    * The ROB holds the result of an instruction between the time the operation associated with the instruction completes and the time the instruction commits.
+    * The ROB is a source of operands for instructions, just as the reservation stations provide operands in Tomasulo’s algorithm.
+* instruction commit 
+    * The key idea behind implementing speculation is to allow instructions to execute out of order but to force them to commit in order and to prevent any irrevocable action (such as updating state or taking an exception) until an instruction commits.
+
+        把 ROB 结果写到对应的寄存器里。
+
+    * The reorder buffer (ROB) provides additional registers in the same way as the reservation stations in Tomasulo’s algorithm extend the register set.
+
+!!! Example
+    Show what the status tables look like when the FMUL.D is ready to commit.  
+    Dest 这里填的是保留站的名称，而不是寄存器的名称。
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231117201549.png" width=50%></div>
+
+    ROB 需要知道我们是从哪条指令来的，标 busy 的是当前正在执行的指令（即还没有 commit）
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231117201602.png" width=50%></div>
+    
+!!! Example "Practice in Class"
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231117201850.png" width=50%></div>
+
+    实际上加上 ROB 之后，前面的执行和 Tomasulo’s Approach 是一样的，只是多了一个 commit 状态，在后面加一列，需要按照流出顺序提交即可。
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231117204124.png" width=50%></div>
+    
+* Instructions are finished in order according to ROB.d
+* It can be precise exception. 
+* It is easily extended to integer register and integer function unit.
+* But the hardware is too complex.

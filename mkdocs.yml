@@ -216,6 +216,7 @@ nav:
       - 流水线: CA/CA2.md
       - 内存层次: CA/CA3.md
       - 指令级并行: CA/CA4.md
+      - 
     - 操作系统原理与实践:
       - OS/index.md
       - OS 结构: OS/chap01.md
@@ -225,6 +226,8 @@ nav:
       - 调度: OS/chap05.md
       - 同步: OS/chap06.md
       - 死锁: OS/chap07.md
+      - 主存: OS/chap08.md
+      - 虚拟内存: OS/chap09.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
