@@ -3854,7 +3854,7 @@
 <li>限制：自环是不合法的，同时我们不考虑多重图 </li>
 <li>对于 <span class="arithmatex">\((v_i,v_j)\)</span> 这条边，我们称 <span class="arithmatex">\(v_i,v_j\)</span> 是邻接的(adjacent), 称 <span class="arithmatex">\((v_i,v_j)\)</span> 附属于(incident) <span class="arithmatex">\(v_i/v_j\)</span></li>
 <li><strong>完全图</strong>: 每一对节点间都存在一条边的图  </li>
-<li><strong>子图</strong>: <span class="arithmatex">\(G'\sub G\)</span> 即 <span class="arithmatex">\(G'\)</span> 中的点和边都包含在 G 中(<span class="arithmatex">\(V(G')\sube V(G)\quad E(G')\sube E(G)\)</span>)  </li>
+<li><strong>子图</strong>: <span class="arithmatex">\(G'\subset G\)</span> 即 <span class="arithmatex">\(G'\)</span> 中的点和边都包含在 G 中(<span class="arithmatex">\(V(G')\subseteq V(G)\quad E(G')\subseteq E(G)\)</span>)  </li>
 <li><strong>路径</strong>: <span class="arithmatex">\(\{v_p,v_{i1},v_{i2},\ldots, v_{in},v_q\}((v_i,v_i)\in E)\)</span> 称为从 <span class="arithmatex">\(v_p\)</span> 到 <span class="arithmatex">\(v_q\)</span> 的一条路径</li>
 <li><strong>路径的长度</strong>：路径经过的边的数量</li>
 <li><strong>简单路径</strong>: <span class="arithmatex">\(v_{i1},v_{i2}...\)</span> 各不相同(注意第一个点可以和最后一个点相同)</li>
@@ -3919,7 +3919,7 @@ adj\_mat[i][j]=\left\{ \begin{matrix} 1\quad if\ (v_i,v_j)\ or\ &lt;v_i,v_j&gt;\
 <p>拓扑排序可能不是唯一的</p>
 </div>
 <h2 id="_8">最短路<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<p>给定有向图 <span class="arithmatex">\(G=(V,E)\)</span> 以及一个花费函数 <span class="arithmatex">\(c(e), e\in E(G)\)</span>. 从源点到终点的一条路径 <span class="arithmatex">\(P\)</span> 的长度定义为 <span class="arithmatex">\(\sum\limits_{e_i\sub P}c(e_i)\)</span> （也称为带权路径长） </p>
+<p>给定有向图 <span class="arithmatex">\(G=(V,E)\)</span> 以及一个花费函数 <span class="arithmatex">\(c(e), e\in E(G)\)</span>. 从源点到终点的一条路径 <span class="arithmatex">\(P\)</span> 的长度定义为 <span class="arithmatex">\(\sum\limits_{e_i\subset P}c(e_i)\)</span> （也称为带权路径长） </p>
 <h3 id="_9">单源最短路径<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>给定一个赋权图和一个特定顶点 <span class="arithmatex">\(s\)</span> 作为输入，找出从 <span class="arithmatex">\(s\)</span> 到 <span class="arithmatex">\(G\)</span> 中每一个其他顶点的最短带权路径。
 <strong>注意</strong>: 如果这里有负环，那么最短路径定义为 0. </p>
