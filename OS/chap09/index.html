@@ -346,14 +346,8 @@
   
     
     
-      
-  
-  
-  
-    
-    
       <li class="md-tabs__item">
-        <a href="../../android/dataflow/" class="md-tabs__link">
+        <a href="../../Misc/" class="md-tabs__link">
           
   
     
@@ -362,9 +356,6 @@
 
         </a>
       </li>
-    
-  
-
     
   
 
@@ -3406,6 +3397,19 @@
     Allocation of Frames
   </a>
   
+    <nav class="md-nav" aria-label="Allocation of Frames">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-uniform-memory-access" class="md-nav__link">
+    Non-Uniform Memory Access
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3416,8 +3420,62 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#non-uniform-memory-access" class="md-nav__link">
-    Non-Uniform Memory Access
+  <a href="#thrashing" class="md-nav__link">
+    Thrashing
+  </a>
+  
+    <nav class="md-nav" aria-label="Thrashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolve-thrashing" class="md-nav__link">
+    Resolve thrashing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-considerations" class="md-nav__link">
+    Other Considerations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-management-in-linux" class="md-nav__link">
+    Memory management in Linux
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory management in Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-buddy-system" class="md-nav__link">
+    Linux Buddy System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slab-allocation" class="md-nav__link">
+    Slab Allocation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    Takeaway
   </a>
   
 </li>
@@ -3656,6 +3714,12 @@
     
       
         
+          
+        
+      
+        
+      
+        
       
     
     
@@ -3667,16 +3731,24 @@
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Misc/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Miscellaneous
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              <label class="md-nav__link " for="__nav_5">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
@@ -3684,6 +3756,28 @@
             Miscellaneous
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Misc/float/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    浮点数与定点数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -3703,9 +3797,9 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
         
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3716,8 +3810,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             Android
           </label>
@@ -3932,6 +4026,19 @@
     Allocation of Frames
   </a>
   
+    <nav class="md-nav" aria-label="Allocation of Frames">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-uniform-memory-access" class="md-nav__link">
+    Non-Uniform Memory Access
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3942,8 +4049,62 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#non-uniform-memory-access" class="md-nav__link">
-    Non-Uniform Memory Access
+  <a href="#thrashing" class="md-nav__link">
+    Thrashing
+  </a>
+  
+    <nav class="md-nav" aria-label="Thrashing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolve-thrashing" class="md-nav__link">
+    Resolve thrashing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-considerations" class="md-nav__link">
+    Other Considerations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-management-in-linux" class="md-nav__link">
+    Memory management in Linux
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory management in Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-buddy-system" class="md-nav__link">
+    Linux Buddy System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slab-allocation" class="md-nav__link">
+    Slab Allocation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    Takeaway
   </a>
   
 </li>
@@ -4224,7 +4385,11 @@ Effective Access Time(EAT):<br />
 <p>every time page is referenced, copy the clock into the counter.</p>
 </li>
 <li>when a page needs to be replaced, search for page with smallest counter.</li>
-<li><strong>stack-based</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>stack-based</strong></p>
+<ul>
 <li>keep a stack of page numbers (in double linked list).</li>
 <li>
 <p>when a page is referenced, move it to the top of the stack.</p>
@@ -4354,6 +4519,10 @@ User 和 OS 都缓存了同一份内容，导致一个文件占用了两个帧�
 <p>只能从自己的帧里选。</p>
 </li>
 </ul>
+<h3 id="non-uniform-memory-access">Non-Uniform Memory Access<a class="headerlink" href="#non-uniform-memory-access" title="Permanent link">&para;</a></h3>
+<p>不同 CPU 距离不同的内存的距离不同，因此访问时间也不同。</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231123204627.png" width=50%></div>
+
 <h2 id="major-and-minor-page-faults">Major and minor page faults<a class="headerlink" href="#major-and-minor-page-faults" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -4379,9 +4548,142 @@ User 和 OS 都缓存了同一份内容，导致一个文件占用了两个帧�
 </ul>
 </li>
 </ul>
-<h2 id="non-uniform-memory-access">Non-Uniform Memory Access<a class="headerlink" href="#non-uniform-memory-access" title="Permanent link">&para;</a></h2>
-<p>不同 CPU 距离不同的内存的距离不同，因此访问时间也不同。</p>
-<div align = center><img src="https://cdn.hobbitqia.cc/20231123204627.png" width=50%></div>
+<h2 id="thrashing">Thrashing<a class="headerlink" href="#thrashing" title="Permanent link">&para;</a></h2>
+<p><strong>Thrashing</strong>: a process is busy swapping pages in and out.</p>
+<p>如果我们的进程一直在换进换出页，那么 CPU 使用率反而会降低。进程越多，可能发生一个进程的页刚加载进来又被另一个进程换出去，最后大部分进程都在 sleep。</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231205095714.png" width=50%></div>
+
+<ul>
+<li>Why does demand paging work?<ul>
+<li>process memory access has high locality.</li>
+<li>process migrates from one locality to another, localities may overlap.</li>
+</ul>
+</li>
+<li>Why does thrashing occur? <ul>
+<li>
+<p>total memory size &lt; total size of locality</p>
+<p>一个 locality 大小比内存大，因此我们不得不一直换进换出页。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="resolve-thrashing">Resolve thrashing<a class="headerlink" href="#resolve-thrashing" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>进程不断从一个 locality 移到另一个 locality，而且这两个 locality 可能有重叠。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231205100337.png" width=70%></div></p>
+</div>
+<p>我们使用<strong>工作集模型 (working set model)</strong> 来解决 thrashing。</p>
+<ul>
+<li>
+<p>Working-set window(<span class="arithmatex">\(\delta\)</span>): a fixed number of page references</p>
+<p>把所有的 locality 称为一个工作集，windows 是一个关于时间的窗口，代表最近 <span class="arithmatex">\(\delta\)</span> 次对页面的访问。</p>
+</li>
+<li>
+<p>Working set of process <span class="arithmatex">\(p_i\)</span> (WSSi): total number of pages referenced in the most recent <span class="arithmatex">\(\delta\)</span> (varies in time)</p>
+</li>
+<li>Total working sets: <span class="arithmatex">\(D = \sum\)</span> WSSi</li>
+</ul>
+<p>确定一个进程频繁访问的页面，保证这些页面不被换出；需要调页时从剩余的页面进行交换。如果频繁访问的页面数已经大于了当前进程可用的页面数，操作系统就应当把整个进程换出，以防止出现抖动现象。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><span class="arithmatex">\(\delta=10\)</span>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231205112343.png" width=60%></div></p>
+<p>怎样找到工作集？
+an interval timer + a reference bit，访问了这个界面就把 reference bit 置 1，当定时器到了之后，我们就可以根据 reference bit 来将这个页面放到工作集中。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231205123011.png" width=60%></div></p>
+</div>
+<h2 id="other-considerations">Other Considerations<a class="headerlink" href="#other-considerations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Prepaging </p>
+<p>page fault 时，除了被 fault 的 page，其他相邻的页也一起加载。</p>
+</li>
+<li>
+<p>Page Size</p>
+<ul>
+<li>Fragmentation -&gt; small page size</li>
+<li>Page table size -&gt; large page size</li>
+<li>Resolution -&gt; small page size</li>
+<li>I/O overhead -&gt; large page size</li>
+<li>Number of page faults -&gt; large page size</li>
+<li>Locality -&gt; small page size</li>
+<li>TLB size and effectiveness -&gt; large page size</li>
+<li>On average, growing over time</li>
+</ul>
+</li>
+<li>
+<p>TLB Reach: the amount of memory accessible from the TLB</p>
+<ul>
+<li>TLB reach = (TLB size) <span class="arithmatex">\(\times\)</span> (page size)</li>
+<li>Increase the page size to reduce TLB pressure</li>
+</ul>
+</li>
+<li>
+<p>Program Structure</p>
+<p>Program structure can affect page faults.
+<div align = center><img src="https://cdn.hobbitqia.cc/20231205124120.png" width=60%></div></p>
+</li>
+<li>
+<p>I/O interlock: Pages must sometimes be locked into memory.</p>
+<p>把页面锁住，这样就不会被换出去。</p>
+</li>
+</ul>
+<h2 id="memory-management-in-linux">Memory management in Linux<a class="headerlink" href="#memory-management-in-linux" title="Permanent link">&para;</a></h2>
+<p>page fault 是针对 user space 的，kernel 分配的内存不会发生 page fault（否则会嵌套）。</p>
+<p>一个进程有自己的 <code>mm_struct</code>，所有线程共享同一个同一个页表，内核空间有自己的页表 <code>swapper_pg_dir</code>。
+注意这里的 <code>pgd</code> 存的是虚拟地址，但当加载到 <code>satp</code> 里时会转为物理地址。</p>
+<h3 id="linux-buddy-system">Linux Buddy System<a class="headerlink" href="#linux-buddy-system" title="Permanent link">&para;</a></h3>
+<p>Buddy system 从物理连续的段上分配内存；每次分配内存大小是 2 的幂次方，例如请求是 11KB，则分配 16KB。</p>
+<p>当分配时，从物理段上切分出对应的大小（每次切分都是平分）。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>分配 21KB 时的情况，<span class="arithmatex">\(C_L\)</span> 会被分配。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231205130152.png" width=60%></div></p>
+</div>
+<p>当它被释放时，会<strong>合并 (coalesce)</strong> 相邻的块形成更大的块供之后使用。</p>
+<ul>
+<li>
+<p><strong>advantage</strong>: it can quickly merge unused chunks into larger chunk.</p>
+<p>可以迅速组装成大内存（释放后即可合并）。</p>
+</li>
+<li>
+<p><strong>disadvantage</strong>: internal fragmentation</p>
+</li>
+</ul>
+<h3 id="slab-allocation">Slab Allocation<a class="headerlink" href="#slab-allocation" title="Permanent link">&para;</a></h3>
+<p>要分配很多 <code>task_struct</code>，如何迅速分配。我们把多个连续的页面放到一起，将 objects 统一分配到这些页面上。</p>
+<p>Slab allocator is a cache of objects.</p>
+<ul>
+<li>a cache in a slab allocator consists of one or more slabs</li>
+<li>a slab contains one or more pages, divided into equal-sized objects</li>
+</ul>
+<p>Upon request, slab allocator</p>
+<ul>
+<li>Uses free struct in partial slab</li>
+<li>If none, takes one from empty slab</li>
+<li>If no empty slab, create new empty</li>
+</ul>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231205131703.png" width=60%></div>
+
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>A 12k slab (3 pages) can store 4 3k objects.
+<div align = center><img src="https://cdn.hobbitqia.cc/20231205130529.png" width=60%></div></p>
+</div>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<div class="admonition summary">
+<p class="admonition-title">Takeaway</p>
+<ul>
+<li>Page fault</li>
+<li>Valid virtual address, invalid physical address</li>
+<li>Page replacement</li>
+<li>FIFO, Optimal, LRU, 2<sup>nd</sup> chance</li>
+<li>Thrashing and working set</li>
+<li>Buddy system</li>
+<li>slab</li>
+</ul>
+</div>
 
   <hr>
 <div class="md-source-file">

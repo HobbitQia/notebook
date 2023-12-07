@@ -1,11 +1,22 @@
 - "2023":
+  - "2023-12-7":
+    - newpage:
+        text: System > 操作系统原理与实践 > 虚拟内存
+        href: /OS/chap09
+    - newpage:
+        text: Computer Science > 高级数据结构与算法分析
+        href: /ADS/index
+    - refactor: 更新了 Miscellaneous 部分页面结构！
+    - newpage:
+        text: Miscellaneous > 浮点数与定点数
+        href: /Misc/float
   - "2023-11-16": 
     - newpage:
         text: System > 操作系统原理与实践 > 主存
         href: /OS/chap08
     - newpage:
         text: System > 计算机体系结构 > 指令级并行
-        href: /CA/CA4
+        href: /CA/CA           4
   - "2023-11-10": 
     - newpage:
         text: System > 计算机体系结构 > 指令级并行
