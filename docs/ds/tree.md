@@ -313,10 +313,10 @@ A. 高度取决于插入的顺序。最坏可以达到 $N$
     <div align=center> <img src="http://cdn.hobbitqia.cc/202211131613806.png" width = 20%/> </div>  
 
 !!! Info 
-    兄弟: sibling
-    操作数: operand
-    前序遍历: preorder traversal
-    后序遍历: postorder traversal
-    层序遍历: levelorder traversal
-    中序遍历: inorder traversal
-    线索二叉树: Threaded Binary Trees
+    兄弟: sibling  
+    操作数: operand  
+    前序遍历: preorder traversal  
+    后序遍历: postorder traversal  
+    层序遍历: levelorder traversal  
+    中序遍历: inorder traversal  
+    线索二叉树: Threaded Binary Trees  

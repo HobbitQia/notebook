@@ -13,7 +13,7 @@ counter: True
     * 限制：自环是不合法的，同时我们不考虑多重图 
     * 对于 $(v_i,v_j)$ 这条边，我们称 $v_i,v_j$ 是邻接的(adjacent), 称 $(v_i,v_j)$ 附属于(incident) $v_i/v_j$
 * **完全图**: 每一对节点间都存在一条边的图  
-* **子图**: $G'\sub G$ 即 $G'$ 中的点和边都包含在 G 中($V(G')\sube V(G)\quad E(G')\sube E(G)$)  
+* **子图**: $G'\subset G$ 即 $G'$ 中的点和边都包含在 G 中($V(G')\subseteq V(G)\quad E(G')\subseteq E(G)$)  
 * **路径**: $\{v_p,v_{i1},v_{i2},\ldots, v_{in},v_q\}((v_i,v_i)\in E)$ 称为从 $v_p$ 到 $v_q$ 的一条路径
 * **路径的长度**：路径经过的边的数量
 * **简单路径**: $v_{i1},v_{i2}...$ 各不相同(注意第一个点可以和最后一个点相同)
@@ -88,7 +88,7 @@ void Topsort( Graph G )
 
 ## 最短路
 
-给定有向图 $G=(V,E)$ 以及一个花费函数 $c(e), e\in E(G)$. 从源点到终点的一条路径 $P$ 的长度定义为 $\sum\limits_{e_i\sub P}c(e_i)$ （也称为带权路径长） 
+给定有向图 $G=(V,E)$ 以及一个花费函数 $c(e), e\in E(G)$. 从源点到终点的一条路径 $P$ 的长度定义为 $\sum\limits_{e_i\subset P}c(e_i)$ （也称为带权路径长） 
 
 ### 单源最短路径
 

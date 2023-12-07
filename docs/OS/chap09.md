@@ -238,6 +238,7 @@ How to implement LRU?
 
     * every time page is referenced, copy the clock into the counter.
     * when a page needs to be replaced, search for page with smallest counter.
+
 * **stack-based**
     * keep a stack of page numbers (in double linked list).
     * when a page is referenced, move it to the top of the stack.
@@ -336,6 +337,11 @@ Each process needs minimum number of frames - according to instructions semantic
 
     只能从自己的帧里选。
 
+### Non-Uniform Memory Access
+
+不同 CPU 距离不同的内存的距离不同，因此访问时间也不同。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231123204627.png" width=50%></div>
+
 ## Major and minor page faults
 
 * Major: page is referenced but not in memory。
@@ -354,8 +360,128 @@ Each process needs minimum number of frames - according to instructions semantic
 
         数据还在内存里，我们只需要再次映射就可以了。
 
+## Thrashing
 
-## Non-Uniform Memory Access
+**Thrashing**: a process is busy swapping pages in and out.
 
-不同 CPU 距离不同的内存的距离不同，因此访问时间也不同。
-<div align = center><img src="https://cdn.hobbitqia.cc/20231123204627.png" width=50%></div>
+如果我们的进程一直在换进换出页，那么 CPU 使用率反而会降低。进程越多，可能发生一个进程的页刚加载进来又被另一个进程换出去，最后大部分进程都在 sleep。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231205095714.png" width=50%></div>
+
+* Why does demand paging work?
+    * process memory access has high locality.
+    * process migrates from one locality to another, localities may overlap.
+* Why does thrashing occur? 
+    * total memory size < total size of locality
+
+        一个 locality 大小比内存大，因此我们不得不一直换进换出页。
+
+### Resolve thrashing
+
+!!! Note
+    进程不断从一个 locality 移到另一个 locality，而且这两个 locality 可能有重叠。
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231205100337.png" width=70%></div>
+
+我们使用**工作集模型 (working set model)** 来解决 thrashing。
+
+* Working-set window($\delta$): a fixed number of page references
+
+    把所有的 locality 称为一个工作集，windows 是一个关于时间的窗口，代表最近 $\delta$ 次对页面的访问。
+
+* Working set of process $p_i$ (WSSi): total number of pages referenced in the most recent $\delta$ (varies in time)
+* Total working sets: $D = \sum$ WSSi
+
+确定一个进程频繁访问的页面，保证这些页面不被换出；需要调页时从剩余的页面进行交换。如果频繁访问的页面数已经大于了当前进程可用的页面数，操作系统就应当把整个进程换出，以防止出现抖动现象。
+
+!!! Example
+    $\delta=10$
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231205112343.png" width=60%></div>
+
+    怎样找到工作集？
+    an interval timer + a reference bit，访问了这个界面就把 reference bit 置 1，当定时器到了之后，我们就可以根据 reference bit 来将这个页面放到工作集中。
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231205123011.png" width=60%></div>
+
+## Other Considerations
+
+* Prepaging 
+
+    page fault 时，除了被 fault 的 page，其他相邻的页也一起加载。
+
+* Page Size
+    * Fragmentation -> small page size
+    * Page table size -> large page size
+    * Resolution -> small page size
+    * I/O overhead -> large page size
+    * Number of page faults -> large page size
+    * Locality -> small page size
+    * TLB size and effectiveness -> large page size
+    * On average, growing over time
+
+* TLB Reach: the amount of memory accessible from the TLB
+    * TLB reach = (TLB size) $\times$ (page size)
+    * Increase the page size to reduce TLB pressure
+
+* Program Structure
+
+    Program structure can affect page faults.
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231205124120.png" width=60%></div>
+
+* I/O interlock: Pages must sometimes be locked into memory.
+
+    把页面锁住，这样就不会被换出去。
+
+## Memory management in Linux
+
+page fault 是针对 user space 的，kernel 分配的内存不会发生 page fault（否则会嵌套）。
+
+一个进程有自己的 `mm_struct`，所有线程共享同一个同一个页表，内核空间有自己的页表 `swapper_pg_dir`。
+注意这里的 `pgd` 存的是虚拟地址，但当加载到 `satp` 里时会转为物理地址。
+
+### Linux Buddy System
+
+Buddy system 从物理连续的段上分配内存；每次分配内存大小是 2 的幂次方，例如请求是 11KB，则分配 16KB。
+
+当分配时，从物理段上切分出对应的大小（每次切分都是平分）。
+
+!!! Example 
+    分配 21KB 时的情况，$C_L$ 会被分配。
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231205130152.png" width=60%></div>
+
+当它被释放时，会**合并 (coalesce)** 相邻的块形成更大的块供之后使用。
+
+* **advantage**: it can quickly merge unused chunks into larger chunk.
+
+    可以迅速组装成大内存（释放后即可合并）。
+
+* **disadvantage**: internal fragmentation
+
+### Slab Allocation
+
+要分配很多 `task_struct`，如何迅速分配。我们把多个连续的页面放到一起，将 objects 统一分配到这些页面上。
+
+Slab allocator is a cache of objects.
+
+* a cache in a slab allocator consists of one or more slabs
+* a slab contains one or more pages, divided into equal-sized objects
+
+Upon request, slab allocator
+
+* Uses free struct in partial slab
+* If none, takes one from empty slab
+* If no empty slab, create new empty
+
+<div align = center><img src="https://cdn.hobbitqia.cc/20231205131703.png" width=60%></div>
+
+!!! Example 
+    A 12k slab (3 pages) can store 4 3k objects.
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231205130529.png" width=60%></div>
+
+## Takeaway
+
+!!! Summary "Takeaway"
+    * Page fault
+    * Valid virtual address, invalid physical address
+    * Page replacement
+    * FIFO, Optimal, LRU, 2nd chance
+    * Thrashing and working set
+    * Buddy system
+    * slab

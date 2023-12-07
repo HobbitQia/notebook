@@ -294,14 +294,16 @@ Use both: **multiple page sizes**
 
 ## Summary 
 
-!! Summary
+!! Summary  
     * Memory hierarchy
         * From single level to multi level
         * Evaluate the performance parameters of the storage system (average price per bit C; hit rate H; average memory access time T)
+
     * Cache basic knowledge
         * Mapping rules
         * Access method
         * Replacement algorithm
         * Write strategy
         * Cache performance analysis
+
     * Virtual Memory (the influence of memory organization structure on Cache failure rate)

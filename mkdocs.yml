@@ -216,7 +216,6 @@ nav:
       - 流水线: CA/CA2.md
       - 内存层次: CA/CA3.md
       - 指令级并行: CA/CA4.md
-      - 
     - 操作系统原理与实践:
       - OS/index.md
       - OS 结构: OS/chap01.md
@@ -235,5 +234,7 @@ nav:
       - 读书报告: MLT/report.md
       - 感知机: MLT/mlt2.md
   - Miscellaneous:
+    - Misc/index.md
+    - 浮点数与定点数: Misc/float.md
     - Android:
       - 触控事件的数据流: android/dataflow.md

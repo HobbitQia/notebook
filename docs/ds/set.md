@@ -15,7 +15,7 @@ counter: True
 ## 动态等价性问题
 
 * 集合的元素: $1,2,3\ldots,N$
-* 集合: $S_1,S_2,\ldots$ 且 $S_i\cap S_j=\empty$ (若 $i\neq j$), 即集合之间不相交
+* 集合: $S_1,S_2,\ldots$ 且 $S_i\cap S_j=\emptyset$ (若 $i\neq j$), 即集合之间不相交
 * 操作:
     * `Find(i)` 返回给定元素的所在的集合（等价类）
     * `Union(i,j)` 求并运算，将含有 a 和 b 的两个等价类合并为一个等价类  

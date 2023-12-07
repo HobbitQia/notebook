@@ -564,14 +564,14 @@ eXclusive OR(XOR) and XNORs gate
 * **Definitions**:  
 
     * $X\oplus Y = X\ \overline Y +\overline X \ Y$  
-    * $\overline {X\oplus Y} = X\ \overline Y +\overline X \ Y$  
+    * $\overline{X\oplus Y} = X\  Y +\overline X \ \overline Y$  
 * the XNOR function also known as the **equivalence function**, denoted by the operator '$\equiv$'.  
 * 重要公式（要记）
 
 <div align=center> <img src="https://s2.loli.net/2022/10/12/u7BxMSDkIX9lRO3.png" width = 60%/>(第一行 & 最后一行很重要)</div> 
 
 * 严格来说，只有两变量的异或。对于多于两个输入的，我们用奇函数/偶函数代替。  
-对于三变量的异或 $X\oplus Y = \overline X \ \overline Y \ Z + \overline X \ Y \overline Z + X \ \overline Y \ \overline Z + X\ Y\ Z$
+对于三变量的异或 $X\oplus Y\oplus Z = \overline X \ \overline Y \ Z + \overline X \ Y \overline Z + X \ \overline Y \ \overline Z + X\ Y\ Z$
 卡诺图无法再化简
 
     ||1||1|
