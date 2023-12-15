@@ -278,3 +278,75 @@ Hardware-based speculation combines three key ideas:
 * It can be precise exception. 
 * It is easily extended to integer register and integer function unit.
 * But the hardware is too complex.
+
+## Exploiting ILP Using Multiple Issue and Static Scheduling
+
+多流出，即一拍可以流出多条指令。
+
+* Superscalar
+
+    可以分为静态调度超标量和动态调度超标量。静态调度是通过编译器来完成的，动态调度是通过硬件来完成的。
+
+    每个时钟周期发射的指令条数可以不一样。
+
+* VLIW (Very Long Instruction Word) 
+
+    超长指令字也是通过编译器完成。
+
+    每个时钟周期发射的指令条数是固定的。他们组成一条长指令或者一个指令包。
+
+<div align = center><img src="https://cdn.hobbitqia.cc/20231215172006.png" width=70%></div>
+
+### based on static scheduling
+
+In a typical superscalar processor, 1 to 8 instructions can be issued per clock cycle.
+
+我们要进行结构冒险和数据冒险的检测。需要注意的是，如果遇到了分支跳转指令，那么只流出这一条，不能和其他指令一起流出。如果处理器有分支预测，那么下一个周期就可以根据预测结果进行发射；如果不带预测，我们就需要等待分支结果，然后再发射。
+
+!!! Example
+    * Assumption: Two instructions flow out every clock cycle:
+        * *1 integer instruction + 1 floating-point operation instruction*
+    * Among them, *load*, *store* and *branch* instructions are classified as *integer instructions*.
+    
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231215173139.png" width=70%></div>
+
+### based on dynamic scheduling 
+
+Extended Tomasuloalgorithm: supports two-way superscalar
+
+指令顺序进入保留站。分开处理
+
+!!! Example
+    ``` asm
+    Loop: 
+    FLD    F0, 0 (R1)   // Take an array element and put it into F0
+    FADD.D F4, F0, F2   // add the scalar in F2
+    FSD    F4, 0 (R1)   // storeresult
+    ADDI   R1, R1, 8    // increment pointer by 8 //(each data occupies 8 bytes)
+    BNE    R1, R2, Loop // If R1 is not equal to R2, it means it is 
+                        //not over yet, move to Loop to continue
+    ```
+    对于没有分支预测的情况：可以看到分支后面的一条指令，在周期 7 才能执行（即周期 6 分支指令执行结束）
+    <div align = center><img src="https://cdn.hobbitqia.cc/20231215173427.png" width=70%></div>
+
+    * The program can basically reach 3 beats and 5 instructions
+        * IPC＝5/3＝1.67 items/beat.
+    * the execution efficiency is not very high.
+        * A total of 15 instructions were executed in 16 beats.
+        * The average command execution speed is 15/16=0.94 per beat.
+
+### Very long instruction word technology(VLIW)
+
+Assemble multiple instructions that can be executed in parallel into a very long instruction.
+
+At compile time, multiple unrelated or unrelated operations that can be executed in parallel are combined to form a very long instruction word with multiple operation segments.
+
+### Superpipelining processor
+
+A pipeline processor with 8 or more instruction pipeline stages is called a **superpipelining processor**.  
+
+在一个很小的 $\delta t$ 时间（小于一个阶段的用时）后就发射下一条指令。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231215193400.png" width=70%></div>
+
+本质是流水线的细分。
+<div align = center><img src="https://cdn.hobbitqia.cc/20231215193536.png" width=70%></div>

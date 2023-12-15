@@ -1,4 +1,14 @@
 - "2023":
+  - "2023-12-16":
+    - newpage:
+        text: System > 操作系统原理与实践 > 大容量存储、I/O 系统
+        href: /OS/chap10
+    - pageupdate:
+        text: System > 计算机体系结构 > 指令级并行
+        href: /CA/CA4
+    - newpage:
+        text: System > 计算机体系结构 > DLP 和 TLP
+        href: /CA/CA5
   - "2023-12-7":
     - newpage:
         text: System > 操作系统原理与实践 > 虚拟内存
@@ -16,7 +26,7 @@
         href: /OS/chap08
     - newpage:
         text: System > 计算机体系结构 > 指令级并行
-        href: /CA/CA           4
+        href: /CA/CA4
   - "2023-11-10": 
     - newpage:
         text: System > 计算机体系结构 > 指令级并行
