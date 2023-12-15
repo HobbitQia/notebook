@@ -16,7 +16,7 @@
         <link rel="prev" href="../CA3/">
       
       
-        <link rel="next" href="../../OS/">
+        <link rel="next" href="../CA5/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -2900,6 +2900,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -3083,10 +3085,71 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exploiting-ilp-using-multiple-issue-and-static-scheduling" class="md-nav__link">
+    Exploiting ILP Using Multiple Issue and Static Scheduling
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploiting ILP Using Multiple Issue and Static Scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#based-on-static-scheduling" class="md-nav__link">
+    based on static scheduling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#based-on-dynamic-scheduling" class="md-nav__link">
+    based on dynamic scheduling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#very-long-instruction-word-technologyvliw" class="md-nav__link">
+    Very long instruction word technology(VLIW)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#superpipelining-processor" class="md-nav__link">
+    Superpipelining processor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CA5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DLP 和 TLP
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3110,6 +3173,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -3339,6 +3406,46 @@
   
   <span class="md-ellipsis">
     虚拟内存
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/chap10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    大容量存储
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OS/chap11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I/O 系统
   </span>
   
 
@@ -3771,6 +3878,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exploiting-ilp-using-multiple-issue-and-static-scheduling" class="md-nav__link">
+    Exploiting ILP Using Multiple Issue and Static Scheduling
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploiting ILP Using Multiple Issue and Static Scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#based-on-static-scheduling" class="md-nav__link">
+    based on static scheduling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#based-on-dynamic-scheduling" class="md-nav__link">
+    based on dynamic scheduling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#very-long-instruction-word-technologyvliw" class="md-nav__link">
+    Very long instruction word technology(VLIW)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#superpipelining-processor" class="md-nav__link">
+    Superpipelining processor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4104,6 +4252,73 @@ Dest 这里填的是保留站的名称，而不是寄存器的名称。
 <li>It is easily extended to integer register and integer function unit.</li>
 <li>But the hardware is too complex.</li>
 </ul>
+<h2 id="exploiting-ilp-using-multiple-issue-and-static-scheduling">Exploiting ILP Using Multiple Issue and Static Scheduling<a class="headerlink" href="#exploiting-ilp-using-multiple-issue-and-static-scheduling" title="Permanent link">&para;</a></h2>
+<p>多流出，即一拍可以流出多条指令。</p>
+<ul>
+<li>
+<p>Superscalar</p>
+<p>可以分为静态调度超标量和动态调度超标量。静态调度是通过编译器来完成的，动态调度是通过硬件来完成的。</p>
+<p>每个时钟周期发射的指令条数可以不一样。</p>
+</li>
+<li>
+<p>VLIW (Very Long Instruction Word) </p>
+<p>超长指令字也是通过编译器完成。</p>
+<p>每个时钟周期发射的指令条数是固定的。他们组成一条长指令或者一个指令包。</p>
+</li>
+</ul>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231215172006.png" width=70%></div>
+
+<h3 id="based-on-static-scheduling">based on static scheduling<a class="headerlink" href="#based-on-static-scheduling" title="Permanent link">&para;</a></h3>
+<p>In a typical superscalar processor, 1 to 8 instructions can be issued per clock cycle.</p>
+<p>我们要进行结构冒险和数据冒险的检测。需要注意的是，如果遇到了分支跳转指令，那么只流出这一条，不能和其他指令一起流出。如果处理器有分支预测，那么下一个周期就可以根据预测结果进行发射；如果不带预测，我们就需要等待分支结果，然后再发射。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<ul>
+<li>Assumption: Two instructions flow out every clock cycle:<ul>
+<li><em>1 integer instruction + 1 floating-point operation instruction</em></li>
+</ul>
+</li>
+<li>Among them, <em>load</em>, <em>store</em> and <em>branch</em> instructions are classified as <em>integer instructions</em>.</li>
+</ul>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20231215173139.png" width=70%></div></p>
+</div>
+<h3 id="based-on-dynamic-scheduling">based on dynamic scheduling<a class="headerlink" href="#based-on-dynamic-scheduling" title="Permanent link">&para;</a></h3>
+<p>Extended Tomasuloalgorithm: supports two-way superscalar</p>
+<p>指令顺序进入保留站。分开处理</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nl">Loop:</span><span class="w"> </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">FLD</span><span class="w">    </span><span class="no">F0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="no">R1</span><span class="p">)</span><span class="w">   </span><span class="c1">// Take an array element and put it into F0</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nf">FADD.D</span><span class="w"> </span><span class="no">F4</span><span class="p">,</span><span class="w"> </span><span class="no">F0</span><span class="p">,</span><span class="w"> </span><span class="no">F2</span><span class="w">   </span><span class="c1">// add the scalar in F2</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nf">FSD</span><span class="w">    </span><span class="no">F4</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="no">R1</span><span class="p">)</span><span class="w">   </span><span class="c1">// storeresult</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nf">ADDI</span><span class="w">   </span><span class="no">R1</span><span class="p">,</span><span class="w"> </span><span class="no">R1</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="w">    </span><span class="c1">// increment pointer by 8 //(each data occupies 8 bytes)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nf">BNE</span><span class="w">    </span><span class="no">R1</span><span class="p">,</span><span class="w"> </span><span class="no">R2</span><span class="p">,</span><span class="w"> </span><span class="no">Loop</span><span class="w"> </span><span class="c1">// If R1 is not equal to R2, it means it is </span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">                    </span><span class="c1">//not over yet, move to Loop to continue</span>
+</code></pre></div>
+对于没有分支预测的情况：可以看到分支后面的一条指令，在周期 7 才能执行（即周期 6 分支指令执行结束）
+<div align = center><img src="https://cdn.hobbitqia.cc/20231215173427.png" width=70%></div></p>
+<ul>
+<li>The program can basically reach 3 beats and 5 instructions<ul>
+<li>IPC＝5/3＝1.67 items/beat.</li>
+</ul>
+</li>
+<li>the execution efficiency is not very high.<ul>
+<li>A total of 15 instructions were executed in 16 beats.</li>
+<li>The average command execution speed is 15/16=0.94 per beat.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="very-long-instruction-word-technologyvliw">Very long instruction word technology(VLIW)<a class="headerlink" href="#very-long-instruction-word-technologyvliw" title="Permanent link">&para;</a></h3>
+<p>Assemble multiple instructions that can be executed in parallel into a very long instruction.</p>
+<p>At compile time, multiple unrelated or unrelated operations that can be executed in parallel are combined to form a very long instruction word with multiple operation segments.</p>
+<h3 id="superpipelining-processor">Superpipelining processor<a class="headerlink" href="#superpipelining-processor" title="Permanent link">&para;</a></h3>
+<p>A pipeline processor with 8 or more instruction pipeline stages is called a <strong>superpipelining processor</strong>.  </p>
+<p>在一个很小的 <span class="arithmatex">\(\delta t\)</span> 时间（小于一个阶段的用时）后就发射下一条指令。</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231215193400.png" width=70%></div>
+
+<p>本质是流水线的细分。</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20231215193536.png" width=70%></div>
 
   <hr>
 <div class="md-source-file">
