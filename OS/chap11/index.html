@@ -4002,9 +4002,15 @@
 <p>CPU 主动询问设备，是否需要服务。</p>
 <p>For each I/O operation:</p>
 <ul>
-<li>busy-wait if device is busy (status register)</li>
+<li>
+<p>busy-wait if device is busy (status register)</p>
+<ul>
 <li>Cannot accept any command if busy</li>
-<li>send the command to the device controller (command register)</li>
+</ul>
+</li>
+<li>
+<p>send the command to the device controller (command register)</p>
+</li>
 <li>read status register until it indicates command has been executed</li>
 <li>read execution status, and possibly reset device status</li>
 </ul>

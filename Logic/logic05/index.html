@@ -4061,12 +4061,16 @@ Programmable TechnologyROM、PAL、PLA，使用ROM、PAL和PLA来实现逻辑电
 <li>PLA: OR+AND</li>
 </ul>
 <h4 id="read-only-memory">Read Only Memory<a class="headerlink" href="#read-only-memory" title="Permanent link">&para;</a></h4>
-<p><strong>Read Only Memories (ROM)</strong> or <strong>Programmable Read Only Memories (PROM)</strong> have:
-* N input lines, 
-* M output lines, and 
-* <span class="arithmatex">\(2^N\)</span> decoded minterms.  </p>
+<p><strong>Read Only Memories (ROM)</strong> or <strong>Programmable Read Only Memories (PROM)</strong> have:</p>
 <ul>
-<li><u><strong>Fixed AND array</strong></u> with <span class="arithmatex">\(2^N\)</span> outputs implementing all N-literal minterms.  </li>
+<li>N input lines, </li>
+<li>M output lines, and </li>
+<li>
+<p><span class="arithmatex">\(2^N\)</span> decoded minterms.  </p>
+</li>
+<li>
+<p><u><strong>Fixed AND array</strong></u> with <span class="arithmatex">\(2^N\)</span> outputs implementing all N-literal minterms.  </p>
+</li>
 <li>
 <p><u><strong>Programmable OR Array</strong></u> with <span class="arithmatex">\(M\)</span> outputs lines to form up to M sum of minterm expressions.<br />
 有 M 个或门，因此最多可以实现 M 个逻辑函数（每个函数最多 N 个输入）  </p>

@@ -4379,10 +4379,14 @@ Adding instruction buffer between memory and instruction decode unit.<br />
 <li>Situations that prevent starting the next instruction in the next cycle.</li>
 <li>
 <p><strong>Structure hazards</strong></p>
-<p>A required resource is busy.
-* <strong>Data hazard</strong></p>
-<p>Need to wait for previous instruction to complete its data read/write.
-* <strong>Control hazard</strong></p>
+<p>A required resource is busy.</p>
+</li>
+<li>
+<p><strong>Data hazard</strong></p>
+<p>Need to wait for previous instruction to complete its data read/write.</p>
+</li>
+<li>
+<p><strong>Control hazard</strong></p>
 <p>Deciding on control action depends on previous instruction.</p>
 </li>
 </ul>
