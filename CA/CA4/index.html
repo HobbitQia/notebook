@@ -4083,20 +4083,22 @@
 <ul>
 <li>busy 代表当前这个单元是否有指令正在使用。op 表示这个单元正在被哪类指令使用。</li>
 <li>Fi、Fj、Fk 代表源操作数和目的操作数（Fi 为源，Fj、Fk 为目的）。</li>
-<li>Qj、Qk 代表源操作数来自哪个部件<ul>
+<li>
+<p>Qj、Qk 代表源操作数来自哪个部件</p>
+<ul>
 <li>如 Mult1 的 Qj=Integer 说明来自整数部件（此时正在执行 Load 指令）</li>
 </ul>
 </li>
 <li>
+<p>Rj、Rk 代表源操作数的状态</p>
 <ul>
 <li>
 <p>yes - operands is ready but no ready.</p>
 <p>没读是因为其他的操作数还没有 read。</p>
 </li>
-</ul>
-<p>Rj、Rk 代表源操作数的状态</p>
-<ul>
-<li>no &amp; Qj=null: operand is read.</li>
+<li>
+<p>no &amp; Qj=null: operand is read.</p>
+</li>
 <li>
 <p>no &amp; Qj!=null: operand is not ready.</p>
 <p>其他指令会修改这个操作数，而且还没有执行完毕。</p>
@@ -4209,14 +4211,16 @@
 <p><strong>Reservation stations table</strong>: The reservation station keeps the state of each operation that has issued.</p>
 <p>保留站（功能部件）状态表，记录有多少指令在用。这里相比之前的 scoreboard 做了简化，对于源操作数只有两组数据。</p>
 <p>Each reservation station has seven fields:</p>
-<div class="highlight"><pre><span></span><code>* **Op**: The operation to perform on source operands.
-* **Qj**, Qk: The reservation stations that will produce the corresponding source operand.
-* **Vj**, Vk: The value of the source operands.
-* **Busy**: Indicates that this reservation station and its accompanying functional unit are occupied.
-* **A**: Used to hold information for the memory address calculation for a load or store.
-
-    Load/Store 指令的目标地址。
-</code></pre></div>
+<ul>
+<li><strong>Op</strong>: The operation to perform on source operands.</li>
+<li><strong>Qj</strong>, Qk: The reservation stations that will produce the corresponding source operand.</li>
+<li><strong>Vj</strong>, Vk: The value of the source operands.</li>
+<li><strong>Busy</strong>: Indicates that this reservation station and its accompanying functional unit are occupied.</li>
+<li>
+<p><strong>A</strong>: Used to hold information for the memory address calculation for a load or store.</p>
+<p>Load/Store 指令的目标地址。</p>
+</li>
+</ul>
 </li>
 <li>
 <p><strong>Register status table (Field Qi)</strong>: The number of the reservation station that contains the operation whose result should be stored into this register.</p>
