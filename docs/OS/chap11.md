@@ -53,7 +53,8 @@ CPU 主动询问设备，是否需要服务。
 For each I/O operation:
 
 * busy-wait if device is busy (status register)
-* Cannot accept any command if busy
+    * Cannot accept any command if busy
+    
 * send the command to the device controller (command register)
 * read status register until it indicates command has been executed
 * read execution status, and possibly reset device status

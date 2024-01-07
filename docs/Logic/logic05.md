@@ -93,6 +93,7 @@ Programming Technologies are used to
 #### Read Only Memory
 
 **Read Only Memories (ROM)** or **Programmable Read Only Memories (PROM)** have:
+
 * N input lines, 
 * M output lines, and 
 * $2^N$ decoded minterms.  

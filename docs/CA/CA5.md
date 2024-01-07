@@ -76,7 +76,7 @@ counter: True
 
 Requirements for processor structure: **memory-memory structure**.  
 源向量和目的向量都在内存中，中间结果也需要写回内存。
-https://cdn.hobbitqia.cc/20231215195250.png
+<div align = center><img src="https://cdn.hobbitqia.cc/20231215195250.png" width=60%></div>
 
 ### Vector Processor Example - Cray-1
 

@@ -51,6 +51,7 @@ CPU\ Time &= CPU\ Clock\ Cycles \times Clock\ Cycle\ Time \\
 $$ 
 
 Performance improved by
+
 * Reducing number of clock cycles
 * Increasing clock rate
 * Hardware designer must often trade off clock rate against cycle count

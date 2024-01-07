@@ -157,9 +157,11 @@ nav:
       - Quan/index.md
       - 量子态与量子门: Quan/chap1.md
       - 量子测量: Quan/chap2.md
-      - 量子算法: Quan/chap3.md
+      # - 量子算法: Quan/chap3.md
     - 计算理论:
       - TCS/index.md
+    - 应用运筹学基础:
+      - AOR/index.md
   - System: 
     - 计算机系统概论: 
       - ICS/index.md
@@ -232,6 +234,8 @@ nav:
       - 虚拟内存: OS/chap09.md
       - 大容量存储: OS/chap10.md
       - I/O 系统: OS/chap11.md
+      - 文件系统接口: OS/chap12.md
+      - 文件系统实现: OS/chap13.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md

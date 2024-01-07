@@ -204,9 +204,11 @@ Hazards
 * **Structure hazards**
 
     A required resource is busy.
+
 * **Data hazard**
 
     Need to wait for previous instruction to complete its data read/write.
+    
 * **Control hazard**
 
     Deciding on control action depends on previous instruction.

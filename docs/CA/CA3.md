@@ -166,6 +166,7 @@ For LRU algorithm, the hit ratio always increases with the increase of cache blo
         <div align = center><img src="https://cdn.hobbitqia.cc/20231028144006.png" width=40%></div>
 
     * **Write Back**：在 Cache 中写，同时通过一个额外的 dirty bit 表示这个块已经被修改。
+
 * Write Miss
     * **Write Allocate**：将要写的块先读到 Cache 中，再写。
     * **Write Around**：直接写到内存。
@@ -244,6 +245,7 @@ Cache 的四个问题在虚拟内存中都有对应。
 
     ***e.g.*** 32-bit virtual address, 4KB pages, 4 bytes per page table entry.  
     page table size: $(2^{32}/2^{12}) \times 2^2 = 2^{22}$ bytes = $4$ MB
+    
 * Logically two memory accesses for data access:
     * one to obtain the physical address from page table;
     * one to get the data from the physical address;

@@ -50,10 +50,12 @@ How can we make a process run faster
 
     * Scalability
         * multi-core machine
+        
 * Drawbacks of Threads
     * Weak isolation between threads
 
         如果有一个线程出错，那么整个进程都会出错。
+
 * Typical challenges of multi-threaded programming
     * Deal with data dependency and synchronization
     * Dividing activities among threads
