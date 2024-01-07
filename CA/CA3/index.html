@@ -525,6 +525,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1584,6 +1586,60 @@
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             计算理论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../AOR/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    应用运筹学基础
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            应用运筹学基础
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4277,12 +4333,16 @@ For LRU algorithm, the hit ratio always increases with the increase of cache blo
 <li>
 <p><strong>Write Back</strong>：在 Cache 中写，同时通过一个额外的 dirty bit 表示这个块已经被修改。</p>
 </li>
-<li>Write Miss</li>
-<li><strong>Write Allocate</strong>：将要写的块先读到 Cache 中，再写。</li>
-<li><strong>Write Around</strong>：直接写到内存。</li>
-<li>In general, write-back caches use write-allocate , and write-through caches use write-around.</li>
 </ul>
 </li>
+<li>
+<p>Write Miss</p>
+<ul>
+<li><strong>Write Allocate</strong>：将要写的块先读到 Cache 中，再写。</li>
+<li><strong>Write Around</strong>：直接写到内存。</li>
+</ul>
+</li>
+<li>In general, write-back caches use write-allocate , and write-through caches use write-around.</li>
 </ul>
 <details class="example">
 <summary>Example</summary>
@@ -4360,10 +4420,14 @@ For LRU algorithm, the hit ratio always increases with the increase of cache blo
 <li>
 <p>Page tables are often large</p>
 <p><strong><em>e.g.</em></strong> 32-bit virtual address, 4KB pages, 4 bytes per page table entry.<br />
-page table size: <span class="arithmatex">\((2^{32}/2^{12}) \times 2^2 = 2^{22}\)</span> bytes = <span class="arithmatex">\(4\)</span> MB
-* Logically two memory accesses for data access:
-* one to obtain the physical address from page table;
-* one to get the data from the physical address;</p>
+page table size: <span class="arithmatex">\((2^{32}/2^{12}) \times 2^2 = 2^{22}\)</span> bytes = <span class="arithmatex">\(4\)</span> MB</p>
+</li>
+<li>
+<p>Logically two memory accesses for data access:</p>
+<ul>
+<li>one to obtain the physical address from page table;</li>
+<li>one to get the data from the physical address;</li>
+</ul>
 </li>
 </ul>
 <p>正常来说页表需要两次内存访问，访问效率低下，因此我们需要 cache page table，即 TLB。</p>
