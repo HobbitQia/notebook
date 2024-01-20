@@ -547,3 +547,197 @@ Focuses on determining whether data accesses in later iterations are dependent o
     }
     B[100] = C[99] + D[99];
     ```
+
+## MIMD: Tread-level Parallelism
+
+线程级的并行，称为 TLP，是由软件系统来确认的。
+
+The threads consist of hundreds to millions of instructions that may be executed in parallel.
+
+我们的发展从 ILP，到 TLP，再到 MIMD。
+
+Multi-processor system 可以分为两大类：
+
+* based on shared memory
+
+    系统中只有唯一的地址空间，所有进程共享。
+    
+    并不代表只有一个物理上的内存，实际上可以通过一块物理共享的内存实现，也可以通过分布式的内存实现。
+
+* based on message passing
+
+    每个处理器都有自己的地址空间，通过消息传递来通信、传送数据。
+
+### Shared Memory System
+
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110201622.png" width=70%></div>
+
+可以把共享内存划分为若干块，他们共同构成一个拼图（即统一的地址空间）。
+
+有一个统一的操作系统，负责管理所有的信息、内存，给不同的进程使用内存。
+
+If in a system, each CPU has equal access to all memory modules and input/output devices, and these CPUs are interchangeable in the operating system, then the system is a symmetric multiprocessor system **SMP (Symmetric Multi- processor)**.
+
+### Message Passing System
+
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110202617.png" width=70%></div>
+
+每一个进程都有自己的内存，通过 ICN 来传递信息，可以共同完成任务。
+
+一般每个进程有自己的 OS，但是组合在一起形成一个大的系统。
+
+Communication in the system is achieved by using an **interconnection network** to pass messages.
+
+可以分层次，ICN 也可以连接其他的 ICN，结点里可以是另一个多机系统。
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110202900.png" width=50%></div>
+
+### MIMD Architecture
+
+* Different memory access models of MIMD multiprocessor system
+    * **Uniform Memory Access (UMA)**
+    * **Non Uniform Memory Access (NUMA)**
+    * **Cache Only Memory Access (COMA)**
+
+* Further division of MIMD multi-computer system
+    * **Massively Parallel Processors (MPP)**
+    * **Cluster of Workstations(COW)**
+
+#### UMA
+
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110203036.png" width=50%></div>
+
+所有的物理存储器，由所有的进程一起使用，均匀共享，即没有进程对某个存储器有特殊的访问权限，访问的时间相同，即不存在谁离谁更近的问题。
+
+进程可以有自己的拓展，比如 cache、IO、local memory。
+
+因为他的高度共享性，UMA 也叫紧耦合系统。
+
+* Physical memory is uniformly shared by all processors.
+* It takes the same time for all processors to access any memory word.
+* Each processor can be equipped with private cache or private memory.
+
+??? Example
+    <div align = center><img src="https://cdn.hobbitqia.cc/20240110203433.png" width=60%></div>
+
+#### NUMA
+
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110203501.png" width=50%></div>
+
+对某个进程都自己的 local memory，由 ICN 连起来。被共享的存储器是不均匀的。访问自己的 local memory 最快，访问别人的慢。
+
+进程也可以有自己的拓展。
+
+NUMA 有两种拓展，
+
+* NC-NUMA: Non Cache NUMA
+* CC-NUMA: Coherent Cache NUMA
+
+    有自己的 cache 和目录，存在 cache 一致性的问题。当有一个数据改了，如何保证其他 cache 里的数据的正确性。
+
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110204714.png" width=55%></div>
+
+* All CPUs share an uniform address space
+* Use LOAD and STORE instructions to access remote memory
+* Access to remote memory is slower than access to local memory
+* The processor in the NUMA system can use cache
+
+!!! Note "UMA and NUMA"
+    * UMA is also called **symmetric (shared-memory) multiprocessors (SMP)** or **centralized shared-memory multiprocessors**.
+    * NUMA is called **distributed shared-memory multiprocessor (DSP)**.
+
+    <div align = center><img src="https://cdn.hobbitqia.cc/20240110205135.png" width=55%></div>
+
+    可以看到 UMA 有 shared cache，因此一致性是保证的。
+
+
+#### COMA
+
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110205326.png" width=50%></div>
+
+COMA 是 NUMA 模型的特例，每个进程之间不存在层次关系，可以组成一个全局的 cache。可以通过一个目录。
+
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110205525.png" width=50%></div>
+
+* COMA is a special case of NUMA. There is no storage hierarchy in each processor node, and all caches form a uniform address space.
+* Use the distributed cache directory for remote cache access. When using COMA, the data can be allocated arbitrarily at the beginning, because it will eventually be moved to the place where it is used at runtime.
+
+### Cache Coherence
+
+In modern parallel computers, processors often have Cache. One memory data may have multiple copies in the entire system. This leads to the Cache coherence problem.  
+
+可能有多个 cache，都放有内存拷贝的数据，可能不一致。我们一般通过一个协议来约定。
+
+* Bus snooping protocol
+* Directory based protocol
+
+协议主要是为了保证 cohrence 和 consistency.
+
+* Coherence
+
+    读数据，读出来的一定是最新的数据（即刚被写过的值）。
+
+* Consistency
+
+    写一个值时，要把写的值返回（通过读指令），什么时候返回。
+
+<!-- #### Snoopy Coherence Protocols
+
+For UMA, the cache coherence problem is solved by the **snoopy protocol**.
+
+对于 write-through 和 write-back，我们有不同的解决方案。
+
+* Write-through Cache Coherency Protocol
+
+    https://cdn.hobbitqia.cc/20240110211248.png
+
+Write Invalidation Protocol
+
+把块的状态分为 
+
+* Invalid
+* Shared
+
+    indicates that the block in the private cache is potentially shared.
+
+* Modified
+
+    indicates that the block has been updated in the private cache; implies that the block is exclusive.
+
+https://cdn.hobbitqia.cc/20240110211602.png
+
+MSI 可以拓展为 MESI，多一个 exclusive。将其与 modified 区别开。
+exclusive: indicates when a cache block is resident only in a single cache but is clean.
+
+exclusive 时如果要读，就不能独占了，就会变为 shared。如果要写，就必须改为 modified。
+
+MOESI
+
+owned: indicates that the associated block is owned by that cache and out-of-date in memory.
+
+Modified -> Owned without writing the shared block to memory
+
+
+MESI
+
+* Invalid: The data contained in the cache item is invalid.
+
+    这个 CPU 里的缓存数据已经无效了（即在其他 CPU 里被改过了，而且还没有共享）
+
+* Shared: This row of data exists in multiple cache items, and the data in the memory is the latest.
+
+    多个 CPU 中都有自己的缓存。
+
+* Exclusive: No other cache items include this row of data, and the data in memory is the latest.
+
+    只有在自己的 CPU 里缓存，但是没有被修改，与内存一致。（因此其他 CPU 要读就可以改为 shared）
+
+* Modified: The data of the item is valid, but the data in the memory is invalid, and there is no copy of the data in other cache items.
+
+    被修改了。处于这个状态的数据只有在自己的 CPU 里才有缓存，这个时候还没有更新到内存里。
+
+https://cdn.hobbitqia.cc/20240110212328.png
+
+!!! Example
+    假设有两个 CPU。本地发一个 local write 的请求，如果发现所有 cache 中都没有这个地址（初始是 invalid），A 要写，对应 cache line 的状态就会变为 modified。CPU B 来读，发出 remote read，就变为了 shared（A 和 B 的 cache line 都是 share 的）。
+    
+    如果 A 想写，B 也想，同时 A 先发起写，那么 A 中的 cache line 就变为 invalid。（只要有别人在我后面写，就变为无效） -->

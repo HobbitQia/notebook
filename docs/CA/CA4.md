@@ -74,6 +74,7 @@ The basic structure of a processor with scoreboard:
         * Fi、Fj、Fk 代表源操作数和目的操作数（Fi 为源，Fj、Fk 为目的）。
         * Qj、Qk 代表源操作数来自哪个部件
             * 如 Mult1 的 Qj=Integer 说明来自整数部件（此时正在执行 Load 指令）
+
         * Rj、Rk 代表源操作数的状态
             * yes - operands is ready but no ready.
 
@@ -173,13 +174,13 @@ There are three tables for Tomasulo’s Approach.
 
     Each reservation station has seven fields:
         
-        * **Op**: The operation to perform on source operands.
-        * **Qj**, Qk: The reservation stations that will produce the corresponding source operand.
-        * **Vj**, Vk: The value of the source operands.
-        * **Busy**: Indicates that this reservation station and its accompanying functional unit are occupied.
-        * **A**: Used to hold information for the memory address calculation for a load or store.
+    * **Op**: The operation to perform on source operands.
+    * **Qj**, Qk: The reservation stations that will produce the corresponding source operand.
+    * **Vj**, Vk: The value of the source operands.
+    * **Busy**: Indicates that this reservation station and its accompanying functional unit are occupied.
+    * **A**: Used to hold information for the memory address calculation for a load or store.
 
-            Load/Store 指令的目标地址。
+        Load/Store 指令的目标地址。
 
 * **Register status table (Field Qi)**: The number of the reservation station that contains the operation whose result should be stored into this register.
 

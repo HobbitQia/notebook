@@ -1,4 +1,4 @@
-# 计算机体系结构
+# 应用运筹学基础
 
 !!! Abstract
     浙江大学 “[应用运筹学基础](https://zju-turing.github.io/TuringCourses/major_module/applied_operations_research/)” 课程及相关知识笔记  
