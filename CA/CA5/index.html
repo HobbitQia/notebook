@@ -3316,6 +3316,74 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mimd-tread-level-parallelism" class="md-nav__link">
+    MIMD: Tread-level Parallelism
+  </a>
+  
+    <nav class="md-nav" aria-label="MIMD: Tread-level Parallelism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shared-memory-system" class="md-nav__link">
+    Shared Memory System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-passing-system" class="md-nav__link">
+    Message Passing System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mimd-architecture" class="md-nav__link">
+    MIMD Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="MIMD Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uma" class="md-nav__link">
+    UMA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numa" class="md-nav__link">
+    NUMA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coma" class="md-nav__link">
+    COMA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-coherence" class="md-nav__link">
+    Cache Coherence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4269,6 +4337,74 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mimd-tread-level-parallelism" class="md-nav__link">
+    MIMD: Tread-level Parallelism
+  </a>
+  
+    <nav class="md-nav" aria-label="MIMD: Tread-level Parallelism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shared-memory-system" class="md-nav__link">
+    Shared Memory System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-passing-system" class="md-nav__link">
+    Message Passing System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mimd-architecture" class="md-nav__link">
+    MIMD Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="MIMD Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uma" class="md-nav__link">
+    UMA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numa" class="md-nav__link">
+    NUMA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coma" class="md-nav__link">
+    COMA
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-coherence" class="md-nav__link">
+    Cache Coherence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4831,13 +4967,196 @@ S1 出现跨迭代的依赖，就不能用并行/向量链接，因为要等前�
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">B</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="mi">99</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="mi">99</span><span class="p">];</span>
 </code></pre></div></p>
 </div>
+<h2 id="mimd-tread-level-parallelism">MIMD: Tread-level Parallelism<a class="headerlink" href="#mimd-tread-level-parallelism" title="Permanent link">&para;</a></h2>
+<p>线程级的并行，称为 TLP，是由软件系统来确认的。</p>
+<p>The threads consist of hundreds to millions of instructions that may be executed in parallel.</p>
+<p>我们的发展从 ILP，到 TLP，再到 MIMD。</p>
+<p>Multi-processor system 可以分为两大类：</p>
+<ul>
+<li>
+<p>based on shared memory</p>
+<p>系统中只有唯一的地址空间，所有进程共享。</p>
+<p>并不代表只有一个物理上的内存，实际上可以通过一块物理共享的内存实现，也可以通过分布式的内存实现。</p>
+</li>
+<li>
+<p>based on message passing</p>
+<p>每个处理器都有自己的地址空间，通过消息传递来通信、传送数据。</p>
+</li>
+</ul>
+<h3 id="shared-memory-system">Shared Memory System<a class="headerlink" href="#shared-memory-system" title="Permanent link">&para;</a></h3>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110201622.png" width=70%></div>
+
+<p>可以把共享内存划分为若干块，他们共同构成一个拼图（即统一的地址空间）。</p>
+<p>有一个统一的操作系统，负责管理所有的信息、内存，给不同的进程使用内存。</p>
+<p>If in a system, each CPU has equal access to all memory modules and input/output devices, and these CPUs are interchangeable in the operating system, then the system is a symmetric multiprocessor system <strong>SMP (Symmetric Multi- processor)</strong>.</p>
+<h3 id="message-passing-system">Message Passing System<a class="headerlink" href="#message-passing-system" title="Permanent link">&para;</a></h3>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110202617.png" width=70%></div>
+
+<p>每一个进程都有自己的内存，通过 ICN 来传递信息，可以共同完成任务。</p>
+<p>一般每个进程有自己的 OS，但是组合在一起形成一个大的系统。</p>
+<p>Communication in the system is achieved by using an <strong>interconnection network</strong> to pass messages.</p>
+<p>可以分层次，ICN 也可以连接其他的 ICN，结点里可以是另一个多机系统。</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110202900.png" width=50%></div>
+
+<h3 id="mimd-architecture">MIMD Architecture<a class="headerlink" href="#mimd-architecture" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Different memory access models of MIMD multiprocessor system</p>
+<ul>
+<li><strong>Uniform Memory Access (UMA)</strong></li>
+<li><strong>Non Uniform Memory Access (NUMA)</strong></li>
+<li><strong>Cache Only Memory Access (COMA)</strong></li>
+</ul>
+</li>
+<li>
+<p>Further division of MIMD multi-computer system</p>
+<ul>
+<li><strong>Massively Parallel Processors (MPP)</strong></li>
+<li><strong>Cluster of Workstations(COW)</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="uma">UMA<a class="headerlink" href="#uma" title="Permanent link">&para;</a></h4>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110203036.png" width=50%></div>
+
+<p>所有的物理存储器，由所有的进程一起使用，均匀共享，即没有进程对某个存储器有特殊的访问权限，访问的时间相同，即不存在谁离谁更近的问题。</p>
+<p>进程可以有自己的拓展，比如 cache、IO、local memory。</p>
+<p>因为他的高度共享性，UMA 也叫紧耦合系统。</p>
+<ul>
+<li>Physical memory is uniformly shared by all processors.</li>
+<li>It takes the same time for all processors to access any memory word.</li>
+<li>Each processor can be equipped with private cache or private memory.</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240110203433.png" width=60%></div></p>
+</details>
+<h4 id="numa">NUMA<a class="headerlink" href="#numa" title="Permanent link">&para;</a></h4>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110203501.png" width=50%></div>
+
+<p>对某个进程都自己的 local memory，由 ICN 连起来。被共享的存储器是不均匀的。访问自己的 local memory 最快，访问别人的慢。</p>
+<p>进程也可以有自己的拓展。</p>
+<p>NUMA 有两种拓展，</p>
+<ul>
+<li>NC-NUMA: Non Cache NUMA</li>
+<li>
+<p>CC-NUMA: Coherent Cache NUMA</p>
+<p>有自己的 cache 和目录，存在 cache 一致性的问题。当有一个数据改了，如何保证其他 cache 里的数据的正确性。</p>
+</li>
+</ul>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110204714.png" width=55%></div>
+
+<ul>
+<li>All CPUs share an uniform address space</li>
+<li>Use LOAD and STORE instructions to access remote memory</li>
+<li>Access to remote memory is slower than access to local memory</li>
+<li>The processor in the NUMA system can use cache</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">UMA and NUMA</p>
+<ul>
+<li>UMA is also called <strong>symmetric (shared-memory) multiprocessors (SMP)</strong> or <strong>centralized shared-memory multiprocessors</strong>.</li>
+<li>NUMA is called <strong>distributed shared-memory multiprocessor (DSP)</strong>.</li>
+</ul>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240110205135.png" width=55%></div></p>
+<p>可以看到 UMA 有 shared cache，因此一致性是保证的。</p>
+</div>
+<h4 id="coma">COMA<a class="headerlink" href="#coma" title="Permanent link">&para;</a></h4>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110205326.png" width=50%></div>
+
+<p>COMA 是 NUMA 模型的特例，每个进程之间不存在层次关系，可以组成一个全局的 cache。可以通过一个目录。</p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110205525.png" width=50%></div>
+
+<ul>
+<li>COMA is a special case of NUMA. There is no storage hierarchy in each processor node, and all caches form a uniform address space.</li>
+<li>Use the distributed cache directory for remote cache access. When using COMA, the data can be allocated arbitrarily at the beginning, because it will eventually be moved to the place where it is used at runtime.</li>
+</ul>
+<h3 id="cache-coherence">Cache Coherence<a class="headerlink" href="#cache-coherence" title="Permanent link">&para;</a></h3>
+<p>In modern parallel computers, processors often have Cache. One memory data may have multiple copies in the entire system. This leads to the Cache coherence problem.  </p>
+<p>可能有多个 cache，都放有内存拷贝的数据，可能不一致。我们一般通过一个协议来约定。</p>
+<ul>
+<li>Bus snooping protocol</li>
+<li>Directory based protocol</li>
+</ul>
+<p>协议主要是为了保证 cohrence 和 consistency.</p>
+<ul>
+<li>
+<p>Coherence</p>
+<p>读数据，读出来的一定是最新的数据（即刚被写过的值）。</p>
+</li>
+<li>
+<p>Consistency</p>
+<p>写一个值时，要把写的值返回（通过读指令），什么时候返回。</p>
+</li>
+</ul>
+<!-- #### Snoopy Coherence Protocols
+
+For UMA, the cache coherence problem is solved by the **snoopy protocol**.
+
+对于 write-through 和 write-back，我们有不同的解决方案。
+
+* Write-through Cache Coherency Protocol
+
+    https://cdn.hobbitqia.cc/20240110211248.png
+
+Write Invalidation Protocol
+
+把块的状态分为 
+
+* Invalid
+* Shared
+
+    indicates that the block in the private cache is potentially shared.
+
+* Modified
+
+    indicates that the block has been updated in the private cache; implies that the block is exclusive.
+
+https://cdn.hobbitqia.cc/20240110211602.png
+
+MSI 可以拓展为 MESI，多一个 exclusive。将其与 modified 区别开。
+exclusive: indicates when a cache block is resident only in a single cache but is clean.
+
+exclusive 时如果要读，就不能独占了，就会变为 shared。如果要写，就必须改为 modified。
+
+MOESI
+
+owned: indicates that the associated block is owned by that cache and out-of-date in memory.
+
+Modified -> Owned without writing the shared block to memory
+
+
+MESI
+
+* Invalid: The data contained in the cache item is invalid.
+
+    这个 CPU 里的缓存数据已经无效了（即在其他 CPU 里被改过了，而且还没有共享）
+
+* Shared: This row of data exists in multiple cache items, and the data in the memory is the latest.
+
+    多个 CPU 中都有自己的缓存。
+
+* Exclusive: No other cache items include this row of data, and the data in memory is the latest.
+
+    只有在自己的 CPU 里缓存，但是没有被修改，与内存一致。（因此其他 CPU 要读就可以改为 shared）
+
+* Modified: The data of the item is valid, but the data in the memory is invalid, and there is no copy of the data in other cache items.
+
+    被修改了。处于这个状态的数据只有在自己的 CPU 里才有缓存，这个时候还没有更新到内存里。
+
+https://cdn.hobbitqia.cc/20240110212328.png
+
+!!! Example
+    假设有两个 CPU。本地发一个 local write 的请求，如果发现所有 cache 中都没有这个地址（初始是 invalid），A 要写，对应 cache line 的状态就会变为 modified。CPU B 来读，发出 remote read，就变为了 shared（A 和 B 的 cache line 都是 share 的）。
+
+    如果 A 想写，B 也想，同时 A 先发起写，那么 A 中的 cache line 就变为 invalid。（只要有别人在我后面写，就变为无效） -->
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年1月7日 14:20:35</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年1月20日 14:12:23</span>
       
         <br>
         创建日期:

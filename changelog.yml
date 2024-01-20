@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-1-20":
+    - pageupdate:
+        text: Computer Science > 计算理论
+        href: /TOC/index
   - "2024-1-7":
     - newpage:
         text: Computer Science > 应用运筹学基础
