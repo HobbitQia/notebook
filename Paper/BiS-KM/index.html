@@ -4264,7 +4264,7 @@ Q_3(a)\times b = b \times \sum\limits_{i=29}^{31}(a^{[i]}&lt;&lt;i) = \sum\limit
 <p>第 1 个周期，我们把 <span class="arithmatex">\(a_0^{[31]}\times b_0, a_1^{[31]}\times b_1, a_2^{[31]}\times b_2, a_3^{[31]}\times b_3\)</span> 送入加法树进行相加，并移位加上之前的结果。依次类推。经过 3 个周期即可得到点积的结果。</p>
 <h2 id="k-means">位串行的 K-Means 算法<a class="headerlink" href="#k-means" title="Permanent link">&para;</a></h2>
 <h3 id="_4">相对距离<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>原始的 K-Means 算法实际上是要找到 <span class="arithmatex">\(\argmin\limits_{i} \|Q(\vec x)-\vec \mu_i\|^2\)</span>，论文在 Sec4.1 分析了位串行欧氏距离的问题：</p>
+<p>原始的 K-Means 算法实际上是要找到 <span class="arithmatex">\(\arg\min\limits_{i} \|Q(\vec x)-\vec \mu_i\|^2\)</span>，论文在 Sec4.1 分析了位串行欧氏距离的问题：</p>
 <ul>
 <li>为了让带宽跑满，需要的 DSP 超过了 FPGA 的资源。</li>
 <li>利用率低，因为每 <span class="arithmatex">\(1/P_l\)</span> 个周期才会有一个位串行减法的结果，但是每个周期位乘法器都可以接收新的输入。</li>
