@@ -242,6 +242,9 @@ nav:
     - 数据建模与分析:
       - 读书报告: MLT/report.md
       - 感知机: MLT/mlt2.md
+  - Papers:
+    - Paper/index.md
+    - BiS-KM: Paper/BiS-KM.md
   - Miscellaneous:
     - Misc/index.md
     - 浮点数与定点数: Misc/float.md

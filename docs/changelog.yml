@@ -1,4 +1,9 @@
 - "2024":
+  - "2024-2-4":
+    - refactor: 新增了 Paper 页面！
+    - newpage:
+        text: Paper > BiS-KM
+        href: /Paper/BiS-KM
   - "2024-1-20":
     - pageupdate:
         text: Computer Science > 计算理论
