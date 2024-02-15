@@ -245,6 +245,8 @@ nav:
   - Papers:
     - Paper/index.md
     - BiS-KM: Paper/BiS-KM.md
+    - ZeRO: Paper/ZeRO.md
+    - Megatron-LM: Paper/Megatron-LM.md
   - Miscellaneous:
     - Misc/index.md
     - 浮点数与定点数: Misc/float.md
