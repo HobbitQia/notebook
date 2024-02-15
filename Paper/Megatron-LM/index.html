@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/ds/tree/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/Paper/Megatron-LM/">
       
       
-        <link rel="prev" href="../algorithm/">
+        <link rel="prev" href="../ZeRO/">
       
       
-        <link rel="next" href="../heap/">
+        <link rel="next" href="../../Misc/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>树 - HobbitQia的笔记本</title>
+        <title>Megatron-LM - HobbitQia的笔记本</title>
       
     
     
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#megatron-lm" class="md-skip">
           跳转至
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              树
+              Megatron-LM
             
           </span>
         </div>
@@ -252,21 +252,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../ds/" class="md-tabs__link">
           
   
     
@@ -343,11 +339,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Paper/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -529,8 +527,6 @@
       
   
   
-    
-  
   
     
     
@@ -551,13 +547,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -570,7 +566,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computer Science
@@ -581,8 +577,6 @@
                 
   
   
-    
-  
   
     
     
@@ -607,18 +601,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../ds/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -634,7 +628,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             数据结构与算法
@@ -649,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/" class="md-nav__link">
+      <a href="../../ds/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -667,29 +661,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    树
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ds/tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -698,141 +672,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    预备知识
-  </a>
-  
-    <nav class="md-nav" aria-label="预备知识">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    基本概念
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    实现
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    二叉树
-  </a>
-  
-    <nav class="md-nav" aria-label="二叉树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    表达式树
-  </a>
-  
-    <nav class="md-nav" aria-label="表达式树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    树的遍历
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    线索二叉树
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    二叉树的性质
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adt" class="md-nav__link">
-    查找树ADT——二叉查找树
-  </a>
-  
-    <nav class="md-nav" aria-label="查找树ADT——二叉查找树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    定义
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adt_1" class="md-nav__link">
-    ADT 模型
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    实现
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    平均情形分析
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -844,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../heap/" class="md-nav__link">
+      <a href="../../ds/heap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../set/" class="md-nav__link">
+      <a href="../../ds/set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -884,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../graph/" class="md-nav__link">
+      <a href="../../ds/graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -904,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sort/" class="md-nav__link">
+      <a href="../../ds/sort/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -924,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hash/" class="md-nav__link">
+      <a href="../../ds/hash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3813,6 +3652,8 @@
       
   
   
+    
+  
   
     
     
@@ -3829,18 +3670,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Paper/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3856,7 +3697,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Papers
@@ -3871,7 +3712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/BiS-KM/" class="md-nav__link">
+      <a href="../BiS-KM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3891,7 +3732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/ZeRO/" class="md-nav__link">
+      <a href="../ZeRO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3909,9 +3750,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Paper/Megatron-LM/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Megatron-LM
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3920,6 +3781,135 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    摘要
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    导言
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    相关工作和挑战
+  </a>
+  
+    <nav class="md-nav" aria-label="相关工作和挑战">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transformer" class="md-nav__link">
+    Transformer 模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    模型并行
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    算法
+  </a>
+  
+    <nav class="md-nav" aria-label="算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mlp" class="md-nav__link">
+    MLP 层
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    注意力层
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    输入嵌入层、输出层
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    实验
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    结论和讨论
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4106,23 +4096,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    预备知识
+  <a href="#_1" class="md-nav__link">
+    介绍
   </a>
   
-    <nav class="md-nav" aria-label="预备知识">
+    <nav class="md-nav" aria-label="介绍">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    基本概念
+  <a href="#_2" class="md-nav__link">
+    摘要
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    实现
+  <a href="#_3" class="md-nav__link">
+    导言
   </a>
   
 </li>
@@ -4133,43 +4123,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    相关工作和挑战
+  </a>
+  
+    <nav class="md-nav" aria-label="相关工作和挑战">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transformer" class="md-nav__link">
+    Transformer 模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    二叉树
-  </a>
-  
-    <nav class="md-nav" aria-label="二叉树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    表达式树
-  </a>
-  
-    <nav class="md-nav" aria-label="表达式树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    树的遍历
+    模型并行
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    算法
+  </a>
+  
+    <nav class="md-nav" aria-label="算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mlp" class="md-nav__link">
+    MLP 层
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    注意力层
+  </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    线索二叉树
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    二叉树的性质
+    输入嵌入层、输出层
   </a>
   
 </li>
@@ -4180,43 +4184,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adt" class="md-nav__link">
-    查找树ADT——二叉查找树
+  <a href="#_9" class="md-nav__link">
+    实验
   </a>
   
-    <nav class="md-nav" aria-label="查找树ADT——二叉查找树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
-    定义
+    结论和讨论
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#adt_1" class="md-nav__link">
-    ADT 模型
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
-    实现
+    参考资料
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    平均情形分析
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4239,342 +4223,175 @@
   
 
 
-<h1 id="_1">树<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">预备知识<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">基本概念<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h1 id="megatron-lm">Megatron-LM: 利用模型并行训练数亿级参数语言模型<a class="headerlink" href="#megatron-lm" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240215210231.png" /></p>
 <ul>
-<li><strong>树</strong>是一个节点的集合。当集合非空时，树包括<ul>
-<li><strong>根</strong></li>
-<li>0 或多个非空的子树 <span class="arithmatex">\(T_1,T_2,\ldots,T_k\)</span>，这些子树中每一棵子树都被来自根 r 的一条有向的边所连接。</li>
+<li>Paper: <a href="https://arxiv.org/abs/1909.08053">Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism</a></li>
+<li>本文中的图片部分来自论文，部分来自<a href="https://zhuanlan.zhihu.com/p/622212228">知乎文章</a>。</li>
 </ul>
-</li>
-<li>每一棵子树的根叫做根 r 的<strong>儿子</strong>，而 r 是每一棵子树的根的<strong>父亲</strong>。</li>
-<li>一棵树是 <span class="arithmatex">\(N\)</span> 个节点和 <span class="arithmatex">\(N-1\)</span> 条边的集合。</li>
-<li>没有儿子的节点称为<strong>树叶</strong></li>
-<li>具有相同父亲的节点称为<strong>兄弟</strong></li>
-<li>一个点的<strong>度</strong>，是这个点的儿子数量</li>
-<li>一棵树的<strong>度</strong>，是这棵树里点的度数的最大值，即 <span class="arithmatex">\(\max\limits_{node\in tree}\{deg(node)\}\)</span>  </li>
-<li>从节点 <span class="arithmatex">\(n_1\)</span> 到 <span class="arithmatex">\(n_k\)</span> 的<strong>路径</strong>定义为 <span class="arithmatex">\(n_1,n_2,\ldots,n_k\)</span> 的一个序列，使得对于 <span class="arithmatex">\(1\leq i &lt; k\)</span> 节点 <span class="arithmatex">\(n_i\)</span> 是 <span class="arithmatex">\(n_{i+1}\)</span> 的父亲。这条路径是唯一的。</li>
-<li>路径的<strong>长度</strong>就是路径上的边的数量</li>
-<li>对于任意节点 <span class="arithmatex">\(n_i\)</span>, <span class="arithmatex">\(n_i\)</span> 的<strong>深度</strong>为从根到 <span class="arithmatex">\(n_i\)</span> 的唯一路径的长度。</li>
-<li>对于任意节点 <span class="arithmatex">\(n_i\)</span>, <span class="arithmatex">\(n_i\)</span> 的<strong>高度</strong>为从 <span class="arithmatex">\(n_i\)</span> 到一片树叶的最长路径的长度。</li>
-<li>一棵树的高度/深度：根的高度</li>
-<li>如果存在从 <span class="arithmatex">\(n_1\)</span> 到 <span class="arithmatex">\(n_2\)</span> 的一条路径，那么 <span class="arithmatex">\(n_1\)</span> 是 <span class="arithmatex">\(n_2\)</span> 的一位<strong>祖先</strong>，而 <span class="arithmatex">\(n_2\)</span> 是 <span class="arithmatex">\(n_1\)</span> 的一个<strong>后裔</strong>，如果 <span class="arithmatex">\(n_1\neq n_2\)</span> 称为<strong>真祖先和真后裔</strong>。</li>
-</ul>
-<h3 id="_4">实现<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>我们这里使用 FirstChild-NextSibling Representation, 将每个节点的所有儿子放在树节点的链表中</p>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">TreeNode</span><span class="w"> </span><span class="o">*</span><span class="n">PrtToNode</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Tree</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">Element</span><span class="p">;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">PtrToNode</span><span class="w"> </span><span class="n">FirstChild</span><span class="p">;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">PtrToNode</span><span class="w"> </span><span class="n">NextSibling</span><span class="p">;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-
-<h2 id="_5">二叉树<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p><strong>二叉树</strong>是一棵树，其中每个节点的儿子不能多于两个。</p>
-<h3 id="_6">表达式树<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>表达式树的树叶是操作数，比如常数或变量，而其他的节点为操作符。因为我们的操作符一般是二元的，所以我们可以得到一棵二叉树。如果有单目操作符，那么节点就只有一个儿子。</p>
-<details class="example">
-<summary>Example</summary>
-<p><span class="arithmatex">\(A+B*C/D\)</span> 表示如下：
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211131503235.png" width = 20%/> </div>  </p>
-</details>
-<h4 id="_7">树的遍历<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p><strong>树的遍历</strong>即每个节点访问一次</p>
-<ul>
-<li>前序遍历  </li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w">  </span><span class="nf">preorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree_ptr</span><span class="w">  </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span><span class="w">  </span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="n">visit</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">each</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">            </span><span class="n">preorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-<ul>
-<li>后序遍历  </li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w">  </span><span class="nf">postorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree_ptr</span><span class="w">  </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span><span class="w">  </span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="p">{</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">each</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">            </span><span class="n">postorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="n">visit</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-<ul>
-<li>层序遍历  </li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w">  </span><span class="nf">levelorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree_ptr</span><span class="w">  </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span><span class="w">   </span><span class="n">enqueue</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">queue</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">empty</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="n">visit</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dequeue</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">each</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">            </span><span class="n">enqueue</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-<ul>
-<li>中序遍历  </li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w">  </span><span class="nf">inorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree_ptr</span><span class="w">  </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">{</span><span class="w">  </span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="p">{</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="n">inorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="n">visit</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="n">inorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">   </span><span class="p">}</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211131503235.png" width = 20%/> </div><br />
-<em> 中序遍历: <span class="arithmatex">\(A+B*C/D\)</span><br />
-</em> 前序遍历: <span class="arithmatex">\(+A/*BCD\)</span>
-* 后序遍历: <span class="arithmatex">\(ABC*D/+\)</span></p>
-</details>
-<h3 id="_8">线索二叉树<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>规则: </p>
-<ul>
-<li>如果 <code>Tree-&gt;Left</code> 为空，用一个指向中序遍历中当前节点的前驱的指针代替它</li>
-<li>如果 <code>Tree-&gt;Right</code> 为空，用一个指向中序遍历中当前节点的后继的指针代替它 </li>
-<li>这里没有空闲的指针，因此一棵线索二叉树需要有一个左儿子指针指向第一个节点的头节点。</li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">typedef</span><span class="w">  </span><span class="k">struct</span><span class="w">  </span><span class="nc">ThreadedTreeNode</span><span class="w">  </span><span class="o">*</span><span class="n">PtrTo</span><span class="w">  </span><span class="n">ThreadedNode</span><span class="p">;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">typedef</span><span class="w">  </span><span class="k">struct</span><span class="w">  </span><span class="nc">PtrToThreadedNode</span><span class="w">  </span><span class="n">ThreadedTree</span><span class="p">;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">typedef</span><span class="w">  </span><span class="k">struct</span><span class="w">  </span><span class="nc">ThreadedTreeNode</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">       </span><span class="kt">int</span><span class="w">                  </span><span class="n">LeftThread</span><span class="p">;</span><span class="w">   </span><span class="cm">/* if it is TRUE, then Left */</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">       </span><span class="n">ThreadedTree</span><span class="w">     </span><span class="n">Left</span><span class="p">;</span><span class="w">      </span><span class="cm">/* is a thread, not a child ptr.   */</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">       </span><span class="n">ElementType</span><span class="w">  </span><span class="n">Element</span><span class="p">;</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">       </span><span class="kt">int</span><span class="w">                  </span><span class="n">RightThread</span><span class="p">;</span><span class="w"> </span><span class="cm">/* if it is TRUE, then Right */</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">       </span><span class="n">ThreadedTree</span><span class="w">     </span><span class="n">Right</span><span class="p">;</span><span class="w">    </span><span class="cm">/* is a thread, not a child ptr.   */</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211131503235.png" width = 20%/> </div><br />
-那么它对应的线索二叉树如下: 
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211131530456.png" width = 50%/> </div>  </p>
-</details>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>在树里面，儿子的次序没有影响。但对于二叉树而言，左儿子和右儿子是不同的。</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">完全二叉树</p>
-<p>所有叶节点都位于相邻的两个层上</p>
-</div>
-<h3 id="_9">二叉树的性质<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>模型并行有很多层，一般是把不同层放在不同 GPU 上。Megatron 的做法是把一个层中间（intra-layer）切开，这个也叫张量并行（Tensor Parallelism）。有人认为 TP 独立于 MP、DP，有人认为 TP 是 MP 的一种。这里以后者为准。</p>
+<h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">摘要<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>第 i 层节点个数最多为 <span class="arithmatex">\(2^{i-1},i\geq 1\)</span>. 深度为 k 的二叉树最多有 <span class="arithmatex">\(2^k-1\)</span> 个节点。</li>
+<li>语言模型越来越大，会有内存的限制。本论文使用了层内的模型并行，可以训练具有数十亿参数的 Transformer 模型。</li>
+<li>论文提出的方法不需要新的编译器、库，和之前的 PP 是互补正交的，实现上只需要在 Pytorch 中插入一些通讯操作即可。</li>
+<li>训练了 8.3B 的 GPT-2 模型、3.9B 的 BERT 模型，且在测试集上取得了 SOTA 的结果。</li>
+</ul>
+<!-- 看上去本来想投 ICML，但是似乎没中 -->
+
+<!-- baseline 很好（GPipe 不是和最好的 baseline 比的），与单卡最好 -->
+
+<!-- 提出一个模型切分的方法，训练了一个比别人都要大的模型，性能如何，最后说我们训练出的模型在真实数据集上也是比前人的工作要好。 -->
+
+<h3 id="_3">导言<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>figure 1
+从图可以看到，性能随 GPU 的数量增加而线性增长，说明拿到了非常理想的 speedup。</p>
+<!-- 图做了美化 -->
+
+<p>贡献：</p>
+<ul>
+<li>只对现有的 PyTorch 变换器实现进行了一些有针对性的修改，就实现了一种简单高效的模型并行方法。</li>
+<li>对模型和数据并行技术进行了深入的实证分析，并利用 512 个 GPU 展示了高达 76% 的扩展效率。</li>
+<li>论文发现层归一化的位置对于随着模型的增长而提高准确度至关重要。（因为实验里把 BERT 变大后发现模型不再收敛，故修改了模型）</li>
+<li>扩大模型规模可提高 GPT-2（研究参数多达 83 亿）和 BERT（研究参数多达 39 亿）模型的精确度。</li>
+<li>模型在测试集上取得的最新成果：WikiText103 的复杂度（10.8 ppl）、LAMBADA 的准确度（66.5%）和 RACE 的准确度（90.9%）。</li>
+<li>代码是开源的。</li>
+</ul>
+<h2 id="_4">相关工作和挑战<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="transformer">Transformer 模型<a class="headerlink" href="#transformer" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240214150915.png" /></p>
+<h3 id="_5">模型并行<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>评论别人文章：之前的工作要么有一个编译器，要么有一个框架，我们只需要在 Pytorch 中插入一些通讯操作即可，更加简单。（GPipe 也有）</p>
+<h2 id="_6">算法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="mlp">MLP 层<a class="headerlink" href="#mlp" title="Permanent link">&para;</a></h3>
+<p>MLP：输入是三维的，批量大小、序列长度、隐藏层大小</p>
+<p>假设输入为 <span class="arithmatex">\(X_{b\times s\times h}\)</span>，首先通过线性变换 <span class="arithmatex">\(A_{h\times h'}\)</span>，再经过 GeLU 激活函数，最后经过线性变换 <span class="arithmatex">\(B_{h'\times h}\)</span> 得到的中间结果为 <span class="arithmatex">\(Y\)</span>，我们有</p>
+<div class="arithmatex">\[
+Y=GeLU(XA)*B
+\]</div>
+<ul>
+<li>如果把 X 按行切分，就是数据并行</li>
 <li>
-<p>对于任何非空二叉树都有 <span class="arithmatex">\(n_0=n_2+1\)</span>. 其中 <span class="arithmatex">\(n_0\)</span> 是叶子节点的个数，<span class="arithmatex">\(n_2\)</span> 是度数为 2 的节点个数。</p>
-<details class="note">
-<summary>Proof</summary>
-<p>令 <span class="arithmatex">\(n_1\)</span> 表示度数为 1 的节点个数，那么我们有 <span class="arithmatex">\(n=n_0+n_1+n_2\)</span>.<br />
-令 <span class="arithmatex">\(B\)</span> 表示所有的边，那么 <span class="arithmatex">\(B=n-1\)</span>，同时又有 <span class="arithmatex">\(B=n_1+2n_2\)</span>.<br />
-联立可得到 <span class="arithmatex">\(n_0=n_2+1\)</span>.  </p>
-</details>
+<p>否则我们选择拆 A 和 B</p>
+<ul>
+<li>
+<p>如果对 A 进行横向拆分，那么注意到 <span class="arithmatex">\(Y= GeLU(X_1A_1+X_2A_2) \neq GeLU(X_1A_1) + GeLU(X_2A_2)\)</span>（因为 GeLU 是非线性的激活函数），也就是说在计算 GeLU 时，我们要等待前面的计算结果 <span class="arithmatex">\(X_1A_1, X_2A_2\)</span>，这就需要同步原语。必须在做 GeLU 前，做一次 all-reduce 得到 <span class="arithmatex">\(Y=GeLU(X_1A_1+X_2A_2)\)</span>，这样就会产生额外通讯量。</p>
 </li>
-</ul>
-<h2 id="adt">查找树ADT——二叉查找树<a class="headerlink" href="#adt" title="Permanent link">&para;</a></h2>
-<h3 id="_10">定义<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<p>一棵<strong>二叉查找树</strong>是二叉的，如果非空，那么满足下列性质:</p>
-<ul>
-<li>每个节点有一个关键字，是各不相同的整数</li>
-<li>如果左子树非空，那么左子树所有关键字的值必须小于当前节点的关键字</li>
-<li>如果右子树非空，那么右子树所有关键字的值必须大于当前节点的关键字</li>
-<li>左子树和右子树仍是二叉查找树</li>
-</ul>
-<h3 id="adt_1">ADT 模型<a class="headerlink" href="#adt_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>对象: 一个有限的有序集</li>
-<li>操作:<ul>
-<li>初始化</li>
-<li>查找关键字</li>
-<li>查找最大/最小的关键字</li>
-<li>插入关键字</li>
-<li>删除关键字</li>
-<li>检索位置</li>
+<li>
+<p>如果对 A 进行纵向拆分，那么注意到 <span class="arithmatex">\(Y=\left[Y_1, Y_2\right]=\left[GeLU(X A_1), GeLU(X A_2)\right]\)</span>，我们可以分别计算 <span class="arithmatex">\(GeLU(X A_1)\)</span> 和 <span class="arithmatex">\(GeLU(X A_2)\)</span>，这样就不需要同步。</p>
+</li>
+<li>
+<p>对于 B 我们采用横向拆分，这样就有 <span class="arithmatex">\(Z = \left[Y_1, Y_2\right]\left[\begin{matrix}B_1\\ B_2\end{matrix}\right]=Y_1 B_1+Y_2 B_2\)</span>，我们可以分别计算 <span class="arithmatex">\(Z_1=Y_1B_1, Z_2=Y_2B_2\)</span> 最后进行 all-reduce 得到 <span class="arithmatex">\(Z=Z_1+Z_2\)</span>。</p>
+</li>
 </ul>
 </li>
 </ul>
-<h3 id="_11">实现<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<ul>
-<li>查找关键字<br />
-返回树 T 中具有关键字 X 节点的指针，我们可以对树 T 的左子树或者右子树进行递归调用，查找哪个子树取决于 X 与当前根节点关键字的大小关系。<br />
-<span class="arithmatex">\(T(N)=S(N)=O(d)\)</span>, 这里 d 是树的深度  </li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">Position</span><span class="w">  </span><span class="nf">Find</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w">  </span><span class="n">SearchTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">          </span><span class="k">return</span><span class="w">  </span><span class="nb">NULL</span><span class="p">;</span><span class="w">  </span><span class="cm">/* not found in an empty tree */</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="cm">/* if smaller than root */</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">          </span><span class="k">return</span><span class="w">  </span><span class="n">Find</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/* search left subtree */</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">      </span><span class="k">else</span><span class="w"> </span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="cm">/* if larger than root */</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">      </span><span class="k">return</span><span class="w">  </span><span class="n">Find</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/* search right subtree */</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">          </span><span class="k">else</span><span class="w">   </span><span class="cm">/* if X == root */</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">      </span><span class="k">return</span><span class="w">  </span><span class="n">T</span><span class="p">;</span><span class="w">  </span><span class="cm">/* found */</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="p">}</span><span class="w"> </span>
-</code></pre></div>
-</details>
-<p>注意到这是一个尾递归，因此我们可以优化为迭代版本</p>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">Position</span><span class="w">  </span><span class="nf">Iter_Find</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w">  </span><span class="n">SearchTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">      </span><span class="cm">/* iterative version of Find */</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">      </span><span class="k">while</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="p">{</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">          </span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">;</span><span class="w">  </span><span class="cm">/* found */</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">          </span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">             </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="cm">/*move down along left path */</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">          </span><span class="k">else</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Right</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="cm">/* move down along right path */</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">      </span><span class="p">}</span><span class="w">  </span><span class="cm">/* end while-loop */</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">      </span><span class="k">return</span><span class="w">  </span><span class="nb">NULL</span><span class="w"> </span><span class="p">;</span><span class="w">   </span><span class="cm">/* not found */</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="p">}</span><span class="w"> </span>
-</code></pre></div>
-</details>
+<div align=center><img src = "https://cdn.hobbitqia.cc/20240215004348.png" width =60%></div>
 
 <ul>
-<li>查找最小/最大关键字<br />
-查找最小元素，只需要从根节点开始，只要有左儿子就向左进行，终止点就是最小的元素了。查找最大元素类似。<br />
-<span class="arithmatex">\(T(N)=O(d)\)</span></li>
+<li>forward 时，<span class="arithmatex">\(f\)</span> 把输入 <span class="arithmatex">\(X\)</span> 拷贝到两个 GPU 上，每块 GPU 独立地计算。直到 <span class="arithmatex">\(g\)</span> 函数等每块 GPU 上都计算结束，执行 all-reduce 操作，得到结果 <span class="arithmatex">\(Z\)</span>。</li>
+<li>backward 时，<span class="arithmatex">\(g\)</span> 把输入的梯度 <span class="arithmatex">\(\dfrac{\partial L}{\partial Z}\)</span> 拷贝到两个 GPU 上，每块 GPU 独立计算。直到 <span class="arithmatex">\(f\)</span> 函数等每块 GPU 上都计算结束，执行 all-reduce 操作，得到结果 <span class="arithmatex">\(\dfrac{\partial L}{\partial X} = \dfrac{\partial L}{\partial X_1} + \dfrac{\partial L}{\partial X_2}\)</span>。</li>
 </ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">Position</span><span class="w">  </span><span class="nf">FindMin</span><span class="p">(</span><span class="w"> </span><span class="n">SearchTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w">   </span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">          </span><span class="k">return</span><span class="w">  </span><span class="nb">NULL</span><span class="p">;</span><span class="w"> </span><span class="cm">/* not found in an empty tree */</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">      </span><span class="k">else</span><span class="w"> </span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="k">return</span><span class="w">  </span><span class="n">T</span><span class="p">;</span><span class="w">  </span><span class="cm">/* found left most */</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">          </span><span class="k">else</span><span class="w">   </span><span class="k">return</span><span class="w">  </span><span class="n">FindMin</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">);</span><span class="w">   </span><span class="cm">/* keep moving to left */</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">Position</span><span class="w">  </span><span class="nf">FindMax</span><span class="p">(</span><span class="w"> </span><span class="n">SearchTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">          </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w">   </span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="p">;</span><span class="w">   </span><span class="cm">/* keep moving to find right most */</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">T</span><span class="p">;</span><span class="w">  </span><span class="cm">/* return NULL or the right most */</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="p">}</span><span class="w"> </span>
-</code></pre></div>
-</details>
+<p>假设每个阶段通讯量为 <span class="arithmatex">\(\phi\)</span>，那么 MLP 层的总通讯量为 <span class="arithmatex">\(4\phi\)</span>（两次 all-reduce 操作）。</p>
+<p>由图可知 <span class="arithmatex">\(\phi = b*s*h\)</span>。</p>
+<h3 id="_7">注意力层<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>attention 本身就是多头计算，每个头可以独立计算，最后再将结果拼接起来。因此最简单的办法，把每个头的参数放在一份 GPU 上。</p>
+<p>具体来说，对参数矩阵 <span class="arithmatex">\(Q, K, V\)</span>，我们按列切分，对于线性层 <span class="arithmatex">\(B\)</span>，我们按行切割。</p>
+<div align=center><img src = "https://cdn.hobbitqia.cc/20240215005323.png" width =60%></div>
 
-<ul>
-<li>插入
-插入可以用查找的思路，如果找到 X 那么就什么也不做（或者做一些更新），否则就将 X 插入到遍历路径上的最后一点上。<br />
-<span class="arithmatex">\(T(N)=O(d)\)</span>  </li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">SearchTree</span><span class="w">  </span><span class="nf">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">SearchTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* Create and return a one-node tree */</span><span class="w"> </span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">TreeNode</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">       </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">       </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">       </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">      </span><span class="p">}</span><span class="w">  </span><span class="cm">/* End creating a one-node tree */</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">     </span><span class="k">else</span><span class="w">  </span><span class="cm">/* If there is a tree */</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">       </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span>
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">          </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">       </span><span class="cm">/* Else X is in the tree already; we&#39;ll do nothing */</span><span class="w"> </span>
-<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">    </span><span class="k">return</span><span class="w">  </span><span class="n">T</span><span class="p">;</span><span class="w">   </span><span class="cm">/* Do not forget this line!! */</span><span class="w"> </span>
-<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="p">}</span>
-</code></pre></div>
-</details>
+<p>我们也可以多个 head 占用一块 GPU，这依然不会改变单块 GPU 上独立计算的目的。所以实际设计时，我们尽量保证 head 总数能被 GPU 个数整除。</p>
+<p>通讯量：</p>
+<div align=center><img src = "https://cdn.hobbitqia.cc/20240215005346.png" width =60%></div>
 
+<h3 id="_8">输入嵌入层、输出层<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>切法要一样（因为是共用的）</p>
+<p>假设字典是 <span class="arithmatex">\(E_{H\times v}\)</span>，其中 <span class="arithmatex">\(H\)</span> 是隐藏层大小，<span class="arithmatex">\(v\)</span> 是词汇数量。</p>
 <ul>
-<li>删除<br />
-如果要删除的节点是树叶，我们可以立即删除，如果节点有一个儿子，可以在父节点调整指针后绕过该节点并删除。<br />
-但如果有两个儿子，一般的删除策略是用其右子树中最小元（或者左子树中的最大元）代替该节点的数据并递归地删除那个节点。<br />
-<span class="arithmatex">\(T(N)=O(h)\)</span>, 其中 h 是树的高度。   </li>
+<li>对于输入嵌入层，我们把整个字典按列切开 <span class="arithmatex">\(E=\left[E_1, E_2\right]\)</span>，一个 GPU 拿到一部分。对于每个输入 x，拿到 GPU 上那部分的字典进行查找，如果有就返回，没有就返回 0 向量。最后 all-reduce。</li>
+<li>对于输出嵌入层，我们必须时刻保证输入层和输出层共用一套 word embedding。</li>
 </ul>
-<details> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">SearchTree</span><span class="w">  </span><span class="nf">Delete</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">SearchTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">{</span><span class="w">    </span><span class="n">Position</span><span class="w">  </span><span class="n">TmpCell</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Element not found&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">      </span><span class="k">else</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="cm">/* Go left */</span><span class="w"> </span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">        </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Delete</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">               </span><span class="k">else</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="cm">/* Go right */</span><span class="w"> </span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">               </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Delete</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">             </span><span class="k">else</span><span class="w">  </span><span class="cm">/* Found element to be deleted */</span><span class="w"> </span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">               </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/* Two children */</span><span class="w"> </span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">                   </span><span class="cm">/* Replace with smallest in right subtree */</span><span class="w"> </span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">                   </span><span class="n">TmpCell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FindMin</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">                   </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TmpCell</span><span class="o">-&gt;</span><span class="n">Element</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">                   </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Delete</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="cm">/* End if */</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">               </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/* One or zero child */</span><span class="w"> </span>
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">                   </span><span class="n">TmpCell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">                   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="cm">/* Also handles 0 child */</span><span class="w"> </span>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">                 </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">                   </span><span class="k">else</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">                   </span><span class="n">free</span><span class="p">(</span><span class="w"> </span><span class="n">TmpCell</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="p">}</span><span class="w">  </span><span class="cm">/* End else 1 or 0 child */</span>
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">      </span><span class="k">return</span><span class="w">  </span><span class="n">T</span><span class="p">;</span><span class="w"> </span>
-</code></pre></div>
-</details>
+<!-- ？？？ -->
+
+<p>计算交叉熵损失时，正常做法是对输出嵌入层的结果 <span class="arithmatex">\(\left[Y_1, Y_2\right]\)</span> 做 all-gather，将结果发送给交叉熵损失函数。这种情况全局收集将会传输 <span class="arithmatex">\(b \times s \times v\)</span> 个元素（<span class="arithmatex">\(b\)</span> 是 batch size，<span class="arithmatex">\(s\)</span> 是序列长度，<span class="arithmatex">\(v\)</span> 是词汇数量）。</p>
+<p>为了减少通信，我们可以这样</p>
+<ul>
+<li>在每块 GPU 上按行求和。</li>
+<li>将每块 GPU 的结果进行 all-reduce，得到每行的最终和，即 softmax 中的分母。此时通信量为 <span class="arithmatex">\(b\times s\)</span>。</li>
+<li>每块 GPU 上可以计算出自己的标量损失。</li>
+<li>最后将每块 GPU 上的标量损失做 all-reduce，得到总损失。此时通信量为 <span class="arithmatex">\(N\)</span>。</li>
+</ul>
+<div align=center><img src = "https://pic3.zhimg.com/80/v2-4ec4da8818b39725e61cce5a16c4321a_1440w.webp" width =60%></div>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>如果这里没有很多删除操作，通常使用<strong>懒惰操作</strong>的策略，当一个节点被删除时，我们不删除它，做一个删除的记号，这样的好处是在有重复关键字时可以直接在频率上加减。  </p>
+<p>这样做的坏处是我们要等上一步 all-reduce 结束才能进行下一步，无法做到数据计算和通讯的并行。而数据并行的复杂度是 $O(k^2n)，发送梯度和数据并行计算可以重叠。</p>
 </div>
-<h3 id="_12">平均情形分析<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<p>Q. 把 n 个元素放在二叉查找树中，这棵树可以有多高？
-A. 高度取决于插入的顺序。最坏可以达到 <span class="arithmatex">\(N\)</span></p>
-<details class="example">
-<summary>Example</summary>
+<h2 id="_9">实验<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>实验环境：</p>
 <ul>
-<li>插入顺序 4, 2, 1, 3, 6, 5, 7 </li>
+<li>序列长度 1024，GPT2（批量大小 512）、BERT 模型（批量大小 1024），迭代次数 297k。</li>
+<li>硬件：32 台 DGX-2，总共 512 V100 GPU（32GB） 300GB/s，机器之间 100GB/s（带宽非常夸张）</li>
+<li>1.2B 的模型作为 baseline（可以放进一个单卡），逐渐增加层数，增大隐藏层，得到 8B 的模型（每个 GPU 拿到的模型大小差不多）。</li>
 </ul>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211131612003.png" width = 20%/> </div>  </p>
+<details class="note">
+<summary>Note</summary>
+<p>一台机器有 16 块卡，为什么不做到一个 16B 的模型呢？而是最大只用 8 卡。</p>
 <ul>
-<li>插入顺序 1, 2, 3, 4, 5, 6, 7</li>
+<li>可能效果不是很好。</li>
+<li>无法把模型变到 16B（参数增多时不止是模型状态变多，还有残余状态变多，进而导致一张卡上的内存不够），即一台机器无法放下 16B 的模型。</li>
 </ul>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211131613806.png" width = 20%/> </div>  </p>
 </details>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>兄弟: sibling<br />
-操作数: operand<br />
-前序遍历: preorder traversal<br />
-后序遍历: postorder traversal<br />
-层序遍历: levelorder traversal<br />
-中序遍历: inorder traversal<br />
-线索二叉树: Threaded Binary Trees  </p>
-</div>
+<div align=center><img src = "https://cdn.hobbitqia.cc/20240215203210.png" width =50%></div>
+
+<p>GPU 为 1 时不涉及卡间的通信，因此 GPU 的计算效率为 100%。随着模型的增大，需要的 GPU 数量变多，通讯量增大，单卡的计算效率是在下降的。同时可以看到需要的 GPU 数量和模型大小成正比。</p>
+<!-- 参数个数和层数是线性关系、和隐藏层大小是平方关系 -->
+
+<p>随后我们同时使用了模型并行和数据并行（GPU 为 64 是纯数据并行，128 是每台机器里 2 块卡做模型并行，512 表示每台机器里 8 块卡做模型并行）可以看到引入数据并行后，单卡效率有下降（因为计算时间几乎不变，但是通讯时间变多了），但是没有下降太多（因为我们在 backward 计算梯度时，下一层的计算不依赖上一层的 all-reduce 结果，可以 overlap）</p>
+<p>训练 GPT-2、BERT 的过程略。</p>
+<p>在训练 BERT 模型时，论文提出要调整 LayerNorm 层，把残差连接放在后面，否则可能会不收敛。</p>
+<div align=center><img src = "https://cdn.hobbitqia.cc/20240215204917.png" width =50%></div>
+
+<h2 id="_10">结论和讨论<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>论文认为未来有前景的研究方向：</p>
+<ul>
+<li>继续扩大预训练规模</li>
+<li>对于参数超过 160 亿的模型，所需的内存将超过 DGX-2H 盒子 16 个 GPU 的可用内存，层内和层间模型并行以及节点间模型并行的混合方式将更为合适。</li>
+</ul>
+<p>个人的评论如下：（结合了部分其他人的评论）</p>
+<ul>
+<li>好处：切分很容易，按头的个数或者隐藏层的大小分开（通常是 2 的整数倍）。</li>
+<li>局限：只针对 transformer；通讯量很大，且不能和计算做异步；GPU 变多后冗余信息变多，因为每一层的输入输出都要存在每个 GPU 上。</li>
+<li>贡献部分，只要改了东西（第 3 点），都可以说是自己的贡献。实验拆为了三点，4、5 都是在讲一个东西。还写了具体在哪个数据集表现好，以及代码开源。可以借鉴贡献的写法，但是也没必要写这么多。</li>
+<li>论文的写作思路类似：提出一个模型切分的方法，训练了一个比别人都要大的模型，性能如何，最后说我们训练出的模型在真实数据集上也是比前人的工作要好。</li>
+<li>对系统文章，都是在做取舍。一个亮点可能会牺牲一些东西，比如这里牺牲了通用性，只能适用于 Transformer。任何作者说我的方法比别人的方法好的时候，要反过来思考他做了什么样的取舍。</li>
+</ul>
+<p>对比和 GPipe：</p>
+<ul>
+<li>Megatron 的通讯量大概是 GPipe 的 10 倍。</li>
+<li>GPipe 要重算，批量 m 要大于 GPU 数量的 4 倍（否则无法流水），Megatron 的批量是 8。</li>
+<li>和 GPipe 类似，模型并行，但是切割思路不同（标题也是类似的）。</li>
+<li>GPipe 做的是神经网络，但是 Megatron 特定指的是 Transformer 语言模型</li>
+<li>本论文的 baseline 很好，而 GPipe 不是和最好的 baseline 比的。</li>
+</ul>
+<h2 id="_11">参考资料<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1nB4y1R7Yz/?spm_id_from=333.999.0.0">Mu Li 的 b 站视频“Megatron LM 论文精读”</a>。</li>
+<li><a href="https://zhuanlan.zhihu.com/p/622212228">知乎文章“张量模型并行(TP)，Megatron-LM”</a>，切分权重讲的十分详细。</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月7日 15:10:29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月15日 21:09:31</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月22日 14:15:00</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月15日 21:09:31</span>
       
     
   </small>
