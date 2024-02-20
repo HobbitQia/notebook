@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-2-21":
+    - newpage:
+        text: Papers > GPipe
+        href: /Paper/GPipe
   - "2024-2-15":
     - newpage:
         text: Papers > Megatron-LM
