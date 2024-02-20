@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/ds/heap/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/Paper/GPipe/">
       
       
-        <link rel="prev" href="../tree/">
+        <link rel="prev" href="../Megatron-LM/">
       
       
-        <link rel="next" href="../set/">
+        <link rel="next" href="../../Misc/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>堆 - HobbitQia的笔记本</title>
+        <title>GPipe - HobbitQia的笔记本</title>
       
     
     
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#gpipe" class="md-skip">
           跳转至
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              堆
+              GPipe
             
           </span>
         </div>
@@ -252,21 +252,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../ds/" class="md-tabs__link">
           
   
     
@@ -343,11 +339,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Paper/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -529,8 +527,6 @@
       
   
   
-    
-  
   
     
     
@@ -551,13 +547,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -570,7 +566,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computer Science
@@ -581,8 +577,6 @@
                 
   
   
-    
-  
   
     
     
@@ -607,18 +601,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../ds/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -634,7 +628,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             数据结构与算法
@@ -649,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/" class="md-nav__link">
+      <a href="../../ds/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tree/" class="md-nav__link">
+      <a href="../../ds/tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -687,29 +681,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    堆
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ds/heap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -718,108 +692,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#adt" class="md-nav__link">
-    ADT 模型
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    简单的实现
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    二叉堆
-  </a>
-  
-    <nav class="md-nav" aria-label="二叉堆">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    结构性质
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    堆序性质
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    基本的堆操作
-  </a>
-  
-    <nav class="md-nav" aria-label="基本的堆操作">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    插入
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    删除最小元
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    其他的堆操作
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#d-heaps" class="md-nav__link">
-    d-Heaps
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -831,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../set/" class="md-nav__link">
+      <a href="../../ds/set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../graph/" class="md-nav__link">
+      <a href="../../ds/graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sort/" class="md-nav__link">
+      <a href="../../ds/sort/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hash/" class="md-nav__link">
+      <a href="../../ds/hash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3780,6 +3652,8 @@
       
   
   
+    
+  
   
     
     
@@ -3798,18 +3672,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Paper/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3825,7 +3699,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Papers
@@ -3840,7 +3714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/BiS-KM/" class="md-nav__link">
+      <a href="../BiS-KM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3860,7 +3734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/ZeRO/" class="md-nav__link">
+      <a href="../ZeRO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3880,7 +3754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/Megatron-LM/" class="md-nav__link">
+      <a href="../Megatron-LM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3898,9 +3772,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Paper/GPipe/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    GPipe
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3909,6 +3803,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    算法
+  </a>
+  
+    <nav class="md-nav" aria-label="算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    模型并行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-batch-splitting" class="md-nav__link">
+    流水线并行 - batch-splitting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-re-materializationactive-checkpoint" class="md-nav__link">
+    流水线并行 - re-materialization(active checkpoint)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    分析
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    实验
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    结论和讨论
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4095,83 +4078,70 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adt" class="md-nav__link">
-    ADT 模型
+  <a href="#_1" class="md-nav__link">
+    介绍
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    简单的实现
+    算法
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    二叉堆
-  </a>
-  
-    <nav class="md-nav" aria-label="二叉堆">
+    <nav class="md-nav" aria-label="算法">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    结构性质
+  <a href="#_3" class="md-nav__link">
+    模型并行
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    堆序性质
+  <a href="#-batch-splitting" class="md-nav__link">
+    流水线并行 - batch-splitting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-re-materializationactive-checkpoint" class="md-nav__link">
+    流水线并行 - re-materialization(active checkpoint)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    分析
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    实验
+  </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    基本的堆操作
+    结论和讨论
   </a>
-  
-    <nav class="md-nav" aria-label="基本的堆操作">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    插入
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    删除最小元
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    其他的堆操作
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#d-heaps" class="md-nav__link">
-    d-Heaps
+  <a href="#_7" class="md-nav__link">
+    参考资料
   </a>
   
 </li>
@@ -4195,134 +4165,150 @@
   
 
 
-<h1 id="_1">优先队列（堆）<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="adt">ADT 模型<a class="headerlink" href="#adt" title="Permanent link">&para;</a></h2>
+<h1 id="gpipe">GPipe: 利用微批处理流水线并行性轻松扩展<a class="headerlink" href="#gpipe" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240220235704.png" /></p>
 <ul>
-<li>对象：一个有限的有序集</li>
-<li>操作：<ul>
-<li>初始化</li>
-<li>插入</li>
-<li>删除最小的元素</li>
-<li>寻找最小的元素</li>
+<li>Paper: <a href="https://papers.nips.cc/paper_files/paper/2019/hash/093f65e080a295f8076b1c5722a46aa2-Abstract.html">GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism</a></li>
+<li><strong>NeurIPS 2019</strong>: Neural Information Processing Systems 32</li>
+<li>本文中的图片部分来自论文，部分来自<a href="https://zhuanlan.zhihu.com/p/682354879">知乎文章</a>。</li>
 </ul>
-</li>
-</ul>
-<h2 id="_2">简单的实现<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li>数组：<ul>
-<li>插入元素到末尾 <span class="arithmatex">\(\Theta(1)\)</span>  </li>
-<li>找到最大/最小元素 <span class="arithmatex">\(\Theta(n)\)</span>, 删除元素移动数组 <span class="arithmatex">\(O(n)\)</span></li>
-</ul>
-</li>
-<li>链表：<ul>
-<li>插入元素到链表开头 <span class="arithmatex">\(\Theta(1)\)</span></li>
-<li>找到最大/最小元素 <span class="arithmatex">\(\Theta(n)\)</span>, 删除元素 <span class="arithmatex">\(\Theta(1)\)</span> </li>
-</ul>
-</li>
-<li>有序数组：<ul>
-<li>插入 找到合适的位置 <span class="arithmatex">\(O(n)\)</span>, 移动数组并插入元素 <span class="arithmatex">\(O(n)\)</span></li>
-<li>删除开头/末尾元素 <span class="arithmatex">\(\Theta(1)\)</span></li>
-</ul>
-</li>
-<li>有序链表：<ul>
-<li>插入 找到合适的位置 <span class="arithmatex">\(O(n)\)</span>, 插入元素 <span class="arithmatex">\(\Theta(1)\)</span></li>
-<li>删除开头/末尾元素 <span class="arithmatex">\(\Theta(1)\)</span></li>
-</ul>
-</li>
-</ul>
-<h2 id="_3">二叉堆<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="_4">结构性质<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>堆是一棵被完全填满的二叉树，有可能的例外是在底层：底层上的元素从左到右填入。这样的树称为<strong>完全二叉树</strong>。</p>
-<p>一棵高 h 的完全二叉树的节点个数介于 <span class="arithmatex">\(2^h\)</span> 到 <span class="arithmatex">\(2^{h+1}-1\)</span> 之间，即完全二叉树的高度是 <span class="arithmatex">\(\lfloor \log N\rfloor\)</span></p>
-<p>对于下标为 <span class="arithmatex">\(i\)</span> 的元素，其左儿子位于 <span class="arithmatex">\(2i\)</span> 上，右儿子位于 <span class="arithmatex">\(2i+1\)</span> 上，他的父亲位于 <span class="arithmatex">\(\lfloor i/2 \rfloor\)</span> 上。</p>
-<h3 id="_5">堆序性质<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>如果一棵树，每个节点的值都不大于其儿子节点的值，那么这是一棵<strong>小根树</strong>。<strong>小根堆</strong>就是满足小根树性质的完全二叉树。</p>
-<h2 id="_6">基本的堆操作<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<h3 id="_7">插入<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p>对于新的节点，唯一可以放的位置就是下一个空闲位置，否则堆将不再是完全树，但这样可能破坏堆的序，我们一般采用<strong>上浮</strong>的策略。</p>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/* H-&gt;Element[ 0 ] is a sentinel */</span><span class="w"> </span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">void</span><span class="w">  </span><span class="nf">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w">  </span><span class="n">X</span><span class="p">,</span><span class="w">  </span><span class="n">PriorityQueue</span><span class="w">  </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">     </span><span class="kt">int</span><span class="w">  </span><span class="n">i</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">IsFull</span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Priority queue is full&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="k">return</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">     </span><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">     </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="p">;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">];</span><span class="w"> </span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">     </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-<p>注意这里代码实现中，我们没有使用交换操作，因为交换操作的时间成本更高。</p>
-<h3 id="_8">删除最小元<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>我们一般采用<strong>下滤</strong>的策略。删除最小元后，在根节点产生一个空穴。同时堆少了一个元素，我们必须把堆最后一个元素 X 移动到堆的某个地方。从根节点的空穴开始我们将空穴的两个儿子中的较小者移入空穴，这样就把空穴往下推了一层。重复步骤直到 X 可以放入空穴。</p>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">ElementType</span><span class="w">  </span><span class="nf">DeleteMin</span><span class="p">(</span><span class="w"> </span><span class="n">PriorityQueue</span><span class="w">  </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">int</span><span class="w">  </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">Child</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">ElementType</span><span class="w">  </span><span class="n">MinElement</span><span class="p">,</span><span class="w"> </span><span class="n">LastElement</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">IsEmpty</span><span class="p">(</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">         </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Priority queue is empty&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">         </span><span class="k">return</span><span class="w">  </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">];</span><span class="w">   </span><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">MinElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/* save the min element */</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">LastElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="o">--</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/* take last and reset size */</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Child</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/* Find smaller child */</span><span class="w"> </span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">         </span><span class="n">Child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Child</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Size</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">Child</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="n">Child</span><span class="p">])</span><span class="w"> </span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">           </span><span class="n">Child</span><span class="o">++</span><span class="p">;</span><span class="w">     </span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">LastElement</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">Child</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="cm">/* Percolate one level */</span><span class="w"> </span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">           </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">Child</span><span class="w"> </span><span class="p">];</span><span class="w"> </span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">         </span><span class="k">else</span><span class="w">     </span><span class="k">break</span><span class="p">;</span><span class="w">   </span><span class="cm">/* find the proper position */</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Elements</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LastElement</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="k">return</span><span class="w">  </span><span class="n">MinElement</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-
-<h3 id="_9">其他的堆操作<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>需要注意的是，对于小根堆，找除了最小元以外的元素都需要线性搜索整个堆。</p>
-<ul>
-<li><strong><code>DecreaseKey</code></strong><br />
-DecreaseKey(P,<span class="arithmatex">\(\Delta\)</span>,H) 操作降低在位置 P 处的关键字的值。我们需要上滤操作对堆进行调整。</li>
-<li><strong><code>IncreaseKey</code></strong><br />
-IncreaseKey(P,<span class="arithmatex">\(\Delta\)</span>,H) 操作增加在位置 P 处的关键字的值。我们需要下滤操作对堆进行调整。</li>
-<li><strong><code>Delete</code></strong><br />
-Delete(P,H) 操作删除堆中位置 P 上的节点。这个操作首先执行 DecreaseKey(P,<span class="arithmatex">\(\infty\)</span>,H) 再执行 DeleteMin 即可。</li>
-<li><strong><code>BuildHeap</code></strong><br />
-BuildHeap(H) 操作把 N 个关键字作为输出并把它们放在空队中，可以使用 N 个相继的 Insert 操作完成。<br />
-也可以将 N 个关键字以任意顺序放入树中构成一棵完全二叉树，从倒数第二层开始依次 percolate down. 可以证明这时只需要线性的时间复杂度就可以完成树的构建。</li>
-</ul>
-<p><strong>定理</strong>：包含 <span class="arithmatex">\(2^{h+1}-1\)</span> 个节点，高度为 <span class="arithmatex">\(h\)</span> 的理想二叉树，其节点的高度和为 <span class="arithmatex">\(2^{h+1}-1-(h+1)\)</span><br />
-证明：<span class="arithmatex">\(S=\sum\limits_{i=0}^h 2^i(h-i)\)</span><br />
-因此 BuildHeap 的操作是线性的</p>
-<h2 id="d-heaps">d-Heaps<a class="headerlink" href="#d-heaps" title="Permanent link">&para;</a></h2>
-<p>d-堆是二叉堆的推广，所有的节点都有 d 个儿子（因此二叉堆是 2-堆）
-d-堆比二叉堆浅，因此 Insert 操作改进为 <span class="arithmatex">\(O(\log_dN)\)</span> 但对于大的 d, DeleteMin 会花费更多时间，因为我们每层都要找出 d 个儿子中的最小者。这样操作的用时就是 <span class="arithmatex">\(O(d\log_dN)\)</span>。而且当 d 不是 2 的幂次时，找出儿子和父亲会花费更多的时间。</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Priority queue: 优先队列 <br />
-Binary heap: 二叉堆<br />
-堆序: heap order<br />
-上浮：percolate up<br />
-下滤：percolate down  </p>
 </div>
+<p>本文主要是流水线并行（Pipeline Parallelism），属于模型并行的一种。</p>
+<h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>扩大深度神经网络容量有好处。</li>
+<li>但受到加速器（Google 学者常用加速器这个说法，实际指 GPU、TPU 等设备）的内存、通信带宽的限制。</li>
+<li>要把模型拓展到多个加速器上，需要特定的算法或者架构，这些解决方法一般是架构相关的，不能很好地拓展到其他任务。</li>
+<li>为了实现高效、任务无关的模型并行，论文提出了 GPipe，其中使用了 batch-splitting、re-materialization 等技术。</li>
+<li>GPipe 可以实现近似线性的加速，在图像分类和语言模型任务上都有很好的效果。</li>
+</ul>
+<!-- 有局限性，DP MP 就是一个算法，理论上对于任何神经网络都可以用。只是需要换一下具体实现 -->
+
+<!-- 机器学习系统的文章，自己提出一个更大的任务，同时要说明这个任务是有意义的（更大的模型效果更好），而不是简单的放大任务 -->
+
+<h2 id="_2">算法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>GPipe 在 Lingvo 框架上实现，可以搬到其他框架。（类似地，同样的算法可以搬到其他框架上，实现不同）</p>
+<p>Lingvo：可重复性。对于同样的代码，不同人跑可以得到相同的结果。把所有超参数、数据集都写在代码里。整个任务就是一个巨大的词典。（Caffee）</p>
+<div class="admonition info">
+<p class="admonition-title">Notation in this paper</p>
+<p>假设深度神经网络表示为 <span class="arithmatex">\(L\)</span> 层序列。给定分区数 <span class="arithmatex">\(K\)</span>，我们把网络切成 <span class="arithmatex">\(K\)</span> 块（子序列、单元）。第 <span class="arithmatex">\(i\)</span> 层的前向计算函数记为 <span class="arithmatex">\(f_i\)</span>，该层所有参数的集合记为 <span class="arithmatex">\(w_i\)</span>，损失函数记为 <span class="arithmatex">\(c_i\)</span>。第 <span class="arithmatex">\(k\)</span> 个单元放在第 <span class="arithmatex">\(k\)</span> 个加速器上。</p>
+<p>假设从 <span class="arithmatex">\(i\)</span> 层到第 <span class="arithmatex">\(j\)</span> 层都放在第 <span class="arithmatex">\(k\)</span> 个单元里，那么 <span class="arithmatex">\(p_k=w_i\cup w_{i+1}\cup \ldots\cup w_j\)</span>，<span class="arithmatex">\(F_k=f_j\circ\ldots \circ f_{i+1}\circ f_i\)</span>，<span class="arithmatex">\(C_k=\sum\limits_{l=i}^j c_l\)</span>，<span class="arithmatex">\(B_k\)</span> 表示后向传播的函数，可以通过对 <span class="arithmatex">\(F_k\)</span> 自动求导得到。 </p>
+<p>一个小批量（mini-batch）的大小为 <span class="arithmatex">\(N\)</span>，在 GPipe 算法里我们把一个小批量分为 <span class="arithmatex">\(M\)</span> 个微批量（micro-batch）。</p>
+</div>
+<h3 id="_3">模型并行<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>朴素的模型并行性能不是很好，如下图：</p>
+<div align=center>
+<img src="https://cdn.hobbitqia.cc/20240220234217.png" style="float: middle;" width=20%>
+<img src="https://cdn.hobbitqia.cc/20240220234227.png" style="float: middle;" width=40%>
+</div>
+<!-- <table cellspacing="0" rules=none><tr>
+<td><img src=https://cdn.hobbitqia.cc/20240220234217.png ></td>
+<td><img src=https://cdn.hobbitqia.cc/20240220234227.png ></td>
+</tr></table> -->
+
+<p>存在下面的问题：</p>
+<ul>
+<li>GPU 利用度不够。因为 GPU 0 计算时，GPU 1 2 3 都在等待。这也导致模型并行的计算时间和在单 GPU 上计算的时间是一样的。</li>
+<li>中间结果占据大量内存。</li>
+</ul>
+<h3 id="-batch-splitting">流水线并行 - batch-splitting<a class="headerlink" href="#-batch-splitting" title="Permanent link">&para;</a></h3>
+<p>思路：将每个原始 batch（论文中称为 mini-batch）切分为多个 micro-batch，然后依次送进 GPU 中进行流水线执行。</p>
+<p>图例如下：</p>
+<div align=center><img src = "https://cdn.hobbitqia.cc/20240220234320.png" width =65%></div>
+
+<p>这样在 GPU0 的第 0 个 micro-batch 执行完时，GPU1 就可以根据 GPU0 的输出开始执行第 0 个 micro-batch。这样同时可以有多个 GPU 在执行不同的 micro-batch，从而提高了并行度。（类似于数据并行的思想，切数据可以提高并行度，因为数据之间是没有相互依赖关系的）</p>
+<p>这里存在空闲的时间，即有 GPU 没有投入运算的时间，称为 bubble。然而只要切块足够多 bubble 的影响就可以降到足够低。论文提到 bubble 时间为 <span class="arithmatex">\(O(\dfrac{K-1}{M+K-1})\)</span>，单位是单个 micro-batch 的执行时间。当 <span class="arithmatex">\(M\geq 4\times K\)</span> 时气泡的时间可以忽略不计。</p>
+<p>在 micro-batch 的划分下，我们在计算 Batch Normalization 时会有影响。GPipe 的方法是，在训练时计算和运用的是 micro-batch 里的均值和方差，但同时持续追踪全部 mini-batch 的移动均值和方差，以便在测试阶段进行使用。Layer Normalization 则不受影响。</p>
+<h3 id="-re-materializationactive-checkpoint">流水线并行 - re-materialization(active checkpoint)<a class="headerlink" href="#-re-materializationactive-checkpoint" title="Permanent link">&para;</a></h3>
+<p>激活内存 activation 消耗了很多显存，因此论文采取了用计算换取空间的做法，提出了 re-materialization（也被称为 active checkpoint），即只存划分边界输出的激活值（即每个微批量的输出，这个值会被复制到下一个 GPU 的对应微批量作为输入），其他内容都不存，计算梯度时，再重新计算这些中间结果。</p>
+<div class="admonition note">
+<p class="admonition-title">activation</p>
+<p><div align=center><img src = "https://cdn.hobbitqia.cc/20240219162120.png" width =40%></div></p>
+<p>可以看到，<span class="arithmatex">\(z\)</span> 是前向计算的中间结果，但是在反向计算梯度时，我们要计算 <span class="arithmatex">\(\dfrac{\partial \sigma(z)}{\partial z}\)</span>，这里可能需要 <span class="arithmatex">\(z\)</span> 的值。因此朴素的做法是存储所有中间结果，以便反向计算时用到。</p>
+<p>然而存储激活值是非常消耗显存的，这里的 <span class="arithmatex">\(z\)</span> 是 <span class="arithmatex">\(n\times d\)</span> 大小的，其中 <span class="arithmatex">\(n\)</span> 是批量大小，<span class="arithmatex">\(d\)</span> 是隐藏层大小。假设有 <span class="arithmatex">\(l\)</span> 层，那么激活内存的空间复杂度为 <span class="arithmatex">\(O(ndl)\)</span>，可能会很大。</p>
+</div>
+<p>因此在 GPipe 中，我们只存每一个 micro-batch 的输入。每个 GPU 内的数据流如下：</p>
+<div align=center><img src = "https://pic1.zhimg.com/80/v2-1cd939b75ed64cbdfe2200109afe4ba8_1440w.webp" width =50%></div>
+
+<h3 id="_4">分析<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>这里我们讨论单个 GPU 的空间复杂度。每块 GPU 峰值时刻存储大小 = 每块 GPU 上的输入数据大小 + 每块 GPU 在 backward 过程中的中间结果大小。</p>
+<ul>
+<li>
+<p>如果不使用 batch-splitting 和 re-materialization，空间复杂度为 <span class="arithmatex">\(O(N\times \dfrac{L}{K} \times d)\)</span>。</p>
+</li>
+<li>
+<p>GPipe 的空间复杂度：</p>
+<ul>
+<li>对于每个 micro-batch 的数据流，要保存其输入。一块 GPU 总共要保存的输入就是一个 mini-batch，大小为 <span class="arithmatex">\(N\)</span>。</li>
+<li>每个 micro-batch 是流水线形式进来的，算完一个 micro-batch 才算下一个。在计算一个 micro-batch 梯度的过程中，我们会产生中间变量（重算导致的），大小为 <span class="arithmatex">\(\dfrac{N}{M}\times \dfrac{L}{K} \times d\)</span>。</li>
+<li>因此每块 GPU 的空间复杂度为 <span class="arithmatex">\(O(N+\dfrac{N}{M}\times \dfrac{L}{K} \times d)\)</span>。</li>
+</ul>
+</li>
+</ul>
+<p>除此之外，切分模型时要考虑到负载均衡，某个 GPU 上的计算如果很难，可能会拖慢整个流水线。</p>
+<h2 id="_5">实验<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>论文中介绍了 GPipe 跑 AmoebaNet 变形虫、Transformer 模型的实验。</p>
+<ul>
+<li>
+<p>模型参数</p>
+<p><div align=center><img src = "https://cdn.hobbitqia.cc/20240220230927.png" width =40%></div></p>
+<p>可以看到使用流水线并行后，能够放下的模型参数变大了。但是因为变形虫模型我们无法均匀切割，因此会有负载均衡的问题，可以看到加速效果达不到线性；transformer 的模型较为均匀，因此能够支持的参数比例和使用的 GPU 数是一个近似线性的增长。。</p>
+</li>
+<li>
+<p>训练速度</p>
+<p><div align=center><img src = "https://cdn.hobbitqia.cc/20240220231322.png" width =40%></div></p>
+<p>使用不同数量的 GPU（K）和不同的 micro-batch 数量（M）进行训练，可以看到 GPipe 的训练速度是近似线性的。可以看到 M=32 时训练速度显著提高，也是近似线性的加速。</p>
+</li>
+<li>
+<p>GPipe 的时间消耗占比</p>
+<p><div align=center><img src = "https://cdn.hobbitqia.cc/20240220232655.png" width =40%></div></p>
+<p>每块 GPU 大约 &#8532; 的时间是在做真正有效的计算，其余 &#8531; 里的大部分时间是在重算（re-materialization）。bubble 相比之下是很小的。</p>
+</li>
+<li>
+<p>此外论文还贴出了在没有高速互连的 GPU 上使用 GPipe 的归一化训练吞吐量，以此来说明：用慢的通信，也可以达到很好的增速，进而证明 GPipe 的算法的通讯量并不大。</p>
+</li>
+</ul>
+<!-- 用最慢的通道，也可以达到很好的增速。说明通讯量不是很多。不是很实际， -->
+<!-- 之前的结果有一定误导性：不能和别人比加速比，只能和自己比（因为用了 re-materialization），于是放了个图（table 4） -->
+
+<h2 id="_6">结论和讨论<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>论文第六部分讨论了不同的切法，适合不同的模型、系统。并在结论部分提出了论文的贡献：</p>
+<ul>
+<li>性能 efficiency：近似线性提速。</li>
+<li>flexibility 灵活性：不依赖于某个特定的架构。</li>
+<li>reliability 可靠性：同步更新，相比之下 PipeDram 是异步。</li>
+</ul>
+<p>个人的评论如下：（结合了部分其他人的评论）</p>
+<ul>
+<li>本文投在 2019 NeurIPS 上，偏算法，近年也有系统。单栏且最多 8 页。因此 NeurIPS 上系统的文章相对比较简单，写的系统味不能很足（reviewer 不一定有足够的相关背景）。相比之下同年 SOSP 的 PipeDram 的思路和 GPipe 类似，但是做了一个更大的系统，涉及到的部分更多。有趣的是最后 GPipe 的引用数更多，一定程度上说明大家更偏好这样简单、直接的算法文章。</li>
+<li>机器学习系统的文章，自己提出一个更大的任务，同时要说明这个任务是有意义的（更大的模型效果更好），而不是简单的放大任务。</li>
+<li>论文里说之前工作提出的方法，大多基于特定架构。但实际上本文也是基于 Lingvo 框架的，只是说可以把算法思路拓展到其他模型上。但是像 DP、MP 就是一个算法，理论上对于任何神经网络都可以用，只是需要换一下具体实现。这些工作其实本质和本论文的 GPipe 是一致的。就此说别人的方法是基于特定架构，略有偏颇。</li>
+<li>局限性的地方也可以是特性。可以看到在最后贡献这里论文提到了同步更新，这样其实会带来效率较低的问题。但同时同步更新可以让通信量减少，因此这个点即是局限性也是特性。Every coin has two sides.</li>
+<li>虽然论文说 GPipe 的性能很好，但实际上这些加速比都是和自己模型相比的，并没有在相同问题上和现在 SOTA 算法比性能。这是因为 GPipe 本身用更多的计算量换取了更多的空间，这也导致很难和其他算法比较。为此论文取巧的地方分析了训练时间的比例，让实验部分更加完整。</li>
+</ul>
+<!-- * 虽然论文证明了用很慢的通信也可以达到很好的加速，但这个实验并不是很实际。因为在实际的训练中肯定是有相对较好的 -->
+
+<!-- PipeDram <-> GPipe -->
+
+<h2 id="_7">参考资料<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1v34y1E7zu/?spm_id_from=333.999.0.0&amp;vd_source=42ff0a2bcd6c17897aa255997a3011c5">Mu Li 的 b 站视频“GPipe论文精读”</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/682354879">知乎文章“[ LLM 分布式训练系列 02 ] 流水线并行（Pipeline Parallelism）- GPipe”</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/613196255">知乎文章“流水线并行（Pipeline Parallelism），以Gpipe为例”</a></li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:06:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月21日 00:07:04</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月22日 14:15:00</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月21日 00:07:04</span>
       
     
   </small>
