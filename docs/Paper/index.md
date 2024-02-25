@@ -7,3 +7,4 @@
 * [ZeRO: Memory Optimizations Toward Training Trillion Parameter Models](ZeRO.md)
 * [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](Megatron-LM.md)
 * [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](GPipe.md)
+* [Mixed Precision Training](mixed_precision.md)

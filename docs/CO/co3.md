@@ -110,8 +110,9 @@ Dividend (被除数) $\div$ Divisor (除数)
         <div align=center> <img src="http://cdn.hobbitqia.cc/202303102256325.png" width = 60%/> </div>  
 
 * 除数不动，被除数不停地往左移。减到最后一次，如果是小于 0 的，说明不用减了，剩下的就是余数，需要右移移回来。（即将左半部分右移一位）    
-因为每次都是将除数和被除数最高位减，减了之后高位就没用了，可以移出去。  
-<div align=center> <img src="http://cdn.hobbitqia.cc/202303102259194.png" width = 60%/> </div>
+
+    因为每次都是将除数和被除数最高位减，减了之后高位就没用了，可以移出去。  
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202303102259194.png" width = 60%/> </div>
     
     实际上这里结果是 129 位，防止 carry 丢失
 
@@ -127,7 +128,7 @@ Dividend (被除数) $\div$ Divisor (除数)
 
 ## Floating point number
 
-可见 [ICS Notes](https://note.hobbitqia.cc/ICS/ICS-2/#floating-point)  
+<!-- 可见 [ICS Notes](https://note.hobbitqia.cc/ICS/ICS-2/#floating-point)   -->
 
 |       | S |   exp   |     frac     |
 |:------|---|---------|-----------: |
@@ -140,12 +141,23 @@ Normalized form: $N=(-1)^S\times M\times 2^E$
 * M: 尾数. Normally, $M=1.frac=1+frac$.
 * E: 阶码. Normally, $E=exp-Bias$ where $Bias=127$ for floating point numbers. $Bias = 1023$ for double. 
 
+!!! Note
+    * 为什么要把 exponent 放在前面？（因为数的大小主要由 exponent 决定。）
+    * 为什么需要 Bias？（移码） 
+    * 以上是规格化数，尾数前应该有前导 1. 非规格化数的格式见[这里](https://note.hobbitqia.cc/CO/co3/#denormal-numbers)。
 
-为什么要把 exponent 放在前面？  
-因为数的大小主要由 exponent 决定。  
-为什么需要 Bias -> 移码 
+### Denormal Numbers
 
-不要忘了前导 1
+* $Exponent=000\ldots 0$   
+非规格化数，让数在较小时能逐渐下溢出。    
+$x=(-1)^s\times((0+Fraction)\times 2^{1-Bias})$  
+**注意此时指数是 $1-Bias=-126/-1022$**.   
+    * Denormal with $Fraction = 000...0$ we define $x=0$
+* $Exponent=111\ldots 1, Fraction=000\ldots 0$   
+表示 $\pm \inf$  
+* $Exponent=111\ldots 1, Fraction\neq 000\ldots 0$ 
+表示 *NaN* (Not-a-Number)  
+<div align=center> <img src="http://cdn.hobbitqia.cc/202303081154192.png" width = 60%/> </div>   
 
 ### Precision
 
@@ -158,19 +170,6 @@ $52\times \log_{10}{2}\approx 52\times 0.3 \approx 16$ demical digits of preicsi
 
 * Overflow: The number is too big to be represented
 * Underflow: The number is too small to be represented
-
-### Denormal Numbers
-
-* $Exponent=000\ldots 0$   
-非规格化数，让数在较小时能逐渐下溢出。    
-$x=(-1)^s\times((0+Fraction)\times 2^{1-Bias})$  
-注意此时指数是 $1-Bias=-126/-1022$.   
-    * Denormal with $Fraction = 000...0$ we define $x=0$
-* $Exponent=111\ldots 1, Fraction=000\ldots 0$   
-表示 $\pm \inf$  
-* $Exponent=111\ldots 1, Fraction\neq 000\ldots 0$ 
-表示 *NaN* (Not-a-Number)  
-<div align=center> <img src="http://cdn.hobbitqia.cc/202303081154192.png" width = 60%/> </div>   
 
 ### Floating-Point Addition
 

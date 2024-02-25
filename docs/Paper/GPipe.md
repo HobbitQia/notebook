@@ -101,19 +101,19 @@ Lingvo：可重复性。对于同样的代码，不同人跑可以得到相同�
 
 * 模型参数
 
-    <div align=center><img src = "https://cdn.hobbitqia.cc/20240220230927.png" width =40%></div>
+    <div align=center><img src = "https://cdn.hobbitqia.cc/20240220230927.png" width =50%></div>
 
     可以看到使用流水线并行后，能够放下的模型参数变大了。但是因为变形虫模型我们无法均匀切割，因此会有负载均衡的问题，可以看到加速效果达不到线性；transformer 的模型较为均匀，因此能够支持的参数比例和使用的 GPU 数是一个近似线性的增长。。
 
 * 训练速度
 
-    <div align=center><img src = "https://cdn.hobbitqia.cc/20240220231322.png" width =40%></div>
+    <div align=center><img src = "https://cdn.hobbitqia.cc/20240220231322.png" width =50%></div>
     
     使用不同数量的 GPU（K）和不同的 micro-batch 数量（M）进行训练，可以看到 GPipe 的训练速度是近似线性的。可以看到 M=32 时训练速度显著提高，也是近似线性的加速。
 
 * GPipe 的时间消耗占比
 
-    <div align=center><img src = "https://cdn.hobbitqia.cc/20240220232655.png" width =40%></div>
+    <div align=center><img src = "https://cdn.hobbitqia.cc/20240220232655.png" width =50%></div>
 
     每块 GPU 大约 2/3 的时间是在做真正有效的计算，其余 1/3 里的大部分时间是在重算（re-materialization）。bubble 相比之下是很小的。
 
