@@ -2960,6 +2960,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#denormal-numbers" class="md-nav__link">
+    Denormal Numbers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#precision" class="md-nav__link">
     Precision
   </a>
@@ -2969,13 +2976,6 @@
           <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
     Limitations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#denormal-numbers" class="md-nav__link">
-    Denormal Numbers
   </a>
   
 </li>
@@ -3843,6 +3843,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -3952,6 +3954,26 @@
   
   <span class="md-ellipsis">
     GPipe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Paper/mixed_precision/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    混合精度训练
   </span>
   
 
@@ -4224,6 +4246,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#denormal-numbers" class="md-nav__link">
+    Denormal Numbers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#precision" class="md-nav__link">
     Precision
   </a>
@@ -4233,13 +4262,6 @@
           <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
     Limitations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#denormal-numbers" class="md-nav__link">
-    Denormal Numbers
   </a>
   
 </li>
@@ -4396,25 +4418,24 @@
 </details>
 </li>
 <li>
-<p>除数不动，被除数不停地往左移。减到最后一次，如果是小于 0 的，说明不用减了，剩下的就是余数，需要右移移回来。（即将左半部分右移一位）  <br />
-因为每次都是将除数和被除数最高位减，减了之后高位就没用了，可以移出去。  </p>
+<p>除数不动，被除数不停地往左移。减到最后一次，如果是小于 0 的，说明不用减了，剩下的就是余数，需要右移移回来。（即将左半部分右移一位）    </p>
+<p>因为每次都是将除数和被除数最高位减，减了之后高位就没用了，可以移出去。<br />
+<div align=center> <img src="http://cdn.hobbitqia.cc/202303102259194.png" width = 60%/> </div></p>
+<p>实际上这里结果是 129 位，防止 carry 丢失</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303102303764.png" width = 60%/> </div></p>
+<p>这里最开始余数就是整个被除数。 <br />
+类似乘法，这里的除数只和被除数的高位相减。如果减出来是负数，需要加回去。每次减完之后先左移，然后最右边的一位放商。 <br />
+4.1 时其实我们已经结束了除法操作，此时的高位就是我们的余数，但是这最后一次的结果还没有放回到 Reminder 中，因此我们需要再往左移一位为商留出空间，放入后，再把高位余数往右移动以抵消影响。（个人认为可以直接对低位左移一位即可）</p>
+</details>
 </li>
 </ul>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202303102259194.png" width = 60%/> </div>
-
-<div class="highlight"><pre><span></span><code>实际上这里结果是 129 位，防止 carry 丢失
-
-??? Example
-    &lt;div align=center&gt; &lt;img src=&quot;http://cdn.hobbitqia.cc/202303102303764.png&quot; width = 60%/&gt; &lt;/div&gt;
-
-    这里最开始余数就是整个被除数。   
-    类似乘法，这里的除数只和被除数的高位相减。如果减出来是负数，需要加回去。每次减完之后先左移，然后最右边的一位放商。   
-    4.1 时其实我们已经结束了除法操作，此时的高位就是我们的余数，但是这最后一次的结果还没有放回到 Reminder 中，因此我们需要再往左移一位为商留出空间，放入后，再把高位余数往右移动以抵消影响。（个人认为可以直接对低位左移一位即可）
-</code></pre></div>
 <p>带符号的除法：要求余数和被除数符号相同。<br />
 除零会产生溢出，由软件检测。</p>
 <h2 id="floating-point-number">Floating point number<a class="headerlink" href="#floating-point-number" title="Permanent link">&para;</a></h2>
-<p>可见 <a href="https://note.hobbitqia.cc/ICS/ICS-2/#floating-point">ICS Notes</a>  </p>
+<!-- 可见 [ICS Notes](https://note.hobbitqia.cc/ICS/ICS-2/#floating-point)   -->
+
 <table>
 <thead>
 <tr>
@@ -4445,10 +4466,30 @@
 <li>M: 尾数. Normally, <span class="arithmatex">\(M=1.frac=1+frac\)</span>.</li>
 <li>E: 阶码. Normally, <span class="arithmatex">\(E=exp-Bias\)</span> where <span class="arithmatex">\(Bias=127\)</span> for floating point numbers. <span class="arithmatex">\(Bias = 1023\)</span> for double. </li>
 </ul>
-<p>为什么要把 exponent 放在前面？<br />
-因为数的大小主要由 exponent 决定。<br />
-为什么需要 Bias -&gt; 移码 </p>
-<p>不要忘了前导 1</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>为什么要把 exponent 放在前面？（因为数的大小主要由 exponent 决定。）</li>
+<li>为什么需要 Bias？（移码） </li>
+<li>以上是规格化数，尾数前应该有前导 1. 非规格化数的格式见<a href="https://note.hobbitqia.cc/CO/co3/#denormal-numbers">这里</a>。</li>
+</ul>
+</div>
+<h3 id="denormal-numbers">Denormal Numbers<a class="headerlink" href="#denormal-numbers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(Exponent=000\ldots 0\)</span> <br />
+非规格化数，让数在较小时能逐渐下溢出。  <br />
+<span class="arithmatex">\(x=(-1)^s\times((0+Fraction)\times 2^{1-Bias})\)</span><br />
+<strong>注意此时指数是 <span class="arithmatex">\(1-Bias=-126/-1022\)</span></strong>.   <ul>
+<li>Denormal with <span class="arithmatex">\(Fraction = 000...0\)</span> we define <span class="arithmatex">\(x=0\)</span></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(Exponent=111\ldots 1, Fraction=000\ldots 0\)</span> <br />
+表示 <span class="arithmatex">\(\pm \inf\)</span>  </li>
+<li><span class="arithmatex">\(Exponent=111\ldots 1, Fraction\neq 000\ldots 0\)</span> 
+表示 <em>NaN</em> (Not-a-Number)  </li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202303081154192.png" width = 60%/> </div>
+
 <h3 id="precision">Precision<a class="headerlink" href="#precision" title="Permanent link">&para;</a></h3>
 <ul>
 <li>signle: approx <span class="arithmatex">\(2^{-23}\)</span> <br />
@@ -4461,22 +4502,6 @@
 <li>Overflow: The number is too big to be represented</li>
 <li>Underflow: The number is too small to be represented</li>
 </ul>
-<h3 id="denormal-numbers">Denormal Numbers<a class="headerlink" href="#denormal-numbers" title="Permanent link">&para;</a></h3>
-<ul>
-<li><span class="arithmatex">\(Exponent=000\ldots 0\)</span> <br />
-非规格化数，让数在较小时能逐渐下溢出。  <br />
-<span class="arithmatex">\(x=(-1)^s\times((0+Fraction)\times 2^{1-Bias})\)</span><br />
-注意此时指数是 <span class="arithmatex">\(1-Bias=-126/-1022\)</span>.   <ul>
-<li>Denormal with <span class="arithmatex">\(Fraction = 000...0\)</span> we define <span class="arithmatex">\(x=0\)</span></li>
-</ul>
-</li>
-<li><span class="arithmatex">\(Exponent=111\ldots 1, Fraction=000\ldots 0\)</span> <br />
-表示 <span class="arithmatex">\(\pm \inf\)</span>  </li>
-<li><span class="arithmatex">\(Exponent=111\ldots 1, Fraction\neq 000\ldots 0\)</span> 
-表示 <em>NaN</em> (Not-a-Number)  </li>
-</ul>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202303081154192.png" width = 60%/> </div>
-
 <h3 id="floating-point-addition">Floating-Point Addition<a class="headerlink" href="#floating-point-addition" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
@@ -4557,7 +4582,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年6月23日 23:23:21</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月25日 16:51:03</span>
       
         <br>
         创建日期:

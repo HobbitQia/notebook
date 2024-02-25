@@ -1,4 +1,11 @@
 - "2024":
+  - "2024-2-25":
+    - pageupdate:
+        text: System > 计算机组成与设计
+        href: /CO/co3
+    - newpage:
+        text: Papers > 混合精度训练
+        href: /Paper/mixed_preicison
   - "2024-2-21":
     - newpage:
         text: Papers > GPipe
