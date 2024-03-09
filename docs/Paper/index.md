@@ -8,3 +8,4 @@
 * [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](Megatron-LM.md)
 * [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](GPipe.md)
 * [Mixed Precision Training](mixed_precision.md)
+* [FAST: DNN Training Under Variable Precision Block Floating Point with Stochastic Rounding](FAST.md)
