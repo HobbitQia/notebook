@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-3-9":
+    - newpage:
+        text: Papers > FAST
+        href: /Paper/FAST
   - "2024-2-25":
     - pageupdate:
         text: System > 计算机组成与设计
