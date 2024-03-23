@@ -236,6 +236,14 @@ nav:
       - I/O 系统: OS/chap11.md
       - 文件系统接口: OS/chap12.md
       - 文件系统实现: OS/chap13.md
+  - AI:
+    - Deep Learning: 
+      - DL/index.md
+      - 图像分类: DL/lec01.md
+      - 线性分类器: DL/lec02.md
+      - 优化: DL/lec03.md
+      - 神经网络: DL/lec04.md
+      - 反向传播: DL/lec05.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
@@ -253,5 +261,6 @@ nav:
   - Miscellaneous:
     - Misc/index.md
     - 浮点数与定点数: Misc/float.md
+    - FPGA Programming: Misc/fpga.md
     - Android:
       - 触控事件的数据流: android/dataflow.md
