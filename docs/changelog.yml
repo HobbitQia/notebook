@@ -1,9 +1,19 @@
 - "2024":
+  - "2024-3-29":
+    - newpage:
+        text: System > 编译原理
+        href: /Compiler/index
+    - newpage:
+        text: AI > Deep Learning > 卷积神经网络
+        href: /DL/lec06
+    - newpage:
+        text: AI > Deep Learning > CNN 架构
+        href: /DL/lec07
   - "2024-3-23":
     - refactor: 新增了 AI 页面！
     - newpage:
         text: AI > Deep Learning
-        href: /AI/DL
+        href: /DL/index
     - newpage:
         text: Miscellaneous > FPGA
         href: /Misc/fpga

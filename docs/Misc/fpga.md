@@ -7,7 +7,7 @@ counter: True
 !!! Abstract
     用来记录在 FPGA 编程和开发中遇到的问题和解决方案，以及一些小 tips。
 
-    * 特别鸣谢：[张杰学长](github.com/carlzhang4)
+    * 特别鸣谢：[张杰学长](https://github.com/carlzhang4)
     * 主要使用的开发语言为 Chisel、Verilog，开发平台为 Xilinx Vivado.
     * 相关代码来自 [RC4ML](https://github.com/RC4ML) 的私有仓库，以及本人在 FPGA 编程中书写的代码。
 
