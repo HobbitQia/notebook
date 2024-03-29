@@ -10,28 +10,24 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/DL/lec06/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/Compiler/">
       
       
-        <link rel="prev" href="../lec05/">
       
       
-        <link rel="next" href="../lec07/">
-      
-      
-      <link rel="icon" href="../../log.ico">
+      <link rel="icon" href="../log.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
     
     
       
-        <title>卷积神经网络 - HobbitQia的笔记本</title>
+        <title>编译原理 - HobbitQia的笔记本</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.30068a00.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.30068a00.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -50,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../../css/timeline.css">
+      <link rel="stylesheet" href="../css/timeline.css">
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
     
@@ -58,17 +54,17 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../css/custom.css">
     
-      <link rel="stylesheet" href="../../css/card.css">
+      <link rel="stylesheet" href="../css/card.css">
     
-      <link rel="stylesheet" href="../../css/tasklist.css">
+      <link rel="stylesheet" href="../css/tasklist.css">
     
-      <link rel="stylesheet" href="../../css/flink.css">
+      <link rel="stylesheet" href="../css/flink.css">
     
-      <link rel="stylesheet" href="../../css/more_changelog.css">
+      <link rel="stylesheet" href="../css/more_changelog.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -97,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#convolutional-networks" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -111,9 +107,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href=".." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../../log.ico" alt="logo">
+  <img src="../log.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -130,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              卷积神经网络
+              编译原理
             
           </span>
         </div>
@@ -236,7 +232,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href=".." class="md-tabs__link">
           
   
     
@@ -262,7 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ds/" class="md-tabs__link">
+        <a href="../ds/" class="md-tabs__link">
           
   
     
@@ -291,7 +287,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ICS/" class="md-tabs__link">
+        <a href="../ICS/" class="md-tabs__link">
           
   
     
@@ -310,21 +306,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../DL/" class="md-tabs__link">
           
   
     
@@ -353,7 +345,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
+        <a href="../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
           
   
     
@@ -376,7 +368,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Paper/" class="md-tabs__link">
+        <a href="../Paper/" class="md-tabs__link">
           
   
     
@@ -396,7 +388,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Misc/" class="md-tabs__link">
+        <a href="../Misc/" class="md-tabs__link">
           
   
     
@@ -431,9 +423,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href=".." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../../log.ico" alt="logo">
+  <img src="../log.ico" alt="logo">
 
     </a>
     HobbitQia的笔记本
@@ -482,7 +474,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../.." class="md-nav__link ">
+            <a href=".." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -513,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../changelog/" class="md-nav__link">
+      <a href="../changelog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../link/" class="md-nav__link">
+      <a href="../link/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -643,7 +635,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ds/" class="md-nav__link ">
+            <a href="../ds/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -674,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/algorithm/" class="md-nav__link">
+      <a href="../ds/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -694,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/tree/" class="md-nav__link">
+      <a href="../ds/tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -714,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/heap/" class="md-nav__link">
+      <a href="../ds/heap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/set/" class="md-nav__link">
+      <a href="../ds/set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -754,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/graph/" class="md-nav__link">
+      <a href="../ds/graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/sort/" class="md-nav__link">
+      <a href="../ds/sort/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -794,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/hash/" class="md-nav__link">
+      <a href="../ds/hash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,7 +833,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ADS/" class="md-nav__link ">
+            <a href="../ADS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -917,7 +909,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../dip/" class="md-nav__link ">
+            <a href="../dip/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -948,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip1/" class="md-nav__link">
+      <a href="../dip/dip1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -968,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip2/" class="md-nav__link">
+      <a href="../dip/dip2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip3/" class="md-nav__link">
+      <a href="../dip/dip3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1008,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip5/" class="md-nav__link">
+      <a href="../dip/dip5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1028,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip6/" class="md-nav__link">
+      <a href="../dip/dip6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1048,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip7/" class="md-nav__link">
+      <a href="../dip/dip7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1068,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip8/" class="md-nav__link">
+      <a href="../dip/dip8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1088,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip9/" class="md-nav__link">
+      <a href="../dip/dip9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1108,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip10/" class="md-nav__link">
+      <a href="../dip/dip10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1128,7 +1120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip11/" class="md-nav__link">
+      <a href="../dip/dip11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1148,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip12/" class="md-nav__link">
+      <a href="../dip/dip12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1219,7 +1211,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../OOP/" class="md-nav__link ">
+            <a href="../OOP/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1250,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop1/" class="md-nav__link">
+      <a href="../OOP/oop1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1270,7 +1262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop2/" class="md-nav__link">
+      <a href="../OOP/oop2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1290,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop3/" class="md-nav__link">
+      <a href="../OOP/oop3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1310,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop4/" class="md-nav__link">
+      <a href="../OOP/oop4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1330,7 +1322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop5/" class="md-nav__link">
+      <a href="../OOP/oop5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1350,7 +1342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop6/" class="md-nav__link">
+      <a href="../OOP/oop6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1370,7 +1362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop7/" class="md-nav__link">
+      <a href="../OOP/oop7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1390,7 +1382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop8/" class="md-nav__link">
+      <a href="../OOP/oop8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1410,7 +1402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop9/" class="md-nav__link">
+      <a href="../OOP/oop9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1430,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop10/" class="md-nav__link">
+      <a href="../OOP/oop10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1450,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop11/" class="md-nav__link">
+      <a href="../OOP/oop11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1470,7 +1462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop12/" class="md-nav__link">
+      <a href="../OOP/oop12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1521,7 +1513,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Quan/" class="md-nav__link ">
+            <a href="../Quan/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1552,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Quan/chap1/" class="md-nav__link">
+      <a href="../Quan/chap1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1572,7 +1564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Quan/chap2/" class="md-nav__link">
+      <a href="../Quan/chap2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1619,7 +1611,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../TCS/" class="md-nav__link ">
+            <a href="../TCS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1673,7 +1665,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AOR/" class="md-nav__link ">
+            <a href="../AOR/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1802,7 +1794,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ICS/" class="md-nav__link ">
+            <a href="../ICS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1833,7 +1825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-1/" class="md-nav__link">
+      <a href="../ICS/ICS-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1853,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-2/" class="md-nav__link">
+      <a href="../ICS/ICS-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1873,7 +1865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-3/" class="md-nav__link">
+      <a href="../ICS/ICS-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1893,7 +1885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-4/" class="md-nav__link">
+      <a href="../ICS/ICS-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1913,7 +1905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-5/" class="md-nav__link">
+      <a href="../ICS/ICS-5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1933,7 +1925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-6/" class="md-nav__link">
+      <a href="../ICS/ICS-6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1953,7 +1945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-7/" class="md-nav__link">
+      <a href="../ICS/ICS-7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1973,7 +1965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-8/" class="md-nav__link">
+      <a href="../ICS/ICS-8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1993,7 +1985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-9/" class="md-nav__link">
+      <a href="../ICS/ICS-9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2067,7 +2059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/5/" class="md-nav__link">
+      <a href="../CSAPP/5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2087,7 +2079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/6/" class="md-nav__link">
+      <a href="../CSAPP/6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2107,7 +2099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/7/" class="md-nav__link">
+      <a href="../CSAPP/7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2127,7 +2119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/8/" class="md-nav__link">
+      <a href="../CSAPP/8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2147,7 +2139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/9/" class="md-nav__link">
+      <a href="../CSAPP/9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2208,7 +2200,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Logic/" class="md-nav__link ">
+            <a href="../Logic/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2239,7 +2231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic01/" class="md-nav__link">
+      <a href="../Logic/logic01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2259,7 +2251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic02/" class="md-nav__link">
+      <a href="../Logic/logic02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2279,7 +2271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic03/" class="md-nav__link">
+      <a href="../Logic/logic03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2299,7 +2291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic04/" class="md-nav__link">
+      <a href="../Logic/logic04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2319,7 +2311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic06/" class="md-nav__link">
+      <a href="../Logic/logic06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2339,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic05/" class="md-nav__link">
+      <a href="../Logic/logic05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2359,7 +2351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic07/" class="md-nav__link">
+      <a href="../Logic/logic07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2436,7 +2428,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../DB/" class="md-nav__link ">
+            <a href="../DB/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2467,7 +2459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db1/" class="md-nav__link">
+      <a href="../DB/db1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2487,7 +2479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db2/" class="md-nav__link">
+      <a href="../DB/db2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2507,7 +2499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db3/" class="md-nav__link">
+      <a href="../DB/db3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2527,7 +2519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db4/" class="md-nav__link">
+      <a href="../DB/db4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2547,7 +2539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db5/" class="md-nav__link">
+      <a href="../DB/db5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2567,7 +2559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db6/" class="md-nav__link">
+      <a href="../DB/db6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2587,7 +2579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db7/" class="md-nav__link">
+      <a href="../DB/db7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2607,7 +2599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db8/" class="md-nav__link">
+      <a href="../DB/db8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2627,7 +2619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db9/" class="md-nav__link">
+      <a href="../DB/db9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2647,7 +2639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db10/" class="md-nav__link">
+      <a href="../DB/db10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2667,7 +2659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db11/" class="md-nav__link">
+      <a href="../DB/db11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2687,7 +2679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db12/" class="md-nav__link">
+      <a href="../DB/db12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2707,7 +2699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db13/" class="md-nav__link">
+      <a href="../DB/db13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2727,7 +2719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db14/" class="md-nav__link">
+      <a href="../DB/db14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2747,7 +2739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db15/" class="md-nav__link">
+      <a href="../DB/db15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2806,7 +2798,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../CO/" class="md-nav__link ">
+            <a href="../CO/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2837,7 +2829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co1/" class="md-nav__link">
+      <a href="../CO/co1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2857,7 +2849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co3/" class="md-nav__link">
+      <a href="../CO/co3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2877,7 +2869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co2/" class="md-nav__link">
+      <a href="../CO/co2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2897,7 +2889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co4/" class="md-nav__link">
+      <a href="../CO/co4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2917,7 +2909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co5/" class="md-nav__link">
+      <a href="../CO/co5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2937,7 +2929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co6/" class="md-nav__link">
+      <a href="../CO/co6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2994,7 +2986,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../CA/" class="md-nav__link ">
+            <a href="../CA/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3025,7 +3017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA1/" class="md-nav__link">
+      <a href="../CA/CA1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3045,7 +3037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA2/" class="md-nav__link">
+      <a href="../CA/CA2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3065,7 +3057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA3/" class="md-nav__link">
+      <a href="../CA/CA3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3085,7 +3077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA4/" class="md-nav__link">
+      <a href="../CA/CA4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3105,7 +3097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA5/" class="md-nav__link">
+      <a href="../CA/CA5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3178,7 +3170,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../OS/" class="md-nav__link ">
+            <a href="../OS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3209,7 +3201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap01/" class="md-nav__link">
+      <a href="../OS/chap01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3229,7 +3221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap02/" class="md-nav__link">
+      <a href="../OS/chap02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3249,7 +3241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap03/" class="md-nav__link">
+      <a href="../OS/chap03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3269,7 +3261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap04/" class="md-nav__link">
+      <a href="../OS/chap04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3289,7 +3281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap05/" class="md-nav__link">
+      <a href="../OS/chap05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3309,7 +3301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap06/" class="md-nav__link">
+      <a href="../OS/chap06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3329,7 +3321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap07/" class="md-nav__link">
+      <a href="../OS/chap07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3349,7 +3341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap08/" class="md-nav__link">
+      <a href="../OS/chap08/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3369,7 +3361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap09/" class="md-nav__link">
+      <a href="../OS/chap09/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3389,7 +3381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap10/" class="md-nav__link">
+      <a href="../OS/chap10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3409,7 +3401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap11/" class="md-nav__link">
+      <a href="../OS/chap11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3429,7 +3421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap12/" class="md-nav__link">
+      <a href="../OS/chap12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3449,7 +3441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap13/" class="md-nav__link">
+      <a href="../OS/chap13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3482,8 +3474,6 @@
       
   
   
-    
-  
   
     
     
@@ -3492,13 +3482,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
@@ -3511,7 +3501,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             AI
@@ -3522,8 +3512,6 @@
                 
   
   
-    
-  
   
     
     
@@ -3548,18 +3536,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../DL/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3575,7 +3563,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             Deep Learning
@@ -3590,7 +3578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lec01/" class="md-nav__link">
+      <a href="../DL/lec01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3610,7 +3598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lec02/" class="md-nav__link">
+      <a href="../DL/lec02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3630,7 +3618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lec03/" class="md-nav__link">
+      <a href="../DL/lec03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3650,7 +3638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lec04/" class="md-nav__link">
+      <a href="../DL/lec04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3670,7 +3658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lec05/" class="md-nav__link">
+      <a href="../DL/lec05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3688,29 +3676,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    卷积神经网络
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../DL/lec06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3719,134 +3687,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#convolution-layers" class="md-nav__link">
-    Convolution layers
-  </a>
-  
-    <nav class="md-nav" aria-label="Convolution layers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stacking-convolutions" class="md-nav__link">
-    Stacking Convolutions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-closer-look-at-spatial-dimensions" class="md-nav__link">
-    A closer look at spatial dimensions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#receptive-fields" class="md-nav__link">
-    Receptive Fields
-  </a>
-  
-    <nav class="md-nav" aria-label="Receptive Fields">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#strided-convolution" class="md-nav__link">
-    Strided Convolution
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-types-of-convolution" class="md-nav__link">
-    Other types of convolution
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pooling-layers" class="md-nav__link">
-    Pooling Layers
-  </a>
-  
-    <nav class="md-nav" aria-label="Pooling Layers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#summary_1" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#convolutional-networks_1" class="md-nav__link">
-    Convolutional Networks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#batch-normalization" class="md-nav__link">
-    Batch Normalization
-  </a>
-  
-    <nav class="md-nav" aria-label="Batch Normalization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#other-normalization" class="md-nav__link">
-    Other Normalization
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3858,7 +3698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lec07/" class="md-nav__link">
+      <a href="../DL/lec07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3971,7 +3811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
+      <a href="../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4039,7 +3879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MLT/report/" class="md-nav__link">
+      <a href="../MLT/report/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4059,7 +3899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MLT/mlt2/" class="md-nav__link">
+      <a href="../MLT/mlt2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4125,7 +3965,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Paper/" class="md-nav__link ">
+            <a href="../Paper/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4156,7 +3996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/BiS-KM/" class="md-nav__link">
+      <a href="../Paper/BiS-KM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4176,7 +4016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/ZeRO/" class="md-nav__link">
+      <a href="../Paper/ZeRO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4196,7 +4036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/Megatron-LM/" class="md-nav__link">
+      <a href="../Paper/Megatron-LM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4216,7 +4056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/GPipe/" class="md-nav__link">
+      <a href="../Paper/GPipe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4236,7 +4076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/mixed_precision/" class="md-nav__link">
+      <a href="../Paper/mixed_precision/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4256,7 +4096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/FAST/" class="md-nav__link">
+      <a href="../Paper/FAST/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4308,7 +4148,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Misc/" class="md-nav__link ">
+            <a href="../Misc/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4339,7 +4179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/float/" class="md-nav__link">
+      <a href="../Misc/float/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4359,7 +4199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/fpga/" class="md-nav__link">
+      <a href="../Misc/fpga/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4417,7 +4257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../android/dataflow/" class="md-nav__link">
+      <a href="../android/dataflow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4466,122 +4306,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#convolution-layers" class="md-nav__link">
-    Convolution layers
-  </a>
-  
-    <nav class="md-nav" aria-label="Convolution layers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stacking-convolutions" class="md-nav__link">
-    Stacking Convolutions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-closer-look-at-spatial-dimensions" class="md-nav__link">
-    A closer look at spatial dimensions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#receptive-fields" class="md-nav__link">
-    Receptive Fields
-  </a>
-  
-    <nav class="md-nav" aria-label="Receptive Fields">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#strided-convolution" class="md-nav__link">
-    Strided Convolution
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-types-of-convolution" class="md-nav__link">
-    Other types of convolution
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pooling-layers" class="md-nav__link">
-    Pooling Layers
-  </a>
-  
-    <nav class="md-nav" aria-label="Pooling Layers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#summary_1" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#convolutional-networks_1" class="md-nav__link">
-    Convolutional Networks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#batch-normalization" class="md-nav__link">
-    Batch Normalization
-  </a>
-  
-    <nav class="md-nav" aria-label="Batch Normalization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#other-normalization" class="md-nav__link">
-    Other Normalization
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -4599,406 +4323,14 @@
   
 
 
-<h1 id="convolutional-networks">Convolutional Networks<a class="headerlink" href="#convolutional-networks" title="Permanent link">&para;</a></h1>
+<h1 id="_1">编译原理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>浙江大学 “编译原理” 课程及相关知识笔记  </p>
 <ul>
-<li>
-<p><strong>Problem</strong>: So far our classifiers don’t respect the spatial structure of images!</p>
-<p>线性归类器、全连接神经网络把输入展开为一维向量可能会破坏空间结构（比如图像）。</p>
-</li>
-<li>
-<p><strong>Solution</strong>: Define new computational nodes that operate on images!</p>
-<p>构造新的运算符。</p>
-</li>
-<li>
-<p>Components of a Convolutional Network
-        <center><br />
-<img alt="Untitled" src="../img2/Untitled.png" width="400" />
-        </center></p>
-<p>下一排的三个操作：卷积层、池化层、归一化层（本节只讨论前向传递）</p>
-</li>
-</ul>
-<h2 id="convolution-layers">Convolution layers<a class="headerlink" href="#convolution-layers" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><strong>Fully-Connected Layer</strong>
-        <center><br />
-<img alt="Untitled" src="../img2/Untitled%201.png" width="400" />
-        </center></p>
-</li>
-<li>
-<p><strong>Convolution Layer</strong></p>
-<p>假设输入是三维的张量，其中 3 is channel (<strong><em>e.g.</em></strong> R G B), 32*32 是高和宽。那么权重矩阵也应该是某种三维的空间结构，有时也称为过滤器。</p>
-<p>Convolve the filter with the image <strong>i.e.</strong> “<em>slide over the image spatially, computing dot products</em>”.</p>
-<ul>
-<li>
-<p>Filters always extend the full depth of the input volume.（？）</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><center>  </p>
-<p><img alt="Untitled" src="../img2/Untitled%202.png" width="450" />
-</center></p>
-</div>
-</li>
-<li>
-<p>the result of taking a dot product between the filter and a small 3x5x5 chunk of the image. (<strong>i.e.</strong> 3*5*5 = 75-dimensional dot product + bias)</p>
-</li>
-<li>
-<p>实际上卷积层总是有一组过滤器，输入图像与不同权重的滤波器进行卷积。</p>
-<p>得到若干个输出平面（也称为 <strong>activation maps 激活图</strong>，每个激活图表示的是输入图像对一个过滤器的响应程度）</p>
-<details class="example">
-<summary>Example</summary>
-<p><center>  </p>
-<p><img alt="Untitled" src="https://cdn.hobbitqia.cc/20240328195159.png" width="450" />
-</center></p>
-<p>我们可以把 6 个滤波器堆叠，形成一个 4 维的滤波器。（6*3*5*5）这里 6 是滤波器的数量，3 是输入图像的通道数，5*5 是滤波器的大小。</p>
-</details>
-</li>
-<li>
-<p>每一个滤波器都有自己的 <strong>bias（标量）</strong>。滤波器与区域做完点积后，再加上 bias。</p>
-</li>
-<li>考虑卷积层输出的另一种方法：得到了 28*28 的 grid，每个位置都是一个 6 维的特征向量</li>
-<li>
-<p>卷积通常在<strong>批量图像</strong>上执行：对一批 3 维图像。</p>
-<ul>
-<li>batch of images: <span class="arithmatex">\(N\times C_{in} \times H \times W\)</span></li>
-<li>filters: <span class="arithmatex">\(C_{out}\times C_{in} \times K_w\times K_h\)</span></li>
-<li>batch of outputs <span class="arithmatex">\(N\times C_{out}\times H^’ \times W^’\)</span></li>
-</ul>
-<p><center>  </p>
-<p><img alt="Untitled" src="../img2/Untitled%203.png" width="450" />
-</center></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="stacking-convolutions">Stacking Convolutions<a class="headerlink" href="#stacking-convolutions" title="Permanent link">&para;</a></h3>
-<details class="example">
-<summary>Example</summary>
-<p>这里我们用 cifar-10 数据集，其中第一层卷积层有 6 个滤波器，每个是 3*5*5 的，3 通道。第二层有 10 个滤波器，每个的深度为 6，窗口大小 3*3。
-<center><br />
-<img alt="Untitled" src="https://cdn.hobbitqia.cc/20240328210255.png" width="450" />
-</center></p>
-</details>
-<ul>
-<li>
-<p>bad thing: What happens if we stack two convolution layers? We get another convolution!</p>
-<p>卷积本质也是线性运算，因此卷积堆叠实际上是另一个卷积，表示能力没有增加。</p>
-</li>
-<li>
-<p>解决方案类似：我们在卷积操作之间添加激活函数 (figure)
-    <center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%204.png" width="450" />
-</center></p>
-<ul>
-<li>第一层卷积神经网络的原理，如何解释？<ul>
-<li>Linear classifier: One template per class</li>
-<li>MLP: Bank of <em>whole-image</em> templates</li>
-<li>
-<p>First-layer conv filters: <strong>local</strong> image templates (Often learns oriented edges, opposing colors)</p>
-<p>卷积神经网络学习到更小的局部模板（不是图像完整大小的）example 如 oriented edge color.</p>
-<details class="example">
-<summary>AlexNet</summary>
-<p><center> </p>
-<p><img alt="Untitled" src="https://cdn.hobbitqia.cc/20240328210741.png" width="350" />
-</center></p>
-<p>在输入图像的每个位置提供了 64 维特征，特征向量的元素对应于输入的相应块和第一层中学习的每个模板的匹配程度。</p>
-</details>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="a-closer-look-at-spatial-dimensions">A closer look at spatial dimensions<a class="headerlink" href="#a-closer-look-at-spatial-dimensions" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>这里我们隐藏 c channel，只考虑 h w 两个维度。例子如下：
-<center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%205.png" width="450" />
-</center></p>
-</div>
-<ul>
-<li>这意味着每次卷积操作，特征图会收缩，这可能限制我们卷积层的深度（层数有上限，否则到最后就消失了）</li>
-<li>
-<p>解决方法：<strong>padding</strong></p>
-<p>如上图，我们在在周围填充（zero padding）使得输出和输入的大小一致。</p>
-<ul>
-<li>padding is simple and work quite well.</li>
-<li><strong>Very common</strong>: Set <span class="arithmatex">\(P = (K – 1) / 2\)</span> to make output have same size as input!（Output <span class="arithmatex">\(W – K + 1 + 2P\)</span>）  </li>
-<li><strong>same padding</strong>: 输入和输出一致，空间大小不会改变。</li>
-<li>卷积网络的参数：滤波器大小、滤波器数量、填充量。</li>
-</ul>
-</li>
-</ul>
-<h3 id="receptive-fields">Receptive Fields<a class="headerlink" href="#receptive-fields" title="Permanent link">&para;</a></h3>
-<ul>
-<li>另一种考虑卷积正在做什么：<strong>Receptive Fields 感受野</strong>。</li>
-<li>
-<p>定义: For convolution with kernel size <span class="arithmatex">\(K\)</span>, each element in the output depends on a <span class="arithmatex">\(K \times K\)</span> receptive field in the input.</p>
-<p>每个空间位置的输出图像取决于输入图像的局部区域，比如这里只取决于 3*3 ，这称为它的感受野。
-<center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%206.png" width="350" />
-</center></p>
-</li>
-<li>
-<p><strong>Problem</strong>: For large images we need many layers for each output to “see” the whole image image.</p>
-<ul>
-<li>
-<p>Each successive convolution adds K – 1 to the receptive field size With L layers the receptive field size is 1 + L * (K – 1).</p>
-<p>堆叠卷积层时，输入中的有效感受野会随着我们添加卷积层的数量线性增长。</p>
-<p>比如经过 2 个 3<em>3 卷积核之后，每个值的输出取决于原始图像 5</em>5 的区域。</p>
-<details class="example">
-<summary>Problem: Large images</summary>
-<p><center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%207.png" width="400" />
-</center></p>
-</details>
-</li>
-<li>
-<p>假设我们要处理高分辨率的图片（e.g. 1024*1024），为了输出能够看到输入区域里的较大区域，我们需要堆叠非常大量的卷积层。</p>
-</li>
-<li><strong>Solution</strong>: <strong>Downsample</strong> inside the network</li>
-</ul>
-</li>
-</ul>
-<h4 id="strided-convolution">Strided Convolution<a class="headerlink" href="#strided-convolution" title="Permanent link">&para;</a></h4>
-<ul>
-<li>
-<p>带步长的卷积，是下采样的一种方式，可以更快的建立感受野。</p>
-<p>当步长为 1 时，滤波器每次移动一个像素。当步长为 2 时（或罕见的 3 或更多，但在实际操作中很少见），滤波器在滑动时每次跳动 2 个像素。这将产生较小的空间输出量。</p>
-<details class="example">
-<summary>Strided Convolution</summary>
-<p><center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%208.png" width="400" />
-</center></p>
-</details>
-<details class="example">
-<summary>卷积输出大小计算</summary>
-<ul>
-<li>Input: <span class="arithmatex">\(3\times 32 \times 32\)</span></li>
-<li>10 filters of size $5\times 5$, stride 1, pad 2</li>
-<li>Output size? Number of learnable parameters? Number of multiply-add operations?</li>
-</ul>
-<details class="answer">
-<summary>Answer</summary>
-<ul>
-<li>Output: <span class="arithmatex">\(10\times 32 \times 32\)</span></li>
-<li>
-<p>Number of learnable parameters: <span class="arithmatex">\(10\times (3\times 5\times 5 + 1)=760\)</span></p>
-<p>注意每个滤波器有一个权重矩阵和一个偏置项。</p>
-</li>
-<li>
-<p>Number of multiply-add operations: <span class="arithmatex">\(10\times 32\times 32=10240\)</span> outputs, each output is the inner product of two <span class="arithmatex">\(3\times 5\times 5=75\)</span>, so total is <span class="arithmatex">\(75*10240=768K\)</span></p>
-</li>
-</ul>
-</details>
-</details>
-</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">1*1 convolution</p>
-<ul>
-<li>Stacking 1x1 conv layers gives MLP operating on each input position.
-<center> </li>
-</ul>
-<p><img alt="Untitled" src="https://cdn.hobbitqia.cc/20240328212700.png" width="350" />
-</center></p>
-<p>1*1 卷积的操作与 MLP 类似，但是含义有所区别：</p>
-<ul>
-<li>1*1 卷积代表改变我们三维张量中的<strong>通道维度数量</strong>，全连接层意思是将张量展开为一个然后生成一个向量输出。</li>
-<li>MLP 用于你想要破坏输入中的空间结构的情况（如生成类别分数的时候）</li>
+<li>老师: <a href="https://fiction-zju.github.io/author/mingshuai-chen/">陈明帅</a> / TA: <a href="https://syuanz.wiki/">竺思远</a></li>
 </ul>
 </div>
-<h3 id="other-types-of-convolution">Other types of convolution<a class="headerlink" href="#other-types-of-convolution" title="Permanent link">&para;</a></h3>
-<ul>
-<li>So far: 2D Convolution </li>
-<li>
-<p>还可以有 1D、3D 卷积。其中 1D 常用于以序列出现的文本数据、音频数据。</p>
-<details class="example">
-<summary>1D and 3D Convolution</summary>
-<p>下图左为 1D，右为 3D。
-<center> </p>
-<p><img alt="Untitled" src="https://cdn.hobbitqia.cc/20240328213004.png" width="350" />
-</center></p>
-</details>
-</li>
-</ul>
-<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
-<div class="admonition summary">
-<p class="admonition-title">Summary</p>
-<p><img alt="Untitled" src="../img2/Untitled%209.png" /></p>
-</div>
-<h2 id="pooling-layers">Pooling Layers<a class="headerlink" href="#pooling-layers" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><strong>Pooling Layers</strong>: Another way to <strong>downsample</strong></p>
-<p>池化层也是神经网络内部下采样的方法，<strong>不涉及任何参数的学习</strong>。</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2010.png" width="350" />
-</center></p>
-</div>
-</li>
-<li>
-<p>Hyperparameters:</p>
-<ul>
-<li>Kernel Size</li>
-<li>Stride</li>
-<li>
-<p>Pooling function</p>
-<p>在给定大小的局部感受野上执行池化函数，讲这些输入值折叠成一个输出值。</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Max Pooling</strong></p>
-<div class="admonition example">
-<p class="admonition-title">Max Pooling</p>
-<p><center> </p>
-<p><img alt="Untitled" src="https://cdn.hobbitqia.cc/20240328213526.png" width="350" />
-</center></p>
-</div>
-<ul>
-<li>顾名思义，最大池化是取局部区域的最大值。</li>
-<li>当 stride 和 kernel size 相等时，我们的池化区域不会有重叠。</li>
-<li>我们更喜欢池化，而不是带步长的卷积操作：因为池化不涉及任何学习的参数；带来了少量的<strong>平移不变性</strong>（即使图像中某些内容的确切位置发生了一点变化，最大值可能也不会变化）</li>
-</ul>
-</li>
-<li>
-<p>另一个常见的池化方法：<strong>Average Pooling</strong></p>
-</li>
-</ul>
-<h3 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">&para;</a></h3>
-<div class="admonition summary">
-<p class="admonition-title">Summary</p>
-<p><img alt="Untitled" src="../img2/Untitled%2012.png" /></p>
-</div>
-<h2 id="convolutional-networks_1">Convolutional Networks<a class="headerlink" href="#convolutional-networks_1" title="Permanent link">&para;</a></h2>
-<p>Classic architecture: [Conv, ReLU, Pool] x N, flatten, [FC, ReLU] x N, FC</p>
-<div class="admonition example">
-<p class="admonition-title">LeNet-5</p>
-<p><center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2013.png" width="350" />
-</center>
-<center> </p>
-<p><img alt="Untitled" src="https://cdn.hobbitqia.cc/20240328225936.png" width="300" />
-</center></p>
-<ul>
-<li>输入图像为灰度，只有一个输入频道。</li>
-<li>首先做 20 个卷积滤波器，same padding，ReLU，MaxPool，50 个滤波器，ReLU，Flatten 展开为单个向量，做 ReLU，最后 MLP 得到分数。</li>
-<li>实际上最大池化也引入了非线性，为什么还需要 ReLU？实际上不需要，比如当年的这篇论文就没有使用 ReLU。但在更现代的网络中，即使你有池化，通常也会加上非线性函数。</li>
-</ul>
-</div>
-<p>As we go through the network:</p>
-<ul>
-<li>
-<p>Spatial size decreases(using pooling or strided conv)</p>
-<p>通过池化层或者步长来降低尺寸。</p>
-</li>
-<li>
-<p>Number of channels increases (total “volume” is preserved!)</p>
-<p>channel depth 会增加，即我们滤波器的数量。意味着空间尺寸减小的时候深度在增加，我们总体积有时被精确的保留下来。</p>
-</li>
-<li>
-<p>Some modern architectures break this trend -- stay tuned!</p>
-</li>
-<li><strong>Problem</strong>: Deep Networks very hard to train!</li>
-</ul>
-<h2 id="batch-normalization">Batch Normalization<a class="headerlink" href="#batch-normalization" title="Permanent link">&para;</a></h2>
-<ul>
-<li>问题：网络不容易收敛。在训练过程中，由于每一层的参数在同步训练，后面层的输入分布会随着前面层的变化而变化，这可能不利于优化。</li>
-<li>
-<p><strong>Idea</strong>: <strong>“Normalize”</strong> the outputs of a layer so they have zero mean and unit variance.</p>
-<p>添加归一化层，让深度网络更容易收敛。接收前一层输出，以某种方式对其进行归一化，使其均值为 0，方差为 1.</p>
-<ul>
-<li>
-<p>Why? Helps reduce “<strong>internal covariate shif</strong>t”, improves optimization</p>
-<p>因此我们希望标准化所有层，这样下一层可以看到来自训练过程中更平稳的输入。</p>
-</li>
-</ul>
-</li>
-<li>
-<p>We can normalize a batch of activations like this: </p>
-<div class="arithmatex">\[
-\hat x^{(k)}=\dfrac{x^{(k)} - E[x^{(k)}]}{\sqrt{Var[x^{(k)}]}} 
-\]</div>
-<p>This is a <strong>differentiable</strong> function, so we can use it as an operator in our networks and backprop through it!</p>
-<p>可以把他作为计算图的一个节点，因此我们归一化就相当于在网络里插入一个层。</p>
-<p><center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2014.png" width="400" />
-</center></p>
-</li>
-<li>
-<p><strong>Problem</strong>: What if zero-mean, unit variance is too hard of a constraint?</p>
-<p>强制所有层满足这个刚性约束可能太严格，我们会添加可学习的参数缩放、平移参数 <span class="arithmatex">\(\gamma, \beta\in D\)</span></p>
-<div class="arithmatex">\[
-y_{i,j}=\gamma_j\hat{x_{i,j}}+\beta_j
-\]</div>
-<p>如果 <span class="arithmatex">\(\gamma=\sigma, \beta=\mu\)</span> 那么就恢复了本来的值。（相当于归一化层实现了 identity 函数的功能）</p>
-</li>
-<li>
-<p><strong>Problem</strong>: Estimates depend on minibatch; can’t do this at test-time!</p>
-<p>因为我们是基于 batch 的归一化，那么测试的先后顺序会有影响。后出现的样本使用的 <span class="arithmatex">\(\mu_j, \sigma_j\)</span> 与之前使用的不同。</p>
-</li>
-<li>
-<p>我们希望让模型独立于批次中的元素。因此测试的时候，<strong>均值和方差使用训练时的平均值</strong>（常数）。</p>
-</li>
-<li>
-<p>During testing batch norm becomes a <strong>linear operator</strong>! Can be fused with the previous fully-connected or conv layer.</p>
-<p>测试的时候可以把归一层融合进之前的线性运算符，</p>
-<div class="admonition example">
-<p class="admonition-title">Batch Normalization for ConvNets</p>
-<p><center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2015.png" width="150" />
-</center></p>
-</div>
-<p>Usually inserted <strong>after Fully Connected or Convolutional layers</strong>, and <strong>before nonlinearity</strong>.</p>
-</li>
-<li>
-<p><strong>Good</strong></p>
-<ul>
-<li>Makes deep networks much easier to train!</li>
-<li>Allows higher learning rates, faster convergence</li>
-<li>Networks become more robust to initialization</li>
-<li>Acts as regularization during training</li>
-<li>Zero overhead at test-time: can be fused with conv!</li>
-</ul>
-</li>
-<li><strong>Bad</strong><ul>
-<li>Not well-understood theoretically (yet)</li>
-<li>Behaves differently during training and testing: this is a very common source of bugs!</li>
-</ul>
-</li>
-</ul>
-<h3 id="other-normalization">Other Normalization<a class="headerlink" href="#other-normalization" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Idea</strong>: 不再取决于批次中所有其他元素的其他数量。我们可以使用其他的归一化方法。</li>
-<li>
-<p><strong>Layer Normalization</strong> for fullyconnected networks</p>
-<ul>
-<li><strong>Same behavior at train and test!</strong> Used in RNNs, Transformers.
-<center> </li>
-</ul>
-<p><img alt="Untitled" src="../img2/Untitled%2016.png" width="400" />
-</center></p>
-</li>
-<li>
-<p><strong>Instance Normalization</strong>
-    <center> </p>
-<p><img alt="Untitled" src="https://cdn.hobbitqia.cc/20240328233324.png" width="400" />
-</center></p>
-</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Comparison of Normalization Layers</p>
-<p>BatchNorm 是对一个 batch-size 样本内的<strong>每个特征</strong>分别做归一化，LayerNorm 是分别对<strong>每个样本</strong>的所有特征做归一化。
-<center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2017.png" width="450" />
-</center></p>
-</div>
-<p>卷积层：Most computationally expensive!</p>
-<!-- **Problem**: What is the right way to combine all these components? -->
 
   <hr>
 <div class="md-source-file">
@@ -5020,8 +4352,6 @@ y_{i,j}=\gamma_j\hat{x_{i,j}}+\beta_j
 
 
                 
-
-<link rel="stylesheet" href="/css/counter.css">
 
 <!-- Giscus -->
 <h2 id="__comments">评论</h2>
@@ -5129,16 +4459,16 @@ y_{i,j}=\gamma_j\hat{x_{i,j}}+\beta_j
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="../../js/baidu-tongji.js"></script>
+        <script src="../js/baidu-tongji.js"></script>
       
         <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
       
-        <script src="../../js/katex.js"></script>
+        <script src="../js/katex.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
