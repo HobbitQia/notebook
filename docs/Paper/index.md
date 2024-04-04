@@ -9,3 +9,4 @@
 * [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](GPipe.md)
 * [Mixed Precision Training](mixed_precision.md)
 * [FAST: DNN Training Under Variable Precision Block Floating Point with Stochastic Rounding](FAST.md)
+* [Softmax Acceleration with Adaptive Numeric Format for both Training and Inference](softmax.md)

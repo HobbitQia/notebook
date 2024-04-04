@@ -74,7 +74,7 @@ counter: True
         id<x> assign id<a> times int<2> plus id<b> times lparen id<x> times int<3> rparen
         ```
     * 语法分析：“单词”组合成“句子”。
-        <div align = center><img src="https://cdn.hobbitqia.cc/20240316140154.png" width=40%></div>
+        <div align = center><img src="https://cdn.hobbitqia.cc/20240316140154.png" width=30%></div>
 
     * 语义分析：解析“句子”的含义。
         <div align = center><img src="https://cdn.hobbitqia.cc/20240316140433.png" width=60%></div>

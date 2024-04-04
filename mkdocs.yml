@@ -236,6 +236,11 @@ nav:
       - I/O 系统: OS/chap11.md
       - 文件系统接口: OS/chap12.md
       - 文件系统实现: OS/chap13.md
+    - 编译原理:
+      - Compiler/index.md
+      - 介绍: Compiler/lec1.md
+      - 词法分析: Compiler/lec2.md
+      - 语法分析: Compiler/lec3.md
   - AI:
     - Deep Learning: 
       - DL/index.md
@@ -260,6 +265,7 @@ nav:
     - GPipe: Paper/GPipe.md
     - 混合精度训练: Paper/mixed_precision.md
     - FAST: Paper/FAST.md
+    - Softmax 加速: Paper/softmax.md
   - Miscellaneous:
     - Misc/index.md
     - 浮点数与定点数: Misc/float.md
