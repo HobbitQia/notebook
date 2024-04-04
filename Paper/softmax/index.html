@@ -4694,9 +4694,10 @@
 <h1 id="softmax">通过自适应数字格式实现训练和推理时的 Softmax 加速<a class="headerlink" href="#softmax" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240405002634.png" /></p>
 <ul>
-<li>Paper: <a href="https://arxiv.org/abs/2311.13290">Softmax Acceleration with Adaptive Numeric Format for both Training and Inference</a>
-本文中的图片均来自论文。</li>
+<li>Paper: <a href="https://arxiv.org/abs/2311.13290">Softmax Acceleration with Adaptive Numeric Format for both Training and Inference</a></li>
+<li>本文中的图片均来自论文。</li>
 </ul>
 </div>
 <h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
@@ -4734,7 +4735,8 @@ s_i &amp;= \dfrac{e^{z_i}}{\sum_{j=1}^N e^{z_j}}\\
 <li>找到输入向量的最大值。</li>
 <li>将向量和最大值转为定点数格式并输出。</li>
 </ul>
-<p><img alt="" src="https://cdn.hobbitqia.cc/20240402103545.png" /></p>
+<div align=center><img src = "https://cdn.hobbitqia.cc/20240402103545.png" width =70%></div>
+
 <ul>
 <li>
 <p>为了加速最大值的搜索，本文引入了可配置的参数 STEP，用来表示搜索的步长。<strong><em>e.g.</em></strong> STEP=1 时我们会遍历所有的输入，STEP=2 时我们会每隔一个输入进行搜索。</p>
@@ -4750,10 +4752,11 @@ s_i &amp;= \dfrac{e^{z_i}}{\sum_{j=1}^N e^{z_j}}\\
 <li>定点数格式下计算 <span class="arithmatex">\(e^{z_i-z_{max}}\)</span>。</li>
 <li>将结果转为浮点数。</li>
 </ul>
-<p><img alt="" src="https://cdn.hobbitqia.cc/20240402105546.png" /></p>
+<div align=center><img src = "https://cdn.hobbitqia.cc/20240402105546.png" width =70%></div>
+
 <p>为了简化指数运算，我们有：</p>
 <div class="arithmatex">\[
-e^{z^'} = 2^{z'\log_2(e)}=2^{u+v}
+e^{z'} = 2^{z'\log_2(e)}=2^{u+v}
 \]</div>
 <ul>
 <li>这里 <span class="arithmatex">\(u,v\)</span> 分别代表 <span class="arithmatex">\(z'\log_2(e)\)</span> 的整数部分和小数部分。</li>
@@ -4788,9 +4791,10 @@ e^{z^'} = 2^{z'\log_2(e)}=2^{u+v}
 <li>定点数格式下计算 <span class="arithmatex">\(\sum_{j=1}^N e^{z_j-z_{max}}\)</span>.</li>
 <li>最后通过 leading one detector(LOD) 结构将结果转化回浮点数。</li>
 </ul>
-<p><img alt="" src="https://cdn.hobbitqia.cc/20240402112008.png" /></p>
+<p><div align=center><img src = "https://cdn.hobbitqia.cc/20240402112008.png" width =70%></div></p>
 <h3 id="divisionmultiplication-unit">Division/Multiplication Unit<a class="headerlink" href="#divisionmultiplication-unit" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="https://cdn.hobbitqia.cc/20240402113051.png" /></p>
+<div align=center><img src = "https://cdn.hobbitqia.cc/20240402113051.png" width =70%></div>
+
 <p>我们可以这样实现除法：</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -4826,11 +4830,11 @@ a\times b = 2^{e_a}(1+m_a)\times 2^{e_b}(1+m_b) = 2^{e_a+e_b}(1+m_a+ m_b + m_am_
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月5日 00:23:06</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月5日 00:24:16</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月5日 00:23:06</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月5日 00:24:16</span>
       
     
   </small>
