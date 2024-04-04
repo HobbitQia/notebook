@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-4-5":
+    - newpage:
+        text: Papers > Softmax 加速
+        href: /Paper/softmax
   - "2024-3-29":
     - newpage:
         text: System > 编译原理

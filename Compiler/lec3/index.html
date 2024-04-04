@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#parsing" class="md-skip">
           跳转至
         </a>
       
@@ -3625,15 +3625,150 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#typical-workflow-of-a-compiler" class="md-nav__link">
-    Typical Workflow of a Compiler
+  <a href="#context-free-grammars" class="md-nav__link">
+    Context-Free Grammars
   </a>
+  
+    <nav class="md-nav" aria-label="Context-Free Grammars">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#derivations" class="md-nav__link">
+    Derivations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse-tree" class="md-nav__link">
+    Parse Tree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambiguity" class="md-nav__link">
+    Ambiguity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eof-marker" class="md-nav__link">
+    EOF Marker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#modules-and-interfaces-in-tiger" class="md-nav__link">
-    Modules and Interfaces in Tiger
+  <a href="#top-down-parsing" class="md-nav__link">
+    Top-Down Parsing
+  </a>
+  
+    <nav class="md-nav" aria-label="Top-Down Parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#predictive-parsing" class="md-nav__link">
+    Predictive Parsing
+  </a>
+  
+    <nav class="md-nav" aria-label="Predictive Parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-and-follow-sets" class="md-nav__link">
+    First and Follow Sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictive-parsing-tables" class="md-nav__link">
+    Predictive Parsing Tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminate-multiple-productions" class="md-nav__link">
+    Eliminate Multiple Productions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-recovery" class="md-nav__link">
+    Error Recovery
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bottom-up-parsing" class="md-nav__link">
+    Bottom-Up Parsing
+  </a>
+  
+    <nav class="md-nav" aria-label="Bottom-Up Parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lr-parsing" class="md-nav__link">
+    LR Parsing
+  </a>
+  
+    <nav class="md-nav" aria-label="LR Parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lr0-parsing" class="md-nav__link">
+    LR(0) Parsing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slr-simple-lr-parsing" class="md-nav__link">
+    SLR (Simple LR) Parsing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lr1-parsing" class="md-nav__link">
+    LR(1) Parsing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hierarchy-of-grammar-classes" class="md-nav__link">
+    Hierarchy of Grammar Classes
   </a>
   
 </li>
@@ -4144,6 +4279,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -4293,6 +4430,26 @@
   
   <span class="md-ellipsis">
     FAST
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Paper/softmax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Softmax 加速
   </span>
   
 
@@ -4505,15 +4662,150 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#typical-workflow-of-a-compiler" class="md-nav__link">
-    Typical Workflow of a Compiler
+  <a href="#context-free-grammars" class="md-nav__link">
+    Context-Free Grammars
   </a>
+  
+    <nav class="md-nav" aria-label="Context-Free Grammars">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#derivations" class="md-nav__link">
+    Derivations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse-tree" class="md-nav__link">
+    Parse Tree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambiguity" class="md-nav__link">
+    Ambiguity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eof-marker" class="md-nav__link">
+    EOF Marker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#modules-and-interfaces-in-tiger" class="md-nav__link">
-    Modules and Interfaces in Tiger
+  <a href="#top-down-parsing" class="md-nav__link">
+    Top-Down Parsing
+  </a>
+  
+    <nav class="md-nav" aria-label="Top-Down Parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#predictive-parsing" class="md-nav__link">
+    Predictive Parsing
+  </a>
+  
+    <nav class="md-nav" aria-label="Predictive Parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-and-follow-sets" class="md-nav__link">
+    First and Follow Sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictive-parsing-tables" class="md-nav__link">
+    Predictive Parsing Tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminate-multiple-productions" class="md-nav__link">
+    Eliminate Multiple Productions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-recovery" class="md-nav__link">
+    Error Recovery
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bottom-up-parsing" class="md-nav__link">
+    Bottom-Up Parsing
+  </a>
+  
+    <nav class="md-nav" aria-label="Bottom-Up Parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lr-parsing" class="md-nav__link">
+    LR Parsing
+  </a>
+  
+    <nav class="md-nav" aria-label="LR Parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lr0-parsing" class="md-nav__link">
+    LR(0) Parsing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slr-simple-lr-parsing" class="md-nav__link">
+    SLR (Simple LR) Parsing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lr1-parsing" class="md-nav__link">
+    LR(1) Parsing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hierarchy-of-grammar-classes" class="md-nav__link">
+    Hierarchy of Grammar Classes
   </a>
   
 </li>
@@ -4537,151 +4829,588 @@
   
 
 
-<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<h1 id="parsing">Parsing<a class="headerlink" href="#parsing" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <ul>
-<li>What, Why, How?<ul>
-<li>What is a compiler?</li>
-<li>Why do we need to learn compilers?</li>
-<li>How to learn compilers?</li>
+<li>Specifying the syntax of a programming language with Context-Free Grammars (CFG)</li>
+<li>Build the parser based on the CFG:<ul>
+<li>Top-Down Parsing<ul>
+<li>Predictive Parsing (LL(k) Parsing)</li>
 </ul>
 </li>
-<li>General Workflow of a Compiler</li>
-<li>Modules and Interfaces in Tiger</li>
-</ul>
-</div>
-<div align = center><img src="https://cdn.hobbitqia.cc/20240316131718.png" width=75%></div>
-
-<ul>
-<li>
-<p>A <strong>compiler</strong> is a program to translate one language to another.</p>
-<p><div align = center><img src="https://cdn.hobbitqia.cc/20240316131853.png" width=55%></div></p>
-</li>
-<li>
-<p>A compiler is a complex program.</p>
-</li>
-<li>
-<p>Why</p>
-<ul>
-<li>Compilers are used in almost all forms of computing.</li>
-<li>The principles and techniques are applicable to so many other domains.</li>
-<li>Compiler construction touches upon other fields.</li>
+<li>Bottom-Up Parsing</li>
 </ul>
 </li>
+<li>More about parsing:<ul>
+<li>Automatic Parser Generation</li>
+<li>Error Recovery </li>
 </ul>
-<h2 id="typical-workflow-of-a-compiler">Typical Workflow of a Compiler<a class="headerlink" href="#typical-workflow-of-a-compiler" title="Permanent link">&para;</a></h2>
-<p>通用意义下的编译过程：（并不绝对，有些编译器会有所调整）</p>
-<div align = center><img src="https://cdn.hobbitqia.cc/20240316135054.png" width=65%></div>
-
-<p>中端是为了剥离开前后端，与前端的语言、后端的硬件都是解耦的，让前端和后端可以独立发展。</p>
-<p>贯穿整个过程：符号表、错误处理。</p>
-<div class="admonition info">
-<p class="admonition-title">Two Important Concepts</p>
-<ul>
-<li>
-<p><strong>Phases</strong>: one or more modules operating on different abstract “languages”.</p>
-<p>阶段由不同的模块拼成。</p>
-</li>
-<li>
-<p><strong>Interfaces</strong>: information exchanged between modules of the compiler.</p>
-<p>不同模块之间为了交互，需要定义接口，是交换信息的媒介。</p>
 </li>
 </ul>
 </div>
+<p>语法分析：将不同的 token 拼接到一起的模式。</p>
+<p>Syntax analysis: parsing the phrase structure of the program.</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240320213154.png" width=70%></div></p>
+<p>No lexical errors, but multiple syntax errors.</p>
+</details>
+<p>The expression can be correctly evaluated based on the <em>parse tree</em> rather than token stream.</p>
+<p>我们要把 token 组织成语法树，以便后续操作。树的不同结构影响后续的语义错误。</p>
+<h2 id="context-free-grammars">Context-Free Grammars<a class="headerlink" href="#context-free-grammars" title="Permanent link">&para;</a></h2>
+<p>We need:</p>
 <ul>
 <li>
-<p>Why breaking the compiler into multiple phases</p>
-<ul>
-<li>Easier to understand and implement</li>
-<li>
-<p>Allow for <strong>reusing the components</strong></p>
-<p>模块可以复用。</p>
-</li>
-</ul>
+<p>A language for describing valid strings of tokens.</p>
+<p>一个用来描述字符串的语言。但是正则表达式的表达能力有限（比如无法实现括号匹配）。</p>
 </li>
 <li>
-<p>Workflow</p>
+<p>A method for distinguishing valid from invalid strings of tokens.</p>
+<p>可以用来判定我们给定的字符串是否在语言中的方法。</p>
+</li>
+</ul>
+<p>CFG 很适合这种递归结构（即正则表达式无法处理的情况）。</p>
+<p>A <strong>Context-Free Grammar (CFG)</strong> consists of:</p>
 <ul>
-<li>Lexing/Scanning/Lexical Analysis 词法分析：将程序字符流分解为记号 (Token) 序列。<ul>
-<li>删除字符串中不必要的部分（如空格）。</li>
-<li>通常使用正则表达式匹配（DFA 定义）。</li>
+<li>A set of terminals <span class="arithmatex">\(T\)</span> : symbols from the alphabet (lexical tokens)</li>
+<li>A set of non-terminals <span class="arithmatex">\(N\)</span></li>
+<li>A start symbol <span class="arithmatex">\(S \in N\)</span></li>
+<li>A set of productions (rules)<ul>
+<li><span class="arithmatex">\(X \rightarrow Y_1 Y_2 \ldots Y_k\)</span> (replace <span class="arithmatex">\(X\)</span> with <span class="arithmatex">\(Y_1 Y_2 \ldots Y_k\)</span>)</li>
 </ul>
 </li>
-<li>Parsing/Syntactic Analysis 语法分析：将记号序列解析为语法结构。<ul>
-<li>去除不必要的记号（例如括号）。</li>
-<li>一般使用抽象语法树（AST）定义。</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240320214104.png" width=70%></div></p>
+</details>
+<p>Let <span class="arithmatex">\(G\)</span> be a context-free grammar with start symbol <span class="arithmatex">\(S\)</span>. Then the language <span class="arithmatex">\(L(G)\)</span> of <span class="arithmatex">\(G\)</span> is: <span class="arithmatex">\(\{a_1\ldots a_n|\forall a_i\in T\cap S\stackrel{*}\rightarrow a_1a_2\ldots a_n\}\)</span></p>
+<p>For parsing, terminals are lexical tokens of the language.</p>
+<p>如何判断给定的串是否在我们的文法里？</p>
+<h3 id="derivations">Derivations<a class="headerlink" href="#derivations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A derivation: start with the start symbol S, then repeatedly replace any non-terminal by one of its right-hand sides.</li>
+<li>A string is in <span class="arithmatex">\(L(G)\)</span> iff it is possible to derive that string from the start symbol <span class="arithmatex">\(S\)</span>.</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240320220100.png" width=70%></div></p>
+</details>
+<p>A derivation can be drawn as a tree</p>
+<ul>
+<li>Start symbol is the tree’s root</li>
+<li>For a production <span class="arithmatex">\(X \rightarrow Y_1\ldots Y_k\)</span>, add children <span class="arithmatex">\(Y_1\ldots Y_k\)</span> to node <span class="arithmatex">\(X\)</span>. </li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240320220314.png" width=60%></div></p>
+</details>
+<p>每次推导时，优先选择最左边的非终结符进行推导，称为 left-most derivation 最左推导（如上面的例子），类似地有最右推导。</p>
+<details class="example">
+<summary>Right-Most Derivation</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240320220449.png" width=60%></div></p>
+<p>这里最左和最右推导的结果是一样的。</p>
+</details>
+<p>The left-most and the right-most derivations lead to the same parse tree (in absence of ambiguity). </p>
+<p>Some derivations are neither left-most nor right-most</p>
+<h3 id="parse-tree">Parse Tree<a class="headerlink" href="#parse-tree" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A parse tree has<ul>
+<li>Terminals at the leaves.</li>
+<li>Non-terminals at the interior nodes</li>
 </ul>
 </li>
-<li>Semantic Analysis 语义分析：决定语法结构的含义。<ul>
-<li><strong><em>e.g.</em></strong> 变量的类型？运算符的含义？读写变量是否合法？...</li>
+<li>An in-order traversal of the leaves is the original input.</li>
+<li>
+<p>The parse tree shows the <em>association of operations</em>, the input string does not.</p>
+<p>通过树的高度可以看出运算的优先级。</p>
+</li>
+<li>
+<p>A derivation defines a parse tree.</p>
+<ul>
+<li>
+<p>But a parse tree may result from many derivations.</p>
+<p>比如最左推导和最右推导，有可能得到同样的一棵树。</p>
+</li>
 </ul>
 </li>
-<li>中间代码生成<ul>
-<li>中间代码/表示 (IR): 源语言与目标语言之间的桥梁。</li>
+</ul>
+<h3 id="ambiguity">Ambiguity<a class="headerlink" href="#ambiguity" title="Permanent link">&para;</a></h3>
+<p>A grammar is <strong>ambiguous</strong> if it can derive a string with two different parse trees.</p>
+<div class="admonition example">
+<p class="admonition-title">Ambiguous grammar</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240320220801.png" width=65%></div></p>
+</div>
+<ul>
+<li>We want:<ul>
+<li><strong>Precedence</strong>: <code>*</code> binds tighter than <code>+</code></li>
+<li><strong>Left-association</strong>: each operator associates to the left. <strong><em>e.g.</em></strong> 1 - 2 - 3 should be (1 - 2) - 3 </li>
 </ul>
 </li>
-<li>机器无关代码优化：基于中间表示进行分析与变换。<ul>
-<li><strong><em>e.g.</em></strong> 降低执行时间，减少资源消耗等。</li>
-</ul>
-</li>
-<li>目标代码生成：把中间表示形式翻译到目标语言。<ul>
-<li><strong><em>e.g.</em></strong> 指令选择、寄存器分配、指令调度等。</li>
-</ul>
+<li>How?<ul>
+<li>
+<p>introduce new non-terminals, forcing some productions to be used later than some other productions.</p>
+<p>引入新的终止符，对一些产生式进行限制。比如乘法的应用必须晚于加法。因为越早应用，在树的上层，优先级越高。</p>
 </li>
 </ul>
 </li>
 </ul>
 <div class="admonition example">
-<p class="admonition-title">Think As If You Were a Compiler</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">x</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mh">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mh">3</span><span class="p">)</span>
-</code></pre></div>
-* 词法分析：把“字符串”分割成“单词”。
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>id&lt;x&gt; assign id&lt;a&gt; times int&lt;2&gt; plus id&lt;b&gt; times lparen id&lt;x&gt; times int&lt;3&gt; rparen
-</code></pre></div>
-* 语法分析：“单词”组合成“句子”。
-    <div align = center><img src="https://cdn.hobbitqia.cc/20240316140154.png" width=40%></div></p>
-<ul>
-<li>
-<p>语义分析：解析“句子”的含义。
-    <div align = center><img src="https://cdn.hobbitqia.cc/20240316140433.png" width=60%></div></p>
-</li>
-<li>
-<p>中间代码生成
-    <div align = center><img src="https://cdn.hobbitqia.cc/20240316140616.png" width=60%></div></p>
-</li>
-<li>
-<p>机器无关代码优化
-    <div align = center><img src="https://cdn.hobbitqia.cc/20240316140813.png" width=60%></div></p>
-</li>
-<li>
-<p>目标代码生成
-    <div align = center><img src="https://cdn.hobbitqia.cc/20240316141006.png" width=650></div></p>
-</li>
-</ul>
+<p class="admonition-title">Unambiguous Grammar</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240320221131.png" width=65%></div></p>
 </div>
-<h2 id="modules-and-interfaces-in-tiger">Modules and Interfaces in Tiger<a class="headerlink" href="#modules-and-interfaces-in-tiger" title="Permanent link">&para;</a></h2>
-<div align = center><img src="https://cdn.hobbitqia.cc/20240316141304.png" width=70%></div>
-
+<p>There are some languages that have ambiguous grammars but no unambiguous grammar, such languages may be problematic as programming languages.</p>
+<p>存在语言是无法用无歧义的文法描述的，这种语言不适合作为编程语言。</p>
+<h3 id="eof-marker">EOF Marker<a class="headerlink" href="#eof-marker" title="Permanent link">&para;</a></h3>
 <ul>
-<li>AST (抽象语法树): 语法分析 + Parsing Actions 生成。</li>
-<li>IR Tree: 语义分析后按一定规则生成（树型中间表示）。</li>
-<li>Canonicalized IR Tree: 规范化 IR Tree（方便生成汇编）。</li>
-<li>Assem: 指令选择器生成（一种特殊的抽象汇编）。</li>
-<li>CFG (Control Flow Graph) 控制流图: 方便进行数据流分析。<ul>
-<li>如活跃变量分析 (Liveness Analysis)。</li>
+<li><code>$</code>: end of file (EOF)</li>
+<li>To indicate that <code>$</code> must come after a complete S-phrase<ul>
+<li>add a new start symbol S’ and a new production <code>S’ -&gt; S$</code></li>
 </ul>
 </li>
-<li>Interference Graph (冲突图): 由活跃变量分析结果构造，用于指导寄存器分配。</li>
 </ul>
-<div align = center><img src="https://cdn.hobbitqia.cc/20240316142302.png" width=50%></div>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240320221517.png" width=70%></div></p>
+</details>
+<h2 id="top-down-parsing">Top-Down Parsing<a class="headerlink" href="#top-down-parsing" title="Permanent link">&para;</a></h2>
+<p>遍历所有的产生式是很低效的，编译器会设计专有的算法做 CFG 分析，其中一种是 Recursive Descent Parsing 递归下降分析。</p>
+<ul>
+<li>
+<p><strong>top-down parsing, predictive parsing</strong></p>
+<p>parse tree 是自顶向下构建的。（从左往右）</p>
+</li>
+<li>
+<p>simple, can be coded by hand</p>
+</li>
+<li>parses many, but not all CFGs<ul>
+<li>
+<p>parses LL(1) grammars：Left-to-right parse; Leftmost-derivation; 1 symbol lookahead</p>
+<p>只能处理 LL(1) 文法，并不能处理所有的文法。</p>
+</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Top-Down parsing example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240323140111.png" width=70%></div></p>
+</details>
+<p>Key ideas:</p>
+<ul>
+<li>
+<p>one recursive function for each non-terminal -&gt; call this function to match this non-terminal.</p>
+<p>为每一个非终结符写一个递归函数。函数内有一个 switch 语句，根据当前的 token 来选择下一个函数。</p>
+</li>
+<li>
+<p>each production becomes one clause in the function.</p>
+</li>
+</ul>
+<p>具体步骤如下：</p>
+<ul>
+<li>Represent the token.</li>
+<li>build infrastructure for reading tokens from lexer.</li>
+<li>build a function for each non-terminal.</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240323140453.png" width=60%></div></p>
+<ul>
+<li>Represent the token
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">enum</span> <span class="n">token</span> <span class="o">{</span><span class="nc">IF</span><span class="o">,</span> <span class="nc">THEN</span><span class="o">,</span> <span class="nc">ELSE</span><span class="o">,</span> <span class="nc">BEGIN</span><span class="o">,</span> <span class="nc">END</span><span class="o">,</span> <span class="nc">PRINT</span><span class="o">,</span> <span class="nc">SEMI</span><span class="o">,</span> <span class="nc">NUM</span><span class="o">,</span> <span class="nc">EQ</span><span class="o">};</span>
+</code></pre></div></li>
+<li>build infrastructure for reading tokens from lexer
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">//</span> <span class="n">call</span> <span class="n">lexer</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">extern</span> <span class="n">enum</span> <span class="n">token</span> <span class="n">getToken</span><span class="o">(</span><span class="n">void</span><span class="o">);</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="o">//</span> <span class="n">store</span> <span class="n">the</span> <span class="n">next</span> <span class="n">token</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">enum</span> <span class="n">token</span> <span class="n">tok</span><span class="o">;</span> 
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">void</span> <span class="n">advance</span><span class="bp">()</span> <span class="o">{</span><span class="n">tok</span><span class="o">=</span><span class="n">getToken</span><span class="bp">()</span><span class="o">;}</span> 
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="o">//</span> <span class="n">consume</span> <span class="n">the</span> <span class="n">next</span> <span class="n">token</span> <span class="ow">and</span> <span class="n">get</span> <span class="n">the</span> <span class="k">new</span> <span class="n">one</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">void</span> <span class="n">eat</span><span class="o">(</span><span class="n">enum</span> <span class="n">token</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span><span class="k">if</span> <span class="o">(</span><span class="n">tok</span><span class="o">==</span><span class="n">t</span><span class="o">)</span> <span class="n">advance</span><span class="bp">()</span><span class="o">;</span> <span class="k">else</span> <span class="n">error</span><span class="bp">()</span><span class="o">;}</span>
+</code></pre></div></li>
+<li>build a function for each non-terminal
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">void</span> <span class="nc">S</span><span class="o">(</span><span class="n">void</span><span class="o">)</span> <span class="o">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="n">switch</span><span class="o">(</span><span class="n">tok</span><span class="o">)</span> <span class="o">{</span> 
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">case</span> <span class="nc">IF</span><span class="o">:</span> <span class="n">eat</span><span class="o">(</span><span class="nc">IF</span><span class="o">);</span> <span class="nc">E</span><span class="bp">()</span><span class="o">;</span> <span class="n">eat</span><span class="o">(</span><span class="nc">THEN</span><span class="o">);</span> <span class="nc">S</span><span class="bp">()</span><span class="o">;</span> <span class="n">eat</span><span class="o">(</span><span class="nc">ELSE</span><span class="o">);</span> <span class="nc">S</span><span class="bp">()</span><span class="o">;</span> <span class="n">break</span><span class="o">;</span> 
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">case</span> <span class="nc">BEGIN</span><span class="o">:</span> <span class="n">eat</span><span class="o">(</span><span class="nc">BEGIN</span><span class="o">);</span> <span class="nc">S</span><span class="bp">()</span><span class="o">;</span> <span class="nc">L</span><span class="bp">()</span><span class="o">;</span> <span class="n">break</span><span class="o">;</span> 
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">case</span> <span class="nc">PRINT</span><span class="o">:</span> <span class="n">eat</span><span class="o">(</span><span class="nc">PRINT</span><span class="o">);</span> <span class="nc">E</span><span class="bp">()</span><span class="o">;</span> <span class="n">break</span><span class="o">;</span> 
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">default</span><span class="o">:</span> <span class="n">error</span><span class="bp">()</span><span class="o">;</span> <span class="o">}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="o">}</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">void</span> <span class="nc">L</span><span class="o">(</span><span class="n">void</span><span class="o">)</span> <span class="o">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  <span class="n">switch</span><span class="o">(</span><span class="n">tok</span><span class="o">)</span> <span class="o">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">case</span> <span class="nc">END</span><span class="o">:</span> <span class="n">eat</span><span class="o">(</span><span class="nc">END</span><span class="o">);</span> <span class="n">break</span><span class="o">;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">case</span> <span class="nc">SEMI</span><span class="o">:</span> <span class="n">eat</span><span class="o">(</span><span class="nc">SEMI</span><span class="o">);</span> <span class="nc">S</span><span class="bp">()</span><span class="o">;</span> <span class="nc">L</span><span class="bp">()</span><span class="o">;</span> <span class="n">break</span><span class="o">;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">default</span><span class="o">:</span> <span class="n">error</span><span class="bp">()</span><span class="o">;</span> <span class="o">}</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="o">}</span><span class="n">void</span> <span class="nc">E</span><span class="o">(</span><span class="n">void</span><span class="o">)</span> <span class="o">{</span> <span class="n">eat</span><span class="o">(</span><span class="nc">NUM</span><span class="o">);</span> <span class="n">eat</span><span class="o">(</span><span class="nc">EQ</span><span class="o">);</span> <span class="n">eat</span><span class="o">(</span><span class="nc">NUM</span><span class="o">);</span> <span class="o">}</span>
+</code></pre></div></li>
+</ul>
+<p>这里有个问题：这里是靠产生式的第一个 token 来区分不同的 case，而这里的第一个 token 都是一个不同的终止符。</p>
+</details>
+<ul>
+<li>First, we need to know the possible first terminal symbols when we choose each of the three productions.</li>
+<li>Second, if the possible first terminal symbols of multiple productions can be num, we need to rewrite the grammar so that only one production can be used.</li>
+</ul>
+<h3 id="predictive-parsing">Predictive Parsing<a class="headerlink" href="#predictive-parsing" title="Permanent link">&para;</a></h3>
+<p><strong>Predictive parsing</strong> works only for grammars where the first terminal symbol of each subexpression provides enough information to choose which production to use.<br />
+第一个终止符足够区分不同的产生式。</p>
+<h4 id="first-and-follow-sets">First and Follow Sets<a class="headerlink" href="#first-and-follow-sets" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><span class="arithmatex">\(FIRST(\gamma)\)</span> is the set of terminals that can begin strings derived from <span class="arithmatex">\(\gamma\)</span>.</p>
+<p>能出现在产生式最左侧的终止符。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(FOLLOW(X)\)</span> is the set of terminals that can immediately follow <span class="arithmatex">\(X: t \in FOLLOW(X)\)</span> if there is any derivation containing <span class="arithmatex">\(Xt\)</span>. This can occur if the derivation contains <span class="arithmatex">\(X,Y,Zt\)</span> where <span class="arithmatex">\(Y\)</span> and <span class="arithmatex">\(Z\)</span> both derive <span class="arithmatex">\(\epsilon\)</span>.</p>
+<p>从 S 出发经过多步推导，某个阶段 X 是一个非终止符，它后面紧跟一个终止符。那么 X 后面的终止符就属于 <span class="arithmatex">\(FOLLOW(X)\)</span>.</p>
+</li>
+</ul>
+<p>希腊字母表示字符串，大写字母表示非终结符，小写字母表示终结符。</p>
+<p>如果我们有 <span class="arithmatex">\(X\rightarrow \gamma\)</span>，那么 X 产生的第一个终止符可能出现在</p>
+<ul>
+<li><span class="arithmatex">\(FIRST(\gamma)\)</span>.</li>
+<li>如果 <span class="arithmatex">\(X\rightarrow^* \epsilon\)</span>，那么 <span class="arithmatex">\(FOLLOW(X)\)</span>.</li>
+</ul>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240323153933.png" width=60%></div>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240323154232.png" width=60%></div>
 
+<p>注意到 Follow 是看产生式右边的非终结符。</p>
+<p>为此我们需要知道每个非终结符能否推出空串，为此我们引入了 <span class="arithmatex">\(Nullable\)</span>, 只要能推出空就为 True。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nl">a</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="o">+</span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="n">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="mi">-1</span><span class="p">),</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="n">a</span><span class="p">);</span><span class="w"> </span><span class="n">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span>
-</code></pre></div>
-IR Tree 里的多个语句由 CompoundStm 组合起来。
-<div align = center><img src="https://cdn.hobbitqia.cc/20240316142155.png" width=75%></div></p>
+<p>算 Nullable、First 和 Follow 时，不断迭代，每轮迭代扫一遍所有的产生式，直到集合没有变化。
+<div align = center><img src="https://cdn.hobbitqia.cc/20240323154527.png" width=60%></div></p>
+<p>这里算 X 的 First 时，我们看第一条产生式 <span class="arithmatex">\(Z\rightarrow XYZ\)</span>，我们要看 YZ 的 First，计算方法是看 Y 的 First，如果 Y 可以推出空串，那么我们还要看 Z 的 First。</p>
+</div>
+<h4 id="predictive-parsing-tables">Predictive Parsing Tables<a class="headerlink" href="#predictive-parsing-tables" title="Permanent link">&para;</a></h4>
+<p>现在我们要构造 <strong>Predictive Parsing Tables</strong>. 这个表告诉我们当看到一个非终结符时，我们应该选择哪个产生式。</p>
+<ul>
+<li>
+<p>if <span class="arithmatex">\(T\in First(\gamma)\)</span> then enter <span class="arithmatex">\((X\rightarrow \gamma)\)</span> in row X, col T.</p>
+<p>当我们碰到 <span class="arithmatex">\(First(\gamma)\)</span> 时就可以选这条产生式。</p>
+</li>
+<li>
+<p>if <span class="arithmatex">\(\gamma\)</span> is Nullable and <span class="arithmatex">\(T\in Follow(X)\)</span> enter <span class="arithmatex">\((X\rightarrow \gamma)\)</span> in row X, col T.</p>
+<p>如果 <span class="arithmatex">\(\gamma\)</span> 可以推出空串，那么当我们碰到 <span class="arithmatex">\(Follow(X)\)</span> 时就可以选这条产生式。</p>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>接上面的例子，依然是扫一遍所有的产生式，填表。
+<div align = center><img src="https://cdn.hobbitqia.cc/20240323155616.png" width=60%></div></p>
+<p>比如 <span class="arithmatex">\(Z\rightarrow XYZ\)</span>，我们要看 First(XYZ)，这个集合为所有终止符，故在第一行均填入 <span class="arithmatex">\(Z\rightarrow XYZ\)</span>.</p>
+</div>
+<ul>
+<li>
+<p><strong>LL(1) grammar</strong>: the so-obtained predictive parsing table contains no duplicate entries.</p>
+<p>即我们得到的表中没有不会有一个格子有多个产生式。</p>
+<ul>
+<li>If not, the grammar is not LL(1).</li>
+<li>every LL(k) grammar is an LL(k+n) grammar, for any <span class="arithmatex">\(n\geq 0\)</span>.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p>有个表之后，可以这样实现语法分析：
+<div align = center><img src="https://cdn.hobbitqia.cc/20240323160604.png" width=60%></div></p>
+</details>
+<h4 id="eliminate-multiple-productions">Eliminate Multiple Productions<a class="headerlink" href="#eliminate-multiple-productions" title="Permanent link">&para;</a></h4>
+<p>到目前为止，我们找到了可能出现的第一个终止符。但是仍然可能出现多重定义的问题，如一个表格里有多条产生式。这个的原因可能是：</p>
+<ul>
+<li>
+<p>左递归，需要 Eliminate Left-Recursion.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240323161216.png" width=70%></div></p>
+</div>
+<p>Eliminate Left-Recursion: <strong>Rewrite</strong> the grammar so it parses the same language but with different productions.
+<div align = center><img src="https://cdn.hobbitqia.cc/20240323161324.png" width=70%></div></p>
+<p>消除了左递归，现在是右递归（右递归不影响出现在第一个的终结符），但是保持了原有的语言。</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240323161621.png" width=65%></div></p>
+</details>
+</li>
+<li>
+<p>公共项，需要 Left Factoring.</p>
+<p>If two productions of the same non-terminal start with the same symbols, LL(1) parsing table will contain duplicate entries.  </p>
+<p>Left Factoring 是将公共的前缀提取出来，然后用一个新的非终结符代替。</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240323162005.png" width=60%></div></p>
+</details>
+</li>
+</ul>
+<h4 id="error-recovery">Error Recovery<a class="headerlink" href="#error-recovery" title="Permanent link">&para;</a></h4>
+<ul>
+<li>A blank entry indicates a syntax error. </li>
+<li>How should errors be handled?<ul>
+<li>Raise an exception and quit parsing.</li>
+<li>
+<p>print an error message and recover from the error.</p>
+<p>通常使用这种方法。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Errors can be recovered by <strong>deleting</strong>, <strong>replacing</strong>, or <strong>inserting</strong> tokens.</p>
+<ul>
+<li>
+<p>inserting: pretend we have the token and return normally. <strong><em>e.g.</em></strong> 比如我们发现少了一个右括号，我们可以假想这里有一个右括号，然后继续分析。</p>
+<p>插入操作比较危险，无法保证编译的过程会终止（可能会无限循环）。</p>
+</li>
+<li>
+<p>deleting: skip the token and return normally. <strong><em>e.g.</em></strong> 比如我们发现多了一个右括号，我们可以跳过这个右括号，然后继续分析。</p>
+<p>Deleting tokens is safer, because the loop must eventually terminate when EOF is reached.</p>
+<details class="example">
+<summary>Example</summary>
+<p>Simple recover by deletion works by skipping tokens util a token in the <em>FOLLOW</em> set is reached.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">Tprime_follow</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">PLUS</span><span class="p">,</span><span class="w"> </span><span class="n">RPAREN</span><span class="p">,</span><span class="w"> </span><span class="n">EOF</span><span class="p">};</span><span class="w"> </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Tprime</span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">tok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">PLUS</span><span class="p">:</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">TIMES</span><span class="p">:</span><span class="w"> </span><span class="n">eat</span><span class="p">(</span><span class="n">TIMES</span><span class="p">);</span><span class="w"> </span><span class="n">F</span><span class="p">();</span><span class="w"> </span><span class="n">Tprime</span><span class="p">();</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">RPAREN</span><span class="p">:</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">EOF</span><span class="p">:</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;expected +, *, right-paren, or end-of-file&quot;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">skipto</span><span class="p">(</span><span class="n">Tprime_follow</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span><span class="w"> </span>
+</code></pre></div></p>
+</details>
+</li>
+<li>
+<p>replacing: replace the token and return normally. <strong><em>e.g.</em></strong> 比如我们发现一个变量名拼写错误，我们可以替换成正确的变量名，然后继续分析。</p>
+</li>
+</ul>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<ul>
+<li>CFGs are good at specifying programming language structure (in contrast to regular expressions)</li>
+<li>We define parsers from simple classes of CFGs<ul>
+<li>LL(k), LR(k)</li>
+</ul>
+</li>
+<li>We can build a predictive parser for LL(k) grammars by<ul>
+<li>computing Nullable, First and Follow sets</li>
+<li>constructing a parsing table from these sets</li>
+<li>checking for duplicate entries, which indicate failures</li>
+<li>creating a C program from the parsing table</li>
+</ul>
+</li>
+<li>If parser construction fails, we can<ul>
+<li>rewrite the grammar (left factoring, eliminating left recursion) and try again</li>
+<li>try to build a parser using some other methods</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="bottom-up-parsing">Bottom-Up Parsing<a class="headerlink" href="#bottom-up-parsing" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>LL(k) parsing</strong> is efficient and easy to write by hand.<ul>
+<li>The weakness of LL(k) parsing is that they must <em>predict</em> which production to use, having seen <em>only the first k tokens</em> of the right-hand side. </li>
+</ul>
+</li>
+<li>
+<p><strong>LR(k) parsing</strong>: The most prevalent type</p>
+<ul>
+<li>Shift-Reduce Parsing</li>
+<li>
+<p>More powerful than LL(k) parsing: able to postpone the decision until it has seen input tokens corresponding to the entire right-hand side of the production in question. </p>
+<p>不着急做匹配，直到我把产生式右侧的所有符号都看完了再做决定。</p>
+</li>
+<li>
+<p>LR(k): Left-to-right parse, Rightmost derivation, k-token lookahead</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Variant: <strong>LALR</strong> (Look-Ahead LR) parsing:</p>
+<ul>
+<li>basis for parsers of most modern programming languages </li>
+<li>implemented in tools such as Yacc </li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240323164019.png" width=70%></div></p>
+</div>
+<ul>
+<li>
+<p><strong>Idea</strong>: reduce the string to the start symbol.</p>
+<p>从输入出发，尝试推出初始符（把产生式的右侧替换成左侧）。</p>
+</li>
+</ul>
+<h3 id="lr-parsing">LR Parsing<a class="headerlink" href="#lr-parsing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span class="arithmatex">\(\alpha . \beta\)</span>: left substring has terminals and non-terminals, right substring contains only terminals.</p>
+<p><span class="arithmatex">\(\alpha\)</span> 是已经处理过的输入，<span class="arithmatex">\(\beta\)</span> 是还没处理的。最开始输入都是终止符，因此处理之后可以有非终止符，还没处理的一定是终止符。</p>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>第二行读一个 token，把 int 移到左边，称为 shift. 我们尝试把 int reduce 为非终结符 T，但这样就无法再匹配了，所以我们继续 shift。读到 int*int 时可以第二个 int reduce 为 T，然后 int*T reduce 为 T，最后继续 shift、reduce。
+<div align = center><img src="https://cdn.hobbitqia.cc/20240327192823.png" width=65%></div></p>
+<p>这里 . 左侧的元素称为 parse state，我们用栈来存储。</p>
+</div>
+<ul>
+<li>Parser keeps track of<ul>
+<li>position in current input (what input to read next)</li>
+<li>a stack of terminal &amp; non-terminal symbols representing the “parse so far”</li>
+</ul>
+</li>
+<li>The parser performs several actions:<ul>
+<li><strong>shift</strong>: push next input onto top of stack</li>
+<li><strong>reduce</strong> R:  <ul>
+<li>top of stack should match RHS of rule R (<strong><em>e.g.</em></strong>, X -&gt; A B C)</li>
+<li>pop the RHS from the top of stack (<strong><em>e.g.</em></strong>, pop C B A)</li>
+<li>push the LHS onto the stack (<strong><em>e.g.</em></strong>, push X)</li>
+</ul>
+</li>
+<li><strong>error</strong></li>
+<li><strong>accept</strong>: shift $ and can reduce what remains on stack </li>
+</ul>
+</li>
+</ul>
+<p>How does parser know <strong>when to shift</strong> and <strong>when to reduce</strong>?</p>
+<ul>
+<li>LR(k) parsing 表示我们要看 k 个 token 来决定我们的决策。</li>
+</ul>
+<h4 id="lr0-parsing">LR(0) Parsing<a class="headerlink" href="#lr0-parsing" title="Permanent link">&para;</a></h4>
+<p><strong>LR(0) grammars</strong> are those can be parsed looking only at the stack, making shift/reduce decisions without any lookahead.</p>
+<p>只看栈顶的元素，决定是否 shift / reduce。类似于 DFA 的思想。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>在产生式上打点，代表我们希望接下来看到的东西。对于从 S'-&gt;.S$ 到 S-&gt;.a 是因为，我们期望后面看到一个 S，如果说看到了 a，那么 a 是可以 reduce 为 S 的，而这是不需要消耗读入的 token 的。
+<div align = center><img src="https://cdn.hobbitqia.cc/20240327194825.png" width=65%></div></p>
+<p>这里有 <span class="arithmatex">\(\epsilon\)</span> 边，因此是 NFA。我们可以直接转化为 DFA。
+<div align = center><img src="https://cdn.hobbitqia.cc/20240327195015.png" width=65%></div></p>
+<p>我们把边上是终结符的称为 shift 边，边上是非终结符的称为 goto 转换边（不消耗输入）。</p>
+</div>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240327200140.png" width=65%></div>
+
+<ul>
+<li>如果点后面是个非终结符，那么我们可以把所有非终结符的产生式加上点加入闭包。</li>
+<li>把点从后面挪一位，就把闭包加入 J，这是在算一个新的状态。</li>
+</ul>
+<p>注意 DFA 不是用来匹配这个语法（因为表达能力有限），而是用来指导我们进行 parsing。</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240327202646.png" width=60%></div></p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>维护了两个栈，state 和 symbol
+<div align = center><img src="https://cdn.hobbitqia.cc/20240327203109.png" width=60%></div></p>
+<p>初始时 1 在栈顶，symbol 为空。首先 shift 3（即先读一个 symbol 然后状态 1 到状态 3），把 3 压栈，把 ( 也压栈。随后继续 shift 压入 x 和状态 2，然后 reduce。因为这个状态没有出边了，所以我们 pop 出 x 和状态 2 进行回退，然后 reduce 2（这里的 2 表示第二条产生式），把 x 反向 reduce 为 S，把 S 压栈。此时栈顶是 3 和 S，我们应该 shift（实际上是 goto）到状态 7，把 7 压栈。（goto 操作不是终结符，所以不能把 S 立刻弹出）。7 也是一个终结状态，需要 reduce 3，把 S 变成 L。把 7、3 压栈，goto 到 5，压栈 5（symbol 不变）。最后 shift ) 走到 6，此时栈上依次是 ) L S，reduce 1，最后全弹出去。（弹多少元素就要弹多少状态）最后读入 $ 就可以 accept。</p>
+<details class="note">
+<summary>Figure</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240327204625.png" width=60%></div></p>
+</details>
+</div>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240327204645.png" width=70%></div>
+
+<p>类似 DFA，通过查表的方法实现。注意非终结符和终结符的操作不同。注意这里的状态 2，无论输入什么都要 reduce 2，因为此时已经没有出边了（相当于看到底了），无论输入什么都要 reduce。</p>
+<ul>
+<li>Shift(n): Advance input one token; push n on stack.  </li>
+<li>Reduce&reg;: Pop stack as many times as the number of symbols on the RHS of rule r; Let X be the LHS symbol of rule r; In the state now on top of stack, look up X to get “goto n”; Push n on top of stack. </li>
+<li>Accept: Stop parsing, report success.</li>
+<li>Error: Stop parsing, report failure.</li>
+</ul>
+<h4 id="slr-simple-lr-parsing">SLR (Simple LR) Parsing<a class="headerlink" href="#slr-simple-lr-parsing" title="Permanent link">&para;</a></h4>
+<p>LR(0) 存在问题：Shift-reduce conflict.</p>
+<p><strong>Shift-reduce conflict</strong> indicates that the grammar is not LR(0) - it cannot be parsed by an LR(0) parser. </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>存在冲突，当我在状态 3 时，我既可以 shift +，又可以 reduce 2。这种情况下我们需要看后面的 token 来决定。
+<div align = center><img src="https://cdn.hobbitqia.cc/20240329155645.png" width=60%></div></p>
+<p>但其实这里本质上不存在冲突，如果我们 reduce 2 了把 T reduce 回 E，那么接下来期望看到的 token 一定在 Follow(E) 中，而 Follow(E) 中没有 +，所以我们其实这里是不能 reduce 的。</p>
+<p>Idea: we can choose the reduce action only if the next input token <span class="arithmatex">\(t \in Follow(E)\)</span>.
+<div align = center><img src="https://cdn.hobbitqia.cc/20240329160239.png" width=55%></div></p>
+<p>现在这里的表就不能把 r2 填入 (3,+) 里了，因为 + 不在 Follow(E) 中。</p>
+</div>
+<p><strong>Sol</strong>: Put reduce actions into the table only where indicated by the <strong>FOLLOW</strong> set. </p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240329160232.png" width=65%></div>
+
+<h4 id="lr1-parsing">LR(1) Parsing<a class="headerlink" href="#lr1-parsing" title="Permanent link">&para;</a></h4>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>这里 SLR 也无法处理：当我们在红色框的状态时，如果来了 =，我们既可以 shift + 又可以 reduce 3. 但是此时 FOLLOW(E)={+,$}，无法解决冲突。
+<div align = center><img src="https://cdn.hobbitqia.cc/20240329160318.png" width=65%></div></p>
+<p>实际上这里只能 shift，否则假设当前为 V.=x，如果我们 reduce 的话，那么式子变为 E=x，这个无法继续推导了。</p>
+</div>
+<p>LR(1) parsing is more powerful than SLR parsing.</p>
+<ul>
+<li><strong>Idea</strong>: add more information into the state of DFA so that we can resolve the conflicts!</li>
+<li>
+<p>An <strong>LR(1) item</strong> consists of a production, a right-hand-side position (represented by the dot), and a <strong>lookahead symbol</strong>. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\((A \rightarrow\alpha.\beta, x)\)</span></p>
+<p>我们额外加了一个 symbol x，称为 lookahead symbol，表示当我们把产生式右边所有看完后，能够出现的 token 是什么。（即 <span class="arithmatex">\(\beta x\)</span> 是整个待处理的输入）接下来要处理的 input 是可以从 <span class="arithmatex">\(\beta x\)</span> 推出来的串的开头。</p>
+</li>
+<li>
+<p>We record the token after <strong>the whole RHS</strong> of this production.</p>
+</li>
+<li>For item <span class="arithmatex">\((A \rightarrow\alpha.\beta, x)\)</span>, the next input token should be in <span class="arithmatex">\(First(\beta x)\)</span> (<span class="arithmatex">\(\beta\)</span> can be empty)</li>
+</ul>
+</li>
+<li>
+<p>Closure</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240329161623.png" width=65%></div></p>
+<p>因为我们最终匹配的符号是 $，因此起始状态里的 lookup table 我们用 ? 占位，表示不关心这个符号。</p>
+</li>
+<li>
+<p>Goto</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240329161910.png" width=65%></div></p>
+</li>
+<li>
+<p>Reduce</p>
+<p>当我想要 reduce 时，我们下一个符号必须是 <span class="arithmatex">\(z\)</span>. 如果不是，那么我们就不能 reduce。
+<div align = center><img src="https://cdn.hobbitqia.cc/20240329161924.png" width=65%></div></p>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240329162010.png" width=65%></div></p>
+<p>现在看状态 3，当我下一个 token 是 = 时，这里的 lookup symbol 是 $，不匹配所以不能 reduce。
+<div align = center><img src="https://cdn.hobbitqia.cc/20240329162214.png" width=60%></div></p>
+<p>随后得到 parsing table:
+<div align = center><img src="https://cdn.hobbitqia.cc/20240329162457.png" width=60%></div></p>
+<p>同一个 reduce action 可以出现在不同的行（即不同的状态），这在 LR(0) 是不会出现的。因为我们用 lookup symbol 对状态做了更细的划分，因此可以出现在不同的状态。</p>
+</div>
+<p>LR(1) parsing tables can be very large, with many states.</p>
+<ul>
+<li>
+<p><strong>LALR(1) parsing</strong>: the parsing table is made by merging any two states whose items are identical except for lookahead sets in the LR(1) parsing table.</p>
+<p>对 LR(1) parsing table 做合并（对表而不是 DFA），如果两个状态的产生式相同就合并（不考虑 lookup symbol）</p>
+<div class="admonition example">
+<p class="admonition-title">LALR(1)</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240329162821.png" width=65%></div></p>
+<p>LALR 可能会引入 reduce-reduce 冲突，但实际上很罕见，现在比较实用。</p>
+</div>
+</li>
+</ul>
+<h2 id="hierarchy-of-grammar-classes">Hierarchy of Grammar Classes<a class="headerlink" href="#hierarchy-of-grammar-classes" title="Permanent link">&para;</a></h2>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240329162956.png" width=70%></div>
+
+<div class="admonition info">
+<p class="admonition-title">LR Parsing of Ambiguous Grammars</p>
+<p>这里的 if-else 可能有二义性，第二个 if 与谁匹配。我们希望看到 1 这种情况，但这里会有 shift-reduce 冲突。
+<div align = center><img src="https://cdn.hobbitqia.cc/20240329163215.png" width=60%></div></p>
+<ul>
+<li>
+<p>重写文法: The ambiguity can be eliminated by introducing auxiliary non-terminals <strong>M (for matched if)</strong> and <strong>U (for unmatched if)</strong>.</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20240329163357.png" width=65%></div></p>
+</li>
+<li>
+<p>When constructing the parsing table, this conflict should be resolved by shifting (prefer interpretation (1)). </p>
+<p>不重写文法，而是人为地告诉编译器选择哪种规则。但是我们一般不希望强制规定优先级的方式来解决冲突。</p>
+</li>
+</ul>
 </div>
 
   <hr>

@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/ICS/ICS-1/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/Paper/softmax/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../FAST/">
       
       
-        <link rel="next" href="../ICS-2/">
+        <link rel="next" href="../../Misc/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Introduction - HobbitQia的笔记本</title>
+        <title>Softmax 加速 - HobbitQia的笔记本</title>
       
     
     
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-1-introduction" class="md-skip">
+        <a href="#softmax" class="md-skip">
           跳转至
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Softmax 加速
             
           </span>
         </div>
@@ -281,21 +281,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../ICS/" class="md-tabs__link">
           
   
     
@@ -372,11 +368,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Paper/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -1713,8 +1711,6 @@
       
   
   
-    
-  
   
     
     
@@ -1737,13 +1733,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -1756,7 +1752,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             System
@@ -1767,8 +1763,6 @@
                 
   
   
-    
-  
   
     
     
@@ -1797,18 +1791,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../ICS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1824,7 +1818,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             计算机系统概论
@@ -1837,29 +1831,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ICS/ICS-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1868,108 +1842,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#two-major-themes" class="md-nav__link">
-    Two major themes
-  </a>
-  
-    <nav class="md-nav" aria-label="Two major themes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#abstraction" class="md-nav__link">
-    Abstraction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hardware-vs-software" class="md-nav__link">
-    Hardware vs Software
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-computer-system" class="md-nav__link">
-    A computer system
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#level-of-transfomation" class="md-nav__link">
-    Level of Transfomation
-  </a>
-  
-    <nav class="md-nav" aria-label="Level of Transfomation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem" class="md-nav__link">
-    problem
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
-    Algorithm
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#programs" class="md-nav__link">
-    programs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#instruction-set-architectureisa" class="md-nav__link">
-    Instruction Set Architecture(ISA)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#microarchitecture" class="md-nav__link">
-    Microarchitecture
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1981,7 +1853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-2/" class="md-nav__link">
+      <a href="../../ICS/ICS-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2001,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-3/" class="md-nav__link">
+      <a href="../../ICS/ICS-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2021,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-4/" class="md-nav__link">
+      <a href="../../ICS/ICS-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2041,7 +1913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-5/" class="md-nav__link">
+      <a href="../../ICS/ICS-5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2061,7 +1933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-6/" class="md-nav__link">
+      <a href="../../ICS/ICS-6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2081,7 +1953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-7/" class="md-nav__link">
+      <a href="../../ICS/ICS-7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2101,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-8/" class="md-nav__link">
+      <a href="../../ICS/ICS-8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2121,7 +1993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS-9/" class="md-nav__link">
+      <a href="../../ICS/ICS-9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4192,6 +4064,8 @@
       
   
   
+    
+  
   
     
     
@@ -4216,18 +4090,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Paper/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4243,7 +4117,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Papers
@@ -4258,7 +4132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/BiS-KM/" class="md-nav__link">
+      <a href="../BiS-KM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4278,7 +4152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/ZeRO/" class="md-nav__link">
+      <a href="../ZeRO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4298,7 +4172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/Megatron-LM/" class="md-nav__link">
+      <a href="../Megatron-LM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4318,7 +4192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/GPipe/" class="md-nav__link">
+      <a href="../GPipe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4338,7 +4212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/mixed_precision/" class="md-nav__link">
+      <a href="../mixed_precision/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4358,7 +4232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/FAST/" class="md-nav__link">
+      <a href="../FAST/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4376,9 +4250,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Paper/softmax/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Softmax 加速
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4387,6 +4281,108 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    背景
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hyft" class="md-nav__link">
+    HYFT 架构
+  </a>
+  
+    <nav class="md-nav" aria-label="HYFT 架构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameterized-input-pre-processr" class="md-nav__link">
+    Parameterized Input Pre-Processr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-exponent-unit" class="md-nav__link">
+    Hybrid Exponent Unit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-adder-tree" class="md-nav__link">
+    Hybrid Adder Tree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divisionmultiplication-unit" class="md-nav__link">
+    Division/Multiplication Unit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#softmax-backpropagation-for-training" class="md-nav__link">
+    Softmax Backpropagation For Training
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    实验
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    评论
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4595,23 +4591,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#two-major-themes" class="md-nav__link">
-    Two major themes
+  <a href="#_1" class="md-nav__link">
+    介绍
   </a>
   
-    <nav class="md-nav" aria-label="Two major themes">
+    <nav class="md-nav" aria-label="介绍">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#abstraction" class="md-nav__link">
-    Abstraction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hardware-vs-software" class="md-nav__link">
-    Hardware vs Software
+  <a href="#_2" class="md-nav__link">
+    背景
   </a>
   
 </li>
@@ -4622,57 +4611,64 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#a-computer-system" class="md-nav__link">
-    A computer system
+  <a href="#hyft" class="md-nav__link">
+    HYFT 架构
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#level-of-transfomation" class="md-nav__link">
-    Level of Transfomation
-  </a>
-  
-    <nav class="md-nav" aria-label="Level of Transfomation">
+    <nav class="md-nav" aria-label="HYFT 架构">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#problem" class="md-nav__link">
-    problem
+  <a href="#parameterized-input-pre-processr" class="md-nav__link">
+    Parameterized Input Pre-Processr
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
-    Algorithm
+  <a href="#hybrid-exponent-unit" class="md-nav__link">
+    Hybrid Exponent Unit
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#programs" class="md-nav__link">
-    programs
+  <a href="#hybrid-adder-tree" class="md-nav__link">
+    Hybrid Adder Tree
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#instruction-set-architectureisa" class="md-nav__link">
-    Instruction Set Architecture(ISA)
+  <a href="#divisionmultiplication-unit" class="md-nav__link">
+    Division/Multiplication Unit
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#microarchitecture" class="md-nav__link">
-    Microarchitecture
+  <a href="#softmax-backpropagation-for-training" class="md-nav__link">
+    Softmax Backpropagation For Training
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    实验
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    评论
+  </a>
   
 </li>
       
@@ -4695,130 +4691,146 @@
   
 
 
-<h1 id="chapter-1-introduction">Chapter 1 Introduction<a class="headerlink" href="#chapter-1-introduction" title="Permanent link">&para;</a></h1>
+<h1 id="softmax">通过自适应数字格式实现训练和推理时的 Softmax 加速<a class="headerlink" href="#softmax" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>Covered in Lecture 1 2022.7.11<br />
-Topics:  <br />
-1. Two major themes: Abstraction and Hardware vs Software <br />
-2. A computer system <br />
-3. Level of Transfomation  </p>
-</div>
-<h2 id="two-major-themes">Two major themes<a class="headerlink" href="#two-major-themes" title="Permanent link">&para;</a></h2>
-<h3 id="abstraction">Abstraction<a class="headerlink" href="#abstraction" title="Permanent link">&para;</a></h3>
-<p>Too much or too tedious <strong>low-level details</strong> are abstracted into <strong>high-level interfaces</strong> that are easy to understand and use, thereby improving <strong>efficiency.</strong></p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>You get in a taxi and you tell the driver to go to the airport. By contrast you can tell the driver each step like making a right turn, going down this street ten blocks and so on, which is not efficienct at all. However if you just tell him to go to the airport, then things are done.</p>
-</div>
-<p>There is an underlying assumption, <strong>when everything about the detail is just fine.</strong><br />
-If we want to combine multiple components into a larger system, we should be careful about the components below the abstractions.  </p>
-<h3 id="hardware-vs-software">Hardware vs Software<a class="headerlink" href="#hardware-vs-software" title="Permanent link">&para;</a></h3>
-<p>Both are important.</p>
-<h2 id="a-computer-system">A computer system<a class="headerlink" href="#a-computer-system" title="Permanent link">&para;</a></h2>
 <ul>
-<li>CPU : operating data  </li>
-<li>MEM : storage or memory  </li>
-<li>Input &amp; output devices （I/O)  </li>
-<li>Input: By typing input informations to CPU(keyboard)  </li>
-<li>Output: Show the outcome done by CPU on monitor  </li>
+<li>Paper: <a href="https://arxiv.org/abs/2311.13290">Softmax Acceleration with Adaptive Numeric Format for both Training and Inference</a>
+本文中的图片均来自论文。</li>
 </ul>
-<h2 id="level-of-transfomation">Level of Transfomation<a class="headerlink" href="#level-of-transfomation" title="Permanent link">&para;</a></h2>
-<p>problem(in natural languages)-&gt;electrons<br />
-by a sequence of transformation called level of transformation  </p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Problem (Natural language)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">Algorithm (eliminate ambiguity)</td>
-</tr>
-<tr>
-<td style="text-align: center;">Program (Python, C++, ...)</td>
-</tr>
-<tr>
-<td style="text-align: center;">Instruction set architecture(ISA)</td>
-</tr>
-<tr>
-<td style="text-align: center;">Micro-architecture</td>
-</tr>
-<tr>
-<td style="text-align: center;">Logic circuit</td>
-</tr>
-<tr>
-<td style="text-align: center;">Electronic circuit</td>
-</tr>
-<tr>
-<td style="text-align: center;">Electrons</td>
-</tr>
-</tbody>
-</table>
-<h3 id="problem">problem<a class="headerlink" href="#problem" title="Permanent link">&para;</a></h3>
-<p>Natural languages may have ambiguity.  </p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>"安" can mean peace(a woman in a house.), safety(公安 police), contentment while it can also mean inexpensive, cheap in Japenese.<br />
-“东西” means direction east and west, while it also means item, which may cause ambiguity.</p>
 </div>
-<p>However, The statement of the problem should have <strong>No Ambiguity</strong>.  </p>
-<h3 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h3>
-<p>Algorithm is a procedure step by step.</p>
+<h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>definite, means no ambiguity.  </li>
-<li>effective computability(可行的), means every step can be successfully carried out.  </li>
-<li>finiteness, means the procedure will terminate.  </li>
+<li>Transformer 里非常重要的是就是注意力 Attention 机制，其中我们要用到 softmax 函数评估输入的各个部分之间的相关程度。</li>
+<li>但是 softmax 内部存在非线性操作和数据依赖性，会显著增加 Transformer 网络中的处理延迟和能耗。</li>
+<li>本文提出了 Hyft，一种用于训练和推理的硬件高效浮点 Softmax 加速器。Hyft 自适应地将中间结果转换为不同的数字格式，从而加速对应的运算。</li>
 </ul>
-<h3 id="programs">programs<a class="headerlink" href="#programs" title="Permanent link">&para;</a></h3>
-<p>Transform the algorithm into a computer program in one of the programming languages precisely.  </p>
+<h3 id="_2">背景<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>Softmax 函数：假设输入 <span class="arithmatex">\(z=[z_1,z_2,\ldots, z_N]^\top\)</span>, 输出为 <span class="arithmatex">\(s=[s_1,s_2,\ldots,s_N]^\top\)</span>, 其中：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+s_i &amp;= \dfrac{e^{z_i}}{\sum_{j=1}^N e^{z_j}}\\
+&amp; =\dfrac{e^{z_i-z_{max}}}{\sum_{j=1}^N e^{z_j-z_{max}}}
+\end{aligned}
+\]</div>
+<p>直接计算可能导致数据不稳定，进一步导致 NaN 输出。为此我们减去输入的最大值（即第二行）。</p>
+<p>反向传播时，我们可以求出：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\dfrac{ds}{dz} &amp;= diag(s) - ss^\top\\
+                &amp; = \left[\begin{matrix} s_1(1-s_1) &amp; -s_1s_2 &amp; \ldots &amp; -s_1s_N\\
+                                        -s_2s_1 &amp; s_2(1-s_2) &amp; \ldots &amp; -s_2s_N\\
+                                        \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+                                        -s_Ns_1 &amp; -s_Ns_2 &amp; \ldots &amp; s_N(1-s_N)
+                                        \end{matrix}\right]
+\end{aligned}
+\]</div>
+<h2 id="hyft">HYFT 架构<a class="headerlink" href="#hyft" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240402102819.png" /></p>
+<p>Hyft 支持 FP16 或 FP32 中的输入和输出数据。中间涉及数制的转化，如上图，红色线表示我们使用的是定点数，绿色线表示我们使用的是浮点数。</p>
+<h3 id="parameterized-input-pre-processr">Parameterized Input Pre-Processr<a class="headerlink" href="#parameterized-input-pre-processr" title="Permanent link">&para;</a></h3>
+<p>这个模块要完成：</p>
 <ul>
-<li>high-level languages: they are independent of the computer
-on which the programs will execute. We say the language is“machine independent.(Python, C++,...)  </li>
-<li>low-level languages: they are tied to the computer on which the programs will execute. There is generally one such low-level language for each computer. That language is called
-the assembly language for that computer.(x86)</li>
+<li>找到输入向量的最大值。</li>
+<li>将向量和最大值转为定点数格式并输出。</li>
 </ul>
-<h3 id="instruction-set-architectureisa">Instruction Set Architecture(ISA)<a class="headerlink" href="#instruction-set-architectureisa" title="Permanent link">&para;</a></h3>
-<p>ISA is the interface between software(program) and hardware.  </p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>汽车的 ISA 就是人需要知道他能让车做什么，以及车需要做到人指定的任务的规范。<br />
-对于一辆车的踏板，人知道如果他踩下去，那么这辆车会刹车。车知道如果踏板受到了压力，车的硬件会让车停下。ISA 的作用就是将人踩刹车和车停下对应起来。</p>
-</div>
-<p><strong><em>e.g.</em></strong> x86(1979 8086, 286, 386, 486), Power-PC, Sparc<br />
-ISA contains:</p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240402103545.png" /></p>
 <ul>
-<li>opcode: is used to describe operation  </li>
-<li>data type: a representation of <strong>operand</strong>.  </li>
-<li>addressing mode: mechanism that computer can use to find the address of the operands.(寻址模式)  </li>
-<li>Address ability: how many bytes per memory-slot</li>
+<li>
+<p>为了加速最大值的搜索，本文引入了可配置的参数 STEP，用来表示搜索的步长。<strong><em>e.g.</em></strong> STEP=1 时我们会遍历所有的输入，STEP=2 时我们会每隔一个输入进行搜索。</p>
+<p>我们在评估部分表明，大多数任务都可以通过加速的最大搜索过程来执行，而不会降低任何精度。</p>
+</li>
+<li>
+<p>与最大搜索块并行，输入预处理器中有浮点到定点转换器（FP2FX），可将浮点输入及其最大值转换为定点格式。</p>
+</li>
 </ul>
-<h3 id="microarchitecture">Microarchitecture<a class="headerlink" href="#microarchitecture" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>所有的汽车都有相同的 ISA，例如所有的汽车中三个踏板的定义完全相同，即中间的是刹车、右边的是油门、左边的是离合器。
-而将 ISA 实现的具体组织（微结构）是指车盖板下的“内容”。所有的汽车，其制造和模型都不尽相同，这取决于设计者在制造之前所做的权衡决策，如有的制动系统采用刹车片，有的采用制动鼓；有的是八缸发动机，有的是六缸，还有的是四缸；有的有涡轮增压，有的没有。我们称这些差异性的细节为一个特定汽车的“微结构”，它们反映了设计者在成本和性能之间所做的权衡决策。</p>
-</div>
-<p><strong><em>e.g.</em></strong> 对同样指令集 x86, 他的微结构从 8086, 80286, 80386, 80486...直到如今的的 Skylake.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>ISA 将我们的程序(language)转化为 01 字符串(类似于汇编中的机器码 如E8 01代表jmp)，而微结构是其对应的物理实现(电路)。
-因此对于同样的 01 字符串，其实现的功能相同，但可以有各种不同的物理实现；但一套微结构只能实现一类 ISA.
-——by tsjj</p>
-</div>
-<p>Logic Circuit and devices will be discussed later.</p>
+<h3 id="hybrid-exponent-unit">Hybrid Exponent Unit<a class="headerlink" href="#hybrid-exponent-unit" title="Permanent link">&para;</a></h3>
+<p>这个模块要完成：</p>
+<ul>
+<li>定点数格式下计算 <span class="arithmatex">\(e^{z_i-z_{max}}\)</span>。</li>
+<li>将结果转为浮点数。</li>
+</ul>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240402105546.png" /></p>
+<p>为了简化指数运算，我们有：</p>
+<div class="arithmatex">\[
+e^{z^'} = 2^{z'\log_2(e)}=2^{u+v}
+\]</div>
+<ul>
+<li>这里 <span class="arithmatex">\(u,v\)</span> 分别代表 <span class="arithmatex">\(z'\log_2(e)\)</span> 的整数部分和小数部分。</li>
+<li>
+<p>对于输入的 <span class="arithmatex">\(z_i\)</span> 和 <span class="arithmatex">\(z_{max}\)</span>，我们先计算 <span class="arithmatex">\(z'=z_i-z_{max}\)</span>，然后计算 <span class="arithmatex">\(z'\log_2(e)\approx z'+(z' &gt;&gt; 1) - (z' &gt;&gt; 4)\)</span>，根据结果提取出 <span class="arithmatex">\(u,v\)</span>.</p>
+<details class="info">
+<summary><span class="arithmatex">\(e^{z'}\)</span> 近似</summary>
+<ul>
+<li>我们估计 <span class="arithmatex">\(\log_2(e)\approx 1.0111_2\)</span>, 那么 <span class="arithmatex">\(z'\log_2(e) \approx z'+(z'&gt;&gt;2) + (z'&gt;&gt;3)+(z'&gt;&gt;4)\)</span>.</li>
+<li>通过 Booth 算法，可以化简为 <span class="arithmatex">\(z'+(z'&gt;&gt;1)-(z'&gt;&gt;4)\)</span>.</li>
+</ul>
+</details>
+</li>
+<li>
+<p>将结果转为浮点数，这里指数部分是 <span class="arithmatex">\(u-1\)</span>, 尾数部分是 <span class="arithmatex">\(1+v\)</span>.</p>
+<details class="info">
+<summary>定点数转浮点数</summary>
+<ul>
+<li>根据泰勒展开，<span class="arithmatex">\(e^{z'}=2^{u+v}\approx 2^u(1+v/2), u\leq 0, -1&lt;v\leq 0\)</span>.<ul>
+<li>因为 <span class="arithmatex">\(2^v\approx 1+ln(2)\cdot v \approx 1+v/2\)</span></li>
+</ul>
+</li>
+<li>当我们把定点数转换为浮点时，我们可以发现，<span class="arithmatex">\(e^{z'}\approx 2^u(1+v/2)=2^{u-1}(1+(1+v))\)</span>. 因此可以从中提取出指数和尾数。</li>
+</ul>
+</details>
+</li>
+</ul>
+<h3 id="hybrid-adder-tree">Hybrid Adder Tree<a class="headerlink" href="#hybrid-adder-tree" title="Permanent link">&para;</a></h3>
+<p>这个模块要完成：</p>
+<ul>
+<li>先把 <span class="arithmatex">\(e^{z'}\)</span> 转化为定点数。</li>
+<li>定点数格式下计算 <span class="arithmatex">\(\sum_{j=1}^N e^{z_j-z_{max}}\)</span>.</li>
+<li>最后通过 leading one detector(LOD) 结构将结果转化回浮点数。</li>
+</ul>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240402112008.png" /></p>
+<h3 id="divisionmultiplication-unit">Division/Multiplication Unit<a class="headerlink" href="#divisionmultiplication-unit" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240402113051.png" /></p>
+<p>我们可以这样实现除法：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\dfrac{a}{b} &amp; = 2^{e_a}(1+m_a)/2^{e_b}(1+m_b) = 2^{e_a - e_b + \log_2(1+m_a) - \log_2(1+m_b)}\\
+&amp; \approx 2^{e_a - e_b + m_a - m_b} \approx 2^{e_a - e_b}(1+m_a - m_b)
+\end{aligned}
+\]</div>
+<p>这里用浮点数执行运算，效率更高。而且本文这里是 16 位的浮点，误差是可以接受的。</p>
+<h3 id="softmax-backpropagation-for-training">Softmax Backpropagation For Training<a class="headerlink" href="#softmax-backpropagation-for-training" title="Permanent link">&para;</a></h3>
+<p>反向传播主要在于计算 <span class="arithmatex">\(ss^\top\)</span>, 计算方法如下：</p>
+<div class="arithmatex">\[
+a\times b = 2^{e_a}(1+m_a)\times 2^{e_b}(1+m_b) = 2^{e_a+e_b}(1+m_a+ m_b + m_am_b)
+\]</div>
+<p>可以看到相比于上面的除法，我们只多了一项 <span class="arithmatex">\(m_am_b\)</span>, 而这个可以由定点乘法器完成。剩余的部分我们可以复用上面的单元。</p>
+<h2 id="_3">实验<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>与原始 Softmax 实现的 BERT 模型在精度上的差异可以忽略不计。</li>
+<li>本文用 Hyft16 或 Hyft32 定制的 Softmax 实现替换了 BERT 中的原始 Softmax 层。然后在 GLUE 上微调了 BERT，观察到 Hyft 对训练精度没有任何明显影响，这表明 Hyft16 和 Hyft32 都可以集成到 Transformer 训练和推理中。</li>
+<li>固定了输入向量长为 8，在 Xilinx xc7z030 FPGA 上进行评估。</li>
+</ul>
+<h2 id="_4">评论<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>本文的近似方法值得借鉴：<ul>
+<li>计算指数 <span class="arithmatex">\(e^x\)</span> 的时候，先变到以 2 为底，再使用泰勒近似。</li>
+<li>浮点除法可以利用浮点数的格式，转为指数和尾数的减法。</li>
+</ul>
+</li>
+<li>设计思路：把适合定点数运算的部分尽可能放在一起，把适合浮点数运算的部分尽可能放在一起，这样可以减少数据格式转换的次数。</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:06:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月5日 00:23:06</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年9月5日 23:38:05</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月5日 00:23:06</span>
       
     
   </small>
