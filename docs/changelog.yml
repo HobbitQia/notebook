@@ -1,6 +1,9 @@
 - "2024":
   - "2024-5-30":
     - newpage:
+        text: Miscellaneous > CGRA
+        href: /Misc/CGRA/intro
+    - newpage:
         text: Miscellaneous > LLVM IR
         href: /Misc/LLVM/ir
   - "2024-4-5":

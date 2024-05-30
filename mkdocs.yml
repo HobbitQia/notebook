@@ -271,6 +271,8 @@ nav:
     - 浮点数与定点数: Misc/float.md
     - FPGA Programming: Misc/fpga.md
     - LLVM:
-      - LLVM IR: Misc/llvm/ir.md
+      - LLVM IR: Misc/LLVM/ir.md
+    - CGRA:
+      - CGRA 介绍: Misc/CGRA/intro.md
     - Android:
       - 触控事件的数据流: android/dataflow.md
