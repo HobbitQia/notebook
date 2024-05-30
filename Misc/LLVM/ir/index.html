@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/DB/db2/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/Misc/LLVM/ir/">
       
       
-        <link rel="prev" href="../db1/">
+        <link rel="prev" href="../../fpga/">
       
       
-        <link rel="next" href="../db3/">
+        <link rel="next" href="../../../android/dataflow/">
       
       
-      <link rel="icon" href="../../log.ico">
+      <link rel="icon" href="../../../log.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
     
     
       
-        <title>关系模型 - HobbitQia的笔记本</title>
+        <title>LLVM IR - HobbitQia的笔记本</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.30068a00.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.30068a00.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-      <link rel="stylesheet" href="../../css/timeline.css">
+      <link rel="stylesheet" href="../../../css/timeline.css">
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
     
@@ -58,17 +58,17 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../../../css/custom.css">
     
-      <link rel="stylesheet" href="../../css/card.css">
+      <link rel="stylesheet" href="../../../css/card.css">
     
-      <link rel="stylesheet" href="../../css/tasklist.css">
+      <link rel="stylesheet" href="../../../css/tasklist.css">
     
-      <link rel="stylesheet" href="../../css/flink.css">
+      <link rel="stylesheet" href="../../../css/flink.css">
     
-      <link rel="stylesheet" href="../../css/more_changelog.css">
+      <link rel="stylesheet" href="../../../css/more_changelog.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#relational-model" class="md-skip">
+        <a href="#llvm-ir" class="md-skip">
           跳转至
         </a>
       
@@ -111,9 +111,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href="../../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../../log.ico" alt="logo">
+  <img src="../../../log.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              关系模型
+              LLVM IR
             
           </span>
         </div>
@@ -236,7 +236,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -262,7 +262,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ds/" class="md-tabs__link">
+        <a href="../../../ds/" class="md-tabs__link">
           
   
     
@@ -281,21 +281,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../ICS/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../ICS/" class="md-tabs__link">
           
   
     
@@ -324,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../DL/" class="md-tabs__link">
+        <a href="../../../DL/" class="md-tabs__link">
           
   
     
@@ -353,7 +349,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
+        <a href="../../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
           
   
     
@@ -376,7 +372,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Paper/" class="md-tabs__link">
+        <a href="../../../Paper/" class="md-tabs__link">
           
   
     
@@ -392,11 +388,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Misc/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -431,9 +429,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href="../../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../../log.ico" alt="logo">
+  <img src="../../../log.ico" alt="logo">
 
     </a>
     HobbitQia的笔记本
@@ -482,7 +480,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../.." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -513,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../changelog/" class="md-nav__link">
+      <a href="../../../changelog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../link/" class="md-nav__link">
+      <a href="../../../link/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -643,7 +641,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ds/" class="md-nav__link ">
+            <a href="../../../ds/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -674,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/algorithm/" class="md-nav__link">
+      <a href="../../../ds/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -694,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/tree/" class="md-nav__link">
+      <a href="../../../ds/tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -714,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/heap/" class="md-nav__link">
+      <a href="../../../ds/heap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/set/" class="md-nav__link">
+      <a href="../../../ds/set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -754,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/graph/" class="md-nav__link">
+      <a href="../../../ds/graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/sort/" class="md-nav__link">
+      <a href="../../../ds/sort/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -794,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/hash/" class="md-nav__link">
+      <a href="../../../ds/hash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,7 +839,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ADS/" class="md-nav__link ">
+            <a href="../../../ADS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -917,7 +915,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../dip/" class="md-nav__link ">
+            <a href="../../../dip/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -948,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip1/" class="md-nav__link">
+      <a href="../../../dip/dip1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -968,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip2/" class="md-nav__link">
+      <a href="../../../dip/dip2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip3/" class="md-nav__link">
+      <a href="../../../dip/dip3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1008,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip5/" class="md-nav__link">
+      <a href="../../../dip/dip5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1028,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip6/" class="md-nav__link">
+      <a href="../../../dip/dip6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1048,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip7/" class="md-nav__link">
+      <a href="../../../dip/dip7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1068,7 +1066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip8/" class="md-nav__link">
+      <a href="../../../dip/dip8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1088,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip9/" class="md-nav__link">
+      <a href="../../../dip/dip9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1108,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip10/" class="md-nav__link">
+      <a href="../../../dip/dip10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1128,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip11/" class="md-nav__link">
+      <a href="../../../dip/dip11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1148,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip12/" class="md-nav__link">
+      <a href="../../../dip/dip12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1219,7 +1217,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../OOP/" class="md-nav__link ">
+            <a href="../../../OOP/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1250,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop1/" class="md-nav__link">
+      <a href="../../../OOP/oop1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1270,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop2/" class="md-nav__link">
+      <a href="../../../OOP/oop2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1290,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop3/" class="md-nav__link">
+      <a href="../../../OOP/oop3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1310,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop4/" class="md-nav__link">
+      <a href="../../../OOP/oop4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1330,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop5/" class="md-nav__link">
+      <a href="../../../OOP/oop5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1350,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop6/" class="md-nav__link">
+      <a href="../../../OOP/oop6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1370,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop7/" class="md-nav__link">
+      <a href="../../../OOP/oop7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1390,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop8/" class="md-nav__link">
+      <a href="../../../OOP/oop8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1410,7 +1408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop9/" class="md-nav__link">
+      <a href="../../../OOP/oop9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1430,7 +1428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop10/" class="md-nav__link">
+      <a href="../../../OOP/oop10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1450,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop11/" class="md-nav__link">
+      <a href="../../../OOP/oop11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1470,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop12/" class="md-nav__link">
+      <a href="../../../OOP/oop12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1521,7 +1519,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Quan/" class="md-nav__link ">
+            <a href="../../../Quan/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1552,7 +1550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Quan/chap1/" class="md-nav__link">
+      <a href="../../../Quan/chap1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1572,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Quan/chap2/" class="md-nav__link">
+      <a href="../../../Quan/chap2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1619,7 +1617,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../TCS/" class="md-nav__link ">
+            <a href="../../../TCS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1673,7 +1671,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AOR/" class="md-nav__link ">
+            <a href="../../../AOR/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1713,8 +1711,6 @@
       
   
   
-    
-  
   
     
     
@@ -1737,13 +1733,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -1756,7 +1752,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             System
@@ -1806,7 +1802,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ICS/" class="md-nav__link ">
+            <a href="../../../ICS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1837,7 +1833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-1/" class="md-nav__link">
+      <a href="../../../ICS/ICS-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1857,7 +1853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-2/" class="md-nav__link">
+      <a href="../../../ICS/ICS-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1877,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-3/" class="md-nav__link">
+      <a href="../../../ICS/ICS-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1897,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-4/" class="md-nav__link">
+      <a href="../../../ICS/ICS-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1917,7 +1913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-5/" class="md-nav__link">
+      <a href="../../../ICS/ICS-5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1937,7 +1933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-6/" class="md-nav__link">
+      <a href="../../../ICS/ICS-6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1957,7 +1953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-7/" class="md-nav__link">
+      <a href="../../../ICS/ICS-7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1977,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-8/" class="md-nav__link">
+      <a href="../../../ICS/ICS-8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1997,7 +1993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-9/" class="md-nav__link">
+      <a href="../../../ICS/ICS-9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2071,7 +2067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/5/" class="md-nav__link">
+      <a href="../../../CSAPP/5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2091,7 +2087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/6/" class="md-nav__link">
+      <a href="../../../CSAPP/6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2111,7 +2107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/7/" class="md-nav__link">
+      <a href="../../../CSAPP/7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2131,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/8/" class="md-nav__link">
+      <a href="../../../CSAPP/8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2151,7 +2147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/9/" class="md-nav__link">
+      <a href="../../../CSAPP/9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2212,7 +2208,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Logic/" class="md-nav__link ">
+            <a href="../../../Logic/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2243,7 +2239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic01/" class="md-nav__link">
+      <a href="../../../Logic/logic01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2263,7 +2259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic02/" class="md-nav__link">
+      <a href="../../../Logic/logic02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2283,7 +2279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic03/" class="md-nav__link">
+      <a href="../../../Logic/logic03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2303,7 +2299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic04/" class="md-nav__link">
+      <a href="../../../Logic/logic04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2323,7 +2319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic06/" class="md-nav__link">
+      <a href="../../../Logic/logic06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2343,7 +2339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic05/" class="md-nav__link">
+      <a href="../../../Logic/logic05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2363,7 +2359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic07/" class="md-nav__link">
+      <a href="../../../Logic/logic07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2389,8 +2385,6 @@
                 
   
   
-    
-  
   
     
     
@@ -2431,18 +2425,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../DB/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2458,7 +2452,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             数据库系统
@@ -2473,7 +2467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db1/" class="md-nav__link">
+      <a href="../../../DB/db1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2491,29 +2485,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    关系模型
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../DB/db2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2522,191 +2496,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#structure-of-relational-databases" class="md-nav__link">
-    Structure of Relational Databases
-  </a>
-  
-    <nav class="md-nav" aria-label="Structure of Relational Databases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#concepts" class="md-nav__link">
-    Concepts
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#attributes" class="md-nav__link">
-    Attributes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#database-schema" class="md-nav__link">
-    Database Schema
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#keys" class="md-nav__link">
-    Keys
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#relational-algebra" class="md-nav__link">
-    Relational Algebra
-  </a>
-  
-    <nav class="md-nav" aria-label="Relational Algebra">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#select" class="md-nav__link">
-    Select
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#project" class="md-nav__link">
-    Project
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#union" class="md-nav__link">
-    Union
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-difference" class="md-nav__link">
-    Set Difference
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cartesian-product" class="md-nav__link">
-    Cartesian-Product
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#renamen" class="md-nav__link">
-    Rename=n
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#additional-operations" class="md-nav__link">
-    Additional Operations
-  </a>
-  
-    <nav class="md-nav" aria-label="Additional Operations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-intersection" class="md-nav__link">
-    Set-Intersection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#natural-join-operation" class="md-nav__link">
-    Natural-Join Operation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#outer-join" class="md-nav__link">
-    Outer Join
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#semijoin" class="md-nav__link">
-    Semijoin
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#division" class="md-nav__link">
-    Division
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aggregate-functions-and-operations" class="md-nav__link">
-    Aggregate Functions and Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multiset-relational-algebra" class="md-nav__link">
-    Multiset Relational Algebra
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sql-and-relational-algebra" class="md-nav__link">
-    SQL and Relational Algebra
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2718,7 +2507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db3/" class="md-nav__link">
+      <a href="../../../DB/db3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2738,7 +2527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db4/" class="md-nav__link">
+      <a href="../../../DB/db4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2758,7 +2547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db5/" class="md-nav__link">
+      <a href="../../../DB/db5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2778,7 +2567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db6/" class="md-nav__link">
+      <a href="../../../DB/db6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2798,7 +2587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db7/" class="md-nav__link">
+      <a href="../../../DB/db7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2818,7 +2607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db8/" class="md-nav__link">
+      <a href="../../../DB/db8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2838,7 +2627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db9/" class="md-nav__link">
+      <a href="../../../DB/db9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2858,7 +2647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db10/" class="md-nav__link">
+      <a href="../../../DB/db10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2878,7 +2667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db11/" class="md-nav__link">
+      <a href="../../../DB/db11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2898,7 +2687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db12/" class="md-nav__link">
+      <a href="../../../DB/db12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2918,7 +2707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db13/" class="md-nav__link">
+      <a href="../../../DB/db13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2938,7 +2727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db14/" class="md-nav__link">
+      <a href="../../../DB/db14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2958,7 +2747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db15/" class="md-nav__link">
+      <a href="../../../DB/db15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3017,7 +2806,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../CO/" class="md-nav__link ">
+            <a href="../../../CO/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3048,7 +2837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co1/" class="md-nav__link">
+      <a href="../../../CO/co1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3068,7 +2857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co3/" class="md-nav__link">
+      <a href="../../../CO/co3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3088,7 +2877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co2/" class="md-nav__link">
+      <a href="../../../CO/co2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3108,7 +2897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co4/" class="md-nav__link">
+      <a href="../../../CO/co4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3128,7 +2917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co5/" class="md-nav__link">
+      <a href="../../../CO/co5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3148,7 +2937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co6/" class="md-nav__link">
+      <a href="../../../CO/co6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3205,7 +2994,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../CA/" class="md-nav__link ">
+            <a href="../../../CA/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3236,7 +3025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA1/" class="md-nav__link">
+      <a href="../../../CA/CA1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3256,7 +3045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA2/" class="md-nav__link">
+      <a href="../../../CA/CA2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3276,7 +3065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA3/" class="md-nav__link">
+      <a href="../../../CA/CA3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3296,7 +3085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA4/" class="md-nav__link">
+      <a href="../../../CA/CA4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3316,7 +3105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA5/" class="md-nav__link">
+      <a href="../../../CA/CA5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3389,7 +3178,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../OS/" class="md-nav__link ">
+            <a href="../../../OS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3420,7 +3209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap01/" class="md-nav__link">
+      <a href="../../../OS/chap01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3440,7 +3229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap02/" class="md-nav__link">
+      <a href="../../../OS/chap02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3460,7 +3249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap03/" class="md-nav__link">
+      <a href="../../../OS/chap03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3480,7 +3269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap04/" class="md-nav__link">
+      <a href="../../../OS/chap04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3500,7 +3289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap05/" class="md-nav__link">
+      <a href="../../../OS/chap05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3520,7 +3309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap06/" class="md-nav__link">
+      <a href="../../../OS/chap06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3540,7 +3329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap07/" class="md-nav__link">
+      <a href="../../../OS/chap07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3560,7 +3349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap08/" class="md-nav__link">
+      <a href="../../../OS/chap08/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3580,7 +3369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap09/" class="md-nav__link">
+      <a href="../../../OS/chap09/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3600,7 +3389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap10/" class="md-nav__link">
+      <a href="../../../OS/chap10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3620,7 +3409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap11/" class="md-nav__link">
+      <a href="../../../OS/chap11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3640,7 +3429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap12/" class="md-nav__link">
+      <a href="../../../OS/chap12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3660,7 +3449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap13/" class="md-nav__link">
+      <a href="../../../OS/chap13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3713,7 +3502,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Compiler/" class="md-nav__link ">
+            <a href="../../../Compiler/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3744,7 +3533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Compiler/lec1/" class="md-nav__link">
+      <a href="../../../Compiler/lec1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3764,7 +3553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Compiler/lec2/" class="md-nav__link">
+      <a href="../../../Compiler/lec2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3784,7 +3573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Compiler/lec3/" class="md-nav__link">
+      <a href="../../../Compiler/lec3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3890,7 +3679,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../DL/" class="md-nav__link ">
+            <a href="../../../DL/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3921,7 +3710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec01/" class="md-nav__link">
+      <a href="../../../DL/lec01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3941,7 +3730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec02/" class="md-nav__link">
+      <a href="../../../DL/lec02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3961,7 +3750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec03/" class="md-nav__link">
+      <a href="../../../DL/lec03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3981,7 +3770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec04/" class="md-nav__link">
+      <a href="../../../DL/lec04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4001,7 +3790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec05/" class="md-nav__link">
+      <a href="../../../DL/lec05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4021,7 +3810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec06/" class="md-nav__link">
+      <a href="../../../DL/lec06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4041,7 +3830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec07/" class="md-nav__link">
+      <a href="../../../DL/lec07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4154,7 +3943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
+      <a href="../../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4222,7 +4011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MLT/report/" class="md-nav__link">
+      <a href="../../../MLT/report/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4242,7 +4031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MLT/mlt2/" class="md-nav__link">
+      <a href="../../../MLT/mlt2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4310,7 +4099,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Paper/" class="md-nav__link ">
+            <a href="../../../Paper/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4341,7 +4130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/BiS-KM/" class="md-nav__link">
+      <a href="../../../Paper/BiS-KM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4361,7 +4150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/ZeRO/" class="md-nav__link">
+      <a href="../../../Paper/ZeRO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4381,7 +4170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/Megatron-LM/" class="md-nav__link">
+      <a href="../../../Paper/Megatron-LM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4401,7 +4190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/GPipe/" class="md-nav__link">
+      <a href="../../../Paper/GPipe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4421,7 +4210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/mixed_precision/" class="md-nav__link">
+      <a href="../../../Paper/mixed_precision/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4441,7 +4230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/FAST/" class="md-nav__link">
+      <a href="../../../Paper/FAST/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4461,7 +4250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/softmax/" class="md-nav__link">
+      <a href="../../../Paper/softmax/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4486,6 +4275,8 @@
       
   
   
+    
+  
   
     
     
@@ -4504,18 +4295,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Misc/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4531,7 +4322,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Miscellaneous
@@ -4546,7 +4337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/float/" class="md-nav__link">
+      <a href="../../float/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4566,7 +4357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/fpga/" class="md-nav__link">
+      <a href="../../fpga/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4584,6 +4375,8 @@
                 
   
   
+    
+  
   
     
     
@@ -4592,13 +4385,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" checked>
         
           <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
             
@@ -4611,7 +4404,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7_4">
             <span class="md-nav__icon md-icon"></span>
             LLVM
@@ -4622,9 +4415,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Misc/LLVM/ir/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    LLVM IR
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4633,6 +4446,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplified-ir-layout" class="md-nav__link">
+    Simplified IR layout
+  </a>
+  
+    <nav class="md-nav" aria-label="Simplified IR layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-information" class="md-nav__link">
+    Target Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-basic-main-program" class="md-nav__link">
+    A basic main program
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursive-factorial" class="md-nav__link">
+    Recursive factorial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterative-factorial" class="md-nav__link">
+    Iterative factorial
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-system-and-geps" class="md-nav__link">
+    Type System and GEPs
+  </a>
+  
+    <nav class="md-nav" aria-label="Type System and GEPs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-types-arrays" class="md-nav__link">
+    Aggregate types: arrays
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4690,7 +4598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../android/dataflow/" class="md-nav__link">
+      <a href="../../../android/dataflow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4746,23 +4654,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#structure-of-relational-databases" class="md-nav__link">
-    Structure of Relational Databases
+  <a href="#introduction" class="md-nav__link">
+    Introduction
   </a>
   
-    <nav class="md-nav" aria-label="Structure of Relational Databases">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplified-ir-layout" class="md-nav__link">
+    Simplified IR layout
+  </a>
+  
+    <nav class="md-nav" aria-label="Simplified IR layout">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#concepts" class="md-nav__link">
-    Concepts
+  <a href="#target-information" class="md-nav__link">
+    Target Information
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#attributes" class="md-nav__link">
-    Attributes
+  <a href="#a-basic-main-program" class="md-nav__link">
+    A basic main program
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursive-factorial" class="md-nav__link">
+    Recursive factorial
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterative-factorial" class="md-nav__link">
+    Iterative factorial
   </a>
   
 </li>
@@ -4773,127 +4702,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#database-schema" class="md-nav__link">
-    Database Schema
+  <a href="#type-system-and-geps" class="md-nav__link">
+    Type System and GEPs
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#keys" class="md-nav__link">
-    Keys
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#relational-algebra" class="md-nav__link">
-    Relational Algebra
-  </a>
-  
-    <nav class="md-nav" aria-label="Relational Algebra">
+    <nav class="md-nav" aria-label="Type System and GEPs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#select" class="md-nav__link">
-    Select
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#project" class="md-nav__link">
-    Project
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#union" class="md-nav__link">
-    Union
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-difference" class="md-nav__link">
-    Set Difference
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cartesian-product" class="md-nav__link">
-    Cartesian-Product
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#renamen" class="md-nav__link">
-    Rename=n
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#additional-operations" class="md-nav__link">
-    Additional Operations
-  </a>
-  
-    <nav class="md-nav" aria-label="Additional Operations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-intersection" class="md-nav__link">
-    Set-Intersection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#natural-join-operation" class="md-nav__link">
-    Natural-Join Operation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#outer-join" class="md-nav__link">
-    Outer Join
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#semijoin" class="md-nav__link">
-    Semijoin
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#division" class="md-nav__link">
-    Division
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aggregate-functions-and-operations" class="md-nav__link">
-    Aggregate Functions and Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multiset-relational-algebra" class="md-nav__link">
-    Multiset Relational Algebra
+  <a href="#aggregate-types-arrays" class="md-nav__link">
+    Aggregate types: arrays
   </a>
   
 </li>
@@ -4904,8 +4722,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql-and-relational-algebra" class="md-nav__link">
-    SQL and Relational Algebra
+  <a href="#_1" class="md-nav__link">
+    参考资料
   </a>
   
 </li>
@@ -4929,256 +4747,295 @@
   
 
 
-<h1 id="relational-model">Relational Model<a class="headerlink" href="#relational-model" title="Permanent link">&para;</a></h1>
-<h2 id="structure-of-relational-databases">Structure of Relational Databases<a class="headerlink" href="#structure-of-relational-databases" title="Permanent link">&para;</a></h2>
-<h3 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h3>
-<p>Formally, given set <span class="arithmatex">\(D_1, D_2, \ldots, D_n\)</span> a <strong>relation</strong> <span class="arithmatex">\(r\)</span> is a subset of <span class="arithmatex">\(D_1\times D_2\times \ldots D_n\)</span>.<br />
-Thus a relation is a <u>set</u> of n-tuple <span class="arithmatex">\((a_1,a_2,\ldots,a_n)\)</span> where each <span class="arithmatex">\(a_i\in D_i\)</span>.  </p>
-<p><span class="arithmatex">\(A_1,A_2,\ldots,A_n\)</span> are <strong>attributes</strong>. <span class="arithmatex">\(R=(A_1,A_2,\ldots,A_n)\)</span> is a <strong>relation schema</strong>.<br />
-<strong><em>e.g.</em></strong> instructor = (ID, name, dept_name, salary).  </p>
-<p>A <strong>relation instance</strong> <span class="arithmatex">\(r\)</span> defined over schema R is denoted by <span class="arithmatex">\(r(R)\)</span>. </p>
-<p>因为关系是一个集合，所以关系都是无序的。</p>
-<h3 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h3>
+<h1 id="llvm-ir">LLVM IR<a class="headerlink" href="#llvm-ir" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>LLVM IR 的基本知识，包括 Phi、GEP 等基本指令，内容来自 <a href="https://www.youtube.com/watch?v=m8G_S5LwlTo">2019 EuroLLVM Developers’ Meeting: V. Bridgers &amp; F. Piovezan: LLVM IR Tutorial - Phis, GEPs and other things, oh my! - Vince Bridgers (Intel Corporation)</a>.</p>
+</div>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>LLVM IR: The LLVM Intermediate Representation.</p>
 <ul>
-<li>The set of allowed values for each attribute is called the domain (域)of the attribute</li>
-<li>Attribute values are (normally) required to be <strong>atomic</strong> (原子的); that is, indivisible</li>
-<li>The special value <strong>null</strong> (空值) is a member of every domain</li>
-</ul>
-<h2 id="database-schema">Database Schema<a class="headerlink" href="#database-schema" title="Permanent link">&para;</a></h2>
+<li>
+<p>IR Representation</p>
 <ul>
-<li><strong>Database schema</strong> -- is the logical structure of the database.</li>
-<li><strong>Database instance</strong> -- is a snapshot of the data in the database at a given instant in time. </li>
+<li>Bitcode file <code>*.bc</code></li>
+<li>
+<p>Human-readable file <code>*.ll</code></p>
+<p>本文主要讨论这部分。<code>*.bc</code> 可以通过 <code>llvm-dis</code> 工具转换为 <code>*.ll</code>，<code>*.ll</code> 可以通过 <code>llvm-as</code> 工具转换为 <code>*.bc</code>。</p>
+</li>
+<li>
+<p>In-memory representation</p>
+</li>
 </ul>
+</li>
+</ul>
+<h2 id="simplified-ir-layout">Simplified IR layout<a class="headerlink" href="#simplified-ir-layout" title="Permanent link">&para;</a></h2>
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240528230908.png" width = 70%/> </div>
+
+<p>这里的 <code>[]*</code> 表示可以有 0 或者多个。</p>
+<p>这里用三个示例程序来说明 LLVM IR 的基本结构。</p>
+<h3 id="target-information">Target Information<a class="headerlink" href="#target-information" title="Permanent link">&para;</a></h3>
+<p>An IR module usually starts with a pair of strings describing the target:</p>
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240528231200.png" width = 60%/> </div>
+
+<h3 id="a-basic-main-program">A basic main program<a class="headerlink" href="#a-basic-main-program" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="p">);</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">declare</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="vg">@factorial</span><span class="p">(</span><span class="kt">i32</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">define</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="vg">@main</span><span class="p">(</span><span class="kt">i32</span><span class="w"> </span><span class="nv">%argc</span><span class="p">,</span><span class="w"> </span><span class="kt">i8</span><span class="p">**</span><span class="w"> </span><span class="nv">%argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nv nv-Anonymous">%1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="vg">@factorial</span><span class="p">(</span><span class="kt">i32</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="nv nv-Anonymous">%2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">mul</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv nv-Anonymous">%1</span><span class="p">,</span><span class="w"> </span><span class="m">7</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="nv nv-Anonymous">%3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">icmp</span><span class="w"> </span><span class="k">eq</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv nv-Anonymous">%2</span><span class="p">,</span><span class="w"> </span><span class="m">42</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="nv">%result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">zext</span><span class="w"> </span><span class="kt">i1</span><span class="w"> </span><span class="nv nv-Anonymous">%3</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="kt">i32</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="k">ret</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv">%result</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<ul>
+<li><code>declare</code> 表示函数的声明，<code>@factorial</code> 是函数名。</li>
+</ul>
+<!-- * 上面的指令都是顺序执行， -->
+<ul>
+<li><code>% Virtual Registers %</code><ul>
+<li>这里有局部变量，分别用 <code>Unnamed: %&lt;number&gt;</code> 和 <code>Named: %&lt;name&gt;</code> 表示。<strong><em>e.g.</em></strong> <code>%1</code> unnamed, <code>%result</code> named.</li>
+<li>LLVM IR 里我们假设有无限多的寄存器。如何进行实际寄存器分配是由后面的阶段处理。 </li>
+</ul>
+</li>
+<li><strong>强类型语言</strong><ul>
+<li>需要明确规定参数类型。</li>
+<li>指令需要明确规定期望得到的类型。<strong><em>e.g.</em></strong> <code>call</code> 指令期望得到 <code>i32</code> 类型的返回值。</li>
+<li>没有隐式类型转换。<strong><em>e.g.</em></strong> 将上面 <code>%result = zext i1 %3 to i32</code> 中的 <code>zext</code> 去掉，并将返回改为 <code>ret i32 %3</code> 会报错，因为 <code>%i3</code> 的类型是 <code>i1</code> 但是函数的返回值类型要求是 <code>i32</code>.</li>
+</ul>
+</li>
+<li>指令会有很多变体 variants，可以参考 LangRef.</li>
+</ul>
+<h3 id="recursive-factorial">Recursive factorial<a class="headerlink" href="#recursive-factorial" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// Precondition: val is non-negative.</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">val</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">val</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c">; Precondition: %val is non-negative.</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">define</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="vg">@factorial</span><span class="p">(</span><span class="kt">i32</span><span class="w"> </span><span class="nv">%val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nl">entry:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="nv">%is_base_case</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">icmp</span><span class="w"> </span><span class="k">eq</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv">%val</span><span class="p">,</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="k">br</span><span class="w"> </span><span class="kt">i1</span><span class="w"> </span><span class="nv">%is_base_case</span><span class="p">,</span><span class="w"> </span><span class="kt">label</span><span class="w"> </span><span class="nv">%base_case</span><span class="p">,</span><span class="w"> </span><span class="kt">label</span><span class="w"> </span><span class="nv">%recursive_case</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="nl">base_case:</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="k">ret</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="nl">recursive_case:</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="nv nv-Anonymous">%1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="m">-1</span><span class="p">,</span><span class="w"> </span><span class="nv">%val</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="nv nv-Anonymous">%2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="vg">@factorial</span><span class="p">(</span><span class="kt">i32</span><span class="w"> </span><span class="nv nv-Anonymous">%0</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="nv nv-Anonymous">%3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">mul</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv">%val</span><span class="p">,</span><span class="w"> </span><span class="nv nv-Anonymous">%1</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">    </span><span class="k">ret</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv nv-Anonymous">%2</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<ul>
+<li><strong>Basic Block</strong>: List of non-terminator instructions ending with a <strong>terminator instruction</strong>.<ul>
+<li>其中终结符是一条指令，用来转移 control flow.<ul>
+<li>Branch - “br”</li>
+<li>Return - “ret”</li>
+<li>Switch – “switch”</li>
+<li>Unreachable – “unreachable”</li>
+<li>Exception handling instructions</li>
+</ul>
+</li>
+<li>我们用 Control Flow Graph(CFG) 来表示后继关系。</li>
+<li>每个基本块在入口的地方都有一个 label，即使没有显式标出。<strong><em>e.g.</em></strong> 在上面的例子中如果去掉 <code>entry:</code> 会报错。因为去掉之后编译器会自动为我们填充一个 label <code>%0</code>，而这个 label 名与后面的寄存器 <code>%0</code> 名字冲突了。</li>
+</ul>
+</li>
+</ul>
+<h3 id="iterative-factorial">Iterative factorial<a class="headerlink" href="#iterative-factorial" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">val</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">        </span><span class="n">temp</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">define</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="vg">@factorial</span><span class="p">(</span><span class="kt">i32</span><span class="w"> </span><span class="nv">%val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nl">entry:</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="nv">%i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">2</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="nv">%temp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="k">br</span><span class="w"> </span><span class="kt">label</span><span class="w"> </span><span class="nv">%check_for_condition</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="nl">check_for_condition:</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="nv">%i_leq_val</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">icmp</span><span class="w"> </span><span class="k">sle</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv">%i</span><span class="p">,</span><span class="w"> </span><span class="nv">%val</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="k">br</span><span class="w"> </span><span class="kt">i1</span><span class="w"> </span><span class="nv">%i_leq_val</span><span class="p">,</span><span class="w"> </span><span class="kt">label</span><span class="w"> </span><span class="nv">%for_body</span><span class="p">,</span><span class="w"> </span><span class="kt">label</span><span class="w"> </span><span class="nv">%end_loop</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="nl">for_body:</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="nv">%temp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">mul</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv">%temp</span><span class="p">,</span><span class="w"> </span><span class="nv">%i</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="nv">%i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv">%i</span><span class="p">,</span><span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="k">br</span><span class="w"> </span><span class="kt">label</span><span class="w"> </span><span class="nv">%check_for_condition</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="nl">end_loop:</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="k">ret</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv">%temp</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+* LLVM IR 要求满足 <strong>Static Single Assigment(SSA)</strong>，即每个变量只能被赋值一次，而且在使用前要先定义。
+    * 在上面代码的第 10、11 行会报错，因为不符合 SSA 的要求。我们需要改为另外的变量 <code>%new_temp</code> 和 <code>%i_plus_one</code>。但这样会导致另一个问题：最后我们返回时无法选择返回的是 <code>%temp</code> 还是 <code>%new_temp</code>。
+    * 为此我们需要使用 <strong>Phi</strong> 指令，作用是在基本块里基于之前的执行结果（控制流）选择值，格式如下：
+        <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">&lt;</span><span class="err">res</span><span class="k">ult</span><span class="p">&gt;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">phi</span><span class="w"> </span><span class="p">&lt;</span><span class="err">ty</span><span class="p">&gt;</span><span class="w"> </span><span class="p">[&lt;</span><span class="err">val</span><span class="m">0</span><span class="p">&gt;,</span><span class="w"> </span><span class="p">&lt;</span><span class="kt">label</span><span class="m">0</span><span class="p">&gt;],</span><span class="w"> </span><span class="p">[&lt;</span><span class="err">val</span><span class="m">1</span><span class="p">&gt;,</span><span class="w"> </span><span class="p">&lt;</span><span class="kt">label</span><span class="m">1</span><span class="p">&gt;]...</span><span class="w"> </span>
+</code></pre></div>
+        即我们从哪个 label 过来，就选择对应的 val。</p>
+<div class="highlight"><pre><span></span><code>    !!! Example
+        修改后的代码如下：
+        &lt;div align=center&gt; &lt;img src=&quot;https://cdn.hobbitqia.cc/20240528235745.png&quot; width = 65%/&gt; &lt;/div&gt;
+
+        可以看到对于 `%temp`，如果我们是从 `entry` 顺序执行到这里，那么 `%temp` 应该进行初始化，选择值 1；否则从 `for_body` 过来，说明我们要更新，选择值 ``%new_temp`。
+
+* 另一种解决 SSA 的办法：前端有时会生成另外的代码，通过读写内存来绕过对变量（寄存器）的多次读写。
+
+    ??? Note
+        使用编译器时，可能观察到这样的现象：如果你不加任何优化 (`-O0`)，那么编译器会生成很多的读写内存的指令，这是为了绕过 SSA 的限制。如果开启 `-O1` 优化，那么会生成使用 Phi 指令的代码。
+</code></pre></div>
+<ul>
+<li>
+<p><strong>全局变量</strong></p>
+<ul>
+<li>
+<p>They are always pointers, like the values returned by Allocas.</p>
+<p>指针表示，因此全局变量也可以用来解决 SSA 的问题（相当于读写内存地址）。</p>
+</li>
+<li>
+<p>命名前必须加上 <code>@</code>，显式标明类型，必须被初始化，要有 <code>global</code> 属性。如 <code>@gv = global i8 42</code></p>
+<ul>
+<li>也可以使用 <code>const</code> 属性代替 <code>global</code> 属性。如 <code>@gv = const i8 42</code>。但需要注意的是 <code>const</code> 属性的全局变量不能被修改。</li>
+</ul>
+</li>
+<li>
+<p>全局变量是静态分配的，因此总是指针形式，而且是 const pointer（即指向的位置不能被修改），因此编译器可以推断出全局变量的地址。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To check if this is valid IR: <code>opt –verify input.ll</code></p>
+<p>可以用来检查自己写的 IR 是否正确。</p>
+</li>
+<li>
+<p>The optimizer can generate the CFG in dot format: <code>opt –analyze –dot-cfg-only input.ll</code></p>
+<ul>
+<li><code>-dot-cfg-only</code> = Generate .dot files. Don’t include instructions.</li>
+<li><code>opt –analyze –dot-cfg input.ll</code>, 去掉 <code>-only</code> 选项可以得到更详细的图。</li>
+</ul>
+</li>
+</ul>
+<h2 id="type-system-and-geps">Type System and GEPs<a class="headerlink" href="#type-system-and-geps" title="Permanent link">&para;</a></h2>
+<p>根据 LLVM 语言参考手册，LLVM IR 有以下类型：</p>
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240529222156.png" width = 45%/> </div>
+
+<p>其中 First Class Types 表示可以由一条指令返回的类型。</p>
+<h3 id="aggregate-types-arrays">Aggregate types: arrays<a class="headerlink" href="#aggregate-types-arrays" title="Permanent link">&para;</a></h3>
+<ul>
+<li>arrays 由一个固定的大小，元素类型，初始化方法来定义。如 <code>@array = global [17 * i8] zeroinitializer</code> 表示一个名为 <code>@array</code> 的数组，里面由 17 个元素，每个元素类型为 <code>i8</code>，初始值均为 0。</li>
+<li>
+<p>GEP(Get Element Pointer) 指令用来访问数组的元素。</p>
+<ul>
+<li>
+<p>GEP 用于计算指针地址，格式如下：
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">&lt;</span><span class="err">res</span><span class="k">ult</span><span class="p">&gt;</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">getelementptr</span><span class="w"> </span><span class="p">&lt;</span><span class="err">ty</span><span class="p">&gt;,</span><span class="w"> </span><span class="p">&lt;</span><span class="err">ty</span><span class="p">&gt;*</span><span class="w"> </span><span class="p">&lt;</span><span class="kt">ptr</span><span class="err">val</span><span class="p">&gt;,</span><span class="w"> </span><span class="p">[</span><span class="kt">i32</span><span class="w"> </span><span class="p">&lt;</span><span class="err">id</span><span class="k">x</span><span class="p">&gt;]</span><span class="err">+</span>
+</code></pre></div></p>
+<p>这里第一个 <code>&lt;ty&gt;</code> 是第一个索引的基类型，<code>&lt;ptrcal&gt;</code> 是基地址，<code>&lt;idx&gt;</code> 是偏移（<strong>以基类型为单位</strong>）。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303061658549.png" width = 60%/> </div>   </p>
-<p>schema 是抽象的定义, instance 是具体的实例。  </p>
+<p>这里基类型是 <code>i32</code>，因此 GEP 得到的是从 0 开始的第 3 个 <code>i32</code>。
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240529231231.png" width = 70%/> </div> </p>
 </div>
-<h2 id="keys">Keys<a class="headerlink" href="#keys" title="Permanent link">&para;</a></h2>
-<p>Let <span class="arithmatex">\(K\subsetneqq R\)</span>   </p>
+</li>
+<li>
+<p>需要注意以下几点：</p>
 <ul>
-<li><span class="arithmatex">\(K\)</span> is a <strong>superkey (超键)</strong> of <span class="arithmatex">\(R\)</span> if values for K are sufficient to identify (唯一确定) a unique tuple of each possible relation <span class="arithmatex">\(r(R)\)</span><br />
-<strong><em>e.g.</em></strong> <span class="arithmatex">\(\{ID\}\)</span> or <span class="arithmatex">\(\{ID, name\}\)</span></li>
-<li><strong>Superkey</strong> <span class="arithmatex">\(K\)</span> is a <strong>candidate key (候选键)</strong> if <span class="arithmatex">\(K\)</span> is minimal.<br />
-即 <span class="arithmatex">\(K\)</span> 中没有冗余属性  </li>
-<li>One of the candidate keys is selected to be the <strong>primary key (主键)</strong>.</li>
 <li>
-<p><strong>Foreign key</strong> (外键) Relation <span class="arithmatex">\(r_1\)</span> may include among its attributes the primary key of another relation <span class="arithmatex">\(r_2\)</span>. This attribute is called a <strong>foreign key</strong> from <span class="arithmatex">\(r_1\)</span>, referencing <span class="arithmatex">\(r_2\)</span>.<br />
-类似于指针，外键限制就是关系 <span class="arithmatex">\(r_1\)</span> 引用的主键必须在关系 <span class="arithmatex">\(r_2\)</span> 中出现。</p>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303061706866.png" width = 60%/> </div>   </p>
-<p>左侧表的老师 ID 必须出现在右侧表中。</p>
-</details>
-<details class="info">
-<summary>Why we need foreign key constraint?</summary>
-<p>数据库是支持由完整约束条件定义出来的，并维护完整性约束条件。则当我们定义外键后，上述例子中黄色条目是不会出现的。</p>
-</details>
-</li>
-<li>
-<p>Referential integrity (参照完整性)<br />
-类似于外键限制，但不局限于主键。  </p>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303061802181.png" width = 60%/> </div>   </p>
-<p>这里 <span class="arithmatex">\(time_slot_id\)</span> 并不是关系 <span class="arithmatex">\(r_2\)</span> 的主键，所以这里不是外键限制。</p>
-</details>
-</li>
-</ul>
+<p>GEP 的偏移是以基类型为单位，而且不会改变结果指针的类型。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303061811248.png" width = 70%/> </div>   </p>
-<ul>
-<li>course 指课程信息，无论是否开课，都会有其定义。</li>
-<li>section 表示教学班，真正开课时就有相应的实例。（类比于高铁的列车号，和每天对应的班次）</li>
-<li>teachers 具体教哪个教学班的老师</li>
-<li>takes 表示学生注册课程</li>
-<li>time_slot 表示一门课的具体上课时间段，如数据库在周一 3, 4, 5 节; 周一 7, 8 节。</li>
-<li>上图中红线表示引用完整性的约束；黑线表示外键约束。</li>
-</ul>
+<p>这里的基类型是 <code>[6 * i8]</code>，因此当我们的偏移是 1 时，他会跳过当前数组的所有元素，返回一个未知元素的指针。
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240529231656.png" width = 70%/> </div></p>
 </div>
-<h2 id="relational-algebra">Relational Algebra<a class="headerlink" href="#relational-algebra" title="Permanent link">&para;</a></h2>
-<p>Six basic operators</p>
-<ul>
-<li>select: <span class="arithmatex">\(\sigma\)</span>  </li>
-<li>project: <span class="arithmatex">\(\Pi\)</span></li>
-<li>union: <span class="arithmatex">\(\cup\)</span></li>
-<li>set difference: <span class="arithmatex">\(-\)</span> </li>
-<li>Cartesian product(笛卡尔积): <span class="arithmatex">\(\times\)</span></li>
-<li>rename: <span class="arithmatex">\(\rho\)</span></li>
-</ul>
-<h3 id="select">Select<a class="headerlink" href="#select" title="Permanent link">&para;</a></h3>
-<p><span class="arithmatex">\(\sigma_p(r)=\{t|t\in r\ and\ p(t)\}\)</span>  , where <span class="arithmatex">\(p\)</span> is called <strong>selection predicate</strong>.  </p>
-<details class="example">
-<summary>Select Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303062231578.png" width = 40%/> </div> </p>
-</details>
-<h3 id="project">Project<a class="headerlink" href="#project" title="Permanent link">&para;</a></h3>
-<p>The <strong>project</strong> operation is a unary operation that returns its argument relation, with certain attributes left out.  <br />
-<span class="arithmatex">\(\prod_{A_1,A_2,\ldots, A_k}(r)\)</span> where <span class="arithmatex">\(A_i\)</span> are attribute names and <span class="arithmatex">\(r\)</span> is a relation name.   </p>
-<p>The result is defined as the relation of k columns obtained by erasing the columns that are not listed. 会对结果进行去重。  </p>
-<details class="example">
-<summary>Projection Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303062230169.png" width = 40%/> </div> </p>
-</details>
-<h3 id="union">Union<a class="headerlink" href="#union" title="Permanent link">&para;</a></h3>
-<p>The <strong>union</strong> operation allows us to combine two relations.<br />
-<span class="arithmatex">\(r\cup s = \{t| t\in r \ or \ t\in s\}\)</span>  </p>
-<ul>
-<li><span class="arithmatex">\(r\)</span> and <span class="arithmatex">\(s\)</span> must have the same <strong>arity (元数)</strong> (same number f attributes)  </li>
-<li>The attribute domains must be <strong>compatible</strong> <br />
-当属性有关联类型时，对于每个输入 <span class="arithmatex">\(i\)</span>, 两个输入关系的第 <span class="arithmatex">\(i\)</span> 个属性的类型必须相同。  </li>
-</ul>
-<details class="example">
-<summary>Projection Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303062249200.png" width = 40%/> </div> </p>
-</details>
-<h3 id="set-difference">Set Difference<a class="headerlink" href="#set-difference" title="Permanent link">&para;</a></h3>
-<p>The <strong>set-difference</strong> operation allows us to find tuples that are in one relation but are not in another. <br />
-<span class="arithmatex">\(r-s=\{t|t\in r\ and\ t\notin s\}\)</span>  </p>
-<p>Set differences must be taken between <strong>compatible</strong> relations.</p>
-<details class="example">
-<summary>Projection Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303062249700.png" width = 40%/> </div> </p>
-</details>
-<h3 id="cartesian-product">Cartesian-Product<a class="headerlink" href="#cartesian-product" title="Permanent link">&para;</a></h3>
-<p>The <strong>Cartesian-product</strong> operation (denoted by <span class="arithmatex">\(\times\)</span>)  allows us to combine information from any two relations.  <br />
-<span class="arithmatex">\(r\times s  =\{t\ q|t\in r\ and\ q\in s\}\)</span>  </p>
-<details class="example">
-<summary>Projection Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303062253406.png" width = 40%/> </div> </p>
-</details>
-<h3 id="renamen">Rename=n<a class="headerlink" href="#renamen" title="Permanent link">&para;</a></h3>
-<p>Allows us to refer to a relation by more than one name.<br />
-<span class="arithmatex">\(\rho_X(E)\)</span></p>
-<details class="example">
-<summary>Composition of Operations 1</summary>
-<p>Find the names of all instructors in the Physics department, along with the course_id of all courses they have taught.  </p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303062306317.png" width = 50%/> </div>   </p>
-<p>这两条语句含义一样，但第二条我们先进行了一次 select, 条目少了更高效。  </p>
-</details>
-<details class="example">
-<summary>Composition of Operations 2</summary>
-<p>Find the largest salary in the university.  </p>
-<ul>
-<li>find instructor salaries that are less than some other instructor salary (<strong>i.e.</strong> not maximum)<br />
-using a copy of instructor under a new name <span class="arithmatex">\(d\)</span>. <br />
-<span class="arithmatex">\(\prod_{instructor.salary}(\sigma_{instructor.salary&lt;d.salary}(instructor \times \rho_d(instructor)))\)</span>  </li>
-<li>find the largest salary<br />
-<span class="arithmatex">\(\prod_{instructor}-\prod_{instructor.salary}(\sigma_{instructor.salary}&lt;d.salary(instructor\times \rho_d(instructor)))\)</span>  </li>
-</ul>
-<p>我们第一步将两个关系拼起来之后，限定 instructor 的工资小于 d, 随后投影我们就可以获得所有不是最大值的薪水。（因为任何不是最大值的薪水都会在笛卡尔积 select 后至少存在一个元组，这样投影之后仍会存在。但最大值就不会有元组存在），最后用全集减掉即可。</p>
-</details>
-<h3 id="additional-operations">Additional Operations<a class="headerlink" href="#additional-operations" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Set intersection: <span class="arithmatex">\(r \cap s\)</span> </li>
-<li>Natural join:  <span class="arithmatex">\(r\bowtie s\)</span></li>
-<li>Assignment: <span class="arithmatex">\(\leftarrow\)</span></li>
-<li>Outer join : <span class="arithmatex">\(r \rtimes       s\)</span>,  <span class="arithmatex">\(r  \ltimes    s\)</span>, <span class="arithmatex">\(r\)</span>⟗<span class="arithmatex">\(s\)</span></li>
-<li>Division Operator: <span class="arithmatex">\(r \div s\)</span> </li>
-</ul>
-<h4 id="set-intersection">Set-Intersection<a class="headerlink" href="#set-intersection" title="Permanent link">&para;</a></h4>
-<p>The <strong>set-intersection</strong> operation allows us to find tuples that are in both the input relations.<br />
-<span class="arithmatex">\(r\cap s=\{t| t\in r\ and\ t\in s\}\)</span>  </p>
-<ul>
-<li><span class="arithmatex">\(r, s\)</span> have the same arity </li>
-<li>attributes of <span class="arithmatex">\(r\)</span> and s are compatible</li>
-</ul>
-<details class="example">
-<summary>Set-Intersection Operation Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303072149842.png" width = 40%/> </div> </p>
-</details>
-<h4 id="natural-join-operation">Natural-Join Operation<a class="headerlink" href="#natural-join-operation" title="Permanent link">&para;</a></h4>
-<p>Let r and s be relations on schemas R and S respectively.  Then,  <span class="arithmatex">\(r\bowtie     s\)</span> is a relation on schema <span class="arithmatex">\(R \cup S\)</span> obtained as follows:</p>
-<ul>
-<li>Consider each pair of tuples <span class="arithmatex">\(t_r\)</span> from <span class="arithmatex">\(r\)</span> and <span class="arithmatex">\(t_s\)</span> from <span class="arithmatex">\(s\)</span>.  </li>
-<li>If <span class="arithmatex">\(t_r\)</span> and <span class="arithmatex">\(t_s\)</span> have the same value on each of the attributes in <span class="arithmatex">\(R \cap S\)</span>, add a tuple $t $ to the result, where<ul>
-<li><span class="arithmatex">\(t\)</span> has the same value as <span class="arithmatex">\(t_r\)</span> on <span class="arithmatex">\(r\)</span></li>
-<li><span class="arithmatex">\(t\)</span> has the same value as <span class="arithmatex">\(t_s\)</span> on <span class="arithmatex">\(s\)</span></li>
-</ul>
-</li>
-</ul>
-<p>即共同属性要有相同的值，才能在拼接后的结果中保留。<br />
-对乘法的扩展，相当于先 <span class="arithmatex">\(\times\)</span> 再 select, 最后 project.  </p>
-<details class="example">
-<summary>Natural Join Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303072155154.png" width = 40%/> </div> </p>
-</details>
-<ul>
-<li><strong>Theta Join</strong><br />
-<span class="arithmatex">\(r\bowtie_\theta s=\sigma_\theta (r\times s)\)</span><br />
-条件连接</li>
-</ul>
-<h4 id="outer-join">Outer Join<a class="headerlink" href="#outer-join" title="Permanent link">&para;</a></h4>
-<p>Computes the join and then adds tuples form one relation that does not match tuples in the other relation to the result of the join.   </p>
-<p>Uses <em>null values</em>:  </p>
-<ul>
-<li><strong>null</strong> signifies that the value is unknown or does not exist </li>
-<li>All comparisons involving null are (roughly speaking) false by definition</li>
-</ul>
-<p>Outer join can be expressed using basic operations.  </p>
-<ul>
-<li><span class="arithmatex">\(r\rtimes s=(r\bowtie s)\cup (r-\cap_R(r\bowtie s)\times \{null,\ldots,null\})\)</span></li>
-<li><span class="arithmatex">\(r\ltimes s=(r\bowtie s)\cup \{null,\ldots,null\}\times (s-\cap_R(r\bowtie s))\)</span></li>
-<li><span class="arithmatex">\(r\)</span>⟗<span class="arithmatex">\(s\)</span> <span class="arithmatex">\(=(r\bowtie s)\cup (r-\cap_R(r\bowtie  s))\times \{(null, \ldots)\}\cup\{(null,\ldots,null)\}\times (s-\cap_s(r\bowtie s))\)</span></li>
-</ul>
-<details class="example">
-<summary>Outer Join Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303072200423.png" width = 40%/> </div> 
-<div align=center> <img src="http://cdn.hobbitqia.cc/202303072200997.png" width = 40%/> </div>  </p>
-</details>
-<h4 id="semijoin">Semijoin<a class="headerlink" href="#semijoin" title="Permanent link">&para;</a></h4>
-<p><span class="arithmatex">\(r\ltimes_\theta s\)</span> 保留 <span class="arithmatex">\(r\)</span> 中能与 <span class="arithmatex">\(s\)</span> 相连的元组。</p>
-<details class="example">
-<summary>Semijoin Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303072212171.png" width = 40%/> </div> </p>
-</details>
-<h4 id="division">Division<a class="headerlink" href="#division" title="Permanent link">&para;</a></h4>
-<p>Given relations <span class="arithmatex">\(r(R)\)</span> and <span class="arithmatex">\(s(S)\)</span>, such that <span class="arithmatex">\(S \subset R\)</span>, <span class="arithmatex">\(r\div s\)</span> is the largest relation <span class="arithmatex">\(t(R-S)\)</span> such that <span class="arithmatex">\(t\times s \subsetneqq  r\)</span>  </p>
-<p>We can write <span class="arithmatex">\(r\div s\)</span> as  </p>
-<div class="arithmatex">\[
-\begin{align*}
-    temp1 &amp; \leftarrow \Pi_{R-S}(r)\\
-    temp2 &amp; \leftarrow \Pi_{R-S}((temp1 \times s)- \Pi_{R-S,S}(r))\\
-    result &amp; = temp1 - temp2
-\end{align*}
-\]</div>
-<details class="example">
-<summary>Division Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303072217412.png" width = 40%/> </div> 
-<div align=center> <img src="http://cdn.hobbitqia.cc/202303072217774.png" width = 40%/> </div> </p>
-</details>
-<h3 id="aggregate-functions-and-operations">Aggregate Functions and Operations<a class="headerlink" href="#aggregate-functions-and-operations" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p><strong>Aggregation function</strong>（聚合函数）takes a collection of values and returns a single value as a result.  </p>
-<ul>
-<li><em>avg</em>: average value</li>
-<li><em>min</em>: minimum value</li>
-<li><em>max</em>: maximum value</li>
-<li><em>sum</em>: sum of values</li>
-<li><em>count</em>: number of values</li>
-</ul>
 </li>
 <li>
-<p><strong>Aggregate operation</strong> in relational algebra <span class="arithmatex">\(G_1,G_2,\ldots,G_n \mathcal{G}_{F_1(A_1),\ldots F_n(A_n)}(E)\)</span>  </p>
-</li>
-</ul>
+<p>可以使用 further indices 来获得 aggregate types(and vectors) 内的偏移。但是如果要改变指针的类型，需要去掉一层 aggregation。</p>
 <div class="admonition example">
-<p class="admonition-title">Aggregate Operation Example</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303072224552.png" width = 50%/> </div> </p>
-</div>
-<p>分组结果没有名字，可以用 rename 或者 as 进行改名。<br />
-<strong><em>e.g.</em></strong> <code>dept_name G avg(salary) as avg_sal (instructor)</code></p>
-<h3 id="multiset-relational-algebra">Multiset Relational Algebra<a class="headerlink" href="#multiset-relational-algebra" title="Permanent link">&para;</a></h3>
-<p>关系代数中，我们要求关系要是一个严格的集合。<br />
-但实际数据库中并不是，而是一个多重集，允许有重复元素存在。<br />
-因为一些操作的中间结果会带来重复元素，要保持集合特性开销很大，因此实际操作中不会去重 。 </p>
-<h2 id="sql-and-relational-algebra">SQL and Relational Algebra<a class="headerlink" href="#sql-and-relational-algebra" title="Permanent link">&para;</a></h2>
+<p class="admonition-title">Example</p>
 <ul>
-<li><code>select A1, A2, ... An from r1, r2, ... rm where P</code> is equivalent to <span class="arithmatex">\(\Pi_{A_1,\ldots, A_n}(\sigma_P(r_1\times r_2\ldots r_m))\)</span> </li>
-<li><code>select A1, A2, sum(A3) from r1, r2, ... rm where P group by A1, A2</code> is equivalent to <span class="arithmatex">\(A_1, A_2 \mathcal{G} sum(A_3)(\sigma_P(r_1\times r_2\times\ldots r_m))\)</span><br />
-这里按 <span class="arithmatex">\(A_1,A_2\)</span> 分组，那么结果的表中会有 <span class="arithmatex">\(A_1,A_2,sum(A_3)\)</span> 三列（分组依据+分组后的聚合结果），这里我们需要的就是这三列，所以分组即可。但是假设我们只需要 <span class="arithmatex">\(A_1, sumA3\)</span> 那么最后还需要投影。</li>
+<li>
+<p>Manipulating pointers
+    <div align=center> <img src="https://cdn.hobbitqia.cc/20240530002003.png" width = 70%/> </div>
+    <div align=center> <img src="https://cdn.hobbitqia.cc/20240530002225.png" width = 70%/> </div></p>
+</li>
+<li>
+<p>GEP with structs
+    <div align=center> <img src="https://cdn.hobbitqia.cc/20240530002303.png" width = 70%/> </div>
+    <div align=center> <img src="https://cdn.hobbitqia.cc/20240530094008.png" width = 70%/> </div></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>GEPs 不会从内存里加载，即只能用于查找地址，不能剥离聚合。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>注意这里的 <code>%new_ptr</code> 是一个指向 <code>[4 * i8]**</code> 的指针，即指针的指针，因此我们需要使用 <code>load</code> 指令来获取真正的指针。
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240530094608.png" width = 75%/> </div></p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_1">参考资料<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://youtu.be/m8G_S5LwlTo">Youtube Video: LLVM IR Tutorial - Phis, GEPs and other things, oh my! - Vince Bridgers (Intel Corporation), Felipe de Azevedo Piovezan (Intel Corporation)</a>, <a href="https://llvm.org/devmtg/2019-04/slides/Tutorial-Bridgers-LLVM_IR_tutorial.pdf">Slide</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/122522485">LLVM Pass 入门导引</a></li>
 </ul>
 
   <hr>
@@ -5186,11 +5043,11 @@ using a copy of instructor under a new name <span class="arithmatex">\(d\)</span
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年3月20日 23:28:42</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年5月30日 10:23:39</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年3月7日 22:56:30</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年5月30日 10:23:39</span>
       
     
   </small>
@@ -5310,16 +5167,16 @@ using a copy of instructor under a new name <span class="arithmatex">\(d\)</span
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="../../js/baidu-tongji.js"></script>
+        <script src="../../../js/baidu-tongji.js"></script>
       
         <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
       
-        <script src="../../js/katex.js"></script>
+        <script src="../../../js/katex.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
