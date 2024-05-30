@@ -5,8 +5,10 @@ counter: True
 # 通过自适应数字格式实现训练和推理时的 Softmax 加速
 
 !!! Abstract
+    ![](https://cdn.hobbitqia.cc/20240405002634.png)
+
     * Paper: [Softmax Acceleration with Adaptive Numeric Format for both Training and Inference](https://arxiv.org/abs/2311.13290)
-    本文中的图片均来自论文。
+    * 本文中的图片均来自论文。
 
 ## 介绍
 
@@ -53,7 +55,7 @@ Hyft 支持 FP16 或 FP32 中的输入和输出数据。中间涉及数制的转
 * 找到输入向量的最大值。
 * 将向量和最大值转为定点数格式并输出。
 
-![](https://cdn.hobbitqia.cc/20240402103545.png)
+<div align=center><img src = "https://cdn.hobbitqia.cc/20240402103545.png" width =70%></div>
 
 * 为了加速最大值的搜索，本文引入了可配置的参数 STEP，用来表示搜索的步长。***e.g.*** STEP=1 时我们会遍历所有的输入，STEP=2 时我们会每隔一个输入进行搜索。
 
@@ -68,12 +70,12 @@ Hyft 支持 FP16 或 FP32 中的输入和输出数据。中间涉及数制的转
 * 定点数格式下计算 $e^{z_i-z_{max}}$。
 * 将结果转为浮点数。
 
-![](https://cdn.hobbitqia.cc/20240402105546.png)
+<div align=center><img src = "https://cdn.hobbitqia.cc/20240402105546.png" width =70%></div>
 
 为了简化指数运算，我们有：
 
 $$
-e^{z^'} = 2^{z'\log_2(e)}=2^{u+v}
+e^{z'} = 2^{z'\log_2(e)}=2^{u+v}
 $$
 
 * 这里 $u,v$ 分别代表 $z'\log_2(e)$ 的整数部分和小数部分。
@@ -98,11 +100,11 @@ $$
 * 定点数格式下计算 $\sum_{j=1}^N e^{z_j-z_{max}}$.
 * 最后通过 leading one detector(LOD) 结构将结果转化回浮点数。
 
-![](https://cdn.hobbitqia.cc/20240402112008.png)
+<div align=center><img src = "https://cdn.hobbitqia.cc/20240402112008.png" width =70%></div>
 
 ### Division/Multiplication Unit
 
-![](https://cdn.hobbitqia.cc/20240402113051.png)
+<div align=center><img src = "https://cdn.hobbitqia.cc/20240402113051.png" width =70%></div>
 
 我们可以这样实现除法：
 
