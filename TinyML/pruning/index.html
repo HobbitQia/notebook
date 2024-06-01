@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/Paper/ZeRO/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/TinyML/pruning/">
       
       
-        <link rel="prev" href="../BiS-KM/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../Megatron-LM/">
+        <link rel="next" href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>ZeRO - HobbitQia的笔记本</title>
+        <title>剪枝与稀疏性 - HobbitQia的笔记本</title>
       
     
     
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#zero" class="md-skip">
+        <a href="#pruning-and-sparsity" class="md-skip">
           跳转至
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ZeRO
+              剪枝与稀疏性
             
           </span>
         </div>
@@ -310,16 +310,20 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../DL/" class="md-tabs__link">
           
   
@@ -368,13 +372,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../Paper/" class="md-tabs__link">
           
   
     
@@ -3606,6 +3608,8 @@
       
   
   
+    
+  
   
     
     
@@ -3616,13 +3620,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
@@ -3635,7 +3639,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             AI
@@ -3858,6 +3862,8 @@
                 
   
   
+    
+  
   
     
     
@@ -3870,18 +3876,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../TinyML/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3897,7 +3903,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Efficient ML
@@ -3910,9 +3916,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../TinyML/pruning/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    剪枝与稀疏性
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3921,6 +3947,115 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-pruning" class="md-nav__link">
+    Introduction to Pruning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determing-the-pruning-granularity" class="md-nav__link">
+    Determing the Pruning Granularity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determine-the-pruning-criterion" class="md-nav__link">
+    Determine the Pruning Criterion
+  </a>
+  
+    <nav class="md-nav" aria-label="Determine the Pruning Criterion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection-of-synapses-to-prune" class="md-nav__link">
+    Selection of Synapses to Prune
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-of-neurons-to-prune" class="md-nav__link">
+    Selection of Neurons to Prune
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determine-the-pruning-ratio" class="md-nav__link">
+    Determine the Pruning Ratio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fine-tunetrain-pruned-neural-network" class="md-nav__link">
+    Fine-tune/Train Pruned Neural Network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-support-for-sparsity" class="md-nav__link">
+    System Support for Sparsity
+  </a>
+  
+    <nav class="md-nav" aria-label="System Support for Sparsity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eie-weight-sparsity-activation-sparsity-for-gemm" class="md-nav__link">
+    EIE: Weight Sparsity + Activation Sparsity for GEMM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvidia-tensor-core-mn-weight-sparsity-sparsity" class="md-nav__link">
+    NVIDIA Tensor Core: M:N Weight Sparsity Sparsity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torchsparse-pointacc-activation-sparsity-for-sparse-convolution" class="md-nav__link">
+    TorchSparse &amp; PointAcc: Activation Sparsity for Sparse Convolution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4146,8 +4281,6 @@
       
   
   
-    
-  
   
     
     
@@ -4172,18 +4305,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../Paper/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4199,7 +4332,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Papers
@@ -4214,7 +4347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../BiS-KM/" class="md-nav__link">
+      <a href="../../Paper/BiS-KM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4232,29 +4365,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    ZeRO
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Paper/ZeRO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4263,128 +4376,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    介绍
-  </a>
-  
-    <nav class="md-nav" aria-label="介绍">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    摘要
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    背景
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    内存分析
-  </a>
-  
-    <nav class="md-nav" aria-label="内存分析">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    模型状态
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    残余状态
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#zero_1" class="md-nav__link">
-    ZeRO
-  </a>
-  
-    <nav class="md-nav" aria-label="ZeRO">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#zero-dp" class="md-nav__link">
-    ZeRO-DP
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#zero-r" class="md-nav__link">
-    ZeRO-R
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    实验
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    结论和评论
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    参考资料
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4396,7 +4387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Megatron-LM/" class="md-nav__link">
+      <a href="../../Paper/Megatron-LM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4416,7 +4407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GPipe/" class="md-nav__link">
+      <a href="../../Paper/GPipe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4436,7 +4427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mixed_precision/" class="md-nav__link">
+      <a href="../../Paper/mixed_precision/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4456,7 +4447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FAST/" class="md-nav__link">
+      <a href="../../Paper/FAST/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4476,7 +4467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../softmax/" class="md-nav__link">
+      <a href="../../Paper/softmax/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4829,23 +4820,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    介绍
+  <a href="#introduction-to-pruning" class="md-nav__link">
+    Introduction to Pruning
   </a>
   
-    <nav class="md-nav" aria-label="介绍">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determing-the-pruning-granularity" class="md-nav__link">
+    Determing the Pruning Granularity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determine-the-pruning-criterion" class="md-nav__link">
+    Determine the Pruning Criterion
+  </a>
+  
+    <nav class="md-nav" aria-label="Determine the Pruning Criterion">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    摘要
+  <a href="#selection-of-synapses-to-prune" class="md-nav__link">
+    Selection of Synapses to Prune
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    背景
+  <a href="#selection-of-neurons-to-prune" class="md-nav__link">
+    Selection of Neurons to Prune
   </a>
   
 </li>
@@ -4856,77 +4861,50 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    内存分析
+  <a href="#determine-the-pruning-ratio" class="md-nav__link">
+    Determine the Pruning Ratio
   </a>
   
-    <nav class="md-nav" aria-label="内存分析">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fine-tunetrain-pruned-neural-network" class="md-nav__link">
+    Fine-tune/Train Pruned Neural Network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-support-for-sparsity" class="md-nav__link">
+    System Support for Sparsity
+  </a>
+  
+    <nav class="md-nav" aria-label="System Support for Sparsity">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    模型状态
+  <a href="#eie-weight-sparsity-activation-sparsity-for-gemm" class="md-nav__link">
+    EIE: Weight Sparsity + Activation Sparsity for GEMM
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    残余状态
+  <a href="#nvidia-tensor-core-mn-weight-sparsity-sparsity" class="md-nav__link">
+    NVIDIA Tensor Core: M:N Weight Sparsity Sparsity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torchsparse-pointacc-activation-sparsity-for-sparse-convolution" class="md-nav__link">
+    TorchSparse &amp; PointAcc: Activation Sparsity for Sparse Convolution
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#zero_1" class="md-nav__link">
-    ZeRO
-  </a>
-  
-    <nav class="md-nav" aria-label="ZeRO">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#zero-dp" class="md-nav__link">
-    ZeRO-DP
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#zero-r" class="md-nav__link">
-    ZeRO-R
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    实验
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    结论和评论
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    参考资料
-  </a>
   
 </li>
       
@@ -4949,184 +4927,356 @@
   
 
 
-<h1 id="zero">ZeRO: 为训练万亿参数模型而进行的内存优化<a class="headerlink" href="#zero" title="Permanent link">&para;</a></h1>
+<h1 id="pruning-and-sparsity">Pruning and Sparsity<a class="headerlink" href="#pruning-and-sparsity" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p><img alt="" src="https://cdn.hobbitqia.cc/20240213224428.png" /></p>
 <ul>
-<li>Paper: <a href="https://arxiv.org/abs/1910.02054">ZeRO: Memory Optimizations Toward Training Trillion Parameter Models</a></li>
-<li><strong>SC '20</strong>: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis</li>
-<li>本文中的图片均来自<a href="https://zhuanlan.zhihu.com/p/618865052">知乎文章</a></li>
+<li>Introduction to Pruning<ul>
+<li>What is pruning?</li>
+<li>How should we formulate pruning?</li>
+</ul>
+</li>
+<li>Determine the Pruning Granularity<ul>
+<li>In what pattern should we prune the neural network?</li>
+</ul>
+</li>
+<li>Determine the Pruning Criterion<ul>
+<li>What synapses/neurons should we prune?</li>
+</ul>
+</li>
+<li>Determine the Pruning Ratio<ul>
+<li>What should target sparsity be for each layer?</li>
+</ul>
+</li>
+<li>Fine-tune/Train Pruned Neural Network<ul>
+<li>How should we improve performance of pruned models?</li>
+</ul>
+</li>
+<li>System Support for Sparsity<ul>
+<li>EIE: Weight Sparsity + Activation Sparsity for GEMM</li>
+<li>NVIDIA Tensor Core: M:N Weight Sparsity Sparsity</li>
+<li>TorchSparse &amp; PointAcc: Activation Sparsity for Sparse Convolution</li>
+</ul>
+</li>
 </ul>
 </div>
-<p>如何将数据并行运用到大型神经网络</p>
-<p>思想：一个模型你大到一个计算单元放不下时，就把完整的模型分布式存在某个地方。计算时再取出来。</p>
-<h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="_2">摘要<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>摘要中提到，零冗余优化器（Zero Redundancy Optimizer，ZeRO）用于优化内存，</p>
+<div class="admonition info">
+<p class="admonition-title">MLPerf (the Olympic Game for AI Computing)</p>
+<p>benchmark, 基于 BERT, 要求保持 99% 的 accuracy，衡量加速比。可以发现 open division 相较于 closed 获得了 4.5x 的加速比。</p>
 <ul>
-<li>ZeRO 有潜力达到一万亿参数（不是真正达到）。</li>
-<li>实验中发现它能在 400 个 GPU 上以<strong>超线性速度</strong>训练超过 100B 参数的大型模型。</li>
-<li>可以训练 13B（130 亿）参数模型，且不需要模型并行。</li>
-<li>研究人员利用 ZeRO 在系统方面的突破，创建了世界上最大的语言模型（17B 参数），其准确性打破了记录。</li>
+<li>closed division: 只靠硬件加速，不能改变网络结构（比如权重数量、精度）。</li>
+<li>open division: 可以改变网络结构，比如剪枝、降低精度、压缩等技巧。</li>
 </ul>
-<!-- 做一个系统能做多大，训练一个更大的模型精度更好。 -->
-
-<h3 id="_3">背景<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>模型变大，无法容纳在单个设备（如 GPU 或 TPU）的内存中。数据并行（DP）并不能减少每台设备的内存，其他现有的解决方案有管道并行（PP）、模型并行（MP）、CPU-Offloading，这些方案中存在的问题是：计算/通信比（<span class="arithmatex">\(\dfrac{compute}{communication}\)</span>）。</p>
-<p>这里最好的是 MP（本论文提到的模型并行都指的是 Megatron-LM），MP 是把模型垂直分开，每个层之间都要做通信。<strong><em>e.g.</em></strong> 利用 Megatron-LM 在 2 个 DGX-2（32 卡）上训练 40B 的模型，只能得到 5Tflops，（每个 GPU 只用了不到峰值的 5%）</p>
+<p>可以看出，通过剪枝改变网络结构可以显著地提网络性能。</p>
+</div>
+<h2 id="introduction-to-pruning">Introduction to Pruning<a class="headerlink" href="#introduction-to-pruning" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Motivation</strong>: 内存很昂贵，会消耗大量的能源。</li>
+<li>
+<p><strong>Idea</strong>: Make neural network smaller by removing synapses and neurons.</p>
+<p>我们去掉神经网络里的一些小的连接（去掉即让权重为 0），使网络变得更小。
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240601150503.png" width = 50%/> </div></p>
+</li>
+<li>
+<p>大体流程如下：</p>
+<ul>
+<li>Train Connectivity 首先我们训练至收敛</li>
+<li>Prune Connections 然后我们去掉一些连接</li>
+<li>Train Weights 最后我们重新训练权重</li>
+<li>第 3 步执行完后可以继续第 2 步，如此迭代。</li>
+</ul>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240601150727.png" width = 70%/> </div></p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>可以看到不同的网络有不同的 pruning ration，其中 VCG-12 可以达到 12x 的 reduction，说明较大的网络内部的冗余也更多。对于较小的网络如 SqueezeNet，我们依然可以达到 3.2x 的 reduction。
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240601150741.png
+" width = 70%/> </div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Pruning the NeuralTalk LSTM does not hurt image caption quality.</p>
+<p>即使我们减去了大部分连接，但是如果这个比例在接受范围内，那么不会影响分类的质量。如下面的前三个图，我们可以看到剪枝后提取的信息足够用来识别物体。但是对于第四个图，我们剪枝了 95%，导致了信息捕获不足。
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240601151302.png" width = 80%/> </div></p>
+</div>
+</li>
+<li>
+<p>通常我们将剪枝表示为</p>
+<div class="arithmatex">\[
+\arg\min\limits_{\mathbf{W}_p}L(\mathbf{x};\mathbf{W_p})\quad s.t.\ \|\mathbf{W}_p\|_0\leq N
+\]</div>
+<p>其中，</p>
+<ul>
+<li><span class="arithmatex">\(L\)</span> 是神经网络训练的目标函数。</li>
+<li><span class="arithmatex">\(\mathbf{x}\)</span> 是输入，<span class="arithmatex">\(\mathbf{W}\)</span> 是原始权重，<span class="arithmatex">\(\mathbf{W}_p\)</span> 是剪枝后的权重。</li>
+<li><span class="arithmatex">\(\|\cdot\|_0\)</span> 表示非零元素的个数，<span class="arithmatex">\(N\)</span> 表示我们希望有多少权重保持非零。</li>
+</ul>
+</li>
+</ul>
+<h2 id="determing-the-pruning-granularity">Determing the Pruning Granularity<a class="headerlink" href="#determing-the-pruning-granularity" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>不同粒度的剪枝会有不同的效果，如下图所示：</p>
+<ul>
+<li>Fine-grained/Unstructured: <ul>
+<li>More flexible pruning index choice</li>
+<li>Hard to accelerate (irregular)</li>
+</ul>
+</li>
+<li>Coarse-grained/Structured:<ul>
+<li>Less flexible pruning index choice (a subset of the fine-grained case)</li>
+<li>Easy to accelerate (just a smaller matrix!)</li>
+</ul>
+</li>
+</ul>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240601161155.png" width = 65%/> </div></p>
+</li>
+<li>
+<p>上面是对于 2D 的矩阵，对于卷积层，我们有 4 个维度 <span class="arithmatex">\([c_0, c_i, k_h,k_w]\)</span>，这给了我们更多的剪枝粒度的选择。</p>
+<ul>
+<li><span class="arithmatex">\(c_i\)</span>: 输入通道数; <span class="arithmatex">\(c_0\)</span>: 输出通道数; <span class="arithmatex">\(k_h,k_w\)</span>: kernel 的高和宽。</li>
+</ul>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240601161535.png" width = 70%/> </div></p>
+<ul>
+<li><strong>Fine-grained Pruning</strong><ul>
+<li>逐个元素选择是否剪枝，通常可以得到更高的剪枝率。但是需要注意的是，<strong>参数的减少不能直接转为 speed up</strong>，还需要考虑硬件上的效率。</li>
+<li>细粒度的剪枝只能在某些特定硬件上得到加速（如 EIE），但是在 GPU 上不能得到加速。</li>
+</ul>
+</li>
+<li>
+<p><strong>Pattern-based Pruning</strong>: N:M sparsity </p>
+<ul>
+<li>N:M sparsity 是指每连续 M 个元素，我们修建掉 N 个。常用的情况是 2:4 sparsity(50%).</li>
+<li>
+<p>这种剪枝方式可以在 NVIDIA’s Ampere GPU 架构上得到加速。如下图所示，我们会存修剪后的非零值，同时有一个额外的索引块来存非零值的原始位置。
+    <div align=center> <img src="https://cdn.hobbitqia.cc/20240601162210.png" width = 65%/> </div></p>
+</li>
+<li>
+<p>通常可以保持精度（在各种任务中经过测试）。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Channel Pruning</strong></p>
+<ul>
+<li>直接去掉某些通道，好处是可以直接获得加速（相当于降低了 <span class="arithmatex">\(c\)</span> 的大小）。</li>
+<li>但是剪枝率也较低。这个方法被广泛使用，因为足够简单。</li>
+<li>对于不同层，我们可以采用不同的剪枝率，这样能在相同的精度下获得更低的延时。</li>
+</ul>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240601162659.png" width = 70%/> </div></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="determine-the-pruning-criterion">Determine the Pruning Criterion<a class="headerlink" href="#determine-the-pruning-criterion" title="Permanent link">&para;</a></h2>
+<h3 id="selection-of-synapses-to-prune">Selection of Synapses to Prune<a class="headerlink" href="#selection-of-synapses-to-prune" title="Permanent link">&para;</a></h3>
+<ul>
+<li>当剪枝参数时，我们希望移除不太重要（less important）的参数，这样我们剪枝后的神经网络能获得更好的性能。</li>
+<li>
+<p><strong>Magnitude-based Pruning</strong></p>
+<ul>
+<li>启发式的剪枝准测，我们把认为有更大绝对值的权重更重要。</li>
+<li>对于 element-wise 的剪枝，<span class="arithmatex">\(Importance=|W|\)</span>.</li>
+<li>对于 row-wise 的剪枝，<span class="arithmatex">\(Importance=\sum\limits_{i\in S}\sum|w_i|\)</span> 或者 <span class="arithmatex">\(Importance=\sum\limits_{i\in S}\sqrt{\sum|w_i|^2}\)</span>. 其中 <span class="arithmatex">\(\mathbf{W}^{(S)}\)</span> 是权重 <span class="arithmatex">\(\mathbf{W}\)</span> 的 <span class="arithmatex">\(S\)</span> 结构集合，这里分别是 L1 和 L2 范数。</li>
+<li>也可以使用 Lp 范数，即 <span class="arithmatex">\(\|\mathbf{W}_p^{(S)}\| = \left(\sum\limits_{i\in S}|w_i|^p\right)^{1/p}\)</span>.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240601164255.png" width = 70%/> </div>
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240601164245.png" width = 70%/> </div>
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240601164317.png" width = 70%/> </div></p>
+</div>
+</li>
+<li>
+<p><strong>Scaling-based Pruning</strong></p>
+<ul>
+<li>这个剪枝方法用于 filter pruning。在卷积层里每个 filter 都有一个 scaling factor 缩放因子（可训练的），把这个因子和输出通道的输出乘起来。缩放因子较小的通道将被修剪掉。</li>
+<li>这个缩放因子可以用在 BatchNorm 层里。</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240601164739.png" width = 75%/> </div></p>
+</div>
+</li>
+<li>
+<p><strong>Second-Order-based Pruning</strong></p>
+<ul>
+<li>通过泰勒级数推导误差，随后通过 Hessian 矩阵的特征值来评估权重的重要性。
+    <div align=center> <img src="https://cdn.hobbitqia.cc/20240601164926.png" width = 80%/> </div></li>
+</ul>
+</li>
+</ul>
+<h3 id="selection-of-neurons-to-prune">Selection of Neurons to Prune<a class="headerlink" href="#selection-of-neurons-to-prune" title="Permanent link">&para;</a></h3>
+<ul>
+<li>我们还可以修剪神经元/激活值（粗粒度，因为去掉神经元相当于把所有相关的连接权重去掉了），类似地我们希望移除不那么有用（less useful）的神经元。</li>
+<li>
+<p><strong>Percentage-of-Zero-Based Pruning</strong></p>
+<ul>
+<li>ReLU 激活函数会在输出里产生 0，因此我们可以采用 <strong>Average Percentage of Zero activations (APoZ)</strong> 来衡量权重的重要性。APoZ 越小，说明权重越重要。</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>在这里我们基于 channel 做修剪：可以看到 channel 2 的 APoZ 最小，因此我们可以修剪掉这个 channel。
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240601165501.png" width = 80%/> </div></p>
+</div>
+</li>
+<li>
+<p><strong>Regression-based Pruning</strong></p>
+<ul>
+<li>
+<p>因为大模型下微调不那么容易，我们可以单独关注某层，通过回归的方法，最小化重建（即从输入到输出）对应层输出的 reconstruction error 误差。</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240601170619.png" width = 50%/> </div></p>
+</li>
+<li>
+<p>令 <span class="arithmatex">\(\mathbf{Z}=\mathbf{X}\mathbf{W}^\top=\sum\limits_{c=0}^{c_i -1}\mathbf{X}_c \mathbf{W}_c^\top\)</span>, 那么我们要做的就是</p>
+<div class="arithmatex">\[
+\arg\min\limits_{\mathbf{W}, \beta}\|\mathbf{Z}-\hat{\mathbf{Z}}|_F^2 = \|\mathbf{Z} - \sum\limits_{c=0}^{c_i-1}\beta_c \mathbf{X}_c \mathbf{W}_c^\top\|_F^2 \quad s.t.\ \|\beta_0\| \leq N_c
+\]</div>
+<ul>
+<li><span class="arithmatex">\(\beta\)</span> 是长为 <span class="arithmatex">\(c_i\)</span> 的向量的通道系数，<span class="arithmatex">\(\beta_c=0\)</span> 说明我们修剪掉了通道 <span class="arithmatex">\(c\)</span>。</li>
+<li><span class="arithmatex">\(N_c\)</span> 是我们希望保留的通道数。</li>
+<li>解决这个问题，可以通过：<ul>
+<li>固定 <span class="arithmatex">\(\mathbf{W}\)</span>, 解出 <span class="arithmatex">\(\beta\)</span> 用于通道选择。</li>
+<li>固定 <span class="arithmatex">\(\beta\)</span>，解出 <span class="arithmatex">\(\mathbf{W}\)</span> 用来最小化重建误差。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="determine-the-pruning-ratio">Determine the Pruning Ratio<a class="headerlink" href="#determine-the-pruning-ratio" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Non-uniform pruning is better than uniform shrinking. 非规则的剪枝比规则的剪枝更好。</li>
+<li>
+<p>需要分析每一层的 sensitivity 敏感度，然后根据 sensitivity 来决定各层的剪枝率。有的层更加敏感（比如第一层），有的层冗余更多（比如全连接层）。</p>
+<ul>
+<li>选择模型中的 <span class="arithmatex">\(L_i\)</span> 层，剪枝 <span class="arithmatex">\(L_i\)</span> 层至剪枝率 <span class="arithmatex">\(r\in \{0, 0.1, 0.2, \ldots, 0.9\}\)</span>（或者使用其他步长），随后观察模型的精确度下降情况 <span class="arithmatex">\(\nabla Acc_r^i\)</span>。重复这个步骤知道所有层都被分析结束。</li>
+<li>最后我们可以选择一个 threshold <span class="arithmatex">\(T\)</span>, 即精度至少要保持在 <span class="arithmatex">\(T\)</span> 以上，然后为每一层选择对应的剪枝率。</li>
+<li>这是一种启发式的方法。同时这里我们假设了不同的层之间是相互独立的，不会互相干扰。但实际上层与层之间存在相互关系，因此这样的方法并不是最优的。</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240601172227.png" width = 70%/> </div>
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240601172505.png" width = 70%/> </div></p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Megatron 论文说只能做到 8.3B，这篇论文称使用 Megatron 可以做到 40B，具体如何做到无从得知。</p>
+<p>需要注意的是剪枝率并没有反映 layer size，比如上面的例子中虽然 L1 可以很激进地修剪，但可能 L1 本来就只有 20 个参数，这样的剪枝率并不会对整个网络的大小产生很大的影响。</p>
+<p>在 LLM(Transformer) 背景下，各个层都是 homegeneous 的，即每层的大小不会有太大的变化。但是对于 CNN，每层的大小都是不同的，因此我们需要考虑每层的 size。</p>
 </div>
-<p>内存用在什么地方，具体的内存分析课见第二部分</p>
+</li>
+<li>
+<p><strong>Automatic Pruning</strong></p>
 <ul>
-<li>Model State (模型状态)：Optimizer States 优化器状态、Gradients 和 Parameters</li>
-<li>Residual State (残余状态)：Activations 中间值、Temporary buffers 临时缓存、内存碎片</li>
+<li>在过去，剪枝的比例是人工选择的，需要我们通过实验试错来确定最终比例。我们希望有一个 push-the-button 的方法来自动选择最佳的剪枝比例。</li>
+<li>
+<p>AMC (AutoML for Model Compression) 是一个自动选择剪枝比例的方法，它通过强化学习来选择最佳的剪枝比例。</p>
+<p>这里实际上我们会把 reward 设为 <span class="arithmatex">\(-Error*\log(FLOP)\)</span> 用来平衡精度和 FLOP（近似延时）的关系。
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240601173020.png" width = 75%/> </div></p>
+<p>最终我们可以得到比人工修剪更好的结果。</p>
+</li>
+<li>
+<p>NetAdapt: A rule-based iterative/progressive method</p>
+</li>
 </ul>
-<p>本论文为了优化模型状态内存，提出了 ZeRO-DP；为了优化残余状态，提出了 ZeRO-R，二者合在一起就是 ZeRO。</p>
-<!-- ZeRO 和 MP -->
-
-<!-- Extended Introduction 这样写不好 -->
-
-<!-- 第二部分略过
-
-CPU: PCI-E
-
-内存分析，内存放在什么地方  -->
-
-<!-- 罗里吧嗦 -->
-
-<h2 id="_4">内存分析<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h3 id="_5">模型状态<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>这里以 Adam 优化器为例，对于每一个可训练的参数 <span class="arithmatex">\(w\)</span>，我们要维护一个动量和方差。</p>
+</li>
+</ul>
+<h2 id="fine-tunetrain-pruned-neural-network">Fine-tune/Train Pruned Neural Network<a class="headerlink" href="#fine-tunetrain-pruned-neural-network" title="Permanent link">&para;</a></h2>
+<ul>
+<li>剪枝后模型的精度会下降，我们需要微调剪枝后的模型来恢复精度，并可以尝试让剪枝率更高。</li>
+<li>
+<p>Learning rate for fine-tuning is usually <strong>1/100</strong> or <strong>1/10</strong> of the original learning rate.</p>
+<p>经验上会这么设置微调时的学习率，因为在剪枝前模型已经收敛了，我们不需要太大的学习率来调整模型。</p>
+</li>
+<li>
+<p><strong>Iterative Pruning</strong></p>
+<p>先训练到收敛，随后进行剪枝。剪枝后再次训练至收敛。随后可以进一步提高剪枝率，如此迭代。
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240601201827.png" width = 35%/> </div></p>
+</li>
+<li>
+<p><strong>Regularization</strong></p>
+<ul>
+<li>训练或者微调时，我们会把正则化项 regularization 加到损失上。<ul>
+<li>惩罚非零参数，目的是尽可能地多修剪参数。</li>
+<li>鼓励更小的权重，这样下一轮迭代就可能修剪掉这些权重。</li>
+</ul>
+</li>
+<li>常见的正则化 <span class="arithmatex">\(L'=L(\mathbf{x};\mathbf{W})+\lambda |\mathbf{W}|\)</span>, <span class="arithmatex">\(L'=L(\mathbf{x};\mathbf{W})+\lambda \|\mathbf{W}\|^2\)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="system-support-for-sparsity">System Support for Sparsity<a class="headerlink" href="#system-support-for-sparsity" title="Permanent link">&para;</a></h2>
+<h3 id="eie-weight-sparsity-activation-sparsity-for-gemm">EIE: Weight Sparsity + Activation Sparsity for GEMM<a class="headerlink" href="#eie-weight-sparsity-activation-sparsity-for-gemm" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>The First DNN Accelerator for Sparse, Compressed Model</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240601220221.png" width = 65%/> </div></p>
+<p>0 是一个特殊的值，因为 0 的权重/激活值不需要计算/存储（结果肯定为 0），从而可以节省计算和存储。</p>
+<details class="question">
+<summary>why weight 10x less computation while 5x less memory footprint</summary>
+<p>因为为了表示 sparse matrix，我们还需要存索引，因此存储空间的节省不如计算量的节省。</p>
+</details>
+</li>
+<li>
+<p>Parallelization on Sparsity</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>这里 relative index 表示和上一个非零值的相对位置，column pointer 表示是否开始新的一列。
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240601220425.png" width = 70%/> </div></p>
+</div>
+</li>
+<li>
+<p>Micro Architecture for each PE</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240601220922.png" width = 75%/> </div></p>
+</li>
+</ul>
 <div class="admonition info">
-<p class="admonition-title">Mixed-Precision Training 混精度训练</p>
-<p>在混精度下会有这样的问题：Nvidia 在半精度（fp16）计算更快，因此模型训练时通常使用半精度。</p>
-<p>具体指我们在训练这个层的参数 <span class="arithmatex">\(w\)</span> 时，<span class="arithmatex">\(w\)</span> 和这个层的输入、输出都是 fp16。如全连接层，<span class="arithmatex">\(w*x=y\)</span>，那么这里 <span class="arithmatex">\(w,x,y\)</span> 的精度都是 fp16。</p>
-<p>但是 fp16 精度不够，在累计权重时会有问题。因此权重更新时使用的是 fp32，即权重有一个 fp32 的复制。更新后再将将其转为 fp16，用于前向和后向计算。</p>
+<p class="admonition-title">总结 EIE</p>
+<ul>
+<li>Pros:<ul>
+<li>EIE demonstrated that special-purpose hardware can make it cost-effective to do sparse operations with matrices that are up to 50% dense</li>
+<li>EIE exploits both weight sparsity and activation sparsity, not only saves energy by skipping zero weights, but also saves the cycle by not computing it.</li>
+<li>EIE supports fine-grained sparsity, and allows pruning to achieve a higher pruning ratio.</li>
+<li>Aggressive weight quantization (4bit) to save memory footprint. To maintain accuracy, EIE decodes the weight to 16bit and uses 16bit arithmetic. W4A16 approach is reborn in LLM: GPTQ, AWQ, llama.cpp, MLC LLM</li>
+</ul>
+</li>
+<li>Cons:<ul>
+<li>EIE isn’t as easily applied to arrays of vector processors — improve: structured sparsity (N:M sparsity)</li>
+<li>EIE’s Control flow overhead, storage overhead — improve: coarse grain sparsity</li>
+<li>EIE only support FC layers - actually reborn in LLM</li>
+<li>EIE fits everything on SRAM - practical for TinyML, not LLM</li>
+</ul>
+</li>
+</ul>
 </div>
-<p>如果模型有 <span class="arithmatex">\(\phi\)</span> 个可以学习的参数，那么 fp16 需要 <span class="arithmatex">\(2\phi\)</span> bytes 存参数，<span class="arithmatex">\(2\phi\)</span> bytes 存梯度。fp32 需要存 <span class="arithmatex">\(w\)</span> 和他在 Adam 中的状态，即 <span class="arithmatex">\(3*4\phi = 12\phi\)</span> bytes，即此时总共需要 <span class="arithmatex">\(2\phi+2\phi+12\phi=16\phi\)</span> bytes 的内存来存储模型。<strong><em>e.g.</em></strong> GPT-2 模型有 1.5B 参数，仅保存参数只需要 3GB 内存，但是实际上至少需要 24GB 内存。</p>
-<h3 id="_6">残余状态<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">The first principle of efficient AI computing is to be lazy!</p>
+<p><strong>Avoid redundant computation, quickly reject the work, or delay the work.</strong></p>
+<p>我们设想未来的人工智能模型将在各种粒度和结构上稀疏。与专门的加速器共同设计，稀疏模型将变得更加高效和易于访问。</p>
+<details class="info">
+<summary>Related Work</summary>
 <ul>
-<li>
-<p>Activations</p>
-<p>前向时，要保留中间结果，后向要用。线性关系。<strong><em>e.g.</em></strong> GPT-2 模型有 1.5B 参数，如果 batch 取 32，序列长度取 1K，那么需要 60GB 的内存来存中间结果。可以使用 checkpointing 激活检查点的方法来优化。但对于较大的模型，即使使用激活检查点功能，激活内存也会变得相当大。</p>
-</li>
-<li>
-<p>Temporary buffers</p>
-<p>当模型大小很大时，由于某些操作/高性能库的原因，会等待装填或者分配一个非常大的融合缓冲区去执行操作，这虽然会带来带宽和效率上的优势，但是有时却成为了内存瓶颈。</p>
-</li>
-<li>
-<p>Memory Fragmentation</p>
-<p>GPU 没有虚拟内存，会出现中间变量、内存碎片。tensorflow 不会有内存碎片这个问题，因为他提前知道整个程序的运行，可以自适应分配，尽可能减少碎片。Pytorch 会有。</p>
-<p>论文里提到最坏情况下，有 30% 的内存因为碎片无法使用。</p>
-</li>
+<li>Generative AI: spatial sparsity [SIGE, NeurIPS’22]</li>
+<li>Transformer: token sparsity, progressive quantization [SpAtten, HPCA’21]</li>
+<li>Video: temporal sparsity [TSM, ICCV’19]</li>
+<li>Point cloud: spatial sparsity [TorchSparse, MLSys’22 &amp; PointAcc, Micro’22]</li>
 </ul>
-<h2 id="zero_1">ZeRO<a class="headerlink" href="#zero_1" title="Permanent link">&para;</a></h2>
-<!-- 没必要这么写 -->
-
-<h3 id="zero-dp">ZeRO-DP<a class="headerlink" href="#zero-dp" title="Permanent link">&para;</a></h3>
-<p>Insight: </p>
-<ul>
-<li>DP 比 MP 效率高。</li>
-<li>DP 对内存不有效，因为每个地方要保存整个模型。</li>
-<li>DP、MP 都要维护参数对应的中间状态，不是很高效。</li>
-</ul>
-<p>思想：模型状态在多个 GPU 上有重复的拷贝，我们可以只存一份，下次要用时向这个 GPU 要即可。（类似于参数服务器）</p>
-<p>具体来说，ZeRO-DP 有下面三个部分：（假设 DP 并行度为 <span class="arithmatex">\(N_d\)</span>）</p>
-<ul>
-<li>
-<p><span class="arithmatex">\(P_{os}\)</span> (ZeRO-1)</p>
-<p>对优化器状态进行分割，每个并行进程只保存 <span class="arithmatex">\(12 \phi / N_d\)</span> 的优化器状态，并只更新对应的参数。每轮训练中，前向和后向传递结束后，通过 reduce-scatter 让每个进程都获得对应优化器状态部分的合并梯度，更新对应参数，最后对所有数据并行进程进行 all-gather，以获全部更新后的参数。
-<div align=center><img src = "https://pic4.zhimg.com/80/v2-e8ecfe11b42f0c2fc115100d188497b7_1440w.webp" width =50%></div></p>
-<p>此时单卡通信量为 <span class="arithmatex">\(\phi(reduce-scatter)+\phi(all-gather)=2\phi\)</span>.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(P_{os+g}\)</span> (ZeRO-2)</p>
-<p>对梯度进行分割，每个并行进程只保存 <span class="arithmatex">\(2\phi / N_d\)</span> 的梯度。每轮训练中，前向和后向传递结束后每个进程都得到的是完整梯度，通过 reduce-scatter 让每个进程都获得对应梯度部分的合并梯度，其他的梯度都丢掉，随后更新对应参数，最后对所有数据并行进程进行 all-gather，以获全部更新后的参数。
-<div align=center><img src = "https://pic4.zhimg.com/80/v2-3dd79addc9cbe6eb3d22a49037f6e087_1440w.webp" width =50%></div></p>
-<p>此时单卡通信量为 <span class="arithmatex">\(\phi(reduce-scatter)+\phi(all-gather)=2\phi\)</span>.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(P_{ps+g+p}\)</span> (ZeRO-3)</p>
-<p>对参数进行分割，每个并行进程只保存 <span class="arithmatex">\(2\phi / N_d\)</span> 的参数。每轮训练中，在 forward 时，对参数做 all-gather，forward 结束丢掉其他参数；在 backward 时同理，对参数做 all-gather。前向和后向结束后得到完整的梯度，做 reduce-scatter，更新对应参数，随后抛弃其他部分的梯度，最后不需要再做 all-gather（因为本来就只维护一部分参数）。</p>
-<p>此时单卡通信量为 <span class="arithmatex">\(\phi(reduce-scatter)+2*\phi(all-gather)=3\phi\)</span>.</p>
-<p><div align=center><img src = "https://pic1.zhimg.com/80/v2-ade8d5f51d46b23ef7b25cf73248853c_1440w.webp" width =50%></div></p>
-</li>
-</ul>
-<p>可以看到，ZeRO-1/ZeRO-2 不会带来额外的通信量，而 ZeRO-3 的通信量是朴素 DP 的 1.5 倍。</p>
-<p>ZeRO-DP 中不同优化的每设备内存消耗量：</p>
-<div align=center><img src = "https://cdn.hobbitqia.cc/20240213203722.png" width =60%></div>
-
-<p>黑体表示能放到一张卡内（32GB V100 GPUs）。因此理论上 4 卡就放得下 7.5B 的模型，且理论上可以做到 1T 参数的模型。（但只考虑了模型状态，还没有中间状态的内存占用）</p>
-<h3 id="zero-r">ZeRO-R<a class="headerlink" href="#zero-r" title="Permanent link">&para;</a></h3>
-<p>具体来说：</p>
-<ul>
-<li>
-<p><span class="arithmatex">\(P_a\)</span></p>
-<p>Megatron-LM 每层的 Activations Memory 都对每个 GPU 复制了一份。可以把它切成很多块，每个 GPU 保存一部分，一旦计算出模型层的前向传播，输入 Activation 就会在所有 MP 进程中进行分区，直到在反向传播期间再次需要太时，我们进行 all-gather 操作。（类似于 activation 重算），这里是用带宽来换空间，区别在于不是真的重算，只是存在不同地方。</p>
-<p>此外，在模型非常大、设备内存非常有限的情况下，这些分区激活检查点也可以卸载到 CPU，从而将激活内存开销降至几乎为零，但需要额外的通信成本。</p>
-</li>
-<li>
-<p><span class="arithmatex">\(C_B\)</span></p>
-<p>开一个固定大小的 buffer，用的时候分配，不用的时候拿掉（常见优化）。填满了再把里面的内容发出去，这样可以有效地利用带宽。</p>
-<p>类似于网络中的思想，我们可以算一个超时，如果指定时间内没有把缓冲区填满，就把 buffer 缩小。</p>
-</li>
-<li>
-<p><span class="arithmatex">\(M_D\)</span></p>
-<p>内存碎片有 short-lived，有 long-lived，做内存整理。一直要维护的张量放在一起，其他的内存可以随时分配、析构。</p>
-</li>
-</ul>
-<p>在基于 Megatron-LM 的模型并行中，每个 transformer 块需要 <span class="arithmatex">\(12\times seq\_length \times hidden\_dim\)</span> 的通信量，这是因为它在前向传播、前向重新计算和反向传播中各有两次 all-reduce 操作，每次操作的通信量是消息大小的两倍，即 <span class="arithmatex">\(2\phi\)</span>。使用了 <span class="arithmatex">\(P_a\)</span> 技术后，每次 Activation Checkpoints 需要一个额外的 all-reduce 操作，增加了 <span class="arithmatex">\(seq\_length \times hidden\_dim\)</span> 的通信量。</p>
-<p>此外，当 MP 和 DP 一起使用时，<span class="arithmatex">\(P_a\)</span> 的引入能够允许更大的 batch size，这反过来可以将数据并行的通信量减少一个数量级。</p>
-<p>我们还可以通过 <span class="arithmatex">\(P_{a+cpu}\)</span> 将激活检查点卸载到 CPU，从而将激活内存需求降至几乎为零，但与 <span class="arithmatex">\(P_a\)</span> 相比，CPU 内存间的数据移动量增加了 2 倍。</p>
-<h2 id="_7">实验<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<p>实验环境：</p>
-<ul>
-<li>ZeRO-100B（参数有 170B 的模型）</li>
-<li>硬件：25 个 DGX-2，400 块 V100 GPU，连接是 100GBps</li>
-<li>baseline: Megatron-LM</li>
-</ul>
-<p>结果如图：</p>
-<div align=center><img src = "https://cdn.hobbitqia.cc/20240213223601.png" width =60%></div>
-
-<p>当达到 40 billion 参数时，Megatron 需要跨机器做模型并行，需要做大量的通讯，可以看到 baseline 很低（不能算很好的 baseline，因为别人本身不是这么设计的）</p>
-<p>超线性增长：</p>
-<div align=center><img src = "https://cdn.hobbitqia.cc/20240213223658.png" width =60%></div>
-
-<p>卡增多，可以把模型分到更多的卡上，每台机器拿到的 batch 变大，好处：每块卡每次运算的矩阵变大了（能更好地使用单机 GPU 的核），通讯没有发生变化。（计算变多，通讯不变，因此计算通讯比提高）这里没有考虑收敛。</p>
-<p>需要注意的是测性能和真正训练模型是不同的，论文里提到只训练了 17B 参数的模型，前面说的 170B 的模型只是用来测性能。</p>
-<!-- 革命性，有一点自夸，没有用到 hpc 里的新技术 -->
-
-<h2 id="_8">结论和评论<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<p>论文中可以看到 ZeRO 算法相对比较简单，每次 all reduced 时不需要把结果 reduce 到所有 GPU 上，而是每个 GPU 负责自己的一块，只维护自己的。当需要用到完整的数据时，再重新发送得到完整数据。用通讯换内存。</p>
-<p>个人的评论如下：（结合了部分其他人的评论）</p>
-<ul>
-<li>这篇的写作比较啰嗦，第一节过于简单和跳跃，后面的内容比较慢，读起来费力。反复提到了 Megatron 这篇文章，但没有提 Megatron 到底是什么技术。</li>
-<li>虽然论文声称 ZeRO 是一个革命性的新技术，但实际上核心思想是很简单的，而且从以前的论文、实践中也能看到类似的思想。同时在计算机网络、分布式系统里面也有类似的处理。</li>
-<li>论文依然是系统领域经典的思路：做一个系统能做多大，训练一个更大的模型精度更好。</li>
-</ul>
-<!-- * 要想在这个领域有所突破，系统的基础很重要。 -->
-
-<h2 id="_9">参考资料<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://www.bilibili.com/video/BV1tY411g7ZT/?spm_id_from=333.999.0.0&amp;vd_source=42ff0a2bcd6c17897aa255997a3011c5">Mu Li 的 b 站视频“Zero 论文精读”</a>。</li>
-<li><a href="https://zhuanlan.zhihu.com/p/663517415">知乎文章“ZeRO: Zero Redundancy Optimizer，一篇就够了。”</a>，对本篇论文分析，附录介绍了几种常见的通信方式（all-gather, all-reduce, reduce-scatter）。</li>
-<li><a href="https://zhuanlan.zhihu.com/p/617133971">知乎文章“数据并行上篇(DP, DDP与ZeRO)”</a>，有对 Ring-AllReduce 的分析。</li>
-<li><a href="https://zhuanlan.zhihu.com/p/618865052">知乎文章“数据并行下篇( DeepSpeed ZeRO，零冗余优化)”</a>。</li>
-</ul>
+</details>
+</div>
+<h3 id="nvidia-tensor-core-mn-weight-sparsity-sparsity">NVIDIA Tensor Core: M:N Weight Sparsity Sparsity<a class="headerlink" href="#nvidia-tensor-core-mn-weight-sparsity-sparsity" title="Permanent link">&para;</a></h3>
+<p>TODO</p>
+<h3 id="torchsparse-pointacc-activation-sparsity-for-sparse-convolution">TorchSparse &amp; PointAcc: Activation Sparsity for Sparse Convolution<a class="headerlink" href="#torchsparse-pointacc-activation-sparsity-for-sparse-convolution" title="Permanent link">&para;</a></h3>
+<p>TODO</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月13日 22:56:03</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年6月1日 22:33:37</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月13日 22:56:03</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年6月1日 22:33:37</span>
       
     
   </small>
