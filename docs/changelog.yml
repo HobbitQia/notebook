@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-6-1":
+    - newpage:
+        text: AI > Efficient ML > 剪枝与稀疏性
+        href: /TinyML/pruning
   - "2024-5-30":
     - newpage:
         text: Miscellaneous > CGRA

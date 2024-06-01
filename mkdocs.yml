@@ -251,6 +251,9 @@ nav:
       - 反向传播: DL/lec05.md
       - 卷积神经网络: DL/lec06.md
       - CNN 架构: DL/lec07.md
+    - Efficient ML:
+      - TinyML/index.md
+      - 剪枝与稀疏性: TinyML/pruning.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
