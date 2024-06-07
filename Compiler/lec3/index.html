@@ -4063,6 +4063,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -4112,6 +4114,26 @@
   
   <span class="md-ellipsis">
     剪枝与稀疏性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TinyML/quantization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    量化
   </span>
   
 
@@ -5244,7 +5266,7 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="o">//</span> <span class="n">store</span> <span class="n">the</span> <span class="n">next</span> <span class="n">token</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">enum</span> <span class="n">token</span> <span class="n">tok</span><span class="o">;</span> 
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">void</span> <span class="n">advance</span><span class="bp">()</span> <span class="o">{</span><span class="n">tok</span><span class="o">=</span><span class="n">getToken</span><span class="bp">()</span><span class="o">;}</span> 
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="o">//</span> <span class="n">consume</span> <span class="n">the</span> <span class="n">next</span> <span class="n">token</span> <span class="ow">and</span> <span class="n">get</span> <span class="n">the</span> <span class="k">new</span> <span class="n">one</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="o">//</span> <span class="n">consume</span> <span class="n">the</span> <span class="n">next</span> <span class="n">token</span> <span class="k">and</span> <span class="n">get</span> <span class="n">the</span> <span class="k">new</span> <span class="n">one</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">void</span> <span class="n">eat</span><span class="o">(</span><span class="n">enum</span> <span class="n">token</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span><span class="k">if</span> <span class="o">(</span><span class="n">tok</span><span class="o">==</span><span class="n">t</span><span class="o">)</span> <span class="n">advance</span><span class="bp">()</span><span class="o">;</span> <span class="k">else</span> <span class="n">error</span><span class="bp">()</span><span class="o">;}</span>
 </code></pre></div></li>
 <li>build a function for each non-terminal

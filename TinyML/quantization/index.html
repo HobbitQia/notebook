@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/dip/dip8/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/TinyML/quantization/">
       
       
-        <link rel="prev" href="../dip7/">
+        <link rel="prev" href="../pruning/">
       
       
-        <link rel="next" href="../dip9/">
+        <link rel="next" href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>引导滤波 - HobbitQia的笔记本</title>
+        <title>量化 - HobbitQia的笔记本</title>
       
     
     
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#guided-image-filtering" class="md-skip">
+        <a href="#quantization" class="md-skip">
           跳转至
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              引导滤波
+              量化
             
           </span>
         </div>
@@ -252,20 +252,16 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../ds/" class="md-tabs__link">
           
   
@@ -314,16 +310,20 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../DL/" class="md-tabs__link">
           
   
@@ -558,8 +558,6 @@
       
   
   
-    
-  
   
     
     
@@ -580,13 +578,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -599,7 +597,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computer Science
@@ -876,8 +874,6 @@
                 
   
   
-    
-  
   
     
     
@@ -910,18 +906,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../dip/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -937,7 +933,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             图像信息处理
@@ -952,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip1/" class="md-nav__link">
+      <a href="../../dip/dip1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -972,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip2/" class="md-nav__link">
+      <a href="../../dip/dip2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip3/" class="md-nav__link">
+      <a href="../../dip/dip3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1012,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip5/" class="md-nav__link">
+      <a href="../../dip/dip5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1032,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip6/" class="md-nav__link">
+      <a href="../../dip/dip6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1052,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip7/" class="md-nav__link">
+      <a href="../../dip/dip7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1070,29 +1066,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    引导滤波
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../dip/dip8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1101,54 +1077,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#guided-filter" class="md-nav__link">
-    Guided Filter
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#complexity" class="md-nav__link">
-    Complexity
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gradient-preserving" class="md-nav__link">
-    Gradient Preserving
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitation" class="md-nav__link">
-    Limitation
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1160,7 +1088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip9/" class="md-nav__link">
+      <a href="../../dip/dip9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1180,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip10/" class="md-nav__link">
+      <a href="../../dip/dip10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1200,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip11/" class="md-nav__link">
+      <a href="../../dip/dip11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1220,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip12/" class="md-nav__link">
+      <a href="../../dip/dip12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3680,6 +3608,8 @@
       
   
   
+    
+  
   
     
     
@@ -3690,13 +3620,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
@@ -3709,7 +3639,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             AI
@@ -3932,6 +3862,8 @@
                 
   
   
+    
+  
   
     
     
@@ -3946,18 +3878,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../TinyML/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3973,7 +3905,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Efficient ML
@@ -3988,7 +3920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TinyML/pruning/" class="md-nav__link">
+      <a href="../pruning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4006,9 +3938,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../TinyML/quantization/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    量化
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4017,6 +3969,115 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numeric-data-types" class="md-nav__link">
+    Numeric Data Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neural-network-quantization" class="md-nav__link">
+    Neural Network Quantization
+  </a>
+  
+    <nav class="md-nav" aria-label="Neural Network Quantization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#k-means-based-weight-quantization" class="md-nav__link">
+    K-Means-based Weight Quantization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-quantization" class="md-nav__link">
+    Linear Quantization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-training-quantization" class="md-nav__link">
+    Post-Training Quantization
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Training Quantization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantization-granularity" class="md-nav__link">
+    Quantization Granularity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-range-clipping" class="md-nav__link">
+    Dynamic Range Clipping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rounding" class="md-nav__link">
+    Rounding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantization-aware-training" class="md-nav__link">
+    Quantization-Aware Training
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binaryternary-quantization" class="md-nav__link">
+    Binary/Ternary Quantization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixed-precision-quantization" class="md-nav__link">
+    Mixed-Precision Quantization
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4781,29 +4842,90 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#guided-filter" class="md-nav__link">
-    Guided Filter
+  <a href="#numeric-data-types" class="md-nav__link">
+    Numeric Data Types
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#complexity" class="md-nav__link">
-    Complexity
+  <a href="#neural-network-quantization" class="md-nav__link">
+    Neural Network Quantization
+  </a>
+  
+    <nav class="md-nav" aria-label="Neural Network Quantization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#k-means-based-weight-quantization" class="md-nav__link">
+    K-Means-based Weight Quantization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-quantization" class="md-nav__link">
+    Linear Quantization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-training-quantization" class="md-nav__link">
+    Post-Training Quantization
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Training Quantization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantization-granularity" class="md-nav__link">
+    Quantization Granularity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-range-clipping" class="md-nav__link">
+    Dynamic Range Clipping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rounding" class="md-nav__link">
+    Rounding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantization-aware-training" class="md-nav__link">
+    Quantization-Aware Training
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gradient-preserving" class="md-nav__link">
-    Gradient Preserving
+  <a href="#binaryternary-quantization" class="md-nav__link">
+    Binary/Ternary Quantization
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#limitation" class="md-nav__link">
-    Limitation
+  <a href="#mixed-precision-quantization" class="md-nav__link">
+    Mixed-Precision Quantization
   </a>
   
 </li>
@@ -4827,83 +4949,442 @@
   
 
 
-<h1 id="guided-image-filtering">Guided Image Filtering<a class="headerlink" href="#guided-image-filtering" title="Permanent link">&para;</a></h1>
+<h1 id="quantization">Quantization<a class="headerlink" href="#quantization" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>介绍 Guided Image Filtering, 包括其基本思想，优点和局限性，以及应用。</p>
+<ul>
+<li>Data Types<ul>
+<li>How is numeric data represented in modern computing systems?</li>
+</ul>
+</li>
+<li>Neural Network Quantization<ul>
+<li>K-Means-based Quantization</li>
+<li>Linear Quantization</li>
+<li>Binary and Ternary Quantization</li>
+</ul>
+</li>
+<li>Post-Training Quantization (PTQ)<ul>
+<li>How should we get the optimal linear quantization parameters (S, Z)?</li>
+</ul>
+</li>
+<li>Quantization-Aware Training (QAT)<ul>
+<li>How should we improve performance of quantized models?</li>
+</ul>
+</li>
+<li>automatic mixed-precision quantization</li>
+</ul>
 </div>
-<h2 id="guided-filter">Guided Filter<a class="headerlink" href="#guided-filter" title="Permanent link">&para;</a></h2>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211271000014.png" width = 70%/> </div>
-
-<p>双边滤波只能保边，没有保梯度（即正负号），很有可能发生梯度逆转</p>
-<p>输入有噪声的图像 <span class="arithmatex">\(p\)</span>, 输出去噪后平滑的图像 <span class="arithmatex">\(q\)</span>. 那么 $q_i = p_i - n_i $ 其中 <span class="arithmatex">\(n_i\)</span> 表示噪声或者是纹路</p>
-<p>引入了 guided image <span class="arithmatex">\(I\)</span>. <span class="arithmatex">\(\nabla q_i=a \nabla I_i\Rightarrow q_i=aI_i+b\)</span> (<span class="arithmatex">\(a\)</span> 是一个标量系数)    </p>
-<p>要求 <span class="arithmatex">\(\min\limits_{(a,b)}\sum\limits_i (aI_i+b-p_i)^2+\epsilon a^2\)</span> (这里 <span class="arithmatex">\(\epsilon a^2\)</span> 是正则项，用来控制方向)    </p>
-<p>对 <span class="arithmatex">\(a\)</span> 求偏导，令偏导数为 <span class="arithmatex">\(0\)</span>; 对 <span class="arithmatex">\(b\)</span> 同理, 这样可以解一个二元一次方程组得到 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span>. (这里 <span class="arithmatex">\(\overline p\)</span> 指的是 <span class="arithmatex">\(I\)</span> 这个邻域的平均值)</p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202212021919371.png" width = 70%/> </div>
-
-<p>以上是对单个像素，我们可以扩充到整个图像：  </p>
+<h2 id="numeric-data-types">Numeric Data Types<a class="headerlink" href="#numeric-data-types" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>对每一个局部窗口 <span class="arithmatex">\(w_k\)</span> 我们可以算出 <span class="arithmatex">\(a_k, b_k\)</span><br />
-窗口之间可能有重叠，要算窗口内 <span class="arithmatex">\(q_k\)</span> 的平均值，即所有包含 <span class="arithmatex">\(q_i\)</span> 的窗口的均值  </p>
+<li><strong>Motivation</strong>: less bit-width =&gt; less energy</li>
+<li><strong>Integer</strong>: Unsigned, Signed(Sign-Magnitude, Two's Complement)</li>
+<li><strong>Fixed-Point Number</strong></li>
+<li><strong>Floating-Point Number</strong><ul>
+<li>IEEE FP32, FP64, FP16</li>
+<li>Google's BFloat16: 8-bit exponent, 7-bit mantissa</li>
+<li>Nvidia FP8(E4M3)<ul>
+<li>没有 inf, <span class="arithmatex">\(S.1111.111_2\)</span> 表示 NaN</li>
+<li>最大的规格化值为 <span class="arithmatex">\(S.1111.110_2=448\)</span></li>
+</ul>
+</li>
+<li>Nvidia FP8(E5M2)<ul>
+<li>有 inf（<span class="arithmatex">\(S.11111.00_2\)</span>）和 NaN（<span class="arithmatex">\(S.11111.XX_2\)</span>）</li>
+<li>最大的规格化值为 <span class="arithmatex">\(S.11110.11_2=57344\)</span></li>
+<li>用于 backward</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<p>参数: 窗口半径 <span class="arithmatex">\(r\)</span>, 正则系数 <span class="arithmatex">\(\epsilon\)</span></p>
+<p>INT4 &amp; FP4</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240606211336.png" width = 90%/> </div></p>
 </li>
 </ul>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202212021923944.png" width = 70%/> </div>
-
-<p>如果窗口的 <span class="arithmatex">\(var(I)\ll \epsilon, Cov(I,p)\ll \epsilon\Rightarrow a\approx 0, b\approx \overline p\Rightarrow q_i\approx \overline{\overline p}\)</span> (相当于对均值滤波的一个级联)  </p>
-<p>guided image 怎么找？可以用输出图像的平均值 <span class="arithmatex">\(\overline p\)</span> 作为 guided image.  </p>
-<p><span class="arithmatex">\(r\)</span> 决定了采样窗口的大小</p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202212021931065.png" width = 70%/> </div>
-
-<p>这说明它不仅可以保边，还可以保方向，即不会出现梯度逆转的情况。<br />
-<span class="arithmatex">\(\epsilon\)</span> 决定了我们保边的程度，越大保边能力越强</p>
-<details>
-<summary> <b>Example</b> </summary>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202212021933891.png" width = 70%/> </div> 
-</details>
-
-<p><strong>Guided Filter</strong> 的优点</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>exp 位数越多，那么浮点数能表示的 dynamic range 动态范围就越大，这对于训练很重要（推理时需要更高的精度）。例如通常情况 BF16 比 FP16 更容易收敛。 </p>
 <ul>
-<li>保边（保梯度就一定能保边，反之不一定）</li>
-<li>非迭代</li>
-<li><span class="arithmatex">\(O(1)\)</span> 的时间，快且不需要通过近似的方法</li>
-<li>不存在梯度逆转的问题</li>
+<li><strong>Exponent Width =&gt; Range</strong></li>
+<li><strong>Fraction Width =&gt; Precision</strong></li>
 </ul>
-<h2 id="complexity">Complexity<a class="headerlink" href="#complexity" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="neural-network-quantization">Neural Network Quantization<a class="headerlink" href="#neural-network-quantization" title="Permanent link">&para;</a></h2>
+<p>Quantization is the process of constraining an input from a  continuous or otherwise large set of values to a discrete set.</p>
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240607142206.png" width = 100%/> </div>
+
+<h3 id="k-means-based-weight-quantization">K-Means-based Weight Quantization<a class="headerlink" href="#k-means-based-weight-quantization" title="Permanent link">&para;</a></h3>
 <ul>
-<li>在每个局部窗口计算均值、方差、协方差</li>
-<li>级联，可以用积分图提前做计算<ul>
-<li><span class="arithmatex">\(O(1)\)</span> 且不依赖于窗口大小 <span class="arithmatex">\(r\)</span></li>
-<li>非近似</li>
+<li>
+<p>有一个 lookup table（<strong>codebook 调色板</strong>），而权重就是调色板里的索引。因此只用存浮点调色板和整数索引，不用完整地将浮点权重存下来。假设使用 N bits 位量化，那么至多可以有 <span class="arithmatex">\(2^N\)</span> 个不同的权重，而调色板的值由 K-Means 算法得到。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>例如在下面的例子里，我们使用 2 bit 量化，即可以有 4 个不同的值。这里经过 K-Means 算法，我们得到了 4 个中心点，然后我们将权重量化为这 4 个中心点的索引。右侧即可得到的量化后的权重。
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240606211944.png" width = 90%/> </div></p>
+</div>
+</li>
+<li>
+<p>量化后的权重也可以进行微调。对应地，梯度也要有相应的量化。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>这里权重与上面的例子相同，梯度也进行了基于 K-Means 的量化，最后得到的微调后的权重就是由两个量化结果计算得到的。
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240606212257.png" width = 70%/> </div></p>
+</div>
+</li>
+<li>
+<p>量化可以和剪枝一起使用，让模型更小。</p>
+</li>
+<li>经过量化之后，权重从连续变为离散的。</li>
+<li>
+<p>实验证明，对于卷积层，我们可以将权重量化为 4 bit，而对于全连接层，我们可以将权重量化为 2 bit。</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240606212543.png" width = 80%/> </div></p>
+</li>
+<li>
+<p>哈夫曼编码：实际上不同的权重出现频率是不一样的，为此我们可以使用不同的位数来表示。对于经常出现的权重，我们应该使用更少的位数，这样计算的总位数更少。这就是哈夫曼编码的思想。但实际上在计算时我们需要先进行 decode 操作，这也会带来一定开销，而且实际中不易实现。</p>
+</li>
+<li>
+<p>需要注意的是这种量化方法我们只节省了存储空间，没有减少计算量。因为所有的计算和内存访问依然是浮点数。</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240606212946.png" width = 45%/> </div></p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Summary of Deep Compression</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240606212718.png" width = 100%/> </div></p>
+</div>
+<h3 id="linear-quantization">Linear Quantization<a class="headerlink" href="#linear-quantization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>我们可以使用仿射变换，将整数映射到实数。</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240606234549.png" width = 85%/> </div></p>
+<p>如上图所示，我们使用 <span class="arithmatex">\(r=S(q-Z)\)</span> 将整数 <span class="arithmatex">\(q\)</span> 映射到实数 <span class="arithmatex">\(r\)</span>。其中 <span class="arithmatex">\(Z\)</span> 是零点（整数），<span class="arithmatex">\(S\)</span> 是缩放因子（浮点数）。</p>
+<ul>
+<li>零点的作用是为了让 <span class="arithmatex">\(r=0.0\)</span> 这个数能被准确映射到一个整数 <span class="arithmatex">\(Z\)</span> 上（因为我们发现在推理中零点经常出现）。</li>
+<li>
+<p>确定缩放因子 <span class="arithmatex">\(S\)</span>：当我们量化的位数确定后，我们使用二进制补码表示法，那么 <span class="arithmatex">\(q_{max}\)</span> 和 <span class="arithmatex">\(q_{min}\)</span> 就是 <span class="arithmatex">\(2^{N-1}-1\)</span> 和 <span class="arithmatex">\(-2^{N-1}\)</span>。我们只需要找到 <span class="arithmatex">\(r_{max}\)</span> 和 <span class="arithmatex">\(r_{min}\)</span> 即可求出 <span class="arithmatex">\(S\)</span>. </p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240606235031.png" width = 75%/> </div></p>
+<details class="example">
+<summary>Scale of Linear Quantization</summary>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240606235646.png" width = 75%/> </div></p>
+</details>
+</li>
+<li>
+<p>确定零点 <span class="arithmatex">\(Z\)</span>：确定 <span class="arithmatex">\(S\)</span> 后，带入 <span class="arithmatex">\(r_{min}\)</span> 和 <span class="arithmatex">\(q_{min}\)</span> 即可求出 <span class="arithmatex">\(Z\)</span>。</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240606235800.png" width = 75%/> </div></p>
+<details class="example">
+<summary>Zero Point of Linear Quantization</summary>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240606235831.png" width = 85%/> </div></p>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>线性量化下的矩阵乘法：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\mathbf{Y} &amp;= \mathbf{W}\mathbf{X} \\
+S_\mathbf{Y}(q_\mathbf{Y} - Z_\mathbf{Y}) &amp;= S_\mathbf{W}(q_\mathbf{W} - Z_\mathbf{W})\cdot S_\mathbf{X}(q_\mathbf{X} - Z_\mathbf{X}) \\
+q_\mathbf{Y} &amp; = \frac{S_\mathbf{W}S_\mathbf{X}}{S_\mathbf{Y}}(q_\mathbf{W} - Z_\mathbf{W})\cdot(q_\mathbf{X} - Z_\mathbf{X}) + Z_\mathbf{Y} \\
+q_\mathbf{Y} &amp;= \frac{S_\mathbf{W}S_\mathbf{X}}{S_\mathbf{Y}}(q_\mathbf{W}q_\mathbf{X} - q_\mathbf{W}Z_\mathbf{X} - q_\mathbf{X}Z_\mathbf{W} + Z_\mathbf{W}Z_\mathbf{X}) + Z_\mathbf{Y}
+\end{aligned}
+\]</div>
+<ul>
+<li>
+<p><span class="arithmatex">\((q_\mathbf{W}q_\mathbf{X} - q_\mathbf{W}Z_\mathbf{X} - q_\mathbf{X}Z_\mathbf{W} + Z_\mathbf{W}Z_\mathbf{X})\)</span> 会执行 N-bit 的整数乘法，以及 32-bit 的加减法。</p>
+<ul>
+<li>这里 <span class="arithmatex">\(-Z_\mathbf{X}q_\mathbf{W}+Z_\mathbf{W}Z_\mathbf{X}\)</span> 可以 precompute 提前计算出来。（因为 <span class="arithmatex">\(Z\)</span> 是可以提前确定的，而 <span class="arithmatex">\(q_W\)</span> 也与 <span class="arithmatex">\(Y\)</span> 无关是权重本身的值）</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(Z_\mathbf{Y}\)</span> 会执行 32-bit 的加法。</p>
+</li>
+<li>
+<p>经验上，<span class="arithmatex">\(S_\mathbf{W}S_\mathbf{X}/S_\mathbf{Y}\)</span> 通常会在区间 <span class="arithmatex">\((0,1)\)</span> 之间，因此我们可以做这样的变形：</p>
+<div class="arithmatex">\[
+\frac{S_\mathbf{W}S_\mathbf{X}}{S_\mathbf{Y}} = 2^{-n}M_0, \quad M_0 \in [0.5, 1)
+\]</div>
+<p>这里 <span class="arithmatex">\(M_0\)</span> 可以用定点数表示，而 <span class="arithmatex">\(2^{-n}\)</span> 可以用移位操作表示。那么 <span class="arithmatex">\(S_\mathbf{W}S_\mathbf{X}/S_\mathbf{Y}\)</span> 也被 rescale 为了 N-bit 的整数。</p>
+</li>
+<li>
+<p>通常权重的分布是对称的，因此我们可以让 <span class="arithmatex">\(Z_\mathbf{W}=0\)</span>，这样我们有：</p>
+<div class="arithmatex">\[
+q_\mathbf{Y} = \frac{S_\mathbf{W}S_\mathbf{X}}{S_\mathbf{Y}}(q_\mathbf{W}q_\mathbf{X} - q_\mathbf{W}Z_\mathbf{X} ) + Z_\mathbf{Y}
+\]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>线性量化下的全连接层：</p>
+<p>现在我们加上 bias，即计算 <span class="arithmatex">\(Y = W\cdot X + B\)</span>。我们可以将 <span class="arithmatex">\(B\)</span> 也量化为 <span class="arithmatex">\(q_B\)</span>，那么我们有：</p>
+<div class="arithmatex">\[
+q_\mathbf{Y} = \frac{S_\mathbf{W}S_\mathbf{X}}{S_\mathbf{Y}}(q_\mathbf{W}q_\mathbf{X} + q_{bias} ) + Z_\mathbf{Y} 
+\]</div>
+<ul>
+<li>这里我们假设 <span class="arithmatex">\(Z_\mathbf{W} =0\)</span>, <span class="arithmatex">\(Z_\mathbf{b} = 0, S_\mathbf{b}=S_\mathbf{W}S_\mathbf{X}\)</span>，<span class="arithmatex">\(q_{bias}=q_\mathbf{b}-Z_\mathbf{X}q_\mathbf{W}\)</span> </li>
+<li>括号内执行 N-bit 整数乘法和 32-bit 加法，其他操作均为 N-bit 整数加法。</li>
+<li>需要注意的是这里 <span class="arithmatex">\(q_\mathbf{b}, q_{bias}\)</span> 均为 32-bit 的整数，防止溢出。</li>
+</ul>
+</li>
+<li>
+<p>线性量化下的卷积层：</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240607100017.png" width = 85%/> </div></p>
+</li>
+</ul>
+<h2 id="post-training-quantization">Post-Training Quantization<a class="headerlink" href="#post-training-quantization" title="Permanent link">&para;</a></h2>
+<p>How should we get the optimal linear quantization parameters (S, Z)?</p>
+<h3 id="quantization-granularity">Quantization Granularity<a class="headerlink" href="#quantization-granularity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Per-Tensor Quantization</strong></p>
+<ul>
+<li><span class="arithmatex">\(|r|_{max}=|\mathbf{W}|_{max}\)</span>，即取每个 tensor 的最大值（包括不同的 channel）</li>
+<li>使用单个缩放因子 <span class="arithmatex">\(S\)</span> 作用整个 weight tensor. </li>
+<li>对于大模型效果较好；对于小模型精度会下降。</li>
+<li>
+<p>原因在于不同的输出通道，其权重范围有较大不同（有 outlier weight）。</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240607100938.png" width = 75%/> </div></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Per-Channel Quantization</strong></p>
+<ul>
+<li>
+<p>对于每个输出通道单独求最大值得到 <span class="arithmatex">\(|r|_{max}\)</span>，并作为该通道的 <span class="arithmatex">\(S_i\)</span>. </p>
+<div class="admonition example">
+<p class="admonition-title">Per-Channel vs. Per-Tensor</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240607101121.png" width = 90%/> </div></p>
+</div>
+</li>
+<li>
+<p>代价是要存更多的信息（32-bit fp），输出通道较多时会消耗较多的存储空间。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Group Quantization</strong></p>
+<ul>
+<li>
+<p>VS-Quant: Per-vector Scaled Quantization</p>
+<ul>
+<li>
+<p>层次化的量化，将量化公式改为 <span class="arithmatex">\(r=\gamma \cdot S_q(q-Z)\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(\gamma\)</span> 是一个浮点数，粗粒度的缩放因子。（精度无需达到 32-bit）</li>
+<li><span class="arithmatex">\(S_q\)</span> 是一个整数，是每个向量的缩放因子。（精度可以更低）</li>
+</ul>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240607102331.png" width = 70%/> </div></p>
+</li>
+<li>
+<p>实现了精度和硬件效率的平衡：更昂贵的浮点缩放因子在更粗的粒度；更便宜的整数缩放因子在更细的粒度。
+    <strong><em>e.g.</em></strong> 我们使用 4-bit 量化，每 16 个元素使用一个 4-bit per-vector 缩放因子，那么有效位宽是 4+4/16=4.25 bit.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Multi-level scaling scheme(Shared Micro-exponent (MX) data type)</p>
+<ul>
+<li>
+<p>思想类似，只是我们共用更多层次的缩放因子。这里除了我们的缩放因子的 mantiassa 均为 0 位仅有指数位，相当于我们让几个数据共享了指数位</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240607102647.png" width = 100%/> </div></p>
+</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p>例如 MX9，实际上我们只用了 8-bit 进行量化，但是 L0 用了 1-bit，大小为 2；L1 用了 8-bit，大小为 16，因此有效位数为 9。</p>
+</details>
+</li>
 </ul>
 </li>
 </ul>
-<h2 id="gradient-preserving">Gradient Preserving<a class="headerlink" href="#gradient-preserving" title="Permanent link">&para;</a></h2>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202212021941340.png" width = 70%/> </div>
-
-<details>
-<summary> <b>梯度逆转的例子</b> </summary>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202212021947996.png" width = 70%/> </div> 
-</details>
-
-<p>除了图像平滑，还可以用来去雾、抠图</p>
-<h2 id="limitation">Limitation<a class="headerlink" href="#limitation" title="Permanent link">&para;</a></h2>
-<p>对边缘的定义不清淅，而且边缘是 context-dependent 的。肉眼中的边界，可能不被认为是边界，最终还是会出现 halo 的现象。</p>
+<h3 id="dynamic-range-clipping">Dynamic Range Clipping<a class="headerlink" href="#dynamic-range-clipping" title="Permanent link">&para;</a></h3>
+<ul>
+<li>weight 是静态的，但是 activation 是动态的，我们需要确定他的范围，在部署模型前收集激活值的统计信息。</li>
+<li>Exponential moving averages (EMA)<ul>
+<li>在训练时，<span class="arithmatex">\(\hat{r}_{max,min}^{(t)}=\alpha \cdot r_{max,min}^{(t)} + (1-\alpha)\hat{r}_{max,min}^{(t-1)}\)</span></li>
+<li>这里是假设激活值满足高斯分布，因此我们可以使用均值和方差来估计范围。</li>
+</ul>
+</li>
+<li>minimize loss of information<ul>
+<li>信息的损失是通过 KL 散度来衡量，用来找最适合 clip 的地方。<span class="arithmatex">\(D_{KL}(P||Q)=\sum\limits_{i=1}^N P(x_i)\log\frac{P(x_i)}{Q(x_i)}\)</span></li>
+<li>
+<p>在训练后的模型上运行几个 calibration batches 来校准。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>量化之后，我们把超过最大值的激活值 clip 到最大值，因此可以看到在最大值的地方激活值的数量陡增。
+<div align=center> <img src="https://cdn.hobbitqia.cc/20240607105940.png" width = 90%/> </div></p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="rounding">Rounding<a class="headerlink" href="#rounding" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Rounding-to-nearest 不是最佳的，因为权重会相互影响。对于单个权重最好的 rounding 不一定是对于整个权重矩阵最好的。</li>
+<li>最佳的方法是，能够最好地重建原始的激活值的方法。<ul>
+<li>我们从 <span class="arithmatex">\(\{\lceil w \rceil, \lfloor w \rfloor\}\)</span> 中选择一个来更好地重建。</li>
+<li>
+<p>基于学习的方法：假设 <span class="arithmatex">\(\tilde{w}=\lfloor \lfloor w\rfloor +\delta \rfloor, \delta\in[0,1]\)</span>，我们要优化下面的式子:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; \arg\min_{V}\|Wx-\tilde{W}x\|_F^2 + \lambda f_{reg}(V) \\
+\rightarrow  &amp; \arg\min_{V}\|Wx-\lfloor\lfloor W\rfloor+h(V)\rfloor x\|_F^2 + \lambda f_{reg}(V)
+\end{aligned}
+\]</div>
+<ul>
+<li>这里 <span class="arithmatex">\(x\)</span> 是输入，V 是相同形状的随机变量。</li>
+<li><span class="arithmatex">\(h\)</span> 是一个函数，值域是 <span class="arithmatex">\((0,1)\)</span>，比如 ReLU。</li>
+<li><span class="arithmatex">\(f_{reg}(V)\)</span> 是一个正则化项，鼓励 <span class="arithmatex">\(h(V)\)</span> 是二元的，比如可以取做 <span class="arithmatex">\(f_{reg}(V)=\sum\limits_{i,j}1-|2h(V_{i,j})-1|^\beta\)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="quantization-aware-training">Quantization-Aware Training<a class="headerlink" href="#quantization-aware-training" title="Permanent link">&para;</a></h2>
+<ul>
+<li>How should we improve the performance of quantized models?<ul>
+<li>在我们将模型量化后，可能需要微调来提供更好的精度。</li>
+</ul>
+</li>
+<li>
+<p>训练时，需要保存一份权重 <span class="arithmatex">\(W\)</span> 全精度的拷贝；小幅度的梯度会以浮点格式被累积；当模型被训练好后，只有量化的权重会在推理中使用。</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240607132713.png" width = 75%/> </div></p>
+<p>这里输入送入层时，fp 的权重会经过量化操作与输入运算，随后在 Layer N 内部是浮点操作，输出通过激活量化操作，结果也是量化值。</p>
+<div class="admonition note">
+<p class="admonition-title">为什么需要保存权重的 full precision copy</p>
+<p>为了让微小变化能够对梯度产生影响。比如我们当前的梯度乘上学习率为 -0.1，当前的权重是 1，那么更新之后变为了 1.1，量化后依然是 1.0. 这样重复 5 次后，梯度应该变为 1.5，四舍五入为 2.0. 如果不保存拷贝那么这个微小的变化永远不会被捕捉。</p>
+</div>
+</li>
+<li>
+<p>Straight-Through Estimator (STE)</p>
+<ul>
+<li>问题在于，我们在 weight/activation quantization 时对激活值进行了量化操作，而在反向传播时这里的梯度是 0。这样的话，我们的梯度就无法传递到前面的层。（局部梯度为 0）</li>
+<li>
+<p>我们使用 STE，即假设 <span class="arithmatex">\(\frac{\partial Q(W)}{\partial W}=1\)</span>，相当于用直线近似了本来的量化函数。这样的话我们只需要把上游梯度传到下游梯度即可。</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240607133631.png" width = 50%/> </div></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Put them together:</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240607133706.png" width = 100%/> </div></p>
+</li>
+</ul>
+<h2 id="binaryternary-quantization">Binary/Ternary Quantization<a class="headerlink" href="#binaryternary-quantization" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Can we push the quantization precision to 1 bit?</li>
+<li>
+<p>Binarization</p>
+<ul>
+<li>
+<p>Deterministic Binarization: 根据阈值直接将权重量化为 1 或 -1，类似于符号函数。</p>
+<div class="arithmatex">\[
+q=sign(r)=\left\{\begin{matrix}+1, &amp; r\geq 0\\ -1, &amp; r&lt;0\end{matrix} \right.
+\]</div>
+</li>
+<li>
+<p>Stochastic Binarization: 根据全局的统计信息，计算一个概率，然后根据这个概率来决定量化的值。更不容易实现，因为需要硬件生成随机数。</p>
+</li>
+<li>
+<p>直接使用二进制量化无法表示较大的权重，可能会有较大误差。为了保持精度，我们将量化后的权重 <span class="arithmatex">\(W^\mathbb{B}=sign(W)\)</span> 乘上一个缩放因子 <span class="arithmatex">\(\alpha=\frac{1}{n}\|W\|_1\)</span>. </p>
+<div class="admonition example">
+<p class="admonition-title">Minimizing Quantization Error in Binarization</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240607140459.png" width = 90%/> </div></p>
+</div>
+</li>
+<li>
+<p>如果权重和激活值都二值化，那么我们可以使用 XNOR-Net，即将卷积操作转化为 XNOR 和 popcount 操作。</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240607140713.png" width = 85%/> </div></p>
+<p>可以看到，二值化后的两个数字相乘可以用 XNOR 和 popcount 来实现。其中 popcount 是一个很高效的硬件操作。</p>
+</li>
+</ul>
+<div class="admonition summary">
+<p class="admonition-title">Binary Quantization</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">input</th>
+<th>weight</th>
+<th>operations</th>
+<th>memory</th>
+<th>computation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\mathbb{R}\)</span></td>
+<td><span class="arithmatex">\(\mathbb{R}\)</span></td>
+<td><span class="arithmatex">\(+,\times\)</span></td>
+<td>1x</td>
+<td>1x</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\mathbb{R}\)</span></td>
+<td><span class="arithmatex">\(\mathbb{B}\)</span></td>
+<td><span class="arithmatex">\(+,-\)</span></td>
+<td>~32x less</td>
+<td>~2x less</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\(\mathbb{B}\)</span></td>
+<td><span class="arithmatex">\(\mathbb{B}\)</span></td>
+<td>xnor, popcont</td>
+<td>~32x less</td>
+<td>~58x less</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li>
+<p>Ternary Weight Networks (TWN)</p>
+<ul>
+<li>
+<p>权重被量化为 -1, 0, 1 三个值。</p>
+<div class="arithmatex">\[
+q=\left\{\begin{matrix}+r_t, &amp; r&gt; \Delta \\ 0 , &amp; |r|\leq \Delta \\ -r_t, &amp; r&lt;-\Delta\end{matrix} \right.
+\]</div>
+</li>
+<li>
+<p>这里的阈值我们启发式地选为 <span class="arithmatex">\(\Delta = 0.7\times \mathbb{E}(|r|)\)</span>, <span class="arithmatex">\(r_t=\mathbb{E}_{|r|&gt;\Delta}(|r|)\)</span>. </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240607141822.png" width = 90%/> </div></p>
+</div>
+</li>
+<li>
+<p>Trained Ternary Quantization (TTQ)</p>
+<ul>
+<li>
+<p>我们可以不使用固定的 <span class="arithmatex">\(r_t\)</span>，TTQ 引入了两个可学习的参数 <span class="arithmatex">\(w_p, w_n\)</span> 来表示正/负比例因子。</p>
+<div class="arithmatex">\[
+q=\left\{\begin{matrix}w_p, &amp; r&gt; \Delta \\ 0 , &amp; |r|\leq \Delta \\ -w_n, &amp; r&lt;-\Delta\end{matrix} \right.
+\]</div>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240607142004.png" width = 100%/> </div></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="mixed-precision-quantization">Mixed-Precision Quantization<a class="headerlink" href="#mixed-precision-quantization" title="Permanent link">&para;</a></h2>
+<ul>
+<li>我们可以对于每一层都使用相同的精度量化，也可以对于每一层使用不同的精度量化。因为不同层对量化的敏感度不同。</li>
+<li>问题在于有很大的设计空间，即如何确定具体每一层的精度。</li>
+<li>
+<p>Solution: Design Automation</p>
+<p><div align=center> <img src="https://cdn.hobbitqia.cc/20240607142132.png" width = 90%/> </div></p>
+</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:06:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年6月7日 14:36:54</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年12月4日 16:06:05</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年6月7日 14:36:54</span>
       
     
   </small>
