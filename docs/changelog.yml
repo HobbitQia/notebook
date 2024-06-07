@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-6-7":
+    - newpage:
+        text: AI > Efficient ML > 量化
+        href: /TinyML/quantization
   - "2024-6-1":
     - newpage:
         text: AI > Efficient ML > 剪枝与稀疏性
