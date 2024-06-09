@@ -255,6 +255,7 @@ nav:
       - TinyML/index.md
       - 剪枝与稀疏性: TinyML/pruning.md
       - 量化: TinyML/quantization.md
+      - Transformer & LLM: TinyML/llm.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
