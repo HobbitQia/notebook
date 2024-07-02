@@ -271,6 +271,7 @@ nav:
     - 混合精度训练: Paper/mixed_precision.md
     - FAST: Paper/FAST.md
     - Softmax 加速: Paper/softmax.md
+    - PagedAttention & vLLM: Paper/PagedAttention.md
   - Miscellaneous:
     - Misc/index.md
     - 浮点数与定点数: Misc/float.md
