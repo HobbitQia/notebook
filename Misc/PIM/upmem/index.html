@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/OOP/oop10/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/Misc/PIM/upmem/">
       
       
-        <link rel="prev" href="../oop9/">
+        <link rel="prev" href="../../CGRA/intro/">
       
       
-        <link rel="next" href="../oop11/">
+        <link rel="next" href="../../../android/dataflow/">
       
       
-      <link rel="icon" href="../../log.ico">
+      <link rel="icon" href="../../../log.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
     
     
       
-        <title>Templates - HobbitQia的笔记本</title>
+        <title>PIM 架构介绍 - HobbitQia的笔记本</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.30068a00.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.30068a00.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-      <link rel="stylesheet" href="../../css/timeline.css">
+      <link rel="stylesheet" href="../../../css/timeline.css">
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
     
@@ -58,17 +58,17 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../../../css/custom.css">
     
-      <link rel="stylesheet" href="../../css/card.css">
+      <link rel="stylesheet" href="../../../css/card.css">
     
-      <link rel="stylesheet" href="../../css/tasklist.css">
+      <link rel="stylesheet" href="../../../css/tasklist.css">
     
-      <link rel="stylesheet" href="../../css/flink.css">
+      <link rel="stylesheet" href="../../../css/flink.css">
     
-      <link rel="stylesheet" href="../../css/more_changelog.css">
+      <link rel="stylesheet" href="../../../css/more_changelog.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#templates" class="md-skip">
+        <a href="#processing-in-memory-pim" class="md-skip">
           跳转至
         </a>
       
@@ -111,9 +111,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href="../../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../../log.ico" alt="logo">
+  <img src="../../../log.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Templates
+              PIM 架构介绍
             
           </span>
         </div>
@@ -236,7 +236,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -252,21 +252,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../ds/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../ds/" class="md-tabs__link">
           
   
     
@@ -295,7 +291,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ICS/" class="md-tabs__link">
+        <a href="../../../ICS/" class="md-tabs__link">
           
   
     
@@ -324,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../DL/" class="md-tabs__link">
+        <a href="../../../DL/" class="md-tabs__link">
           
   
     
@@ -353,7 +349,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
+        <a href="../../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
           
   
     
@@ -376,7 +372,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Paper/" class="md-tabs__link">
+        <a href="../../../Paper/" class="md-tabs__link">
           
   
     
@@ -392,11 +388,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Misc/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -431,9 +429,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href="../../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../../log.ico" alt="logo">
+  <img src="../../../log.ico" alt="logo">
 
     </a>
     HobbitQia的笔记本
@@ -482,7 +480,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../.." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -513,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../changelog/" class="md-nav__link">
+      <a href="../../../changelog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../link/" class="md-nav__link">
+      <a href="../../../link/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -558,8 +556,6 @@
       
   
   
-    
-  
   
     
     
@@ -580,13 +576,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -599,7 +595,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computer Science
@@ -645,7 +641,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ds/" class="md-nav__link ">
+            <a href="../../../ds/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -676,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/algorithm/" class="md-nav__link">
+      <a href="../../../ds/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -696,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/tree/" class="md-nav__link">
+      <a href="../../../ds/tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/heap/" class="md-nav__link">
+      <a href="../../../ds/heap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -736,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/set/" class="md-nav__link">
+      <a href="../../../ds/set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -756,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/graph/" class="md-nav__link">
+      <a href="../../../ds/graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -776,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/sort/" class="md-nav__link">
+      <a href="../../../ds/sort/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -796,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ds/hash/" class="md-nav__link">
+      <a href="../../../ds/hash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +839,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ADS/" class="md-nav__link ">
+            <a href="../../../ADS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -919,7 +915,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../dip/" class="md-nav__link ">
+            <a href="../../../dip/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -950,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip1/" class="md-nav__link">
+      <a href="../../../dip/dip1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -970,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip2/" class="md-nav__link">
+      <a href="../../../dip/dip2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -990,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip3/" class="md-nav__link">
+      <a href="../../../dip/dip3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1010,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip5/" class="md-nav__link">
+      <a href="../../../dip/dip5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1030,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip6/" class="md-nav__link">
+      <a href="../../../dip/dip6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1050,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip7/" class="md-nav__link">
+      <a href="../../../dip/dip7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1070,7 +1066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip8/" class="md-nav__link">
+      <a href="../../../dip/dip8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1090,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip9/" class="md-nav__link">
+      <a href="../../../dip/dip9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1110,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip10/" class="md-nav__link">
+      <a href="../../../dip/dip10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1130,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip11/" class="md-nav__link">
+      <a href="../../../dip/dip11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1150,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip12/" class="md-nav__link">
+      <a href="../../../dip/dip12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1176,8 +1172,6 @@
                 
   
   
-    
-  
   
     
     
@@ -1212,18 +1206,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../OOP/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1239,7 +1233,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             面向对象程序设计
@@ -1254,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop1/" class="md-nav__link">
+      <a href="../../../OOP/oop1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1274,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop2/" class="md-nav__link">
+      <a href="../../../OOP/oop2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1294,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop3/" class="md-nav__link">
+      <a href="../../../OOP/oop3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1314,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop4/" class="md-nav__link">
+      <a href="../../../OOP/oop4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1334,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop5/" class="md-nav__link">
+      <a href="../../../OOP/oop5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1354,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop6/" class="md-nav__link">
+      <a href="../../../OOP/oop6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1374,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop7/" class="md-nav__link">
+      <a href="../../../OOP/oop7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1394,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop8/" class="md-nav__link">
+      <a href="../../../OOP/oop8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1414,7 +1408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop9/" class="md-nav__link">
+      <a href="../../../OOP/oop9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1432,29 +1426,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Templates
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../OOP/oop10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1463,40 +1437,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#function-templates" class="md-nav__link">
-    Function Templates
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#class-templates" class="md-nav__link">
-    Class templates
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1508,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop11/" class="md-nav__link">
+      <a href="../../../OOP/oop11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1528,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../oop12/" class="md-nav__link">
+      <a href="../../../OOP/oop12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,7 +1519,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Quan/" class="md-nav__link ">
+            <a href="../../../Quan/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1610,7 +1550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Quan/chap1/" class="md-nav__link">
+      <a href="../../../Quan/chap1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1630,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Quan/chap2/" class="md-nav__link">
+      <a href="../../../Quan/chap2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1677,7 +1617,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../TCS/" class="md-nav__link ">
+            <a href="../../../TCS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1731,7 +1671,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AOR/" class="md-nav__link ">
+            <a href="../../../AOR/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1862,7 +1802,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ICS/" class="md-nav__link ">
+            <a href="../../../ICS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1893,7 +1833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-1/" class="md-nav__link">
+      <a href="../../../ICS/ICS-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1913,7 +1853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-2/" class="md-nav__link">
+      <a href="../../../ICS/ICS-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1933,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-3/" class="md-nav__link">
+      <a href="../../../ICS/ICS-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1953,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-4/" class="md-nav__link">
+      <a href="../../../ICS/ICS-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1973,7 +1913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-5/" class="md-nav__link">
+      <a href="../../../ICS/ICS-5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1993,7 +1933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-6/" class="md-nav__link">
+      <a href="../../../ICS/ICS-6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2013,7 +1953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-7/" class="md-nav__link">
+      <a href="../../../ICS/ICS-7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2033,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-8/" class="md-nav__link">
+      <a href="../../../ICS/ICS-8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2053,7 +1993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-9/" class="md-nav__link">
+      <a href="../../../ICS/ICS-9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2127,7 +2067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/5/" class="md-nav__link">
+      <a href="../../../CSAPP/5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2147,7 +2087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/6/" class="md-nav__link">
+      <a href="../../../CSAPP/6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2167,7 +2107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/7/" class="md-nav__link">
+      <a href="../../../CSAPP/7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2187,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/8/" class="md-nav__link">
+      <a href="../../../CSAPP/8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2207,7 +2147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/9/" class="md-nav__link">
+      <a href="../../../CSAPP/9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2268,7 +2208,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Logic/" class="md-nav__link ">
+            <a href="../../../Logic/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2299,7 +2239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic01/" class="md-nav__link">
+      <a href="../../../Logic/logic01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2319,7 +2259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic02/" class="md-nav__link">
+      <a href="../../../Logic/logic02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2339,7 +2279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic03/" class="md-nav__link">
+      <a href="../../../Logic/logic03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2359,7 +2299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic04/" class="md-nav__link">
+      <a href="../../../Logic/logic04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2379,7 +2319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic06/" class="md-nav__link">
+      <a href="../../../Logic/logic06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2399,7 +2339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic05/" class="md-nav__link">
+      <a href="../../../Logic/logic05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2419,7 +2359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic07/" class="md-nav__link">
+      <a href="../../../Logic/logic07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2496,7 +2436,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../DB/" class="md-nav__link ">
+            <a href="../../../DB/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2527,7 +2467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db1/" class="md-nav__link">
+      <a href="../../../DB/db1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2547,7 +2487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db2/" class="md-nav__link">
+      <a href="../../../DB/db2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2567,7 +2507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db3/" class="md-nav__link">
+      <a href="../../../DB/db3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2587,7 +2527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db4/" class="md-nav__link">
+      <a href="../../../DB/db4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2607,7 +2547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db5/" class="md-nav__link">
+      <a href="../../../DB/db5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2627,7 +2567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db6/" class="md-nav__link">
+      <a href="../../../DB/db6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2647,7 +2587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db7/" class="md-nav__link">
+      <a href="../../../DB/db7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2667,7 +2607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db8/" class="md-nav__link">
+      <a href="../../../DB/db8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2687,7 +2627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db9/" class="md-nav__link">
+      <a href="../../../DB/db9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2707,7 +2647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db10/" class="md-nav__link">
+      <a href="../../../DB/db10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2727,7 +2667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db11/" class="md-nav__link">
+      <a href="../../../DB/db11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2747,7 +2687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db12/" class="md-nav__link">
+      <a href="../../../DB/db12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2767,7 +2707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db13/" class="md-nav__link">
+      <a href="../../../DB/db13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2787,7 +2727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db14/" class="md-nav__link">
+      <a href="../../../DB/db14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2807,7 +2747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db15/" class="md-nav__link">
+      <a href="../../../DB/db15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2866,7 +2806,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../CO/" class="md-nav__link ">
+            <a href="../../../CO/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2897,7 +2837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co1/" class="md-nav__link">
+      <a href="../../../CO/co1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2917,7 +2857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co3/" class="md-nav__link">
+      <a href="../../../CO/co3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2937,7 +2877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co2/" class="md-nav__link">
+      <a href="../../../CO/co2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2957,7 +2897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co4/" class="md-nav__link">
+      <a href="../../../CO/co4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2977,7 +2917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co5/" class="md-nav__link">
+      <a href="../../../CO/co5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2997,7 +2937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co6/" class="md-nav__link">
+      <a href="../../../CO/co6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3054,7 +2994,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../CA/" class="md-nav__link ">
+            <a href="../../../CA/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3085,7 +3025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA1/" class="md-nav__link">
+      <a href="../../../CA/CA1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3105,7 +3045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA2/" class="md-nav__link">
+      <a href="../../../CA/CA2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3125,7 +3065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA3/" class="md-nav__link">
+      <a href="../../../CA/CA3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3145,7 +3085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA4/" class="md-nav__link">
+      <a href="../../../CA/CA4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3165,7 +3105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA5/" class="md-nav__link">
+      <a href="../../../CA/CA5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3238,7 +3178,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../OS/" class="md-nav__link ">
+            <a href="../../../OS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3269,7 +3209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap01/" class="md-nav__link">
+      <a href="../../../OS/chap01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3289,7 +3229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap02/" class="md-nav__link">
+      <a href="../../../OS/chap02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3309,7 +3249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap03/" class="md-nav__link">
+      <a href="../../../OS/chap03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3329,7 +3269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap04/" class="md-nav__link">
+      <a href="../../../OS/chap04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3349,7 +3289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap05/" class="md-nav__link">
+      <a href="../../../OS/chap05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3369,7 +3309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap06/" class="md-nav__link">
+      <a href="../../../OS/chap06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3389,7 +3329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap07/" class="md-nav__link">
+      <a href="../../../OS/chap07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3409,7 +3349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap08/" class="md-nav__link">
+      <a href="../../../OS/chap08/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3429,7 +3369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap09/" class="md-nav__link">
+      <a href="../../../OS/chap09/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3449,7 +3389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap10/" class="md-nav__link">
+      <a href="../../../OS/chap10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3469,7 +3409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap11/" class="md-nav__link">
+      <a href="../../../OS/chap11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3489,7 +3429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap12/" class="md-nav__link">
+      <a href="../../../OS/chap12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3509,7 +3449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap13/" class="md-nav__link">
+      <a href="../../../OS/chap13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3562,7 +3502,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Compiler/" class="md-nav__link ">
+            <a href="../../../Compiler/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3593,7 +3533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Compiler/lec1/" class="md-nav__link">
+      <a href="../../../Compiler/lec1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3613,7 +3553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Compiler/lec2/" class="md-nav__link">
+      <a href="../../../Compiler/lec2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3633,7 +3573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Compiler/lec3/" class="md-nav__link">
+      <a href="../../../Compiler/lec3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3741,7 +3681,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../DL/" class="md-nav__link ">
+            <a href="../../../DL/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3772,7 +3712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec01/" class="md-nav__link">
+      <a href="../../../DL/lec01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3792,7 +3732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec02/" class="md-nav__link">
+      <a href="../../../DL/lec02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3812,7 +3752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec03/" class="md-nav__link">
+      <a href="../../../DL/lec03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3832,7 +3772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec04/" class="md-nav__link">
+      <a href="../../../DL/lec04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3852,7 +3792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec05/" class="md-nav__link">
+      <a href="../../../DL/lec05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3872,7 +3812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec06/" class="md-nav__link">
+      <a href="../../../DL/lec06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3892,7 +3832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec07/" class="md-nav__link">
+      <a href="../../../DL/lec07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3945,7 +3885,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../TinyML/" class="md-nav__link ">
+            <a href="../../../TinyML/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3976,7 +3916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TinyML/pruning/" class="md-nav__link">
+      <a href="../../../TinyML/pruning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3996,7 +3936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TinyML/quantization/" class="md-nav__link">
+      <a href="../../../TinyML/quantization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4016,7 +3956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TinyML/llm/" class="md-nav__link">
+      <a href="../../../TinyML/llm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4129,7 +4069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
+      <a href="../../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4197,7 +4137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MLT/report/" class="md-nav__link">
+      <a href="../../../MLT/report/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4217,7 +4157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MLT/mlt2/" class="md-nav__link">
+      <a href="../../../MLT/mlt2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4287,7 +4227,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Paper/" class="md-nav__link ">
+            <a href="../../../Paper/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4318,7 +4258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/BiS-KM/" class="md-nav__link">
+      <a href="../../../Paper/BiS-KM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4338,7 +4278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/ZeRO/" class="md-nav__link">
+      <a href="../../../Paper/ZeRO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4358,7 +4298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/Megatron-LM/" class="md-nav__link">
+      <a href="../../../Paper/Megatron-LM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4378,7 +4318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/GPipe/" class="md-nav__link">
+      <a href="../../../Paper/GPipe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4398,7 +4338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/mixed_precision/" class="md-nav__link">
+      <a href="../../../Paper/mixed_precision/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4418,7 +4358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/FAST/" class="md-nav__link">
+      <a href="../../../Paper/FAST/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4438,7 +4378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/softmax/" class="md-nav__link">
+      <a href="../../../Paper/softmax/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4458,7 +4398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/PagedAttention/" class="md-nav__link">
+      <a href="../../../Paper/PagedAttention/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4483,6 +4423,8 @@
       
   
   
+    
+  
   
     
     
@@ -4505,18 +4447,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Misc/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4532,7 +4474,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Miscellaneous
@@ -4547,7 +4489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/float/" class="md-nav__link">
+      <a href="../../float/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4567,7 +4509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/fpga/" class="md-nav__link">
+      <a href="../../fpga/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4625,7 +4567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/LLVM/ir/" class="md-nav__link">
+      <a href="../../LLVM/ir/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4691,7 +4633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/CGRA/intro/" class="md-nav__link">
+      <a href="../../CGRA/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4717,6 +4659,8 @@
                 
   
   
+    
+  
   
     
     
@@ -4725,13 +4669,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" checked>
         
           <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
             
@@ -4744,7 +4688,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7_6">
             <span class="md-nav__icon md-icon"></span>
             PIM
@@ -4755,9 +4699,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Misc/PIM/upmem/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PIM 架构介绍
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4766,6 +4730,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-organization" class="md-nav__link">
+    System Organization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dpu-architecture" class="md-nav__link">
+    DPU Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dpu-programming" class="md-nav__link">
+    DPU Programming
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4823,7 +4828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../android/dataflow/" class="md-nav__link">
+      <a href="../../../android/dataflow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4879,15 +4884,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-templates" class="md-nav__link">
-    Function Templates
+  <a href="#system-organization" class="md-nav__link">
+    System Organization
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-templates" class="md-nav__link">
-    Class templates
+  <a href="#dpu-architecture" class="md-nav__link">
+    DPU Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dpu-programming" class="md-nav__link">
+    DPU Programming
   </a>
   
 </li>
@@ -4911,95 +4923,81 @@
   
 
 
-<h1 id="templates">Templates<a class="headerlink" href="#templates" title="Permanent link">&para;</a></h1>
-<p>Reuse source code for generic programming.</p>
-<h2 id="function-templates">Function Templates<a class="headerlink" href="#function-templates" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">void</span><span class="w"> </span><span class="n">swap</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
-</code></pre></div>
+<h1 id="processing-in-memory-pim">Processing-In-Memory (PIM)<a class="headerlink" href="#processing-in-memory-pim" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>存内计算架构介绍，本文基于 UPMEM PIM，第一个公开可用的真实世界 PIM 架构。</p>
 <ul>
-<li>The template keyword introduces the <code>template</code><br />
-<code>template</code> 下面的内容就是模板，比如这里就是函数模板。如果下面是类那就是类模板。</li>
-<li>The <code>class T</code> specifies a parameterized type name <ul>
-<li>class means any built-in type or user-defined type </li>
-<li>Inside the template, use T as a type name</li>
+<li>参考论文：<a href="https://ieeexplore.ieee.org/document/9771457">Benchmarking a New Paradigm: Experimental Analysis and Characterization of a Real Processing-in-Memory System</a></li>
+</ul>
+</div>
+<p>许多现代工作负载，如神经网络从根本上说都是 memory-bound 的。对于此类工作负载，主存和 CPU 内核之间的数据移动在延迟和能耗方面都会带来巨大的开销。一个主要原因是，这种通信是通过具有高延迟和有限带宽的窄总线进行的，并且内存受限工作负载中的 data reuse 不足以摊销主内存访问的成本。从根本上解决这种数据移动瓶颈需要一种范式，即内存系统通过集成处理能力在计算中发挥积极作用。这种范式称为 <strong>Processing-In-Memory（PIM）</strong>。</p>
+<h2 id="system-organization">System Organization<a class="headerlink" href="#system-organization" title="Permanent link">&para;</a></h2>
+<p>UPMEM PIM 系统：
+<img alt="" src="https://cdn.hobbitqia.cc/20240706193802.png" /></p>
+<ul>
+<li>host CPU</li>
+<li>standard main memory (<strong>DRAM</strong> memory modules)</li>
+<li>PIM-enabled memory (<strong>UPMEM</strong> modules)<ul>
+<li>UPMEM 模块中的所有 DPU 都作为主机 CPU 的并行协处理器一起运行。</li>
+<li>一个 PIM-enabled memory 可以放一个或者多个内存通道，有多个 PIM chips（<strong><em>e.g.</em></strong> 16）。</li>
+<li>每个 UPMEM PIM chip 内有 8 个 <strong>DPU（DRAM Processing Unit）</strong>，每个 DPU 有 24KB 的 <strong>IRAM</strong>，64-KB 的 <strong>WRAM</strong>，以及 64-MB <strong>DRAM Bank（MRAM）</strong>。<ul>
+<li>MRAM 可被 CPU 访问，方式是 copying input data（传送到 MRAM）or retrieving results（从 MRAM 中获得）。从/传入所有 MRAM 库的缓冲区大小相同，则这些 CPU-DPU 和 DPU-CPU 数据传输可以<strong>并行</strong>执行（即跨多个 MRAM 库并发执行）。否则，数据传输将<strong>串行</strong>进行。</li>
+<li>DPU 之间不能直接通信，只能通过主机 CPU 间接实现。即先把检索结果从当前 DPU 传回 CPU，再从 CPU 传到另一个 DPU 上。</li>
+<li>CPU 和 DPU 不能同时访问同一个 MRAM bank。</li>
+<li>数据排列不同：主存将连续的 8-bit words 映射到连续的 DRAM 芯片上，而支持 PIM-enabled memory 需要将整个 64-bit words 映射到同一个 MRAM 组。原因在于每个 DPU 只能访问自己的 MRAM，但是我们可以对 64 位的数据类型进行处理，因此需要保证同一个 64 位数据类型的所有 8 个字节都在同一个 MRAM 组中。</li>
 </ul>
 </li>
 </ul>
-<p><strong>Template Instantiation</strong><br />
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">swap</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">);</span><span class="w"> </span><span class="c1">// use explicit int swap </span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.5</span><span class="p">;</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.7</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">swap</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">);</span><span class="w"> </span><span class="c1">// instanstiate float swap </span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="s">&quot;World&quot;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">swap</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="c1">// std::string swap </span>
-</code></pre></div>
-这里 <code>swap(k,m)</code> 会调用函数模板，随后生成 float swap, 编译器会插入函数，调用。<br />
-在 C++ 中编译后重载函数的名字不再是 f, 而是 _f_int/_f_double/_f_void..., 把函数的参数类型编入函数的名字。  </p>
-<ul>
-<li>Only exact match on types is used </li>
-<li>No conversion operations are applied 
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">swap</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">);</span><span class="w"> </span><span class="c1">// ok </span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">swap</span><span class="p">(</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="p">);</span><span class="w"> </span><span class="c1">// ok </span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">swap</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="p">);</span><span class="w"> </span><span class="c1">// error!</span>
-</code></pre></div></li>
-<li>Even implicit conversions are ignored </li>
-<li>Template functions and regular functions coexist</li>
+</li>
+<li>主机 CPU 可以分配所需数量的 DPU，即 a DPU set，以执行 DPU 功能或内核。然后，主机 CPU 以<strong>同步</strong>或<strong>异步</strong>方式启动 DPU 内核。<ul>
+<li>同步执行会挂起主机 CPU 线程，直到 DPU 集完成内核执行。</li>
+<li>异步执行会立即返回主机 CPU 线程，允许主机 CPU 线程继续执行其他任务。</li>
 </ul>
-<p>如果函数里没有类型 T, 可以直白地告诉编译器?</p>
-<h2 id="class-templates">Class templates<a class="headerlink" href="#class-templates" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">Vector</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">public</span><span class="o">:</span><span class="w"> </span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w"> </span><span class="n">Vector</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w"> </span><span class="o">~</span><span class="n">Vector</span><span class="p">();</span><span class="w"> </span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w"> </span><span class="n">Vector</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Vector</span><span class="o">&amp;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w"> </span><span class="n">Vector</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Vector</span><span class="o">&amp;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="kt">int</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="k">private</span><span class="o">:</span><span class="w"> </span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w"> </span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">m_elements</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m_size</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">};</span>
-</code></pre></div>
-<p>类模板一定是显式的(如 STL 模板)</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">Vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v1</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">Vector</span><span class="o">&lt;</span><span class="n">Complex</span><span class="o">&gt;</span><span class="w"> </span><span class="n">v2</span><span class="p">(</span><span class="mi">256</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">v1</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">v2</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v1</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span><span class="w"> </span><span class="c1">// ok if int-&gt;Complex define</span>
-</code></pre></div>
-<p>在成员函数定义都要加上模板。</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">Vector</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m_size</span><span class="p">(</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">m_elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">T</span><span class="p">[</span><span class="n">m_size</span><span class="p">];</span><span class="w"> </span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="k">operator</span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">indx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">indx</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">m_size</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">indx</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_elements</span><span class="p">[</span><span class="n">indx</span><span class="p">];</span><span class="w"> </span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w"> </span><span class="p">...</span><span class="w"> </span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w"> </span><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">}</span>
-</code></pre></div>
-注意 <code>template &lt;class T&gt;</code>, <code>Vector&lt;T&gt;</code>.  </p>
-<p>类模板的函数是声明而不是定义，没有分离的 <code>.h</code> 文件。（不需要 <code>inline</code> 关键字）  </p>
+</li>
+<li>在当前基于 UPMEM 的 PIM 系统配置中，UPMEM DIMM 的最大数量为 20（即最多有 20 个 UPEM DIMM）。具有 20 个 UPMEM 模块的基于 UPMEM 的 PIM 系统最多可包含 2560 个 DPU，相当于 160 GB PIM-enabled memory。</li>
+</ul>
+<h2 id="dpu-architecture">DPU Architecture<a class="headerlink" href="#dpu-architecture" title="Permanent link">&para;</a></h2>
+<p>DPU 是多线程的顺序执行 32 位 RISC 核，支持特定的 ISA。</p>
 <ul>
-<li>Templates can use multiple types <br />
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Key</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Value</span><span class="o">&gt;</span><span class="w"> </span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">HashTable</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">const</span><span class="w"> </span><span class="n">Value</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">lookup</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">install</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Key</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Value</span><span class="o">&amp;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">...</span><span class="w"> </span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">};</span><span class="w"> </span>
-</code></pre></div></li>
-<li>Templates nest — they’re just new types! <br />
-<code>Vector&lt; Vector&lt; double *&gt; &gt; // note space &gt; &gt;</code></li>
-<li>Type arguments can be complicated 
-<code>Vector&lt; int (*)(Vector&lt;double&gt;&amp;, int)&gt;</code>  </li>
+<li>有 24 个硬件线程，每个线程有 24 个 32-bit 通用寄存器。硬件线程共享 IRAM 和 WRAM。</li>
+<li>14 级流水线，但是只有最后三级（ALU4、MERGE1、MERGE2）可以和下一条指令的 DISPATCH、FFTCH 阶段并行执行。因此同一线程的指令必须间隔 11 个周期发射。为了充分利用流水线，需要至少 11 个线程同时执行。</li>
+<li>24 KB IRAM 可以放 4096 条 46-bit 指令。</li>
+<li>DPU 访问 WRAM 时可以读写 8/16/32/64 bits。</li>
+<li>ISA 提供指令，将数据从 MRAM 通过 DMA 搬到 IRAM；或者在 MRAM 和 WRAM 之间互相传输。</li>
+</ul>
+<p>在论文中，DPU 的时钟频率为 350MHz（2556-DPU）、267MHz（640-DPU），每个 DPU 的最大可能 MRAM-WRAM 带宽为 700 MB/s（在 640-DPU 设置中为 534 MB/s），而 2556 DPU 的最大聚合带宽为 1.7 TB/s（在 640-DPU 系统中为 333.75 GB/s）。</p>
+<h2 id="dpu-programming">DPU Programming<a class="headerlink" href="#dpu-programming" title="Permanent link">&para;</a></h2>
+<p>基于 UPMEM 的 PIM 系统使用单程序多数据（SPMD），其中软件线程被称为 tasklets。不同的软件线程执行相同的代码，但对不同的数据片段进行操作，以及可以在运行时执行不同的控制流路径。（类似于 GPU+CUDA）</p>
+<ul>
+<li>最多有 24 tasklets 可以同时运行在一个 DPU 上，因为硬件线程为 24。</li>
+<li>同一 DPU 内的 Tasklet 可以在 MRAM 和 WRAM 中相互共享数据，并且可以通过互斥 mutexes、屏障 barriers、握手 handshakes 和信号量 semaphores 来同步。</li>
+<li>不同 DPU 的 Tasklet 之间不能直接通信，也不共享内存。</li>
+<li>编程语言和运行库<ul>
+<li>C with librabry calls, UPMEM SDK</li>
+<li>访存：<code>mram_read()</code> for MRAM =&gt; WRAM, <code>mram_write()</code> for WRAM = &gt;MRAM</li>
+<li>同步：<ul>
+<li><code>mutex_lock()</code> and <code>mutex_unlock()</code> </li>
+<li><code>barrier_wait()</code> </li>
+<li><code>handshake_wait_for(), handshake_notify()</code></li>
+<li><code>sem_give(), sem_take()</code></li>
+</ul>
+</li>
+<li>挑战：<ul>
+<li>对运行多达 24 个任务的数千个 DPU 进行编程需要仔细的工作负载分区和编排。每个线程有自己的 tasklet ID，可以用来确定线程的任务。</li>
+<li>程序员需要自己显式控制主存和 MRAM 的数据传输，并保证 CPU 和 DPU 的数据一致性 coherence。</li>
+<li>DPU 不使用缓存，MRAM 与 WRAM 之间的传输也要由程序员显式管理。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>编程建议<ul>
+<li>在 DPU 上执行并行代码的长度尽可能长，避免与主机 CPU 频繁交互。</li>
+<li>拆分工作负载时要转为互相独立的数据块，减少 inter-DPU 通信和同步。</li>
+<li>使用尽可能多的 DPU，提高并行度，keep DPUs busy。</li>
+<li>每个 DPU 中至少有 11 个线程，以充分利用流水线。</li>
+</ul>
+</li>
 </ul>
 
   <hr>
@@ -5007,11 +5005,11 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年5月25日 19:21:37</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年7月6日 21:49:52</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年5月25日 19:21:37</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年7月6日 21:49:52</span>
       
     
   </small>
@@ -5131,16 +5129,16 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="../../js/baidu-tongji.js"></script>
+        <script src="../../../js/baidu-tongji.js"></script>
       
         <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
       
-        <script src="../../js/katex.js"></script>
+        <script src="../../../js/katex.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

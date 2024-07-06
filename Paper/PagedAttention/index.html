@@ -4544,6 +4544,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -4778,7 +4780,7 @@
             
   
   <span class="md-ellipsis">
-    Android
+    PIM
   </span>
   
 
@@ -4787,6 +4789,72 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            PIM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Misc/PIM/upmem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PIM 架构介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_7" >
+        
+          <label class="md-nav__link" for="__nav_7_7" id="__nav_7_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Android
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_7">
             <span class="md-nav__icon md-icon"></span>
             Android
           </label>
@@ -4960,7 +5028,7 @@
 <ul>
 <li>
 <p>在评估 LLM 时由于模型权重是恒定的，并且激活仅占用 GPU 内存的一小部分，因此 KV 缓存的管理方式对于确定最大批处理大小至关重要。当管理效率低下时，KV 缓存会显著限制批处理大小（即一次处理多少个请求），从而限制 LLM 的吞吐量。</p>
-<p><a href="https://cdn.hobbitqia.cc/20240702112057.png">https://cdn.hobbitqia.cc/20240702112057.png</a></p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240702112057.png" /></p>
 </li>
 </ul>
 </li>
@@ -4986,9 +5054,9 @@
 <li>
 <p>LLM 服务与自回归生成</p>
 <ul>
-<li>一个<strong>请求（request）</strong>给到 LLM 服务时，会提供一个 input prompt tokens 的列表 <span class="arithmatex">\((x_1,\ldot,x_n)\)</span>，随后 LLM 服务生成一个 output token 的列表 <span class="arithmatex">\((x_{n+1}, \ldots, x_{n+T})\)</span>，我们把这两个列表拼接在在一起称为一个<strong>序列 sequence</strong>。</li>
+<li>一个<strong>请求（request）</strong>给到 LLM 服务时，会提供一个 input prompt tokens 的列表 <span class="arithmatex">\((x_1,\ldots,x_n)\)</span>，随后 LLM 服务生成一个 output token 的列表 <span class="arithmatex">\((x_{n+1}, \ldots, x_{n+T})\)</span>，我们把这两个列表拼接在在一起称为一个<strong>序列 sequence</strong>。</li>
 <li>LLM 服务的计算可以分为两个阶段：<ul>
-<li>prompt phase：将用户的整个 prompt <span class="arithmatex">\((x_1,\ldot,x_n)\)</span> 作为输入，计算第一个 token 的概率（即 <span class="arithmatex">\(P(x_{n+1}|x_1,\ldots,x_n)\)</span> 得到第一个输出的 token。同时还生成了 n 个 key vecotor <span class="arithmatex">\(k_1,\ldots,k_n\)</span> 和 value vector <span class="arithmatex">\(v_1,\ldots,v_n\)</span>。整个过程可以通过矩阵乘法来并行计算。</li>
+<li>prompt phase：将用户的整个 prompt <span class="arithmatex">\((x_1,\ldots,x_n)\)</span> 作为输入，计算第一个 token 的概率（即 <span class="arithmatex">\(P(x_{n+1}|x_1,\ldots,x_n)\)</span> 得到第一个输出的 token。同时还生成了 n 个 key vecotor <span class="arithmatex">\(k_1,\ldots,k_n\)</span> 和 value vector <span class="arithmatex">\(v_1,\ldots,v_n\)</span>。整个过程可以通过矩阵乘法来并行计算。</li>
 <li>auto-regressive phase：串行生成剩余的 token。本轮迭代只需要生成 <span class="arithmatex">\(k_{n+t}, v_{n+t}\)</span> 即可，其他向量已经被缓存。每次把 <span class="arithmatex">\(x_{n+t}\)</span> 作为输入，通过 kv 向量 <span class="arithmatex">\(k_1,\ldots,k_{n+t}\)</span> 和 <span class="arithmatex">\(v_1,\ldots,v_{n+t}\)</span> 计算下一个 token 的概率（即 <span class="arithmatex">\(P(x_{n+t+1}|x_1,\ldots,x_{n+t})\)</span>。这个过程因为有依赖关系，只能用向量-矩阵乘法，是 memory-bound。</li>
 </ul>
 </li>
@@ -5027,11 +5095,11 @@
 <div class="admonition example">
 <p class="admonition-title">现有系统的内存管理方式</p>
 <p>假设有两个请求 A 和 B，A 的最大长度为 2047，B 为 512，那么我们的分配结果如下：</p>
-<p><a href="https://cdn.hobbitqia.cc/20240702150709.png">https://cdn.hobbitqia.cc/20240702150709.png</a></p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240702150709.png" /></p>
 <p>这里会有 reserved slots，用来放接下来要输出的 token；内部碎片，因为预分配的空间大于实际需要的空间；外部碎片，因为两个请求的分配导致中间一段内存不可用。其中内外部碎片都不会再被使用，是 pure memory waste；reserved slots 最终会被用掉，但是保留这段空间可能会持续很长一段时间，而他们本来可以用来服务其他请求，却一直被保留。</p>
 </div>
 <h3 id="_5">方法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p><a href="https://cdn.hobbitqia.cc/20240702151122.png">https://cdn.hobbitqia.cc/20240702151122.png</a></p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240702151122.png" /></p>
 <ul>
 <li>
 <p>PagedAttention</p>
@@ -5057,7 +5125,7 @@
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>对于请求 1 有 7 个 tokens，因此我们把前两个逻辑块（0，1）分配他，这里 vLLM 映射了两个物理块（7，1）。在 prefill 这一步，vLLM 会生成 prompt 的 KV cache，把前 4 个 token 的 KV cache 放进逻辑块 0，剩下的放进逻辑块 1。随后在第一个自回归解码中，会生成第一个 token，放进逻辑块 1 的最后一个插槽。进行第二次解码时，vLLM 会新分配一个物理块并存储映射。
-<a href="https://cdn.hobbitqia.cc/20240702160632.png">https://cdn.hobbitqia.cc/20240702160632.png</a></p>
+<img alt="" src="https://cdn.hobbitqia.cc/20240702160632.png" /></p>
 </div>
 </li>
 <li>
@@ -5072,14 +5140,14 @@
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p><a href="https://cdn.hobbitqia.cc/20240702162415.png">https://cdn.hobbitqia.cc/20240702162415.png</a></p>
+<p><a href="https://cdn.hobbitqia.cc/20240702162415.png"></a></p>
 </div>
 </li>
 <li>
 <p>Beam search：每次迭代只保留 top-k 个候选序列。beam search 不仅共享 prompt 的 KV cache，还会共享不同候选序列之间的其他块（即公共前缀的 KV cache blocks）。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p><a href="https://cdn.hobbitqia.cc/20240702162902.png">https://cdn.hobbitqia.cc/20240702162902.png</a></p>
+<p><a href="https://cdn.hobbitqia.cc/20240702162902.png"></a></p>
 </div>
 </li>
 <li>
@@ -5087,7 +5155,7 @@
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>序列 A 和序列 B 有同样的 system prompt，因此可以提前计算 system prompt 的 KV 值并缓存下来作为共享部分。
-<a href="https://cdn.hobbitqia.cc/20240702163311.png">https://cdn.hobbitqia.cc/20240702163311.png</a></p>
+<a href="https://cdn.hobbitqia.cc/20240702163311.png"></a></p>
 </div>
 </li>
 </ul>
