@@ -64,6 +64,35 @@ nostatistics: True
     </a>
 </div>
 
+<div class="flink-list-item">
+    <a href="https://david-pigeon.github.io/notebook/" title="David Pan's Notebook" target="_blank">
+        <div class="flink-item-icon">
+            <img src="https://github.com/DaViD-Pigeon/notebook/blob/master/docs/aniya.ico" alt="David Pan">
+        </div>
+        <div class="flink-item-name">David Pan's Notebook</div>
+        <div class="flink-item-desc">把天赋带到图灵</div>
+    </a>
+</div>
+
+<div class="flink-list-item">
+    <a href="https://note.yusux.xyz/" title="Yusux 的笔记本" target="_blank">
+        <div class="flink-item-icon">
+            <img src="https://github.com/Yusux/note/blob/main/docs/assets/img/favicon-32x32.png" alt="Bowling">
+        </div>
+        <div class="flink-item-name">Yusux</div>
+        <div class="flink-item-desc">关注 Yusux 谢谢喵</div>
+    </a>
+</div>
+
+<div class="flink-list-item">
+    <a href="https://zhoutimemachine.github.io/note/" title="Jianjun Zhou's Notebook" target="_blank">
+        <div class="flink-item-icon">
+            <img src="https://github.com/DaViD-Pigeon/notebook/blob/master/docs/images/zjj.png" alt="ZJJ">
+        </div>
+        <div class="flink-item-name">ZJJ</div>
+        <div class="flink-item-desc">周老师，我太想进步了</div>
+    </a>
+</div>
 
 
 </div>

@@ -11,3 +11,5 @@
 * [FAST: DNN Training Under Variable Precision Block Floating Point with Stochastic Rounding](FAST.md)
 * [Softmax Acceleration with Adaptive Numeric Format for both Training and Inference](softmax.md)
 * [Efficient Memory Management for Large Language Model Serving with PagedAttention](PagedAttention.md)
+* [VecPAC: A Vectorizable and Precision-Aware CGRA](VecPAC.md)
+* [NN-LUT: Neural Approximation of Non-Linear Operations for Efficient Transformer Inference](NN-LUT.md)

@@ -272,6 +272,8 @@ nav:
     - FAST: Paper/FAST.md
     - Softmax 加速: Paper/softmax.md
     - PagedAttention & vLLM: Paper/PagedAttention.md
+    - VecPAC: Paper/VecPAC.md
+    - NN-LUT: Paper/NN-LUT.md
   - Miscellaneous:
     - Misc/index.md
     - 浮点数与定点数: Misc/float.md
@@ -280,5 +282,7 @@ nav:
       - LLVM IR: Misc/LLVM/ir.md
     - CGRA:
       - CGRA 介绍: Misc/CGRA/intro.md
+    - PIM:
+      - PIM 架构介绍: Misc/PIM/upmem.md
     - Android:
       - 触控事件的数据流: android/dataflow.md

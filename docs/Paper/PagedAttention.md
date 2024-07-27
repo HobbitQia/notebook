@@ -27,7 +27,7 @@ counter: True
 * LLMs 的核心是自回归（autoregressive）的 Transformer 模型，每次生成会基于当前的输入和之前的输出 token 序列。这里我们会缓存 Key 和 Value tensor，这就是 KV cache。
     * 在评估 LLM 时由于模型权重是恒定的，并且激活仅占用 GPU 内存的一小部分，因此 KV 缓存的管理方式对于确定最大批处理大小至关重要。当管理效率低下时，KV 缓存会显著限制批处理大小（即一次处理多少个请求），从而限制 LLM 的吞吐量。
 
-        https://cdn.hobbitqia.cc/20240702112057.png
+        ![](https://cdn.hobbitqia.cc/20240702112057.png)
 
 * 论文观察到现有的 LLM serving 系统无法有效管理 KV cache。
     * 这主要是因为我们在分配 KV cache 时，像传统的 tensor 一样分配连续空间。但是 KV cache 有独特特征：随着模型生成更多的 token，KV cache 会动态增长和缩小，而且他的生存期是未知的。
@@ -43,9 +43,9 @@ counter: True
 
 * 基于 Transformer 的 LLMs
 * LLM 服务与自回归生成
-    * 一个**请求（request）**给到 LLM 服务时，会提供一个 input prompt tokens 的列表 $(x_1,\ldot,x_n)$，随后 LLM 服务生成一个 output token 的列表 $(x_{n+1}, \ldots, x_{n+T})$，我们把这两个列表拼接在在一起称为一个**序列 sequence**。
+    * 一个**请求（request）**给到 LLM 服务时，会提供一个 input prompt tokens 的列表 $(x_1,\ldots,x_n)$，随后 LLM 服务生成一个 output token 的列表 $(x_{n+1}, \ldots, x_{n+T})$，我们把这两个列表拼接在在一起称为一个**序列 sequence**。
     * LLM 服务的计算可以分为两个阶段：
-        * prompt phase：将用户的整个 prompt $(x_1,\ldot,x_n)$ 作为输入，计算第一个 token 的概率（即 $P(x_{n+1}|x_1,\ldots,x_n)$ 得到第一个输出的 token。同时还生成了 n 个 key vecotor $k_1,\ldots,k_n$ 和 value vector $v_1,\ldots,v_n$。整个过程可以通过矩阵乘法来并行计算。
+        * prompt phase：将用户的整个 prompt $(x_1,\ldots,x_n)$ 作为输入，计算第一个 token 的概率（即 $P(x_{n+1}|x_1,\ldots,x_n)$ 得到第一个输出的 token。同时还生成了 n 个 key vecotor $k_1,\ldots,k_n$ 和 value vector $v_1,\ldots,v_n$。整个过程可以通过矩阵乘法来并行计算。
         * auto-regressive phase：串行生成剩余的 token。本轮迭代只需要生成 $k_{n+t}, v_{n+t}$ 即可，其他向量已经被缓存。每次把 $x_{n+t}$ 作为输入，通过 kv 向量 $k_1,\ldots,k_{n+t}$ 和 $v_1,\ldots,v_{n+t}$ 计算下一个 token 的概率（即 $P(x_{n+t+1}|x_1,\ldots,x_{n+t})$。这个过程因为有依赖关系，只能用向量-矩阵乘法，是 memory-bound。
 
 * LLMs 的批处理技巧
@@ -73,13 +73,13 @@ counter: True
 !!! Example "现有系统的内存管理方式"
     假设有两个请求 A 和 B，A 的最大长度为 2047，B 为 512，那么我们的分配结果如下：
 
-    https://cdn.hobbitqia.cc/20240702150709.png
+    ![](https://cdn.hobbitqia.cc/20240702150709.png)
 
     这里会有 reserved slots，用来放接下来要输出的 token；内部碎片，因为预分配的空间大于实际需要的空间；外部碎片，因为两个请求的分配导致中间一段内存不可用。其中内外部碎片都不会再被使用，是 pure memory waste；reserved slots 最终会被用掉，但是保留这段空间可能会持续很长一段时间，而他们本来可以用来服务其他请求，却一直被保留。
 
 ### 方法
 
-https://cdn.hobbitqia.cc/20240702151122.png
+![](https://cdn.hobbitqia.cc/20240702151122.png)
 
 * PagedAttention
 
@@ -102,7 +102,7 @@ https://cdn.hobbitqia.cc/20240702151122.png
 
     !!! Example 
         对于请求 1 有 7 个 tokens，因此我们把前两个逻辑块（0，1）分配他，这里 vLLM 映射了两个物理块（7，1）。在 prefill 这一步，vLLM 会生成 prompt 的 KV cache，把前 4 个 token 的 KV cache 放进逻辑块 0，剩下的放进逻辑块 1。随后在第一个自回归解码中，会生成第一个 token，放进逻辑块 1 的最后一个插槽。进行第二次解码时，vLLM 会新分配一个物理块并存储映射。
-        https://cdn.hobbitqia.cc/20240702160632.png
+        ![](https://cdn.hobbitqia.cc/20240702160632.png)
 
 * 在其他解码场景的应用：
     * Parallel sampling：对于一个 prompt，LLM 给出多个输出，便于用户选择其中一个。
@@ -111,18 +111,18 @@ https://cdn.hobbitqia.cc/20240702151122.png
         * vLLM 实现了 copy-on-write 写时复制的方法，当需要修改某个共享的物理块时（如最后一个没有填满 slots 的块，我们要放输出的 token），会先复制这个物理块，修改引用技术，然后写在新的块上。
 
         !!! Example
-            https://cdn.hobbitqia.cc/20240702162415.png
+            [](https://cdn.hobbitqia.cc/20240702162415.png)
         
     * Beam search：每次迭代只保留 top-k 个候选序列。beam search 不仅共享 prompt 的 KV cache，还会共享不同候选序列之间的其他块（即公共前缀的 KV cache blocks）。
 
         !!! Example
-            https://cdn.hobbitqia.cc/20240702162902.png
+            [](https://cdn.hobbitqia.cc/20240702162902.png)
 
     * Shared prefix：通常 LLM 都会为用户提供 system prompt，用以对任务的描述。
     
         !!! Example
             序列 A 和序列 B 有同样的 system prompt，因此可以提前计算 system prompt 的 KV 值并缓存下来作为共享部分。
-            https://cdn.hobbitqia.cc/20240702163311.png
+            [](https://cdn.hobbitqia.cc/20240702163311.png)
 
 * Scheduling and Preemption
     * 在 vLLM 里，我们采用  first-come-first-serve (FCFS) 的调度策略来处理请求，这样可以保证公平避免 starvation。
