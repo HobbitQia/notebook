@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/Paper/softmax/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/Paper/NN-LUT/">
       
       
-        <link rel="prev" href="../FAST/">
+        <link rel="prev" href="../VecPAC/">
       
       
-        <link rel="next" href="../PagedAttention/">
+        <link rel="next" href="../../Misc/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Softmax 加速 - HobbitQia的笔记本</title>
+        <title>NN-LUT - HobbitQia的笔记本</title>
       
     
     
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#softmax" class="md-skip">
+        <a href="#nn-lut-transfomer" class="md-skip">
           跳转至
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Softmax 加速
+              NN-LUT
             
           </span>
         </div>
@@ -4382,29 +4382,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Softmax 加速
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../softmax/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4413,108 +4393,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    介绍
-  </a>
-  
-    <nav class="md-nav" aria-label="介绍">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    背景
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hyft" class="md-nav__link">
-    HYFT 架构
-  </a>
-  
-    <nav class="md-nav" aria-label="HYFT 架构">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parameterized-input-pre-processr" class="md-nav__link">
-    Parameterized Input Pre-Processr
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hybrid-exponent-unit" class="md-nav__link">
-    Hybrid Exponent Unit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hybrid-adder-tree" class="md-nav__link">
-    Hybrid Adder Tree
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#divisionmultiplication-unit" class="md-nav__link">
-    Division/Multiplication Unit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#softmax-backpropagation-for-training" class="md-nav__link">
-    Softmax Backpropagation For Training
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    实验
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    评论
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4564,9 +4442,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../NN-LUT/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    NN-LUT
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4575,6 +4473,74 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    方法
+  </a>
+  
+    <nav class="md-nav" aria-label="方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#look-up-table" class="md-nav__link">
+    Look-Up Table 近似
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lut-based" class="md-nav__link">
+    LUT-based 神经网络近似
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nn-lut" class="md-nav__link">
+    提高 NN-LUT 性能
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    实验
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4991,60 +4957,33 @@
     介绍
   </a>
   
-    <nav class="md-nav" aria-label="介绍">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    背景
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#hyft" class="md-nav__link">
-    HYFT 架构
+  <a href="#_2" class="md-nav__link">
+    方法
   </a>
   
-    <nav class="md-nav" aria-label="HYFT 架构">
+    <nav class="md-nav" aria-label="方法">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parameterized-input-pre-processr" class="md-nav__link">
-    Parameterized Input Pre-Processr
+  <a href="#look-up-table" class="md-nav__link">
+    Look-Up Table 近似
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#hybrid-exponent-unit" class="md-nav__link">
-    Hybrid Exponent Unit
+  <a href="#lut-based" class="md-nav__link">
+    LUT-based 神经网络近似
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#hybrid-adder-tree" class="md-nav__link">
-    Hybrid Adder Tree
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#divisionmultiplication-unit" class="md-nav__link">
-    Division/Multiplication Unit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#softmax-backpropagation-for-training" class="md-nav__link">
-    Softmax Backpropagation For Training
+  <a href="#nn-lut" class="md-nav__link">
+    提高 NN-LUT 性能
   </a>
   
 </li>
@@ -5057,13 +4996,6 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     实验
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    评论
   </a>
   
 </li>
@@ -5087,138 +5019,87 @@
   
 
 
-<h1 id="softmax">通过自适应数字格式实现训练和推理时的 Softmax 加速<a class="headerlink" href="#softmax" title="Permanent link">&para;</a></h1>
+<h1 id="nn-lut-transfomer">NN-LUT: 用于 Transfomer 推理的神经网络近似非线性运算法<a class="headerlink" href="#nn-lut-transfomer" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p><img alt="" src="https://cdn.hobbitqia.cc/20240405002634.png" /></p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240727214154.png" /></p>
 <ul>
-<li>Paper: <a href="https://arxiv.org/abs/2311.13290">Softmax Acceleration with Adaptive Numeric Format for both Training and Inference</a></li>
-<li>本文中的图片均来自论文。</li>
+<li>Paper: <a href="https://arxiv.org/pdf/2112.02191v1">NN-LUT: Neural Approximation of Non-Linear Operations for Efficient Transformer Inference</a></li>
+<li><strong>DAC 2022</strong>: Proceedings of the 59<sup>th</sup> ACM/IEEE Design Automation Conference</li>
 </ul>
 </div>
 <h2 id="_1">介绍<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Transformer 里非常重要的是就是注意力 Attention 机制，其中我们要用到 softmax 函数评估输入的各个部分之间的相关程度。</li>
-<li>但是 softmax 内部存在非线性操作和数据依赖性，会显著增加 Transformer 网络中的处理延迟和能耗。</li>
-<li>本文提出了 Hyft，一种用于训练和推理的硬件高效浮点 Softmax 加速器。Hyft 自适应地将中间结果转换为不同的数字格式，从而加速对应的运算。</li>
-</ul>
-<h3 id="_2">背景<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>Softmax 函数：假设输入 <span class="arithmatex">\(z=[z_1,z_2,\ldots, z_N]^\top\)</span>, 输出为 <span class="arithmatex">\(s=[s_1,s_2,\ldots,s_N]^\top\)</span>, 其中：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-s_i &amp;= \dfrac{e^{z_i}}{\sum_{j=1}^N e^{z_j}}\\
-&amp; =\dfrac{e^{z_i-z_{max}}}{\sum_{j=1}^N e^{z_j-z_{max}}}
-\end{aligned}
-\]</div>
-<p>直接计算可能导致数据不稳定，进一步导致 NaN 输出。为此我们减去输入的最大值（即第二行）。</p>
-<p>反向传播时，我们可以求出：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\dfrac{ds}{dz} &amp;= diag(s) - ss^\top\\
-                &amp; = \left[\begin{matrix} s_1(1-s_1) &amp; -s_1s_2 &amp; \ldots &amp; -s_1s_N\\
-                                        -s_2s_1 &amp; s_2(1-s_2) &amp; \ldots &amp; -s_2s_N\\
-                                        \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
-                                        -s_Ns_1 &amp; -s_Ns_2 &amp; \ldots &amp; s_N(1-s_N)
-                                        \end{matrix}\right]
-\end{aligned}
-\]</div>
-<h2 id="hyft">HYFT 架构<a class="headerlink" href="#hyft" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="https://cdn.hobbitqia.cc/20240402102819.png" /></p>
-<p>Hyft 支持 FP16 或 FP32 中的输入和输出数据。中间涉及数制的转化，如上图，红色线表示我们使用的是定点数，绿色线表示我们使用的是浮点数。</p>
-<h3 id="parameterized-input-pre-processr">Parameterized Input Pre-Processr<a class="headerlink" href="#parameterized-input-pre-processr" title="Permanent link">&para;</a></h3>
-<p>这个模块要完成：</p>
-<ul>
-<li>找到输入向量的最大值。</li>
-<li>将向量和最大值转为定点数格式并输出。</li>
-</ul>
-<div align=center><img src = "https://cdn.hobbitqia.cc/20240402103545.png" width =70%></div>
-
+<li><strong>motivation</strong>: 由于这些非线性运算被嵌入 Transformer 的基本计算模块中，因此它们的低效率成为整个 Transformer 计算的显著减速因素。（来自 I-BERT, Softermax）</li>
+<li>之前针对非线性的工作，思路有用 INT32 计算或者定制 Softmax 加速器。但是这样基于特定操作的多步计算，数据路径复杂，延迟增加，阻碍了现有神经处理单元（NPU）的实际应用。而且需要 apprxoimation-aware 微调模型来减小误差。此外这些优化大多是针对某个算子，不能适用于所有的非线性运算。</li>
+<li>本文提出了 NN-LUT，采用单隐藏层 ReLU 为激活函数的神经网络，用来近似非线性函数。此外提出了三个提高 NN-LUT 精度的技术：NN-LUT 训练策略，宽范围近似的输入缩放，无数据集轻量 NN-LUT calibration 校准。</li>
+<li>
+<p>前置知识</p>
 <ul>
 <li>
-<p>为了加速最大值的搜索，本文引入了可配置的参数 STEP，用来表示搜索的步长。<strong><em>e.g.</em></strong> STEP=1 时我们会遍历所有的输入，STEP=2 时我们会每隔一个输入进行搜索。</p>
-<p>我们在评估部分表明，大多数任务都可以通过加速的最大搜索过程来执行，而不会降低任何精度。</p>
+<p>Transformer 中的非线性运算</p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240727200447.png" /></p>
 </li>
 <li>
-<p>与最大搜索块并行，输入预处理器中有浮点到定点转换器（FP2FX），可将浮点输入及其最大值转换为定点格式。</p>
+<p>神经网络可以被视为通用函数近似器，但是神经网络强大的近似能力是以大量矩阵计算为代价的。本文的方法将神经网络的计算转换为 LUT 运算（查找表+ MAC）。</p>
 </li>
 </ul>
-<h3 id="hybrid-exponent-unit">Hybrid Exponent Unit<a class="headerlink" href="#hybrid-exponent-unit" title="Permanent link">&para;</a></h3>
-<p>这个模块要完成：</p>
-<ul>
-<li>定点数格式下计算 <span class="arithmatex">\(e^{z_i-z_{max}}\)</span>。</li>
-<li>将结果转为浮点数。</li>
+</li>
 </ul>
-<div align=center><img src = "https://cdn.hobbitqia.cc/20240402105546.png" width =70%></div>
-
-<p>为了简化指数运算，我们有：</p>
+<h2 id="_2">方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="look-up-table">Look-Up Table 近似<a class="headerlink" href="#look-up-table" title="Permanent link">&para;</a></h3>
+<p>假设我们有 N-entry 的查找表，每个 entry 放的是一组近似参数，对应一个多项式函数。每个 entry 代表一个区间，共同组合成一个 piece-wise function。比如一阶近似下，我们得到分段线性函数，只需要一个多路选择器和加法器就可以计算输出。</p>
+<p>假设参数分别为 <span class="arithmatex">\(\{s_i,t_i\}_{i=1:N}\)</span>, 断点（区间的端点）为 <span class="arithmatex">\(\{d_i\}_{i=1:N}\)</span>.</p>
 <div class="arithmatex">\[
-e^{z'} = 2^{z'\log_2(e)}=2^{u+v}
+LUT(x):= \left\{\begin{matrix} &amp; s_1 x+ t_x, \   &amp; \text{if}\ x &lt; d_1\\ 
+&amp; s_i x + t_i, \ &amp; \text{if}\ d_{i-1}\leq x\leq d_i\ (\text{for}\ 1&lt;i \leq N-1)\\ 
+&amp; s_N x+t_N &amp; \text{if}\ x \geq d_{N-1}\\ \end{matrix}\right.
 \]</div>
+<p>这种预先确定的断点分配简化了 LUT 硬件，但它对断点位置施加了限制，对近似精度产生了负面影响。</p>
 <ul>
-<li>这里 <span class="arithmatex">\(u,v\)</span> 分别代表 <span class="arithmatex">\(z'\log_2(e)\)</span> 的整数部分和小数部分。</li>
-<li>
-<p>对于输入的 <span class="arithmatex">\(z_i\)</span> 和 <span class="arithmatex">\(z_{max}\)</span>，我们先计算 <span class="arithmatex">\(z'=z_i-z_{max}\)</span>，然后计算 <span class="arithmatex">\(z'\log_2(e)\approx z'+(z' &gt;&gt; 1) - (z' &gt;&gt; 4)\)</span>，根据结果提取出 <span class="arithmatex">\(u,v\)</span>.</p>
-<details class="info">
-<summary><span class="arithmatex">\(e^{z'}\)</span> 近似</summary>
-<ul>
-<li>我们估计 <span class="arithmatex">\(\log_2(e)\approx 1.0111_2\)</span>, 那么 <span class="arithmatex">\(z'\log_2(e) \approx z'+(z'&gt;&gt;2) + (z'&gt;&gt;3)+(z'&gt;&gt;4)\)</span>.</li>
-<li>通过 Booth 算法，可以化简为 <span class="arithmatex">\(z'+(z'&gt;&gt;1)-(z'&gt;&gt;4)\)</span>.</li>
+<li>Linear-mode: 区间等长划分</li>
+<li>Exponential-mode: 在低范围值上的断点区间较短，在高范围值上的断点区间较长。</li>
 </ul>
-</details>
+<h3 id="lut-based">LUT-based 神经网络近似<a class="headerlink" href="#lut-based" title="Permanent link">&para;</a></h3>
+<p>假设 <span class="arithmatex">\(NN(x)\)</span> 是单隐藏层的 ReLU 激活的神经网络，有 N-1 个神经元 <span class="arithmatex">\(y_i\)</span>, <span class="arithmatex">\(\sigma\)</span> 表示 ReLU 函数，第一层权重为 <span class="arithmatex">\(n_i\)</span>，偏置为 <span class="arithmatex">\(b_i\)</span>，第二层权重为 <span class="arithmatex">\(m_i\)</span>, 则有：</p>
+<p><span class="arithmatex">\(NN(x)=\sum\limits_{i=1}^{N-1}m_i\sigma(n_i x + b_i) = \sum\limits_{i=1}^{N-1}m_iy_i\)</span>.</p>
+<p>假设这里 <span class="arithmatex">\(\{-\frac{b_i}{n_i}\}_{i=1:N-1}\)</span> 升序排列，那么如果 x 落入第 i 个区间，即 <span class="arithmatex">\(-\frac{b_i}{n_i} &lt; x &lt; -\frac{b_{i+1}}{n_{i+1}}\)</span>, 那么我们通过下面的方法计算所有 <span class="arithmatex">\(\{y_j\}_{j=1:N-1}\)</span></p>
+<ul>
+<li>对于 <span class="arithmatex">\(j\leq i\)</span>, 我们有 <span class="arithmatex">\(y_j=\left\{\begin{matrix}n_j x + b_j, &amp; \text{if}\ n_j\geq 0\\ 0 , &amp; \text{otherwise}\end{matrix}\right.\)</span></li>
+<li><span class="arithmatex">\(j&gt;i\)</span>, 我们有 <span class="arithmatex">\(y_j=\left\{\begin{matrix}n_j x + b_j, &amp; \text{if}\ n_{j+1}&lt; 0\\ 0 , &amp; \text{otherwise}\end{matrix}\right.\)</span></li>
+</ul>
+<p>我们用 <span class="arithmatex">\(z_i(x)\)</span> 表示 x 落入第 i 个区间下的最后结果，<span class="arithmatex">\(n^+=n_j\cdot (\mathcal{1})(n_j\geq 0)\)</span>, <span class="arithmatex">\(n^-\)</span> 类似。（论文里的这个式子 <span class="arithmatex">\(m_i\)</span> 似乎有点问题）</p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240727213259.png" /></p>
+<p><span class="arithmatex">\(NN(x)\)</span> 可以由若干个区间的 <span class="arithmatex">\(z_i(x)\)</span> 组合得到。</p>
+<p>整理流程如下：首先用目标非线性函数离线训练一个 1 隐藏层 ReLU 神经网络，训练后 LUT 参数和断点就是恒定值，可以直接放在电路中实现。</p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240727213440.png" /></p>
+<h3 id="nn-lut">提高 NN-LUT 性能<a class="headerlink" href="#nn-lut" title="Permanent link">&para;</a></h3>
+<ul>
+<li>训练设置，给定输入范围，均匀采样。</li>
+<li>宽范围逼近的输入缩放。<ul>
+<li>对于 1/SQRT 这种操作，不利于神经网络学习（需要大幅调整才能形成 steep slopes）</li>
+<li>方法：限定输入范围在 [1, <span class="arithmatex">\(\Delta\)</span>]. 对于输入小于 1 的，我们先乘上一个数得到 <span class="arithmatex">\(S\cdot x &gt; 1\)</span>，计算出结果后再将答案乘上 <span class="arithmatex">\(\sqrt{S}\)</span>（因为 <span class="arithmatex">\(1/\sqrt{x} = (1/\sqrt{S \cdot x}) \cdot \sqrt{S}\)</span>. </li>
+<li>为了方便计算，我们可以让 S 是 power of 2, 这样只需要移位即可完成乘法。</li>
+</ul>
 </li>
-<li>
-<p>将结果转为浮点数，这里指数部分是 <span class="arithmatex">\(u-1\)</span>, 尾数部分是 <span class="arithmatex">\(1+v\)</span>.</p>
-<details class="info">
-<summary>定点数转浮点数</summary>
-<ul>
-<li>根据泰勒展开，<span class="arithmatex">\(e^{z'}=2^{u+v}\approx 2^u(1+v/2), u\leq 0, -1&lt;v\leq 0\)</span>.<ul>
-<li>因为 <span class="arithmatex">\(2^v\approx 1+ln(2)\cdot v \approx 1+v/2\)</span></li>
+<li>校准 NN-LUT 参数，如果直接逼近的精度损失明显，可以使用一小部分未标注的数据集进行 NN-LUT 校准；每个 NN-LUT 都使用其全精度数据集进行回归。由于所有模型参数都被冻结，因此校准可以迅速完成（通常不足微调时间的 5%）。</li>
 </ul>
-</li>
-<li>当我们把定点数转换为浮点时，我们可以发现，<span class="arithmatex">\(e^{z'}\approx 2^u(1+v/2)=2^{u-1}(1+(1+v))\)</span>. 因此可以从中提取出指数和尾数。</li>
-</ul>
-</details>
-</li>
-</ul>
-<h3 id="hybrid-adder-tree">Hybrid Adder Tree<a class="headerlink" href="#hybrid-adder-tree" title="Permanent link">&para;</a></h3>
-<p>这个模块要完成：</p>
-<ul>
-<li>先把 <span class="arithmatex">\(e^{z'}\)</span> 转化为定点数。</li>
-<li>定点数格式下计算 <span class="arithmatex">\(\sum_{j=1}^N e^{z_j-z_{max}}\)</span>.</li>
-<li>最后通过 leading one detector(LOD) 结构将结果转化回浮点数。</li>
-</ul>
-<p><div align=center><img src = "https://cdn.hobbitqia.cc/20240402112008.png" width =70%></div></p>
-<h3 id="divisionmultiplication-unit">Division/Multiplication Unit<a class="headerlink" href="#divisionmultiplication-unit" title="Permanent link">&para;</a></h3>
-<div align=center><img src = "https://cdn.hobbitqia.cc/20240402113051.png" width =70%></div>
-
-<p>我们可以这样实现除法：</p>
-<div class="arithmatex">\[
-\begin{aligned}
-\dfrac{a}{b} &amp; = 2^{e_a}(1+m_a)/2^{e_b}(1+m_b) = 2^{e_a - e_b + \log_2(1+m_a) - \log_2(1+m_b)}\\
-&amp; \approx 2^{e_a - e_b + m_a - m_b} \approx 2^{e_a - e_b}(1+m_a - m_b)
-\end{aligned}
-\]</div>
-<p>这里用浮点数执行运算，效率更高。而且本文这里是 16 位的浮点，误差是可以接受的。</p>
-<h3 id="softmax-backpropagation-for-training">Softmax Backpropagation For Training<a class="headerlink" href="#softmax-backpropagation-for-training" title="Permanent link">&para;</a></h3>
-<p>反向传播主要在于计算 <span class="arithmatex">\(ss^\top\)</span>, 计算方法如下：</p>
-<div class="arithmatex">\[
-a\times b = 2^{e_a}(1+m_a)\times 2^{e_b}(1+m_b) = 2^{e_a+e_b}(1+m_a+ m_b + m_am_b)
-\]</div>
-<p>可以看到相比于上面的除法，我们只多了一项 <span class="arithmatex">\(m_am_b\)</span>, 而这个可以由定点乘法器完成。剩余的部分我们可以复用上面的单元。</p>
 <h2 id="_3">实验<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
-<li>与原始 Softmax 实现的 BERT 模型在精度上的差异可以忽略不计。</li>
-<li>本文用 Hyft16 或 Hyft32 定制的 Softmax 实现替换了 BERT 中的原始 Softmax 层。然后在 GLUE 上微调了 BERT，观察到 Hyft 对训练精度没有任何明显影响，这表明 Hyft16 和 Hyft32 都可以集成到 Transformer 训练和推理中。</li>
-<li>固定了输入向量长为 8，在 Xilinx xc7z030 FPGA 上进行评估。</li>
-</ul>
-<h2 id="_4">评论<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<li>基于 BERT</li>
+<li>软件：精度实验，包括 GELU/Softmax/LayerNorm.</li>
+<li>
+<p>硬件：和 I-BERT 实现后在 ASIC 上比较，同时做了 BERT end-to-end evaluation. </p>
+<p><img alt="" src="https://cdn.hobbitqia.cc/20240727214021.png" /></p>
+</li>
+<li>
+<p>系统级性能分析：</p>
 <ul>
-<li>本文的近似方法值得借鉴：<ul>
-<li>计算指数 <span class="arithmatex">\(e^x\)</span> 的时候，先变到以 2 为底，再使用泰勒近似。</li>
-<li>浮点除法可以利用浮点数的格式，转为指数和尾数的减法。</li>
+<li>就 I-BERT 而言，与非线性操作相对应的执行周期相当可观，从 17.7%（SL=16）增长到 37.8%（SL=1024）。</li>
+<li>在 NN-LUT 的情况下，非线性运算的部分显著减少（在 SL=1024 时最多减少 43%），这表明与 I-BERT 相比，NN-LUT 具有更高的效率。</li>
+<li>NN-LUT 性能的提高与 I-BERT 相比，总执行时间最多可加快 26%。</li>
 </ul>
 </li>
-<li>设计思路：把适合定点数运算的部分尽可能放在一起，把适合浮点数运算的部分尽可能放在一起，这样可以减少数据格式转换的次数。</li>
 </ul>
 
   <hr>
@@ -5226,11 +5107,11 @@ a\times b = 2^{e_a}(1+m_a)\times 2^{e_b}(1+m_b) = 2^{e_a+e_b}(1+m_a+ m_b + m_am_
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年5月30日 10:23:39</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年7月27日 21:45:28</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年4月5日 00:24:16</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年7月27日 21:45:28</span>
       
     
   </small>
