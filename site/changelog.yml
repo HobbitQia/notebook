@@ -1,0 +1,144 @@
+- "2024":
+  - "2024-7-27":
+    - newpage:
+        text: Papers > NN-LUT
+        href: /Paper/NN-LUT
+  - "2024-7-10":
+    - newpage:
+        text: Papers > VecPAC
+        href: /Paper/VecPAC
+  - "2024-7-6":
+    - newpage:
+        text: Miscellaneous > PIM
+        href: /Misc/PIM/upmem
+  - "2024-7-2":
+    - newpage:
+        text: Papers > PagedAttention & vLLM
+        href: /Paper/PagedAttention
+  - "2024-6-9":
+    - newpage:
+        text: AI > Efficient ML > Transformer & LLM
+        href: /TinyML/llm
+  - "2024-6-7":
+    - newpage:
+        text: AI > Efficient ML > 量化
+        href: /TinyML/quantization
+  - "2024-6-1":
+    - newpage:
+        text: AI > Efficient ML > 剪枝与稀疏性
+        href: /TinyML/pruning
+  - "2024-5-30":
+    - newpage:
+        text: Miscellaneous > CGRA
+        href: /Misc/CGRA/intro
+    - newpage:
+        text: Miscellaneous > LLVM IR
+        href: /Misc/LLVM/ir
+  - "2024-4-5":
+    - newpage:
+        text: Papers > Softmax 加速
+        href: /Paper/softmax
+  - "2024-3-29":
+    - newpage:
+        text: System > 编译原理
+        href: /Compiler/index
+    - newpage:
+        text: AI > Deep Learning > 卷积神经网络
+        href: /DL/lec06
+    - newpage:
+        text: AI > Deep Learning > CNN 架构
+        href: /DL/lec07
+  - "2024-3-23":
+    - refactor: 新增了 AI 页面！
+    - newpage:
+        text: AI > Deep Learning
+        href: /DL/index
+    - newpage:
+        text: Miscellaneous > FPGA
+        href: /Misc/fpga
+  - "2024-3-9":
+    - newpage:
+        text: Papers > FAST
+        href: /Paper/FAST
+  - "2024-2-25":
+    - pageupdate:
+        text: System > 计算机组成与设计
+        href: /CO/co3
+    - newpage:
+        text: Papers > 混合精度训练
+        href: /Paper/mixed_preicison
+  - "2024-2-21":
+    - newpage:
+        text: Papers > GPipe
+        href: /Paper/GPipe
+  - "2024-2-15":
+    - newpage:
+        text: Papers > Megatron-LM
+        href: /Paper/Megatron-LM
+  - "2024-2-13":
+    - newpage:
+        text: Papers > ZeRO
+        href: /Paper/ZeRO
+  - "2024-2-4":
+    - refactor: 新增了 Paper 页面！
+    - newpage:
+        text: Papers > BiS-KM
+        href: /Paper/BiS-KM
+  - "2024-1-20":
+    - pageupdate:
+        text: Computer Science > 计算理论
+        href: /TOC/index
+  - "2024-1-7":
+    - newpage:
+        text: Computer Science > 应用运筹学基础
+        href: /AOR/index
+- "2023":
+  - "2023-12-16":
+    - newpage:
+        text: System > 操作系统原理与实践 > 大容量存储、I/O 系统
+        href: /OS/chap10
+    - pageupdate:
+        text: System > 计算机体系结构 > 指令级并行
+        href: /CA/CA4
+    - newpage:
+        text: System > 计算机体系结构 > DLP 和 TLP
+        href: /CA/CA5
+  - "2023-12-7":
+    - newpage:
+        text: System > 操作系统原理与实践 > 虚拟内存
+        href: /OS/chap09
+    - newpage:
+        text: Computer Science > 高级数据结构与算法分析
+        href: /ADS/index
+    - refactor: 更新了 Miscellaneous 部分页面结构！
+    - newpage:
+        text: Miscellaneous > 浮点数与定点数
+        href: /Misc/float
+  - "2023-11-16": 
+    - newpage:
+        text: System > 操作系统原理与实践 > 主存
+        href: /OS/chap08
+    - newpage:
+        text: System > 计算机体系结构 > 指令级并行
+        href: /CA/CA4
+  - "2023-11-10": 
+    - newpage:
+        text: System > 计算机体系结构 > 指令级并行
+        href: /CA/CA4
+  - "2023-11-9": 
+    - newpage:
+        text: System > 操作系统原理与实践 > 死锁
+        href: /OS/chap07
+  - "2023-11-7": 
+    - newpage:
+        text: System > 操作系统原理与实践 > 同步
+        href: /OS/chap06
+  - "2023-11-4": 
+    - newpage:
+        text: System > 操作系统原理与实践 > 线程、调度
+        href: /OS/chap04
+    - pageupdate:
+        text: System > 计算机体系结构 > 内存层次
+        href: /CA/CA3
+  - "2023-10-31":
+    - function: 笔记本样式大更新！

@@ -58,8 +58,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.smartsymbols  #智能符号
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true 
   - pymdownx.tasklist:
@@ -256,6 +256,9 @@ nav:
       - 剪枝与稀疏性: TinyML/pruning.md
       - 量化: TinyML/quantization.md
       - Transformer & LLM: TinyML/llm.md
+      - 微调和提示工程: TinyML/finetune.md
+  - EDA:
+    - EDA/index.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
