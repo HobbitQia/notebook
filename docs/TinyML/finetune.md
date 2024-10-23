@@ -26,13 +26,13 @@ counter: True
 
 * **BitFit**
     * 只微调 bias 项。只有模型的 bias（或者 bias 的子集）会被更新，其他部分保持不变。***e.g.*** BERT-base 110M 参数，只有 0.1M(>1000x less) bias. 
-        <div align=center> <img src="https://cdn.hobbitqia.cc/20241022102401.png" width = 40%/> </div>
+        <div align=center> <img src="https://cdn.hobbitqia.cc/20241022102401.png" width = 35%/> </div>
     
     * 对于小到中的数据集，BitFit 和 full-fine-tuning 完全微调的性能相当（有的时候更好）。但是对于更大的数据 ，模型的性能弱于完全微调。
 
 * **Adapter**
     * 对于每个任务，在模型中插入少量 learnable layers 可学习层。新的任务会在移去之前的层后加上新的可学习层。微调时只更新对应的可学习层。
-        <div align=center> <img src="https://cdn.hobbitqia.cc/20241022102817.png" width = 40%/> </div>
+        <div align=center> <img src="https://cdn.hobbitqia.cc/20241022102817.png" width = 30%/> </div>
 
     * 通常，假设有 N 个下游任务，我们需要 N 份模型权重的拷贝。
         * FT-Full: 1000 sub-tasks x 7B llama => 14 PB storage

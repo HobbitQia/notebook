@@ -1,4 +1,12 @@
 - "2024":
+  - "2024-10-22":
+    - newpage:
+        text: Papers > ChatEDA
+        href: /Paper/ChatEDA
+  - "2024-10-22":
+    - newpage:
+        text: AI > Efficient ML > 微调和提示工程
+        href: /Paper/finetune
   - "2024-7-27":
     - newpage:
         text: Papers > NN-LUT

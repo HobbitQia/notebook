@@ -277,6 +277,7 @@ nav:
     - PagedAttention & vLLM: Paper/PagedAttention.md
     - VecPAC: Paper/VecPAC.md
     - NN-LUT: Paper/NN-LUT.md
+    - ChatEDA: Paper/ChatEDA.md
   - Miscellaneous:
     - Misc/index.md
     - 浮点数与定点数: Misc/float.md

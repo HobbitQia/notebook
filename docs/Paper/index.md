@@ -13,3 +13,4 @@
 * [Efficient Memory Management for Large Language Model Serving with PagedAttention](PagedAttention.md)
 * [VecPAC: A Vectorizable and Precision-Aware CGRA](VecPAC.md)
 * [NN-LUT: Neural Approximation of Non-Linear Operations for Efficient Transformer Inference](NN-LUT.md)
+* [ChatEDA: A Large Language Model Powered Autonomous Agent for EDA](ChatEDA.md)
