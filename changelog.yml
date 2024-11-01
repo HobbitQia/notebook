@@ -1,6 +1,16 @@
 - "2024":
   - "2024-10-22":
     - newpage:
+      text: Papers > GPT-1
+      href: /Paper/GPT-1
+    - newpage:
+      text: Papers > GPT-2
+      href: /Paper/GPT-2
+    - newpage:
+      text: Papers > GPT-3
+      href: /Paper/GPT-3
+  - "2024-10-22":
+    - newpage:
         text: Papers > ChatEDA
         href: /Paper/ChatEDA
   - "2024-10-22":
