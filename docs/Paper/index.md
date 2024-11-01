@@ -14,3 +14,6 @@
 * [VecPAC: A Vectorizable and Precision-Aware CGRA](VecPAC.md)
 * [NN-LUT: Neural Approximation of Non-Linear Operations for Efficient Transformer Inference](NN-LUT.md)
 * [ChatEDA: A Large Language Model Powered Autonomous Agent for EDA](ChatEDA.md)
+* [Improving Language Understanding by Generative Pre-Training](GPT-1.md)
+* [Language Models are Unsupervised Multitask Learners](GPT-2.md)
+* [Language Models are Few-Shot Learners](GPT-3.md)
