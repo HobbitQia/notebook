@@ -17,3 +17,4 @@
 * [Improving Language Understanding by Generative Pre-Training](GPT-1.md)
 * [Language Models are Unsupervised Multitask Learners](GPT-2.md)
 * [Language Models are Few-Shot Learners](GPT-3.md)
+* [APEX: A Framework for Automated Processing Element Design Space Exploration using Frequent Subgraph Analysis](APEX.md)

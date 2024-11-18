@@ -25,7 +25,8 @@ counter: True
 
 ## 方法
 
-!!! "微调与 Zero-shot, One-shot, Few-shot"
+!!! Note "微调与 Zero-shot, One-shot, Few-shot"
+
     <div align=center><img src = "https://cdn.hobbitqia.cc/20241102004240.png" width =70%></div>
 
     * 微调要求的数据量比从 0 开始训练少，而且以预训练模型作为起始权重，可以设置较小的学习率。但是对于大模型（比如 GPT-3），微调的成本依然非常高。
