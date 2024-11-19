@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/DL/lec07/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/TinyML/post-training/">
       
       
-        <link rel="prev" href="../lec06/">
+        <link rel="prev" href="../finetune/">
       
       
-        <link rel="next" href="../../TinyML/">
+        <link rel="next" href="../../EDA/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>CNN 架构 - HobbitQia的笔记本</title>
+        <title>训练后 LLM - HobbitQia的笔记本</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cnn-architectures" class="md-skip">
+        <a href="#llm-post-training" class="md-skip">
           跳转至
         </a>
       
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CNN 架构
+              训练后 LLM
             
           </span>
         </div>
@@ -324,7 +324,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../DL/" class="md-tabs__link">
           
   
     
@@ -3843,8 +3843,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3856,6 +3854,227 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../DL/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Deep Learning
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Deep Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DL/lec01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    图像分类
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DL/lec02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    线性分类器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DL/lec03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    优化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DL/lec04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    神经网络
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DL/lec05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    反向传播
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DL/lec06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    卷积神经网络
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DL/lec07/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CNN 架构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
         
       
         
@@ -3878,7 +4097,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
         
           
           
@@ -3887,23 +4106,23 @@
               
   
   <span class="md-ellipsis">
-    Deep Learning
+    Efficient ML
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
-            Deep Learning
+            Efficient ML
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3916,11 +4135,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../lec01/" class="md-nav__link">
+      <a href="../pruning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    图像分类
+    剪枝与稀疏性
   </span>
   
 
@@ -3937,11 +4156,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../lec02/" class="md-nav__link">
+      <a href="../quantization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    线性分类器
+    量化
   </span>
   
 
@@ -3958,11 +4177,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../lec03/" class="md-nav__link">
+      <a href="../llm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    优化
+    Transformer & LLM
   </span>
   
 
@@ -3979,53 +4198,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../lec04/" class="md-nav__link">
+      <a href="../finetune/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    神经网络
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lec05/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    反向传播
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lec06/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    卷积神经网络
+    微调和提示工程
   </span>
   
 
@@ -4055,7 +4232,7 @@
           
   
   <span class="md-ellipsis">
-    CNN 架构
+    训练后 LLM
   </span>
   
 
@@ -4066,7 +4243,7 @@
         
   
   <span class="md-ellipsis">
-    CNN 架构
+    训练后 LLM
   </span>
   
 
@@ -4088,84 +4265,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#alexnet" class="md-nav__link">
+  <a href="#llm-fine-tuning" class="md-nav__link">
     <span class="md-ellipsis">
-      AlexNet
+      LLM Fine-Tuning
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#zfnet" class="md-nav__link">
+  <a href="#multi-model-llms" class="md-nav__link">
     <span class="md-ellipsis">
-      ZFNet
+      Multi-model LLMs
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="ZFNet">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vcg" class="md-nav__link">
-    <span class="md-ellipsis">
-      VCG
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#googlenet" class="md-nav__link">
-    <span class="md-ellipsis">
-      GoogLeNet
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#residual-networks" class="md-nav__link">
+  <a href="#prompt-engineering" class="md-nav__link">
     <span class="md-ellipsis">
-      Residual Networks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Residual Networks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#improving-resnets-block-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      Improving ResNets: Block Design
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#improving-resnets-resnext" class="md-nav__link">
-    <span class="md-ellipsis">
-      Improving ResNets: ResNeXt
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
+      Prompt Engineering
     </span>
   </a>
   
@@ -4175,183 +4295,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../TinyML/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Efficient ML
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2">
-            <span class="md-nav__icon md-icon"></span>
-            Efficient ML
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../TinyML/pruning/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    剪枝与稀疏性
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../TinyML/quantization/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    量化
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../TinyML/llm/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Transformer & LLM
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../TinyML/finetune/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    微调和提示工程
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../TinyML/post-training/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    训练后 LLM
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -5476,84 +5419,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#alexnet" class="md-nav__link">
+  <a href="#llm-fine-tuning" class="md-nav__link">
     <span class="md-ellipsis">
-      AlexNet
+      LLM Fine-Tuning
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#zfnet" class="md-nav__link">
+  <a href="#multi-model-llms" class="md-nav__link">
     <span class="md-ellipsis">
-      ZFNet
+      Multi-model LLMs
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="ZFNet">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vcg" class="md-nav__link">
-    <span class="md-ellipsis">
-      VCG
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#googlenet" class="md-nav__link">
-    <span class="md-ellipsis">
-      GoogLeNet
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#residual-networks" class="md-nav__link">
+  <a href="#prompt-engineering" class="md-nav__link">
     <span class="md-ellipsis">
-      Residual Networks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Residual Networks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#improving-resnets-block-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      Improving ResNets: Block Design
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#improving-resnets-resnext" class="md-nav__link">
-    <span class="md-ellipsis">
-      Improving ResNets: ResNeXt
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
+      Prompt Engineering
     </span>
   </a>
   
@@ -5578,306 +5464,170 @@
   
 
 
-<h1 id="cnn-architectures">CNN Architectures<a class="headerlink" href="#cnn-architectures" title="Permanent link">&para;</a></h1>
-<p><img alt="" src="https://cdn.hobbitqia.cc/20240329005300.png" /></p>
-<p>本节从历史角度，基于 ImageNet Classification Challenge 这个 benchmark 讲解著名的神经网络结构，尝试对下面的问题给出 insight:</p>
-<div class="admonition question">
-<p class="admonition-title"><strong>Problem</strong>: What is the right way to combine all these components?</p>
-</div>
-<h2 id="alexnet">AlexNet<a class="headerlink" href="#alexnet" title="Permanent link">&para;</a></h2>
+<h1 id="llm-post-training">LLM Post-Training<a class="headerlink" href="#llm-post-training" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
 <ul>
-<li>2012 年之前不是基于神经网络的，2012 年比赛的获胜者是 8 层的 <strong>AlexNet</strong>: <ul>
-<li>227 x 227 inputs</li>
-<li>5 Convolutional layers</li>
-<li>Max pooling</li>
-<li>3 fully-connected layers</li>
-<li>ReLU nonlinearities</li>
-<li>Used “Local response normalization” (Not used anymore)</li>
-<li>Trained on two GTX 580 GPUs – only 3GB of memory each! Model split over two GPUs.</li>
+<li>LLM Fine-Tuning<ul>
+<li>Supervised Fine-Tuning (SFT)</li>
+<li>Reinforcement Learning from Human Feedback (RLHF)</li>
+<li>Parameter Efficient Fine-Tuning (PEFT)<ul>
+<li>BitFit, TinyTL, Adapter, Prompt-Tuning, Prefix-Tuning</li>
+<li>LoRA, QLoRA, BitDelta</li>
 </ul>
 </li>
 </ul>
-<p><center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2018.png" width="400" />
-</center></p>
-<ul>
-<li>
-<p>网络具体配置：
-    <center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2020.png" width="400" />
-</center></p>
-<ul>
-<li>
-<p><strong>Number of floating point operations</strong> <code>(multipl + add) = (number of output elements) * (ops per output elem)</code></p>
-<p>我们倾向于将乘法和加法共同作为单个操作来计算（multiply + add），因此有上面的计算式，这个结果非常重要。</p>
 </li>
-<li>
-<p>For pooling layer: <code>#output channels = #input channels</code></p>
-<ul>
-<li>Pooling layers have no learnable parameters!</li>
-<li>卷积层往往需要大量计算，池化层相比之下小很多。</li>
+<li>Multi-modal LLMs<ul>
+<li>Cross-Attention Based: Flamingo</li>
+<li>Visual Tokens as Input: PaLM-E, VILA</li>
+<li>Enabling Visual Outputs: VILA-U</li>
 </ul>
 </li>
-<li>实际上这里卷积层的确切配置经过了大量的试验和错误，但在实践中效果很好。</li>
-<li>
-<p>观察最后三列：Interesting trends here</p>
-<ul>
-<li>
-<p>Most of the memory usage is in the early convolution layers.</p>
-<p>大部分内存消耗在早期的卷积层，这是因为前期的输入图像分辨率高，同时有更多的滤波器数量。</p>
-</li>
-<li>
-<p>Nearly all parameters are in the fully-connected layers.</p>
-<p>卷积层的参数很少，参数主要在全连接层，尤其是第一个。</p>
-</li>
-<li>
-<p>Most floating-point ops occur in the convolution layers.</p>
-<p>完全连接层需要很少的计算，因为只需要乘一个矩阵，然而卷积层需要很多计算。</p>
-</li>
-</ul>
-<p>这些趋势不止在 AlexNet 上，后来也是一种普遍趋势。</p>
-<p><center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2021.png" width="400" />
-</center></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="zfnet">ZFNet<a class="headerlink" href="#zfnet" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>2013 年的优胜者是 8 layers ZFNet.</p>
-<ul>
-<li>本质就是更大的 AlexNet.</li>
-<li>
-<p>尝试更多，错误更少，需要更多的内存和计算。基本思想类似，除了某些层的配置。</p>
-<p><center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2022.png" width="400" />
-</center></p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>takeway from AlexNet to ZFNet: 更大的网络往往会工作得更好。</strong></p>
-</li>
-</ul>
-<h3 id="vcg">VCG<a class="headerlink" href="#vcg" title="Permanent link">&para;</a></h3>
-<ul>
-<li>2014 年的优胜者是 VCG.</li>
-<li><strong>Idea: Deeper Networks, Regular Design.</strong><ul>
-<li>AlextNet 有一定数量的卷积层、池化层，但每层的配置是通过反复试验手动独立设置的，这使得扩展缩小网络变得相当困难。</li>
-</ul>
-</li>
-<li>设计原则：<ul>
-<li>All conv are 3x3 stride 1 pad 1</li>
-<li>All max pool are 2x2 stride 2</li>
-<li>After pool, double #channels</li>
-</ul>
-</li>
-<li>
-<p>Network has 5 convolutional stages:</p>
-<ul>
-<li>Stage 1: conv-conv-pool</li>
-<li>Stage 2: conv-conv-pool</li>
-<li>Stage 3: conv-conv-pool</li>
-<li>Stage 4: conv-conv-conv-[conv]-pool</li>
-<li>Stage 5: conv-conv-conv-[conv]-pool</li>
-</ul>
-<p>(VGG-19 has 4 conv in stages 4 and 5)</p>
-</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">为什么选择这些设计原则？</p>
-<ul>
-<li>
-<p>为什么 3*3 卷积：</p>
-<ul>
-<li>
-<p>Two 3x3 conv has same receptive field as a single 5x5 conv, but has fewer parameters and takes less computation!</p>
-<p>感受野大小相同，但是两个 3*3 卷积层 的参数、计算量更小</p>
-</li>
-<li>
-<p><strong>Insight</strong>：可能没必要使用更大的滤波器。我们关心的只是需要用多少 3*3 滤波器。</p>
-</li>
-<li>而且在 2 个 3*3 之间我们还可以插入 ReLU，提供了更多的深度和非线性。</li>
-</ul>
-<p><center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2023.png" width="250" />
-</center></p>
-</li>
-<li>
-<p>为什么最大池化都是 2*2 步长为 2，且池化之后要双倍通道数：</p>
-<ul>
-<li>
-<p>Conv layers at each spatial resolution take the same amount of computation!</p>
-<p>我们希望卷积层花费相同数量的浮点运算。</p>
-</li>
-<li>
-<p>可以通过在卷积节点结束使用具有空间大小和双倍 channel 来做到。</p>
-<p><center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2024.png" width="250" />
-</center></p>
-</li>
+<li>Prompt Engineering<ul>
+<li>In-Context Learning (ICL)</li>
+<li>Chain-of-Thought (CoT)</li>
+<li>Retrieval Augmented Generation (RAG)</li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="admonition note">
-<p class="admonition-title">AlexNet vs VGG-16: Much bigger network!</p>
-<p><center> </p>
-<p><img alt="Untitled" src="https://cdn.hobbitqia.cc/20240329000713.png" width="400" />
-</center></p>
-<p>值得一提的是 VGG 巨大，但是数据并行，不用拆分模型。</p>
-</div>
-<h3 id="googlenet">GoogLeNet<a class="headerlink" href="#googlenet" title="Permanent link">&para;</a></h3>
+<div align = center><img src="https://cdn.hobbitqia.cc/20241119203442.png" width=60%></div>
+
+<h2 id="llm-fine-tuning">LLM Fine-Tuning<a class="headerlink" href="#llm-fine-tuning" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>2014 年还有一个重要的神经网络 <strong>GoogLeNet</strong>: Focus on Efficiency.</p>
+<p><strong>Supervised Fine-Tuning (SFT)</strong>: 希望 LLMs 生成符合人类偏好的答案，因此我们把人类希望看到的答案作为 ground truth，然后用监督学习的方式微调。</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241119203801.png" width=60%></div></p>
+</details>
+</li>
+<li>
+<p><strong>Reinforcement Learning from Human Feedback (RLHF)</strong></p>
 <ul>
 <li>
-<p>Many innovations for efficiency: reduce parameter count, memory usage, and computation</p>
-<p>设计高效的神经网络，save money，降低复杂度。</p>
-</li>
-</ul>
-</li>
-<li>
-<p>网络具体配置：
-    <center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2025.png" width="400" />
-</center></p>
-</li>
-<li>
-<p>Stem network at the start aggressively downsamples input</p>
-<p>大空间特征图上的卷积很昂贵，为了避免这种情况，他们使用了快速下降的轻量级 stem，对输入进行采样。</p>
-</li>
-<li>
-<p><strong>Inception module</strong></p>
+<p>传统的模型依赖于静态的度量（如 BLEU、ROUGE），但是 RLHF 能够基于主观的，人类定义的品质（如创造性、真实性、有用性）来进行优化。ChatGPT 就是一个使用 RLHF 的例子。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241119204823.png" width=80%></div></p>
 <ul>
+<li>step 1: 从数据集中采样 prompt，同时人工写出希望的答案作为 ground truth，微调 GPT-3。</li>
+<li>step 2: 采样 prompt，送到 SFT 后的模型进行生成，得到多个答案。由人工标注，对生成的答案进行排序，训练一个 reward model。</li>
 <li>
-<p>Local unit with parallel branches</p>
-<p>引入了并行计算分支的想法。</p>
-</li>
-<li>
-<p>Local structure repeated many times throughout the network. </p>
-<p>卷积核大小是个超参数，我们希望避免这个参数。在 VGG 中固定使用了 3*3 的卷积，谷歌选择一直处理所有内核大小。不再需要调整卷积核大小。</p>
-<p><center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2026.png" width="350" />
-</center></p>
-<p>上面的结构在网络中多次出现。</p>
-</li>
-<li>
-<p>Uses 1x1 “Bottleneck” layers to reduce channel dimension before expensive conv (we will revisit this with ResNet!)</p>
-</li>
-</ul>
-<p>1*1 卷积被用来减少通道数量（在空间卷积前）。</p>
-</li>
-<li>
-<p>No large FC layers at the end! Instead uses global average pooling to collapse spatial dimensions, and one linear layer to produce class scores</p>
-<p>消除了全连接层，使用了不同的策略破坏空间：使用平均池化，核大小等于最后一个卷积的最终空间大小。</p>
-</li>
-<li>
-<p>GoogleLetNet 出现在 BatchNorm 之前，那时训练超过 10 层的网络是很难的。</p>
-<ul>
-<li>Network is too deep, gradients don’t propagate cleanly</li>
-<li>
-<p>As a hack, attach “auxiliary classifiers” at several intermediate points in the network that also try to classify the image and receive loss </p>
-<p>最后会收到三个分数，一个来自网络末端，两个来自中间部分。中间的分类器也要计算损失并传播梯度。（VGG 也用了一些其他的技巧）</p>
-</li>
-<li>
-<p>GoogLeNet was before batch normalization! With BatchNorm no longer need to use this trick.</p>
+<p>step 3: 采样 prompt，采用 PPO 进行强化学习，模型生成答案并得到 reward model 的打分，以此更新。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241119213303.png" width=60%></div></p>
+<p>这里微调时，使用一个 KL 散度的损失加上奖励模型的损失。KL 散度用于控制微调后的模型和初始的模型差别较小。</p>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="residual-networks">Residual Networks<a class="headerlink" href="#residual-networks" title="Permanent link">&para;</a></h2>
-<ul>
-<li>2015 年的优胜者是 <strong>ResNet</strong>. 神经网络的层数从 22 增加到了 152 层。</li>
-<li>
-<p><strong>Problem</strong>: Deeper model does worse than shallow model!</p>
-<p>超过了某个点后，更大更深的网络表现的更差。</p>
-<ul>
-<li>Initial guess: Deep model is overfitting since it is much bigger than the other model</li>
-<li>
-<p>In fact the deep model seems to be <strong>underfitting</strong> since it also performs worse than the shallow model on the training set! It is actually underfitting.</p>
-<p>你可能认为发生了过拟合。但实际上看训练误差会发现其实还没有训练到位 under fitting。
-<center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2027.png" width="400" />
-</center></p>
 </li>
 <li>
-<p>A deeper model can <strong>emulate</strong> a shallower model: copy layers from shallower model, set extra layers to identity.</p>
-<p>一个更深的模型应该能模拟更浅的模型，意味着我们更深的模型至少需要做的和更浅的模型一样好。</p>
-<p>比如 20 层和 56 层的网络，实际上 56 层的网络可以只学习 20 层，其他层学习<strong>恒等函数</strong>。</p>
+<p><strong>Direct Preference Optimization (DPO)</strong></p>
+<ul>
+<li>
+<p>RLHF 需要训练多个模型，DPO 将问题转为单次 SFT 任务。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241119213459.png" width=75%></div></p>
 </li>
 </ul>
 </li>
 <li>
-<p><strong>Hypothesis</strong>: This is an optimization problem. Deeper models are harder to optimize, and in particular don’t learn identity functions to emulate shallow models.</p>
+<p>PEFT 同<a href="https://note.hobbitqia.cc/TinyML/finetune/#efficient-llm-fine-tuning">之前的内容</a>，这里仅记录之前没提过的内容。</p>
+<ul>
+<li><strong>Bit-Delta</strong><ul>
+<li>LoRA 微调中有很多冗余，实际上 Your Fine-Tune May Only Be Worth One Bit.</li>
+<li>
+<p>微调时，<span class="arithmatex">\(\nabla\)</span> 由一个 fp16 scale factor (per tensor) 乘上 1-b 矩阵得到（+1/-1），最终的权重是原始的权重加上 <span class="arithmatex">\(\nabla\)</span>。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241119213757.png" width=100%></div></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="multi-model-llms">Multi-model LLMs<a class="headerlink" href="#multi-model-llms" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Vision Language Model 要同时理解文本和图像，常用两种方式：<ul>
+<li>Cross-attention，将视觉信息注入 LLMs（Flamingo style）</li>
+<li>将 Visual tokens 作为输入（PaLM-E style）</li>
+</ul>
 </li>
 <li>
-<p><strong>Solution</strong>: Change the network so <strong>learning identity functions</strong> with extra layers is easy!
-    <center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2028.png" width="400" />
-</center></p>
-<p>如果我们把这两个卷积的权重设为 0，那么我们就学习到了恒等函数。反向传播时，会复制上游梯度到每个输入，这样做也有利于改善梯度信息。</p>
+<p>Flamingo</p>
 <ul>
-<li>A residual network is a stack of many residual blocks.</li>
-<li>Regular design, like VGG: each residual block has two 3x3 conv.</li>
-<li>Network is divided into stages: the first block of each stage halves the resolution (with stride-2 conv) and doubles the number of channels.</li>
-<li>as GoogleNet Uses the same aggressive stem to downsample the input 4x before applying residual blocks; global average pooling and a single linear layer at the end</li>
-</ul>
+<li>
+<p>固定 LLM，添加 cross-attention 层来处理视觉信息。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241119215704.png" width=80%></div></p>
 </li>
-</ul>
+<li>
+<p>其中的 Perceiver Resampler 将变长的特征图映射到固定长度的 token。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p><img alt="" src="https://cdn.hobbitqia.cc/20240329005051.png" /></p>
+<p>可以看到这里的输出与输入的 token 数量无关，5 和 dim 都是人为设定的。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241119215953.png" width=90%></div></p>
 </div>
-<ul>
-<li>
-<p>Basic &amp; Bottleneck Block: More layers, less computational cost!
-    <center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2029.png" width="400" />
-</center></p>
-<p>上图可以看到，我们可以采用 bottleneck block 的方法，减少计算量，同时增加深度。</p>
 </li>
 <li>
-<p><strong>ResNet-50</strong> is the same as ResNet-34, but replaces Basic blocks with Bottleneck Blocks. This is <strong>a great baseline architecture</strong> for many tasks even today!</p>
-</li>
-<li>Deeper ResNet-101 and ResNet-152 models are more accurate, but also more computationally heavy.<ul>
-<li>Able to train very deep networks</li>
-<li>Deeper networks do better than shallow networks (as expected)</li>
-<li>Swept 1<sup>st</sup> place in all ILSVRC and COCO 2015 competitions</li>
-<li>Still widely used today</li>
-</ul>
+<p>其中 cross-attention 的输入 K V 均来自 Perceiver Resampler 处理后的输入 X，而 Q 来自语言模型的输入 Y。这里我们有 tanh 来控制要添加多少视觉信息，因此初始化为 0。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241119220059.png" width=80%></div></p>
 </li>
 </ul>
-<h3 id="improving-resnets-block-design">Improving ResNets: Block Design<a class="headerlink" href="#improving-resnets-block-design" title="Permanent link">&para;</a></h3>
-<p><center> </p>
-<p><img alt="Untitled" src="https://cdn.hobbitqia.cc/20240329005444.png" width="450" />
-</center></p>
+</li>
+<li>
+<p>PaLM-E</p>
 <ul>
-<li>Slight improvement in accuracy (ImageNet top-1 error).</li>
-<li>Not actually used that much in practice.</li>
+<li>
+<p>将视觉输入（或者其他模态）作为 token 输入。（everything is tokenized.）</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241119220256.png" width=70%></div></p>
+</li>
 </ul>
-<h3 id="improving-resnets-resnext">Improving ResNets: ResNeXt<a class="headerlink" href="#improving-resnets-resnext" title="Permanent link">&para;</a></h3>
-<p>如果一个瓶颈分支很好，那可以并行做多个瓶颈分支。</p>
-<p><center> </p>
-<p><img alt="Untitled" src="../img2/Untitled%2030.png" width="450" />
-</center></p>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<div class="admonition info">
-<p class="admonition-title">Comparing Complexity</p>
-<p>右图半径是网络的参数量，横坐标是计算量，纵坐标是准确率，越靠左上效果越好。
-<img alt="" src="https://cdn.hobbitqia.cc/20240329005656.png" /></p>
-</div>
-<div class="admonition summary">
-<p class="admonition-title">Summary</p>
+</li>
+<li>
+<p>VILA: Visual Language Model</p>
 <ul>
-<li><strong>Don’t be heroes.</strong> For most problems you should use an off-the-shelf architectures; don’t try to design your own.</li>
-<li>If you just care about accuracy, <strong>ResNet-50</strong> or <strong>ResNet-101</strong> are great choices.</li>
-<li>If you want an efficient network(real-time, run on mobile, etc) try <strong>MobileNets</strong> and <strong>ShuffleNets</strong>.</li>
+<li>
+<p>通过 image tokens 增强语言模型。训练时先训练 projector，再预训练，最后进行 SFT。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241119220707.png" width=70%></div></p>
+</li>
+<li>
+<p>Findings</p>
+<ul>
+<li>固定 LLMs 可以获得很好的 zero-shot 性能，但是缺少 in-context 学习的能力（这需要 unfreeze LLMs）。</li>
+<li>Interlevead 的预训练数据最好，image-text pairs 不是最优的。</li>
+<li>即使是视觉模型，添加 text-only 的数据进行指令微调也是有必要的。</li>
+<li>
+<p>原始图像的分辨率比 token 的数量更重要。</p>
+<details class="info">
+<summary>High Resolution ViTs in VLMs</summary>
+<p>为了支持更高的分辨率，</p>
+<ul>
+<li>InternVL 通过 tiling + thumbnail 的方式。tiling 指有预定义好长宽的 template，将输入图像拆分为若干个 template，最后将 token 拼接起来即可；thumbnail 即对原始图像进行下采样，得到缩略图。（不同的视觉任务偏好不同的输入分辨率）</li>
+<li>另一种方式，把低分辨率的图像和文本特征作为 Q，高分辨率的图像作为 K V，。但这样需要重新训练 LLMs。</li>
 </ul>
-</div>
+</details>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="prompt-engineering">Prompt Engineering<a class="headerlink" href="#prompt-engineering" title="Permanent link">&para;</a></h2>
+<ul>
+<li>ICL, CoT 同<a href="https://note.hobbitqia.cc/TinyML/finetune/#prompt-engineering">之前的内容</a></li>
+<li><strong>Retrieval Augmented Generation (RAG)</strong><ul>
+<li>LLMs 不能把所有的知识记录在参数里，很容易过时而且很难更新。</li>
+<li>Pipeline<ul>
+<li>Embedding Model: 将文本编码为向量。</li>
+<li>Retriever: 从数据库中检索相关的文本。</li>
+<li>Reranker (optional): 对检索到的文本进行排序，提供每个文档的相关分数。</li>
+<li>
+<p>Language model: 根据检索到的文本，以及最初的问题生成答案。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241119231407.png" width=70%></div></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -5900,7 +5650,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月29日 17:28:23</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年11月19日 23:21:48</span>
   </span>
 
     
@@ -5910,7 +5660,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月29日 17:28:23</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年11月19日 23:21:48</span>
   </span>
 
     
