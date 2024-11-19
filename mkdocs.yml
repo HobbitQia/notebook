@@ -257,6 +257,7 @@ nav:
       - 量化: TinyML/quantization.md
       - Transformer & LLM: TinyML/llm.md
       - 微调和提示工程: TinyML/finetune.md
+      - 训练后 LLM: TinyML/post-training.md
   - EDA:
     - EDA/index.md
   - Mathematics:

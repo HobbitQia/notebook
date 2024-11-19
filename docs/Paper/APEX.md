@@ -7,7 +7,7 @@ counter: True
 !!! Abstract
     ![](https://cdn.hobbitqia.cc/20241119001127.png)
 
-    * Paper: ![APEX: A Framework for Automated Processing Element Design Space Exploration using Frequent Subgraph Analysis](https://dl.acm.org/doi/10.1145/3582016.3582070)
+    * Paper: [APEX: A Framework for Automated Processing Element Design Space Exploration using Frequent Subgraph Analysis](https://dl.acm.org/doi/10.1145/3582016.3582070)
     * **ASPLOS 2023**: Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems
 
 ## 介绍
