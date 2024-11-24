@@ -283,6 +283,7 @@ nav:
     - GPT-2: Paper/GPT-2.md
     - GPT-3: Paper/GPT-3.md
     - APEX: Paper/APEX.md
+    - QServe: Paper/QServe.md
   - Miscellaneous:
     - Misc/index.md
     - 浮点数与定点数: Misc/float.md
