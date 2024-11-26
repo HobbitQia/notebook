@@ -260,6 +260,10 @@ nav:
       - 训练后 LLM: TinyML/post-training.md
   - EDA:
     - EDA/index.md
+    - 数字集成电路设计:
+      - EDA/VLSI/index.md
+      - 介绍: EDA/VLSI/lec01.md
+      - 逻辑综合: EDA/VLSI/lec03.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md

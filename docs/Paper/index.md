@@ -3,6 +3,14 @@
 !!! Abstract
     这里用来放读论文的笔记，写的不好还请见谅>_<|||
 
+??? Note "TODO"
+    [] 重构页面，对论文分类
+    [] T-MAC + BitNet 系列
+    [] CoT
+    [] InstructGPT
+    [] 量化系列（Atom、QuaRot）
+    [] 投机解码
+
 * [BiS-KM: Enabling Any-Precision K-Means on FPGAs](BiS-KM.md)
 * [ZeRO: Memory Optimizations Toward Training Trillion Parameter Models](ZeRO.md)
 * [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](Megatron-LM.md)
