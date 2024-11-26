@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/ds/tree/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/EDA/VLSI/lec03/">
       
       
-        <link rel="prev" href="../algorithm/">
+        <link rel="prev" href="../lec01/">
       
       
-        <link rel="next" href="../heap/">
+        <link rel="next" href="../../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/">
       
       
-      <link rel="icon" href="../../log.ico">
+      <link rel="icon" href="../../../log.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>树 - HobbitQia的笔记本</title>
+        <title>逻辑综合 - HobbitQia的笔记本</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-      <link rel="stylesheet" href="../../css/timeline.css">
+      <link rel="stylesheet" href="../../../css/timeline.css">
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
     
@@ -58,17 +58,17 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../../../css/custom.css">
     
-      <link rel="stylesheet" href="../../css/card.css">
+      <link rel="stylesheet" href="../../../css/card.css">
     
-      <link rel="stylesheet" href="../../css/tasklist.css">
+      <link rel="stylesheet" href="../../../css/tasklist.css">
     
-      <link rel="stylesheet" href="../../css/flink.css">
+      <link rel="stylesheet" href="../../../css/flink.css">
     
-      <link rel="stylesheet" href="../../css/more_changelog.css">
+      <link rel="stylesheet" href="../../../css/more_changelog.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#logic-synthesis" class="md-skip">
           跳转至
         </a>
       
@@ -108,9 +108,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href="../../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../../log.ico" alt="logo">
+  <img src="../../../log.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              树
+              逻辑综合
             
           </span>
         </div>
@@ -236,7 +236,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -252,21 +252,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../ds/" class="md-tabs__link">
           
   
     
@@ -295,7 +291,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ICS/" class="md-tabs__link">
+        <a href="../../../ICS/" class="md-tabs__link">
           
   
     
@@ -324,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../DL/" class="md-tabs__link">
+        <a href="../../../DL/" class="md-tabs__link">
           
   
     
@@ -343,11 +339,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../EDA/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -373,7 +371,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
+        <a href="../../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
           
   
     
@@ -396,7 +394,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Paper/" class="md-tabs__link">
+        <a href="../../../Paper/" class="md-tabs__link">
           
   
     
@@ -416,7 +414,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Misc/" class="md-tabs__link">
+        <a href="../../../Misc/" class="md-tabs__link">
           
   
     
@@ -451,9 +449,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href="../../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../../log.ico" alt="logo">
+  <img src="../../../log.ico" alt="logo">
 
     </a>
     HobbitQia的笔记本
@@ -505,7 +503,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../.." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -538,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../changelog/" class="md-nav__link">
+      <a href="../../../changelog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -559,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../link/" class="md-nav__link">
+      <a href="../../../link/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,10 +582,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -608,20 +604,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -632,7 +625,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computer Science
@@ -643,8 +636,6 @@
                 
   
   
-    
-  
   
   
     
@@ -674,16 +665,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../ds/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -700,7 +691,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             数据结构与算法
@@ -716,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../algorithm/" class="md-nav__link">
+      <a href="../../../ds/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,30 +725,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    树
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../ds/tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -766,167 +737,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      预备知识
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="预备知识">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      基本概念
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      实现
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      二叉树
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="二叉树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      表达式树
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="表达式树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      树的遍历
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      线索二叉树
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      二叉树的性质
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adt" class="md-nav__link">
-    <span class="md-ellipsis">
-      查找树ADT——二叉查找树
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="查找树ADT——二叉查找树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      定义
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adt_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ADT 模型
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      实现
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      平均情形分析
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -939,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../heap/" class="md-nav__link">
+      <a href="../../../ds/heap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -960,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../set/" class="md-nav__link">
+      <a href="../../../ds/set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -981,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../graph/" class="md-nav__link">
+      <a href="../../../ds/graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1002,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sort/" class="md-nav__link">
+      <a href="../../../ds/sort/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1023,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hash/" class="md-nav__link">
+      <a href="../../../ds/hash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1073,7 +883,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ADS/" class="md-nav__link ">
+            <a href="../../../ADS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1152,7 +962,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../dip/" class="md-nav__link ">
+            <a href="../../../dip/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1185,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip1/" class="md-nav__link">
+      <a href="../../../dip/dip1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1206,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip2/" class="md-nav__link">
+      <a href="../../../dip/dip2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1227,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip3/" class="md-nav__link">
+      <a href="../../../dip/dip3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1248,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip5/" class="md-nav__link">
+      <a href="../../../dip/dip5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1269,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip6/" class="md-nav__link">
+      <a href="../../../dip/dip6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1290,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip7/" class="md-nav__link">
+      <a href="../../../dip/dip7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1311,7 +1121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip8/" class="md-nav__link">
+      <a href="../../../dip/dip8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1332,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip9/" class="md-nav__link">
+      <a href="../../../dip/dip9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1353,7 +1163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip10/" class="md-nav__link">
+      <a href="../../../dip/dip10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1374,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip11/" class="md-nav__link">
+      <a href="../../../dip/dip11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1395,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dip/dip12/" class="md-nav__link">
+      <a href="../../../dip/dip12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1469,7 +1279,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../OOP/" class="md-nav__link ">
+            <a href="../../../OOP/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1502,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop1/" class="md-nav__link">
+      <a href="../../../OOP/oop1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1523,7 +1333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop2/" class="md-nav__link">
+      <a href="../../../OOP/oop2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1544,7 +1354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop3/" class="md-nav__link">
+      <a href="../../../OOP/oop3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1565,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop4/" class="md-nav__link">
+      <a href="../../../OOP/oop4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1586,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop5/" class="md-nav__link">
+      <a href="../../../OOP/oop5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1607,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop6/" class="md-nav__link">
+      <a href="../../../OOP/oop6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1628,7 +1438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop7/" class="md-nav__link">
+      <a href="../../../OOP/oop7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1649,7 +1459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop8/" class="md-nav__link">
+      <a href="../../../OOP/oop8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1670,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop9/" class="md-nav__link">
+      <a href="../../../OOP/oop9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1691,7 +1501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop10/" class="md-nav__link">
+      <a href="../../../OOP/oop10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1712,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop11/" class="md-nav__link">
+      <a href="../../../OOP/oop11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1733,7 +1543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OOP/oop12/" class="md-nav__link">
+      <a href="../../../OOP/oop12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1787,7 +1597,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Quan/" class="md-nav__link ">
+            <a href="../../../Quan/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1820,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Quan/chap1/" class="md-nav__link">
+      <a href="../../../Quan/chap1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1841,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Quan/chap2/" class="md-nav__link">
+      <a href="../../../Quan/chap2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1891,7 +1701,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../TCS/" class="md-nav__link ">
+            <a href="../../../TCS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1948,7 +1758,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AOR/" class="md-nav__link ">
+            <a href="../../../AOR/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2086,7 +1896,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ICS/" class="md-nav__link ">
+            <a href="../../../ICS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2119,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-1/" class="md-nav__link">
+      <a href="../../../ICS/ICS-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2140,7 +1950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-2/" class="md-nav__link">
+      <a href="../../../ICS/ICS-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2161,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-3/" class="md-nav__link">
+      <a href="../../../ICS/ICS-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2182,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-4/" class="md-nav__link">
+      <a href="../../../ICS/ICS-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2203,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-5/" class="md-nav__link">
+      <a href="../../../ICS/ICS-5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2224,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-6/" class="md-nav__link">
+      <a href="../../../ICS/ICS-6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2245,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-7/" class="md-nav__link">
+      <a href="../../../ICS/ICS-7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2266,7 +2076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-8/" class="md-nav__link">
+      <a href="../../../ICS/ICS-8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2287,7 +2097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ICS/ICS-9/" class="md-nav__link">
+      <a href="../../../ICS/ICS-9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2366,7 +2176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/5/" class="md-nav__link">
+      <a href="../../../CSAPP/5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2387,7 +2197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/6/" class="md-nav__link">
+      <a href="../../../CSAPP/6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2408,7 +2218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/7/" class="md-nav__link">
+      <a href="../../../CSAPP/7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2429,7 +2239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/8/" class="md-nav__link">
+      <a href="../../../CSAPP/8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2450,7 +2260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSAPP/9/" class="md-nav__link">
+      <a href="../../../CSAPP/9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2514,7 +2324,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Logic/" class="md-nav__link ">
+            <a href="../../../Logic/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2547,7 +2357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic01/" class="md-nav__link">
+      <a href="../../../Logic/logic01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2568,7 +2378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic02/" class="md-nav__link">
+      <a href="../../../Logic/logic02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2589,7 +2399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic03/" class="md-nav__link">
+      <a href="../../../Logic/logic03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2610,7 +2420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic04/" class="md-nav__link">
+      <a href="../../../Logic/logic04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2631,7 +2441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic06/" class="md-nav__link">
+      <a href="../../../Logic/logic06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2652,7 +2462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic05/" class="md-nav__link">
+      <a href="../../../Logic/logic05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2673,7 +2483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logic/logic07/" class="md-nav__link">
+      <a href="../../../Logic/logic07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2753,7 +2563,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../DB/" class="md-nav__link ">
+            <a href="../../../DB/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2786,7 +2596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db1/" class="md-nav__link">
+      <a href="../../../DB/db1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2807,7 +2617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db2/" class="md-nav__link">
+      <a href="../../../DB/db2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2828,7 +2638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db3/" class="md-nav__link">
+      <a href="../../../DB/db3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2849,7 +2659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db4/" class="md-nav__link">
+      <a href="../../../DB/db4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2870,7 +2680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db5/" class="md-nav__link">
+      <a href="../../../DB/db5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2891,7 +2701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db6/" class="md-nav__link">
+      <a href="../../../DB/db6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2912,7 +2722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db7/" class="md-nav__link">
+      <a href="../../../DB/db7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2933,7 +2743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db8/" class="md-nav__link">
+      <a href="../../../DB/db8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2954,7 +2764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db9/" class="md-nav__link">
+      <a href="../../../DB/db9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2975,7 +2785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db10/" class="md-nav__link">
+      <a href="../../../DB/db10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2996,7 +2806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db11/" class="md-nav__link">
+      <a href="../../../DB/db11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3017,7 +2827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db12/" class="md-nav__link">
+      <a href="../../../DB/db12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3038,7 +2848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db13/" class="md-nav__link">
+      <a href="../../../DB/db13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3059,7 +2869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db14/" class="md-nav__link">
+      <a href="../../../DB/db14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3080,7 +2890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/db15/" class="md-nav__link">
+      <a href="../../../DB/db15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3142,7 +2952,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../CO/" class="md-nav__link ">
+            <a href="../../../CO/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3175,7 +2985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co1/" class="md-nav__link">
+      <a href="../../../CO/co1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3196,7 +3006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co3/" class="md-nav__link">
+      <a href="../../../CO/co3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3217,7 +3027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co2/" class="md-nav__link">
+      <a href="../../../CO/co2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3238,7 +3048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co4/" class="md-nav__link">
+      <a href="../../../CO/co4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3259,7 +3069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co5/" class="md-nav__link">
+      <a href="../../../CO/co5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3280,7 +3090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CO/co6/" class="md-nav__link">
+      <a href="../../../CO/co6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3340,7 +3150,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../CA/" class="md-nav__link ">
+            <a href="../../../CA/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3373,7 +3183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA1/" class="md-nav__link">
+      <a href="../../../CA/CA1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3394,7 +3204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA2/" class="md-nav__link">
+      <a href="../../../CA/CA2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3415,7 +3225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA3/" class="md-nav__link">
+      <a href="../../../CA/CA3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3436,7 +3246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA4/" class="md-nav__link">
+      <a href="../../../CA/CA4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3457,7 +3267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA5/" class="md-nav__link">
+      <a href="../../../CA/CA5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3533,7 +3343,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../OS/" class="md-nav__link ">
+            <a href="../../../OS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3566,7 +3376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap01/" class="md-nav__link">
+      <a href="../../../OS/chap01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3587,7 +3397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap02/" class="md-nav__link">
+      <a href="../../../OS/chap02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3608,7 +3418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap03/" class="md-nav__link">
+      <a href="../../../OS/chap03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3629,7 +3439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap04/" class="md-nav__link">
+      <a href="../../../OS/chap04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3650,7 +3460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap05/" class="md-nav__link">
+      <a href="../../../OS/chap05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3671,7 +3481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap06/" class="md-nav__link">
+      <a href="../../../OS/chap06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3692,7 +3502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap07/" class="md-nav__link">
+      <a href="../../../OS/chap07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3713,7 +3523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap08/" class="md-nav__link">
+      <a href="../../../OS/chap08/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3734,7 +3544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap09/" class="md-nav__link">
+      <a href="../../../OS/chap09/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3755,7 +3565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap10/" class="md-nav__link">
+      <a href="../../../OS/chap10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3776,7 +3586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap11/" class="md-nav__link">
+      <a href="../../../OS/chap11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3797,7 +3607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap12/" class="md-nav__link">
+      <a href="../../../OS/chap12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3818,7 +3628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OS/chap13/" class="md-nav__link">
+      <a href="../../../OS/chap13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3874,7 +3684,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Compiler/" class="md-nav__link ">
+            <a href="../../../Compiler/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3907,7 +3717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Compiler/lec1/" class="md-nav__link">
+      <a href="../../../Compiler/lec1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3928,7 +3738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Compiler/lec2/" class="md-nav__link">
+      <a href="../../../Compiler/lec2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3949,7 +3759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Compiler/lec3/" class="md-nav__link">
+      <a href="../../../Compiler/lec3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4064,7 +3874,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../DL/" class="md-nav__link ">
+            <a href="../../../DL/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4097,7 +3907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec01/" class="md-nav__link">
+      <a href="../../../DL/lec01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4118,7 +3928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec02/" class="md-nav__link">
+      <a href="../../../DL/lec02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4139,7 +3949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec03/" class="md-nav__link">
+      <a href="../../../DL/lec03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4160,7 +3970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec04/" class="md-nav__link">
+      <a href="../../../DL/lec04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4181,7 +3991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec05/" class="md-nav__link">
+      <a href="../../../DL/lec05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4202,7 +4012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec06/" class="md-nav__link">
+      <a href="../../../DL/lec06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4223,7 +4033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DL/lec07/" class="md-nav__link">
+      <a href="../../../DL/lec07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4283,7 +4093,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../TinyML/" class="md-nav__link ">
+            <a href="../../../TinyML/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4316,7 +4126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TinyML/pruning/" class="md-nav__link">
+      <a href="../../../TinyML/pruning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4337,7 +4147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TinyML/quantization/" class="md-nav__link">
+      <a href="../../../TinyML/quantization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4358,7 +4168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TinyML/llm/" class="md-nav__link">
+      <a href="../../../TinyML/llm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4379,7 +4189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TinyML/finetune/" class="md-nav__link">
+      <a href="../../../TinyML/finetune/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4400,7 +4210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TinyML/post-training/" class="md-nav__link">
+      <a href="../../../TinyML/post-training/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4433,6 +4243,8 @@
       
   
   
+    
+  
   
   
     
@@ -4447,19 +4259,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../EDA/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4470,13 +4285,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             EDA
@@ -4489,6 +4304,8 @@
                 
   
   
+    
+  
   
   
     
@@ -4508,16 +4325,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../EDA/VLSI/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4534,7 +4351,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             数字集成电路设计
@@ -4550,7 +4367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../EDA/VLSI/lec01/" class="md-nav__link">
+      <a href="../lec01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4568,10 +4385,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../EDA/VLSI/lec03/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    逻辑综合
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4580,6 +4417,170 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#library-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Library Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Library Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clock-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clock Cells
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequentials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-shifters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level Shifters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filler-and-tap-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filler and Tap Cells
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eco-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      ECO Cells
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#library-exchange-format-lef" class="md-nav__link">
+    <span class="md-ellipsis">
+      Library Exchange Format (LEF)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Library Exchange Format (LEF)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technology-lef" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology LEF
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liberty-timing-model-lib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liberty Timing Model (.lib)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Liberty Timing Model (.lib)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timing-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timing Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wire-load-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wire Load Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-aware-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physical-Aware Synthesis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4693,7 +4694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
+      <a href="../../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4766,7 +4767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MLT/report/" class="md-nav__link">
+      <a href="../../../MLT/report/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4787,7 +4788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MLT/mlt2/" class="md-nav__link">
+      <a href="../../../MLT/mlt2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4876,7 +4877,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Paper/" class="md-nav__link ">
+            <a href="../../../Paper/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4909,7 +4910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/BiS-KM/" class="md-nav__link">
+      <a href="../../../Paper/BiS-KM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4930,7 +4931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/ZeRO/" class="md-nav__link">
+      <a href="../../../Paper/ZeRO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4951,7 +4952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/Megatron-LM/" class="md-nav__link">
+      <a href="../../../Paper/Megatron-LM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4972,7 +4973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/GPipe/" class="md-nav__link">
+      <a href="../../../Paper/GPipe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4993,7 +4994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/mixed_precision/" class="md-nav__link">
+      <a href="../../../Paper/mixed_precision/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5014,7 +5015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/FAST/" class="md-nav__link">
+      <a href="../../../Paper/FAST/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5035,7 +5036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/softmax/" class="md-nav__link">
+      <a href="../../../Paper/softmax/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5056,7 +5057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/PagedAttention/" class="md-nav__link">
+      <a href="../../../Paper/PagedAttention/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5077,7 +5078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/VecPAC/" class="md-nav__link">
+      <a href="../../../Paper/VecPAC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5098,7 +5099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/NN-LUT/" class="md-nav__link">
+      <a href="../../../Paper/NN-LUT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5119,7 +5120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/ChatEDA/" class="md-nav__link">
+      <a href="../../../Paper/ChatEDA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5140,7 +5141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/GPT-1/" class="md-nav__link">
+      <a href="../../../Paper/GPT-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5161,7 +5162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/GPT-2/" class="md-nav__link">
+      <a href="../../../Paper/GPT-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5182,7 +5183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/GPT-3/" class="md-nav__link">
+      <a href="../../../Paper/GPT-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5203,7 +5204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/APEX/" class="md-nav__link">
+      <a href="../../../Paper/APEX/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5224,7 +5225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Paper/QServe/" class="md-nav__link">
+      <a href="../../../Paper/QServe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5285,7 +5286,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Misc/" class="md-nav__link ">
+            <a href="../../../Misc/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -5318,7 +5319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/float/" class="md-nav__link">
+      <a href="../../../Misc/float/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5339,7 +5340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/fpga/" class="md-nav__link">
+      <a href="../../../Misc/fpga/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5402,7 +5403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/LLVM/ir/" class="md-nav__link">
+      <a href="../../../Misc/LLVM/ir/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5473,7 +5474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/CGRA/intro/" class="md-nav__link">
+      <a href="../../../Misc/CGRA/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5544,7 +5545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Misc/PIM/upmem/" class="md-nav__link">
+      <a href="../../../Misc/PIM/upmem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5615,7 +5616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../android/dataflow/" class="md-nav__link">
+      <a href="../../../android/dataflow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5671,28 +5672,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      预备知识
+      Introduction
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="预备知识">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#library-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Library Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Library Definition">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#clock-cells" class="md-nav__link">
     <span class="md-ellipsis">
-      基本概念
+      Clock Cells
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#sequentials" class="md-nav__link">
     <span class="md-ellipsis">
-      实现
+      Sequentials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-shifters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Level Shifters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filler-and-tap-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filler and Tap Cells
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eco-cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      ECO Cells
     </span>
   </a>
   
@@ -5704,52 +5750,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#library-exchange-format-lef" class="md-nav__link">
     <span class="md-ellipsis">
-      二叉树
+      Library Exchange Format (LEF)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="二叉树">
+    <nav class="md-nav" aria-label="Library Exchange Format (LEF)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#technology-lef" class="md-nav__link">
     <span class="md-ellipsis">
-      表达式树
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="表达式树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      树的遍历
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      线索二叉树
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      二叉树的性质
+      Technology LEF
     </span>
   </a>
   
@@ -5761,46 +5774,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adt" class="md-nav__link">
+  <a href="#liberty-timing-model-lib" class="md-nav__link">
     <span class="md-ellipsis">
-      查找树ADT——二叉查找树
+      Liberty Timing Model (.lib)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="查找树ADT——二叉查找树">
+    <nav class="md-nav" aria-label="Liberty Timing Model (.lib)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#timing-models" class="md-nav__link">
     <span class="md-ellipsis">
-      定义
+      Timing Models
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adt_1" class="md-nav__link">
+  <a href="#wire-load-models" class="md-nav__link">
     <span class="md-ellipsis">
-      ADT 模型
+      Wire Load Models
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#physical-aware-synthesis" class="md-nav__link">
     <span class="md-ellipsis">
-      实现
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      平均情形分析
+      Physical-Aware Synthesis
     </span>
   </a>
   
@@ -5830,331 +5834,393 @@
   
 
 
-<h1 id="_1">树<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">预备知识<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">基本概念<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h1 id="logic-synthesis">Logic Synthesis<a class="headerlink" href="#logic-synthesis" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>树</strong>是一个节点的集合。当集合非空时，树包括<ul>
-<li><strong>根</strong></li>
-<li>0 或多个非空的子树 <span class="arithmatex">\(T_1,T_2,\ldots,T_k\)</span>，这些子树中每一棵子树都被来自根 r 的一条有向的边所连接。</li>
-</ul>
-</li>
-<li>每一棵子树的根叫做根 r 的<strong>儿子</strong>，而 r 是每一棵子树的根的<strong>父亲</strong>。</li>
-<li>一棵树是 <span class="arithmatex">\(N\)</span> 个节点和 <span class="arithmatex">\(N-1\)</span> 条边的集合。</li>
-<li>没有儿子的节点称为<strong>树叶</strong></li>
-<li>具有相同父亲的节点称为<strong>兄弟</strong></li>
-<li>一个点的<strong>度</strong>，是这个点的儿子数量</li>
-<li>一棵树的<strong>度</strong>，是这棵树里点的度数的最大值，即 <span class="arithmatex">\(\max\limits_{node\in tree}\{deg(node)\}\)</span>  </li>
-<li>从节点 <span class="arithmatex">\(n_1\)</span> 到 <span class="arithmatex">\(n_k\)</span> 的<strong>路径</strong>定义为 <span class="arithmatex">\(n_1,n_2,\ldots,n_k\)</span> 的一个序列，使得对于 <span class="arithmatex">\(1\leq i &lt; k\)</span> 节点 <span class="arithmatex">\(n_i\)</span> 是 <span class="arithmatex">\(n_{i+1}\)</span> 的父亲。这条路径是唯一的。</li>
-<li>路径的<strong>长度</strong>就是路径上的边的数量</li>
-<li>对于任意节点 <span class="arithmatex">\(n_i\)</span>, <span class="arithmatex">\(n_i\)</span> 的<strong>深度</strong>为从根到 <span class="arithmatex">\(n_i\)</span> 的唯一路径的长度。</li>
-<li>对于任意节点 <span class="arithmatex">\(n_i\)</span>, <span class="arithmatex">\(n_i\)</span> 的<strong>高度</strong>为从 <span class="arithmatex">\(n_i\)</span> 到一片树叶的最长路径的长度。</li>
-<li>一棵树的高度/深度：根的高度</li>
-<li>如果存在从 <span class="arithmatex">\(n_1\)</span> 到 <span class="arithmatex">\(n_2\)</span> 的一条路径，那么 <span class="arithmatex">\(n_1\)</span> 是 <span class="arithmatex">\(n_2\)</span> 的一位<strong>祖先</strong>，而 <span class="arithmatex">\(n_2\)</span> 是 <span class="arithmatex">\(n_1\)</span> 的一个<strong>后裔</strong>，如果 <span class="arithmatex">\(n_1\neq n_2\)</span> 称为<strong>真祖先和真后裔</strong>。</li>
-</ul>
-<h3 id="_4">实现<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>我们这里使用 FirstChild-NextSibling Representation, 将每个节点的所有儿子放在树节点的链表中</p>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">TreeNode</span><span class="w"> </span><span class="o">*</span><span class="n">PrtToNode</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Tree</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">ElementType</span><span class="w"> </span><span class="n">Element</span><span class="p">;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">PtrToNode</span><span class="w"> </span><span class="n">FirstChild</span><span class="p">;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">PtrToNode</span><span class="w"> </span><span class="n">NextSibling</span><span class="p">;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-
-<h2 id="_5">二叉树<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p><strong>二叉树</strong>是一棵树，其中每个节点的儿子不能多于两个。</p>
-<h3 id="_6">表达式树<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>表达式树的树叶是操作数，比如常数或变量，而其他的节点为操作符。因为我们的操作符一般是二元的，所以我们可以得到一棵二叉树。如果有单目操作符，那么节点就只有一个儿子。</p>
-<details class="example">
-<summary>Example</summary>
-<p><span class="arithmatex">\(A+B*C/D\)</span> 表示如下：
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211131503235.png" width = 20%/> </div>  </p>
-</details>
-<h4 id="_7">树的遍历<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p><strong>树的遍历</strong>即每个节点访问一次</p>
-<ul>
-<li>前序遍历  </li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w">  </span><span class="nf">preorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree_ptr</span><span class="w">  </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span><span class="w">  </span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="n">visit</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">each</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">            </span><span class="n">preorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-<ul>
-<li>后序遍历  </li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w">  </span><span class="nf">postorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree_ptr</span><span class="w">  </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span><span class="w">  </span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="p">{</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">each</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">            </span><span class="n">postorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="n">visit</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-<ul>
-<li>层序遍历  </li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w">  </span><span class="nf">levelorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree_ptr</span><span class="w">  </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span><span class="w">   </span><span class="n">enqueue</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">queue</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">empty</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="n">visit</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dequeue</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">each</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">            </span><span class="n">enqueue</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-<ul>
-<li>中序遍历  </li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w">  </span><span class="nf">inorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree_ptr</span><span class="w">  </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">{</span><span class="w">  </span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="p">{</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="n">inorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="n">visit</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="n">inorder</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tree</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">   </span><span class="p">}</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211131503235.png" width = 20%/> </div><br />
-<em> 中序遍历: <span class="arithmatex">\(A+B*C/D\)</span><br />
-</em> 前序遍历: <span class="arithmatex">\(+A/*BCD\)</span>
-* 后序遍历: <span class="arithmatex">\(ABC*D/+\)</span></p>
-</details>
-<h3 id="_8">线索二叉树<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>规则: </p>
-<ul>
-<li>如果 <code>Tree-&gt;Left</code> 为空，用一个指向中序遍历中当前节点的前驱的指针代替它</li>
-<li>如果 <code>Tree-&gt;Right</code> 为空，用一个指向中序遍历中当前节点的后继的指针代替它 </li>
-<li>这里没有空闲的指针，因此一棵线索二叉树需要有一个左儿子指针指向第一个节点的头节点。</li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">typedef</span><span class="w">  </span><span class="k">struct</span><span class="w">  </span><span class="nc">ThreadedTreeNode</span><span class="w">  </span><span class="o">*</span><span class="n">PtrTo</span><span class="w">  </span><span class="n">ThreadedNode</span><span class="p">;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">typedef</span><span class="w">  </span><span class="k">struct</span><span class="w">  </span><span class="nc">PtrToThreadedNode</span><span class="w">  </span><span class="n">ThreadedTree</span><span class="p">;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">typedef</span><span class="w">  </span><span class="k">struct</span><span class="w">  </span><span class="nc">ThreadedTreeNode</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">       </span><span class="kt">int</span><span class="w">                  </span><span class="n">LeftThread</span><span class="p">;</span><span class="w">   </span><span class="cm">/* if it is TRUE, then Left */</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">       </span><span class="n">ThreadedTree</span><span class="w">     </span><span class="n">Left</span><span class="p">;</span><span class="w">      </span><span class="cm">/* is a thread, not a child ptr.   */</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">       </span><span class="n">ElementType</span><span class="w">  </span><span class="n">Element</span><span class="p">;</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">       </span><span class="kt">int</span><span class="w">                  </span><span class="n">RightThread</span><span class="p">;</span><span class="w"> </span><span class="cm">/* if it is TRUE, then Right */</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">       </span><span class="n">ThreadedTree</span><span class="w">     </span><span class="n">Right</span><span class="p">;</span><span class="w">    </span><span class="cm">/* is a thread, not a child ptr.   */</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211131503235.png" width = 20%/> </div><br />
-那么它对应的线索二叉树如下: 
-<div align=center> <img src="http://cdn.hobbitqia.cc/202211131530456.png" width = 50%/> </div>  </p>
-</details>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>在树里面，儿子的次序没有影响。但对于二叉树而言，左儿子和右儿子是不同的。</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">完全二叉树</p>
-<p>所有叶节点都位于相邻的两个层上</p>
-</div>
-<h3 id="_9">二叉树的性质<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<ul>
-<li>第 i 层节点个数最多为 <span class="arithmatex">\(2^{i-1},i\geq 1\)</span>. 深度为 k 的二叉树最多有 <span class="arithmatex">\(2^k-1\)</span> 个节点。</li>
 <li>
-<p>对于任何非空二叉树都有 <span class="arithmatex">\(n_0=n_2+1\)</span>. 其中 <span class="arithmatex">\(n_0\)</span> 是叶子节点的个数，<span class="arithmatex">\(n_2\)</span> 是度数为 2 的节点个数。</p>
-<details class="note">
-<summary>Proof</summary>
-<p>令 <span class="arithmatex">\(n_1\)</span> 表示度数为 1 的节点个数，那么我们有 <span class="arithmatex">\(n=n_0+n_1+n_2\)</span>.<br />
-令 <span class="arithmatex">\(B\)</span> 表示所有的边，那么 <span class="arithmatex">\(B=n-1\)</span>，同时又有 <span class="arithmatex">\(B=n_1+2n_2\)</span>.<br />
-联立可得到 <span class="arithmatex">\(n_0=n_2+1\)</span>.  </p>
-</details>
+<p>什么是 logic synthesis 逻辑综合？</p>
+<ul>
+<li><strong>Synthesis</strong> is the process that converts RTL into a technology specific gate-level netlist, optimized for a set of pre-defined constraints.</li>
+<li>输入包括一个行为级 RTL 设计、一个 standard cell library 标准单元库，一组设计约束。</li>
+<li>
+<p>输出包括一个映射到标准单元库的 gate-level netlist 门级网表。（例如对 FPGA 来说，是用 LUTs，flip-flops 和 RAM blocks）</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241126160722.png" width=50%></div></p>
 </li>
 </ul>
-<h2 id="adt">查找树ADT——二叉查找树<a class="headerlink" href="#adt" title="Permanent link">&para;</a></h2>
-<h3 id="_10">定义<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<p>一棵<strong>二叉查找树</strong>是二叉的，如果非空，那么满足下列性质:</p>
+<details class="example">
+<summary>Logic Synthesis</summary>
+<p>将 FSM 转为目标电路：
+<div align = center><img src="https://cdn.hobbitqia.cc/20241126160837.png" width=80%></div></p>
+</details>
+</li>
+<li>
+<p>Motivation: 为什么需要逻辑综合？</p>
 <ul>
-<li>每个节点有一个关键字，是各不相同的整数</li>
-<li>如果左子树非空，那么左子树所有关键字的值必须小于当前节点的关键字</li>
-<li>如果右子树非空，那么右子树所有关键字的值必须大于当前节点的关键字</li>
-<li>左子树和右子树仍是二叉查找树</li>
-</ul>
-<h3 id="adt_1">ADT 模型<a class="headerlink" href="#adt_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>对象: 一个有限的有序集</li>
-<li>操作:<ul>
-<li>初始化</li>
-<li>查找关键字</li>
-<li>查找最大/最小的关键字</li>
-<li>插入关键字</li>
-<li>删除关键字</li>
-<li>检索位置</li>
+<li>可以自动管理很多设计流程中的细节：<ul>
+<li>Fewer bugs。</li>
+<li>Improve productivity，不用手工绘制门电路或者逻辑。</li>
+<li>将设计数据（HDL 描述）从特定的实现 technology 中抽象出来。</li>
+<li>Designs can be re-synthesized targeting different chip technologies，即设计可以在不同工艺之间进行迁移。</li>
 </ul>
 </li>
+<li>有时可以带来比人工设计更优的结果。</li>
 </ul>
-<h3 id="_11">实现<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<ul>
-<li>查找关键字<br />
-返回树 T 中具有关键字 X 节点的指针，我们可以对树 T 的左子树或者右子树进行递归调用，查找哪个子树取决于 X 与当前根节点关键字的大小关系。<br />
-<span class="arithmatex">\(T(N)=S(N)=O(d)\)</span>, 这里 d 是树的深度  </li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">Position</span><span class="w">  </span><span class="nf">Find</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w">  </span><span class="n">SearchTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">          </span><span class="k">return</span><span class="w">  </span><span class="nb">NULL</span><span class="p">;</span><span class="w">  </span><span class="cm">/* not found in an empty tree */</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="cm">/* if smaller than root */</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">          </span><span class="k">return</span><span class="w">  </span><span class="n">Find</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/* search left subtree */</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">      </span><span class="k">else</span><span class="w"> </span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="cm">/* if larger than root */</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">      </span><span class="k">return</span><span class="w">  </span><span class="n">Find</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="cm">/* search right subtree */</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">          </span><span class="k">else</span><span class="w">   </span><span class="cm">/* if X == root */</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">      </span><span class="k">return</span><span class="w">  </span><span class="n">T</span><span class="p">;</span><span class="w">  </span><span class="cm">/* found */</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="p">}</span><span class="w"> </span>
-</code></pre></div>
-</details>
-<p>注意到这是一个尾递归，因此我们可以优化为迭代版本</p>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">Position</span><span class="w">  </span><span class="nf">Iter_Find</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w">  </span><span class="n">SearchTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">      </span><span class="cm">/* iterative version of Find */</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">      </span><span class="k">while</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="p">{</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">          </span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">;</span><span class="w">  </span><span class="cm">/* found */</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">          </span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">             </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="cm">/*move down along left path */</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">          </span><span class="k">else</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Right</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="cm">/* move down along right path */</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">      </span><span class="p">}</span><span class="w">  </span><span class="cm">/* end while-loop */</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">      </span><span class="k">return</span><span class="w">  </span><span class="nb">NULL</span><span class="w"> </span><span class="p">;</span><span class="w">   </span><span class="cm">/* not found */</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="p">}</span><span class="w"> </span>
-</code></pre></div>
-</details>
-
-<ul>
-<li>查找最小/最大关键字<br />
-查找最小元素，只需要从根节点开始，只要有左儿子就向左进行，终止点就是最小的元素了。查找最大元素类似。<br />
-<span class="arithmatex">\(T(N)=O(d)\)</span></li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">Position</span><span class="w">  </span><span class="nf">FindMin</span><span class="p">(</span><span class="w"> </span><span class="n">SearchTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w">   </span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">          </span><span class="k">return</span><span class="w">  </span><span class="nb">NULL</span><span class="p">;</span><span class="w"> </span><span class="cm">/* not found in an empty tree */</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">      </span><span class="k">else</span><span class="w"> </span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="k">return</span><span class="w">  </span><span class="n">T</span><span class="p">;</span><span class="w">  </span><span class="cm">/* found left most */</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">          </span><span class="k">else</span><span class="w">   </span><span class="k">return</span><span class="w">  </span><span class="n">FindMin</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">);</span><span class="w">   </span><span class="cm">/* keep moving to left */</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">Position</span><span class="w">  </span><span class="nf">FindMax</span><span class="p">(</span><span class="w"> </span><span class="n">SearchTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">          </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w">   </span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="p">;</span><span class="w">   </span><span class="cm">/* keep moving to find right most */</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">T</span><span class="p">;</span><span class="w">  </span><span class="cm">/* return NULL or the right most */</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="p">}</span><span class="w"> </span>
-</code></pre></div>
-</details>
-
-<ul>
-<li>插入
-插入可以用查找的思路，如果找到 X 那么就什么也不做（或者做一些更新），否则就将 X 插入到遍历路径上的最后一点上。<br />
-<span class="arithmatex">\(T(N)=O(d)\)</span>  </li>
-</ul>
-<details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">SearchTree</span><span class="w">  </span><span class="nf">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">SearchTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* Create and return a one-node tree */</span><span class="w"> </span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">TreeNode</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">       </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">       </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">       </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">      </span><span class="p">}</span><span class="w">  </span><span class="cm">/* End creating a one-node tree */</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">     </span><span class="k">else</span><span class="w">  </span><span class="cm">/* If there is a tree */</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">       </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span>
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">       </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">          </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">       </span><span class="cm">/* Else X is in the tree already; we&#39;ll do nothing */</span><span class="w"> </span>
-<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">    </span><span class="k">return</span><span class="w">  </span><span class="n">T</span><span class="p">;</span><span class="w">   </span><span class="cm">/* Do not forget this line!! */</span><span class="w"> </span>
-<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-
-<ul>
-<li>删除<br />
-如果要删除的节点是树叶，我们可以立即删除，如果节点有一个儿子，可以在父节点调整指针后绕过该节点并删除。<br />
-但如果有两个儿子，一般的删除策略是用其右子树中最小元（或者左子树中的最大元）代替该节点的数据并递归地删除那个节点。<br />
-<span class="arithmatex">\(T(N)=O(h)\)</span>, 其中 h 是树的高度。   </li>
-</ul>
-<details> 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">SearchTree</span><span class="w">  </span><span class="nf">Delete</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">SearchTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">{</span><span class="w">    </span><span class="n">Position</span><span class="w">  </span><span class="n">TmpCell</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="n">Error</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Element not found&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">      </span><span class="k">else</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="cm">/* Go left */</span><span class="w"> </span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">        </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Delete</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">               </span><span class="k">else</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="cm">/* Go right */</span><span class="w"> </span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">               </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Delete</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">             </span><span class="k">else</span><span class="w">  </span><span class="cm">/* Found element to be deleted */</span><span class="w"> </span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">               </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/* Two children */</span><span class="w"> </span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">                   </span><span class="cm">/* Replace with smallest in right subtree */</span><span class="w"> </span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">                   </span><span class="n">TmpCell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FindMin</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">                   </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TmpCell</span><span class="o">-&gt;</span><span class="n">Element</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">                   </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Delete</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="cm">/* End if */</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">               </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/* One or zero child */</span><span class="w"> </span>
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">                   </span><span class="n">TmpCell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">                   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="cm">/* Also handles 0 child */</span><span class="w"> </span>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">                 </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">                   </span><span class="k">else</span><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">                   </span><span class="n">free</span><span class="p">(</span><span class="w"> </span><span class="n">TmpCell</span><span class="w"> </span><span class="p">);</span><span class="w">  </span><span class="p">}</span><span class="w">  </span><span class="cm">/* End else 1 or 0 child */</span>
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">      </span><span class="k">return</span><span class="w">  </span><span class="n">T</span><span class="p">;</span><span class="w"> </span>
-</code></pre></div>
-</details>
-
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>如果这里没有很多删除操作，通常使用<strong>懒惰操作</strong>的策略，当一个节点被删除时，我们不删除它，做一个删除的记号，这样的好处是在有重复关键字时可以直接在频率上加减。  </p>
-</div>
-<h3 id="_12">平均情形分析<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<p>Q. 把 n 个元素放在二叉查找树中，这棵树可以有多高？
-A. 高度取决于插入的顺序。最坏可以达到 <span class="arithmatex">\(N\)</span></p>
 <details class="example">
 <summary>Example</summary>
-<ul>
-<li>插入顺序 4, 2, 1, 3, 6, 5, 7 </li>
-</ul>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211131612003.png" width = 20%/> </div>  </p>
-<ul>
-<li>插入顺序 1, 2, 3, 4, 5, 6, 7</li>
-</ul>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202211131613806.png" width = 20%/> </div>  </p>
+<p>如下图，这里的 <code>!s0 &amp;&amp; s1 || s0</code> 实际上可以直接由一个 OR 门实现。这个提取的过程可以由逻辑综合工具自动完成。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241126161321.png" width=80%></div></p>
 </details>
+</li>
+<li>
+<p>逻辑综合的目标：</p>
+<ul>
+<li>Minimize area<ul>
+<li>In terms of literal count, cell count, register count, etc.</li>
+</ul>
+</li>
+<li>Minimize power<ul>
+<li>In terms of switching activity in individual gates, deactivated circuit blocks, etc.</li>
+</ul>
+</li>
+<li>Maximize performance<ul>
+<li>In terms of maximal clock frequency of synchronous systems, throughput for asynchronous systems</li>
+</ul>
+</li>
+<li>Any combination of the above<ul>
+<li>Combined with different weights</li>
+<li>Formulated as a constraint problem <strong><em>e.g.,</em></strong> 在时钟频率 &gt; 300MHz 的情况下最小化面积</li>
+</ul>
+</li>
+<li>More global objectives<ul>
+<li>Feedback from layout</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>How does it work?</p>
+<ul>
+<li>Instantiation 实例化：维护一个 primitive modules 的库（如 AND, OR...）以及用户定义的模块。<strong><em>e.g.,</em></strong> 当 verilog 中有 OR 时，就在综合工具中选择 OR primitive 进行绑定。</li>
+<li>Macro expansion/substitution: 综合工具将 HDL 中的高级语言操作符（如 +, -, 布尔运算符）和构造（如 if-else、case）展开成特定的电路。</li>
+<li>Inference: special patterns 会被检测并进行特殊处理。<strong><em>e.g.,</em></strong> <code>always@(posedge clk)</code> 会生成一个 FSM。</li>
+<li>Logic optimization: 在读取设计并转为某种内部数据库之后，利用 logic minimization 技术（如卡诺图）对布尔运算分组、优化。</li>
+<li>Structural reorganization: 结构重组包括高级技术，如 sharing of operators、retiming of circuits。</li>
+</ul>
+</li>
+<li>
+<p>"Basic Synthesis Flow"
+    <div align = center><img src="https://cdn.hobbitqia.cc/20241126161321.png" width=80%></div>
+    <a href="https://cdn.hobbitqia.cc/20241126163123.png">https://cdn.hobbitqia.cc/20241126163123.png</a></p>
+<ul>
+<li>Syntax Analysis: 语法分析，读入 HDL 文件，检查语法错误。<code>read_hdl–verilog sourceCode/toplevel.v</code></li>
+<li>Library Definition: 库定义，提供标准单元库和 IP 库。<code>read_libs “/design/data/my_fab/digital/lib/TT1V25C.lib”</code></li>
+<li>Elaboration and Binding: 展开和绑定，将 RTL 转为布尔结构，并进行优化（state reduction、encoding、register infering...），并将无法进一步优化的 leaf cell 绑定到标准单元库或者实际 IP。<code>elaborate toplevel</code></li>
+<li>Constraint Definition: 约束定义，定义时钟频率和其他设计约束。<code>read_sdc sdc/constraints.sdc</code></li>
+<li>Pre-mapping Optimization: 将 RTL 代码中的逻辑表达式映射到通用的逻辑单元。<code>syn_generic</code></li>
+<li>Technology Mapping: 将通用的逻辑单元映射到目标技术库中的标准单元。（从 technology independent 到实际的 std cells）<code>syn_map</code></li>
+<li>Post-mapping Optimization: 对映射后的电路进行优化，包括时序、面积等。<code>syn_opt</code></li>
+<li>Report and export: 在综合完成后，综合工具会生成一份详细的报告，包括综合结果、时序分析、面积估计等。<code>report timing –numpaths 10 &gt; reports/timing_reports.rpt</code>, <code>write_hdl&gt; export/netlist.v</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="compilation">Compilation<a class="headerlink" href="#compilation" title="Permanent link">&para;</a></h2>
+<p>在综合之前，我们需要检查 RTL 代码的语法正确性。需要注意的是，综合和编译是两个不同的过程：</p>
+<ul>
+<li>Compiler <ul>
+<li>Recognizes all possible constructs in a formally defined program language</li>
+<li>Translates them to a machine language representation of execution process</li>
+</ul>
+</li>
+<li>Synthesis<ul>
+<li>Recognizes a target dependent subset of a hardware description language</li>
+<li>Maps to collection of concrete hardware resources</li>
+<li>Iterative tool in the design flow</li>
+</ul>
+</li>
+</ul>
+<p>可以使用 <code>ncvlog &lt;filename.v&gt;</code> 进行编译以实现语法检查。</p>
+<h2 id="library-definition">Library Definition<a class="headerlink" href="#library-definition" title="Permanent link">&para;</a></h2>
+<p>The library definition stage tells the synthesizer where to look for <strong>leaf cells</strong> for binding and the <strong>target library</strong> for technology mapping.</p>
+<ul>
+<li>Leaf cells: 在综合过程中，叶子单元是指那些没有子节点的单元，它们通常是综合过程中最基础的单元。</li>
+<li>Target library: 工艺映射时会将 RTL 代码映射到实际的硬件单元的过程，因此综合工具需要知道目标库中的哪些单元可以用于映射。</li>
+<li>我们可以通过提供一个 paths 的列表来提供库的位置，如 <code>set_db init_lib_search_path “/design/data/my_fab/digital/lib/”</code>，以及我们可以提供特定库的名字，进行读取 <code>read_libs “TT1V25C.lib”</code>。</li>
+</ul>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>兄弟: sibling<br />
-操作数: operand<br />
-前序遍历: preorder traversal<br />
-后序遍历: postorder traversal<br />
-层序遍历: levelorder traversal<br />
-中序遍历: inorder traversal<br />
-线索二叉树: Threaded Binary Trees  </p>
+<p class="admonition-title">Library</p>
+<p>准单元库类似于乐高积木，它们必须满足预定义的规格要求，以便综合、布局、布线等 EDA 工具能够无误地操作它们。可以理解为 Libray 就是蕴含了一套特定的信息的库（或文件），EDA 工具可以基于这套信息做出不同的规划决策。</p>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>一个与非门，其包含了 cell 的高度，宽度，Voltage rails 电压轨，Well 阱、引脚放置、PR 边界、金属层等信息。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241126184612.png" width=35%></div></p>
+<ul>
+<li>这里的 PR 边界不是整个 cell，因为 VDD 和 GND 可以与其他 cell 共享。</li>
+<li>理想情况下，标准单元应该完全在 Metal1（M1）层上布线，完全在M1层上布线可以减少布线延迟。（实际上由于大小和布局限制，可能需要其他金属层布线）。</li>
+</ul>
+</div>
+<ul>
+<li>标准单元库里的 cells:<ul>
+<li>Combinational logic cells (NAND, NOR, INV, etc.):<ul>
+<li>Variety of drive strengths for all cells. cell 里有 output buffer，可以驱动不同的输出电压。</li>
+<li>Complex cells (AOI, OAI, etc.)</li>
+<li>Fan-In &lt;= 4，即输入端口数不超过 4，否则 CMOS 工艺难以处理。</li>
+<li>ECO (Engineering Change Order) Cells: 易于更改的单元，用于在设计过程中进行快速的修改。</li>
+</ul>
+</li>
+<li>Buffers/Inverters<ul>
+<li>Larger variety of drive strengths. </li>
+<li>“Clock cells” with balanced rise and fall delays.</li>
+<li>Delay cells: 提供固定的延迟时间的单元，用于时序调整。</li>
+<li>Level Shifters: 用于将信号从一个电压电平转换到另一个电压电平的单元。</li>
+</ul>
+</li>
+<li>Sequential Cells<ul>
+<li>Many types of flip flops: pos/negedge, set/reset, Q/QB, enable，各种类型的触发器。</li>
+<li>Latches</li>
+<li>Integrated Clock Gating cells: 集成时钟门控单元，在时钟信号到达时才激活存储单元。</li>
+<li>Scan enabled cells for ATPG</li>
+</ul>
+</li>
+<li>Physical Cells<ul>
+<li>Fillers, Tap cells, Antennas, DeCaps, EndCaps, Tie Cells</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Multiple Drive Strengths and VTs<ul>
+<li>即使是同样的元件，不同的尺寸也有着不同的驱动强度。更大的驱动能力强，但是对应的面积和 leakage 泄露功耗也更大。通常用 X1, X2 或者 1X 2X 来表示相对大小。</li>
+<li>Multiple Threshold (MT-CMOS): CMOS 工艺允许添加一个额外的 mask 来改变 threshold voltage 阈值电压。这样可以 trade-off 泄露电流和速度。</li>
+</ul>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>我们不需要对 cell 了解的很清楚，而是针对我们使用的工具和执行的操作，明确我们需要什么信息。</p>
+</div>
+<h3 id="clock-cells">Clock Cells<a class="headerlink" href="#clock-cells" title="Permanent link">&para;</a></h3>
+<ul>
+<li>General standard cells are optimized for <strong>speed</strong>.<ul>
+<li>但他们的延时不一定平衡（rise != fall）。</li>
+<li>这样会带来 clock skew，即时钟信号在不同的地方到达时间不同。</li>
+</ul>
+</li>
+<li>我们有特殊的 clock cells，有 balanced rising/falling delays 来最小化 skew。<ul>
+<li>但这些 cells 对于数据的优化并不是最好的，因此应该避免在数据传输的单元上使用数据传输路径。</li>
+<li>通常，我们只在 buffers/inverters 上使用 clock nets。</li>
+<li>特殊的 Integrated Clock Gating 集成时钟门控可以用于时钟网络上的门控逻辑。</li>
+</ul>
+</li>
+</ul>
+<h3 id="sequentials">Sequentials<a class="headerlink" href="#sequentials" title="Permanent link">&para;</a></h3>
+<ul>
+<li>时序单元，包括 Flip Flops 触发器和 Latches 锁存器。</li>
+<li>他们提供了多种选项：<ul>
+<li>Positive/Negative Edge Triggered</li>
+<li>Synchronous/Asynchronous Reset/Set</li>
+<li>Q/QB Outputs</li>
+<li>Enable</li>
+<li>Scan</li>
+<li>etc.</li>
+</ul>
+</li>
+</ul>
+<h3 id="level-shifters">Level Shifters<a class="headerlink" href="#level-shifters" title="Permanent link">&para;</a></h3>
+<ul>
+<li>是一种 buffer，可以进行电压域的转换。</li>
+<li>HL (high-to-low) shifter<ul>
+<li>Requires only one voltage</li>
+<li>Single height cell</li>
+</ul>
+</li>
+<li>LH (low-to-high) shifter<ul>
+<li>Needs 2 voltages</li>
+<li>Often double height</li>
+</ul>
+</li>
+</ul>
+<div align = center><img src="https://cdn.hobbitqia.cc/20241126192725.png" width=55%></div>
+
+<h3 id="filler-and-tap-cells">Filler and Tap Cells<a class="headerlink" href="#filler-and-tap-cells" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Filler cells Must be inserted in empty areas in rows. </p>
+<ul>
+<li>用于填充空的地方。为了确保布局的完整性和性能。</li>
+<li>有时需要在行的边界处使用特殊的单元 End Caps Cells，端帽单元的作用是填充行之间的空隙，并提供额外的电气连接。</li>
+<li>
+<p>还有在 VDD 和 GND 中间填充的 MOSCAPs 电容器，称为 DeCAP cells 去耦电容，去耦电容单元有助于减少电源和地之间的噪声，从而提高电路的稳定性。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241126194251.png" width=55%></div></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Well Taps needed to ensure local body voltage.</p>
+<ul>
+<li>消除 latch-up，不用对每个 cell 都 tap。</li>
+</ul>
+</li>
+</ul>
+<h3 id="eco-cells">ECO Cells<a class="headerlink" href="#eco-cells" title="Permanent link">&para;</a></h3>
+<ul>
+<li>An Engineering Change Order (ECO) is a very late change in the design.   <ul>
+<li>P&amp;R 之后通常需要 ECOs，但是重新流片或者 P&amp;R 的代价很高。</li>
+</ul>
+</li>
+<li>解决方法：使用 Spare(Bonus) cells<ul>
+<li>不带功能的单元，在设计的时候填充技巧怒。</li>
+<li>当出现问题的时候，可以重新赋予它们所需的功能。</li>
+</ul>
+</li>
+<li>Special standard cells are used to differentiate from real cells.</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p>绿色的是 ECO cells，起初他们是没有功能的。如果左上角的绿色块旁边的 cell 出现了问题，我们可以把他的连线断开，练到 ECO cell 上，这样就代替了他的功能。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241126194548.png" width=35%></div></p>
+</details>
+<h2 id="library-exchange-format-lef">Library Exchange Format (LEF)<a class="headerlink" href="#library-exchange-format-lef" title="Permanent link">&para;</a></h2>
+<div align = center><img src="https://cdn.hobbitqia.cc/20241126194831.png" width=75%></div>
+
+<ul>
+<li>
+<p>Abstract description of the layout for P&amp;R</p>
+<ul>
+<li>Readable ASCII Format.</li>
+<li>Contains detailed PIN information for connecting.</li>
+<li>Does not include front-end of the line (poly, diffusion, etc.) data，即没有详细的引脚信息。</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p>如图，这里包括了 cell 的轮廓（size 和 shape），pin 的位置和层（通常在 M1 层），金属障碍物（即这里被使用了不能在这里布线）
+<div align = center><img src="https://cdn.hobbitqia.cc/20241126195144.png" width=25%></div></p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">LEF</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241126195303.png" width=80%></div></p>
+</div>
+</li>
+</ul>
+<h3 id="technology-lef">Technology LEF<a class="headerlink" href="#technology-lef" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Technology LEF: contain (simplified) information about the technology for use by the placer and route<ul>
+<li>Layers:<ul>
+<li>Name，如 M1, M2...</li>
+<li>Layer type, 如 routing, cut（via，特殊类型，用于连接不同层）</li>
+<li>Electrical properties（R,C），即电阻、电容</li>
+<li>Design Rules, Antenna data, Preferred routing direction</li>
+</ul>
+</li>
+<li>SITE (x and y grid of the library)<ul>
+<li>COREsites are minimum standard cell size，最小单位。</li>
+<li>Can have site for double height cells!</li>
+<li>IOs have special SITE.</li>
+</ul>
+</li>
+<li>Via definitions</li>
+<li>Units</li>
+<li>Grids for layout and routing</li>
+</ul>
+</li>
+<li>
+<p>std cell 的高度用 Tracks 来衡量的。</p>
+<ul>
+<li>A Track is one M1 pitch，例如 8-Track cell 有空间插入 8 条水平 M1 导线（可以在 VDD 和 GND 之间插入多少个 track 的 M1）。</li>
+<li>用 track 衡量的原因：track 越多，说明可以放更多的金属，晶体管更宽，那么 cell 更快。<ul>
+<li>7-8 low-tracklibraries for area efficiency</li>
+<li>11-12 tall-tracklibraries for performance, but have high leakage</li>
+<li>9-10 standard-tracklibraries for a reasonable area-performance tradeoff</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241126195144.png" width=30%></div>
+<a href="https://cdn.hobbitqia.cc/20241126200359.png">https://cdn.hobbitqia.cc/20241126200359.png</a></p>
+</details>
+</li>
+<li>
+<p>Cells must fit into a predefined grid</p>
+<ul>
+<li>最小高度和宽度被称为 SITE，必须是最小 x-grid 单元和行高的倍数。</li>
+</ul>
+</li>
+</ul>
+<h2 id="liberty-timing-model-lib">Liberty Timing Model (.lib)<a class="headerlink" href="#liberty-timing-model-lib" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>.lib</code> 文件，其包含单元的时序和功耗特性。这些文件用于静态时序分析（Static Timing Analysis, STA），以确保设计满足时序要求，并优化功耗性能。</li>
+<li>目标：<ul>
+<li>对于每个 timing arc，计算 propagation delay <span class="arithmatex">\(t_{pd}\)</span>，以及 output transition <span class="arithmatex">\(t_{rise}, t_{fall}\)</span>。基于 input net transition <span class="arithmatex">\(t_{rise}, t_{fall}\)</span> 和 output load capacitance <span class="arithmatex">\(C_{load}\)</span> 进行计算。</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>每个 <code>.lib</code> 文件通常只针对一个特定的工艺条件，即 corner 角点。例如，一个 <code>.lib</code> 文件可能会包含在 25°C 温度、标准工艺窗口和 1.2V 供电电压下的时序参数。另一个 <code>.lib</code> 文件可能会包含在 100°C 温度、最小工艺窗口和 1.2V 供电电压下的时序参数。</p>
+</div>
+<ul>
+<li>
+<p>Liberty 包含的时序数据内容：</p>
+<ul>
+<li>Library:<ul>
+<li>General information common to all cells in the library. <strong><em>e.g.,</em></strong> 操作条件，线负载模型，查找表。</li>
+</ul>
+</li>
+<li>Cell:<ul>
+<li>Specific information about each standard cell. <strong><em>e.g.,</em></strong> 功能，面积。</li>
+</ul>
+</li>
+<li>Pin:<ul>
+<li>Timing, power, capacitance, leakage, functionality, etc. characteristics of each pin in each cell.</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241126204823.png" width=55%></div></p>
+</details>
+</li>
+</ul>
+<h3 id="timing-models">Timing Models<a class="headerlink" href="#timing-models" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Non-Linear Delay Model (NLDM)</p>
+<ul>
+<li>Driver model: 描述了驱动单元的时序行为，包括驱动单元的输出电容、输出电阻等，例如使用一个斜坡电压源和一个固定的驱动电阻来模拟驱动单元的时序行为。</li>
+<li>Receiver model: 描述了接收单元的时序行为，包括接收单元的输入电容、输入电阻等，例如使用最小/最大上升/下降输入电容来模拟接收单元的时序行为。</li>
+<li>NLDM 模型有一些局限性，它不建模电容随信号过渡过程中的变化，因此在超过 130nm 工艺节点时可能会失去准确性。</li>
+</ul>
+<details class="example">
+<summary>NLDM</summary>
+<p>对每个元件，我们有三张表，横纵坐标分别是输入延时和输出电容，表格中的时间是延时。<span class="arithmatex">\(t_{pd}=f(t_{input}, C_{load})\)</span>。给定输入延时和输出电容，我们可以查表并进行插值得到结果。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241126205114.png" width=65%></div></p>
+</details>
+</li>
+<li>
+<p>Current Source Models (CCS, ECSM)</p>
+<ul>
+<li>Model a cell's nonlinear output behavior as a current source</li>
+<li>Driver 模型是 nonlinear current source，Receiver 模型是 Changing Capacitance 可变电容。</li>
+</ul>
+<details class="note">
+<summary>Note</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241126205652.png" width=60%></div></p>
+</details>
+</li>
+</ul>
+<h3 id="wire-load-models">Wire Load Models<a class="headerlink" href="#wire-load-models" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Wire Load Models 是 <code>.lib</code> 文件中描述电源和地网络特性的模型。包括电阻和电容，来模拟电源和地网络的传播延迟，这些延迟会影响信号在电源和地网络上的传播时间。</li>
+<li>
+<p>基本方法是根据 fanout 来查表估算电阻电容，但是这样可能会不准确。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241126205844.png" width=80%></div></p>
+</li>
+</ul>
+<h3 id="physical-aware-synthesis">Physical-Aware Synthesis<a class="headerlink" href="#physical-aware-synthesis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>wireload models 准确度不高，反之可以在综合的时候使用物理信息。</li>
+<li>Physical-Aware Synthesis 物理感知综合基本上在综合器内部运行布局，以获得更准确的寄生估计。可以在没有 floorplan 的情况下，仅使用 <code>.lef</code> 文件进行操作。在第一次迭代后，可以将 floorplan <code>.def</code> 文件导入综合器，以进一步优化设计。<code>syn_opt-physical</code></li>
+</ul>
 
 
 
@@ -6177,7 +6243,7 @@ A. 高度取决于插入的顺序。最坏可以达到 <span class="arithmatex">
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月7日 15:10:29</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年11月26日 21:25:44</span>
   </span>
 
     
@@ -6187,7 +6253,7 @@ A. 高度取决于插入的顺序。最坏可以达到 <span class="arithmatex">
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2022年11月22日 14:15:00</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年11月26日 21:25:44</span>
   </span>
 
     
@@ -6311,16 +6377,16 @@ A. 高度取决于插入的顺序。最坏可以达到 <span class="arithmatex">
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
-        <script src="../../js/baidu-tongji.js"></script>
+        <script src="../../../js/baidu-tongji.js"></script>
       
         <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
       
-        <script src="../../js/katex.js"></script>
+        <script src="../../../js/katex.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
