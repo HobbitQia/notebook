@@ -4577,6 +4577,90 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#boolen-minimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolen minimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolen minimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-level-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two-Level Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-level-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Level Logic
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraint-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constraint Definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technology-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technology Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technology-mapping-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Mapping Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verilog-for-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verilog for Synthesis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-synthesis-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Synthesis Optimization
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5815,6 +5899,90 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#boolen-minimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolen minimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boolen minimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-level-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two-Level Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-level-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Level Logic
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constraint-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constraint Definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technology-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Mapping
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technology Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technology-mapping-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Mapping Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verilog-for-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verilog for Synthesis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-synthesis-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Synthesis Optimization
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5835,6 +6003,21 @@
 
 
 <h1 id="logic-synthesis">Logic Synthesis<a class="headerlink" href="#logic-synthesis" title="Permanent link">&para;</a></h1>
+<details class="abstract">
+<summary>Abstract</summary>
+<ul>
+<li>Introduction</li>
+<li>Compilation - <strong>Syntax Analysis</strong></li>
+<li><strong>Library Definition</strong></li>
+<li>LEF</li>
+<li>Liberty Timing Models</li>
+<li>Boolen Minimization - <strong>Elaboration and Binding</strong>, <strong>Pre-mapping Optimization</strong></li>
+<li><strong>Constraint Definition</strong></li>
+<li><strong>Technology Mapping</strong></li>
+<li>Verilog for Synthesis</li>
+<li>Timing Optimization - <strong>Post-mapping Optimization</strong></li>
+</ul>
+</details>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -6221,6 +6404,359 @@
 <li>wireload models 准确度不高，反之可以在综合的时候使用物理信息。</li>
 <li>Physical-Aware Synthesis 物理感知综合基本上在综合器内部运行布局，以获得更准确的寄生估计。可以在没有 floorplan 的情况下，仅使用 <code>.lef</code> 文件进行操作。在第一次迭代后，可以将 floorplan <code>.def</code> 文件导入综合器，以进一步优化设计。<code>syn_opt-physical</code></li>
 </ul>
+<h2 id="boolen-minimization">Boolen minimization<a class="headerlink" href="#boolen-minimization" title="Permanent link">&para;</a></h2>
+<p>Elaboration and Binding: </p>
+<ul>
+<li>elaboration: Compiles the RTL into a Boolean data structure.</li>
+<li>binding: Binds the non-Boolean modules to leaf cells，将非布尔模块（如算术运算、寄存器、触发器等）绑定到库中的具体单元，这些单元通常是 std cell lib 里的基本逻辑门和存储单元。</li>
+<li>minimization: Optimizes the Boolean logic.</li>
+<li>The resulting design is mapped to <em>generic, technology independent</em> logic gates.</li>
+</ul>
+<div align = center><img src="https://cdn.hobbitqia.cc/20241127144004.png" width=80%></div>
+
+<ul>
+<li>During elaboration, primary inputs and outputs (<strong>ports</strong>) are defined and sequential elements (<strong>flip-flops</strong>, <strong>latches</strong>) are inferred.</li>
+<li>input ports 和 register outputs 作为逻辑的输入，output ports 和 register inputs 作为逻辑的输出。输出可以用输入的布尔函数来表示。<ul>
+<li>Boolen minimization 的目的就是减少输出函数的 literal（即输入在我们函数中出现的次数）。</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary> Elaboration Illustrated</summary>
+<p>如图，这里从 FSM 开始（由 RTL 代码描述），elaboration 时会继续 infer，将 <code>always@(posedge clk)</code> 转为除法器，并添加输入输出。随后创建布尔表达式。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241127144032.png" width=70%></div></p>
+</details>
+<h3 id="two-level-logic">Two-Level Logic<a class="headerlink" href="#two-level-logic" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>这里有很多种方式表示布尔函数，包括真值表、cubes、Binary Decision Diagrams (BDDs) 等。</p>
+<ul>
+<li>
+<p>其中使用 SOP or POS 表示的，称为 Two-Level Logic 两级逻辑。</p>
+<details class="example">
+<summary>Example</summary>
+<p>对于两级逻辑，literal 只看第一层的输入。如下图的两个两级逻辑，上面的图有 10 个输入，因此 literal 为 10；下图只有 8 个 literal。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241127144546.png" width=28%></div></p>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>Two-Level Logic Minimization</p>
+<ul>
+<li>Karnaugh Maps<ul>
+<li><span class="arithmatex">\(n\)</span> 输入，图会包括 <span class="arithmatex">\(2^n\)</span> 个格子，目标是找到最小的 prime cover。</li>
+<li>但是很难自动化（NP-complete），而且随着维度增加，cell 数量指数上升。</li>
+</ul>
+</li>
+<li>Quine-McCluskey<ul>
+<li>容易实现，但是计算复杂度很高。</li>
+</ul>
+</li>
+<li>
+<p>Espresso Heuristic Minimizer</p>
+<ul>
+<li>从一个 SOP 开始，有下面的操作：<ul>
+<li>Expand: Make each cube as large as possible without covering a point in the OFF-set，这个操作会增加 literal 的数量，得到更坏的结果。</li>
+<li>Irredundant: Throw out redundantcubes, remove smaller cubes whose points are covered by larger cubes.</li>
+<li>Reduce: The cubes in the cover are reduced in size.</li>
+</ul>
+</li>
+<li>
+<p>总体算法流程如下：
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ESPRESSO</span><span class="p">(</span><span class="n">F</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">reduce</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">expand</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">irredundant</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">fewer</span><span class="w"> </span><span class="n">terms</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">F</span><span class="p">);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">verify</span><span class="p">(</span><span class="n">F</span><span class="p">);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>需要注意的是，这个算法不一定找到更优的的解，但是可以找到和初始解不同的答案，我们可以从不同维度进行寻找。</p>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127145333.png" width=70%></div></p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127145343.png" width=70%></div></p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="multi-level-logic">Multi-Level Logic<a class="headerlink" href="#multi-level-logic" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>一般电路表示形式则是更为灵活的多级形式（Multi-Level）。</p>
+<details class="example">
+<summary>Multi-level Logic Minimization</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127145443.png" width=70%></div></p>
+</details>
+</li>
+<li>
+<p>Binary Decision Diagrams (BDD)，电脑中存储真值表的一种方式。</p>
+<ul>
+<li>
+<p>BDDs are DAGs that represent the truth table of a given function</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>注意 x1 x2 x3 的顺序对于树的构建是有影响的，不同的顺序会导致不同的树。每层代表一个变量的取值，这里从上至下依次是 x1, x2, x3。每个子树可以认为是一个布尔表达式，如左边的 x2 的子树对应的表达式其实是 NAND，即 ~(x2x3)。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241127145751.png" width=75%></div></p>
+</div>
+</li>
+<li>
+<p>Shannon Expansion</p>
+<ul>
+<li>给定一个布尔函数 <span class="arithmatex">\(f(x_1, x_2, ..., x_n)\)</span>，我们可以将其展开为 <span class="arithmatex">\(f(x_1, x_2, ..., x_n) = x_if(x_1, x_2, ...,1,..., x_n) + x_i'f(x_1, x_2, ...,0,..., x_n)\)</span>，这里 <span class="arithmatex">\(f_i^1=f(x_1, x_2, ...,1,..., x_n)\)</span> 和 <span class="arithmatex">\(f_i^0=f(x_1, x_2, ...,0,..., x_n)\)</span> 分别称为 positive cofactor 和 negative cofactor 余子式。</li>
+<li>
+<p>这个展开过程可以用 BDD 来表示。</p>
+<details class="example">
+<summary>Example</summary>
+<p>如下图，这里 <span class="arithmatex">\(f=ac+bc+a'b'c'=a'(b'c'+bc)+a(c+bc)=a'(b'c'+bc)+a(c)\)</span>
+<div align = center><img src="https://cdn.hobbitqia.cc/20241127150359.png" width=35%></div></p>
+</details>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Reduced Ordered BDD (ROBDD)</p>
+<ul>
+<li>BDDs 可能很大，因此需要进行简化。</li>
+<li>
+<p>Reduction Rule 1: <strong>Merge equivalent leaves</strong>.</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127150527.png" width=75%></div></p>
+</li>
+<li>
+<p>Reduction Rule 2: <strong>Merge isomorphic nodes</strong>.</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127150543.png" width=75%></div></p>
+</li>
+<li>
+<p>Reduction Rule 3: <strong>Eliminate Redundant Tests</strong>.</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127150623.png" width=75%></div></p>
+</li>
+<li>
+<p>BDD 是 canonical 规范化的，即我们反复运用上面的三个规则最后得到的结果是一样的（只要变量顺序一致）。但是不同顺序可能带来数量差别很大的 BDD。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Some benefits of BDDs:</p>
+<ul>
+<li>用于检验 tautology 恒真式。</li>
+<li>求补（只需要交换 0 和 1 节点）。</li>
+<li>进行等价性检测（只要 f g 的在相同变量次序情况下的 BDD 相同）。</li>
+</ul>
+</li>
+</ul>
+<h2 id="constraint-definition">Constraint Definition<a class="headerlink" href="#constraint-definition" title="Permanent link">&para;</a></h2>
+<div align = center><img src="https://cdn.hobbitqia.cc/20241127151508.png" width=80%></div>
+
+<h2 id="technology-mapping">Technology Mapping<a class="headerlink" href="#technology-mapping" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Technology mapping is the phase of logic synthesis when gates are selected from a technology library to implement the circuit，即将我们现有的通用的表示（BDD 或者其他 universal gates）映射为实际的标准单元。</li>
+<li>Why technology mapping?<ul>
+<li>直接映射可能效果不好，例如直接映射 <code>F=abcdef</code> 6 输入 AND 门，会带来很长的延时。</li>
+<li>库里的门是预先定义好的，通常在 PPA 方面最优。</li>
+<li>映射时我们可以让最快的门在 critical path 上，critial path 以外可以放 area-efficient 的门。</li>
+</ul>
+</li>
+<li>可以使用 minimum cost tree-covering algorithm 来解决这个映射问题。</li>
+</ul>
+<h3 id="technology-mapping-algorithm">Technology Mapping Algorithm<a class="headerlink" href="#technology-mapping-algorithm" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Using a recursive tree-covering algorithm, we can easily, and almost optimally, map a logic network to a technology library.</li>
+<li>算法包括下面三步：<ul>
+<li>Map netlist and tech library to simple gates<ul>
+<li>只用 NAND2，NOT 门描述网表。</li>
+<li>只用 NAND2，NOT 门描述标准单元库，同时对于每个门赋予一个 cost。</li>
+</ul>
+</li>
+<li>Tree-ifying the input netlist<ul>
+<li>将电路分解为若干棵树。即对于任何节点，若 fanout &gt;=2，就将其作为树的根节点，与后面的节点断开。</li>
+</ul>
+</li>
+<li>Minimum Cost Tree matching<ul>
+<li>本质是树形 DP，类似于编译原理中的指令选择。</li>
+<li>从图的输出节点开始（根），对于每个节点，找匹配的对应模式，并计算 <span class="arithmatex">\(cost(i)=\min\limits_{k}\{cost(g_i)+\sum\limits_k (k_i)\}\)</span>，这里 <span class="arithmatex">\(k_i\)</span> 是门 <span class="arithmatex">\(g\)</span> 的输入。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<ul>
+<li>
+<p>第一步：这里的 cost 可能和 PPA 有关，需要人工设置
+    <div align = center><img src="https://cdn.hobbitqia.cc/20241127153430.png" width=70%></div></p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127153443.png" width=70%></div></p>
+</li>
+<li>
+<p>第二步：这里黄色部分的 fanout 为 2，所以需要拆开（树中一个节点只能有一个父节点）。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127153532.png" width=70%></div></p>
+</li>
+<li>
+<p>第三步：匹配</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127153730.png" width=70%></div></p>
+</li>
+</ul>
+</details>
+<h2 id="verilog-for-synthesis">Verilog for Synthesis<a class="headerlink" href="#verilog-for-synthesis" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>以 4-&gt;2 encoder 为例，</p>
+<ul>
+<li>
+<p>朴素使用 <code>if-else</code> 实现如下：</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127154055.png" width=75%></div></p>
+<p>这种方式叫做 priority logic 优先逻辑，也就是某些位的优先级会较高，电路会先判断这个条件。这也会导致电路会是一个串行的结构。        </p>
+</li>
+<li>
+<p>使用 <code>case</code> 实现如下：</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127154209.png" width=75%></div></p>
+<p>这样会让电路成为并行架构。其延迟自然而然就变低。</p>
+</li>
+<li>
+<p>上述的第一种写法。如果我们传的的数据不是 one-hot code，则输出 X。但是如果我们能够保证输入是 one-hot code 的话，可以用下面的写法。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127154354.png" width=75%></div></p>
+<p>这种电路叫做 priority decoder 优先译码器（最低 bit 获得了高优先级）。该电路常常用在固定优先级仲裁器设计上。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>operators</p>
+<ul>
+<li>Logical operators map into primitive logic gates</li>
+<li>Arithmetic operators map into adders, subtractors, ...<ul>
+<li>Unsigned or signed 2’s complement</li>
+<li>Model carry: target is one-bit wider that source</li>
+<li>Watch out for *, %, and /</li>
+</ul>
+</li>
+<li>Relational operators generate comparators<ul>
+<li>No logic involved</li>
+</ul>
+</li>
+<li>
+<p>Shifts by constant amount are just wire connections</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127155418.png" width=25%></div></p>
+</details>
+</li>
+<li>
+<p>Variable shift amounts a whole different story -&gt; shifter</p>
+</li>
+<li>Conditional expression generates logic or MUX</li>
+</ul>
+</li>
+<li>
+<p>Datapath Synthesis</p>
+<ul>
+<li>复杂的运算（如加法器、乘法器）用特殊的方式实现。如乘法器可以用 Wall 算法、Booth 算法、CSA Array 等。</li>
+<li>Pre-written descriptions can be found in Synopsys DesignWare or Cadence ChipWare IP libraries.</li>
+</ul>
+</li>
+<li>
+<p>Clock Gating</p>
+<ul>
+<li>时钟一直 toggling，这是动态功耗的主要消耗。因此为了节约功耗，我们可以在不需要时关闭时钟信号。</li>
+<li>
+<p>Block level (Global) clock-gating，这种技术在不需要整个模块或组件时，通过在 RTL 中定义时钟门控来关闭时钟信号。我们直接看图可以看到，时钟信号和 enable 信号与在一起。如果 enable 拉低。则输入进去的时钟信号为 0。整个系统自然也就不会工作了。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127160113.png" width=30%></div></p>
+</li>
+<li>
+<p>Register level (Local) clock-gating，更细粒度的时钟门控技术，它可以在寄存器级别上节省功耗。如下图将本来作用在 input 上的使能信号转移到 clk 输入上。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127160142.png" width=60%></div></p>
+</li>
+<li>
+<p>要实现时钟门控，有下面三种方法：正常写 RTL 代码等待综合器自行实现；将 clk 和 enable 信号与之后传递给综合器；直接调用现成的时钟模块 cell。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127160234.png" width=50%></div></p>
+</li>
+<li>
+<p>会遇到 glitch 毛刺问题：</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127160411.png" width=60%></div></p>
+<ul>
+<li>
+<p>解决方法是采用 glitch-free clock gate，本质就是集成时钟门控，这里的 latch 是负边沿触发的。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127160502.png" width=85%></div></p>
+</li>
+</ul>
+</li>
+<li>
+<p>我们还可以将不同寄存器的时钟门控合并在一起，节约 power 同时使用更少的逻辑门。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127160535.png" width=70%></div></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Data Gating: 和时钟门控类似，用于在数据信号不被使用时关闭这些信号，以节省功耗。这种情况类似于时钟门控，其中数据信号的切换也会导致功耗的产生，即使这些信号在某些时刻没有被使用。实现起来更复杂，要在写 RTL 时注意。    </p>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127160553.png" width=80%></div></p>
+</details>
+</li>
+<li>
+<p>Design and Verification – HDL Linting</p>
+<ul>
+<li>进行代码的 LINT 检查，这些原因可能导致仿真和综合的结果不匹配。</li>
+</ul>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127160705.png" width=75%></div></p>
+</li>
+</ul>
+<h2 id="post-synthesis-optimization">Post-Synthesis Optimization<a class="headerlink" href="#post-synthesis-optimization" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>There are many ‘transforms’ that the synthesizer applies to the logic to improve the cost function:</p>
+<ul>
+<li>
+<p>Resize cells</p>
+<details class="example">
+<summary>Resize a logic gate to better drive a load</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127160844.png" width=70%></div></p>
+</details>
+</li>
+<li>
+<p>Buffer or clone to reduce load on critical nets</p>
+<details class="example">
+<summary>make a copy (clone of the gate) to distribute the load, orjust buffer the fanout net</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127160955.png" width=70%></div></p>
+</details>
+</li>
+<li>
+<p>Redesign Fan-In/Fan-out Trees</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127161037.png" width=70%></div></p>
+</details>
+</li>
+<li>
+<p>Decompose large cells</p>
+<details class="example">
+<summary>Decomposition and Swapping</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127161233.png" width=70%></div></p>
+</details>
+</li>
+<li>
+<p>Move critical signals forward</p>
+<details class="example">
+<summary>Retiming</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241127161308.png" width=80%></div></p>
+</details>
+</li>
+<li>
+<p>Pad early paths</p>
+</li>
+<li>Swap connections on commutative pins or among equivalent nets</li>
+<li>Area recovery</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -6243,7 +6779,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年11月26日 21:25:44</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年11月26日 21:26:48</span>
   </span>
 
     
@@ -6253,7 +6789,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年11月26日 21:25:44</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年11月26日 21:26:48</span>
   </span>
 
     
