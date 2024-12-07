@@ -4,6 +4,18 @@ counter: True
 
 # Logic Synthesis
 
+??? Abstract
+    * Introduction
+    * Compilation - **Syntax Analysis**
+    * **Library Definition**
+    * LEF
+    * Liberty Timing Models
+    * Boolen Minimization - **Elaboration and Binding**, **Pre-mapping Optimization**
+    * **Constraint Definition**
+    * **Technology Mapping**
+    * Verilog for Synthesis
+    * Timing Optimization - **Post-mapping Optimization**
+
 ## Introduction
 
 * 什么是 logic synthesis 逻辑综合？
@@ -271,3 +283,253 @@ The library definition stage tells the synthesizer where to look for **leaf cell
 
 * wireload models 准确度不高，反之可以在综合的时候使用物理信息。
 *  Physical-Aware Synthesis 物理感知综合基本上在综合器内部运行布局，以获得更准确的寄生估计。可以在没有 floorplan 的情况下，仅使用 `.lef` 文件进行操作。在第一次迭代后，可以将 floorplan `.def` 文件导入综合器，以进一步优化设计。`syn_opt-physical`
+
+
+## Boolen minimization
+
+Elaboration and Binding: 
+
+* elaboration: Compiles the RTL into a Boolean data structure.
+* binding: Binds the non-Boolean modules to leaf cells，将非布尔模块（如算术运算、寄存器、触发器等）绑定到库中的具体单元，这些单元通常是 std cell lib 里的基本逻辑门和存储单元。
+* minimization: Optimizes the Boolean logic.
+* The resulting design is mapped to *generic, technology independent* logic gates.
+
+<div align = center><img src="https://cdn.hobbitqia.cc/20241127144004.png" width=80%></div>
+
+* During elaboration, primary inputs and outputs (**ports**) are defined and sequential elements (**flip-flops**, **latches**) are inferred.
+* input ports 和 register outputs 作为逻辑的输入，output ports 和 register inputs 作为逻辑的输出。输出可以用输入的布尔函数来表示。
+    * Boolen minimization 的目的就是减少输出函数的 literal（即输入在我们函数中出现的次数）。
+
+??? Example " Elaboration Illustrated"
+    如图，这里从 FSM 开始（由 RTL 代码描述），elaboration 时会继续 infer，将 `always@(posedge clk)` 转为除法器，并添加输入输出。随后创建布尔表达式。
+    <div align = center><img src="https://cdn.hobbitqia.cc/20241127144032.png" width=70%></div>
+
+### Two-Level Logic
+
+* 这里有很多种方式表示布尔函数，包括真值表、cubes、Binary Decision Diagrams (BDDs) 等。
+    * 其中使用 SOP or POS 表示的，称为 Two-Level Logic 两级逻辑。
+
+        ??? Example 
+            对于两级逻辑，literal 只看第一层的输入。如下图的两个两级逻辑，上面的图有 10 个输入，因此 literal 为 10；下图只有 8 个 literal。
+            <div align = center><img src="https://cdn.hobbitqia.cc/20241127144546.png" width=28%></div>
+
+* Two-Level Logic Minimization
+    * Karnaugh Maps
+        * $n$ 输入，图会包括 $2^n$ 个格子，目标是找到最小的 prime cover。
+        * 但是很难自动化（NP-complete），而且随着维度增加，cell 数量指数上升。
+    * Quine-McCluskey
+        * 容易实现，但是计算复杂度很高。
+    * Espresso Heuristic Minimizer
+        * 从一个 SOP 开始，有下面的操作：
+            * Expand: Make each cube as large as possible without covering a point in the OFF-set，这个操作会增加 literal 的数量，得到更坏的结果。
+            * Irredundant: Throw out redundantcubes, remove smaller cubes whose points are covered by larger cubes.
+            * Reduce: The cubes in the cover are reduced in size.
+        * 总体算法流程如下：
+            ``` C
+            ESPRESSO(F) {
+                do {
+                reduce(F);
+                expand(F);
+                irredundant(F);
+                } while (fewer terms in F);
+                verify(F);
+                }
+            ```
+
+        * 需要注意的是，这个算法不一定找到更优的的解，但是可以找到和初始解不同的答案，我们可以从不同维度进行寻找。
+
+        !!! Example
+            <div align = center><img src="https://cdn.hobbitqia.cc/20241127145333.png" width=70%></div>
+
+            <div align = center><img src="https://cdn.hobbitqia.cc/20241127145343.png" width=70%></div>
+
+### Multi-Level Logic 
+
+* 一般电路表示形式则是更为灵活的多级形式（Multi-Level）。
+
+    ??? Example "Multi-level Logic Minimization"
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127145443.png" width=70%></div>
+
+* Binary Decision Diagrams (BDD)，电脑中存储真值表的一种方式。
+    * BDDs are DAGs that represent the truth table of a given function
+    
+        !!! Example
+            注意 x1 x2 x3 的顺序对于树的构建是有影响的，不同的顺序会导致不同的树。每层代表一个变量的取值，这里从上至下依次是 x1, x2, x3。每个子树可以认为是一个布尔表达式，如左边的 x2 的子树对应的表达式其实是 NAND，即 ~(x2x3)。
+            <div align = center><img src="https://cdn.hobbitqia.cc/20241127145751.png" width=75%></div>
+
+    * Shannon Expansion
+        * 给定一个布尔函数 $f(x_1, x_2, ..., x_n)$，我们可以将其展开为 $f(x_1, x_2, ..., x_n) = x_if(x_1, x_2, ...,1,..., x_n) + x_i'f(x_1, x_2, ...,0,..., x_n)$，这里 $f_i^1=f(x_1, x_2, ...,1,..., x_n)$ 和 $f_i^0=f(x_1, x_2, ...,0,..., x_n)$ 分别称为 positive cofactor 和 negative cofactor 余子式。
+        * 这个展开过程可以用 BDD 来表示。
+
+            ??? Example
+                如下图，这里 $f=ac+bc+a'b'c'=a'(b'c'+bc)+a(c+bc)=a'(b'c'+bc)+a(c)$
+                <div align = center><img src="https://cdn.hobbitqia.cc/20241127150359.png" width=35%></div>
+
+* Reduced Ordered BDD (ROBDD)
+    * BDDs 可能很大，因此需要进行简化。
+    * Reduction Rule 1: **Merge equivalent leaves**.
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127150527.png" width=75%></div>
+
+    * Reduction Rule 2: **Merge isomorphic nodes**.
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127150543.png" width=75%></div>
+
+    * Reduction Rule 3: **Eliminate Redundant Tests**.
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127150623.png" width=75%></div>
+
+    * BDD 是 canonical 规范化的，即我们反复运用上面的三个规则最后得到的结果是一样的（只要变量顺序一致）。但是不同顺序可能带来数量差别很大的 BDD。
+
+* Some benefits of BDDs:
+    * 用于检验 tautology 恒真式。
+    * 求补（只需要交换 0 和 1 节点）。
+    * 进行等价性检测（只要 f g 的在相同变量次序情况下的 BDD 相同）。
+
+## Constraint Definition
+
+<div align = center><img src="https://cdn.hobbitqia.cc/20241127151508.png" width=80%></div>
+
+## Technology Mapping
+
+* Technology mapping is the phase of logic synthesis when gates are selected from a technology library to implement the circuit，即将我们现有的通用的表示（BDD 或者其他 universal gates）映射为实际的标准单元。
+* Why technology mapping?
+    * 直接映射可能效果不好，例如直接映射 `F=abcdef` 6 输入 AND 门，会带来很长的延时。
+    * 库里的门是预先定义好的，通常在 PPA 方面最优。
+    * 映射时我们可以让最快的门在 critical path 上，critial path 以外可以放 area-efficient 的门。
+* 可以使用 minimum cost tree-covering algorithm 来解决这个映射问题。
+
+### Technology Mapping Algorithm
+
+* Using a recursive tree-covering algorithm, we can easily, and almost optimally, map a logic network to a technology library.
+* 算法包括下面三步：
+    * Map netlist and tech library to simple gates
+        * 只用 NAND2，NOT 门描述网表。
+        * 只用 NAND2，NOT 门描述标准单元库，同时对于每个门赋予一个 cost。
+    * Tree-ifying the input netlist
+        * 将电路分解为若干棵树。即对于任何节点，若 fanout >=2，就将其作为树的根节点，与后面的节点断开。
+    * Minimum Cost Tree matching
+        * 本质是树形 DP，类似于编译原理中的指令选择。
+        * 从图的输出节点开始（根），对于每个节点，找匹配的对应模式，并计算 $cost(i)=\min\limits_{k}\{cost(g_i)+\sum\limits_k (k_i)\}$，这里 $k_i$ 是门 $g$ 的输入。
+
+??? Example 
+    * 第一步：这里的 cost 可能和 PPA 有关，需要人工设置
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127153430.png" width=70%></div>
+        
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127153443.png" width=70%></div>
+
+    * 第二步：这里黄色部分的 fanout 为 2，所以需要拆开（树中一个节点只能有一个父节点）。
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127153532.png" width=70%></div>
+
+    * 第三步：匹配
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127153730.png" width=70%></div>
+
+## Verilog for Synthesis 
+
+* 以 4->2 encoder 为例，
+    * 朴素使用 `if-else` 实现如下：
+        
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127154055.png" width=75%></div>
+
+        这种方式叫做 priority logic 优先逻辑，也就是某些位的优先级会较高，电路会先判断这个条件。这也会导致电路会是一个串行的结构。        
+
+    * 使用 `case` 实现如下：
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127154209.png" width=75%></div>
+
+        这样会让电路成为并行架构。其延迟自然而然就变低。
+
+    * 上述的第一种写法。如果我们传的的数据不是 one-hot code，则输出 X。但是如果我们能够保证输入是 one-hot code 的话，可以用下面的写法。
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127154354.png" width=75%></div>
+        
+        这种电路叫做 priority decoder 优先译码器（最低 bit 获得了高优先级）。该电路常常用在固定优先级仲裁器设计上。
+
+* operators
+    * Logical operators map into primitive logic gates
+    * Arithmetic operators map into adders, subtractors, ...
+        * Unsigned or signed 2’s complement
+        * Model carry: target is one-bit wider that source
+        * Watch out for *, %, and /
+    * Relational operators generate comparators
+        * No logic involved
+    * Shifts by constant amount are just wire connections
+
+        ??? Example
+            <div align = center><img src="https://cdn.hobbitqia.cc/20241127155418.png" width=25%></div>
+
+    * Variable shift amounts a whole different story -> shifter
+    * Conditional expression generates logic or MUX
+
+* Datapath Synthesis
+    * 复杂的运算（如加法器、乘法器）用特殊的方式实现。如乘法器可以用 Wall 算法、Booth 算法、CSA Array 等。
+    * Pre-written descriptions can be found in Synopsys DesignWare or Cadence ChipWare IP libraries.
+* Clock Gating
+    * 时钟一直 toggling，这是动态功耗的主要消耗。因此为了节约功耗，我们可以在不需要时关闭时钟信号。
+    * Block level (Global) clock-gating，这种技术在不需要整个模块或组件时，通过在 RTL 中定义时钟门控来关闭时钟信号。我们直接看图可以看到，时钟信号和 enable 信号与在一起。如果 enable 拉低。则输入进去的时钟信号为 0。整个系统自然也就不会工作了。
+        
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127160113.png" width=30%></div>
+
+    * Register level (Local) clock-gating，更细粒度的时钟门控技术，它可以在寄存器级别上节省功耗。如下图将本来作用在 input 上的使能信号转移到 clk 输入上。
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127160142.png" width=60%></div>
+
+    * 要实现时钟门控，有下面三种方法：正常写 RTL 代码等待综合器自行实现；将 clk 和 enable 信号与之后传递给综合器；直接调用现成的时钟模块 cell。
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127160234.png" width=50%></div>
+
+    * 会遇到 glitch 毛刺问题：
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127160411.png" width=60%></div>
+
+        * 解决方法是采用 glitch-free clock gate，本质就是集成时钟门控，这里的 latch 是负边沿触发的。
+            
+            <div align = center><img src="https://cdn.hobbitqia.cc/20241127160502.png" width=85%></div>
+
+    * 我们还可以将不同寄存器的时钟门控合并在一起，节约 power 同时使用更少的逻辑门。
+
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127160535.png" width=70%></div>
+
+* Data Gating: 和时钟门控类似，用于在数据信号不被使用时关闭这些信号，以节省功耗。这种情况类似于时钟门控，其中数据信号的切换也会导致功耗的产生，即使这些信号在某些时刻没有被使用。实现起来更复杂，要在写 RTL 时注意。    
+
+    ??? Example
+        <div align = center><img src="https://cdn.hobbitqia.cc/20241127160553.png" width=80%></div>
+
+* Design and Verification – HDL Linting
+    * 进行代码的 LINT 检查，这些原因可能导致仿真和综合的结果不匹配。
+
+    <div align = center><img src="https://cdn.hobbitqia.cc/20241127160705.png" width=75%></div>
+
+## Post-Synthesis Optimization
+
+* There are many ‘transforms’ that the synthesizer applies to the logic to improve the cost function:
+    * Resize cells
+
+        ??? Example "Resize a logic gate to better drive a load"
+            <div align = center><img src="https://cdn.hobbitqia.cc/20241127160844.png" width=70%></div>
+
+    * Buffer or clone to reduce load on critical nets
+
+        ??? Example "make a copy (clone of the gate) to distribute the load, orjust buffer the fanout net"
+            <div align = center><img src="https://cdn.hobbitqia.cc/20241127160955.png" width=70%></div>
+
+    * Redesign Fan-In/Fan-out Trees
+
+        ??? Example 
+            <div align = center><img src="https://cdn.hobbitqia.cc/20241127161037.png" width=70%></div>
+
+    * Decompose large cells
+
+        ??? Example "Decomposition and Swapping"
+            <div align = center><img src="https://cdn.hobbitqia.cc/20241127161233.png" width=70%></div>
+
+    * Move critical signals forward
+
+        ??? Example "Retiming"
+            <div align = center><img src="https://cdn.hobbitqia.cc/20241127161308.png" width=80%></div>
+
+    * Pad early paths
+    * Swap connections on commutative pins or among equivalent nets
+    * Area recovery

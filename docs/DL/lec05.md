@@ -30,12 +30,14 @@ counter: True
         后向计算，从右开始。
     
     ??? Example
-            <center>  
-            ![Untitled](img/Untitled%2037.png){ width="300"}
-            </center>
-            <center>  
-            ![Untitled](img/Untitled%2038.png){ width="300"}
-            </center>
+        <center>  
+
+        ![Untitled](img/Untitled%2037.png){ width="300"}
+        </center>
+        <center>  
+        
+        ![Untitled](img/Untitled%2038.png){ width="300"}
+        </center>
 
         （我们通常这样，在上方写输出值，下方写梯度值）
 

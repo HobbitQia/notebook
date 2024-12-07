@@ -264,6 +264,7 @@ nav:
       - EDA/VLSI/index.md
       - 介绍: EDA/VLSI/lec01.md
       - 逻辑综合: EDA/VLSI/lec03.md
+      - 时序分析: EDA/VLSI/lec04.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
