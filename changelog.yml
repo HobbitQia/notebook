@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-12-7":
+    - newpage:
+        text: EDA > 数字集成电路设计 > 时序分析
+        href: /EDA/VLSI/lec04
   - "2024-11-27":
     - pageupdate:
         text: EDA > 数字集成电路设计 > 逻辑综合
