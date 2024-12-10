@@ -4,6 +4,7 @@ repo_name: HobbitQia/notebook  #存储库名称，一般自动设置
 repo_url: https://github.com/HobbitQia/notebook/  #存储库URL
 # edit_uri: tree/master/docs  #每个文档的顶部显示一个编辑按钮，""则隐藏
 site_description: HobbitQia的笔记本
+remote_branch: master
 copyright: Copyright &copy; 2022 <a href="https://github.com/HobbitQia"  target="_blank" rel="noopener">HobbitQia</a>
 
 theme: 
@@ -265,6 +266,7 @@ nav:
       - 介绍: EDA/VLSI/lec01.md
       - 逻辑综合: EDA/VLSI/lec03.md
       - 时序分析: EDA/VLSI/lec04.md
+      - 芯片物理设计: EDA/VLSI/lec05.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
