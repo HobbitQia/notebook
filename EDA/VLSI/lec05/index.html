@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/ADS/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/EDA/VLSI/lec05/">
       
       
-        <link rel="prev" href="../ds/hash/">
+        <link rel="prev" href="../lec04/">
       
       
-        <link rel="next" href="../dip/">
+        <link rel="next" href="../../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/">
       
       
-      <link rel="icon" href="../log.ico">
+      <link rel="icon" href="../../../log.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>高级数据结构与算法分析 - HobbitQia的笔记本</title>
+        <title>芯片物理设计 - HobbitQia的笔记本</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-      <link rel="stylesheet" href="../css/timeline.css">
+      <link rel="stylesheet" href="../../../css/timeline.css">
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
     
@@ -58,17 +58,17 @@
     
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="../css/custom.css">
+      <link rel="stylesheet" href="../../../css/custom.css">
     
-      <link rel="stylesheet" href="../css/card.css">
+      <link rel="stylesheet" href="../../../css/card.css">
     
-      <link rel="stylesheet" href="../css/tasklist.css">
+      <link rel="stylesheet" href="../../../css/tasklist.css">
     
-      <link rel="stylesheet" href="../css/flink.css">
+      <link rel="stylesheet" href="../../../css/flink.css">
     
-      <link rel="stylesheet" href="../css/more_changelog.css">
+      <link rel="stylesheet" href="../../../css/more_changelog.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#import-design-and-floorplan" class="md-skip">
           跳转至
         </a>
       
@@ -108,9 +108,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href="../../.." title="HobbitQia的笔记本" class="md-header__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../log.ico" alt="logo">
+  <img src="../../../log.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              高级数据结构与算法分析
+              芯片物理设计
             
           </span>
         </div>
@@ -236,7 +236,7 @@
     
     
       <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -252,21 +252,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../ds/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../ds/" class="md-tabs__link">
           
   
     
@@ -295,7 +291,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../ICS/" class="md-tabs__link">
+        <a href="../../../ICS/" class="md-tabs__link">
           
   
     
@@ -324,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../DL/" class="md-tabs__link">
+        <a href="../../../DL/" class="md-tabs__link">
           
   
     
@@ -343,11 +339,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../EDA/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -373,7 +371,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
+        <a href="../../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-tabs__link">
           
   
     
@@ -396,7 +394,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Paper/" class="md-tabs__link">
+        <a href="../../../Paper/" class="md-tabs__link">
           
   
     
@@ -416,7 +414,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Misc/" class="md-tabs__link">
+        <a href="../../../Misc/" class="md-tabs__link">
           
   
     
@@ -451,9 +449,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
+    <a href="../../.." title="HobbitQia的笔记本" class="md-nav__button md-logo" aria-label="HobbitQia的笔记本" data-md-component="logo">
       
-  <img src="../log.ico" alt="logo">
+  <img src="../../../log.ico" alt="logo">
 
     </a>
     HobbitQia的笔记本
@@ -505,7 +503,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href=".." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -538,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
+      <a href="../../../changelog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -559,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../link/" class="md-nav__link">
+      <a href="../../../link/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,10 +582,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -608,20 +604,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -632,7 +625,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computer Science
@@ -681,7 +674,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../ds/" class="md-nav__link ">
+            <a href="../../../ds/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -714,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/algorithm/" class="md-nav__link">
+      <a href="../../../ds/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -735,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/tree/" class="md-nav__link">
+      <a href="../../../ds/tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -756,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/heap/" class="md-nav__link">
+      <a href="../../../ds/heap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/set/" class="md-nav__link">
+      <a href="../../../ds/set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -798,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/graph/" class="md-nav__link">
+      <a href="../../../ds/graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -819,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/sort/" class="md-nav__link">
+      <a href="../../../ds/sort/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -840,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ds/hash/" class="md-nav__link">
+      <a href="../../../ds/hash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -866,8 +859,6 @@
                 
   
   
-    
-  
   
   
     
@@ -883,16 +874,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../../ADS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -904,7 +895,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             高级数据结构与算法分析
@@ -971,7 +962,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../dip/" class="md-nav__link ">
+            <a href="../../../dip/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1004,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip1/" class="md-nav__link">
+      <a href="../../../dip/dip1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip2/" class="md-nav__link">
+      <a href="../../../dip/dip2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1046,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip3/" class="md-nav__link">
+      <a href="../../../dip/dip3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1067,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip5/" class="md-nav__link">
+      <a href="../../../dip/dip5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1088,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip6/" class="md-nav__link">
+      <a href="../../../dip/dip6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1109,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip7/" class="md-nav__link">
+      <a href="../../../dip/dip7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1130,7 +1121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip8/" class="md-nav__link">
+      <a href="../../../dip/dip8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip9/" class="md-nav__link">
+      <a href="../../../dip/dip9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1172,7 +1163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip10/" class="md-nav__link">
+      <a href="../../../dip/dip10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1193,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip11/" class="md-nav__link">
+      <a href="../../../dip/dip11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1214,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dip/dip12/" class="md-nav__link">
+      <a href="../../../dip/dip12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1288,7 +1279,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../OOP/" class="md-nav__link ">
+            <a href="../../../OOP/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1321,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OOP/oop1/" class="md-nav__link">
+      <a href="../../../OOP/oop1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1342,7 +1333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OOP/oop2/" class="md-nav__link">
+      <a href="../../../OOP/oop2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1363,7 +1354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OOP/oop3/" class="md-nav__link">
+      <a href="../../../OOP/oop3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1384,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OOP/oop4/" class="md-nav__link">
+      <a href="../../../OOP/oop4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1405,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OOP/oop5/" class="md-nav__link">
+      <a href="../../../OOP/oop5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1426,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OOP/oop6/" class="md-nav__link">
+      <a href="../../../OOP/oop6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1447,7 +1438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OOP/oop7/" class="md-nav__link">
+      <a href="../../../OOP/oop7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1468,7 +1459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OOP/oop8/" class="md-nav__link">
+      <a href="../../../OOP/oop8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1489,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OOP/oop9/" class="md-nav__link">
+      <a href="../../../OOP/oop9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1510,7 +1501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OOP/oop10/" class="md-nav__link">
+      <a href="../../../OOP/oop10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1531,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OOP/oop11/" class="md-nav__link">
+      <a href="../../../OOP/oop11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1552,7 +1543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OOP/oop12/" class="md-nav__link">
+      <a href="../../../OOP/oop12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1606,7 +1597,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Quan/" class="md-nav__link ">
+            <a href="../../../Quan/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1639,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Quan/chap1/" class="md-nav__link">
+      <a href="../../../Quan/chap1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1660,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Quan/chap2/" class="md-nav__link">
+      <a href="../../../Quan/chap2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1710,7 +1701,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../TCS/" class="md-nav__link ">
+            <a href="../../../TCS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1767,7 +1758,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../AOR/" class="md-nav__link ">
+            <a href="../../../AOR/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1905,7 +1896,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../ICS/" class="md-nav__link ">
+            <a href="../../../ICS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1938,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS/ICS-1/" class="md-nav__link">
+      <a href="../../../ICS/ICS-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1959,7 +1950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS/ICS-2/" class="md-nav__link">
+      <a href="../../../ICS/ICS-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1980,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS/ICS-3/" class="md-nav__link">
+      <a href="../../../ICS/ICS-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2001,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS/ICS-4/" class="md-nav__link">
+      <a href="../../../ICS/ICS-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2022,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS/ICS-5/" class="md-nav__link">
+      <a href="../../../ICS/ICS-5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2043,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS/ICS-6/" class="md-nav__link">
+      <a href="../../../ICS/ICS-6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2064,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS/ICS-7/" class="md-nav__link">
+      <a href="../../../ICS/ICS-7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2085,7 +2076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS/ICS-8/" class="md-nav__link">
+      <a href="../../../ICS/ICS-8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2106,7 +2097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ICS/ICS-9/" class="md-nav__link">
+      <a href="../../../ICS/ICS-9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2185,7 +2176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/5/" class="md-nav__link">
+      <a href="../../../CSAPP/5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2206,7 +2197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/6/" class="md-nav__link">
+      <a href="../../../CSAPP/6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2227,7 +2218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/7/" class="md-nav__link">
+      <a href="../../../CSAPP/7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2248,7 +2239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/8/" class="md-nav__link">
+      <a href="../../../CSAPP/8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2269,7 +2260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CSAPP/9/" class="md-nav__link">
+      <a href="../../../CSAPP/9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2333,7 +2324,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Logic/" class="md-nav__link ">
+            <a href="../../../Logic/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2366,7 +2357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic01/" class="md-nav__link">
+      <a href="../../../Logic/logic01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2387,7 +2378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic02/" class="md-nav__link">
+      <a href="../../../Logic/logic02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2408,7 +2399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic03/" class="md-nav__link">
+      <a href="../../../Logic/logic03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2429,7 +2420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic04/" class="md-nav__link">
+      <a href="../../../Logic/logic04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2450,7 +2441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic06/" class="md-nav__link">
+      <a href="../../../Logic/logic06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2471,7 +2462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic05/" class="md-nav__link">
+      <a href="../../../Logic/logic05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2492,7 +2483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Logic/logic07/" class="md-nav__link">
+      <a href="../../../Logic/logic07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2572,7 +2563,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../DB/" class="md-nav__link ">
+            <a href="../../../DB/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2605,7 +2596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db1/" class="md-nav__link">
+      <a href="../../../DB/db1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2626,7 +2617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db2/" class="md-nav__link">
+      <a href="../../../DB/db2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2647,7 +2638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db3/" class="md-nav__link">
+      <a href="../../../DB/db3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2668,7 +2659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db4/" class="md-nav__link">
+      <a href="../../../DB/db4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2689,7 +2680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db5/" class="md-nav__link">
+      <a href="../../../DB/db5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2710,7 +2701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db6/" class="md-nav__link">
+      <a href="../../../DB/db6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2731,7 +2722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db7/" class="md-nav__link">
+      <a href="../../../DB/db7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2752,7 +2743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db8/" class="md-nav__link">
+      <a href="../../../DB/db8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2773,7 +2764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db9/" class="md-nav__link">
+      <a href="../../../DB/db9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2794,7 +2785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db10/" class="md-nav__link">
+      <a href="../../../DB/db10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2815,7 +2806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db11/" class="md-nav__link">
+      <a href="../../../DB/db11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2836,7 +2827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db12/" class="md-nav__link">
+      <a href="../../../DB/db12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2857,7 +2848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db13/" class="md-nav__link">
+      <a href="../../../DB/db13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2878,7 +2869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db14/" class="md-nav__link">
+      <a href="../../../DB/db14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2899,7 +2890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB/db15/" class="md-nav__link">
+      <a href="../../../DB/db15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2961,7 +2952,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CO/" class="md-nav__link ">
+            <a href="../../../CO/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2994,7 +2985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CO/co1/" class="md-nav__link">
+      <a href="../../../CO/co1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3015,7 +3006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CO/co3/" class="md-nav__link">
+      <a href="../../../CO/co3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3036,7 +3027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CO/co2/" class="md-nav__link">
+      <a href="../../../CO/co2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3057,7 +3048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CO/co4/" class="md-nav__link">
+      <a href="../../../CO/co4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3078,7 +3069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CO/co5/" class="md-nav__link">
+      <a href="../../../CO/co5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3099,7 +3090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CO/co6/" class="md-nav__link">
+      <a href="../../../CO/co6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3159,7 +3150,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../CA/" class="md-nav__link ">
+            <a href="../../../CA/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3192,7 +3183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CA/CA1/" class="md-nav__link">
+      <a href="../../../CA/CA1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3213,7 +3204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CA/CA2/" class="md-nav__link">
+      <a href="../../../CA/CA2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3234,7 +3225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CA/CA3/" class="md-nav__link">
+      <a href="../../../CA/CA3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3255,7 +3246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CA/CA4/" class="md-nav__link">
+      <a href="../../../CA/CA4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3276,7 +3267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CA/CA5/" class="md-nav__link">
+      <a href="../../../CA/CA5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3352,7 +3343,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../OS/" class="md-nav__link ">
+            <a href="../../../OS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3385,7 +3376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OS/chap01/" class="md-nav__link">
+      <a href="../../../OS/chap01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3406,7 +3397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OS/chap02/" class="md-nav__link">
+      <a href="../../../OS/chap02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3427,7 +3418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OS/chap03/" class="md-nav__link">
+      <a href="../../../OS/chap03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3448,7 +3439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OS/chap04/" class="md-nav__link">
+      <a href="../../../OS/chap04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3469,7 +3460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OS/chap05/" class="md-nav__link">
+      <a href="../../../OS/chap05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3490,7 +3481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OS/chap06/" class="md-nav__link">
+      <a href="../../../OS/chap06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3511,7 +3502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OS/chap07/" class="md-nav__link">
+      <a href="../../../OS/chap07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3532,7 +3523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OS/chap08/" class="md-nav__link">
+      <a href="../../../OS/chap08/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3553,7 +3544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OS/chap09/" class="md-nav__link">
+      <a href="../../../OS/chap09/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3574,7 +3565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OS/chap10/" class="md-nav__link">
+      <a href="../../../OS/chap10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3595,7 +3586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OS/chap11/" class="md-nav__link">
+      <a href="../../../OS/chap11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3616,7 +3607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OS/chap12/" class="md-nav__link">
+      <a href="../../../OS/chap12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3637,7 +3628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../OS/chap13/" class="md-nav__link">
+      <a href="../../../OS/chap13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3693,7 +3684,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Compiler/" class="md-nav__link ">
+            <a href="../../../Compiler/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3726,7 +3717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Compiler/lec1/" class="md-nav__link">
+      <a href="../../../Compiler/lec1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3747,7 +3738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Compiler/lec2/" class="md-nav__link">
+      <a href="../../../Compiler/lec2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3768,7 +3759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Compiler/lec3/" class="md-nav__link">
+      <a href="../../../Compiler/lec3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3883,7 +3874,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../DL/" class="md-nav__link ">
+            <a href="../../../DL/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3916,7 +3907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DL/lec01/" class="md-nav__link">
+      <a href="../../../DL/lec01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3937,7 +3928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DL/lec02/" class="md-nav__link">
+      <a href="../../../DL/lec02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3958,7 +3949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DL/lec03/" class="md-nav__link">
+      <a href="../../../DL/lec03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3979,7 +3970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DL/lec04/" class="md-nav__link">
+      <a href="../../../DL/lec04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4000,7 +3991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DL/lec05/" class="md-nav__link">
+      <a href="../../../DL/lec05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4021,7 +4012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DL/lec06/" class="md-nav__link">
+      <a href="../../../DL/lec06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4042,7 +4033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DL/lec07/" class="md-nav__link">
+      <a href="../../../DL/lec07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4102,7 +4093,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../TinyML/" class="md-nav__link ">
+            <a href="../../../TinyML/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4135,7 +4126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TinyML/pruning/" class="md-nav__link">
+      <a href="../../../TinyML/pruning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4156,7 +4147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TinyML/quantization/" class="md-nav__link">
+      <a href="../../../TinyML/quantization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4177,7 +4168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TinyML/llm/" class="md-nav__link">
+      <a href="../../../TinyML/llm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4198,7 +4189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TinyML/finetune/" class="md-nav__link">
+      <a href="../../../TinyML/finetune/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4219,7 +4210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TinyML/post-training/" class="md-nav__link">
+      <a href="../../../TinyML/post-training/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4252,6 +4243,8 @@
       
   
   
+    
+  
   
   
     
@@ -4266,19 +4259,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../EDA/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4289,13 +4285,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             EDA
@@ -4308,6 +4304,8 @@
                 
   
   
+    
+  
   
   
     
@@ -4331,16 +4329,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../EDA/VLSI/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4357,7 +4355,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             数字集成电路设计
@@ -4373,7 +4371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../EDA/VLSI/lec01/" class="md-nav__link">
+      <a href="../lec01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4394,7 +4392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../EDA/VLSI/lec03/" class="md-nav__link">
+      <a href="../lec03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4415,7 +4413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../EDA/VLSI/lec04/" class="md-nav__link">
+      <a href="../lec04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4433,10 +4431,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../EDA/VLSI/lec05/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    芯片物理设计
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4445,6 +4463,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#moving-to-the-physical-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving to the Physical Domain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-voltage-domains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Voltage Domains
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floorplanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floorplanning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hierarchical-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierarchical Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hierarchical Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-budgeting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Budgeting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pin Assignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedthrough
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Planning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floorplanning-in-innovus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floorplanning in Innovus
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4558,7 +4683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
+      <a href="../../../Mathematics/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E2%85%A1%28H%29/Rings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4631,7 +4756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MLT/report/" class="md-nav__link">
+      <a href="../../../MLT/report/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4652,7 +4777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MLT/mlt2/" class="md-nav__link">
+      <a href="../../../MLT/mlt2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4741,7 +4866,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Paper/" class="md-nav__link ">
+            <a href="../../../Paper/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4774,7 +4899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/BiS-KM/" class="md-nav__link">
+      <a href="../../../Paper/BiS-KM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4795,7 +4920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/ZeRO/" class="md-nav__link">
+      <a href="../../../Paper/ZeRO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4816,7 +4941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/Megatron-LM/" class="md-nav__link">
+      <a href="../../../Paper/Megatron-LM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4837,7 +4962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/GPipe/" class="md-nav__link">
+      <a href="../../../Paper/GPipe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4858,7 +4983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/mixed_precision/" class="md-nav__link">
+      <a href="../../../Paper/mixed_precision/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4879,7 +5004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/FAST/" class="md-nav__link">
+      <a href="../../../Paper/FAST/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4900,7 +5025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/softmax/" class="md-nav__link">
+      <a href="../../../Paper/softmax/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4921,7 +5046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/PagedAttention/" class="md-nav__link">
+      <a href="../../../Paper/PagedAttention/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4942,7 +5067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/VecPAC/" class="md-nav__link">
+      <a href="../../../Paper/VecPAC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4963,7 +5088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/NN-LUT/" class="md-nav__link">
+      <a href="../../../Paper/NN-LUT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4984,7 +5109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/ChatEDA/" class="md-nav__link">
+      <a href="../../../Paper/ChatEDA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5005,7 +5130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/GPT-1/" class="md-nav__link">
+      <a href="../../../Paper/GPT-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5026,7 +5151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/GPT-2/" class="md-nav__link">
+      <a href="../../../Paper/GPT-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5047,7 +5172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/GPT-3/" class="md-nav__link">
+      <a href="../../../Paper/GPT-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5068,7 +5193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/APEX/" class="md-nav__link">
+      <a href="../../../Paper/APEX/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5089,7 +5214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Paper/QServe/" class="md-nav__link">
+      <a href="../../../Paper/QServe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5150,7 +5275,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Misc/" class="md-nav__link ">
+            <a href="../../../Misc/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -5183,7 +5308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/float/" class="md-nav__link">
+      <a href="../../../Misc/float/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5204,7 +5329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/fpga/" class="md-nav__link">
+      <a href="../../../Misc/fpga/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5267,7 +5392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/LLVM/ir/" class="md-nav__link">
+      <a href="../../../Misc/LLVM/ir/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5338,7 +5463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/CGRA/intro/" class="md-nav__link">
+      <a href="../../../Misc/CGRA/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5409,7 +5534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Misc/PIM/upmem/" class="md-nav__link">
+      <a href="../../../Misc/PIM/upmem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5480,7 +5605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../android/dataflow/" class="md-nav__link">
+      <a href="../../../android/dataflow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5529,6 +5654,101 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#moving-to-the-physical-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving to the Physical Domain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-voltage-domains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Voltage Domains
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floorplanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floorplanning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hierarchical-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierarchical Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hierarchical Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-budgeting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Budgeting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pin Assignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedthrough
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Planning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floorplanning-in-innovus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floorplanning in Innovus
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5546,33 +5766,343 @@
   
 
 
-<h1 id="_1">高级数据结构与算法分析<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="import-design-and-floorplan">Import Design and Floorplan<a class="headerlink" href="#import-design-and-floorplan" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p>浙江大学 “高级数据结构与算法分析” 课程及相关知识笔记  </p>
 <ul>
-<li>教材: <strong><em>Introduction to Algorithms, 3<sup>rd</sup> Edition</em></strong>     </li>
-<li>老师: 叶德仕</li>
+<li>Moving to the Physical Domain</li>
+<li>A bit about Multiple Voltage Domains</li>
+<li>Floorplanning</li>
+<li>A bit about Hierarchical Design</li>
+<li>Power Planning</li>
 </ul>
 </div>
-<p>ADS 后半学期算法部分我听了毛宇尘老师的智云课堂，手写笔记如下：</p>
-<div class="card file-block">
-<div class="file-icon"><img src="/assets/images/pdf.svg" style="height: 3em;"></div>
-<div class="file-body">
-<div class="file-title">ADS 手写笔记 by HobbitQia</div>
-<div class="file-meta">45.6 MB / 28 P / 2023-12-7</div>
-</div>
-<p><a class="down-button" target="_blank" href="/assets/files/MYC_ADS.pdf" markdown="1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48"/></svg></span> 下载</a></p>
+<h2 id="moving-to-the-physical-domain">Moving to the Physical Domain<a class="headerlink" href="#moving-to-the-physical-domain" title="Permanent link">&para;</a></h2>
+<ul>
+<li>现在我们基本完成了设计流程的 Front-End，现在要开始 Back-End，从 logical 方法到 physical 方法。<ul>
+<li>Floorplan 布局规划，对设计中<em>较大</em>的或<em>重要的</em>部分例如 IPs，I/Os，Power grids，special route，进行空间分配和布局决策。</li>
+<li>Placement，将设计的各个逻辑门和模块（standard cell）放置到芯片上的具体位置。这里会考虑 congestion 和 timing 的问题。</li>
+<li>Clock Tree Synthesis，分配时钟，确保时钟信号能够均匀且同步地到达芯片上的所有触发器。</li>
+<li>Routing 布线，将所有放置好的逻辑门和模块之间的连接线（nets）连接起来，根据 DRC 设计规则检查、timing、noise 等要求进行布线。</li>
+</ul>
+</li>
+</ul>
+<div align = center><img src="https://cdn.hobbitqia.cc/20241208232131.png" width=80%></div>
+
+<ul>
+<li>准备工作：<ul>
+<li>Define design (.v)</li>
+<li>Define design constraints/targets (.sdc)</li>
+<li>Define operating conditions/modes (MMMC)</li>
+<li>Define technology and libraries (.lef)</li>
+<li>Define physical properties (Floorplan)</li>
+</ul>
+</li>
+<li>在逻辑设计阶段的综合部分，我们认为芯片面对的世界是相对理想的，不考虑电源供应、物理连接和实体、时钟的非理想情况。但是在物理实现，我们要考虑这些物理特性：<ul>
+<li>定义“全局网络”及其如何连接到物理实例。全局网络通常指的是那些需要在整个芯片上传播的信号，如 clk，rst。需要定义这些信号如何连接到芯片上的各个物理实例，例如逻辑单元和宏单元。</li>
+<li>提供技术规则和单元抽象（LEF文件）。</li>
+<li>提供物理单元，这些单元对逻辑功能不是必需的，综合的时候往往会禁用这些单元。<ul>
+<li>Tie cells： 用于提供逻辑上的高电平或低电平。</li>
+<li>P/G Pads： 用于芯片与外部电源的连接。</li>
+<li>Decaps： 用于电源和地之间的噪声过滤。</li>
+<li>Filler cells： 用于填充芯片上的空白区域，以提高制造良率。</li>
+</ul>
+</li>
+<li>定义 hold 约束以及所有操作模式和条件（MMMC）。在理想的时钟模型中，保持约束很容易满足，因此通常不会进行检查。但在物理实现中，需要考虑时钟的非理想性，如时钟偏斜和抖动，并定义相应的约束。</li>
+<li>设置“低功耗”定义，例如电压域、电源门控等。</li>
+</ul>
+</li>
+</ul>
+<h2 id="multiple-voltage-domains">Multiple Voltage Domains<a class="headerlink" href="#multiple-voltage-domains" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Define power domains<ul>
+<li>Create power domain names </li>
+<li>List of cells connected to VDD1, VDD2, GND1, 即有哪些 cell 连接该域的电源和地。</li>
+<li>Draw the power domains 电压域。</li>
+</ul>
+</li>
+<li>Place macros，（宏单元通常指的是较大的设计模块）考虑 routing congestion、orientation，通常手动指定比自动放置更优。</li>
+<li>Place switches，对于需要电源管理的电源域，需要放置电源开关，用于控制电源域的开启和关闭。</li>
+</ul>
+<div align = center><img src="https://cdn.hobbitqia.cc/20241208235854.png" width=40%></div>
+
+<ul>
+<li>为了实现多电压域，我们需要用到 Level Shifter 来转化电压。（具体的看不懂）</li>
+<li>为了提高能效比，设计师通常会将芯片划分为多个电源域，每个电源域可以在不需要时关闭电源，从而降低整体功耗。这也就是 Power Gating。</li>
+</ul>
+<h2 id="floorplanning">Floorplanning<a class="headerlink" href="#floorplanning" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Floorplanning is a mapping between the <strong>logical description (the netlist)</strong> and the <strong>physical description (the floorplan)</strong>.</li>
+<li>Goals of floorplanning:<ul>
+<li>Arrange the blocks on a chip.</li>
+<li>Decide the location of the I/O pads.</li>
+<li>Decide the location and number of the power pads.</li>
+<li>Decide the type of power distribution.</li>
+<li>Decide the location and type of clock distribution.</li>
+</ul>
+</li>
+<li>Objectives of floorplanning are: Minimize the chip area, delay, routing congestion</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Fullchip Design Overview</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241209001101.png" width=80%></div></p>
 </div>
 <ul>
-<li>随机算法（Randomized Algorithm）- P1</li>
-<li>并行算法（Parallel Algorithm）- P4</li>
-<li>局部搜索（Local Search）- P10</li>
-<li>近似算法（Approximation Algorithm）- P13</li>
-<li>外部排序（External Sort）- P18</li>
-<li>回溯（Backtracking）- P20</li>
-<li>动态规划（Dynamic Programming）- P24</li>
+<li>
+<p>Floorplanning Inputs and Outputs</p>
+<ul>
+<li>Inputs: Design netlist、Area requirements、Power requirements、Timing constraints、Physical partitioning information、Die size vs. performance vs. schedule trade-off(required); I/O placement、Macro placement information (optional)</li>
+<li>Outputs: Die/block area、I/Os placed、Macros placed、Power grid designed、Power pre-routing、Standard cell  placement areas</li>
+<li>
+<p>Design ready for standard cell placement</p>
+<div class="admonition info">
+<p class="admonition-title">Floorplanning vs. Placement</p>
+<p>其实 Floorplanning 已经完成了一定的 Placement 工作，通俗来讲，Floorplanning 关注的是芯片的宏观布局，而 Placement 关注的是逻辑单元的微观布局。Floorplanning 为 Placement 提供了一个基本的设计框架，而 Placement 则在这个框架内进行详细的设计优化。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241209001101.png" width=80%></div>
+<a href="https://pica.zhimg.com/v2-afd4cf6bd21b23d7f016c6a2e754581a_1440w.jpg">https://pica.zhimg.com/v2-afd4cf6bd21b23d7f016c6a2e754581a_1440w.jpg</a></p>
+</div>
+</li>
 </ul>
+</li>
+<li>
+<p>IO Ring</p>
+<ul>
+<li>I/O RING（I/O 环）是指芯片封装边缘上的一个环形区域，其中包含了芯片与外部世界通信的输入输出引脚。这些引脚可以是数据信号、电源信号、接地信号或其他类型的信号。</li>
+<li>芯片的引脚分配通常由前端设计师决定。</li>
+<li>
+<p>I/O 并没有像 Moore's Law 那样，因此他们的 area 非常大，而且他不仅是链接外部的信号，还会用来提供 power，因此 I/O planning 是 floorplanning 的关键环节。</p>
+<div class="admonition info">
+<p class="admonition-title">Chip Size</p>
+<ul>
+<li>Core Limited，在早期，我们的 IO 不大但是 core 很大，因此整个芯片面积取决于 core，核心不够大。</li>
+<li>Pad Limited，现在常见情况，IO 大但是 core 小，因此可以看到中间有很多空白。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241209003013.png" width=80%></div></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Utilization</strong></p>
+<ul>
+<li>percentage of <em>core area</em> that is taken up by standard cells，通常的起始利用率在 70%，这与设计的关系很大。</li>
+<li>
+<p>High utilization can make it difficult to close a design，利用率高可能导致布线拥挤，或者不利于后续优化。</p>
+<details class="example">
+<summary>Example</summary>
+<p>例如下面，当利用率高时，可用的空间小，如果我们希望添加 buffer 或者调整大小，就会很困难。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241209003626.png" width=30%></div></p>
+</details>
+</li>
+<li>
+<p>Local congestion 可能发生在一些 pin-dense cells，例如多路选择器。比如一个 4-1 MUX 有 7 个 pin（4 输入 2 选择 1 输出）。由于引脚数量较多，可能会在布局时占据较大的空间，从而导致其他逻辑单元的利用率并不完全能反映芯片的实际面积需求。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Uniquifying the Netlist</p>
+<ul>
+<li>When moving to the physical domain, the netlist must be <strong>unique</strong>，在物理设计的时候网表应该是唯一的，即每个子模块只能被引用一次。</li>
+<li>在 placement 之前，通常由 synthesizer 或者 design import 时完成，（P&amp;R 前需要检查），将对同一个子模块的引用分开。</li>
+<li>
+<p>这样做的好处是，P&amp;R 后可能需要对某一个模块进行优化（例如插入 buffer），网表唯一使得这个优化不会影响到其他模块。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241209212811.png" width=85%></div></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Hard Macro Placement</p>
+<ul>
+<li>在放很大的 macro 的时候，我们需要考虑他对 routing，timing，power 的影响。通常把他们放在布局的边上。因为 Placement 算法在single large rectangular 的地方表现得更好。</li>
+<li>摆放好后，我们把 hard macro 标记为 FIXED，后续不在改动。</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Hard Macro Placement</p>
+<p>在拐角的地方，如果两侧有 std cell 他们的布线可能也比较困难；如果两个 macro 中间间隙很小，也会有类似问题。这样的地方称为 possible routing congestion hotspots。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241209225128.png" width=85%></div></p>
+</div>
+</li>
+<li>
+<p>Placement Regions</p>
+<ul>
+<li>在芯片设计中为逻辑单元指定特定的放置区域或集群区域，以帮助布局和布线工具更好地实现设计目标。</li>
+<li>常见的 Place Regions: <ul>
+<li>Soft guide, try to cluster these cells together without a defined area.</li>
+<li>Guide, try to place the cells in the defined area.</li>
+<li>Region, must place the cells in the defined area, but other cells may also be placed there.</li>
+<li>Fence, must place the cells in the defined area and keep out all other cells.</li>
+</ul>
+</li>
+<li>
+<p>在实践中，使用 regions 不一定能带来好的结果。</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241209225750.png" width=25%></div></p>
+</details>
+</li>
+</ul>
+</li>
+<li>
+<p>Placement Blockages and Halos</p>
+<ul>
+<li>Placement Blockages 是芯片设计中需要特别注意的区域，这些区域不允许逻辑单元放置。</li>
+<li>常见的 Blockages 包括：<ul>
+<li>Hard Blockage, no cells can be placed inside.</li>
+<li>Soft Blockage, cannot be used during placement, but may be used during optimization.</li>
+<li>Partial Blockage, an area with lower utilization.</li>
+<li>
+<p><strong>Halo (padding)</strong>,an area outside a macro that should be kept clear of standard cells，设置 Halos 的目的是为了保护芯片的边缘区域，防止逻辑单元过于靠近边缘，从而影响芯片的封装和性能。</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241210000613.png" width=70%></div></p>
+</details>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Routing Blockage</p>
+<ul>
+<li>
+<p>Similar to placement blockage, routing blockage can be defined，不常用。</p>
+<details class="example">
+<summary>Example</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241210000755.png" width=45%></div></p>
+</details>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition summary">
+<p class="admonition-title">Guidelines for a good floorplan</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241210000839.png" width=75%></div></p>
+<ul>
+<li>Single large core area：将逻辑核心区域（如处理器核心、内存模块等）设计为一个单一的大型区域，这样可以减少互连的复杂性，提高性能；</li>
+<li>RAMS out of the way in the corner：将存储器单元放置在芯片的角落或边缘，这样可以减少它们对核心逻辑区域的干扰，同时保持核心区域的连通性；</li>
+<li>Large routing channels：在芯片布局中保留宽大的布线通道，这样可以减少布线拥塞，提高信号的传输效率；</li>
+<li>Avoid constrictive channels：避免在布局中创建狭窄的布线通道，这样可以减少信号的延迟和干扰，提高信号质量；</li>
+<li>Avoid many pins in the narrow channel：在布局中避免在狭窄的通道中放置太多的引脚，这样可以减少布线冲突，提高信号的传输效率；</li>
+<li>Rotate for pin accessibility：根据引脚的访问需求，考虑旋转芯片的布局，以便于引脚的布局和布线；</li>
+<li>Pins away from corners：将引脚远离在芯片的边缘或角落，这样可以减少引脚与芯片边缘的干扰，提高引脚的布局和布线效率；</li>
+<li>Use blockage to improve pin accessibility：在布局中使用blockage来改善引脚的访问性，例如，将引脚放置在障碍物附近，以便于引脚的布局和布线；</li>
+</ul>
+</div>
+<h2 id="hierarchical-design">Hierarchical Design<a class="headerlink" href="#hierarchical-design" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>如果设计太大的话，我们可以把他分为多个 hierarchies。</p>
+<ul>
+<li>好处是更快的运行时间，更少的内存消耗（EDA 工具），更快的 ECO turnaround time，能够做复用（即相同的 hierarchy 可以在不同的设计中使用）。</li>
+<li>缺点是更能实现 fullchip timing closure（ILMs），因为需要确保所有子模块的时序都能满足要求；需要生成 feedthrough、repeater insertiom、timing constraint budgeting 等，以确保时序收敛。</li>
+</ul>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241210001223.png" width=28%></div></p>
+</li>
+</ul>
+<h3 id="time-budgeting">Time Budgeting<a class="headerlink" href="#time-budgeting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>在层次化设计中，chip-level 的时序约束需要正确地映射到各个 block-level 约束。例如某个关键路径的时延不超过某个值，那么这个约束需要被分解并分配给相关的块级时序约束。</li>
+<li>
+<p>Interface Logic Models (ILMs) 接口逻辑模型可以简化并加速设计。因为我们 block-level 内部的时序已经在子模块里检测，在分析时可以将中间逻辑简化，相当于只分析 in2reg、reg2out、in2out 的时序。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241210122033.png" width=75%></div></p>
+</li>
+</ul>
+<h3 id="pin-assignment">Pin Assignment<a class="headerlink" href="#pin-assignment" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Pin constraints: Layers, spacing, size, overlap; Net groups, pin guides<ul>
+<li>Net groups，将具有相似特性或连接需求的引脚分组。</li>
+<li>Pin guides，用来影响特定 net groups 的自动化 pin 放置。 </li>
+</ul>
+</li>
+<li>Pin 可使用以下两种优先级的约束：<ul>
+<li>Placement based：使用 flightlines 来指导引脚的放置，确保它们在芯片上的布局符合特定的规则。</li>
+<li>Route based：指定 trial route 尝试布线和 boundary crossings，以指导引脚的布线路径。</li>
+</ul>
+</li>
+</ul>
+<h3 id="feedthrough">Feedthrough<a class="headerlink" href="#feedthrough" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Feedthrough 路径定义从顶层 I/O 引脚进入和穿过 Block，以减少长路由和拥塞。buffer 需要被添加到这些路径中，以保持信号强度并避免 max slew 和扇出违规。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241210123019.png" width=75%></div></p>
+</li>
+</ul>
+<h2 id="power-planning">Power Planning<a class="headerlink" href="#power-planning" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Power Planning 一般在 floorplanning 阶段完成，placement 阶段可能会有调整。</li>
+<li>
+<p>power 由 dynamic 和 static(leakgae) 组成，我们需要考虑电源的 reliability，主要有下面两个问题：</p>
+<ul>
+<li>IR Drop，在电源线（power line）长度上，由于电源线电阻导致的电源电压（supply voltage）下降。<ul>
+<li>构建 resistance matrix，其中包含 power grid 电源网络中每个节点的电阻。</li>
+<li>考虑每个门的 average current。</li>
+<li>使用矩阵求解的方法来计算每个节点上的电流。通过矩阵求解，设计者可以确定电源线上的电压下降。</li>
+</ul>
+</li>
+<li>Electromigration（EM），在集成电路后段会部署大量金属连线结构，本来这些金属连线的作用就是让电子迁移，实现导电。但反过来，电子的流动会造成金属材料迁移，最终导线被“掐断”。<ul>
+<li>可能导致短路、开路。或者导致性能的下降（改变 wire RC）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Power Distribution Network</p>
+<ul>
+<li>功能：<ul>
+<li>Carry current from pads（焊盘）to transistors on chip，电流从芯片的 IO 端口传输到内部的逻辑单元。</li>
+<li>Maintain stable voltage with low noise</li>
+<li>Provide average and peak power demands</li>
+<li>Provide current return paths for signals</li>
+<li>Avoid electromigration &amp; self-heating wearout</li>
+<li>Consume little chip area and wire</li>
+<li>Easy to lay out</li>
+</ul>
+</li>
+<li>更宽的 Power Lines，可以降低 IR DROP，可以减少 EM。但同时会导致 routing 变得困难。</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p>设计者通常会尽可能地使电源轨宽和厚，可以降低电流密度，以减少 EM 和 IR Drop 的影响。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241210164710.png" width=75%></div></p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>我们使用 color map 来映射芯片的 IR drop，强调 hotspots。可以看到在添加 single wire 之后，IR drop 有所减少。
+<div align = center><img src="https://cdn.hobbitqia.cc/20241210170752.png" width=75%></div></p>
+</div>
+</li>
+<li>
+<p>Power and Ground Routing</p>
+<ul>
+<li>每个 std cell 都要有 power（VDD）和 ground（GND）的连接。</li>
+<li>Power/Ground mesh 允许电源和地信号通过多个路径从源到达目的地。这样有更小的串联电阻，从高层金属层到低层金属层形成一个层次化的 mesh 网络，在不同层之间需要多个通孔（vias）来连接电源和地网络。</li>
+<li>通常 P/G routings 是很规则的（均匀分布，以提供稳定供应），resources 通常会预留出来。</li>
+</ul>
+</li>
+<li>
+<p>Standard Approaches to Power Routing</p>
+<ul>
+<li>Power Grid，通过水平和竖直的 power bars 互联；在大部分高性能设计中使用；Often well over half of total metal on upper thicker layers used for VDD/GND</li>
+<li>
+<p>Dedicated VDD/GND planes，成本昂贵，只在 Alpha 21264 使用过。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241210172548.png" width=20%></div></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Power Grid Creation</p>
+<ul>
+<li>权衡 IR drop, EM VS. routing resources</li>
+<li>
+<p>Need to determine: General grid structure (gating or multi-voltage?), Number and location of power pads (per voltage), Metal layers to be used, Width and spacing of straps, Via stacks versus available routing tracks, Rings / no rings, Hierarchical block shielding.</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20241210173008.png" width=30%></div></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="floorplanning-in-innovus">Floorplanning in Innovus<a class="headerlink" href="#floorplanning-in-innovus" title="Permanent link">&para;</a></h2>
+<div align = center><img src="https://pic3.zhimg.com/v2-422d01321f2c9d6b13766e3fc2d680cc_1440w.jpg" width=80%></div>
+<div align = center><img src="https://pic3.zhimg.com/v2-d6e08b6c095094818ca4e4447616f194_1440w.jpg" width=80%></div>
 
 
 
@@ -5595,7 +6125,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月7日 15:10:29</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年12月10日 17:47:07</span>
   </span>
 
     
@@ -5605,7 +6135,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年12月7日 15:10:29</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年12月10日 17:47:07</span>
   </span>
 
     
@@ -5618,6 +6148,8 @@
 
 
                 
+
+<link rel="stylesheet" href="/css/counter.css">
 
 <!-- Giscus -->
 <h2 id="__comments">评论</h2>
@@ -5727,16 +6259,16 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
-        <script src="../js/baidu-tongji.js"></script>
+        <script src="../../../js/baidu-tongji.js"></script>
       
         <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
       
-        <script src="../js/katex.js"></script>
+        <script src="../../../js/katex.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
