@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-12-11":
+    - newpage:
+        text: EDA > 数字集成电路设计 > 布局
+        href: /EDA/VLSI/lec06
   - "2024-12-10":
     - newpage:
         text: EDA > 数字集成电路设计 > 芯片物理设计
