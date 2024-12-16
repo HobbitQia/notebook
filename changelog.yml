@@ -1,4 +1,15 @@
 - "2024":
+  - "2024-12-16":
+    - refactor: 更新了 Papers 导航栏！
+    - newpage:
+      text: Papers > LLM2Vec
+      href: /Paper/LLM2Vec
+    - newpage:
+      text: Papers > CLIP
+      href: /Paper/CLIP
+    - newpage:
+        text: EDA > 数字集成电路设计 > 时钟树综合
+        href: /EDA/VLSI/lec07
   - "2024-12-11":
     - newpage:
         text: EDA > 数字集成电路设计 > 布局
