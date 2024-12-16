@@ -267,6 +267,8 @@ nav:
       - 逻辑综合: EDA/VLSI/lec03.md
       - 时序分析: EDA/VLSI/lec04.md
       - 芯片物理设计: EDA/VLSI/lec05.md
+      - 布局: EDA/VLSI/lec06.md
+      - 时钟树综合: EDA/VLSI/lec07.md
   - Mathematics:
     - 线性代数: 
       - 线性代数Ⅱ(H): Mathematics/线性代数Ⅱ(H)/Rings.md
@@ -275,22 +277,30 @@ nav:
       - 感知机: MLT/mlt2.md
   - Papers:
     - Paper/index.md
-    - BiS-KM: Paper/BiS-KM.md
-    - ZeRO: Paper/ZeRO.md
-    - Megatron-LM: Paper/Megatron-LM.md
-    - GPipe: Paper/GPipe.md
-    - 混合精度训练: Paper/mixed_precision.md
-    - FAST: Paper/FAST.md
-    - Softmax 加速: Paper/softmax.md
-    - PagedAttention & vLLM: Paper/PagedAttention.md
-    - VecPAC: Paper/VecPAC.md
-    - NN-LUT: Paper/NN-LUT.md
-    - ChatEDA: Paper/ChatEDA.md
-    - GPT-1: Paper/GPT-1.md
-    - GPT-2: Paper/GPT-2.md
-    - GPT-3: Paper/GPT-3.md
-    - APEX: Paper/APEX.md
-    - QServe: Paper/QServe.md
+    - LLM Training:
+      - ZeRO: Paper/ZeRO.md
+      - Megatron-LM: Paper/Megatron-LM.md
+      - GPipe: Paper/GPipe.md
+      - 混合精度训练: Paper/mixed_precision.md
+    - LLM Inference:
+      - PagedAttention & vLLM: Paper/PagedAttention.md
+      - QServe: Paper/QServe.md
+    - LLM:
+      - GPT-1: Paper/GPT-1.md
+      - GPT-2: Paper/GPT-2.md
+      - GPT-3: Paper/GPT-3.md
+      - LLM2Vec: Paper/LLM2Vec.md
+    - Accelerators:
+      - FAST: Paper/FAST.md
+      - Softmax 加速: Paper/softmax.md
+      - NN-LUT: Paper/NN-LUT.md
+    - CGRA:
+      - VecPAC: Paper/VecPAC.md
+      - APEX: Paper/APEX.md
+    - Others:
+      - BiS-KM: Paper/BiS-KM.md
+      - ChatEDA: Paper/ChatEDA.md
+      - CLIP: Paper/CLIP.md
   - Miscellaneous:
     - Misc/index.md
     - 浮点数与定点数: Misc/float.md

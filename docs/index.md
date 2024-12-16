@@ -26,5 +26,5 @@ counter: False
 
 #### [:fontawesome-brands-telegram:](https://t.me/Hobbit_Qia) [My Telegram](https://t.me/Hobbit_Qia) 
 
-#### [:material-email:](mailto:hobbitqia@gmail.com) [My Gmail](mailto:hobbitqia@gmail.com)  [:material-email-outline:](mailto:hobbitqia@zju.edu.cn) and [My ZJU Email](mailto:hobbitqia@zju.edu.cn)
+#### [:material-email:](mailto:hobbitqia@gmail.com) [My Gmail](mailto:hobbitqia@gmail.com) and [:material-email-outline:](mailto:hobbitqia@zju.edu.cn) [My ZJU Email](mailto:hobbitqia@zju.edu.cn)
 
