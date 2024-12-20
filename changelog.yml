@@ -1,4 +1,8 @@
 - "2024":
+  - "2024-12-20":
+    - newpage:
+        text: TinyML > 视觉 Transformer
+        href: /TinyML/vit
   - "2024-12-16":
     - refactor: 更新了 Papers 导航栏！
     - newpage:
