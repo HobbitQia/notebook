@@ -7133,7 +7133,7 @@ buffer 需要互斥的保护，因此需要一个 mutex。当它满了的时候�
 <a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">    </span><span class="n">signal</span><span class="p">(</span><span class="n">full</span><span class="o">-</span><span class="n">slots</span><span class="p">);</span>
 <a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">TRUE</span><span class="p">)</span>
 </code></pre></div>
-    这里 <code>wait()</code> 的顺序不能调换：如果先 <code>wait(mutex)</code>，那么 <code>wait(empty-slots)</code> 之后，如果 buffer 空了，那么这个时候就会带着 mutex 休眠，这样另一个进程也拿不到这个锁了。</li>
+    这里 <code>wait()</code> 的顺序不能调换：如果先 <code>wait(mutex)</code>，那么 <code>wait(empty-slots)</code> 之后，如果 buffer 满了，那么这个时候就会带着 mutex 休眠，这样另一个进程也拿不到这个锁了。</li>
 <li>The consumer process
     <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">do</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="c1">//produce an item</span>
