@@ -1,4 +1,12 @@
 - "2024":
+  - "2024-12-28":
+    - newpage:
+        text: Miscellaneous > Triton > Triton Puzzles
+        href: Misc/Triton/triton-puzzle
+  - "2024-12-22":
+    - newpage:
+        text: EDA > 数字集成电路设计 > 布线
+        href: /EDA/VLSI/lec09
   - "2024-12-20":
     - newpage:
         text: TinyML > 视觉 Transformer
