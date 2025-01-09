@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://note.hobbitqia.cc/DB/db1/">
+        <link rel="canonical" href="https://note.hobbitqia.cc/CA/DSA/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../CA5/">
       
       
-        <link rel="next" href="../db2/">
+        <link rel="next" href="../../OS/">
       
       
       <link rel="icon" href="../../log.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>数据库介绍 - HobbitQia的笔记本</title>
+        <title>领域专用架构 - HobbitQia的笔记本</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#domain-specific-architectures" class="md-skip">
           跳转至
         </a>
       
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              数据库介绍
+              领域专用架构
             
           </span>
         </div>
@@ -2518,8 +2518,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2565,16 +2563,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../DB/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2591,7 +2589,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             数据库系统
@@ -2604,30 +2602,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    数据库介绍
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../DB/db1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2636,215 +2614,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#database-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Systems
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#purpose-of-database-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose of Database Systems
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#characteristics-of-databases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Characteristics of Databases
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#view-of-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      View of Data
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="View of Data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schema-and-instance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schema and Instance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-independence" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Independence
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Models
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#datahase-languages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Datahase Languages
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Datahase Languages">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-definition-language-ddl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Definition Language (DDL, 数据定义语言)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-manipulation-language-dml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Manipulation Language (DML, 数据操作语言)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sql-query-language" class="md-nav__link">
-    <span class="md-ellipsis">
-      SQL Query Language
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#database-access-from-application-program" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Access from Application Program
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#database-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Design
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#database-enginee" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Enginee
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Database Enginee">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#storage-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      Storage Manager
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-processor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Query Processor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transaction-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transaction Management (事务管理)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#database-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Users
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#history" class="md-nav__link">
-    <span class="md-ellipsis">
-      History
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2857,7 +2626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db2/" class="md-nav__link">
+      <a href="../../DB/db2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2878,7 +2647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db3/" class="md-nav__link">
+      <a href="../../DB/db3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2899,7 +2668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db4/" class="md-nav__link">
+      <a href="../../DB/db4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2920,7 +2689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db5/" class="md-nav__link">
+      <a href="../../DB/db5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2941,7 +2710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db6/" class="md-nav__link">
+      <a href="../../DB/db6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2962,7 +2731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db7/" class="md-nav__link">
+      <a href="../../DB/db7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2983,7 +2752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db8/" class="md-nav__link">
+      <a href="../../DB/db8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3004,7 +2773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db9/" class="md-nav__link">
+      <a href="../../DB/db9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3025,7 +2794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db10/" class="md-nav__link">
+      <a href="../../DB/db10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3046,7 +2815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db11/" class="md-nav__link">
+      <a href="../../DB/db11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3067,7 +2836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db12/" class="md-nav__link">
+      <a href="../../DB/db12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3088,7 +2857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db13/" class="md-nav__link">
+      <a href="../../DB/db13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3109,7 +2878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db14/" class="md-nav__link">
+      <a href="../../DB/db14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3130,7 +2899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db15/" class="md-nav__link">
+      <a href="../../DB/db15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3390,7 +3159,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../CA/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3423,7 +3192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA1/" class="md-nav__link">
+      <a href="../CA1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3444,7 +3213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA2/" class="md-nav__link">
+      <a href="../CA2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3465,7 +3234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA3/" class="md-nav__link">
+      <a href="../CA3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3486,7 +3255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA4/" class="md-nav__link">
+      <a href="../CA4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3507,7 +3276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CA/CA5/" class="md-nav__link">
+      <a href="../CA5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3533,8 +3302,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -3546,11 +3317,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
         
           
           <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
@@ -3564,7 +3335,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             量化研究方法
@@ -3575,10 +3346,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../CA/DSA/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    领域专用架构
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3587,6 +3378,122 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guidelines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-designs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Designs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Designs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-domain-dennard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Domain: Dennard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#googles-tensor-processing-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google's Tensor Processing Unit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-catapult" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft Catapult
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intel-crest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intel Crest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixel-visual-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pixel Visual Core
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-cutting-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-Cutting Issues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-cpus-versus-gpus-versus-dnn-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: CPUs Versus GPUs Versus DNN Accelerators
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6422,55 +6329,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#database-systems" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Database Systems
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#purpose-of-database-systems" class="md-nav__link">
+  <a href="#guidelines" class="md-nav__link">
     <span class="md-ellipsis">
-      Purpose of Database Systems
+      Guidelines
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#characteristics-of-databases" class="md-nav__link">
+  <a href="#example-designs" class="md-nav__link">
     <span class="md-ellipsis">
-      Characteristics of Databases
+      Example Designs
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#view-of-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      View of Data
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="View of Data">
+    <nav class="md-nav" aria-label="Example Designs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#schema-and-instance" class="md-nav__link">
+  <a href="#example-domain-dennard" class="md-nav__link">
     <span class="md-ellipsis">
-      Schema and Instance
+      Example Domain: Dennard
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-independence" class="md-nav__link">
+  <a href="#googles-tensor-processing-unit" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Independence
+      Google's Tensor Processing Unit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-catapult" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft Catapult
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intel-crest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intel Crest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixel-visual-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pixel Visual Core
     </span>
   </a>
   
@@ -6482,129 +6407,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-models" class="md-nav__link">
+  <a href="#cross-cutting-issues" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Models
+      Cross-Cutting Issues
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#datahase-languages" class="md-nav__link">
+  <a href="#putting-it-all-together-cpus-versus-gpus-versus-dnn-accelerators" class="md-nav__link">
     <span class="md-ellipsis">
-      Datahase Languages
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Datahase Languages">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-definition-language-ddl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Definition Language (DDL, 数据定义语言)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-manipulation-language-dml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Manipulation Language (DML, 数据操作语言)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sql-query-language" class="md-nav__link">
-    <span class="md-ellipsis">
-      SQL Query Language
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#database-access-from-application-program" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Access from Application Program
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#database-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Design
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#database-enginee" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Enginee
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Database Enginee">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#storage-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      Storage Manager
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-processor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Query Processor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transaction-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transaction Management (事务管理)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#database-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Users
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#history" class="md-nav__link">
-    <span class="md-ellipsis">
-      History
+      Putting It All Together: CPUs Versus GPUs Versus DNN Accelerators
     </span>
   </a>
   
@@ -6629,241 +6443,247 @@
   
 
 
-<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
-<details class="abstract">
-<summary>Abstract</summary>
+<h1 id="domain-specific-architectures">Domain-Specific Architectures<a class="headerlink" href="#domain-specific-architectures" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>Chapter 7: Domain-Specific Architectures of <em>Computer Architecture: A Quantitative Approach</em> </p>
 <ul>
-<li>Database Systems</li>
-<li>Database Applications</li>
-<li>Purpose of Database Systems</li>
-<li>View of Data</li>
-<li>Data Models</li>
-<li>Database Languages</li>
-<li>Database Design</li>
-<li>Database Engine</li>
-<li>Database Users and Administrators</li>
-<li>History of Database Systems</li>
+<li>Introduction</li>
+<li>Guidelines</li>
+<li>Example Designs<ul>
+<li>Google's Tensor Processing Unit</li>
+<li>Microsoft Catapult</li>
+<li>Intel Crest</li>
+<li>Pixel Visual Core</li>
 </ul>
-</details>
-<h2 id="database-systems">Database Systems<a class="headerlink" href="#database-systems" title="Permanent link">&para;</a></h2>
-<p>DBMS (Database Management System)</p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202302271012309.png" width = 35%/> </div>
-
-<h2 id="purpose-of-database-systems">Purpose of Database Systems<a class="headerlink" href="#purpose-of-database-systems" title="Permanent link">&para;</a></h2>
-<p>Database systems offer solutions to all the below problems.  </p>
+</li>
+<li>Cross-Cutting Issues</li>
+<li>Putting It All Together: CPUs Versus GPUs Versus DNN Accelerators</li>
+</ul>
+</div>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <ul>
-<li>data redundancy (数据冗余) and inconsistency</li>
-<li>data isolation (数据孤立，数据孤岛)</li>
-<li>difficulty in accessing data</li>
 <li>
-<p>Integrity problems (完整性问题)</p>
+<p>Motivation:</p>
 <ul>
-<li>完整的约束条件被藏在数据和代码中，而不是显式地声明。 <strong><em>e.g.</em></strong> "account balance <span class="arithmatex">\(\geq\)</span> 1"</li>
-</ul>
-</li>
-<li>
-<p>Atomicity problems (原子性问题)</p>
-<ul>
-<li>Failures may leave database in an inconsistent state with partial updates carried out <strong><em>e.g.</em></strong> 从 A 账户转账到 B, 我们必须保证 A 转出 B 转入这两件事同时进行，不能被打断。</li>
-</ul>
-</li>
-<li>
-<p>Concurrent access anomalies (并发访问异常)</p>
-<ul>
-<li>Uncontrolled concurrent accesses can lead to inconsistencies  </li>
-</ul>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202302271037281.png" width = 40%/> </div>  </p>
-</details>
-</li>
-<li>
-<p>Security problems  </p>
-<ul>
-<li>Authentication (认证), Priviledge (权限), Audit (审计)</li>
-</ul>
-</li>
-</ul>
-<h2 id="characteristics-of-databases">Characteristics of Databases<a class="headerlink" href="#characteristics-of-databases" title="Permanent link">&para;</a></h2>
-<ul>
-<li>data persistence (数据持久性)</li>
-<li>convenience in accessing data (数据访问便利性)</li>
-<li>data integrity(数据完整性)</li>
-<li>concurrency control for multiple user (多用户并发控制)</li>
-<li>failure recovery (故障恢复)</li>
-<li>security control (安全控制)</li>
-</ul>
-<h2 id="view-of-data">View of Data<a class="headerlink" href="#view-of-data" title="Permanent link">&para;</a></h2>
-<p>Three-level abstraction of databases  </p>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202302271043590.png" width = 60%/> </div>
-
-<ul>
-<li>physical level: 物理中如何保存、实现（如磁盘）</li>
-<li>logical level: 数据库中存储什么数据？数据之间的关系？</li>
-<li>view level: 不同人看到不同的他们所需要的数据</li>
-</ul>
-<p>Advantages:  </p>
-<ul>
-<li>Hide the complexities</li>
-<li>Enhance the adaptation to changes<br />
-硬件环境变化 (physical level), 可以通过调整逻辑关系和映射来适应新的硬件环境。  <br />
-逻辑环境变化 (logic level), 可以通过 view 和 logic 的映射使得 view 尽量少变化。  </li>
-</ul>
-<h3 id="schema-and-instance">Schema and Instance<a class="headerlink" href="#schema-and-instance" title="Permanent link">&para;</a></h3>
-<p>Similar to types and variables in programming languages.  </p>
-<ul>
-<li><strong>Schema</strong> (模式)– the logical structure of the database (physical/logical)</li>
-<li><strong>Instance</strong> (实例) – the actual content of the database at a particular point in time </li>
-</ul>
-<h3 id="data-independence">Data Independence<a class="headerlink" href="#data-independence" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Physical Data Independence</strong> (物理数据独立性) – the ability to modify the physical schema without changing the logical schema</li>
-<li><strong>Logical Data Independence</strong> (逻辑数据独立性) - the ability to modify the logical schema without changing the user view schema</li>
-</ul>
-<p>映射修改，但不用修改 schema. </p>
-<h2 id="data-models">Data Models<a class="headerlink" href="#data-models" title="Permanent link">&para;</a></h2>
-<p><strong>Data models</strong> is a collection of tools for describing data, data relationships, data semantics, data constraints.  </p>
-<ul>
-<li>Relational model(关系模型)<br />
-（表格）数据库系统层面</li>
-<li>Entity-Relationship(实体-联系) data model <br />
-需求分析层面</li>
-<li>Object-based data models <ul>
-<li>Object-oriented  (面向对象数据模型)</li>
-<li>Object-relational (对象-关系模型模型)</li>
-</ul>
-</li>
-<li>Semistructured data model  (XML)(半结构化数据模型)</li>
-<li>Other older models:<ul>
-<li>Network model (网状模型)</li>
-<li>Hierarchical model(层次模型)</li>
-</ul>
-</li>
+<li>Moore 预测了 50 年后晶体管的消亡。</li>
+<li>Dennard 定律，多的晶体管现在意味着更多的功率。能源预算没有增加，我们已经用多个高效核心取代了单个低效处理器。因此，我们没有什么办法可以继续大幅改进通用架构的性价比和能源效率。由于能量预算有限，如果我们想要更高的性能（ops/s），我们需要降低 energy per operation。</li>
 </ul>
 <div class="admonition example">
-<p class="admonition-title">Relational Model</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202302271106782.png" width = 55%/> </div>  </p>
-<p>12 tuples, 4 attributes. </p>
+<p class="admonition-title">Energy Example</p>
+<p>如果保持通用性，我们修改 core，可能获得 10% 的提升。但是如果想获得数量级的改进，就需要将每条指令的算术运算数量从 1 增加到数百。为此要从 general-purpose cores 转向 domain-specific architectures（DSAs）。
+<div align = center><img src="https://cdn.hobbitqia.cc/20250108171803.png" width=80%></div></p>
 </div>
-<h2 id="datahase-languages">Datahase Languages<a class="headerlink" href="#datahase-languages" title="Permanent link">&para;</a></h2>
-<h3 id="data-definition-language-ddl">Data Definition Language (DDL, 数据定义语言)<a class="headerlink" href="#data-definition-language-ddl" title="Permanent link">&para;</a></h3>
-<details class="example">
-<summary>Example</summary>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202302271112923.png" width = 50%/> </div>  </p>
-</details>
-<p>C 语言里的 struct 经过编译后全部变为了代码（有一张符号表）但数据库里不会。</p>
-<p>Data dictionary contains <strong>metadata</strong> (元数据，<strong>i.e.</strong> data about data)</p>
-<ul>
-<li>DDL compiler generates a set of table templates stored in a data dictionary (数据字典)</li>
-<li>Database schema </li>
-<li>Integrity constraints (完整性约束) 
-Primary key (ID uniquely identifies instructors, 主键)
-Referential integrity (references constraint in SQL, 参照完整性)
-e.g. dept_name value in any instructor tuple must appear in department relation</li>
-<li>Authorization (权限)</li>
-</ul>
-<h3 id="data-manipulation-language-dml">Data Manipulation Language (DML, 数据操作语言)<a class="headerlink" href="#data-manipulation-language-dml" title="Permanent link">&para;</a></h3>
-<p>Two classes of languages </p>
-<ul>
-<li>Procedural (过程式)– user specifies what data is required and how to get those data <strong><em>e.g.</em></strong> C</li>
-<li>Declarative (nonprocedural，陈述式，非过程式) – user specifies what data is required without specifying how to get those data <strong><em>e.g.</em></strong> SQL</li>
-</ul>
-<p><strong>SQL</strong> is the most widely used query language</p>
-<h3 id="sql-query-language">SQL Query Language<a class="headerlink" href="#sql-query-language" title="Permanent link">&para;</a></h3>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202302271121008.png" width = 50%/> </div>
-
-<h3 id="database-access-from-application-program">Database Access from Application Program<a class="headerlink" href="#database-access-from-application-program" title="Permanent link">&para;</a></h3>
-<p>数据库必须由过程式语言编写。</p>
-<p>Application programs generally access databases through one of
-* Language extensions to allow embedded SQL <strong><em>e.g.</em></strong> 通过预处理器，将 select 语句识别出来，翻译成 C 语言的函数调用。
-* <strong>API</strong> (Application program interface) <strong><em>e.g.</em></strong> ODBC/JDBC which allow SQL queries to be sent to a database. </p>
-<h2 id="database-design">Database Design<a class="headerlink" href="#database-design" title="Permanent link">&para;</a></h2>
-<ul>
+</li>
 <li>
-<p>Entity Relationship Model (实体-联系模型) <br />
-一对一/一对多/多对一/多对多  </p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202302271127241.png" width = 75%/> </div> </p>
+<p>Such computers will be much more <strong>heterogeneous</strong> than the homogeneous multicore chips of the past.</p>
+<ul>
+<li>计算机将由标准处理器组成，用于运行传统的大型程序如 OS，以及仅执行有限范围任务的 DSAs。</li>
+</ul>
+</li>
+<li>过去几十年利用 Moore 的架构创新可能不太适合某些领域，如 cache, out-of-order。我们可以针对特定领域进行更好地资源复用，提高 energy efficiency。</li>
+<li>Challenges:<ul>
+<li>找到需求足够大的目标，以证明在 SOC 甚至定制芯片上分配专用芯片是合理的。<ul>
+<li>一个方法是利用可重构的设备，如 FPGA，这样可以提高适用范围。但是相应地，这样的硬件没用定制芯片 efficient。</li>
+</ul>
+</li>
+<li>如何移植软件到 DSA 上。</li>
+</ul>
 </li>
 </ul>
-<p>图是中立的，可以用关系数据库/面向对象数据库实现</p>
+<h2 id="guidelines">Guidelines<a class="headerlink" href="#guidelines" title="Permanent link">&para;</a></h2>
+<p>使用下面的准则，可以带来更简单的设计；更好地匹配 99% 的 response-time deadlines。</p>
 <ul>
-<li>
-<p>Normalization Theory (规范化理论)<br />
-Formalize what designs are bad, and test for them  </p>
+<li><strong>Use dedicated memories to minimize the distance over which data is moved.</strong> 使用专用内存来最小化数据之间的移动距离。</li>
+<li><strong>Invest the resources saved from dropping advanced microarchitectural optimizations into more arithmetic units or bigger memories.</strong> 将节省的资源（不使用高级的微架构优化）投入到更多的算术单元或更大的内存中。</li>
+<li><strong>Use the easiest form of parallelism that matches the domain.</strong> 使用匹配领域的最简单的并行模式。</li>
+<li><strong>Reduce data size and type to the simplest needed for the domain.</strong> 减少数据大小和类型到领域所需的最简单形式。</li>
+<li><strong>Use a domain-specific programming language to port code to the DSA.</strong> 使用领域特定的编程语言来移植代码到 DSA 上。</li>
+</ul>
 <div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><div align=center> <img src="http://cdn.hobbitqia.cc/202302271128646.png" width = 60%/> </div> </p>
-<p>这个表存在冗余, department 有重复，应该拆分为两个表（前四列和后三列）</p>
+<p class="admonition-title">Guideline Example</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20250108185902.png" width=80%></div></p>
 </div>
-</li>
-</ul>
-<h2 id="database-enginee">Database Enginee<a class="headerlink" href="#database-enginee" title="Permanent link">&para;</a></h2>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202302271133961.png" width = 50%/> </div>
-
+<h2 id="example-designs">Example Designs<a class="headerlink" href="#example-designs" title="Permanent link">&para;</a></h2>
+<h3 id="example-domain-dennard">Example Domain: Dennard<a class="headerlink" href="#example-domain-dennard" title="Permanent link">&para;</a></h3>
+<h3 id="googles-tensor-processing-unit">Google's Tensor Processing Unit<a class="headerlink" href="#googles-tensor-processing-unit" title="Permanent link">&para;</a></h3>
 <ul>
-<li>The storage manager,</li>
-<li>The query processor component, </li>
-<li>The transaction management component.</li>
-</ul>
-<h3 id="storage-manager">Storage Manager<a class="headerlink" href="#storage-manager" title="Permanent link">&para;</a></h3>
-<p>为了数据持久化，放在硬盘里，但数据处理要进入内存，这之间存在数据鸿沟。<br />
-按块访问内存 (4k/16k), 缓冲管理。</p>
+<li>an Inference Data Center Accelerator</li>
+<li>
+<p>Architecture</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20250108190304.png" width=70%></div></p>
 <ul>
-<li>File manager</li>
-<li>Buffer manager</li>
-<li>Authorization and integrity manager</li>
-<li>Transaction manager</li>
-</ul>
-<p>数据库里放的是</p>
-<ul>
-<li>data files 真正的数据</li>
-<li>data dictionary 放的是 metadata</li>
-<li>statistical data 用于数据库的查询处理</li>
-<li>indices</li>
-</ul>
-<h3 id="query-processor">Query Processor<a class="headerlink" href="#query-processor" title="Permanent link">&para;</a></h3>
-<p>The query processor components include:  </p>
-<ul>
-<li><strong>DDL interpreter</strong> -- interprets DDL statements and records the definitions in the data dictionary.</li>
-<li><strong>DML compiler</strong> -- translates DML statements in a query language into an <strong>evaluation plan</strong> consisting of low-level instructions that the query evaluation engine understands.<ul>
-<li>The DML compiler performs <strong>query optimization</strong> (查询优化); that is, it picks the lowest cost evaluation plan from among the various alternatives.  <br />
-执行计划会根据统计数据的改变而改变。  </li>
+<li>TPU 是通过 PCIe I/O bus 的协处理器，可以插入到现有的 servers。</li>
+<li>为了简化设计，由 host server 通过 PCIe bus 发送指令，而不是 TPU 自己读取从内存读指令。</li>
+<li>内部 blocks 之间由 256B 的路径连接。</li>
+<li>MMU 是一个 256<span class="arithmatex">\(\times\)</span>256 的 ALU 阵列，每个 ALU 可以执行 8-bit MAC 操作；16-bit 结果在 4MiB 的 32-bit Accumulator 累加。<ul>
+<li>如果混合使用 8-bit weight 和 16-bit activation 时（反之亦然），矩阵单元以 &frac12; 速度计算，而当两者都是 16-bit 时，它以 &frac14; 速度计算。</li>
+<li>它每个时钟周期读取和写入 256 个值，并且可以执行矩阵乘法或卷积。</li>
 </ul>
 </li>
-<li><strong>Query evaluation engine</strong> -- executes low-level instructions generated by the DML compiler.  </li>
+<li>非线性函数由 Activation 硬件计算（Accumulator 下方）。</li>
+<li>Weights 通过片上 Weight FIFO 进行分级，该 FIFO 从 Weight Memory（片外 8 GiB DRAM）中读取（对于推理，权重是 read-only 的；8 GiB 支持许多同时活动的模型）。</li>
+<li>中间结果保存在 24 MiB 片上 Unified Buffer 中，可用作矩阵乘法单元的输入和输出。也可以通过 DMA 与 CPU 传输数据。</li>
 </ul>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202302271153539.png" width = 56%/> </div>
-
+</li>
+<li>
+<p>Microarchitecture</p>
 <ul>
-<li>Parsing and translation</li>
-<li>Optimization</li>
-<li>Evaluation</li>
+<li>设计哲学：keep MMU(Matrix Multiply Unit) busy. 即将其他操作（读权重，读写激活值）与 MMU 的操作 overlap。</li>
+<li>
+<p>读大 SRAM 会消耗大量 energy，因此 MMU 采用 systolic array 来节省 energy（减少了读写 unified buffer 的次数）。</p>
+<ul>
+<li>
+<p>systolic array 是 2D array，每个算术单元独立地计算部分结果。它依赖于来自不同方向的数据以规则的间隔到达数组中的单元格，然后将它们组合起来。</p>
+<details class="example">
+<summary>Systolic Array</summary>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20250108195040.png" width=50%></div></p>
+</details>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20250108195129.png" width=60%></div></p>
+</li>
+<li>
+<p>在 systolic array 中，输入数据只会从内存中读取依次，输出数据也只会写入内存一次。这样可以减少内存访问的次数，从而减少能耗。</p>
+</li>
 </ul>
-<h3 id="transaction-management">Transaction Management (事务管理)<a class="headerlink" href="#transaction-management" title="Permanent link">&para;</a></h3>
-<p>银行转账，A 转账到 B, A 余额减掉 B 余额加上。
-要有隔离性，延迟写回</p>
-<ul>
-<li><strong>Recover Manager</strong> <br />
-ensures that the database remains in a consistent (correct) state despite system failures (<strong><em>e.g.</em></strong> power failures and operating system crashes) and transaction failures.<br />
-日志，防止写回数据库时出现断电或者崩溃。  </li>
-<li><strong>Concurrency-control manager</strong><br />
-controls the interaction among the concurrent transactions, to ensure the consistency of the database.   </li>
+</li>
 </ul>
-<h2 id="database-users">Database Users<a class="headerlink" href="#database-users" title="Permanent link">&para;</a></h2>
-<div align=center> <img src="http://cdn.hobbitqia.cc/202302271205718.png" width = 60%/> </div>
-
+</li>
+<li>
+<p>ISA</p>
 <ul>
-<li>Database Administrator (DBA)
-数据库管理员，要做定义模式，数据库调谐，故障时恢复（备份）等工作。<br />
-老师：我不看好！  </li>
+<li>使用 CISC 指令，没有 PC 和分支指令，CPI 为 10-20，主要有下面五类：<ul>
+<li><code>Read_Host_Memory</code>，从 CPU host memory 读取到片上 Unified Buffer。</li>
+<li><code>Read_Weights</code>，从 Weight Memory Weight FIFO 以便进入 MMU。</li>
+<li><code>MatrixMultiply/Convolve</code>，执行矩阵乘法，矩阵向量乘，逐元素矩阵乘，逐元素向量乘，或者卷积。矩阵运算采用可变大小的 B<span class="arithmatex">\(\times\)</span>256 输入，将其乘以 256<span class="arithmatex">\(\times\)</span>256 常量输入，并产生 B<span class="arithmatex">\(\times\)</span>256 输出，需要 B 个流水线周期才能完成。</li>
+<li><code>Activate</code>，执行非线性激活函数，如 ReLU，Sigmoid。</li>
+<li><code>Write_Host_Memory</code>，从片上 Unified Buffer 写回到 CPU host memory。</li>
 </ul>
-<h2 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+</li>
+<li>
+<p>Implementation</p>
 <ul>
-<li>1973 Turing Award: Charles W. Bachman<br />
-father of databases</li>
-<li>1981 Turing Award: Edgar F. Codd  </li>
-<li>1998 Turing Award: Jim Gray </li>
-<li>2014 Turing Award: Michael Stonebraker</li>
+<li>700MHz，662mm2，65nm，40W。</li>
+</ul>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20250108200612.png" width=50%></div></p>
+</li>
+<li>
+<p>Software: 使用 TensorFlow。</p>
+</li>
+<li>
+<p>Improving over TPU</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20250108200739.png" width=65%></div></p>
+<ul>
+<li>提高内存带宽有最大的效果。</li>
+<li>时钟频率的收益不大。</li>
+<li>当 MMU 扩大到 512<span class="arithmatex">\(\times\)</span>512 时，性能反而会下降。类似于内存内部碎片的问题。<strong><em>e.g.,</em></strong> 600<span class="arithmatex">\(\times\)</span>600 的矩阵乘法，可以分成 9 个 256<span class="arithmatex">\(\times\)</span>256，即 18us；也可以分成 4 个 512<span class="arithmatex">\(\times\)</span>512，即 32us。</li>
+</ul>
+</li>
+</ul>
+<div class="admonition summary">
+<p class="admonition-title">Summary: How TPU Follows the Guidelines</p>
+<ul>
+<li>片上 24MiB Unified Buffer，Weight FIFO。</li>
+<li>28 MiB of dedicated memory and 65,536 8-bit ALUs，和 server 级别的 CPU 相比有 60% 的内存和 250 倍的 ALU。</li>
+<li>2D SIMD，利用 MMU 实现。以及有简单的指令 overlap pipeline。相比之下 GPU 依赖多进程、多线程、1D SIMD；CPU 依赖多进程，乱序执行、1D SIMD。</li>
+<li>只支持 8/16-bit integer，32-bit integer 用于累加。相比之下 CPU GPU 都支持 64-bit integer 和 32/64-bit floating point。</li>
+<li>使用 TensorFlow，而不是 C++/CUDA/OpenCL。</li>
+</ul>
+</div>
+<h3 id="microsoft-catapult">Microsoft Catapult<a class="headerlink" href="#microsoft-catapult" title="Permanent link">&para;</a></h3>
+<ul>
+<li>a Flexible Data Center Accelerator</li>
+<li>Architecture: 使用 FPGA，提供了 flexibility，以适应不同 server 上的不同应用程序，并重新编程同一服务器以随着时间的推移加速不同的应用程序。</li>
+<li>
+<p>Software</p>
+<ul>
+<li>与 TPU 不同，Catapult 要使用 Verilog/VHDL 这样的 HDL 来编程。</li>
+<li>
+<p>code 分为 shell 和 role，其中 shell 相当于系统库，提供了一些可以复用的代码，如数据编组、CPU 到 FPGA 通信、FPGA 到 FPGA 通信、数据移动、重新配置和运行状况监控。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20250108203254.png" width=65%></div></p>
+</li>
+</ul>
+</li>
+<li>
+<p>CNNs on Catapult</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20250108202602.png" width=65%></div></p>
+</li>
+</ul>
+<div class="admonition summary">
+<p class="admonition-title">Summary: How Catapult Follows the Guidelines</p>
+<ul>
+<li>Alter V FPGA 有 5MiB 片上内存，可以根据应用程序进行定制。</li>
+<li>Altera V FPGA 有 3926 18-bit ALUs，例如对于 CNN 可以创造 systolic array，对于 ranking 可以有 60-core 进行多进程。</li>
+<li>Catapult 根据应用程序选择并行方式，例如 CNN 使用 2D SIMD，ranking 使用 MISD。</li>
+<li>可以支持各种数据类型，根据应用程序需要选择。</li>
+<li>使用 RTL 编程（没有跟随 guideline），希望未来可以有 domain-specific language 进行编程。</li>
+</ul>
+</div>
+<h3 id="intel-crest">Intel Crest<a class="headerlink" href="#intel-crest" title="Permanent link">&para;</a></h3>
+<ul>
+<li>a Data Center Accelerator for Training</li>
+<li>Crest 指令对 32<span class="arithmatex">\(\times\)</span>32 矩阵块进行操作。<ul>
+<li>使用 flexpoint 的格式：32<span class="arithmatex">\(\times\)</span>32 个 16-bit 数据矩阵共享一个 5-bit 指数，该指数作为指令集的一部分提供。</li>
+</ul>
+</li>
+<li>Crest 有 12 Processing Cluster。每个集群都包含一个大 SRAM、一个线性代数 PE 以及少量用于片内和片外 routing 的逻辑。</li>
+<li>四个 8 GiB HBM2 DRAM 模块提供 1 TB/s 的内存带宽，这将为 Crest 芯片带来有吸引力的 Roofline 模型。</li>
+<li>
+<p>除了到主内存的高带宽路径之外，Lake Crest 还支持处理 Processing Cluster 内的计算核心之间直接高带宽互连，无需通过共享内存。</p>
+<p><div align = center><img src="https://cdn.hobbitqia.cc/20250108204708.png" width=70%></div></p>
+</li>
+</ul>
+<h3 id="pixel-visual-core">Pixel Visual Core<a class="headerlink" href="#pixel-visual-core" title="Permanent link">&para;</a></h3>
+<ul>
+<li>a Personal Mobile Device Image Processing Unit</li>
+</ul>
+<p>TODO</p>
+<h2 id="cross-cutting-issues">Cross-Cutting Issues<a class="headerlink" href="#cross-cutting-issues" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Heterogeneity and System on a Chip (SOC)</p>
+<ul>
+<li>将 DSA 合并到系统中的简单方法是通过 I/O bus，同时 DSA 具有专用内存来避免从主内中移动数据（要经过 I/O bus）。</li>
+<li>Amdahl's law 告诉我们加速器的性能受到主存和加速器内存之间传输数据的频率的限制。</li>
+<li>可以把加速器集成到同一个 SoC 中，这就是 IP block。<ul>
+<li>IP block 应该要在 PPA 上 scalable，这样可以在不同的 SoC 中使用。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>An Open Instruction Set</p>
+<ul>
+<li>DSA 的一个挑战是如何协作 CPU 来执行剩下的指令，如果是同一个 SoC 就需要有统一的指令。之前 SOC 的第一步是与一家公司签订合同以锁定指令集。</li>
+<li>替代方法是设计定制的 RISC 处理器并移植编译器和库。一位 AMD 工程师估计在一个现代微处理器中有 12 个指令集。</li>
+<li>可以使用 RISC-V 开源指令集，一个可行的免费且开放的指令集，并保留了大量的操作码空间，用于为特定领域的协处理器添加指令。而且对于 DSA 来说，是指令集并不像对通用处理器那么重要。</li>
+</ul>
+</li>
+</ul>
+<h2 id="putting-it-all-together-cpus-versus-gpus-versus-dnn-accelerators">Putting It All Together: CPUs Versus GPUs Versus DNN Accelerators<a class="headerlink" href="#putting-it-all-together-cpus-versus-gpus-versus-dnn-accelerators" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Roofline </p>
+<ul>
+<li>
+<p>TPU 
+    <div align = center><img src="https://cdn.hobbitqia.cc/20250108215309.png" width=65%></div></p>
+</li>
+<li>
+<p>CPU     <br />
+    <div align = center><img src="https://cdn.hobbitqia.cc/20250108215348.png" width=65%></div></p>
+</li>
+<li>
+<p>K80 GPU
+    <div align = center><img src="https://cdn.hobbitqia.cc/20250108215408.png" width=65%></div></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Cost-Performance
+    <div align = center><img src="https://cdn.hobbitqia.cc/20250108215422.png" width=65%></div></p>
+</li>
 </ul>
 
 
@@ -6887,7 +6707,7 @@ father of databases</li>
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年3月13日 16:51:16</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年1月9日 09:09:44</span>
   </span>
 
     
@@ -6897,7 +6717,7 @@ father of databases</li>
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2023年3月2日 16:04:23</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2025年1月9日 09:09:44</span>
   </span>
 
     
