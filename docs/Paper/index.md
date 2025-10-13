@@ -29,3 +29,4 @@
 * [QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving](QServe.md)
 * [Learning Transferable Visual Models From Natural Language Supervision](CLIP.md)
 * [LLM2Vec: Large Language Models Are Secretly Powerful Text Encoders](LLM2Vec.md)
+* [Diffusion + RL](T2I_RL.md)

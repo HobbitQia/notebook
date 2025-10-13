@@ -1,3 +1,8 @@
+- "2025":
+  - "2025-10-13":
+    - newpage:
+        text: Papers > T2I_RL
+        href: /Paper/T2I_RL
 - "2024":
   - "2024-12-16":
     - refactor: 更新了 Papers 导航栏！
