@@ -20,13 +20,13 @@ counter: True
 
 ## Preliminaries
 
-![](assets/images/image.png)
+![](../assets/images/image.png)
 
 * Training
-    ![](assets/images/image_copy.png)
+    ![](../assets/images/image_copy.png)
 
 * Sampling
-    ![](assets/images/30646ff76969aa18658d0884dbe4b20c.png)
+    ![](../assets/images/30646ff76969aa18658d0884dbe4b20c.png)
 
 ## DDPO
 
@@ -53,11 +53,11 @@ counter: True
     * 压缩性，对于扩散模型预训练的训练集，与图像相匹配的文本很少带有图像大小的信息。这就导致了在使用扩散模型生成图像时，很难通过提供文件大小采样出相应大小的图片。预训练模型的这一限制使得基于文件大小的奖励函数成为一个方便的研究示例，大小易于计算同时又无法通过提示词明确指定。这里固定分辨率 512*512。
     * 艺术性，使用一个 LAION aesthetics predictor 的评测模型，是以 CLIP 图片编码为输入的一个线性模型，基于 17600 张由人类打分的图片训练而成。训练集中各图片分数从 1 到 10。
     * 提示词与图像一致性，采用 VLM 打注释，最后用 CLIP 计算注释和原始 prompt 的相似度。
-        ![](assets/images/image_copy_2.png)
+        ![](../assets/images/image_copy_2.png)
 
 * 结果
     * 从左往右随着 RL 训练的进行，图像生成结果与文本越来越接近，同时风格也变得越来越一致。
-        ![](assets/images/image_copy_3.png)
+        ![](../assets/images/image_copy_3.png)
 
     * 在压缩、美学、提示词与图像一致性三个指标上，DDPO-SF 和 DDPO-IS 都取得了更好的结果。同时训练中的 BERTScore 也逐渐提高。
     * 原论文在 finetune 结束后，将提示文本中的主语和活动替换为训练时未曾见过的内容以测试泛化性。结果发现模型对训练集外的动物，非生命体，或者新的活动，都会采样出预期的结果。
@@ -120,7 +120,7 @@ counter: True
         - compatibility，resnet 投影，然后 VBPR prediction 打分
         - personalization，利用 user history，CLIP 计算分数
 
-        ![](assets/images/image_copy_4.png)
+        ![](../assets/images/image_copy_4.png)
 
 * [Science-T2I: Addressing Scientific Illusions in Image Synthesis](https://openaccess.thecvf.com/content/CVPR2025/html/Li_Science-T2I_Addressing_Scientific_Illusions_in_Image_Synthesis_CVPR_2025_paper.html)
     * 场景：模型生成出来的图片可能违背科学事实。
@@ -136,4 +136,4 @@ counter: True
         - 根据 Scorer 对候选数据打分，随后选最高分 K 个和最低分 K 个组成 K 组数据对；得到偏好数据集。
     * 最后基于偏好数据对 DPO 训练。
 
-    ![](assets/images/image_copy_5.png)
+    ![](../assets/images/image_copy_5.png)

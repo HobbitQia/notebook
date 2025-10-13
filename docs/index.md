@@ -24,7 +24,9 @@ counter: False
 
 #### [:fontawesome-brands-zhihu:](https://www.zhihu.com/people/zhui-guang-zhe-45-23) [My ZhiHu](https://www.zhihu.com/people/zhui-guang-zhe-45-23)
 
-#### [:fontawesome-brands-telegram:](https://t.me/Hobbit_Qia) [My Telegram](https://t.me/Hobbit_Qia) 
+<!-- #### [:fontawesome-brands-telegram:](https://t.me/Hobbit_Qia) [My Telegram](https://t.me/Hobbit_Qia)  -->
 
-#### [:material-email:](mailto:hobbitqia@gmail.com) [My Gmail](mailto:hobbitqia@gmail.com) and [:material-email-outline:](mailto:hobbitqia@zju.edu.cn) [My ZJU Email](mailto:hobbitqia@zju.edu.cn)
+#### [:material-email:](mailto:hobbitqia@gmail.com) [My Gmail](mailto:hobbitqia@gmail.com) 
+
+<!-- and [:material-email-outline:](mailto:hobbitqia@zju.edu.cn) [My ZJU Email](mailto:hobbitqia@zju.edu.cn) -->
 

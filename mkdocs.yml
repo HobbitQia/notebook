@@ -96,6 +96,8 @@ extra:
       link: https://github.com/HobbitQia/
 
 plugins:
+  - heti
+  - statistics
   - changelog
   - search
   - git-revision-date-localized:
@@ -297,6 +299,8 @@ nav:
     - CGRA:
       - VecPAC: Paper/VecPAC.md
       - APEX: Paper/APEX.md
+    - Diffusion:
+      - Diffusion + RL: Paper/T2I_RL.md
     - Others:
       - BiS-KM: Paper/BiS-KM.md
       - ChatEDA: Paper/ChatEDA.md
