@@ -4,3 +4,22 @@
 .changelog-type-refactor::before {
     content: "文档重构";
 }
+
+/* 覆盖timeline-card的背景颜色，改为灰色 */
+.timeline-card {
+    background-color: #f5f5f5 !important;
+}
+
+/* 覆盖timeline-content的箭头颜色，改为灰色 */
+.timeline-content::before {
+    background-color: #f5f5f5 !important;
+}
+
+/* 深色模式下的适配 */
+[data-md-color-scheme="slate"] .timeline-card {
+    background-color: #404040 !important;
+}
+
+[data-md-color-scheme="slate"] .timeline-content::before {
+    background-color: #404040 !important;
+}
