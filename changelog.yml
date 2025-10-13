@@ -1,33 +1,17 @@
 - "2025":
-  - "2025-1-8":
+  - "2025-10-13":
     - newpage:
-        text: 量化研究方法 > 领域专用架构
-        href: /CA/DSA
+        text: Papers > T2I_RL
+        href: /Paper/T2I_RL
 - "2024":
-  - "2024-12-30":
-    - newpage:
-        text: Papers > EMNLP 2024
-        href: /Paper/EMNLP24
-  - "2024-12-28":
-    - newpage:
-        text: Miscellaneous > Triton > Triton Puzzles
-        href: /sMisc/Triton/triton-puzzle
-  - "2024-12-22":
-    - newpage:
-        text: EDA > 数字集成电路设计 > 布线
-        href: /EDA/VLSI/lec08
-  - "2024-12-20":
-    - newpage:
-        text: TinyML > 视觉 Transformer
-        href: /TinyML/vit
   - "2024-12-16":
     - refactor: 更新了 Papers 导航栏！
     - newpage:
-        text: Papers > LLM2Vec
-        href: /Paper/LLM2Vec
+      text: Papers > LLM2Vec
+      href: /Paper/LLM2Vec
     - newpage:
-        text: Papers > CLIP
-        href: /Paper/CLIP
+      text: Papers > CLIP
+      href: /Paper/CLIP
     - newpage:
         text: EDA > 数字集成电路设计 > 时钟树综合
         href: /EDA/VLSI/lec07
