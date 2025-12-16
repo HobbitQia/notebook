@@ -2329,7 +2329,7 @@
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p><img alt="Abstract" src="../../assets/images/seer9.png"/></p>
+<p><img alt="Abstract" src="https://github.com/HobbitQia/notebook/tree/note1/docs/assets/images/seer9.png"/></p>
 <ul>
 <li>Paper: <a href="https://dl.acm.org/doi/10.1145/3620665.3640392">SEER: Super-Optimization Explorer for High-Level Synthesis using E-graph Rewriting</a></li>
 <li>Architectural Support for Programming Languages and Operating Systems (<strong>ASPLOS 2024</strong>)</li>
@@ -2347,7 +2347,7 @@
 <li>本篇工作提出了<span><span class="heti-spacing"> </span>SEER (Super-optimization Explorer using E-graph Rewriting)</span>，使用<span class="heti-skip"><span class="heti-spacing"> </span>E-graph<span class="heti-spacing"> </span></span>并行地探索多种优化顺序，保留所有可能的程序版本，最后通过硬件成本模型提取最优解。</li>
 </ul>
 <h2 id="_2">方法<a class="headerlink" href="#_2" title="Permanent link"><span><span class="heti-spacing"> </span>¶</span></a></h2>
-<div align="center"><img src="../assets/images/seer1.png" width="90%"/></div>
+<div align="center"><img src="https://github.com/HobbitQia/notebook/tree/note1/docs/assets/images/seer1.png" width="90%"/></div>
 <ul>
 <li><span>1: C/C++<span class="heti-spacing"> </span></span>程序经过<span class="heti-skip"><span class="heti-spacing"> </span>Polygiest<span class="heti-spacing"> </span></span>转换为<span><span class="heti-spacing"> </span>MLIR</span>，随后<span class="heti-skip"><span class="heti-spacing"> </span>2:<span class="heti-spacing"> </span></span>转为<span><span class="heti-spacing"> </span>SEER dialect</span>（SeerLang）的<span><span class="heti-spacing"> </span>IR</span>。</li>
 <li><span>3: SeerLang<span class="heti-spacing"> </span></span>会调用<span class="heti-skip"><span class="heti-spacing"> </span>egg<span class="heti-spacing"> </span></span>构建<span><span class="heti-spacing"> </span>e-graph</span>，同时<span class="heti-skip"><span class="heti-spacing"> </span>4:<span class="heti-spacing"> </span></span>根据提供好的<span class="heti-skip"><span class="heti-spacing"> </span>rewrite rule<span class="heti-spacing"> </span></span>在<span class="heti-skip"><span class="heti-spacing"> </span>egg<span class="heti-spacing"> </span></span>内进行模式匹配，匹配到之后会进行<span class="heti-skip"><span class="heti-spacing"> </span>5:<span class="heti-spacing"> </span></span>改写（这里的可以在<span class="heti-skip"><span class="heti-spacing"> </span>e-graph<span class="heti-spacing"> </span></span>内，也可以在<span class="heti-skip"><span class="heti-spacing"> </span>SeerLang IR<span class="heti-spacing"> </span></span>内<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。如果改写成功（改写后会进行等价性检查<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>，<span>6:<span class="heti-spacing"> </span></span>将改写后的结果作为表达式添加到<span class="heti-skip"><span class="heti-spacing"> </span>e-graph<span class="heti-spacing"> </span></span>中，直到达到最大迭代次数或者饱和。</li>
@@ -2366,7 +2366,7 @@
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p></p><div align="center"><img src="../assets/images/seer2.png" width="40%"/></div>
+<p></p><div align="center"><img src="https://github.com/HobbitQia/notebook/tree/note1/docs/assets/images/seer2.png" width="40%"/></div>
 <ul>
 <li>为了简化，假设一个<span class="heti-skip"><span class="heti-spacing"> </span>block<span class="heti-spacing"> </span></span>内的内存操作都有依赖关系，因此需要用 <code>seq</code> 来规定顺序。</li>
 <li>从<span class="heti-skip"><span class="heti-spacing"> </span>MLIR<span class="heti-spacing"> </span></span>翻译到<span class="heti-skip"><span class="heti-spacing"> </span>SeerLang<span class="heti-spacing"> </span></span>几乎是无损的，因为<span class="heti-skip"><span class="heti-spacing"> </span>SeerLang<span class="heti-spacing"> </span></span>中的每个操作都保留了类型和操作数信息。</li>
@@ -2386,7 +2386,7 @@
 </ul>
 <details class="example">
 <summary>Example SEER rewriting rules implemented directly in egg.</summary>
-<p></p><div align="center"><img src="../assets/images/seer3.png" width="50%"/></div>
+<p></p><div align="center"><img src="https://github.com/HobbitQia/notebook/tree/note1/docs/assets/images/seer3.png" width="50%"/></div>
 <ul>
 <li><span>SEER<span class="heti-spacing"> </span></span>包含了<span class="heti-skip"><span class="heti-spacing"> </span>106<span class="heti-spacing"> </span></span>条内部改写规则，所有数据路径的重写都依赖于符号和位宽。</li>
 </ul>
@@ -2404,7 +2404,7 @@
 </ul>
 <div class="admonition example">
 <p class="admonition-title">E-graph Rewriting for Super-optimization</p>
-<p></p><div align="center"><img src="../assets/images/seer4.png" width="90%"/></div>
+<p></p><div align="center"><img src="https://github.com/HobbitQia/notebook/tree/note1/docs/assets/images/seer4.png" width="90%"/></div>
 <ul>
 <li>绿色节点代表了程序的初始状态，红色节点代表第一次改写，蓝色节点代表第二次改写。</li>
 <li>第一次是内部改写，使用<span class="heti-skip"><span class="heti-spacing"> </span>seq<span class="heti-spacing"> </span></span>结合律，匹配红色阴影覆盖的子表达式，返回等价的<span class="heti-skip"><span class="heti-spacing"> </span>SeerLang<span class="heti-spacing"> </span></span>表达式，新表达式被合并到匹配的<span class="heti-skip"><span class="heti-spacing"> </span>e-class<span class="heti-spacing"> </span></span>中。</li>
@@ -2425,7 +2425,7 @@
 <li>通过<span class="heti-skip"><span class="heti-spacing"> </span>data path<span class="heti-spacing"> </span></span>改写，<span>SEER<span class="heti-spacing"> </span></span>可以把 <code>(i&lt;&lt;1)+i</code> 转换为 <code>3*i</code>，从而可以进行循环融合。同时<span class="heti-skip"><span class="heti-spacing"> </span>E-graph<span class="heti-spacing"> </span></span>保留了原始的 <code>(i&lt;&lt;1)+i</code> 表达式，在后续提取时<span class="heti-skip"><span class="heti-spacing"> </span>SEER<span class="heti-spacing"> </span></span>会选择这个硬件更友好的表达。</li>
 </ul>
 <p>循环依赖分析</p>
-<p></p><div align="center"><img src="../assets/images/seer5.png" width="70%"/></div>
+<p></p><div align="center"><img src="https://github.com/HobbitQia/notebook/tree/note1/docs/assets/images/seer5.png" width="70%"/></div>
 </li>
 <li>
 <p><code>if</code> 语句转换</p>
@@ -2433,7 +2433,7 @@
 <li>问题：代码变换有时会破坏静态分析所需的结构信息。例如图中我们做了循环完全展开后，这里有若干 <code>if</code> 语句，但是编译器很难发现这些 <code>if</code> 语句之间的关系（例如，这些条件互斥<span class="heti-skip"><span class="heti-spacing"> </span>/<span class="heti-spacing"> </span></span>覆盖所有情况<heti-adjacent class="heti-adjacent-half">）</heti-adjacent>。</li>
 <li><span>SEER<span class="heti-spacing"> </span></span>保留了变换之前的信息作为额外的上下文，有这些信息<span class="heti-skip"><span class="heti-spacing"> </span>SEER<span class="heti-spacing"> </span></span>可以成功执行<span><span class="heti-spacing"> </span>If Correlation</span>，将展开后的一堆<span class="heti-skip"><span class="heti-spacing"> </span>if<span class="heti-spacing"> </span></span>合并为更紧凑的逻辑。</li>
 </ul>
-<p></p><div align="center"><img src="../assets/images/seer6.png" width="60%"/></div>
+<p></p><div align="center"><img src="https://github.com/HobbitQia/notebook/tree/note1/docs/assets/images/seer6.png" width="60%"/></div>
 </li>
 <li>
 <p>这里使用的是<span class="heti-skip"><span class="heti-spacing"> </span>E-graph<span class="heti-spacing"> </span></span>里的<span class="heti-skip"><span class="heti-spacing"> </span>greedy<span class="heti-spacing"> </span></span>提取方法，即从<span class="heti-skip"><span class="heti-spacing"> </span>e-class<span class="heti-spacing"> </span></span>里只选择最优的<span class="heti-skip"><span class="heti-spacing"> </span>e-node<span class="heti-spacing"> </span></span>而不考虑公共子表达式。这里的成本函数是<span class="heti-skip"><span class="heti-spacing"> </span>analysis-friendly<span class="heti-spacing"> </span></span>的，给乘法加法更低的成本，使得仿射表达式比替代的逻辑表达式具有更低的代价。</p>
@@ -2477,7 +2477,7 @@
 </li>
 <li>
 <p>总体结果</p>
-<p></p><div align="center"><img src="../assets/images/seer7.png" width="90%"/></div>
+<p></p><div align="center"><img src="https://github.com/HobbitQia/notebook/tree/note1/docs/assets/images/seer7.png" width="90%"/></div>
 <ul>
 <li>大多数基准测试的<span class="heti-skip"><span class="heti-spacing"> </span>PPA<span class="heti-spacing"> </span></span>指标均得到改善。</li>
 <li>成本函数未考虑功耗因素，仅聚焦于性能和面积优化，这可能导致最终硬件设计存在能效不足的问题。</li>
@@ -2486,7 +2486,7 @@
 </li>
 <li>
 <p>运行时间</p>
-<p></p><div align="center"><img src="../assets/images/seer8.png" width="50%"/></div>
+<p></p><div align="center"><img src="https://github.com/HobbitQia/notebook/tree/note1/docs/assets/images/seer8.png" width="50%"/></div>
 <ul>
 <li><span>MLIR<span class="heti-spacing"> </span></span>的转换时间很短，主要时间消耗在<span class="heti-skip"><span class="heti-spacing"> </span>egg<span class="heti-spacing"> </span></span>的探索和提取上。对于硬件编译来说，这个时间成本是完全可以接受的 。</li>
 </ul>
@@ -2497,7 +2497,7 @@
 <span class="md-icon" title="最后更新">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年12月16日 17:14:33 CST">2025年12月16日 17:14:33</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年12月16日 18:33:10 CST">2025年12月16日 18:33:10</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="创建日期">
@@ -2506,6 +2506,7 @@
 <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年12月16日 17:14:33 CST">2025年12月16日 17:14:33</span>
 </span>
 </aside>
+<link href="/css/counter.css" rel="stylesheet"/>
 <!-- Giscus -->
 <h2 id="__comments">评论</h2>
 <!-- 这里改成你的Giscus代码 -->
