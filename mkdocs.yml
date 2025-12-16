@@ -301,6 +301,8 @@ nav:
       - APEX: Paper/APEX.md
     - Diffusion:
       - Diffusion + RL: Paper/T2I_RL.md
+    - Compilation:
+      - SEER: Paper/Seer.md
     - Others:
       - BiS-KM: Paper/BiS-KM.md
       - ChatEDA: Paper/ChatEDA.md
