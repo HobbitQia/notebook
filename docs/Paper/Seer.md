@@ -2,7 +2,7 @@
 # SEER: Super-Optimization Explorer for High-Level  Synthesis using E-graph Rewriting
 
 !!! Abstract
-    ![Abstract](../assets/images/seer9.png)
+    ![Abstract](https://github.com/HobbitQia/notebook/docs/assets/images/seer9.png)
 
     * Paper: [SEER: Super-Optimization Explorer for High-Level Synthesis using E-graph Rewriting](https://dl.acm.org/doi/10.1145/3620665.3640392)
     * Architectural Support for Programming Languages and Operating Systems (**ASPLOS 2024**)
@@ -18,7 +18,7 @@
 
 ## 方法
 
-<div align=center><img src = "../assets/images/seer1.png" width =90%></div>
+<div align=center><img src = "https://github.com/HobbitQia/notebook/docs/assets/images/seer1.png" width =90%></div>
 
 * 1: C/C++ 程序经过 Polygiest 转换为 MLIR，随后 2: 转为 SEER dialect（SeerLang）的 IR。
 * 3: SeerLang 会调用 egg 构建 e-graph，同时 4: 根据提供好的 rewrite rule 在 egg 内进行模式匹配，匹配到之后会进行 5: 改写（这里的可以在 e-graph 内，也可以在 SeerLang IR 内）。如果改写成功（改写后会进行等价性检查），6: 将改写后的结果作为表达式添加到 e-graph 中，直到达到最大迭代次数或者饱和。
@@ -34,7 +34,7 @@
 * 支持的操作符主要来自 affine/scf/arith/memref，还有一个特殊的操作符 `seq` 用来规定 block 内内存读写操作之间的顺序。
 
 !!! Example
-    <div align=center><img src = "../assets/images/seer2.png" width =40%></div>
+    <div align=center><img src = "https://github.com/HobbitQia/notebook/docs/assets/images/seer2.png" width =40%></div>
 
     * 为了简化，假设一个 block 内的内存操作都有依赖关系，因此需要用 `seq` 来规定顺序。
     * 从 MLIR 翻译到 SeerLang 几乎是无损的，因为 SeerLang 中的每个操作都保留了类型和操作数信息。
@@ -48,7 +48,7 @@
     * 门级重写同样在运算符层面修改程序，但主要针对比特级硬件定制。
 
     ??? Example "Example SEER rewriting rules implemented directly in egg."
-        <div align=center><img src = "../assets/images/seer3.png" width =50%></div>
+        <div align=center><img src = "https://github.com/HobbitQia/notebook/docs/assets/images/seer3.png" width =50%></div>
 
         * SEER 包含了 106 条内部改写规则，所有数据路径的重写都依赖于符号和位宽。
 
@@ -59,7 +59,7 @@
     * 可以定制 MLIR Pass 来实现更复杂的改写。
 
 !!! Example "E-graph Rewriting for Super-optimization"
-    <div align=center><img src = "../assets/images/seer4.png" width =90%></div>
+    <div align=center><img src = "https://github.com/HobbitQia/notebook/docs/assets/images/seer4.png" width =90%></div>
 
     * 绿色节点代表了程序的初始状态，红色节点代表第一次改写，蓝色节点代表第二次改写。
     * 第一次是内部改写，使用 seq 结合律，匹配红色阴影覆盖的子表达式，返回等价的 SeerLang 表达式，新表达式被合并到匹配的 e-class 中。
@@ -73,13 +73,13 @@
         * 问题：硬件效率与代码可分析性之间存在冲突。例如计算 `3*i`，为了避免使用昂贵的乘法器，会写成 `(i<<1)+i`。在 ASIC 设计中，移位操作几乎是零成本的。 然而，现有的循环优化依赖于多面体分析来检查数据依赖。多面体分析非常擅长处理仿射表达式，如 `3*i`。但面对 `(i<<1)+i` 这种包含位运算的非仿射模式，分析器往往无法确定内存访问的规律。为了安全起见，编译器会保守地认为存在依赖冲突，从而禁止循环融合。
         * 通过 data path 改写，SEER 可以把 `(i<<1)+i` 转换为 `3*i`，从而可以进行循环融合。同时 E-graph 保留了原始的 `(i<<1)+i` 表达式，在后续提取时 SEER 会选择这个硬件更友好的表达。
 
-        <div align=center><img src = "../assets/images/seer5.png" width =70%></div>
+        <div align=center><img src = "https://github.com/HobbitQia/notebook/docs/assets/images/seer5.png" width =70%></div>
     
     * `if` 语句转换
         * 问题：代码变换有时会破坏静态分析所需的结构信息。例如图中我们做了循环完全展开后，这里有若干 `if` 语句，但是编译器很难发现这些 `if` 语句之间的关系（例如，这些条件互斥/覆盖所有情况）。
         * SEER 保留了变换之前的信息作为额外的上下文，有这些信息 SEER 可以成功执行 If Correlation，将展开后的一堆 if 合并为更紧凑的逻辑。
 
-        <div align=center><img src = "../assets/images/seer6.png" width =60%></div>
+        <div align=center><img src = "https://github.com/HobbitQia/notebook/docs/assets/images/seer6.png" width =60%></div>
 
     * 这里使用的是 E-graph 里的 greedy 提取方法，即从 e-class 里只选择最优的 e-node 而不考虑公共子表达式。这里的成本函数是 analysis-friendly 的，给乘法加法更低的成本，使得仿射表达式比替代的逻辑表达式具有更低的代价。
 
@@ -112,7 +112,7 @@
     * SEER 自动发现了循环展开、内存转发和 If Correlation 等机会，在性能和综合指标上击败了人类专家。
 * 总体结果
 
-    <div align=center><img src = "../assets/images/seer7.png" width =90%></div>
+    <div align=center><img src = "https://github.com/HobbitQia/notebook/docs/assets/images/seer7.png" width =90%></div>
 
     * 大多数基准测试的 PPA 指标均得到改善。
     * 成本函数未考虑功耗因素，仅聚焦于性能和面积优化，这可能导致最终硬件设计存在能效不足的问题。
@@ -120,6 +120,6 @@
 
 * 运行时间
     
-    <div align=center><img src = "../assets/images/seer8.png" width =50%></div>
+    <div align=center><img src = "https://github.com/HobbitQia/notebook/docs/assets/images/seer8.png" width =50%></div>
 
     * MLIR 的转换时间很短，主要时间消耗在 egg 的探索和提取上。对于硬件编译来说，这个时间成本是完全可以接受的 。
