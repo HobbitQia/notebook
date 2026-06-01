@@ -2458,7 +2458,7 @@ Create your own copy ctor -- don't rely on the default</li>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">DynamicArray</span><span class="p">(</span><span class="n">DynamicArray</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m_size</span><span class="p">{</span><span class="n">rhs</span><span class="p">.</span><span class="n">m_size</span><span class="p">},</span><span class="w"> </span><span class="n">m_array</span><span class="p">{</span><span class="n">rhs</span><span class="p">.</span><span class="n">m_array</span><span class="p">}</span>
 <a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="p">{</span>
 <a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="n">rhs</span><span class="p">.</span><span class="n">m_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="n">rhs</span><span class="p">.</span><span class="n">m_array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="n">rhs</span><span class="p">.</span><span class="n">m_array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">;</span>
 <a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Move constructor: dynamic array is moved!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
 <a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">}</span>
 </code></pre></div>
@@ -2585,7 +2585,6 @@ Create your own copy ctor -- don't rely on the default</li>
 <script src="../../js/baidu-tongji.js"></script>
 <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
 <script src="../../js/katex.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
